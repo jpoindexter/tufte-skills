@@ -27,7 +27,7 @@ Tufte's complete list of structural deficiencies (BE):
 9. Incompetent designs for data graphics and tables
 10. A smirky commercialism that turns information into a sales pitch and presenters into marketeers
 
-**The core structural problem:** "Information stacked in time makes it difficult to understand context and evaluate relationships. Visual reasoning almost always works more effectively when the relevant evidence is shown adjacent in space within our eyespan." (BE)
+**The core structural problem:** Tufte argues in *Beautiful Evidence* that temporal sequencing makes it hard to grasp context and evaluate relationships; visual reasoning works far more effectively when all relevant evidence sits adjacent in space, within a single eyespan.
 
 ## §2. The Bullet List — Three and Only Three Logical Relationships
 
@@ -95,7 +95,7 @@ The sentence is the minimum unit that can express:
 
 5. **Document thoroughly** — named author, affiliation, data sources, measurement scales, assumptions, sponsor, date. Undocumented evidence is inherently suspect.
 
-6. **Let content drive everything** — "The most effective way to improve a presentation is to get better content. Design devices and gimmicks cannot salvage failed content." (BE)
+6. **Let content drive everything** — Better content is the single most effective upgrade any presentation can receive, Tufte argues. No design technique or visual embellishment can salvage weak substance.
 
 ## §6. The 4-Pager Format — The Remedy
 
@@ -128,7 +128,7 @@ The Boeing slides presented to NASA managers before the Challenger launch were "
 | Low density | 630 characters over the whole slide |
 | Context suppression | 640× exceedance of test-database bounds not clearly quantified |
 
-"The choice of headings, arrangement of information, and size of bullets on the key chart served to highlight what management already believed. The uncertainties and assumptions that signaled danger dropped out of the information chain." (Columbia Accident Investigation Board, quoted in BE)
+The Columbia Accident Investigation Board found, as Tufte cites in *Beautiful Evidence*, that the slide's structure — its headings, layout, and bullet hierarchy — served to reinforce what managers already assumed rather than surface what was dangerous or unknown. Critical uncertainties never made it up the information chain.
 
 ## §8. What Written Reports Preserve That Slides Destroy
 
@@ -142,7 +142,7 @@ The Boeing slides presented to NASA managers before the Challenger launch were "
 | Self-documenting: full sentences are their own context | Context-dependent: bullets require speaker to decode |
 | Citable and attributable | Often anonymous |
 
-**The Return to Flight Task Group (NASA):** "Instead of concise engineering reports, decisions and their associated rationale are often contained solely within Microsoft PowerPoint charts or emails... these presentations should never be allowed to replace, or even supplement, formal documentation." (Quoted in BE)
+**The Return to Flight Task Group (NASA):** The group found, as Tufte documents in *Beautiful Evidence*, that critical engineering decisions were being recorded only in PowerPoint slides and emails rather than formal reports. The Task Group concluded that such presentations should never substitute for — or even supplement — proper engineering documentation.
 
 ## §9. Conway's Law Applied to Presentations
 

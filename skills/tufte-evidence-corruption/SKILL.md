@@ -15,10 +15,7 @@ Making a presentation is a moral act as well as an intellectual activity. *Beaut
 
 ### The 9/11 Commission: Passive Voice as Corruption
 
-The opening case is the *Report of the 9/11 Commission* (2004), p. 265, describing security lapses that may have allowed the attacks:
-
-> "[Despite the CIA's numerous warnings, America's] domestic agencies never mobilized in response to the threat. They did not have direction, and did not have a plan to institute. The borders were not hardened. Transportation systems were not fortified. Electronic surveillance was not targeted against a domestic threat. State and local law enforcement were not marshaled to augment the FBI's efforts. The public was not warned."
-> — *9/11 Commission Report*, p. 265, quoted in *Beautiful Evidence*, p. 142
+The opening case is the *Report of the 9/11 Commission* (2004), p. 265, describing security lapses that may have allowed the attacks. The passage Tufte examines lists seven distinct failures — domestic agencies never mobilized, no direction or plan was established, borders were not hardened, transportation systems were not fortified, electronic surveillance was not targeted at domestic threats, state and local law enforcement were not marshaled to augment the FBI, and the public was not warned. Every failure is rendered in passive voice throughout.
 
 Tufte's verb count from this passage:
 
@@ -34,10 +31,7 @@ Result: **no agent is named**. Exactly *who* did not make a plan, *who* failed t
 
 ### Passive Voice as the Structural Source of Effects Without Causes
 
-The deeper problem is not just political evasion but analytical failure:
-
-> "Although often a useful writing technique, passive verbs also advance *effects without causes*, an immaculate conception. To speak of ends without means, agency without agents, actions without actors is contrary to clear thinking."
-> — *Beautiful Evidence*, p. 142
+The deeper problem is not just political evasion but analytical failure. Tufte argues that while passive voice is a legitimate writing technique, it also enables *effects without causes* — what he calls an "immaculate conception" of analysis. Describing ends without means, agency without agents, and actions without actors undermines the causal clarity that good reasoning requires.
 
 The logic of decisions is "If we do such-and-such [cause], then we hope this-and-that will happen [desired effect]." The logic of responsibility requires the active voice: *someone did* or *did not do* something. Effects without causes are not just rhetorical — they disable the causal thinking required to make decisions, assign accountability, or implement remedies.
 
@@ -81,8 +75,7 @@ Profits → New-product development → Market share
 
 ### The Core Problem
 
-> "The most widespread and serious obstacle to learning the truth from an evidence-based report is cherry-picking, as presenters pick and choose, select and reveal only the evidence that advances their point of view."
-> — *Beautiful Evidence*, p. 144
+Tufte identifies cherry-picking — the selective presentation of only favorable evidence while suppressing disconfirming data — as the most widespread and serious obstacle to learning the truth from any evidence-based report.
 
 Van Wyck Brooks captured the mechanism: "It is a principle that shines impartially on the just and unjust that once you have a point of view all history will back you up." Cherry-picking is epidemic precisely because it is often invisible — the audience cannot see what was omitted.
 
@@ -90,10 +83,7 @@ A clear sign of cherry-picking: **a report appears too good to be true**, provok
 
 ### The Evidence Decay Cycle
 
-In medical research the pattern is structural and measurable:
-
-> "In medical research, too often the *first published study* testing a new treatment provides the *strongest evidence that will ever be found* for that treatment. As better controlled studies — less vulnerable to the enthusiasms of researchers and their sponsors — are then conducted, the treatment's reported efficacy declines. Years after the initial study, as the Evidence Decay Cycle plays out, sometimes the only remaining issue is whether the treatment is in fact harmful."
-> — *Beautiful Evidence*, p. 144
+In medical research the pattern is structural and measurable. Tufte observes that the first published study on a new treatment tends to show the strongest positive result it will ever achieve. As investigators follow up with better-controlled studies — less susceptible to researcher enthusiasm and sponsor influence — reported efficacy consistently declines. By the time gold-standard randomized trials are conducted, the only remaining question is sometimes whether the treatment causes harm (*Beautiful Evidence*, p. 144).
 
 **Evidence Decay Cycle pattern:**
 1. First study (poorly controlled): marked enthusiasm, strong positive result
@@ -143,12 +133,7 @@ Retrospective, nonexperimental observation — the standard methodology in econo
 | **(3) Many operational measures for the same concept** | Plausible empirical measures of "economic growth," "social status," "cultural norms," "educational achievement," "political competition" multiply the option space |
 | **(4) Data slack** | Decisions about missing data, reconciliation of discrepant sources, choice of beginning/ending points in time-series (a notorious cheat in financial data), choice of category cut-points |
 
-The arithmetic of available models:
-
-> "All told, many plausible models result. For *k* explanatory variables, there are 2*^k* − 1 possible fitted models, then multiplied by notions and on through the rest of the slack. Routinely 10^4 to 10^7 fitted models are available; all can be quickly computed and sorted over."
-> — *Beautiful Evidence*, p. 146
-
-10,000 to 10,000,000 fitted models computed and sorted — but only one or a few are published. "This latitude for evidence selection makes it difficult to distinguish between reliable findings and cherry-pickings."
+The arithmetic of available models: for *k* explanatory variables, there are 2^k − 1 possible fitted models — multiplied further by notions and data-handling decisions. Tufte notes that routinely 10^4 to 10^7 computable models are available, all quickly sortable, from which only one or a few will be published (*Beautiful Evidence*, p. 146). "This latitude for evidence selection makes it difficult to distinguish between reliable findings and cherry-pickings."
 
 Credible explanations grow from **three mutually reinforcing sources**: explanatory theory, empirical evidence, and rejection of competing alternative explanations. Cherry-picking dilutes and confounds all three into wishful circular thinking — the Pilgrim's Progress pattern where Ignorance concludes "my heart tells me so."
 
@@ -174,8 +159,7 @@ measurements           representation                  tables, diagrams, images,
 
 Data are selected, sorted, edited, summarized, massaged, and arranged into published graphics. This sequence is not a black box but a gray area — it consists of all the decisions that *cause* the published findings of a report. Those decisions are made, to varying degrees, both in the spirit of analytical detective work and in the spirit of advancing a favored point of view.
 
-> "The integrity of a report depends in part on the *integrity of the process of evidence construction*; alert consumers of a report must seek some kind of assurance that the process was sensible and honest."
-> — *Beautiful Evidence*, p. 147
+Tufte argues that a report's integrity rests not just on its conclusions but on the integrity of its entire evidence-construction process — and that alert consumers should seek assurance that those intermediate steps were sensible and honest (*Beautiful Evidence*, p. 147).
 
 When secondary bureaucracies of presentation get access to primary reports — public relations, advertising, schoolbook publishing, journalism, Ministries of Propaganda — they add their own interpretive filter:
 
@@ -210,8 +194,7 @@ The dictionary meanings of "valuable" are (1) monetary worth and (2) meritorious
 
 The pun enables a 7-meaning overload: auction prices carry information about (1) most valuable meaning both price and merit, (2) historical importance, (3) best artistic work, (4) artistic productivity, (5) creativity, (6) how artists conceive their works, (7) how artists paint their works.
 
-> "Consider a thought experiment: *Do our theories about (1), (2), (3), (4), (5), (6), and (7) change when new data (say, in 2010-2020) for auction prices become available?* If yes, how and why should art history be rewritten? If no, what exactly is the relevance of auction prices for understanding 'patterns of creativity in modern art'?"
-> — *Beautiful Evidence*, p. 149
+Tufte proposes a diagnostic thought experiment: if theories about artistic productivity, creativity, historical importance, and artistic process would change when new auction price data become available, then those theories are reducible to price data — and the punning equation between price and merit is exposed. If the theories would *not* change with new price data, then auction prices are irrelevant to the claimed conclusions about patterns of creativity (*Beautiful Evidence*, p. 149).
 
 ### The Evidence Void Behind the Claims
 
@@ -222,8 +205,7 @@ For a book whose thesis rests on auction prices as measures of artistic producti
 - **Zero** economic transaction data for any particular painting
 - 2 graphs showing a vertical axis of Ln(Price) — the natural logarithm of prices — with curves showing no actual data points
 
-> "Thoroughly dequantified, *Painting Outside the Lines* provides none of this information. Elementary standards of statistical evidence are not met by the book's notable publisher (Harvard University Press) or the notable author (Professor of Economics, University of Chicago). The economisting puns are unsupported by the economisting evidence."
-> — *Beautiful Evidence*, p. 150
+Tufte concludes that the book, despite building its thesis on auction prices, provides no actual price data, no price indices, and no transaction-level economic evidence — a failure unremarked upon by the book's notable publisher or the Professor of Economics who authored it. The economisting claims are unsupported by economisting evidence (*Beautiful Evidence*, p. 150).
 
 ### Statistical Puns
 
@@ -231,18 +213,13 @@ In reports on quantitative work, frequent puns involve the language of mathemati
 
 Statistical tests against the null hypothesis allow researchers to make punning claims about the significance (everyday meaning) of their findings. Puns from microeconomics, quantum mechanics, evolutionary theory, fractals, and chaos theory "claim unmerited credibility by trading on the authority and sometimes the jargon of the original narrow technical achievement."
 
-Steven Weinberg (*Facing Up: Science and Its Cultural Adversaries*, Cambridge, 2001, pp. 156-157):
+Steven Weinberg (*Facing Up: Science and Its Cultural Adversaries*, Cambridge, 2001, pp. 156-157) argues — quoted approvingly by Tufte — that quantum mechanics is a precise mathematical formalism whose differences from classical mechanics become negligible at the scale of human affairs, making it impossible to derive cultural consequences from quantum theory by implication. The physics simply does not carry over.
 
-> "There is simply no way that any cultural consequences can be *implied* by quantum mechanics... but a precise mathematical formalism, which among other things tells us that the difference between the predictions of quantum mechanics and pre-quantum classical mechanics, which is so important for the behavior of atoms, becomes negligible at the scale of human affairs."
-> — quoted in *Beautiful Evidence*, p. 151
-
-> "When a precise, narrowly focused technical idea becomes metaphor and sprawls globally, *its credibility must be earned afresh locally by means of specific evidence demonstrating the relevance and explanatory power of the idea in its new application.* It is not enough for presenters to make ever-bolder puns, as meaning drifts into duplicity. Something has to be explained."
-> — *Beautiful Evidence*, p. 151
+Tufte's principle for concept sprawl: when a narrow technical idea is extended by metaphor into a new domain, it cannot borrow its original credibility — it must earn new credibility through domain-specific evidence that demonstrates the concept's actual explanatory power in the new application. Making bolder puns is not the same as demonstrating relevance. Something substantive must be explained (*Beautiful Evidence*, p. 151).
 
 ### Economisting: The Coined Term
 
-> **economisting** (e·kon'·o·mist'·ing) *1.* The act or process of converting limited evidence into grand claims by means of punning, multiplicity of meaning, and overreaching. *2.* The belief or practice that empirical evidence can only confirm and never disconfirm a favored theory. *3.* Conclusions that are theory-driven, not evidence-based. *See also* confirmation bias, painting with a broad brush, Iraqi weapons of mass destruction, marketing, post-modern critical theory, German meaning of "mist."
-> — *Beautiful Evidence*, p. 149
+Tufte coins *economisting* to describe the analytical vice of converting limited evidence into grand claims through punning, overloaded terminology, and overreaching — specifically, the practice of treating empirical evidence as capable only of confirming a favored theory, never disconfirming it, so that conclusions become theory-driven rather than evidence-based. The term encompasses confirmation bias, painting with a broad brush, and the structural confusion between market prices and substantive merit (*Beautiful Evidence*, p. 149).
 
 **Named failure modes — overreaching:**
 
@@ -298,10 +275,7 @@ Microsoft Excel and PowerPoint produce, ineptly, many of the data graphics and t
 
 ### The Flaubert Framing
 
-The chapter title's phrase comes from Flaubert:
-
-> "The rage for wanting to conclude is one of the most deadly and most fruitless manias to befall humanity. Each religion and each philosophy has pretended to have God to itself, to measure the infinite, and to know the recipe for happiness. What arrogance and what nonsense! I see, to the contrary, that the greatest geniuses and the greatest works have never concluded."
-> — Gustave Flaubert, *Correspondance* (Paris, 1929), vol. v, 111
+Flaubert, writing in his *Correspondance*, identifies the compulsion to reach definitive conclusions as one of humanity's most destructive intellectual habits. He argues that every religion and philosophy has claimed exclusive access to God and to the formula for happiness, and finds this arrogance absurd. His contrarian observation is that the greatest geniuses and greatest works of art have not concluded — they remain open (*Correspondance*, Paris, 1929, vol. v, 111).
 
 ### The Bureaucracies of Secondary Presentation
 
@@ -321,15 +295,11 @@ For government commission reports: for each reader of the original, there are pe
 
 In repackagings, a persistent *rage to conclude* denies the implications, complexities, and uncertainties of primary evidence. A strong selection bias operates: news wins out over nuance, recency rather than quality of evidence decides relevance.
 
-> "If you worry about evidence corruption in primary reports, secondary presentations will give you a lot more to worry about. Repackaging adds its own special interpretative filter to the critical process of learning from evidence."
-> — *Beautiful Evidence*, p. 154
+Tufte warns that if corruption in primary reports is concerning, secondary presentations are far worse — each stage of repackaging adds its own interpretive filter that compounds and amplifies distortions from the primary evidence (*Beautiful Evidence*, p. 154).
 
 ### Pitching Out Corrupts Within
 
-The organizational feedback loop is the deepest consequence:
-
-> "By generating corrupt repackagings, an organization's bureaucracy of secondary presentations may come to corrupt the integrity of work *within* the organization. Compromised external communications promote compromised internal communications, as *pitching out corrupts within.*"
-> — *Beautiful Evidence*, p. 155
+Tufte identifies the most insidious organizational consequence: an organization that distorts evidence in its external communications will eventually corrupt its internal evidence standards too. The external pitch culture bleeds inward — compromised external messaging promotes compromised internal reasoning. He calls this *pitching out corrupts within* (*Beautiful Evidence*, p. 155).
 
 The mechanism:
 - If a corporation distorts evidence presented to consumers, stockholders, and journalists, it may soon lie to itself.
@@ -373,13 +343,9 @@ These are the specific, named failure modes from chapter 6. Apply to any evidenc
 
 ## §9. The Moral Frame
 
-The chapter opens and closes with moral framing, not just methodological critique:
+Tufte opens and closes the chapter with moral framing, not just methodological critique. He argues that presenting evidence carries ethical weight, not just analytical obligation. A presenter who deploys rhetorical manipulations — lying, flagwaving, personal attacks, false dichotomies, misdirection, jargon as cover, evasion of key issues, feigned objectivity, willful misreading of opposing views — signals both a lack of credibility and a lack of genuine evidence (*Beautiful Evidence*, p. 140).
 
-> "Making a presentation is a moral act as well as an intellectual activity. The use of corrupt manipulations and blatant rhetorical ploys in a report or presentation — outright lying, flagwaving, personal attacks, setting up phony alternatives, misdirection, jargon-mongering, evading key issues, feigning disinterested objectivity, willful misunderstanding of other points of view — suggests that the presenter lacks both credibility and evidence."
-> — *Beautiful Evidence*, p. 140
-
-> "To maintain standards of quality, relevance, and integrity for evidence, consumers of presentations should insist that presenters be held intellectually and ethically responsible for what they show and tell. Thus *consuming* a presentation is also an intellectual and a moral activity."
-> — *Beautiful Evidence*, p. 140
+The responsibility, Tufte argues, falls equally on the audience: consumers of presentations must demand intellectual and ethical accountability from presenters — insisting that what is shown and told can be justified. Consuming evidence is itself a moral act (*Beautiful Evidence*, p. 140).
 
 Despite the threat of corruption, a consumer of presentations should try to be hopeful and curious, avoid premature skepticism, and maintain an open mind — but not an empty head. Many presentations are not corrupt. A presenter engaging in corrupt maneuvers might be reporting what eventually turns out to be accurate and truthful conclusions. "A particular danger of corrupt maneuvers is not only that they enable lying but also that they place the truth in disrepute."
 

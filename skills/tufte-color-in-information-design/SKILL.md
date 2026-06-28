@@ -54,8 +54,7 @@ Eduard Imhof's rules, derived from Swiss cartographic practice, are the most act
 
 ### Rule 1 — Strong Colors Only on Small Areas
 
-> "Pure, bright or very strong colors have loud, unbearable effects when they stand unrelieved over large areas adjacent to each other, but extraordinary effects can be achieved when they are used sparingly on or between dull background tones. 'Noise is not music. Only a piano allows a crescendo and then a forte, and only on a quiet background can a colorful theme be constructed.'"
-> — Imhof, quoted in *Envisioning Information*, p. 82
+Imhof observed that pure, bright, or very strong colors become visually overwhelming when they cover large adjacent areas without relief — the effect is loud and unpleasant. Used sparingly against muted background tones, however, the same colors achieve extraordinary impact. The analogy he drew was musical: only a quiet passage makes a crescendo and forte register as powerful.
 
 **Threshold:** Extremes of any variable (highest peaks, deepest trenches, temperature maxima) typically enclose small areas only. Reserve saturated, strong color for these small-area extremes. Apply muted, low-saturation color to large background regions.
 
@@ -73,8 +72,7 @@ Light, bright colors mixed with white, placed next to each other over large area
 
 ### Rule 3 — Muted Backgrounds, Vivid Foregrounds
 
-> "Large area background or base-colors should do their work most quietly, allowing the smaller, bright areas to stand out most vividly, if the former are muted, grayish or neutral. For this very good reason, gray is regarded in painting to be one of the prettiest, most important and most versatile of colors. Strongly muted colors, mixed with gray, provide the best background for the colored theme."
-> — Imhof, quoted in *Envisioning Information*, p. 90
+Imhof held that large background areas should operate quietly, so that smaller vivid accent areas can stand out with maximum force. He considered gray one of the most valuable and versatile colors in the toolkit — strongly muted tones mixed with gray create the ideal ground against which a colorful data theme can register.
 
 Gray is not a compromise — it is a deliberate tool. The muted ground makes vivid spots maximally legible. Local emphasis for data is given by spot highlights of strong color woven through the serene background.
 
@@ -145,8 +143,7 @@ Rainbow (ROYGBIV) scales replace clear light-to-dark visual sequence with a diso
 
 Perceived color is not a stable property of a mark — it is a function of surrounding context. This makes pure color coding fragile.
 
-> "Any color coding of quantity (whether based on variations in hue, value, or saturation) is potentially sensitive to interactive contextual effects. These perceived color shifts, while an infrequent threat to accuracy of reading in day-to-day information design, are surprising and vivid — suggesting that color differences should not be relied upon as the sole method for sending a message amidst a mosaic of complex and variable data."
-> — *Envisioning Information*, p. 92
+Tufte notes in *Envisioning Information* (p. 92) that any color-coded quantity — whether encoded by hue, value, or saturation — is vulnerable to perceptual context effects. Although such shifts are an infrequent threat in routine information design, they are vivid enough when they occur to argue against color differences as the sole signal for any important data distinction.
 
 Key mechanisms:
 
@@ -169,8 +166,7 @@ Key mechanisms:
 
 The solution to color's instability is not to abandon color, but to layer it with non-color signals.
 
-> "Multiple signals will help escape from the swamp of perceptual shifts and other ambiguities in reading. Redundant and partially overlapping methods of data representation can yield a sturdy design, responding in one way or another to potential visual complications — with, however, a resulting danger of fussy, cluttered, insecure, committee-style design. A crystalline, lucid redundancy will do."
-> — *Envisioning Information*, p. 93
+Tufte argues in *Envisioning Information* (p. 93) that layering multiple, partially overlapping signals is the way out of color's perceptual instability. Redundant encoding yields a resilient design — one that stays readable even when a single channel fails. The risk is a cluttered, committee-feel result; the target is what he calls a crystalline, lucid redundancy.
 
 **What redundant coding looks like:**
 - Color fields (value scale) + contour lines labeled with measurements (GEBCO ocean map)
@@ -192,8 +188,7 @@ Human cognitive processing gives "considerable and often decisive weight to cont
 
 ## §8. The Nature Palette Strategy
 
-> "A grand strategy is to use colors found in nature, especially those on the lighter side, such as blues, yellows, and grays of sky and shadow. Nature's colors are familiar and coherent, possessing a widely accepted harmony to the human eye — and their source has a certain definitive authority. A palette of nature's colors helps suppress production of garish and content-empty color junk."
-> — *Envisioning Information*, p. 90
+Tufte's overarching palette strategy in *Envisioning Information* (p. 90) is to draw from nature's colors — particularly the lighter register: sky blues, shadow grays, straw yellows. These tones carry a widely recognized coherence, their authority grounded in the physical world itself. A palette built from nature's colors naturally suppresses the production of garish, data-free color junk.
 
 **Why nature's palette works:**
 - Pre-calibrated harmony: human visual systems evolved with these colors

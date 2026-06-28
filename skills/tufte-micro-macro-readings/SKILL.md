@@ -11,8 +11,8 @@ Micro/macro design is the practice of building displays where the same marks ser
 
 ## §1. The Core Principle
 
-> "Panorama, vista, and prospect deliver to viewers the freedom of choice that derives from an overview, a capacity to compare and sort through detail. And that micro-information, like smaller texture in landscape perception, provides a credible refuge where the pace of visualization is condensed, slowed, and personalized."
-> — *Envisioning Information*
+Tufte describes how panoramic views deliver the freedom of an overview — the ability to compare, sort, and search across detail. Simultaneously, the micro-information in a high-density display functions like fine texture in landscape perception: it slows the pace of reading, makes it personal, and gives the viewer a place to dwell.
+— *Envisioning Information*
 
 > "Such designs can report immense detail, organizing complexity through multiple and (often) hierarchical layers of contextual reading."
 > — *Envisioning Information*
@@ -90,10 +90,7 @@ Tokyo control room operators run thousands of journeys daily from a single graph
 
 ### Stem-and-Leaf Plots
 
-Each data point simultaneously states its value (micro) and fills a space that builds the histogram (macro). John Tukey:
-
-> "If we are going to make a mark, it may as well be a meaningful one. The simplest — and most useful — meaningful mark is a digit."
-> — quoted in *Envisioning Information*
+Each data point simultaneously states its value (micro) and fills a space that builds the histogram (macro). John Tukey, cited in *Envisioning Information*, argued that if a mark must be made, it should carry meaning. The most economical meaningful mark, he proposed, is a digit — which simultaneously states a precise value and fills a position in a distribution.
 
 Heights of 218 volcanoes: each individual number helps build the distribution profile. The digit is both the datum and the bin-fill.
 
@@ -103,8 +100,7 @@ Heights of 218 volcanoes: each individual number helps build the distribution pr
 
 ### Swiss National Topographic Maps (*Beautiful Evidence*, p. 58)
 
-> "Sparkline-like performances are seen in cartography... In the exquisite national maps of Switzerland, finely detailed contour lines indicating constant elevations flow over a surface covered with nouns (places) and numbers (mountain heights), a context of visual images, numbers, and words."
-> — *Beautiful Evidence*
+Tufte identifies cartography as a domain where sparkline-like micro/macro density appears naturally. Switzerland's national maps exemplify this: precisely engraved contour lines trace constant elevations across a surface dense with place names and altitude numbers — images, numbers, and words forming simultaneous layers of context.
 
 High-resolution engraving lines serve a triple purpose: they show elevation change (micro), they build terrain texture (meso), and they render the overall mountain form legible at a glance (macro).
 
@@ -112,11 +108,9 @@ High-resolution engraving lines serve a triple purpose: they show elevation chan
 
 This is the most politically important claim in the chapter. Designers who simplify data to reduce "clutter" are solving the wrong problem.
 
-> "Clutter and confusion are failures of design, not attributes of information. Often the less complex and less subtle the line, the more ambiguous and less interesting is the reading. Stripping the detail out of data is a style based on personal preference and fashion, considerations utterly indifferent to substantive content."
-> — *Envisioning Information*
+Tufte argues in *Envisioning Information* that clutter and confusion are design failures, not properties of information itself. Simpler marks often produce more ambiguity, not less. Stripping detail from data, he contends, is a choice driven by aesthetic preference and fashion — entirely indifferent to the substance the display is meant to communicate.
 
-> "So much for the conventional, facile, and false equation: simpleness of data and design = clarity of reading. Simpleness is another aesthetic preference, not an information display strategy, not a guide to clarity. What we seek instead is a rich texture of data, a comparative context, an understanding of complexity revealed with an economy of means."
-> — *Envisioning Information*
+Tufte rejects the popular equation of simple data with clear reading as false. Simpleness is an aesthetic preference masquerading as information strategy. The actual goal is a rich texture of data — comparative, contextual, complex in content — revealed with economy of means.
 
 Robert Venturi, on architecture (cited by Tufte as applicable to information design):
 
@@ -158,8 +152,7 @@ From *Beautiful Evidence* (p. 63): for monitoring environments requiring many sp
 
 **Why spatial adjacency beats temporal stacking:**
 
-> "500 sparklines on a large piece of paper are adjacent in space rather than stacked in time. By showing vast amounts of data within the eyespan, spatial adjacency assists comparison, search, pattern-finding, exploration, replication, review."
-> — *Beautiful Evidence*
+In *Beautiful Evidence*, Tufte notes that 500 sparklines on a large page are adjacent in space rather than stacked in time. Spatial co-presence within a single eyespan enables comparison, search, pattern-finding, exploration, and review that any sequential navigation strategy cannot replicate.
 
 ## §6. Design Patterns for Multi-Scale Displays
 
@@ -223,8 +216,7 @@ Alphabetical ordering of the Vietnam Memorial names would have made it a telepho
 ### Failure Mode 5: Resolution Mismatch
 Building a micro/macro display for a medium that cannot render the micro layer. Computer screens at ~10% of paper's resolution cannot faithfully render sparklines or fine contour lines at print quality.
 
-> "Sparklines work at intense resolutions, at the level of good typography and cartography. Currently such intensities can be found only on paper, film, and metal — where resolutions >1,200 dpi are easily and inexpensively achieved."
-> — *Beautiful Evidence*
+In *Beautiful Evidence*, Tufte observes that sparklines require intense rendering resolution, on par with fine typography and cartography. At the time of writing, such resolution was achievable only on paper, film, and metal at 1,200+ dpi — not on the screens of that era.
 
 **Rule:** Match the rendering medium to the resolution demands of the display. For dense multi-scale displays, print > screen.
 

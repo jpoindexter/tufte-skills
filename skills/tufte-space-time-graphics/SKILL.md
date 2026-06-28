@@ -93,10 +93,9 @@ Sparse regions of the grid (few lines, wide gaps) = low-frequency periods, typic
 
 ## §4. Single-Track Planning: Crossings Only at Sidings
 
-On single-track railways, trains going in opposite directions must coordinate their passing points. The graphical timetable makes this constraint visible and manageable in a way no typographic format can match:
+On single-track railways, trains going in opposite directions must coordinate their passing points. The graphical timetable makes this constraint visible and manageable in a way no typographic format can match.
 
-> "Rhythmic diagonals cross only at stations, indicating that a single track serves the line and, consequently, trains are able to pass one another only at sidings within stations. Visual timetables help plan such passings; it would be clumsy and awkward to design such a pattern nonvisually."
-> — *Envisioning Information*, p. 110
+In *Envisioning Information*, Tufte notes that on a correctly planned single-track schedule, the crossing of diagonal lines in opposite directions occurs only at station positions — revealing that opposing trains can pass only at sidings within those stations. Planning these passings graphically is natural and direct; attempting the same task nonvisually would be clumsy and error-prone.
 
 **Visual signature of single-track schedules**: all line crossings fall on horizontal station bands. If a crossing appears between stations, the schedule contains a collision. On a correctly planned single-track schedule, the crossing pattern has a strict rhythmic regularity — up-trains and down-trains interleave at sidings.
 
@@ -116,12 +115,11 @@ The progression Tufte demonstrates (VDQI, pp. 115-116):
 | Thinned dark grid | Slightly better; still competes with data | Marginal improvement |
 | Gray grid (light gray lines) | Grid recedes; data lines read clearly; interpolation still possible | Correct |
 
-> "When a graphic serves as a look-up table, then a grid may help in reading and interpolating. But even in this case the grids should be muted relative to the data. A gray grid works well and, with a delicate line, may promote more accurate data reconstruction than a dark grid."
-> — *The Visual Display of Quantitative Information*, p. 116
+In *The Visual Display of Quantitative Information* (p. 116), Tufte argues that when a graphic doubles as a lookup table, a grid aids interpolation — but the grid must always remain subordinate to the data. A light gray grid, drawn with a delicate line, actually supports more accurate data reconstruction than a heavy dark one.
 
 **Interval**: for transit schedules, Tufte used a gray grid at ten-minute intervals, sufficient for visual interpolation without overcrowding.
 
-**Paper**: "Most ready-made graph paper comes with a darkly printed grid. The reverse (unprinted) side should be used, for then the lines show through faintly and do not clutter the data." (*VDQI*, p. 116)
+**Paper**: Tufte notes (*VDQI*, p. 116) that standard graph paper has a grid printed too dark for data graphics; using the reverse side lets the lines show through faintly without cluttering the data.
 
 ---
 
@@ -184,7 +182,7 @@ Oxford and Cambridge colleges race on narrow rivers where boats cannot pass side
 - Vertical axis: college teams (by starting rank)
 - Horizontal axis: race days
 - Lines track rank changes; crossings show when one boat overtook another
-- "In times past, the boats may have actually bumped, signaling a passing and crossed lines on the chart"
+- Historically, a passing was signaled by boats physically touching; the chart records these events as crossed lines
 
 ---
 
@@ -301,5 +299,4 @@ No formula needed. When lines are so dense that individual identification is imp
 | Show competitive overtaking (bumps) | Yes (crossed lines) | No | No | No |
 | Show geographic route topology | Only with map overlay | No | Yes | No |
 
-> "Schedules are among the most widely used information displays, with a sheer volume of printed images comparable to road maps, daily weather charts, catalogs, and telephone books. Design efforts for 150 years the world over have yielded some imaginative display strategies."
-> — *Envisioning Information*, p. 101
+In *Envisioning Information* (p. 101), Tufte notes that schedules rank among the most widely reproduced information displays — printed in volumes comparable to road maps and telephone books — and that 150 years of design effort across the world have produced a rich range of display strategies.

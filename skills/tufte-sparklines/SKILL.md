@@ -39,8 +39,7 @@ Three properties are non-negotiable:
 
 Tufte's case for sparklines rests on a hard comparison of information density:
 
-> "Tables of numbers attain maximum densities of only 300 characters per square inch or 50 characters per square centimeter. In contrast, graphical displays have far greater resolutions; a cartographer notes 'the resolving power of the eye enables it to differentiate to 0.1 mm where provoked to do so.'"
-> — *Beautiful Evidence*, p. 50
+In *Beautiful Evidence* (p. 50), Tufte shows that numeric tables top out at roughly 300 characters per square inch (50 per cm²). Graphical displays exploit a far greater resolving power: cartographers have measured the eye's discrimination limit at 0.1 mm when pushed to do so — orders of magnitude beyond what type can achieve at the same scale.
 
 Concrete density numbers:
 

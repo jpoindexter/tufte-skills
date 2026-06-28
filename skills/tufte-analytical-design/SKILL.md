@@ -19,6 +19,8 @@ Cognitive tasks drive design decisions. If the intellectual task is comparison, 
 
 **Consequence for practice:** Before any design decision, name the intellectual task. The design choice follows from that, not from brand guidelines, template defaults, or what looks impressive.
 
+Tufte prescribes in *Beautiful Evidence* that every design process begin by naming the intellectual task the display must serve. That question — what does a reader need to do with this information? — drives every subsequent choice: which elements to include, how to structure them, and which technologies to employ.
+
 ### Analytical vs. Decorative Design
 
 | Dimension | Analytical Design | Decorative / Presentation Design |
@@ -32,9 +34,6 @@ Cognitive tasks drive design decisions. If the intellectual task is comparison, 
 | Driving force | Content — the substance being explained | Production technology, templates, brand |
 | Test of success | Does it assist thinking about the evidence? | Does it look polished and professional? |
 
-> "The first question is: What are the content-analysis tasks that this display is supposed to help with? Answering this question will suggest choices for content elements, design architectures, and presentation technologies."
-> — *Beautiful Evidence*, p. 136
-
 ---
 
 ## §2. The Six Principles
@@ -46,8 +45,7 @@ Cognitive tasks drive design decisions. If the intellectual task is comparison, 
 
 **The core act of statistical reasoning is answering: "Compared with what?"**
 
-> "The fundamental analytical act in statistical reasoning is to answer the question 'Compared with what?' Whether we are evaluating changes over space or time, searching big data bases, adjusting and controlling for variables, designing experiments, specifying multiple regressions, or doing just about any kind of evidence-based reasoning, the essential point is to make intelligent and appropriate comparisons."
-> — *Beautiful Evidence*, p. 127
+In *Beautiful Evidence*, Tufte argues that across every form of statistical work — time series, regression, experiment design, database analysis — the central act is answering "Compared with what?" Every analytical method is, at bottom, a comparison method. The display must make that comparison visible, not leave it implicit.
 
 Minard's map demonstrates this at the Nieman River: 422,000 soldiers crossing into Russia vs. 10,000 survivors returning — the width of two lines communicates what no number alone could. The ratio is 1:42. This single graphic comparison summarizes six months and hundreds of miles.
 
@@ -70,8 +68,7 @@ Minard's map demonstrates this at the Nieman River: 422,000 soldiers crossing in
 > "Show causality, mechanism, explanation, systematic structure."
 > — *Beautiful Evidence*, p. 128
 
-> "Scientific research involves causal thinking, for Nature's laws are causal laws. Medical analysis — prevention, diagnosis, intervention — requires causal analysis. Reasoning about reforms and making decisions also demands causal logic. To produce the desired effects, we need to know about and govern the causes; thus 'policy-thinking is and must be causality-thinking.'"
-> — *Beautiful Evidence*, p. 128
+Tufte argues in *Beautiful Evidence* that causal thinking is not optional in serious analytical work. Scientific inquiry is structured by causal laws; medical reasoning about prevention, diagnosis, and intervention requires causal models; policy and reform decisions require knowing which causes to govern. The principle that "policy-thinking is causality-thinking" distills the stakes: displays that show only effects, without causes, cannot support the reasoning they are supposed to enable.
 
 Minard's temperature graph at the bottom of his map is the causal argument: temperature explains why men died during the retreat, not just that they died. The map shows location; the temperature graphic shows mechanism.
 
@@ -98,8 +95,7 @@ Minard's temperature graph at the bottom of his map is the causal argument: temp
 
 Minard's single map encodes 6 variables: army size (line width), geographic position (2D), direction of march, temperature, and date. None of the interesting worlds — physical, biological, human — is bivariate. Reducing to 1 or 2 variables to fit a format is not simplicity; it is falsification of the subject's actual complexity.
 
-> "The only thing that is 2-dimensional about evidence is the physical flatland of paper and computer screen. Flatlandy technologies of display encourage flatlandy thinking. Reasoning about evidence should not be stuck in 2 dimensions, for the world we seek to understand is profoundly multivariate. Strategies of design should make multivariateness routine, nothing out of the ordinary."
-> — *Beautiful Evidence*, p. 130
+Tufte argues in *Beautiful Evidence* that two-dimensionality is a constraint of the medium, not of the subject. Presentation technology that enforces flatness trains analysts to think flatly. Because the phenomena under study are inherently multivariate, design strategies should make showing multiple variables simultaneously the default — unremarkable, expected, routine — not a special achievement.
 
 **Techniques for escaping flatland:**
 - Layering and separation (transparent overlays, cartographic layering)
@@ -130,8 +126,7 @@ Minard's single map encodes 6 variables: army size (line width), geographic posi
 
 The evidence doesn't care what mode it arrives in. Segregating evidence by mode — all images in one section, all tables in an appendix, all text in the body — is organizational convenience that actively impairs reasoning. Modes must be assembled where the evidence is needed, not where the production system finds them convenient.
 
-> "Words, numbers, pictures, diagrams, graphics, charts, tables belong together. Excellent maps, which are the heart and soul of good practices in analytical graphics, routinely integrate words, numbers, line-art, grids, measurement scales. Rarely is a distinction among the different modes of evidence useful for making sound inferences. It is all information after all."
-> — *Beautiful Evidence*, p. 131
+Tufte argues in *Beautiful Evidence* that the division of evidence by mode — separating text from numbers from images from diagrams — is an organizational convenience that works against inference. Maps, which represent the best practice in analytical display, have always integrated multiple modes in a single surface. The distinctions between evidence types matter far less than their combined bearing on the question being investigated.
 
 Minard integrates: a paragraph of words (legend, title, assumptions), a geographic map (spatial position), flow-lines (army size and direction), temperature data (causal variable), dates (time), and place names (context) — all within one 25 × 21 inch surface.
 
@@ -206,8 +201,7 @@ This is the supremacy principle. It overrides all others in the hierarchy. No de
 
 Minard never mentions Napoleon by name on a map of Napoleon's march. This is a design choice that reinforces the content priority: memorializing the dead, not celebrating the surviving celebrity.
 
-> "This suggests that the most effective way to improve a presentation is to get better content. It also suggests that design devices and gimmicks cannot salvage failed content."
-> — *Beautiful Evidence*, p. 136
+Tufte concludes in *Beautiful Evidence* that the most direct route to a better presentation is stronger content. No design technique or visual treatment can rescue a display built on weak, irrelevant, or corrupt evidence.
 
 **Do / Don't pairs:**
 

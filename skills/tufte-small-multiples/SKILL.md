@@ -159,24 +159,9 @@ The neurometric example (EI, p. 78) is a 6×4 matrix: diagnosis (rows) × brain-
 
 ## §7. Conclusion: Properties of Well-Designed Small Multiples
 
-Tufte's own summary list from VDQI (p. 175):
+In *The Visual Display of Quantitative Information* (p. 175), Tufte enumerates the defining properties of well-designed small multiples. They are inevitably comparative and deftly multivariate; they are shrunken, high-density graphics, usually built from a large data matrix; they are drawn almost entirely with data-ink; they are efficient to interpret; and they are often narrative in content — revealing how the relationship between variables shifts as the index variable changes, thereby making interaction and multiplicative effects visible.
 
-> "Well-designed small multiples are:
-> - inevitably comparative
-> - deftly multivariate
-> - shrunken, high-density graphics
-> - usually based on a large data matrix
-> - drawn almost entirely with data-ink
-> - efficient in interpretation
-> - often narrative in content, showing shifts in the relationship between variables as the index variable changes (thereby revealing interaction or multiplicative effects)."
-> — *The Visual Display of Quantitative Information*, p. 175
-
-And the governing aphorism:
-
-> "Small multiples reflect much of the theory of data graphics:
-> For non-data-ink, less is more.
-> For data-ink, less is a bore."
-> — *The Visual Display of Quantitative Information*, p. 175
+The governing logic follows from this: non-data-ink should be minimized (less is more), while data-ink should be maximized (less is a bore). Tufte makes this tension explicit as the underlying theory of small multiples (*The Visual Display of Quantitative Information*, p. 175).
 
 **Summary: do/don't table**
 

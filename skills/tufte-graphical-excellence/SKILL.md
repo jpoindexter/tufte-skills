@@ -166,7 +166,7 @@ Minard's Napoleon map encodes six variables without advertising its technique. T
 5. Temperature (separate scale at bottom)
 6. Date (linked to temperature and position)
 
-"Six variables are portrayed subtly and comprehensively, integrated so gently and unobtrusively that viewers are hardly aware that they are looking into a world of four or five dimensions."
+Tufte observes that the six variables are woven together so seamlessly that viewers absorb a four-to-five-dimensional picture of the campaign without registering the complexity of what they are reading.
 
 ---
 

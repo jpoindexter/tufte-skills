@@ -48,7 +48,7 @@ Both the Broad Street cholera investigation (Snow, 1854) and the Challenger post
 5. Recognizing the inherently multivariate nature of analytic problems
 6. Inspecting and evaluating alternative explanations
 
-> "Visual representations of evidence should be governed by principles of reasoning about quantitative evidence. For information displays, design reasoning must correspond to scientific reasoning. Clear and precise seeing becomes as one with clear and precise thinking." (VE, p.53)
+Tufte argues in *Visual Explanations* (p.53) that information displays must be held to the same epistemic standards as scientific reasoning — the principles governing analytical argument apply equally to analytical graphics. Design reasoning is not separate from scientific reasoning; it is an expression of it. Clear seeing and clear thinking are the same act.
 
 ---
 
@@ -149,14 +149,14 @@ Parallelism fails when parallel structures are not comparable on the same terms.
 
 ## §7. Six Functions of Small Multiples (Ch.6, pp.105–120)
 
-The six functions, verbatim from VE p.105:
+Tufte identifies six functions that multiple images serve (VE, p.105):
 
-1. **Reveal:** "Multiple images reveal repetition and change, pattern and surprise — the defining elements in the idea of information."
-2. **Compare:** "Multiples directly depict comparisons, the essence of statistical thinking."
-3. **Dimensionalize:** "Multiples enhance the dimensionality of the flatlands of paper and computer screen, giving depth to vision by arraying panels and slices of information."
-4. **Enumerate:** "Multiples create visual lists of objects and activities, nouns and verbs, helping viewers to analyze, compare, differentiate, decide."
-5. **Narrate:** "Multiples represent and narrate sequences of motion."
-6. **Intensify:** "Multiples amplify, intensify, and reinforce the meaning of images."
+1. **Reveal:** Multiple images surface repetition and change, pattern and surprise — the elements that constitute information.
+2. **Compare:** Multiples make comparisons direct and visual, embodying the essence of statistical thinking.
+3. **Dimensionalize:** Multiples add depth to the flatlands of paper and screen by arraying panels and slices of information.
+4. **Enumerate:** Multiples create visual lists of objects and activities, supporting analysis, comparison, and decision-making.
+5. **Narrate:** Multiples represent and track sequences of motion through time.
+6. **Intensify:** Multiples amplify and reinforce the meaning of individual images.
 
 **Huygens' *Systema Saturnium* (1659) (VE, pp.106–108):** 32 Saturn images at different orbital positions, each paired with a telescope view from Earth. "A tight collation of explanatory text and small drawings, much like a scientific notebook, the Galileo-Huygens design narrates a sequence of observational slices in a time-series, as changes in the multiple images represent the verbs of motion." (VE, p.106)
 
@@ -164,15 +164,11 @@ The six functions, verbatim from VE p.105:
 
 **Graphical patient status (VE, pp.110–111):** 24 small images per patient — laboratory readings, medicines, x-rays — on one page. The display contains 11,616 cells and 1,786 values previously scattered across multiple paper records. Rate of information transfer: 10–20× improvement over a verbal presentation.
 
-**Organizational apparatus (VE, p.118):**
+**Organizational apparatus (VE, p.118):** Tufte notes that multiples are organized through devices such as grids, compartments, call-outs, narrative sequence, and element overlap — but all such apparatus should consume as little visual space as possible. The organizational structure exists to serve the information, not to fill the display.
 
-> "Multiples organize their images by means of a variety of devices: grids, compartments, call-outs, narrative sequence, overlap (opaque or transparent), and integration of multiple elements into a common field. Such organizational apparatus should be visually minimal; better to use the space for information."
+**Low-resolution screens (VE, p.116):** On low-resolution screens, multiple images cannot coexist in the eyespan — viewers must scroll or page through them sequentially, losing the spatial comparison that makes multiples effective. Higher screen resolution directly enables better analytical comparison by allowing more frames to coexist within view.
 
-**Low-resolution screens (VE, p.116):**
-
-> "contrasts among multiple images often must be made temporally from screen to screen — one damn thing after another — rather than spatially within the eyespan. Improved resolution means more effective comparisons."
-
-**False clustering (VE, p.112):** Accidental communalities in design — shared colors, border weights, spatial proximity — "can easily induce false groupings in the eyes of viewers, who are often busy searching for visual hints that help to boil down, organize, group, and otherwise make sense of multiple images." False *temporal* clusters arise as well: sequential display creates apparent patterns as the viewer moves frame to frame.
+**False clustering (VE, p.112):** Accidental communalities in design — shared colors, border weights, spatial proximity — can easily induce false groupings in the eyes of viewers, who are often busy searching for visual hints that help to boil down, organize, group, and otherwise make sense of multiple images. False *temporal* clusters arise as well: sequential display creates apparent patterns as the viewer moves frame to frame.
 
 **Administrative bloat (VE, p.118):** Ad Reinhardt's 12-version wine glass multiple was surrounded by noisy borders "that consume an astonishing 42% of space in each framed rectangle." Tufte's redesign strips all frames — the edge of each image defines itself.
 
@@ -182,11 +178,9 @@ The six functions, verbatim from VE p.105:
 
 ## §8. Motion and Sequence in Still Images (Ch.6, pp.108–109)
 
-> "For still-land images that depict movement, space replaces time as the sequencing dimension. The adjacency of images helps us to assess change and possibly rates of change within each image and between images in sequence — and we can do so at our own pace." (VE, p.109)
+In static displays of motion, Tufte explains, space takes over the role that time plays in video — adjacent frames replace temporal succession. This spatial layout lets viewers assess change and rates of change across frames, and critically, at their own analytical pace rather than at the pace imposed by the medium. (VE, p.109)
 
-Still images lose the experience of duration — the rates and rhythms of actual motion. This loss is structurally unavoidable. But it is compounded by a design failure:
-
-> "many still-land multiples depicting motion omit any explicit time-scale. Dequantification all over again." (VE, p.109)
+Still images lose the experience of duration — the rates and rhythms of actual motion. This loss is structurally unavoidable. But it is compounded by a design failure: Tufte observes that still-image motion multiples frequently omit any explicit time scale — yet another instance of the dequantification problem he identifies throughout his work. Without a time axis, the viewer cannot judge rates of change between frames. (VE, p.109)
 
 **Temporal density rule:** The tempo of time-sampling must match the character of the motion.
 - Smooth, deliberate, incremental motion (planetary orbit, continental drift): few frames suffice. Huygens gaps 1.8 Earth-years between Saturn positions — tolerable because the motion is smooth and predictable.

@@ -147,7 +147,7 @@ A grid exists to organize content. Grids that compete with content destroy signa
 
 The E.J. Marey image quilt celebrates his work on velocity, motion pictures, data collection, and visualization. Directly adjacent abutting images with no frames enable comparison; image size varies and is ordered to tell a story.
 
-**On frames:** "Frames around images enhance/isolate color and reduce the bright-white glare of display screens... Over-framing of published image matrices is common, creating frame noise, reducing local space devoted to content, masking direct comparisons and flows of adjacent images." Algorithms for optimizing 2D packing of images are not helpful; "better to use ragged margins and small black surrounds of quilts with abutting images."
+**On frames:** Tufte notes that while frames around images can help isolate color and reduce screen glare, over-framing is endemic in published image matrices — producing visual noise, consuming content space, and blocking the direct comparisons that abutting images enable. Algorithmic 2D-packing solutions don't help; ragged margins and small black surrounds work better.
 
 Measles vaccination image quilt (p. 31): 88 million disease instances located in space and time 1880-2011; 103 million disease cases prevented since 1924 in the United States — a natural experiment where each state serves as its own control across years.
 
@@ -189,7 +189,7 @@ PAC-MAN example: values of each frame (60 fps) by active memory address were rec
 
 **Named failure mode — Discipline Capture:** when a model is no longer held accountable to external evidence because insiders control the standards of evidence. "Disciplines require hard-working true believers in local doctrines/assumptions that do not correspond to the truth." Revolutionary reforms are sometimes produced by those on the margin or outsiders: Tim Berners-Lee at CERN inventing the Web; Tversky and Kahneman falsifying rational-choice economic models.
 
-**Named failure mode — Default Format Acceptance:** accepting the production system's format as if it were the natural format of the content. "See with fresh eyes. Do not go lazy into default models, justified by 'we've always done it this way' — words that end thought, censor deviations, block searches for alternatives. Nonetheless, many conventions and standards have got it right, or at least good enough, but fresh seeing and attempted remodeling can confirm their continuing righteousness."
+**Named failure mode — Default Format Acceptance:** accepting the production system's format as if it were the natural format of the content. Tufte argues that "we've always done it this way" ends thought — it censors deviations and blocks the search for alternatives. That said, many conventions have earned their place; fresh remodeling tests whether they still hold rather than assuming they do or don't.
 
 ### Remodeling proposals (p. 9)
 
@@ -217,7 +217,7 @@ Coined by Richard Bellman considering problems in dynamic optimization. When dim
 > "Thinking/seeing/analytical/fresh eyes have a sense of what is relevant, finding what is important in a mass of data and knowledge, seeing something worthwhile, where to gain leverage. A sense of the relevant is the ability to identify and detect those things that have consequences beyond themselves."
 > — *Seeing with Fresh Eyes*, p. 46
 
-"Creativity is connecting things. Connections become enshrined, narrowed, exhausted, prohibited within a discipline or specialty. Fresh eyes approach a new field with deep curiosity and focused looting — to quarry, make new connections, do whatever it takes, seek the useful and relevant, learn afresh not merely confirm prior views. When you meet with experts in another field, shut up and listen. People love to talk about their stuff, and your job is to provide occasional prompts to guide them toward your interests, to take notes, now and then testing their explanatory depth, seeking to understand their cognitive style, asking 'Why is that?' 'How do you know that?' Be skeptical, learn what you can about a field but don't believe it. Outsiders need not accept the assumptions and doctrines of disciplines."
+Tufte describes cross-field learning as disciplined looting: creativity is connecting things across domains, but connections formed inside a discipline narrow and exhaust over time. The practice is concrete — listen more than talk, guide experts toward your interests, probe explanations with "why is that?" and "how do you know that?" Be skeptical of what you learn, and never feel obligated to accept the field's inherited doctrines. Outsiders are freed from the assumptions insiders have forgotten they're making.
 
 ### Identifying excellence (p. 47)
 
@@ -263,7 +263,7 @@ Content-responsive typography for these 133 topics:
 
 ### The Great Disjunction (p. 17)
 
-"For 1500 years, printed text has used grids indifferent/hostile to meaning. Content-responsive grids are better than imperious grid-possessed layouts." The marginal cost of space on display screens is zero — content can now drive the use of space, not cost-minimizing, not merely style sheets and conventions that arbitrarily pre-specify space. "Writers express themselves with words *and* space; and readers have more intense, subtle, efficient content experiences."
+Tufte frames this as a 1500-year problem: print conventions built grids for production convenience, not meaning. Display screens change the economics — the marginal cost of space is zero, so content can now drive spatial decisions rather than cost constraints or inherited style conventions. Writers gain a second expressive channel beyond words; readers gain efficiency and depth.
 
 ### Code and poetry as models (pp. 14-15)
 
@@ -273,7 +273,7 @@ Poetry: 5 of the first 8 lines of T.S. Eliot's *The Waste Land* are enjambed. Li
 
 ### LittleDataGraphics replaced by data paragraphs (p. 60)
 
-"Small data sets should be shown directly, as in this table. LittleDataGraphics (pie charts, bar charts) translate and encode data into areas and colors. Viewers then must mentally translate codes back into numbers. These codes are unique to the local set of data graphics, and do not repay learning. Instead, just directly show numbers as numbers. No more LittleDataGraphics."
+Tufte's case against LittleDataGraphics: pie charts and bar charts encode numbers as areas and colors, requiring viewers to mentally decode them back into the original values. That encoding-decoding round-trip is lossy and forces learning a local legend that won't transfer to the next graphic. For small data sets, showing numbers directly is faster and more precise. The prescription: no more LittleDataGraphics.
 
 The National Weather Service KSFO briefing: 18 measurements (US and metric), 28 words, 4 links — simultaneously serving weather experts interested in the 5th significant digit of barometric pressure and casual users who can't look out the window.
 

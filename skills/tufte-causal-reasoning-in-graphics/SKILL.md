@@ -15,15 +15,13 @@ Most data graphics describe; few argue. The difference is whether the display is
 
 Every causal claim requires a comparison. Without a baseline, a count is only a count.
 
-> "The deep, fundamental question in statistical analysis is *Compared with what?* Therefore, investigating the experiences of the victims of cholera is only part of the search for credible evidence; to understand fully the cause of the epidemic also requires an analysis of those who *escaped* the disease."
-> — *Visual Explanations*, p. 30
+Tufte identifies "Compared with what?" as the foundational question in statistical analysis. In *Visual Explanations* (p. 30), he argues that studying only cholera victims provides only half the evidence — a complete causal investigation requires equally rigorous analysis of those who did *not* contract the disease.
 
 Snow had 83 deaths mapped. The map's causal argument depended equally on showing the spaces with no deaths — the brewery (70+ workers, no cholera; they drank malt liquor and never used the Broad Street pump) and the workhouse (535 inmates, only 5 deaths; they had their own well and never sent to Broad Street for water). Both anomalies are visible only because they appear on the same map as the deaths.
 
 The Thiokol engineers committed the mirror failure: their 13 charts showed only the 7 flights with O-ring damage, omitting the 17 flights without damage. Those undamaged flights, almost all at warm temperatures, are the statistical leverage that reveals the temperature-damage correlation.
 
-> "It was as if John Snow had ignored some areas with cholera and *all* the cholera-free areas and their water pumps as well. The flights without damage provide the statistical leverage necessary to understand the effects of temperature. *Numbers become evidence by being in relation to.*"
-> — *Visual Explanations*, p. 44
+Tufte draws the parallel directly in *Visual Explanations* (p. 44): the Thiokol engineers' data selection was equivalent to Snow having mapped only a subset of cholera deaths while ignoring all the disease-free areas and their pumps. The undamaged flights carry the statistical leverage that makes the temperature pattern visible — numbers become evidence only when placed in relation to each other.
 
 ### Do / Don't: Baseline inclusion
 
@@ -80,8 +78,7 @@ Snow's map succeeds as a causal display because it satisfies four principles sim
 
 The map's two-dimensional geography is the natural context for a question about contaminated water sources. Every data point (a death) is plotted relative to its distance from every potential cause (each pump). The causal candidate and the effect are on the same display.
 
-> "Recasting the original data from their one-dimensional temporal ordering into a two-dimensional spatial comparison, Snow marked deaths from cholera on this map, along with locations of the area's 13 community water pump-wells. This map reveals a strong association between cholera and proximity to the Broad Street pump, in a context of simultaneous comparison with other local water sources and the surrounding neighborhoods without cholera."
-> — *Visual Explanations*, p. 30
+As Tufte describes in *Visual Explanations* (p. 30), Snow transformed his data from a one-dimensional temporal list into a two-dimensional spatial display — plotting each death by address against the locations of all 13 community pumps. The resulting map exposes a strong association between cholera mortality and the Broad Street pump, visible precisely because it includes both the affected areas and the surrounding neighborhoods that escaped the disease.
 
 ### Principle 2 — Make quantitative comparisons
 
@@ -91,8 +88,7 @@ The workhouse case provides the clearest quantitative argument: 535 inmates surr
 
 Snow investigated every death that appeared far from the Broad Street pump and explained each one: a child who attended school near the pump, a cabinet-maker who worked on Broad Street, a widow in West End whose son arranged a daily delivery of Broad Street pump water because she preferred its taste. Each apparent counter-case, on investigation, confirmed the theory rather than weakening it.
 
-> "The credibility of a report is enhanced by a careful assessment of *all* relevant evidence, not just the evidence overtly consistent with explanations advanced by the report. The point is to get it right, not to win the case, not to sweep under the rug all the assorted puzzles and inconsistencies that frequently occur in collections of data."
-> — *Visual Explanations*, p. 32
+Tufte argues in *Visual Explanations* (p. 32) that analytic credibility depends on engaging all the evidence — not just the data that supports the preferred explanation. The goal is accuracy, not advocacy: apparent puzzles and inconsistencies belong in the analysis, not beneath it.
 
 ### Principle 4 — Assess possible errors in the reported numbers
 
@@ -104,8 +100,7 @@ Snow documented data limitations explicitly — patients who died in hospitals a
 
 The engineers at Morton Thiokol who opposed the Challenger launch had the correct causal theory: low temperature degrades O-ring resiliency, which risks catastrophic joint failure. They were right. Their 13 charts failed to communicate this because the charts were not designed to display a causal relationship.
 
-> "The 13 charts failed to stop the launch. Yet, as it turned out, the chartmakers had reached the right conclusion. They had the correct theory and they were thinking causally, but they were not *displaying* causally."
-> — *Visual Explanations*, p. 44
+Tufte's verdict in *Visual Explanations* (p. 44) is precise: the engineers had reached the correct conclusion and held the right causal theory, but their thirteen charts organized the data in ways that made the temperature-damage relationship invisible. They were thinking causally without displaying causally.
 
 ### The specific failures of the 13 charts
 
@@ -113,8 +108,7 @@ The engineers at Morton Thiokol who opposed the Challenger launch had the correc
 
 **Failure mode 2 — Selective data.** The temperature chart reported data for 4 development motors, 2 qualifying motors, and 2 actual launches with blow-by. Missing: 92% of temperature data, covering 5 flights with erosion and 17 flights without damage. The chart defined the database for the decision.
 
-> "Displays of evidence implicitly but powerfully define the scope of the relevant, as presented data are selected from a larger pool of material. Like magicians, chartmakers reveal what they choose to reveal."
-> — *Visual Explanations*, p. 43
+Tufte observes in *Visual Explanations* (p. 43) that every display of evidence silently defines what counts as relevant — the presented data is always a selection from a larger pool. The choice of what to include is as consequential as the data itself.
 
 **Failure mode 3 — Wrong ordering.** The 48-rocket iconographic chart arranged launches in temporal sequence. The causal variable, temperature, appeared only as small numbers written sideways. Any viewer trying to assess temperature-damage correlation had to mentally extract and re-sort 48 numbers while reading across two sequentially projected slides.
 
@@ -137,8 +131,7 @@ A complete scatterplot of all 24 previous launches — O-ring damage index (y-ax
 - The Challenger forecast of 29°F was 5.7 standard deviations below the mean launch temperature
 - 29°F was 37°F colder than any previous undamaged launch
 
-> "The scatterplot shows the experience of all 24 launches prior to the Challenger. Like the table, the graph reveals the serious risks of a launch at 29°. Over the years, the O-rings had persistent problems at cooler temperatures: indeed, *every* launch below 66° resulted in damaged O-rings."
-> — *Visual Explanations*, p. 45
+Tufte's corrected scatterplot in *Visual Explanations* (p. 45) — plotting all 24 pre-Challenger launches by temperature and O-ring damage — makes the risk visible at a glance: every launch below 66°F had damaged O-rings, and the Challenger's 29°F forecast falls far beyond the range of any prior flight.
 
 ---
 
@@ -163,8 +156,7 @@ A complete scatterplot of all 24 previous launches — O-ring damage index (y-ax
 
 Tufte closes the chapter with six principles that apply equally to statistical reasoning and to display design. They are paired because the design should recapitulate the analysis.
 
-> "Visual representations of evidence should be governed by principles of reasoning about quantitative evidence. For information displays, design reasoning must correspond to scientific reasoning. Clear and precise seeing becomes as one with clear and precise thinking."
-> — *Visual Explanations*, p. 53
+In *Visual Explanations* (p. 53), Tufte frames the governing principle: display design and statistical reasoning are not separate disciplines — both must obey the same logic of evidence. When seeing and thinking operate on the same principles, graphic clarity and analytic clarity become the same thing.
 
 | Principle | What it means for display design | What it means for reasoning |
 |---|---|---|
@@ -195,8 +187,7 @@ Before finalizing any display intended to support a causal claim:
 
 Feynman's ice-water O-ring experiment at the presidential commission hearing became a media sensation but committed the same error as the 13 charts: it was an uncontrolled demonstration, not an experiment.
 
-> "The evidence of a one-glass exhibit is equivocal: Did the O-ring lose resilience because it was clamped hard, because it was cold, or because it was wet? A credible experimental design requires at least two clamps, two pieces of O-ring, and two glasses of water (one cold, one not)."
-> — *Visual Explanations*, p. 51–52
+Tufte notes in *Visual Explanations* (pp. 51–52) that the single-glass demonstration is inconclusive: it cannot separate whether the O-ring lost resiliency due to cold temperature, mechanical clamping, or simple contact with water. A controlled comparison — two O-ring samples, identical clamping, one glass at 32°F and one at room temperature — is required to isolate the variable.
 
 The one-glass method is an experience, not an experiment. It evokes the well-known connection but does not establish its magnitude or isolate its cause. A correct design: two O-rings, two glasses, identical clamping duration, same rubber material, one at 32°F and one at 70°F, both released simultaneously. Only then is the question "Compared with what?" answered.
 

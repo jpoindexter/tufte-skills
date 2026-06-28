@@ -18,8 +18,7 @@ The idea of "flatland" comes from Edwin A. Abbott's *Flatland: A Romance of Many
 > "THE world is complex, dynamic, multidimensional; the paper is static, flat. How are we to represent the rich visual world of experience and measurement on mere flatland?"
 > — *Envisioning Information*
 
-> "Escaping this flatland and enriching the density of data displays are the essential tasks of information design. Such escapes grow more difficult as ties of data to our familiar three-space world weaken (with more abstract measures) and as the number of dimensions increases (with more complex data)."
-> — *Envisioning Information*
+Tufte identifies two essential tasks for information design: escaping the two-dimensional constraint and increasing data density. Both tasks become harder as data grows more abstract — losing its connection to familiar three-dimensional experience — and as the number of variables to represent grows.
 
 Two concrete goals for every display:
 
@@ -28,10 +27,7 @@ Two concrete goals for every display:
 | Increase dimensions | More variables shown on the same surface without confusion |
 | Increase data density | More information per unit area of paper or screen |
 
-Paul Klee wrote the problem precisely:
-
-> "It is not easy to arrive at a conception of a whole which is constructed from parts belonging to different dimensions. And not only nature, but also art, her transformed image, is such a whole. It is difficult enough, oneself, to survey this whole, whether nature or art, but still more difficult to help another to such a comprehensive view. This is due to the consecutive nature of the only methods available to us for conveying a clear three-dimensional concept of an image in space... For, with such a medium of expression, we lack the means of discussing in its constituent parts, an image which possesses simultaneously a number of dimensions."
-> — Paul Klee, *On Modern Art* (London, 1948), as quoted in *Envisioning Information*
+Paul Klee, writing in *On Modern Art* (London, 1948) and quoted by Tufte, observed that grasping a whole composed of parts from different dimensions is inherently difficult — for nature, for art, and most of all when trying to convey that whole to another person. Sequential communication cannot fully represent something that exists simultaneously in multiple dimensions.
 
 **Fundamental constraint:** "Nearly every escape from flatland demands extensive compromise, trading off one virtue against another."
 
@@ -96,14 +92,12 @@ The train diagonals multiple-function: "those marks record six variables all at 
 
 Replicate the same graphic design structure — the same axes, the same encoding, the same scale — across a set of panels that vary by one additional variable. The reader decodes the design once and can then focus entirely on differences.
 
-> "Small multiples, whether tabular or pictorial, move to the heart of visual reasoning — to see, distinguish, choose (even among children's shirts). Their multiplied smallness enforces local comparisons within our eyspan, relying on an active eye to select and make contrasts rather than on bygone memories of images scattered over pages and pages."
-> — *Envisioning Information*
+In *Envisioning Information*, Tufte argues that small multiples target the core mechanism of visual reasoning: the ability to see, distinguish, and choose. Their small size keeps all comparisons within a single eyespan, so the eye moves actively between panels rather than depending on memory to bridge images spread across separate pages.
 
 **Canonical example: California air pollution (computer-generated)**
 12 panels: 3 pollutants (nitrogen oxides, carbon monoxide, reactive hydrocarbons) × 4 time-of-day slices (midnight–3am, 6–9am, noon–3pm, 3–6pm). Each panel is a 3D surface map of southern California, 2,400 grid squares at 5km per side. "A high density arrangement of data, abounding with variables."
 
-> "An economy of perception results; once viewers decode and comprehend the design for one slice of data, they have familiar access to data in all the other slices. As our eye moves from one image to the next, this constancy of design allows viewers to focus on changes in information rather than changes in graphical composition. A steady canvas makes for a clearer picture."
-> — *Envisioning Information*
+Tufte argues that small multiples produce an economy of perception: viewers decode the graphic format once and immediately have full access to every panel. Because the composition does not change from panel to panel, the eye can concentrate entirely on how the data changes — not on re-learning the visual language. A stable design surface makes the data differences visible.
 
 **Small multiples work for both spatial and tabular data:**
 - Galileo's daily sunspot diagrams (1610–1612): 36 small circles arrayed in rows, each showing spot position, date labeled. Each observation indexes on time; the sequence of small multiples reveals drift.
@@ -163,8 +157,7 @@ A daily newspaper weather map renders Japan as a vertical cross-section rather t
 
 Data density = amount of information per unit area. High-information displays convey statistical integrity; low-density displays invite suspicion about measurement quality.
 
-> "High-information graphics, such as this, convey a spirit of quantitative depth and a sense of statistical integrity. Emaciated data-thin designs, in contrast, provoke suspicions — and rightfully so — about the quality of measurement and analysis."
-> — *Envisioning Information*
+Tufte argues that data-dense displays communicate quantitative seriousness and statistical rigor. Sparse displays that carry little information relative to their surface area invite justified doubt about the quality of the underlying measurement and analysis.
 
 **Concrete benchmarks from examples in the chapter:**
 
@@ -185,8 +178,7 @@ Data density = amount of information per unit area. High-information displays co
 
 The opposite of escaping flatland is decorating it. Chartjunk is the use of display apparatus and ornamentation to compensate for thin data or to attract attention away from analytical content.
 
-> "By giving the focus over to data rather than data-containers, these design strategies are transparent and self-effacing in character. Designs so good that they are invisible. Too many data presentations, alas, seek to attract and divert attention by means of display apparatus and ornament. Chartjunk has come to corrupt all sorts of information exhibits and computer interfaces, just like the 'ducks' of modern architecture."
-> — *Envisioning Information*
+Tufte argues that the strategies for escaping flatland share a common virtue: they are self-effacing. When the design works, only the data is visible — the container disappears. The pathological alternative is chartjunk: displays that compete with their own data, using ornament and apparatus to attract attention away from analytical content, the information-design equivalent of the architectural "duck."
 
 The "duck" metaphor comes from Venturi: when Modern architects abandoned ornament, they unconsciously designed buildings that were ornament. The whole building became a duck — the container was the message.
 
@@ -242,8 +234,7 @@ The history of information design is a history of escaping flatland. Tufte trace
 | Self-effacement | Make the design invisible, data visible | Make the container the message (duck) |
 | Audience respect | Assume readers are alert and caring | Add ornament to "enliven" boring numbers |
 
-> "The operating moral premise of information design should be that our readers are alert and caring; they may be busy, eager to get on with it, but they are not stupid. Clarity and simplicity are completely opposite simple-mindedness."
-> — *Envisioning Information*
+Tufte holds that the moral premise of information design is respect for the audience. Readers are attentive and engaged; they may be pressed for time, but they are not incapable. Simplicity and clarity are not concessions to limited comprehension — they are the highest form of rigor.
 
 ---
 

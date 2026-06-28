@@ -94,8 +94,7 @@ This is the prescription for any diagram where relationships carry complex or va
 2. **Label the link with magnitude** — where quantifiable, the amount or rate (e.g. "r = 0.73", "~40% of variance", "3× effect").
 3. **Label the link with evidence basis** — where certainty varies, a brief qualifier ("confirmed RCT", "modeled", "assumed for baseline").
 
-> "Clear, detailed, and thorough labeling should be used to defeat graphical distortion and ambiguity. Write out explanations of the data on the graphic itself. Label important events in the data."
-> — Edward R. Tufte, *The Visual Display of Quantitative Information* (1983), p. 77
+In *The Visual Display of Quantitative Information*, Tufte argues that detailed, specific labeling applied directly to the graphic is the primary defense against distortion and ambiguity — explanations and named events belong on the data itself, not displaced to a caption or external legend.
 
 ### Annotation placement rules
 

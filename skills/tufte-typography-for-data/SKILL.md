@@ -15,8 +15,7 @@ Typography in analytical displays operates on a primary ethical claim: "Typograp
 
 The central framework of *Seeing With Fresh Eyes* (2020), Chapter 2 (pp. 49–63):
 
-> "Sentences and words do not exist by themselves, but have natural, inevitable, unavoidable interactions with their surrounding spaces, words, and other sentences. Sentences survive content-indifferent and content-hostile spacings, but surviving is not thriving. Text space should not be owned and governed by generic production grids, which make for convenient production but inconvenient meaning. Space can and should be content-responsive, actively contributing to meaning — forever practices in poetry, maps, math, computer code, comics, theater/movie scripts, posters."
-> — *Seeing With Fresh Eyes*, p. 49
+In *Seeing With Fresh Eyes* (p. 49), Tufte argues that words and sentences inevitably interact with the spaces, other words, and sentences around them. Text can survive content-indifferent spacing, but surviving is not thriving. When generic production grids own the layout, the result is convenient production at the cost of inconvenient meaning. Space should instead respond to content — actively contributing to meaning — as it has long been practiced in poetry, maps, mathematics, code, comics, and scripts.
 
 | Mode | Mechanism | Effect |
 |---|---|---|
@@ -26,8 +25,7 @@ The central framework of *Seeing With Fresh Eyes* (2020), Chapter 2 (pp. 49–63
 
 **The 1,500-year grid problem:**
 
-> "For 1500 years, printed text has used grids indifferent/hostile to meaning. Content-responsive grids are better than imperious grid-possessed layouts."
-> — *Seeing With Fresh Eyes*, p. 17
+Tufte observes (*SWFE*, p. 17) that 1,500 years of printed typography have been governed by grids built for production convenience rather than reader comprehension. Content-responsive layouts — which shape space around meaning rather than around column widths — are simply better.
 
 **The Ioannidis example (SWFE pp. 49, 52):**
 
@@ -39,7 +37,7 @@ John Ioannidis's "Why Most Published Research Findings Are False" sentence is a 
 
 **The Somerset Maugham passage (SWFE pp. 48, 52):**
 
-"The Book Bag" catalogues book types across 14 clauses. Conventional typography runs all clauses into a single block. Content-responsive linebreaks group by category (illness, travel, expedition) and make parallel syntax visible. "Line-spacing and linebreaks clarify meaning, quietly and effectively. Commas, semi-colons, and full stops in the original text signal a linebreak for the content-responsive text."
+"The Book Bag" catalogues book types across 14 clauses. Conventional typography runs all clauses into a single block. Content-responsive linebreaks group by category (illness, travel, expedition) and make parallel syntax visible. Tufte notes that existing punctuation — commas, semicolons, full stops — already signals exactly where content-responsive linebreaks should fall, and the result clarifies meaning with minimal intervention.
 
 ---
 
@@ -49,8 +47,7 @@ Darwin's *Origin of Species* provides concrete arithmetic for why content-respon
 
 The *Origin* contains 14 chapters. The Table of Contents announces 133 topics. Each chapter also begins with that chapter's topic list — so each topic appears twice, yielding 1,962 words of topic lists. These use content-hostile linebreaks (grid-driven, squared-off margins), mushing section titles together.
 
-> "Content-responsive typography clarifies topic paragraphs for both Origin's table of contents and chapter headings. These changes add only 2 or 3 pages to Origin's 500 pages. Eliminating typographic impediments does add up: 133 topics, each appearing twice, perhaps 3 million serious readers and millions of readers who skimmed over Origin of Species since 1859 — a grand total of ~2,000,000,000 to 5,000,000,000 typographic impediments for Origin's readers."
-> — *Seeing With Fresh Eyes*, p. 50
+Tufte calculates (*SWFE*, p. 50) that applying content-responsive typography to Darwin's table of contents and chapter headings would cost just 2 or 3 additional pages in a 500-page book. The reader benefit compounds differently: 133 topics, each listed twice, read by perhaps 3 million serious readers plus millions more who skimmed *Origin* since 1859, yields a cumulative total of roughly 2 to 5 billion individual typographic impediments imposed across the work's readership history.
 
 The cost-benefit: 2–3 additional pages in a 500-page book eliminates billions of reader-impediments accumulated since 1859. Content-responsive linebreaks are never neutral — they are either imposing billions of friction events or eliminating them.
 
@@ -60,15 +57,13 @@ The cost-benefit: 2–3 additional pages in a 500-page book eliminates billions 
 
 For millennia, space on paper, vellum, parchment, clay, papyrus was costly. Words ran edge to edge. Then:
 
-> "The marginal cost of space on display screens is zero — you have a screen, you can type on it and scroll through all you want. Content can now drive the use of space, not cost-minimizing, not merely style sheets and conventions that arbitrarily pre-specify the use of space."
-> — *Seeing With Fresh Eyes*, p. 53
+Tufte observes (*SWFE*, p. 53) that display screens carry zero marginal cost for additional space. The entire historical constraint on layout economics has dissolved. Content can now drive every spatial decision — rather than cost-minimizing defaults, or style sheets and conventions that arbitrarily pre-specify how space is used.
 
 This inverts 1,500 years of typography economics. Continuing to use content-indifferent grids on screens is a choice to impose a pre-screen constraint that no longer applies.
 
 **Central-axis typography as a content-responsive signal:**
 
-> "Central-axis provides a clear signal of the next line, so that readers and speakers don't have to search on the left margin, sometimes accidentally skipping down a line. Ragged-left typography is used for dialogue in novels and scripts. In central-axis, each line is activated at both left and right margins — unlike squared-off conventional text. Readers/speakers are aware of the length of the next line at both its beginning and end. That knowledge may also help readers detect the pace and rhythm of the words."
-> — *Seeing With Fresh Eyes*, p. 53
+Tufte argues (*SWFE*, p. 53) that central-axis (centered) typography offers a practical navigational advantage: both left and right margins are active, so readers see the full length of the next line before reading it, reducing the accidental line-skipping that occurs when the eye must search a flush-left margin. Ragged-left (flush-right) type serves dialogue, where the left margin identifies the speaker. Central-axis layout additionally gives readers awareness of the coming line's pace and rhythm that flush-left columns do not.
 
 | Typography mode | Signal value | Best use |
 |---|---|---|
@@ -94,8 +89,7 @@ The Knuth-Morris-Pratt string matching algorithm: 37 lines, 75% empty space. "Fo
 
 Text-only paragraphs are typographically identical: same typeface, same spacing, same line length, piled into columns. This uniformity is a memory failure:
 
-> "Text-only paragraphs differ from one another only in their words. All the words are typographically the same — typeface, spacings, line-lengths piled up into long deep columns. Systematic regularity of text paragraphs is universally inconvenient for readers, who are unable to find and read once again a specific string of words in previously-read paragraphs. Idiosyncratic paragraphs assist memory and retrieval by readers, by uniquely activating the relevant neural substrates for retaining visual memories. Nearly every paragraph in this book is deliberately visually unique."
-> — *Seeing With Fresh Eyes*, p. 59
+In *Seeing With Fresh Eyes* (p. 59), Tufte names this as a universal reader problem: the systematic regularity of body text paragraphs makes them impossible to distinguish from one another, so readers cannot locate a specific passage they have previously read. Idiosyncratic paragraphs — each visually distinct through the use of tables, images, code blocks, centered text, or other treatments — uniquely activate visual memory and make retrieval possible. Tufte deliberately made nearly every paragraph in SWFE visually unique for this reason.
 
 Readers who cannot relocate a passage they have already read are experiencing content-indifferent typography failing them. Idiosyncratic paragraphs — ones that incorporate data tables, images, code blocks, centered text, or ragged-left dialogue — are visually distinct and therefore more retrievable.
 
@@ -114,8 +108,7 @@ Readers who cannot relocate a passage they have already read are experiencing co
 
 **The LittleDataGraphics critique:**
 
-> "Small data sets should be shown directly, as in this table. LittleDataGraphics (pie charts, bar charts) translate and encode data into areas and colors. Viewers then must mentally translate codes back into numbers. These codes are unique to the local set of data graphics, and do not repay learning. Instead, just directly show numbers as numbers. No more LittleDataGraphics."
-> — *Seeing With Fresh Eyes*, p. 60
+Tufte's term "LittleDataGraphics" (*SWFE*, p. 60) names the category of displays — pie charts, bar charts — that encode small data sets into areas and colors, requiring viewers to mentally reverse the encoding to recover the underlying numbers. These encodings are unique to each local graphic and carry no transfer value to the next one. The direct alternative: show numbers as numbers, without any intervening visual code.
 
 | Display type | Encoding | Decoding required | Verdict |
 |---|---|---|---|
@@ -128,8 +121,7 @@ Readers who cannot relocate a passage they have already read are experiencing co
 
 The National Weather Service briefing is the canonical example: one display presents **18 measurements** (U.S. and metric), **28 words**, and **4 links** to weather data. It simultaneously serves casual users (the sunny/cloudy icon), precise users (barometric pressure to 5 significant digits), and linked users (3-day history, hourly forecast). (*SWFE*, p. 60)
 
-> "Good displays simultaneously serve multiple interests and constituencies. Presentations should make everyone smarter, and not dumb things down to the lowest common denominator."
-> — *Seeing With Fresh Eyes*, p. 60
+Tufte argues (*SWFE*, p. 60) that effective displays serve multiple audiences simultaneously — casual users and precision analysts alike. Calibrating a display to the least-informed viewer discards most of its value; the goal is to make everyone smarter.
 
 ---
 
@@ -188,8 +180,7 @@ The typeface size IS the population data. Direct labels provide exactitude witho
 
 Weight encodes semantic rank. The heavier mark receives more attention — so heavier marks must carry more meaning.
 
-> "The contrast in line weight represents contrast in meaning. The greater meaning is given to the greater line weight; thus the data line should receive greater weight than the connecting verticals."
-> — *The Visual Display of Quantitative Information*, p. 186
+In *The Visual Display of Quantitative Information* (p. 186), Tufte establishes weight as a semantic signal: contrast in line weight encodes contrast in meaning. The heavier mark must carry the greater meaning, which means the data line — the primary signal — must visually dominate the connecting verticals and other structural elements.
 
 **Weight hierarchy table:**
 
@@ -204,8 +195,7 @@ Weight encodes semantic rank. The heavier mark receives more attention — so he
 
 **Historical precedent:**
 
-> "Lines in data graphics should be thin. One reason eighteenth- and nineteenth-century graphics look so good is that they were engraved on copper plates, with a characteristic hair-thin line. The drafting pens of twentieth-century mechanical drawing thickened linework, making it clumsy and unattractive."
-> — *The Visual Display of Quantitative Information*, p. 185
+Tufte notes (*VDQI*, p. 185) that the visual elegance of eighteenth- and nineteenth-century data graphics owes significantly to copper-plate engraving, which produced characteristically hair-thin linework. The mechanical drafting pens of the twentieth century replaced these fine strokes with heavier lines, making charts appear clumsy and unattractive by comparison.
 
 **Type weight parallel:** Bold structural labels (axis titles, category headers) while data values appear in regular weight inverts the hierarchy — structure shouts, data whispers. Data values and direct annotations at medium-heavy weight; surrounding structure in light or regular weight.
 
@@ -290,10 +280,9 @@ All-caps sans-serif has low word-shape distinctiveness. Avoid at the point of ma
 
 ## §10. Self-Exemplifying Design
 
-> "What is to be sought in designs for the display of information is the clear portrayal of complexity. Not the complication of the simple; rather the task of the designer is to give visual access to the subtle and the difficult — that is, the revelation of the complex."
-> — *The Visual Display of Quantitative Information*, p. 191
+Tufte's governing criterion for information display (*VDQI*, p. 191) is the clear portrayal of complexity — not the complication of simple data, but the revelation of what is genuinely subtle and difficult. The designer's task is to provide visual access to the complex, not to decorate the simple.
 
-The typographic choices in a data display must embody the principles it advocates. A chart arguing for clarity while using heavy, clotted type is internally incoherent. The heavy-handed scatter plot in VDQI (p. 184): "bold italic axis labels, fat dots, large text annotations mid-plot, labels in bold caps... the clotted ink, the poor style of lettering, the puffed-up display of a small data set, the coarse texture of the entire graphic, and the mismatch between drawing and surrounding text." The type screams while carrying very little data.
+The typographic choices in a data display must embody the principles it advocates. A chart arguing for clarity while using heavy, clotted type is internally incoherent. Tufte's example from VDQI (p. 184) is a scatter plot burdened with oversized bold italic axis labels, fat data points, large text annotations placed mid-plot, all-caps labels, heavy ink texture, poor lettering, and a mismatch between the drawing style and the surrounding text — all deployed to display a small data set. The type screams while carrying very little data.
 
 **Self-exemplifying checklist:**
 - [ ] Does the type weight hierarchy match the data importance hierarchy?

@@ -17,8 +17,7 @@ The data map is the oldest form of this transformation. A geographic outline is 
 
 The core distinction is measurability. An illustrative picture shows what something looks like. An evidentiary picture lets the viewer measure, compare, and falsify.
 
-> "Only a picture can carry such a volume of data in such a small space. Furthermore, all that data, thanks to the graphic, can be thought about in many different ways at many different levels of analysis — ranging from the contemplation of general overall patterns to the detection of very fine county-by-county detail."
-> — *The Visual Display of Quantitative Information*, p. 16
+In *The Visual Display of Quantitative Information*, Tufte observes that no other format can compress as many data points into a single page as a mapped image can — and that the same image supports simultaneous analysis at multiple scales, from the broad geographic pattern down to fine county-by-county detail.
 
 **The measurability test** — ask these three questions before calling an annotated image complete:
 
@@ -50,10 +49,7 @@ Every spatially interpreted image requires at least one calibrated scale referen
 
 **External scale bar** — a labeled ruler placed in the image margin or a corner. John Snow's 1854 cholera map carries a scale bar reading "50 — 0 — 50 Yards — 100 — 150 — 200" with X marks for pumps and dots for deaths. The scale bar makes the spatial clustering around the Broad Street pump not merely visible but measurable: the pump sits at the center of the death cluster within a radius of roughly 250 yards.
 
-**Internal coordinate grid** — the grid itself is the scale. The Yü Chi Thu (Map of the Tracks of Yü the Great), carved in stone in 1137 CE but probably dating from before 1100, uses a regular grid at 100 *li* per division across the entire map surface. Joseph Needham's assessment:
-
-> "The scale of the grid is 100 li to the division. The coastal outline is relatively firm and the precision of the network of river systems extraordinary. The size of the original, which is now in the Pei Lin Museum at Sian, is about 3 feet square. . . . There was nothing like it in Europe till the Escorial MS. map of about +1550."
-> — *Science and Civilisation in China*, vol. 3, pp. 546–547, quoted in *The Visual Display of Quantitative Information*, p. 20
+**Internal coordinate grid** — the grid itself is the scale. The Yü Chi Thu (Map of the Tracks of Yü the Great), carved in stone in 1137 CE but probably dating from before 1100, uses a regular grid at 100 *li* per division across the entire map surface. Needham observed that the map's grid holds to 100 *li* per division, that its coastal outline is reasonably accurate, and that the river network is rendered with exceptional precision — all in a stone carving roughly three feet square. He concluded that European cartography produced nothing comparable until around 1550. (*Science and Civilisation in China*, vol. 3, pp. 546–547, cited in *The Visual Display of Quantitative Information*, p. 20.)
 
 **Tone/density legend** — when the scale encodes intensity rather than distance, a keyed legend strip is the scale reference. The Lick Observatory galaxy-count map divides the northern galactic hemisphere into 1,024 × 2,222 rectangles (2,275,328 total cells). The scale strip at the bottom maps 10 gray tones to galaxy counts; without it the image is a texture, not a measurement.
 
@@ -81,10 +77,7 @@ A coordinate grid transforms a picture into a measuring instrument. Any point in
 
 Imposing a grid is an epistemological commitment: the producer is asserting that location within the image is meaningful and should be comparable across the entire surface. The Yü Chi Thu's 100-*li* grid was not decorative — it allowed distances between any two cities to be read directly off the stone. The 1,024 × 2,222 cell grid of the galaxy-count map is not an aesthetic choice; it is the unit of measurement for galaxy density.
 
-The 1546 *Cosmographia* by Petrus Apianus showed European cartography approaching statistical graphicacy — latitude and longitude coordinates occupied every intersection. What was missing was the final step: placing a *measured quantity* at the intersection instead of a city name.
-
-> "No one had yet made the quantitative abstraction of placing a measured quantity on the map's surface at the intersection of the two threads instead of the name of a city, let alone the more difficult abstraction of replacing latitude and longitude with some other dimensions, such as time and money."
-> — *The Visual Display of Quantitative Information*, p. 22
+The 1546 *Cosmographia* by Petrus Apianus showed European cartography approaching statistical graphicacy — latitude and longitude coordinates occupied every intersection. What was missing was the final step: placing a *measured quantity* at the intersection instead of a city name. As Tufte observes in *The Visual Display of Quantitative Information* (p. 22), no one had yet made the abstraction of substituting a measured quantity for a city name at each grid intersection — let alone the further step of replacing geographic coordinates with other dimensions entirely, such as time and money.
 
 ### When to add a grid
 
@@ -121,8 +114,7 @@ The Atlas of Cancer Mortality for U.S. Counties, 1950–1969, redesigned by Lawr
 
 This five-level key encodes two dimensions simultaneously — magnitude (decile) and confidence (statistical significance) — in a single visual channel. The maps enabled a real investigative outcome: Salem County, New Jersey's elevated bladder cancer rate was traced to occupational exposure in chemical plants; at least 330 workers at a single plant had developed bladder cancer over 50 years.
 
-> "The maps repay careful study. Notice how quickly and naturally our attention has been directed toward exploring the substantive content of the data rather than toward questions of methodology and technique."
-> — *The Visual Display of Quantitative Information*, p. 20
+Tufte notes in *The Visual Display of Quantitative Information* that well-designed cancer maps draw the viewer immediately into the data's substance — geographic patterns of disease — rather than into questions about how the data was collected or displayed.
 
 ### Halley's directional vector field (1686)
 
@@ -214,8 +206,7 @@ Each additional variable added to an image competes with existing variables for 
 
 **Rule:** Add a variable only if it can be encoded in a channel not yet used, and only if its addition does not reduce the legibility of any existing channel by more than ~20% (assessed empirically, not by feel).
 
-> "The most extensive data maps, such as the cancer atlas and the count of the galaxies, place millions of bits of information on a single page before our eyes. No other method for the display of statistical information is so powerful."
-> — *The Visual Display of Quantitative Information*, p. 26
+Tufte argues in *The Visual Display of Quantitative Information* that the most information-dense mapped pictures — the cancer atlas, the galaxy count — compress millions of measurements onto a single page, and that no other statistical display format achieves comparable density. (p. 26)
 
 ---
 

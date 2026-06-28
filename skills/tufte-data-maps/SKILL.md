@@ -15,10 +15,7 @@ Data maps place measured quantities onto geographic surfaces — the most inform
 
 A data map's purpose is to answer a question about measured quantities distributed in space. Every design decision — projection, boundary weight, color scheme, granularity — must serve that question, not cartographic tradition.
 
-> "The maps repay careful study. Notice how quickly and naturally our attention has been directed toward exploring the substantive content of the data rather than toward questions of methodology and technique."
-> — *The Visual Display of Quantitative Information*, 2nd ed., p. 20
-
-This is the gold standard: the map disappears; the data speaks. When a reader studies the cartographic frame instead of the distribution, the design has failed.
+Tufte's gold standard for data maps is when the reader's attention moves directly to the statistical content — exploring what the data reveals — rather than stopping to evaluate the graphic's construction. When that happens, the cartographic frame has disappeared and the data speaks on its own. (*The Visual Display of Quantitative Information*, 2nd ed., p. 20)
 
 **The test:** Can a reader state the statistical finding — not the geographic fact — within 10 seconds of viewing? If not, cartographic structure is winning over data.
 
@@ -36,8 +33,7 @@ This is the gold standard: the map disappears; the data speaks. When a reader st
 
 The endemic failure of choropleth / shaded-area maps: visual prominence is determined by the physical area of the geographic unit, which has no relationship to the statistical weight of that unit.
 
-> "They wrongly equate the visual importance of each county with its geographic area rather than with the number of people living in the county (or the number of cancer deaths). Our visual impression of the data is entangled with the circumstance of geographic boundaries, shapes, and areas — the chronic problem afflicting shaded-in-area designs of such 'blot maps' or 'patch maps.'"
-> — *VDQI*, 2nd ed., p. 20
+Tufte argues that shaded-area maps commit a fundamental error by equating visual prominence with land area rather than with the actual statistical variable being displayed. A sparse rural county covering thousands of square miles visually overwhelms a dense urban county that may hold fifty times more people. This entanglement of visual weight with geographic boundary shapes and areas — not with the count or rate being studied — is the defining defect of choropleth designs. (*VDQI*, 2nd ed., p. 20)
 
 **Mechanism of the distortion:**
 
@@ -93,8 +89,7 @@ When choropleth is the only feasible format (administrative reporting, policy au
 
 A data map is only as honest as its source data. Geographic clustering visible in the map may reflect measurement artifact rather than the phenomenon.
 
-> "A further shortcoming, a defect of data rather than graphical composition, is that the maps are founded on a suspect data source, death certificate reports on the cause of death. These reports fall under the influence of diagnostic fashions prevailing among doctors and coroners in particular places and times, a troublesome adulterant of the evidence purporting to describe the already sometimes ambiguous matter of the exact bodily site of the primary cancer. Thus part of the regional clustering seen on the maps, as well as some of the hot spots, may reflect varying diagnostic customs and fads along with the actual differences in cancer rates between areas."
-> — *VDQI*, 2nd ed., p. 20
+Tufte notes that the cancer atlas carries a weakness rooted in its data source rather than its graphical design: death certificates are an unreliable record of cause of death. Diagnostic conventions vary across regions and eras, and attributing a cancer to a specific primary site is itself sometimes contested. As a result, some of the regional clustering and apparent hot spots visible on the maps may reflect local medical customs and diagnostic fashions rather than genuine differences in underlying cancer rates. (*VDQI*, 2nd ed., p. 20)
 
 **Named failure modes from data quality:**
 
@@ -114,8 +109,7 @@ A data map is only as honest as its source data. Geographic clustering visible i
 
 The eye is a powerful pattern detector — dangerously powerful. It finds structure in noise. Dense data maps exacerbate this because they give the eye vast territory to hunt.
 
-> "The producers of the map note the 'strong temptation to conclude that the galaxies are arranged in a remarkable filamentary pattern on scales of approximately 5° to 15°, but we caution that this visual impression may be misleading because the eye tends to pick out linear patterns even in random noise. Indeed, roughly similar patterns are seen on maps constructed from simulated catalogs where no linear structure has been built in...'"
-> — *VDQI*, 2nd ed., p. 26 (quoting Seldner, Siebers, Groth, Peebles, *Astronomical Journal*, 1977)
+The authors of the Lick galaxy density map explicitly warned against over-reading the visual patterns their display produced. While the map appears to show galaxies arranged in filamentary structures at 5–15° scales, the eye's tendency to find linear patterns in random noise makes such impressions unreliable. Crucially, simulated catalogs with no built-in linear structure produce visually indistinguishable patterns — confirming that apparent filaments may be perceptual artifacts rather than real features. (Seldner, Siebers, Groth, Peebles, *Astronomical Journal*, 1977, discussed in *VDQI*, 2nd ed., p. 26)
 
 This warning applies identically to disease maps, crime maps, economic maps. Apparent clusters may be:
 - Random variation in small-n cells
@@ -143,8 +137,7 @@ When designed well, data maps are the most information-dense displays in the sta
 > "Computerized cartography and modern photographic techniques have increased the density of information some 5,000-fold in the best of current data maps compared to Halley's pioneering effort."
 > — *VDQI*, 2nd ed., p. 26
 
-> "The most extensive data maps, such as the cancer atlas and the count of the galaxies, place millions of bits of information on a single page before our eyes. No other method for the display of statistical information is so powerful."
-> — *VDQI*, 2nd ed., p. 26
+Tufte argues that the most extensive data maps — the cancer atlas and the galaxy catalog among them — compress millions of data points onto a single page. No other statistical display format approaches this capacity. (*VDQI*, 2nd ed., p. 26)
 
 **Density benchmarks from the source:**
 - Halley's 1686 trade wind map: baseline (the first quantitative data map of consequence)
@@ -169,8 +162,7 @@ The galaxy map uses 10 discriminable gray tones across 2.275 million rectangles 
 
 **Snow's map is the canonical answer to the question "when does a data map provide stronger evidence than calculation?"**
 
-> "Of course the link between the pump and the disease might have been revealed by computation and analysis without graphics, with some good luck and hard work. But, here at least, graphical analysis testifies about the data far more efficiently than calculation."
-> — *VDQI*, 2nd ed., p. 24
+Tufte acknowledges that the link between the Broad Street pump and the cholera outbreak might eventually have been established through calculation alone, given enough effort. Snow's map demonstrated the relationship faster and more compellingly than any tabular analysis could have — a case where graphical methods decisively outperformed numerical ones. (*VDQI*, 2nd ed., p. 24)
 
 ---
 

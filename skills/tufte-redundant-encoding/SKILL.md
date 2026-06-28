@@ -31,9 +31,7 @@ None of these is self-certifying. Each must be tested: does removing the redunda
 
 ## §2. Cyclic Redundancy — Marey's Train Schedule
 
-The clearest structural case is cyclic data. Tufte analyzes Marey's 1880 Paris-Lyon train schedule:
-
-> "Redundancy, upon occasion, has its uses: giving a context and order to complexity, facilitating comparisons over various parts of the data, perhaps creating an aesthetic balance. In cyclical time-series, for example, parts of the cycle should be repeated so that the eye can track any part of the cycle without having to jump back to the beginning."
+The clearest structural case is cyclic data. Tufte analyzes Marey's 1880 Paris-Lyon train schedule. He argues that redundancy earns its place in specific conditions — imposing order on complex data, enabling comparisons across distant parts of the dataset, or achieving compositional balance. The cyclic time-series is his primary structural example: repeating a portion of the cycle lets a reader follow any trajectory as a continuous line without having to mentally wrap back to the start of the period.
 
 The single-cycle version forces readers whose trains run off the right-hand edge to mentally wrap around — an invisible discontinuity that severs the line. The fix is spatial, not decorative: attach an extra half-cycle so that every train in the first 24 hours plots as a continuous, unbroken line. The extended display contains no new information; it contains the same information presented without an arbitrary cut.
 

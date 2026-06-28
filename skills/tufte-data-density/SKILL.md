@@ -73,8 +73,7 @@ The "within reason" qualifier is narrow. Reason means: if the graphic becomes ov
 - Simple data belongs in tables or sentences; graphics earn their place with complexity
 - High-density graphics allow comparison of many parts of the data while displaying much information within the view of the eye: "we look at one page at a time and the more on the page, the more effective and comparative our eye can be"
 
-> "Data-rich designs give a context and credibility to statistical evidence. Low-information designs are suspect: what is left out, what is hidden, why are we shown so little?"
-> — *The Visual Display of Quantitative Information*, p.168
+Tufte argues that data-rich displays lend context and credibility to statistical evidence, while sparse graphics invite suspicion — what was omitted, what is being hidden, and why is the viewer being shown so little? (*Visual Display*, p.168)
 
 > "Summary graphics can emerge from high-information displays, but there is nowhere to go if we begin with a low-information design."
 > — *The Visual Display of Quantitative Information*, p.168
@@ -241,11 +240,7 @@ Tufte's 410-number New York Times presidential voting table (*New York Times*, N
 
 ## §12. The Governing Aphorism
 
-Tufte closes Chapter 8 with the clearest statement of the asymmetry between data-ink and non-data-ink:
-
-> "For non-data-ink, less is more.
-> For data-ink, less is a bore."
-> — *The Visual Display of Quantitative Information*, p.175
+Tufte closes Chapter 8 with the clearest statement of the asymmetry between data-ink and non-data-ink: reduction is the right move for non-data-ink (decoration, redundancy, chartjunk), but removing data-ink removes information and weakens the display. The two require opposite treatment. (*Visual Display*, p.175)
 
 This is the operational test before any edit to a graphic: classify the element first. Non-data-ink (decoration, redundant encoding, chartjunk) — remove it. Data-ink — preserve it by default; the burden of proof is on removal.
 

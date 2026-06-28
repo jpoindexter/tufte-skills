@@ -17,8 +17,7 @@ Data-ink ratio = data-ink / total ink used in the graphic
 > "The larger the share of a graphic's ink devoted to data, the better (other relevant matters being equal): Maximize the data-ink ratio, within reason."
 > — *The Visual Display of Quantitative Information*
 
-> "Every bit of ink on a graphic requires a reason. And nearly always that reason should be that the ink presents new information."
-> — *The Visual Display of Quantitative Information*
+In *The Visual Display of Quantitative Information*, Tufte argues that every mark placed on a graphic must justify its presence, and that justification should almost always be that the mark conveys information not represented anywhere else on the graphic.
 
 | Ratio | Assessment |
 |---|---|

@@ -17,7 +17,7 @@ The danger of multifunctioning elements is that they tend to generate graphical 
 
 The graphical element that actually locates or plots the data is the *data measure*. The ink of the data measure can itself carry data. Building data measures out of the data increases the quantitative detail and dimensionality of a graphic.
 
-**Stem-and-leaf plot** (John Tukey): The distribution of a variable constructed from the actual digits. John Tukey: "If we are going to make a mark, it may as well be a meaningful one. The simplest — and most useful — meaningful mark is a digit." (VDQI, p. 140) The data form the data measure.
+**Stem-and-leaf plot** (John Tukey): The distribution of a variable constructed from the actual digits. Tukey's principle, as Tufte cites it: if a mark must be made, it should carry meaning — and the simplest meaningful mark is a digit. (VDQI, p. 140) The data form the data measure.
 
 **Colonel Ayres' WWI divisions** (p. 141): A triple-functioning data measure. Each American division's numerical designation (a name) becomes both the data mark and the timeline. Shows simultaneously: (1) the number of divisions in France each month, June 1917 to October 1918; (2) which particular divisions were in France each month; and (3) the duration of each division's presence in France. Every drop of ink carries three distinct data display functions.
 
@@ -27,7 +27,7 @@ The graphical element that actually locates or plots the data is the *data measu
 
 Chapter 7 establishes that multifunctioning is a general design insight, not a statistical technique. Two non-statistical examples:
 
-**Easter Wings by George Herbert, 1593–1633** (p. 143): A shaped poem in which the length of each line encodes quantity — all done 150 years before Playfair invented statistical graphics. "The lines double-function: the longer lines describe wealth, plenty, largesse, and rising to flight; shorter lines tell of poverty and becoming 'most thinne'; and lines of intermediate length indicate transition and change (decaying, rising, combining, becoming)." (VDQI, p. 143) Space — line length — does double duty as text and as a magnitude display. The visual shape IS the data.
+**Easter Wings by George Herbert, 1593–1633** (p. 143): A shaped poem in which the length of each line encodes quantity — all done 150 years before Playfair invented statistical graphics. Tufte observes that line length double-functions throughout: longer lines accompany themes of wealth and abundance; shorter lines correspond to poverty and diminishment; and intermediate lengths mark transitions and change. (VDQI, p. 143) Space — line length — does double duty as text and as a magnitude display. The visual shape IS the data.
 
 **W. J. Youden's typographic display** (p. 143): The statistician Youden set a sentence about the Normal Law of Error in concentric lines of increasing then decreasing width. The typographic form — line widths widening and narrowing concentrically — encodes the bell-curve shape of the distribution being described. Word arrangement serves as both text and diagram.
 
@@ -43,7 +43,7 @@ Very occasionally the grid can report directly on the data, rather than being an
 
 **Mitchell Map, 1783** (p. 146): The labeled grid is the element of interest, not the map. Each labeled square on the Mitchell map has a counterpart on the modern map, making relative stretching, compressing, and twisting of the earth's surface perceptible.
 
-**Playfair's National Debt of Britain** (p. 148): Vertical grid lines placed at historically significant events, not at regular time intervals. "The data-based grid is a shrewd graphical device, serving rather than fighting with the data. It is a technique underused in contemporary graphical work." (VDQI, p. 148)
+**Playfair's National Debt of Britain** (p. 148): Vertical grid lines placed at historically significant events, not at regular time intervals. Tufte calls the data-based grid a shrewd device because it works with the data rather than against it — and notes the technique remains underused in contemporary graphical practice. (VDQI, p. 148)
 
 **3D religion and politics charts** (p. 147): Two 3D displays comparing the effect of religion — taking into account party affiliation — on the presidential vote in 1956 and 1960. The grid presents data on the surface of the rock; on the sides, the grid is conventional. Reading the slopes vertically shows the party effect; reading diagonally shows the religion effect; reading in the other direction shows the persistent effect of party in both elections. The viewing architecture of the 3D surface enables simultaneous access to multiple data relationships that a flat chart would force into separate panels.
 
@@ -51,7 +51,7 @@ Very occasionally the grid can report directly on the data, rather than being an
 
 Data-based coordinate lines lead to *data-based labels*. The issue is the same: why not use the ink to show data?
 
-**Range-frame with range-labels** (pp. 149, 152): Frame lines trimmed to extend only to the measured limits of the data; the endpoints display the actual minimum and maximum values rather than round numbers. "With its greater precision and two tick-marks less of non-data-ink, the range-frame with range-labels is superior to the range-frame with round number labels. Both improve on the standard, passive frame." (VDQI, p. 149) Example: standard axis labeled 0, 10, 20, 30, 40 replaced by frame running from 4 to 37 — two fewer ticks, more precise boundaries.
+**Range-frame with range-labels** (pp. 149, 152): Frame lines trimmed to extend only to the measured limits of the data; the endpoints display the actual minimum and maximum values rather than round numbers. In Tufte's assessment, the range-frame with range-labels outperforms the version using round-number labels because it is more precise and eliminates two unnecessary ticks; both versions, however, are improvements over the standard passive frame. (VDQI, p. 149) Example: standard axis labeled 0, 10, 20, 30, 40 replaced by frame running from 4 to 37 — two fewer ticks, more precise boundaries.
 
 **Identification numbers as temporal index** (pp. 149–150): In the thermal conductivity of tungsten chart, each plotted curve bears a circled identification number (author + year code). The numbers double-function: they identify the particular study AND, if ordered by publication date, would also indicate the time sequence in which the conductivity determinations were made. "This extra information requires no additional ink." (VDQI, p. 150)
 

@@ -6,7 +6,7 @@ tags: [tufte, data-visualization, chartjunk, visual-noise, data-ink]
 # Chartjunk
 
 ## Overview
-Chartjunk is any graphical element that does not communicate data — it consumes ink, area, and viewer attention while adding nothing to meaning. Tufte names three distinct types: vibrations (optical illusions from busy patterns), grids (heavy lines that compete with data), and ducks (decorative forms that overwhelm the data they supposedly display). The governing principle is that graphics stand or fall on their content, and no amount of ornament rescues a thin dataset or compensates for poor design — chartjunk can turn bores into disasters but can never rescue a thin data set.
+Chartjunk is any graphical element that does not communicate data — it consumes ink, area, and viewer attention while adding nothing to meaning. Tufte names three distinct types: vibrations (optical illusions from busy patterns), grids (heavy lines that compete with data), and ducks (decorative forms that overwhelm the data they supposedly display). The governing principle is that graphics stand or fall on their content, and no amount of ornament rescues a thin dataset or compensates for poor design. Decoration may amplify a weak graphic's failure, but it cannot generate insight where none exists.
 
 ---
 
@@ -62,8 +62,7 @@ The grid is the most sedate form of chartjunk, but when heavy it is still chartj
 
 ### The Governing Rule
 
-> "The grid should usually be muted or completely suppressed so that its presence is only implicit — lest it compete with the data. Grids are mostly for the initial plotting of data at home or office rather than for putting into print. Dark grid lines are chartjunk."
-> — *The Visual Display of Quantitative Information*
+In *The Visual Display of Quantitative Information*, Tufte argues that the grid should be muted or suppressed entirely in final output, kept implicit so it never competes with the data itself. Grids belong to the working stage — for plotting data at home or in the office — not to finished print graphics. Dark grid lines are, by definition, chartjunk.
 
 ### Grid Weight Hierarchy (ordered by correctness)
 
@@ -183,8 +182,7 @@ Chartjunk does not merely waste space — it actively corrupts. The corruption o
 
 ### The Fundamental Test
 
-> "Chartjunk does not achieve the goals of its propagators. The overwhelming fact of data graphics is that they stand or fall on their content, gracefully displayed. Graphics do not become attractive and interesting through the addition of ornamental hatching and false perspective to a few bars. Chartjunk can turn bores into disasters, but it can never rescue a thin data set."
-> — *The Visual Display of Quantitative Information*
+In *The Visual Display of Quantitative Information*, Tufte argues that chartjunk fails even on its own terms. Data graphics succeed or fail on their content, gracefully displayed; ornamental hatching and false perspective add nothing to a weak dataset. Decoration can amplify the failure of a dull graphic — making it worse — but it has never rescued a thin data set from its own emptiness.
 
 ### Data-Ink Ratio as a Chartjunk Detector
 Every element of chartjunk reduces the data-ink ratio. Applying the ratio as an audit:

@@ -87,7 +87,7 @@ Typical published graphic: 0.1–0.2.
 | Reference/grid lines | Lightest — structure, not information |
 | Label text | Should not compete visually with data lines |
 
-"The contrast in line weight represents contrast in meaning. The greater meaning is given to the greater line weight; thus the data line should receive greater weight than the connecting verticals." (VDQI)
+Tufte argues that line weight should map directly to information priority: heavier lines carry more meaning, so data lines must outweigh structural elements like connecting verticals. (VDQI)
 
 ## §6. The Erasure Procedure
 
@@ -104,7 +104,7 @@ Result: data-ink ratios regularly increase from 0.1–0.2 to nearly 1.0. The gra
 
 ## §7. Chartjunk — Three Types
 
-"Chartjunk does not achieve the goals of its propagators. The overwhelming fact of data graphics is that they stand or fall on their content, gracefully displayed. Graphics do not become attractive and interesting through the addition of ornamental hatching and false perspective." (VDQI)
+Tufte argues that chartjunk fails on its own terms: decorative elements don't make graphics more compelling. What makes a graphic work is its content, clearly presented — and no amount of ornamental hatching or false perspective can substitute for that. (VDQI)
 
 **Type 1: Moiré vibration** — cross-hatching patterns that vibrate optically. "The most common form of graphical clutter." (VDQI) Rule: avoid cross-hatching; use gray shading instead.
 
@@ -128,7 +128,7 @@ Result: data-ink ratios regularly increase from 0.1–0.2 to nearly 1.0. The gra
 
 ## §9. The Final Goal
 
-"What is to be sought in designs for the display of information is the clear portrayal of complexity. Not the complication of the simple; rather the task of the designer is to give visual access to the subtle and the difficult — that is, the revelation of the complex." (VDQI, Epilogue)
+In *Visual Display*, Tufte frames the designer's goal as making the genuinely difficult legible — not adding complexity to simple things, but opening up access to what is inherently intricate. The task is giving visual access to the subtle and the difficult: the revelation of the complex. (VDQI, Epilogue)
 
 "The principles should not be applied rigidly or in a peevish spirit; they are not logically or mathematically certain; and it is better to violate any principle than to place graceless or inelegant marks on paper." (VDQI, Epilogue)
 

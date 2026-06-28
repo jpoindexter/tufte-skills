@@ -26,8 +26,7 @@ Lie Factor = (size of effect shown in graphic) / (size of effect in data)
 | 2 – 5 | Common range for published newspaper graphics |
 | > 10 | Extreme; the graphic falsifies the news in the data |
 
-> "Lie Factors greater than 1.05 or less than .95 indicate substantial distortion, far beyond minor inaccuracies in plotting. The logarithm of the Lie Factor can be taken in order to compare overstating (log LF > 0) with understating (log LF < 0) errors. In practice almost all distortions involve overstating, and Lie Factors of two to five are not uncommon."
-> — *The Visual Display of Quantitative Information*
+Tufte sets the acceptable band at 0.95–1.05; outside this range, distortion goes beyond ordinary plotting error. Taking the logarithm symmetrizes comparison of overstating (positive) and understating (negative) deviations. Empirically, distortion almost always runs in one direction — Lie Factors of two to five appear regularly in published graphics. — *The Visual Display of Quantitative Information*
 
 **How to compute it — worked example (Fuel Economy Standards, NYT, 1978):**
 
@@ -39,15 +38,15 @@ Lie Factor = (size of effect shown in graphic) / (size of effect in data)
 
 ## §2. The Six Principles of Graphical Integrity
 
-These are Tufte's complete, verbatim principles, stated as rules:
+Tufte defines six principles of graphical integrity:
 
 > "Graphical integrity is more likely to result if these six principles are followed."
 > — *The Visual Display of Quantitative Information*
 
 | # | Principle | What it rules out |
 |---|---|---|
-| 1 | The representation of numbers, as physically measured on the surface of the graphic itself, should be directly proportional to the numerical quantities represented. | Scaled pictograms, perspective distortion, non-zero baselines used to exaggerate slopes |
-| 2 | Clear, detailed, and thorough labeling should be used to defeat graphical distortion and ambiguity. Write out explanations of the data on the graphic itself. Label important events in the data. | Unlabeled axes, missing units, no annotation of key events |
+| 1 | Numbers should be physically represented on a graphic's surface in direct proportion to the quantities they encode. | Scaled pictograms, perspective distortion, non-zero baselines used to exaggerate slopes |
+| 2 | Use clear, thorough labeling to prevent distortion and ambiguity — including written explanations directly on the graphic and annotations for key data events. | Unlabeled axes, missing units, no annotation of key events |
 | 3 | Show data variation, not design variation. | Multiple scales, irregular intervals, varying canvas sizes across time |
 | 4 | In time-series displays of money, deflated and standardized units of monetary measurement are nearly always better than nominal units. | Nominal dollar charts showing "skyrocketing" spending that is flat in real per-capita terms |
 | 5 | The number of information-carrying (variable) dimensions depicted should not exceed the number of dimensions in the data. | 2D or 3D icons (barrels, doctors, dollar bills) used to show a single scalar value |
@@ -116,8 +115,7 @@ Each entry gives the graphic, the Lie Factor, and the mechanism of distortion.
 
 The confounding of design variation with data variation is the most technically subtle integrity violation. It occurs when the visual canvas itself changes across the surface of the graphic, making the eye mistake design changes for data changes.
 
-> "The confounding of design variation with data variation over the surface of a graphic leads to ambiguity and deception, for the eye may mix up changes in the design with changes in the data. A steady canvas makes for a clearer picture."
-> — *The Visual Display of Quantitative Information*
+Tufte argues that when design elements vary across a graphic's surface alongside data, the eye cannot distinguish which changes belong to the data and which to the layout — an inherently deceptive condition. A stable, uniform canvas is the remedy. — *The Visual Display of Quantitative Information*
 
 **The principle:** Show data variation, not design variation.
 
@@ -170,8 +168,7 @@ Nominal dollar charts nearly always create a false impression that spending or p
 
 A graphic answers a question. The question is always "Compared to what?" A graphic that cannot answer comparisons lies by omission.
 
-> "To be truthful and revealing, data graphics must bear on the question at the heart of quantitative thinking: 'Compared to what?' The emaciated, data-thin design should always provoke suspicion, for graphics often lie by omission, leaving out data sufficient for comparisons."
-> — *The Visual Display of Quantitative Information*
+Tufte holds that every honest data graphic must engage the central question of quantitative reasoning — "Compared to what?" — and that sparse, data-thin graphics should trigger skepticism, since omitting comparison data is one of the most common ways a graphic deceives without technically lying. — *The Visual Display of Quantitative Information*
 
 **Checklist for context:**
 
@@ -194,8 +191,7 @@ A graphic answers a question. The question is always "Compared to what?" A graph
 
 Labels are not decorative — they are the primary defense against ambiguity and the reader's only check on a graphic that might be lying.
 
-> "Clear, detailed, and thorough labeling should be used to defeat graphical distortion and ambiguity. Write out explanations of the data on the graphic itself. Label important events in the data."
-> — *The Visual Display of Quantitative Information*
+Tufte treats labeling as the primary weapon against graphical distortion: detailed, clear labels written directly on the graphic, with annotations marking significant events in the data. — *The Visual Display of Quantitative Information*
 
 **Labeling do / don't:**
 
@@ -211,8 +207,7 @@ Labels are not decorative — they are the primary defense against ambiguity and
 
 Tufte identifies a systematic failure mode where designers get direction right but magnitudes wrong — showing only ordinal information (bigger/smaller) with fantasy quantitative scaling.
 
-> "The standard of getting only the direction and not the magnitude right is the philosophy that informs the Pravda School of Ordinal Graphics. There, every chart has a crystal clear direction coupled with fantasy magnitudes."
-> — *The Visual Display of Quantitative Information*
+Tufte coined "Pravda School of Ordinal Graphics" to describe the rationalization that getting direction right is enough — producing charts with clear directional signals paired with wholly fabricated magnitudes. — *The Visual Display of Quantitative Information*
 
 This is the rationalization behind most lying graphics: "At least it was approximately correct; we were just trying to show the general direction of change." But a 15-fold Lie Factor is not approximately correct, and when the distortion reverses the real story (a budget cut shown as rapid growth), ordinal correctness is not a meaningful defense.
 
