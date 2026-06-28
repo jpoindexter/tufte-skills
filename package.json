@@ -1,0 +1,12 @@
+{
+  "name": "tufte-skills",
+  "version": "1.0.0",
+  "description": "Edward Tufte visual design principles as Claude Code skills",
+  "keywords": ["tufte", "data-visualization", "claude-code", "skills", "design"],
+  "bin": {
+    "tufte-skills": "./install.sh"
+  },
+  "scripts": {
+    "install-skills": "./install.sh"
+  }
+}
