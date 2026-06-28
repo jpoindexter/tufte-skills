@@ -1,176 +1,246 @@
 ---
 name: tufte-redundant-encoding
-description: Apply Tufte's principles for warranted redundant visual encoding — channel combinations that reinforce legibility without generating 1+1=3 noise, anchored in Imhof's contour-within-color-field technique and grounded in accessibility and high-stakes contexts.
-tags: [tufte, data-visualization, redundant-encoding, cartography, accessibility, color, perception]
+description: Apply Tufte's principles for warranted redundant and multi-channel visual encoding — riding the same variable on several perceptual channels to win robustness, separation, and accessibility, while avoiding the 1+1=3 noise that overlapping marks generate. Anchored in Envisioning Information's layering-and-separation chapter and the Swiss topographic map's four uses of color.
+tags: [tufte, data-visualization, redundant-encoding, layering, cartography, color, accessibility, perception]
 ---
-# Tufte: Redundant Visual Encoding
+# Tufte: Redundant and Multi-Channel Encoding
 
 ## Overview
 
-Redundant encoding — mapping the same data variable to more than one visual channel simultaneously — is defensible exactly when it earns something the single-channel version cannot: robustness across media, accessibility across viewers, or comprehension of inherently cyclic or complex structure. Outside those conditions the second erasing principle governs: erase redundant data-ink, within reason. The canonical model is Eduard Imhof's Swiss topographic cartography, where color field and contour line serve the same altitude data through complementary perceptual mechanisms, each doing what the other cannot.
+Mapping one data variable to more than one visual channel at the same time is defensible exactly when the extra channel buys something the single channel cannot: separation of crowded layers, robustness across media, or access for viewers and conditions where the primary channel fails. Tufte's *Envisioning Information* never uses the phrase "redundant encoding"; it builds the idea from layering and separation — using distinctions in shape, value, size, and especially color to make differences legible — and from the destructive opposite, the 1+1=3 effect, where overlapping marks breed unwanted negative-space noise. The canonical positive case is the Swiss topographic map, where color does four jobs at once over the same terrain; the canonical negative case is the heavy grid that vibrates against its own data.
 
 ---
 
-## §1. The Default Rule and Its Exception
+## §1. The EI Principle — Differences That Make a Difference
 
-Tufte's second erasing principle, stated flatly in *The Visual Display of Quantitative Information*:
+Tufte's governing statement for this whole topic is not the data-ink erasing rule from his earlier book; it is the closing line of the layering chapter:
 
-> "Unless redundancy has a distinctly worthy purpose, the second erasing principle applies: Erase redundant data-ink, within reason."
+> "INFORMATION consists of differences that make a difference." — Tufte, *Envisioning Information*
 
-Most data representations involve a single uncomplicated number. Repetition there is waste. The exception opens only when redundancy provides one or more of three distinct services:
+The job of multi-channel encoding is to manufacture those differences cleanly. The proof is a paired contrast EI sets up directly: two maps of equal detail, opposite legibility.
 
-| Service | Condition that earns it | Example |
+| Map | Channels used | Result |
 |---|---|---|
-| Context and order for complexity | Dataset has structure that a single traversal loses | Cyclical time-series wrapping at boundary |
-| Comparison across parts | Reader needs simultaneous access to distant regions | Two-panel small multiple vs. forced scrolling |
-| Aesthetic balance | Compositional symmetry clarifies rather than decorates | Mirrored axis on bilateral chart |
+| Simla, India (U.S. Army, 1954) | One visual level — equal value, equal texture, equal color, near-equal shape | Undifferentiated jumble; "a failure to communicate" |
+| Tokyo Prefecture (1884) | Shape + value (light→dark) + size + **especially color**; informative negative space | Separated, layered, calm and distinctive |
 
-None of these is self-certifying. Each must be tested: does removing the redundancy cost the reader something real?
+The lesson is not "add channels." It is that legibility comes from *deliberate distinctions across multiple channels*, kept in proportion to the importance of each information layer. Color is the strongest separating channel — in the IBM copier parts diagram (EI p. 54) color alone differentiates annotation from the 300 small parts it labels — but strength is exactly why it must be rationed (§5).
 
----
-
-## §2. Cyclic Redundancy — Marey's Train Schedule
-
-The clearest structural case is cyclic data. Tufte analyzes Marey's 1880 Paris-Lyon train schedule. He argues that redundancy earns its place in specific conditions — imposing order on complex data, enabling comparisons across distant parts of the dataset, or achieving compositional balance. The cyclic time-series is his primary structural example: repeating a portion of the cycle lets a reader follow any trajectory as a continuous line without having to mentally wrap back to the start of the period.
-
-The single-cycle version forces readers whose trains run off the right-hand edge to mentally wrap around — an invisible discontinuity that severs the line. The fix is spatial, not decorative: attach an extra half-cycle so that every train in the first 24 hours plots as a continuous, unbroken line. The extended display contains no new information; it contains the same information presented without an arbitrary cut.
-
-**Threshold rule for cyclic data:** repeat when any natural traversal path crosses the boundary more than once. For a world map of ocean surface currents Tufte shows "one and two-thirds times around is better" than once — the overlap is sized to the longest continuous feature in the data, not to a round number.
-
-**Do:** size the redundant extension to the longest contiguous data path, not to a full period.  
-**Don't:** wrap cyclically as a default aesthetic. A non-cyclic dataset rendered as a torus is pure chartjunk.
+**Do:** separate layers by stacking complementary distinctions (e.g., the Tokyo map's water = blue field that also fades away from each outlined edge — color *and* gradient *and* edge).
+**Don't:** push every layer to the same visual weight; equal value + equal texture + equal color is the Simla jumble.
 
 ---
 
-## §3. The 1+1=3 Noise Effect
+## §2. Three Outcomes — Redundant vs. Layered vs. Collision
 
-When two visual elements occupy the same space, they produce a third unintended element: the negative space between them. Tufte names this the 1+1=3 effect, most visible in gridlines that generate a lattice of white rectangles nobody asked for. Redundant encoding triggers the same failure whenever the two channels interact rather than reinforce.
+"Two channels on the page" resolves to three very different situations. Diagnose which one you have before defending it.
 
-**Channels that interact (avoid pairing):**
+| Outcome | Definition | Remove-one-channel test | Verdict |
+|---|---|---|---|
+| **Redundant** | Same datum on 2+ channels | Still fully readable | Justified *only* if it buys robustness / accessibility / separation (§4, §7, §8) |
+| **Layered** | Different data/layers on different channels | Lose a whole layer of meaning | Always justified — this is layering, the core EI move |
+| **Collision** | Two channels modulate each other and breed a third mark | Comprehension improves when you drop one | Failure — 1+1=3 noise (§3) |
+
+**The channel-removal test (run it on every candidate):** delete one channel.
+- Chart stays fully readable → genuine redundancy. Keep only if §7 names a purpose.
+- A layer of meaning disappears → it was layering, not redundancy. Keep.
+- Chart gets *clearer* → the pair was colliding. Cut or replace the channel.
+
+The frequent confusion: designers call layering "redundant" and cut it to save ink, destroying a real layer. Run the test instead of eyeballing.
+
+---
+
+## §3. The 1+1=3 Failure (Albers)
+
+Draw two black lines and a third visual element appears for free: the bright path of negative space between them. Tufte adopts Josef Albers's formula — 1+1=3, or more — as a fundamental principle of information design. One width plus one width *touching* reads as 2; the same two widths separated by one width of negative space reads as 3. A field of marks therefore breeds an *exponential* field of negative shapes. This is the governing failure mode of careless multi-channel work: channels that overlap rather than reinforce manufacture noise.
+
+**The noise law:** the strength of the 1+1=3 effect is directly proportional to the value (light/dark) contrast between figure and ground. Loud black-on-white marks vibrate; the same marks in gray go quiet. Two corollaries Tufte demonstrates:
+- Thinning two sides of every block so each street is bordered by one thick + one thin line *deflects* the effect (thin lines read as gray).
+- Replacing black edges with gray establishes "serene, motionless edges" that absorb added detail without vibrating.
+
+**Concrete costs measured in EI:**
+- Marshalling-signals chart: ~460 lamp-whiskers erased; they had read as glowing light and trembling motion — pure 1+1=3.
+- Tukey multi-window plot: doubled-up, tremor-inducing lines consumed **18%** of the chart before redrawing.
+- The aircraft-maneuver index: a black-barred list that vibrates so badly Tufte calls it "perhaps the worst index ever designed."
+
+**Channels that COLLIDE (do not pair to encode one variable):**
 
 | Pair | Failure mode |
 |---|---|
-| Color hue + color saturation | Two hue-adjacent fields at different saturations read as different categories, not the same datum twice |
-| Line weight + color value | Dark heavy lines appear to carry different quantity than light thin lines even when both encode the same variable |
-| Area size + position on common scale | Area suppresses position when both encode magnitude; reader defaults to area, losing precision |
-| Pattern fill + color | Cross-hatching on a colored field creates moiré at screen resolutions; one channel corrupts the other |
+| Heavy black rule + adjacent type | Stripy texture fights the type (the NJ Transit timetable's original grid) |
+| Box border + word inside | Border activates negative white space between word and box (the Surgeon General's warning box) |
+| Hue + saturation, both near-equal | Two settings of one variable read as two categories, not one datum twice |
+| Pattern fill + hue on same field | Cross-hatch over color produces moiré at print/screen resolution |
+| Dark grid + data trace | Signal caught in the grid (the ECG trace lost in thick graph paper) |
 
-**Channels that reinforce (safe combinations):**
+**Channels that REINFORCE (safe to combine):**
 
 | Pair | Why it works |
 |---|---|
-| Color field + contour edge | Color activates pre-attentive area processing; contour activates edge detection — different perceptual subsystems, no interference |
-| Shape + color | Shape is readable at zero saturation (print, B&W photocopy); color adds speed of recognition on screen |
-| Position + direct label | Position gives exact value on scale; label provides it without requiring axis lookup — complementary access paths |
-| Texture/pattern + hue | Distinguishes categories for color-deficient readers without sacrificing screen readability for others |
+| Color field + contour edge | Area-grouping and edge-detection are different perceptual systems; no interference |
+| Shape + color | Shape survives at zero saturation (grayscale, photocopy); color adds recognition speed |
+| Position + direct label | Exact value with and without an axis lookup — two access paths |
+| Gray grid + data | A delicate gray line locates the data without competing with it |
 
-The test: remove one channel entirely. If the encoding is genuinely redundant (not interactive), the chart remains fully readable. If removing one channel breaks comprehension of what the other channel was encoding, the pair was doing different work — that is not redundancy, it is layering, and layering is always justified.
+> "Dark grid lines are chartjunk." — Tufte, *Envisioning Information*
+
+**Do:** mute structural marks (grids, frames, rules) to gray so the data carries the only strong value contrast on the page.
+**Don't:** wrap words in boxes, double trace-lines, or set tables as nets of enclosed numbers — every enclosure adds a vibrating negative shape.
 
 ---
 
-## §4. Imhof's Canonical Model
+## §4. The Swiss Map — Redundant Color Done Right
 
-Eduard Imhof's Swiss topographic cartography is the clearest existence proof that redundant encoding can achieve higher legibility than either channel alone. The technique: hypsometric tints (color zones keyed to altitude bands — green for lowlands, yellow for foothills, ochre and brown for mountain zones, white for glaciers and permanent snow) are applied as continuous fields, and contour lines are drawn within each field at fixed altitude intervals.
+EI's existence proof that one variable can ride several channels and *gain* legibility is the Swiss topographic map (Matterhorn sheet, Landeskarte der Schweiz, 1:25,000). Over the same terrain, color performs four distinct jobs Tufte names explicitly:
 
-**What each channel provides:**
-
-| Channel | Perceptual mechanism | What it delivers |
+| Use of color | Function | On the map |
 |---|---|---|
-| Color field | Pre-attentive area grouping | Immediate gestalt structure — reader knows high from low in under 200ms without reading a label |
-| Contour edge | Edge detection, figure-ground | Precise altitude at any point; gradient density encodes steepness |
-| Contour label (spot elevations) | Symbolic, requires focal attention | Exact numeric value for critical points; survives grayscale reproduction |
+| **Label** (color as noun) | Names a category | Distinguishes water from stone, glacier from field |
+| **Measure** (color as quantity) | Encodes magnitude | Altitude via contour; rate of change via darkening |
+| **Represent** (color as imitation) | Mimics reality | River blues, shadow hachures |
+| **Enliven** (color as beauty) | Decorates within reason | Lifts the terrain "beyond what could be done in black and white alone" |
 
-The three-channel stack — color field, contour edge, spot label — is deliberately over-specified. Any one of the three alone is legible. Any two of the three are robust. All three together produce a display that works in full color, in grayscale photocopy, at reduced scale, and for color-deficient readers. The redundancy is not decoration; it is fault tolerance.
+Altitude is encoded *redundantly and complementarily*: hypsometric color band (immediate gestalt — high vs. low at a glance), contour line (precise value and, by line density, steepness), and darkening/shadow hachure (rate of change). Each channel does what the others cannot. The black-ink-only strip at the bottom of the same map is the control: legible, but flat — it shows what the redundancy bought.
 
-**Imhof's constraint:** the color fields must be designed so their boundaries align exactly with contour lines. Misregistration between color boundary and contour line creates a false third feature — the gap — that reads as an artifact. When color and edge are not co-registered, the 1+1=3 effect produces phantom step-edges at every misalignment.
+**The over-specification payoff:** any one channel of the stack is legible; any two are robust; all together survive color print, grayscale, reduced scale, and color-deficient viewing. Redundancy here is fault tolerance, not decoration.
 
----
+**Imhof's co-registration constraint:** color-field boundaries must align exactly with contour lines. A color zone that bleeds across a contour creates a phantom step-edge — the 1+1=3 effect reappearing as a registration artifact. The map also shows the discipline directly: contour-line color *changes as the background shifts* so the edge never collides with its field.
 
-## §5. Channel Combinations for Robustness
+**The color-budget formula (EI p. 81):**
+- A trained eye discriminates ~**1,000,000** colors under contrived pairwise comparison.
+- ~**20,000** are usable in practice — the limit is visual *memory*, not discrimination.
+- For encoding abstract information, more than **20–30** colors produce "not diminishing but negative returns."
+- First principle of color in information design:
 
-Tufte's broader framework treats the display surface as a medium that varies across print, screen, photocopy, projection, and reduced-size reproduction. A display that survives all five is robust. Robustness is the primary functional justification for redundant encoding in production contexts.
-
-**Robustness matrix — which channels survive which medium:**
-
-| Channel | Color print | Grayscale | Low-res screen | High-contrast projection | Reduced size |
-|---|---|---|---|---|---|
-| Hue | Yes | No | Partial | Washed | Partial |
-| Value (lightness) | Yes | Yes | Yes | Partial | Yes |
-| Shape / symbol | Yes | Yes | Yes | Yes | Partial |
-| Edge / contour | Yes | Yes | Yes | Yes | No |
-| Direct label | Yes | Yes | Partial | Yes | No |
-| Position on scale | Yes | Yes | Yes | Yes | Yes |
-
-A display relying on hue alone fails in grayscale and in color-deficient viewing. Adding value contrast as a second channel recovers grayscale. Adding shape recovers both. The cost at each step: one additional encoding decision and slight visual density. The benefit: each added channel extends the audience and medium range.
-
-**The three-channel minimum for high-stakes legibility:**
-- Position (or magnitude) — primary quantitative channel, always present
-- Color or value — pre-attentive grouping, fast
-- Shape or edge or label — survives when color fails
-
-High-stakes legibility contexts (medical charts, safety-critical maps, legal exhibits, emergency signage) require all three. General editorial contexts can afford two. Internal exploratory analysis can use one.
+> "Above all, do no harm." — Tufte's first rule for color in information, *Envisioning Information*
 
 ---
 
-## §6. Accessibility — Color Blindness and Medium Variation
+## §5. Imhof's Composition Discipline — Mute the Field, Color the Extremes
 
-Approximately 8% of males and 0.5% of females have some form of color vision deficiency. The most common form (deuteranopia/protanopia) collapses red and green into an indistinguishable band of yellow-brown. A display that encodes categorical or quantitative data through hue alone is unreadable for roughly 1 in 12 male readers.
+Redundant color only works on a quiet stage. Tufte adopts Eduard Imhof's color-composition rules (quoted in EI from *Cartographic Relief Presentation*):
 
-Redundant encoding is the only structural solution. Palette-switching to "colorblind-safe" hues is necessary but not sufficient — hue alone remains fragile at the edges of any viewer's color discrimination, under glare, on low-quality screens, and in print.
+- **Large areas → muted, dull, grayish, or neutral.** Strong, heavy, rich, solid colors belong only on the *small areas of extremes*. Pure bright colors spread over large adjacent areas have "loud, unbearable effects"; used sparingly on a dull ground they produce extraordinary effects. ("Noise is not music," in the internal quotation EI carries.)
+- **Set color against a dull background, not bright white** — this is what keeps the Tokyo map's colors "both calm and distinctive."
 
-**The accessible encoding stack:**
+EI's redesigns all enact this:
 
-1. **Hue** — primary channel for color-capable viewers. Use perceptually uniform palettes (CIELAB-based: Oklab, Viridis, Cividis for sequential; ColorBrewer qualitative for categorical).
-2. **Value (lightness)** — must vary monotonically with the data variable for sequential data. A sequential palette where hue changes but lightness is flat fails in grayscale.
-3. **Shape or texture** — distinguishes categories without any color information. At minimum: use distinct marker shapes in scatter plots; distinct dash patterns in line charts; distinct hatching in area charts.
-4. **Direct label or annotation** — names the category in the data space. Never requires correct color perception.
+| Redesign | Move | Effect |
+|---|---|---|
+| NJ Transit timetable | Heavy grid → tiny leader dots reading as gray | "A distinction but not a barricade" |
+| Marshalling signals | Gray silhouette + small spots of intense saturated color on the lamps | Color carries the signal; silhouette recedes |
+| Nolli map of Rome | Mute the river's heavy inking | Bridge names come forward; rippling-water symbolism kept |
+| Tukey statistical graph | Color spots track the path of local averages | Noise of parallel lines and white bands swept away |
 
-**Contrast threshold:** WCAG AA requires 4.5:1 contrast ratio between foreground elements and background for text; 3:1 for large graphical elements (>18pt or 14pt bold). Apply this to data marks, not just labels. A light-gray data point on white fails for low-contrast vision regardless of hue.
-
-**Do:** design for the grayscale version first. Add color as the second channel, not the first.  
-**Don't:** treat "colorblind-safe palette" as a substitute for structural redundancy. It is a partial mitigation, not a solution.
+**Do:** put your one or two saturated colors on the smallest, most important marks; let everything structural fall to gray.
+**Don't:** flood a large background with a strong hue and then try to layer data on top — the field shouts over the signal.
 
 ---
 
-## §7. The Test: Lucid Redundancy vs. Clutter
+## §6. Cyclic Redundancy — Marey's Schedule and Ocean Currents
 
-The question "is this redundant encoding warranted?" resolves to four sub-tests, applied in order:
+The structural (non-color) case for genuine redundancy is cyclic data, treated in Tufte's *Narratives of Space and Time* material (EI ch. 5 and *The Visual Display of Quantitative Information*), not the layering chapter — flagged here for honest provenance.
 
-**Test 1 — Channel removal.** Remove one channel. If full comprehension survives, the encoding was genuinely redundant (not doing different work). Proceed to Test 2.
+Marey's Paris–Lyon train schedule plots each train as a sloped line on a station × time grid. In a single 24-hour panel, any train running off the right edge forces the reader to mentally wrap back to the left — an invisible cut that severs the line. The fix is spatial repetition: extend the time axis past one period so every trajectory plots as one continuous, unbroken line. The extension carries **no new information**; it removes an arbitrary cut.
 
-**Test 2 — Interference check.** Render the two channels together at the smallest intended display size. Do they produce a third unintended visual element (moiré, gap artifact, banding)? If yes: the channel pair interacts. Find a non-interacting replacement or drop to single-channel.
+**Threshold for cyclic repeat:** size the overlap to the *longest continuous feature in the data*, not to a round number. For a world map of ocean surface currents Tufte notes that "one and two-thirds times around is better" than once — enough overlap to keep the longest current unbroken, no more.
 
-**Test 3 — Purpose accounting.** Name the specific service the redundancy provides from the three categories in §1 (context/order for complexity; comparison across parts; robustness/accessibility). If none of the three applies: erase the redundancy. "It looks more complete" is not a purpose.
+**Do:** repeat a cyclic axis when a natural traversal crosses the boundary, sized to the longest contiguous path.
+**Don't:** wrap non-cyclic data onto a torus or repeat a full second period when a fraction suffices — that is density without benefit.
 
-**Test 4 — Density cost.** Estimate the visual density increase from the second channel. If the second channel adds more than 10-15% ink area without a named benefit from Test 3, it has crossed from redundancy into clutter.
+---
 
-**Named failure modes:**
+## §7. Small Multiples — Differentiated Repetition
+
+The small-multiples chapter (EI ch. 4) is redundant encoding's structural cousin: repeat the *frame* unchanged, vary only the *data*, so attention lands on differences. "Constancy of design puts the emphasis on changes in data, not changes in data frames." The technique that connects it to this skill: **mute the repeated element, bring forward the differentiator.**
+
+| Example | Repeated (muted) | Differentiator (foregrounded) |
+|---|---|---|
+| Hudson & Manhattan train signals | The repeated train outline | Color of the signal lights — redrawing mutes the outline so color reads |
+| Birthplaces of Chinese poets (10,086 across 4 dynasties) | Base map, panel layout | Circle *area* + red — magnitude redundantly on size and color |
+| Neurometric brain maps | Grid of disk frames | Limited focused color, "more effective than strong rainbow colors" |
+| Fly-fisher plate | Implicit grid | Pairs each insect with its fly-fishing imitation |
+
+Two cautions EI raises in these pages:
+- **Keep comparisons within the eyespan.** The poets/sea-goddess maps fail their intended comparison because the panels are "stranded over two preceding pages."
+- **Dark surrounds breed white stripes.** The neurometric maps' dark borders generate "disruptive white stripes" — 1+1=3 inside a small multiple. Signal locations by quieter means (an implicit grid).
+
+**Do:** hold the frame constant, render only the data delta, and reserve saturated color for the one variable that changes.
+**Don't:** restyle the frame per panel or surround panels in heavy borders — both convert a small multiple into a vibrating grid.
+
+---
+
+## §8. Modern Extension — Accessibility (flagged: post-Tufte)
+
+Tufte's robustness argument (a display that survives grayscale, reduction, and dull backgrounds) generalizes directly to accessibility. The following is current practice consistent with EI, not from the book.
+
+About **8%** of males and **0.5%** of females have a color-vision deficiency; the common forms collapse red and green. Hue-only encoding is unreadable for ~1 in 12 male viewers — the same failure as Tufte's grayscale photocopy, just in a different channel. The structural fix is identical: ride the variable on a second channel.
+
+**The accessible encoding stack (apply in order):**
+1. **Value (lightness)** — must vary monotonically with the data for sequential scales; this is the channel that survives grayscale *and* CVD. Design the grayscale version first.
+2. **Hue** — added for speed for color-capable viewers; use perceptually uniform ramps (Viridis/Cividis sequential, Oklab-derived, ColorBrewer qualitative).
+3. **Shape / texture** — distinct marker shapes, dash patterns, or hatching so categories survive with zero color.
+4. **Direct label** — names the category in data space; never needs correct color perception.
+
+**Contrast floor:** WCAG 2.2 AA requires **4.5:1** for normal text and **3:1** for large text (≥18pt, or 14pt bold) and meaningful graphical objects. Apply 3:1 to data marks, not just labels — a pale dot on white fails regardless of hue.
+
+**Do:** treat "colorblind-safe palette" as the *start*, then add value + shape so the chart reads with no color at all.
+**Don't:** rely on a swapped palette alone — hue stays fragile under glare, cheap screens, and print.
+
+---
+
+## §9. Named Failure Modes
 
 | Name | Description | Symptom |
 |---|---|---|
-| Gratuitous multiplication | Redundancy applied without a named purpose | Two channels encoding the same simple scalar; reader learns nothing new |
-| Channel interference | Two channels that modulate each other | Hue + pattern produces moiré; value + hue produces phantom categorical boundary |
-| Cyclic truncation | Cyclic data cut at a round boundary | Train schedule: lines break at midnight; ocean current: wrap gap at antimeridian |
-| Palette substitution | Changing hue without maintaining shape/edge backup | Colorblind-safe palette applied but no shape encoding; still fails in grayscale |
-| Co-registration failure | Color field boundary misaligned with edge encoding | Topographic map where color zone bleeds across contour; creates phantom step-edge |
-| Redundancy inflation | Repeating more data than the longest natural traversal path requires | Full second copy when a half-cycle suffices; doubles density without benefit |
+| 1+1=3 noise | Overlapping/heavy marks breed bright negative shapes | Stripy grid texture; vibrating index; doubled trace-lines |
+| Gratuitous redundancy | Second channel with no robustness/access/separation purpose | Passes channel-removal test but buys nothing |
+| Channel collision | Two channels modulate each other | Hue+pattern moiré; box-around-word; value+hue phantom category |
+| Undifferentiated jumble | All layers at one visual level | Simla map — equal value, texture, color, near-equal shape |
+| Over-saturation of the field | Strong color spread over large background | "Loud, unbearable" ground that drowns the signal |
+| Co-registration failure | Color boundary misaligned with edge | Topographic color bleeds across contour → phantom step-edge |
+| Cut cycle | Cyclic data severed at a round boundary | Train lines break at midnight; current wraps at the antimeridian |
+| Redundancy inflation | Repeating more than the longest natural path needs | Full second period when a fraction would close the cycle |
+| Color overload | More than ~20–30 hues for abstract encoding | Negative returns; rainbow maps that read slower than focused color |
+| Stranded comparison | Small-multiple panels split off the eyespan | Reader cannot compare without paging back and forth |
 
 ---
 
-## §8. Summary Decision Table
+## §10. Decision Tables
 
-| Context | Single channel sufficient? | Warranted redundancy? | Notes |
+**Single channel, redundant, or layered?**
+
+| Context | Approach | Channels | Notes |
 |---|---|---|---|
-| Simple scalar comparison, one medium | Yes | No | Apply erasing principle |
-| Categorical distinction, mixed media | No | Yes — shape + hue | Shape carries across grayscale |
-| Sequential quantitative, print+screen | No | Yes — value + hue | Value must vary monotonically |
-| Cyclical time-series, any medium | No | Yes — spatial repeat | Size to longest natural path |
-| High-stakes legibility (medical, safety) | No | Yes — 3 channels | Position + color + label/shape |
-| Topographic or spatial density map | No | Yes — field + edge + label | Imhof model; co-register boundaries |
-| Internal exploratory chart | Yes | No | Speed over robustness |
+| Simple scalar, one medium | Single | Position or value | Adding a second channel is gratuitous redundancy |
+| Crowded layers (map, schematic, table) | Layered | Shape + value + size + color, by importance | The Tokyo/Imhof move; co-register edges |
+| Categorical, mixed media | Redundant | Shape + hue | Shape survives grayscale/CVD |
+| Sequential quantitative, print + screen | Redundant | Value + hue | Value must vary monotonically |
+| Cyclical time-series | Redundant (spatial) | Repeat axis to longest path | No new info; removes a cut |
+| Topographic / density map | Redundant | Color field + contour + darkening | Swiss-map model; mute field, color extremes |
+| High-stakes legibility (medical, safety) | Redundant | Position + value + shape/label | Survives single-channel failure |
+| Internal exploratory chart | Single | Fastest channel | Robustness not worth the density |
 
-The governing asymmetry: adding a redundant channel costs density and design time; failing a reader costs comprehension. In high-stakes or multi-medium contexts the asymmetry favors redundancy. In exploratory or single-medium contexts it favors the erasing principle.
+**Which structural marks carry strong value contrast?** Only the data. Everything below goes gray:
+
+| Element | Treatment |
+|---|---|
+| Data marks / signal | Strongest value contrast; reserve saturated color here |
+| Grid / graph paper | Gray, delicate; use reverse-printed side if pre-printed dark; throw out if gridded dark on both sides |
+| Frames / panel borders | Light or implicit; avoid dark surrounds (white-stripe noise) |
+| Labels / type | Match weight to importance; never equal to the data marks |
 
 ---
 
-*Sources: Edward Tufte, The Visual Display of Quantitative Information (2nd ed.); Envisioning Information. Eduard Imhof, Cartographic Relief Presentation (1982). WCAG 2.1 contrast criteria. Oklab perceptual color model (Björn Ottosson, 2020).*
+## §11. The Warrant Test (run in order)
+
+1. **Removal.** Delete one channel. Readable → redundant (go to 2). Layer lost → layering, keep. Clearer → collision, cut the channel.
+2. **Interference.** Render both channels at the smallest intended size. Any moiré, white stripe, gap, or banding → the pair collides; replace or drop one.
+3. **Purpose.** Name the service from {separation of crowded layers · robustness across media · accessibility · cyclic continuity}. None applies → erase the redundancy; "looks more complete" is not a purpose.
+4. **Field check.** Is the second channel's color confined to small extremes on a muted ground, with edges co-registered? If a strong hue floods the background, mute it before shipping.
+
+The governing asymmetry: a warranted channel costs some density and design time; an unwarranted one (or a collision) costs comprehension. In crowded, multi-medium, or high-stakes displays the asymmetry favors the extra channel — placed quietly, on a quiet ground. Everywhere else it favors restraint.
+
+---
+
+*Sources: Edward Tufte, Envisioning Information — ch. 3 "Layering and Separation" (pp. 53–65), ch. 4 "Small Multiples" (pp. 67–79), and the opening of ch. 5 "Color and Information" (pp. 80–81, the Swiss map and the four uses of color). Josef Albers, "One Plus One Equals Three" (1+1=3 effect, quoted in EI). Eduard Imhof, Cartographic Relief Presentation (color-composition rules, quoted in EI). Cyclic-redundancy material from EI ch. 5 / Tufte, The Visual Display of Quantitative Information. §8 accessibility is post-Tufte current practice (WCAG 2.2; CIE/Oklab perceptual color; CVD epidemiology), consistent with Tufte's robustness argument but not from the book.*

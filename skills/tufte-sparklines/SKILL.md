@@ -1,284 +1,279 @@
 ---
 name: tufte-sparklines
-description: Design rules, size guidance, variations, and domain applications for Tufte's sparklines — intense, word-sized data graphics embedded in prose or tables.
-tags: [tufte, data-visualization, sparklines, information-density, typography]
+description: Design rules, the typographic and density arguments, aspect-ratio math, variations, anchoring methods, and domain applications for Tufte's sparklines — intense, simple, word-sized data graphics embedded in prose, tables, and numbers.
+tags: [tufte, data-visualization, sparklines, information-density, typography, dataword]
 ---
-# Sparklines: Intense Word-Sized Graphics
+# Sparklines: Intense, Simple, Word-Sized Graphics
 
 ## Overview
-Sparklines are "data-intense, design-simple, word-sized graphics" — small time-series (or binary-sequence) displays that live inside sentences, table cells, or alongside numbers rather than on their own chart canvas. They exist to show the full history and shape of a measure at a glance, not to deliver precise read-off values. The core problem they solve is recency bias: tables show only current levels or recent changes; sparklines show where the current value sits in its full historical context.
+A sparkline is a small, high-resolution graphic embedded directly in a sentence, a table cell, or beside a number — a "dataword" with the same intensity of visual distinctions as a printed word. It shows the full shape and history of a measure at word scale, not precise read-off values. The core problem it solves: a lone number or a recent-change column has no context, so readers over-weight the latest value (recency bias); a sparkline puts the current reading inside its entire past in the space of a word.
 
-> "The idea is to be approximately right rather than exactly wrong."
-> — *Beautiful Evidence*, p. 50
+The chapter is titled *Sparklines: Intense, Simple, Word-Sized Graphics* in *Beautiful Evidence* (printed pp. 47–63). All page citations below are the book's printed page numbers.
 
 ---
 
-## §1. Definition and Core Principle
+## §1. Definition and the Three Properties
 
-**Canonical definition (Tufte):**
+Tufte builds the term from a clinical example. The most common data display is a noun plus a number (`glucose 6.6`). A single number gains meaning only in context, so replace it with a data-line of the patient's last 80 glucose readings sitting just left of the number. Because that free-floating line has no scale, it is *dequantified* — but the rightmost point is anchored to the printed number, and a red color accent ties the two representations of the most recent reading together. Add a gray band for the normal range and readings above/below the band horizon read instantly as elevated/reduced. Stack glucose, respiration, and temperature lines and you get fast parallel comparison across many variables and thousands of measurements.
 
-> "Sparklines: data-intense, design-simple, word-sized graphics."
-> — *Beautiful Evidence*, chapter title, p. 46
+> "Sparklines are datawords: data-intense, design-simple, word-sized graphics." — Tufte, *Beautiful Evidence*, p. 47
 
-Three properties are non-negotiable:
+Three properties, all non-negotiable:
 
 | Property | What it means | What violates it |
 |---|---|---|
-| Data-intense | Many data points per unit area | Showing only 3–5 points in sparkline space |
-| Design-simple | No axes, no tick marks, no legends, no grid | Adding axis labels, borders, legends |
-| Word-sized | Height roughly matches surrounding text (1 em); width fills available column space | A chart that is taller than surrounding text or requires its own dedicated area |
+| Data-intense | Hundreds of points packed per unit area at typographic resolution | Showing only 3–5 points in sparkline space |
+| Design-simple | No axes, tick marks, gridlines, legends, or labels on the mark itself | Adding an axis, point labels, or a legend |
+| Word-sized | Height ≈ surrounding text (roughly 1 line / x-height); a financial sparkline runs ~14 letterspaces wide | A mark taller than the type, or one needing its own framed area |
 
-**What a sparkline is NOT:**
-- A small version of a full chart (full charts have axes, labels, legends)
-- A thumbnail (thumbnails just shrink the full design; sparklines omit all scaffold)
-- A summary statistic (it preserves the shape of the full sequence)
+**A sparkline is NOT:**
+- A shrunk full chart (full charts keep axes, labels, legends; sparklines omit all scaffold).
+- A thumbnail (a thumbnail miniaturizes the whole design; a sparkline removes it).
+- A summary statistic (it preserves the full sequence's shape, not one number).
+
+The payoff phrase is *writing with data graphics*: a glucose sparkline reads like the sentence "the last 80 readings of glucose, compared to normal limits, with the most recent reading marked in red" (p. 49).
 
 ---
 
-## §2. The Density Argument
+## §2. The Typographic Argument — why word-sized works
 
-Tufte's case for sparklines rests on a hard comparison of information density:
+Sparklines borrow the resolving power readers already use for type. Letterforms carry enormous fine detail, and Tufte quantifies it:
 
-In *Beautiful Evidence* (p. 50), Tufte shows that numeric tables top out at roughly 300 characters per square inch (50 per cm²). Graphical displays exploit a far greater resolving power: cartographers have measured the eye's discrimination limit at 0.1 mm when pushed to do so — orders of magnitude beyond what type can achieve at the same scale.
-
-Concrete density numbers:
-
-| Display type | Max density |
+| Unit (11-pt text) | Visual distinctions made |
 |---|---|
-| Text / numeric table | ~300 characters/in² or ~50 char/cm² |
-| Graphical display (eye limit) | 250 distinctions/linear inch → ~60,000/in² or ~10,000/cm² |
-| High-resolution graphics | 200 numbers/cm² or 1,200 numbers/in² |
+| Single letter | 20 to 200 |
+| Word of 6–7 letters (average English word length) | 100 to 1,000 |
 
-Real example (mutual funds table):
-- Original numeric table: 24 numbers accurate to 5 significant digits
-- Same area with sparklines added: ~14,000 numbers readable to 1–2 significant digits
-- Sparkline data area was only **21% larger** than the original table's data area
+If routine reading operates at that resolution, data graphics can too — hence "small, intense, wordlike graphics" (p. 48). Words present an overall shape plus letter-by-letter detail and are read by quick recognition; sparklines present an overall shape plus local detail and are read the same way, just more carefully and slowly. A new sparkline form is intelligible to most readers by its second publication — "pretty good for a brand new word" (p. 54).
 
-For newspaper financial pages: at 8 lines per inch, sparklines added to a 5-column table yield approximately **400,000 additional daily graphical prices and changes per page**.
+Worked example (p. 48): two fund sparklines, `Vanguard 500 Index` vs `PIMCO Total Return`, each tracking ~250 trading days and thus 249 daily changes, set inline for visually parallel comparison. A second inline mark packs 3 years of daily history (2,250 numbers — prices, changes, and trading volumes) for one insurance stock, bounded by `68.0 … 59.5`.
 
 ---
 
-## §3. Design Rules
+## §3. Historical Precedent — datawords are old
 
-### Do / Don't pairs
+Three distinct lineages Tufte cites; keep them separate.
+
+**(a) Small graphics living inside text for centuries (p. 49):**
+- Sparkline-like space-fillers in a 1400 *Book of Hours*.
+- Illuminated initials in medieval manuscripts.
+- Email emoticons (`:-)`).
+- Tiny imagelike symbols in railroad timetables.
+- Chinese characters set together with English text.
+
+**(b) Galileo's Saturn, 1613 — the key precedent (p. 49):**
+In *Istoria e dimostrazioni intorno alle macchie solari*, Galileo rendered Saturn's shape as **two visual-noun sparklines set inside a sentence** — one shape for the view through a perfect instrument, a different shape where optics fail — with no break between text and image. Tufte calls Galileo's word/image sentence one of the best analytical designs ever, and the founding precedent for embedding small detailed data-lines in prose.
+
+**(c) Sparkline-like high-resolution performances elsewhere (pp. 52, 58):**
+- E. J. Marey's physiological traces scratched by a pointer onto a smoked-carbon plotting field (1868).
+- Swiss national topographic maps — fine contour lines flowing over a surface of place-names and elevation numbers.
+- Albrecht Dürer's 1514 engraving (*Saint Jerome in His Cell*) — engraving lines so fine they are hard to reproduce cleanly even now.
+- Multi-channel EEG traces.
+
+These are not sparklines, but they prove that high-resolution, design-restrained linear marks embedded in a verbal/numeric context have served analysis for centuries. Tufte's verdict: all serious analytical graphics should be this good.
+
+---
+
+## §4. The Density Argument
+
+Type is a low-resolution medium; the eye is a high-resolution instrument. Sparklines exploit the gap.
+
+| Display type | Maximum density | Source |
+|---|---|---|
+| Numeric / text table | ~300 characters/in² (~50 char/cm²) | p. 50 |
+| Graphical display, eye discrimination limit | 0.1 mm → 250 distinctions/linear inch → ~60,000/in² (~10,000/cm²) | p. 50 |
+| High-resolution graphics in practice | 1,200 numbers/in² (200 numbers/cm²) | p. 53 |
+
+Two concrete, **separate** tables prove it — do not merge them:
+
+**Euro foreign-exchange table (p. 50):** consuming only ~14 letterspaces per cell, the table reports **24 numbers accurate to 5 significant digits**; the added sparklines show **about 14,000 numbers readable to 1–2 significant digits**. The trade is the whole point:
+
+> "The idea is to be approximately right rather than exactly wrong." — Tufte, *Beautiful Evidence*, p. 50
+
+**Popular mutual-funds table (p. 51):** the redesigned sparkline version's data area is **only 21% larger** than the original numeric table's, yet it shows **about 5,000 more numbers**. (Typeface swap to Gill Sans helps recover the space.)
+
+Scaling to publication:
+- **Newspaper finance:** at 8 lines/inch, ~160 sparklines per column → **~400,000 additional daily graphical prices and changes per 5-column page** (p. 51).
+- **Scientific journals:** only ~3–5% of published graphics reach sparkline-like resolution today; by 2006 the median *Nature*/*Science* data graphic carried >1,000 numbers, and published data densities doubled over a decade — Tufte argues this should be far higher (p. 53).
+- **Overall:** sparklines run at **5 to 100× the resolution of conventional graphics and tables** (p. 63).
+
+Density also fixes attention span: a year of daily history beside the current number reduces recency bias. Tables that show only current levels or recent changes reinforce it.
+
+---
+
+## §5. Design Rules — Do / Don't
 
 | Do | Don't |
 |---|---|
-| Omit all axes, tick marks, and grid lines | Add an x- or y-axis |
-| Omit all labels on the sparkline itself | Label individual data points |
-| Use color sparingly and functionally (first/last value, min/max, anomaly) | Use color for decoration or category encoding |
-| Make height roughly 1 em (matches surrounding text x-height) | Make the sparkline taller than surrounding text |
-| Print in single color or 2-color flat mix (magenta + yellow = red) | Use 4-color process printing (produces moiré and dot grit) |
-| Use thin, lightweight data lines | Use heavy strokes that produce moiré when closely stacked |
-| Omit or minimize frames around sparklines | Use strong frames (they become the dominant visual element, not the data) |
-| Scale multiple sparklines on a global baseline when comparison matters | Allow each sparkline to independently auto-scale when comparison is the task |
+| Strip all axes, ticks, gridlines | Add an x- or y-axis to "help" |
+| Leave the mark unlabeled; anchor with surrounding numbers | Label individual data points |
+| Use color only to name a data fact (endpoints, low/high, anomaly) | Use color decoratively or as category encoding |
+| Keep height ≈ the surrounding type | Make the mark taller than the text line |
+| Print single-color, or flat 2-color mix (magenta + yellow = red), or stochastic color | Use 4-color process for fine lines (gritty misregistration) |
+| Use thin, lightweight data-lines | Use heavy strokes (moiré when stacked) |
+| Drop frames, or use hairlines only | Use strong cell borders (the frame out-shouts the data) |
+| Share one global scale when magnitudes must be compared | Let each sparkline auto-scale independently for a comparison task |
 
-### Functional color encoding (Tufte's examples)
-- **Red** = oldest and newest values in the series (links sparkline to flanking numbers)
-- **Blue** = yearly low and high
-- **Red whisker** = one team held scoreless (binary outcome marking)
-- **Gray band** = normal/reference range (e.g., glucose normal limits in medical use)
+**Functional color encoding (Tufte's own assignments):**
+- **Red** = oldest and newest value in a series (links the line to its flanking numbers).
+- **Blue** = yearly low and high.
+- **Red whisker** = a binary marker (e.g., the losing team was held scoreless).
+- **Gray band** = the normal / reference range.
 
-The rule: color encodes specific, named data facts — never used decoratively.
-
----
-
-## §4. Quantification Without Labels
-
-Because word-sized format precludes overt labels and scaling, Tufte identifies four contextual methods to anchor sparklines to actual values:
-
-1. **Implicit data-scaling box** — surrounding numbers form the scale:
-   `2003.4.28  [sparkline]  2004.4.28  low 1.0783  high 1.2858`
-   The sparkline's vertical range is implicitly bounded by the low/high numbers printed beside it.
-
-2. **Gray reference band** — a shaded band marks the normal range (e.g., blood glucose normal limits). No numbers needed; the reader sees whether the line is inside or outside the band.
-
-3. **Color-linked endpoint numbers** — matching colors tie exact data points in the sparkline to the precise numbers flanking it.
-
-4. **Global scale bars and labels** — when a cluster of sparklines must be compared on the same scale, a single shared scale bar applies to all.
-
-> "In exchange for an enormous increase in graphical resolving power, the wordlike size of sparklines precludes the overt labels and scaling of conventional statistical displays."
-> — *Beautiful Evidence*, p. 61
+Rule: color names a specific data fact, never decorates.
 
 ---
 
-## §5. Aspect Ratio
+## §6. Quantification Without Labels — four anchoring methods
 
-Aspect ratio (width ÷ height) is the most consequential production decision for sparklines.
+Word-size precludes overt scales, so re-attach values by context (p. 61):
 
-**Tufte's examples:**
-| Sparkline type | Aspect ratio (approx.) |
+1. **Implicit data-scaling box** — flanking numbers form the scale, e.g. `1.1025 [sparkline] 1.1907   low 1.0783  high 1.2858`; the line's vertical range is bounded by the printed low/high. Tufte calls this probably the best method.
+2. **Gray reference band** — a shaded band marks normal limits; inside/outside reads without numbers (clinical glucose, EEG baseline).
+3. **Color-linked endpoint numbers** — matched colors tie exact points in the line to the precise numbers beside it.
+4. **Global scale bars / labels** — one shared scale governs a whole cluster of sparklines that must be compared.
+
+Occasionally a sparkline is also scaled by very small inline type. Removing labels *without* one of these methods is a failure mode (see §13).
+
+---
+
+## §7. Aspect Ratio
+
+Width ÷ height is the single most consequential production choice; for *all* statistical graphics the perceived data-shape changes with it. Tufte's demonstration: six sparklines of identical data with the y-scale stepped up 25% per copy while x is held constant — the shape reads completely differently each time.
+
+**Tufte's worked aspect ratios:**
+
+| Sparkline | Aspect ratio (≈) |
 |---|---|
 | Financial exchange rate (12 months) | 5 : 1 |
 | Full baseball season (162 games) | 20 : 1 |
 | DNA chromosome sequence | 300 : 1 |
 
-**Cleveland's banking-to-45° rule** (endorsed by Tufte):
-- Best aspect ratio for judging slopes and velocities in time-series: the one that yields hill-slopes averaging 45° over every cycle.
-- Variations in slopes are best detected when slopes are around 45°, uphill or downhill.
-- Target: a "lumpy" profile (moderate hills and valleys), not a "spiky" profile (extreme vertical, shallow horizontal) or a "flat" profile (near-zero vertical range).
+**Cleveland's banking-to-45° rule (endorsed):** slopes and velocities in a time-series are judged best when the hill-slopes average ~45° (uphill or downhill) over every cycle. Aim for a **lumpy** profile, not **spiky** (extreme vertical) or **flat** (near-zero vertical range). Tufte's sunspot example (yearly counts, 1749–1924): the 45°-banked version reveals that cycles rise fast and decline slowly — a fact invisible in the spiky rendering of the same data.
 
-**Practical rule for sparklines:**
-> Use the maximum reasonable vertical space available under the word-like constraint, then adjust the horizontal stretch of the time-scale to meet the lumpy criterion.
-> — *Beautiful Evidence*, p. 60 (paraphrased)
-
-For multiple sparklines: obtain a global aspect ratio by averaging over all data lines to yield an overall lumpy quality. This allows individual sparklines with different variance to share a coherent visual scale.
+**Practical procedure:**
+1. Take the maximum reasonable vertical space allowed by the word-size constraint.
+2. Stretch the horizontal (time) axis until the profile is lumpy / averages ~45°.
+3. For multiples, compute one **global aspect ratio by averaging across all data-lines**, so series of different variance share a coherent scale.
+4. Let the analytical task override when it suggests something better.
 
 ---
 
-## §6. Variations
+## §8. Variations — the catalog
 
-### Sparkline with endpoint markers
-Mark the first and last value with a distinct color (Tufte uses red). This answers "where did it start, where is it now?" without adding labels, and links the graphic to flanking numeric values.
-
-### Sparkline with reference band
-A shaded gray band indicates the normal/expected/target range. The line's relationship to the band (inside, outside, crossing) is immediately scannable. Used in medical monitoring (e.g., blood glucose, EEG baseline vs. spike).
-
-### Sparkline with anomaly highlighted
-A single deviant point or period marked with a contrasting color. Tufte's mutual fund example: PIMCO's sparkline marked in red against the stacked pile of 9 other funds — immediately shows that one fund diverges from the common pattern.
-
-### Binary / win-loss sparklines (data-whiskers)
-For binary-outcome sequences (win/loss, presence/absence, occurrence/non-occurrence): upward whisker = win/occurrence; downward whisker = loss/non-occurrence. Can simultaneously encode multiple variables:
-- Whisker direction: win/loss
-- Whisker presence vs. absence: home/away
-- Whisker color: shutout/no shutout
-- Whisker height: margin of victory
-
-> "These 2 sparklines depict and compare 5 variables (ordered sequence of games, win/loss, home/away, no shutout/shutout, and team) for 162 games."
-> — *Beautiful Evidence*, p. 54
-
-### Dataword
-A sparkline embedded directly in a sentence, treated as a word. Tufte defines it as: the sparkline is a "dataword" — for example, "the win/loss sequence for the season's first 39 games" followed by the actual sparkline inline. No separate figure label, no caption.
-
-### Dotdashplot
-A redesigned scatterplot where the frame's axes are replaced by sparklines showing the univariate marginal distributions. Projects bivariate scatter into two univariate distributions simultaneously, allowing identification of outliers in either dimension independently.
-
-### Stacked / multiplied sparklines
-Multiple sparklines aligned vertically on the same time axis to compare several series simultaneously. Tufte calls this "multiply a good design." The 2004 MLB season example: 6 paragraphs of sparklines, 30 teams, 162 games each = 4,856 win/loss outcomes narrated compactly.
-
-### Bumps chart
-800 interwoven sparklines showing 3,252 contest outcomes over 12 seasons. Each sparkline tracks one team's rank over time. Intersections of diagonal lines show rank changes. Demonstrates that sparkline principles scale to complex multi-entity temporal data.
-
----
-
-## §7. Domain Applications
-
-### Financial / economic
-- Exchange rates: one sparkline per currency, daily for 12 months or 65 months
-- Mutual fund performance: sparkline beside each fund row in a table — daily prices for a year added alongside 4-week, 1-year, 3-year, 5-year return columns
-- Multiple sparklines per noun: same fund can have price sparkline, percent-change sparkline, percent-change-off-index sparkline — "just as multiple columns of numbers report various measures of performance"
-- Reduces recency bias: year-long daily history prevents over-weighting of the most recent move
-
-### Medical / clinical
-- EEG monitoring: 8 simultaneous channel traces — baseline vs. polyspike bursts immediately visible at sparkline scale
-- Blood glucose: reference band marks normal limits; the patient's line crossing out of band is the signal
-- Neurophysiology: mouse neuron firing rates in intensity/frequency space — multiple sparklines across a stimulus grid
-
-> "Medical monitoring technologies often produce so much data that sparkline-like graphics are essential to help identify and contextualize clinically relevant events from a torrent of numbers."
-> — *Beautiful Evidence*, p. 52
-
-### Scientific / genomic
-- DNA chromosome 7: 10 of 13 data lines in the sequence map operate at sparkline resolutions; scale is 10 Mb = 10,000,000 base pairs across ~153,000,000 total base pairs
-- Mergesort algorithm visualization: 7 sequential passes shown as stacked sparklines
-- Approximately 3–5% of papers in major scientific journals (as of publication) depict data at sparkline-like resolutions; Tufte argues this should be much higher
-
-### Sports
-- Baseball season win/loss: 162-game sparkline per team; stackable for league comparison
-- Competitive path (wins minus losses = net games over .500): the shape of the season's competitive story
-
-### General analytics / cartography
-- Sparklines are analogous to contour lines on Swiss topographic maps: "finely detailed contour lines... flow over a surface covered with nouns (places) and numbers (mountain heights), a context of visual images, numbers, and words."
-- Any process producing sequential numeric or binary outcomes is a candidate.
-
----
-
-## §8. Scale and Layout of Multiple Sparklines
-
-When many sparklines are used together:
-
-> "Just as sparklines are like words, so then distributions of sparklines on a page are like sentences and paragraphs. The graphical idea here is make it wordlike and typographic."
-> — *Beautiful Evidence*, p. 63
-
-**Density target for high-stakes monitoring:**
-- 500 sparklines on A3 paper (25 × 45 cm / 11 × 17 in)
-- Data-equivalent of ~15 large computer screens or ~300 PowerPoint slides
-- Key advantage: data is **adjacent in space** rather than **stacked in time** — entire history is visible simultaneously within one eyespan
-
-**Spatial adjacency enables:**
-- Simultaneous comparison across series
-- Pattern search (find the one that differs)
-- Replication checking
-- Exploration without navigation
-
----
-
-## §9. Optical Clutter — Failure Modes
-
-### Failure mode 1: Moiré from equal figure/ground weight
-Closely spaced sparkline lines produce moiré vibration when data-lines (figure) and spaces (ground) are approximately equal in size, and especially when they contrast strongly in color value.
-
-Fix: reduce the relative weight of data-lines; mute contrast between data and background.
-
-### Failure mode 2: 4-color process printing
-Cyan + magenta + yellow + black dots do not align perfectly; thin lines and small type become gritty.
-
-Fix: print sparklines in a single color, or in flat color (2-color mix: magenta + yellow = red), or by stochastic color methods.
-
-### Failure mode 3: Strong frames
-Heavy cell borders become the dominant visual element — the negative spaces between frames read more strongly than the data lines inside them.
-
-Fix: eliminate frames entirely, or use hairline rules only. Test: "Do the prominent visual effects convey relevant content?" If the most prominent thing is the frame, the frame is wrong.
-
-### Failure mode 4: Independent auto-scaling for comparison tasks
-When multiple sparklines in a table each auto-scale to their own range, relative magnitude is lost. A large, flat series looks the same as a small, volatile one.
-
-Fix: share a global scale when comparison of magnitude is the analytical task.
-
-### Failure mode 5: Spiky or flat aspect ratio
-Too tall (spiky): every small fluctuation looks dramatic; trend is obscured.
-Too wide/flat: everything looks calm; real variation is suppressed.
-
-Fix: target 45° average slope (Cleveland's banking rule); aim for lumpy, not spiky or flat.
-
-### Failure mode 6: Dequantification without anchoring
-Removing all labels without providing contextual quantification methods leaves the reader unable to read any actual values.
-
-Fix: always surround sparklines with at least one of Tufte's four anchoring methods (implicit box, reference band, color-linked numbers, or global scale bar).
-
----
-
-## §10. Resolution Notes
-
-> "Sparklines work at intense resolutions, at the level of good typography and cartography."
-> — *Beautiful Evidence*, p. 63
-
-- Paper/film/metal: >1,200 dpi achievable inexpensively — the ideal medium
-- Computer monitors (at time of writing): ~10% of paper's resolution — adequate for exploration, insufficient for high-density analytical work
-- Recommendation: for serious analytical work (clinical, financial, scientific), print sparklines on paper; use screen interactivity for navigation and selection
-
-**Historical antecedents Tufte identifies:**
-- E. J. Marey's physiological measurements (smoked carbon plotting fields, ~1868)
-- Swiss national topographic maps (contour lines at fine resolution)
-- Albrecht Durer's 1514 engraving lines (variable-weight lines conveying 3D form)
-- EEG traces (continuous multi-channel recording)
-
-These are not sparklines, but they demonstrate that high-resolution, information-dense, design-restrained linear marks embedded in context have a centuries-long history of serving analytical purposes.
-
----
-
-## §11. Summary: When to Use Sparklines vs. Full Charts
-
-| Condition | Use sparkline | Use full chart |
+| Variation | What it does | Tufte's example |
 |---|---|---|
-| Reader needs to see shape and trend | Yes | Yes |
-| Reader needs to read off precise values | No | Yes |
-| Graphic lives inside a table or sentence | Yes | No |
-| Multiple series need simultaneous comparison in compact space | Yes (stacked) | No (too large) |
-| Standalone explanatory graphic for presentation | No | Yes |
-| High data volume (hundreds of points per series) | Yes (suits density) | Yes, but wasteful of space |
-| Binary/sequential outcome data | Yes (data-whiskers) | Rarely |
-| Anomaly detection across many series at once | Yes (stacked) | No |
-| Reader unfamiliar with the graphic form | Depends (dataword works once learned) | Yes |
+| Endpoint markers | Mark first/last value (red) → "where it started, where it is now" | Glucose / FX endpoints |
+| Reference band | Gray band = normal range; inside/outside is the signal | Blood glucose, EEG |
+| Anomaly highlight | One series colored against a muted stack to expose divergence | PIMCO (sole bond fund) in red vs the stacked pile of 9 stock funds (p. 51) |
+| Binary data-whiskers | Up = win/occurrence, down = loss/non-occurrence; encodes several variables at once | Baseball: 2 sparklines carry 5 variables for 162 games (p. 54) |
+| Variable-length whiskers | Whisker length signals intensity/degree, not just yes/no | Mouse-neuron firing in an intensity/frequency space (p. 55) |
+| Dataword | A sparkline set inline as a word, no caption or figure label | "the win/loss sequence for the season's first 39 games" + the mark (p. 54) |
+| Dotdashplot | Scatterplot whose frame axes become sparklines of the marginal distributions | *VDQI* pp. 133–135; 3-D version maps a hyperbolic paraboloid (p. 57) |
+| Stacked / multiplied | Align many series on one time axis — "multiply a good design" | 2004 MLB: 6 paragraphs, 6 leagues, 30 teams; tables hold 500 digits; sparklines trace 4,856 win/loss outcomes (p. 54) |
+| Bumps chart | Many interwoven rank-lines; line crossings = overtakes/rank changes | 800 interwoven sparklines, 3,252 contests, 12 seasons × 4 race-days, 66+ crews; red = "blades" (bumped up 4×), blue = one leader's 12-year thread (pp. 56–57) |
 
-> "Sparklines vastly increase the amount of data within our eyespan and intensify statistical graphics up to the everyday routine capabilities of the human eye-brain system for reasoning about visual evidence, seeing distinctions, and making comparisons."
-> — *Beautiful Evidence*, p. 63
+Binary-whisker encoding can stack channels onto one mark: direction = win/loss, presence of a horizontal line = home/away, a short red whisker = shutout, whisker length = margin — five variables in one 162-game ribbon.
+
+---
+
+## §9. Domain Applications
+
+**Financial / economic**
+- One sparkline per currency or fund, daily prices for 12 or 65 months, set beside the numeric columns.
+- Multiple sparklines per noun (price, % change, % change off index) — just as multiple numeric columns report different performance measures.
+- Beats recency bias by showing the full year against the latest move.
+
+**Medical / clinical**
+- EEG: 8 channel traces (with a scale bar) opening on calm background and shifting into polyspike bursts (Kooi, 1971).
+- Blood glucose with a gray normal-limits band; the line leaving the band is the signal.
+- Neurophysiology: mouse-neuron rates across an intensity/frequency grid (Zhang et al., *Nature* 2003); mouse activity over 19 days on a 48-hour grid exposing circadian cycles (Hattar et al., *Nature* 2003).
+- Why: monitoring produces a torrent of numbers; sparkline-scale graphics are essential to find and contextualize clinically relevant events (p. 52).
+
+**Scientific / genomic**
+- Human chromosome 7 map: 10 of 13 data-lines run at sparkline resolution; scale bar = 10 Mb = 10,000,000 base pairs; the sequence spans 153,000,000 base pairs (Hillier et al., *Nature* 2003).
+- **Two distinct mergesort figures (keep separate):**
+  - p. 47 — a **9-step sequence (read down the columns) merge-sorting 5 different input-file types**, depicting **4 variables and 18,000 numbers** in small multiples (Sedgewick, *Algorithms in C*, p. 353).
+  - p. 53 — **7 sequential passes sorting a 200-element file in bottom-up mergesort** (Sedgewick, *Algorithms in C*, p. 350).
+
+**Sports**
+- 162-game win/loss ribbons per team, stackable for league comparison.
+- Competitive path = wins − losses (net games over .500) — the shape of the whole season's story.
+
+**General / cartography**
+- Analogous to Swiss topographic contour lines flowing over place-names and elevation numbers — images, numbers, and words in one field.
+- Any process emitting sequential numeric or binary outcomes is a candidate.
+
+---
+
+## §10. Layout & Scale of Many Sparklines
+
+> "The graphical idea here is make it wordlike and typographic." — Tufte, *Beautiful Evidence*, p. 63
+
+If a sparkline is a word, a page of sparklines is sentences and paragraphs.
+
+**Density target for serious monitoring** (financial trading, sporting events, control rooms, scientific/medical analysis, system administration):
+- **500 sparklines on A3 paper** (≈ 25 × 45 cm / 11 × 17 in).
+- Data-equivalent of **~15 large computer screens or ~300 PowerPoint slides**.
+- Decisive advantage: data is **adjacent in space**, not **stacked in time** — the entire history sits in one eyespan.
+
+**Spatial adjacency enables:** comparison, search, pattern-finding, exploration, replication, review — all without navigation.
+
+---
+
+## §11. Production Reality & the Mode-Segregation Critique
+
+**Production today is hard (p. 61).** An elegant sparkline currently needs **three integrated programs**: (1) page-layout, (2) graphic-design (full control of type, tables, linework), and (3) statistical-analysis (to generate hundreds of chartjunk-free lines for export). A quick-and-dirty path is to cut, paste, and resize existing data-lines down to sparkline scale. Once templates are built, ongoing production can run on automatic pilot.
+
+**Why the tooling fights you.** Standard software segregates evidence by mode — word, number, image, graph — each in its own application. That **contradicts the spirit of sparklines**, which make no distinction among words, numbers, images, and graphics: it is all evidence. A good evidence system should be centered on the evidence-document, not on a bureaucracy of operating systems and single-mode apps. Tufte's precedent is the **Xerox Star (1970s, Xerox PARC)**: users saw only documents and never a free-standing application — text, graphics, tables, and formulas were all edited *inside* documents. The intellectual architecture of a report should not mirror the chaos of the software that produced it.
+
+---
+
+## §12. Resolution
+
+| Medium | Resolution | Use |
+|---|---|---|
+| Paper / film / metal | >1,200 dpi, cheap | Best medium; required for high-density analytical work |
+| Computer monitor | ~10% of paper | Coarse type and detail-poor sparklines; fine for exploration, not dense analysis |
+
+Recommendation: for serious clinical / financial / scientific work, **print on paper and use the screen for interactivity** (navigation, selection). Combining the two is often the best of both.
+
+---
+
+## §13. Named Failure Modes
+
+**FM1 — Moiré from equal figure/ground.** Closely spaced lines vibrate when data-lines (figure) and the gaps (ground) are roughly equal in size, worst when they contrast strongly in value. *Fix:* lighten the data-line weight; mute data/background contrast.
+
+**FM2 — 4-color process grit.** CMYK dots misregister, so thin lines and small type go gritty. *Fix:* single color, flat 2-color mix (magenta + yellow = red), or stochastic color.
+
+**FM3 — Strong frames.** Heavy cell borders become the loudest element; the activated negative space between frames reads stronger than the data. *Fix:* drop frames or use hairlines. Test: "Do the prominent visual effects convey relevant content?" If the frame is the most prominent thing, it is wrong.
+
+**FM4 — Independent auto-scaling for comparison.** Each series scaled to its own range makes a big flat series look like a small volatile one. *Fix:* one global scale when magnitude comparison is the task.
+
+**FM5 — Spiky or flat aspect ratio.** Too tall = every wiggle looks dramatic; too wide = real variation is flattened away. *Fix:* bank to ~45° (Cleveland); aim lumpy.
+
+**FM6 — Dequantification without anchoring.** Stripping labels but providing none of the four anchoring methods leaves no readable values. *Fix:* always pair with §6 method (implicit box, reference band, color-linked numbers, or global scale bar).
+
+**FM7 — Binary sparklines that show white space, not data.** Poorly spaced win/loss whiskers read as accidental arrangements of white space rather than as the binary outcomes. *Fix:* re-space and re-weight whiskers so the outcome pattern, not the gaps, dominates.
+
+---
+
+## §14. When to Use a Sparkline vs a Full Chart
+
+| Condition | Sparkline | Full chart |
+|---|---|---|
+| Reader needs shape / trend | Yes | Yes |
+| Reader needs precise read-off values | No | Yes |
+| Graphic lives inside a table or sentence | Yes | No |
+| Many series compared at once in compact space | Yes (stacked) | No (too large) |
+| Standalone explanatory graphic for a slide | No | Yes |
+| Hundreds of points per series | Yes (suits density) | Yes, but wasteful |
+| Binary / sequential-outcome data | Yes (data-whiskers) | Rarely |
+| Anomaly hunt across many series at once | Yes (stacked + color) | No |
+| Reader new to the form | Works by 2nd exposure (dataword) | Yes |
+
+Sparklines push statistical graphics up to the routine resolving power of the human eye-brain system, so data graphics stop being a framed special occasion ("Fig. 17-B" on a slide) and become everywhere — giving us a straightforward, contextual look at intense evidence and a chance to be approximately right rather than exactly wrong (p. 63).
+
+---
+
+Source: *Beautiful Evidence*, Edward Tufte — chapter "Sparklines: Intense, Simple, Word-Sized Graphics," printed pp. 46–63 (`/tmp/tufte/beautiful-evidence.pdf`, PDF pp. 42–59; printed = PDF + 4).

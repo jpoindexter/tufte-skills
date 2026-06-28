@@ -1,215 +1,207 @@
 ---
 name: tufte-graphical-excellence
-description: Defines graphical excellence per Tufte — the five-principle framework, the ideas/time/ink/space formula, exemplary graphic types, and what excellence is not — to be applied when designing or evaluating any data graphic.
+description: Defines graphical excellence per Tufte's VDQI Chapter 1 — the five criteria, the ideas/time/ink/space formula, the four exemplary graphic forms, the substance/statistics/design test, and named failure modes — to apply when designing or evaluating any data graphic.
 tags: [tufte, data-visualization, graphical-excellence, information-design, statistical-graphics]
 ---
 # Graphical Excellence
 
 ## Overview
 
-Graphical excellence is Tufte's unified criterion for evaluating data graphics: it is simultaneously a matter of substance, statistics, and design. The core insight is that a graphic's quality is measured not by how it looks but by how much information it delivers per unit of ink, space, and viewer time. Excellence is nearly always multivariate — single-variable graphics rarely justify the medium — and it always requires telling the truth about the data.
+Graphical excellence is Tufte's unified standard for a data graphic, set out in Chapter 1 of *The Visual Display of Quantitative Information*. A graphic's quality is not how striking it looks but how many true ideas it delivers per unit of viewer time, ink, and space. Excellence is simultaneously a matter of substance, statistics, and design; it is nearly always multivariate; and it is conditional on telling the truth about the data. This skill gives an AI agent the criteria, the optimization formula, the exemplary forms, and the failure modes needed to design or grade any chart.
 
 ---
 
-## §1. The Five Principles (p. 51)
+## §1. The Five Criteria (VDQI p. 51)
 
-These five statements appear verbatim on page 51 of *The Visual Display of Quantitative Information*. They are not paraphrases; they are the definition.
+Tufte's closing summary of the chapter states five criteria. They are constraints, not preferences — failing any one disqualifies a graphic regardless of how well it meets the others. Paraphrased:
 
-> "Graphical excellence is the well-designed presentation of interesting data—a matter of *substance*, of *statistics*, and of *design*."
-> — *The Visual Display of Quantitative Information*
+1. **Substance + statistics + design.** Excellence is the well-designed presentation of *interesting* data — all three dimensions at once, never one compensating for another.
+2. **Clarity, precision, efficiency.** Complex ideas should arrive communicated clearly, accurately, and without wasted effort.
+3. **Maximum ideas, minimum cost.** Give the viewer the most ideas in the least time, with the least ink, in the smallest space (the formula in §2).
+4. **Multivariate by default.** One short, attributed quote captures it exactly:
 
-> "Graphical excellence consists of complex ideas communicated with clarity, precision, and efficiency."
-> — *The Visual Display of Quantitative Information*
+   > "Graphical excellence is nearly always multivariate." — Tufte, *The Visual Display of Quantitative Information*
 
-> "Graphical excellence is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space."
-> — *The Visual Display of Quantitative Information*
+5. **Truth.** Excellence requires telling the truth about the data; distortion voids it (§10).
 
-> "Graphical excellence is nearly always multivariate."
-> — *The Visual Display of Quantitative Information*
-
-> "And graphical excellence requires telling the truth about the data."
-> — *The Visual Display of Quantitative Information*
-
-Each principle is a hard constraint, not a preference. A graphic can be beautiful and still fail if it is univariate, or truthful but fail if it requires ten minutes to parse three numbers.
+A graphic can be beautiful and still fail by being univariate, or honest and still fail by taking ten minutes to surrender three numbers.
 
 ---
 
 ## §2. The Formula: Ideas / Time / Ink / Space
 
-The third principle contains a concrete four-axis optimization target:
+Criterion 3 is a concrete four-axis optimization target.
 
-| Axis | Maximize / Minimize | What it demands |
+| Axis | Direction | What it demands |
 |---|---|---|
-| **Ideas** | Maximize | Show more variables, more comparisons, more structure |
-| **Time** | Minimize | The viewer should grasp it fast — no decoding required |
-| **Ink** | Minimize | Every mark must earn its place; erase what carries no data |
-| **Space** | Minimize | High density; pack more data into each square centimeter |
+| **Ideas** | Maximize | More variables, more comparisons, more structure surfaced |
+| **Time** | Minimize | Grasped fast — little or no decoding required |
+| **Ink** | Minimize | Every mark earns its place; non-data ink is erased |
+| **Space** | Minimize | High density — pack more data per square centimeter |
 
-These four axes are in tension. The craft of graphical design is resolving that tension without sacrificing any axis. A graphic with many ideas but requiring long study fails the time axis. A graphic that is fast to read but shows only one variable fails the ideas axis.
+The four axes pull against each other; the craft is resolving the tension without sacrificing any axis. Many ideas that need long study fail the time axis. A fast read that shows one variable fails the ideas axis.
 
-**The benchmark exemplar.** Minard's 1869 map of Napoleon's Russian campaign achieves all four simultaneously. Described by E. J. Marey as seeming "to defy the pen of the historian by its brutal eloquence," it encodes six variables — army size, two-dimensional location, direction of march, temperature, and dates — in a single graphic. Tufte writes:
+**Benchmark exemplar — Minard, 1869.** Charles Joseph Minard's flow map of Napoleon's 1812 Russian campaign hits all four axes at once, encoding six variables in one frame (detailed in §7). Étienne-Jules Marey praised it as seeming to defy the historian's pen with its blunt eloquence. Tufte's verdict:
 
-> "It may well be the best statistical graphic ever drawn."
-> — *The Visual Display of Quantitative Information* (p. 40)
-
-Six variables, one graphic, immediate comprehension. That is the formula in practice.
+> "It may well be the best statistical graphic ever drawn." — Tufte, *The Visual Display of Quantitative Information*
 
 ---
 
-## §3. The Three Required Components: Substance, Statistics, Design
+## §3. The Three Required Dimensions: Substance, Statistics, Design
 
-Tufte's first principle says excellence is a matter of three things. All three must be present.
+Criterion 1 names three dimensions that must all be present. The diagnostic value is in the *failure mode* when one is missing.
 
-| Component | Failure mode if absent | Concrete check |
+| Dimension | Failure mode if absent | Concrete check |
 |---|---|---|
-| **Substance** | Graphic is technically well-drawn but the data is uninteresting or trivially simple | Is this data worth a graphic at all? Could one or two numbers replace it? |
-| **Statistics** | Data is interesting but the graphic misrepresents or oversimplifies the statistical structure | Are distributions, uncertainty, comparisons, and multivariate structure preserved? |
-| **Design** | Data is interesting and statistically sound but the presentation obscures rather than reveals | Can a viewer with no prior context read the structure within seconds? |
+| **Substance** | Well-drawn graphic of data too thin to deserve one | Is this worth a graphic, or would one or two numbers / a table do? |
+| **Statistics** | Interesting data whose structure is misrepresented or flattened | Are variability, comparison, and multivariate structure preserved? |
+| **Design** | Sound data whose presentation hides rather than reveals | Can a cold viewer read the structure in seconds? |
 
-Playfair's own skepticism about his bar chart illustrates substance failure: small, non-comparative, highly labeled data sets usually belong in tables, not charts.
-
-> "This Chart is different from the others in principle, as it does not comprehend any portion of time, and it is much inferior in utility to those that do; for though it gives the extent of the different branches of trade, it does not compare the same branch of commerce with itself at different periods."
-> — William Playfair, *The Commercial and Political Atlas* (1786), p. 101, as quoted in *VDQI*
+Substance failure is the most common and least noticed: a polished chart of a single smooth trend that two endpoints would summarize.
 
 ---
 
-## §4. What Graphical Excellence Is Not
+## §4. A Short History (graphics are recent)
 
-Decades of bad practice were driven by two wrong assumptions Tufte names directly (p. 53):
+A point easy to miss: statistical graphics are a *young* invention — roughly two centuries old — even though maps and pictures are ancient. Tufte traces the lineage so the reader treats the form as a designed technology, not a given.
 
-**Wrong assumption 1:** Graphics must be "alive" — overdecorated and exaggerated — or the audience will fall asleep.
-
-**Wrong assumption 2:** The main task of graphical analysis is detecting and denouncing deception.
-
-Both led to what Tufte calls the "graphically barren years from 1930 to 1970." Excellence is not:
-
-| Not This | Why It Fails |
+| Origin | Contribution |
 |---|---|
-| Decoration / ornamentation | Ink that carries no data steals attention from ink that does |
-| "Pretty" or visually striking | Aesthetics that are independent of content add noise |
-| A single dramatic summary | Well-designed graphics reveal more than any single statistical summary |
-| Univariate display | One variable rarely justifies the medium; tables handle it better |
-| Chronological description | Simple passage of time is not causal explanation; time-series are at their best with real variability |
-| Distortion or lie | Truth about the data is a necessary condition, not a bonus |
+| **Oldest known time-series** | A tenth- or eleventh-century manuscript graph charting the inclinations of the planetary orbits against time (the zodiac on the horizontal axis) — an isolated precursor that left no tradition. |
+| **J. H. Lambert (18th c.)** | Early systematic use of line graphs / time-series to show measured relationships. |
+| **William Playfair (1786, 1801)** | Inventor of most modern statistical graphic forms — the time-series line graph and the bar chart in the *Commercial and Political Atlas* (1786), the pie and circle charts in the *Statistical Breviary* (1801). |
 
-> "Graphical excellence begins with telling the truth about the data."
-> — *The Visual Display of Quantitative Information* (p. 53)
+Playfair also argued the case *for* graphics over tables: numbers studied in a table leave only a faint impression, like a figure drawn in sand, while a picture imprints and is retained. The takeaway for an agent: the conventions you reach for reflexively were deliberately designed within recorded history, and can be redesigned.
 
 ---
 
-## §5. Graphics vs. Tables — When Each Belongs
+## §5. Graphics vs. Tables — When Each Wins
 
-Tufte's evidence for when graphics beat tables, and when they do not:
+Excellence sometimes means *not* drawing a graphic. Tufte is explicit that small, sparse, or non-comparative data belong in tables.
 
 | Situation | Use graphic | Use table |
 |---|---|---|
-| Large N with structure and variability | Yes | No |
+| Large N with real structure and variability | Yes | No |
 | Multivariate relationships to compare | Yes | No |
-| Small N, highly labeled, non-comparative | No | Yes |
-| Single linear trend, 1–2 numbers sufficient | No | Yes |
 | Bivariate or higher relational data | Yes (scatterplot) | No |
+| Small N, highly labeled, non-comparative | No | Yes |
+| Single linear trend; 1–2 numbers suffice | No | Yes (or just the numbers) |
 
-Playfair on the advantage of graphics over tabular data:
-
-> "Information, that is imperfectly acquired, is generally as imperfectly retained; and a man who has carefully investigated a printed table, finds, when done, that he has only a very faint and partial idea of what he has read; and that like a figure imprinted on sand, is soon totally erased and defaced."
-> — William Playfair, *The Commercial and Political Atlas* (1786), pp. 3–4, as quoted in *VDQI*
-
-The quantitative threshold: Tufte cites the New York City weather graphic for 1980 — 1,888 numbers, daily high and low temperatures against the long-run average, plus precipitation and relative humidity. A single graphic "successfully organizes a large collection of numbers, makes comparisons between different parts of the data, and tells a story." No table accomplishes this.
+**Density threshold (the case *for* the graphic).** The New York City weather summary for 1980 packs **1,888 numbers** into one chart — daily highs and lows against the long-run normal, plus precipitation and humidity — and lets the viewer compare any part to any other and read a year as a story. No table does that. Use a graphic when it organizes a large collection of numbers, supports comparison across parts, and tells a story; otherwise prefer the table.
 
 ---
 
-## §6. The Four Exemplary Graphic Types and Their Excellence
+## §6. The Four Exemplary Graphic Forms
 
-Tufte surveys four major graphic forms and evaluates each against the excellence criteria:
+VDQI Chapter 1 surveys four major forms and tests each against the excellence criteria. (Small multiples is a Chapter-8 technique, *not* one of these four.)
 
-### Data Maps
-The cancer atlas — six maps, 3,056 U.S. counties, ~21,000 numbers per map — demonstrates maximum data density. "Only a picture can carry such a volume of data in such a small space." A data map can support analysis at multiple levels simultaneously: continental patterns, regional clusters, county-by-county detail, and cross-cancer comparison across six panels.
+### 1. Data maps
+The densest form. The U.S. cancer-mortality atlas places an age-adjusted rate for **each of 3,056 counties** on a single map, with separate maps per cancer site and sex — a volume of data no other display can carry in the space. Data maps read at several scales at once: continental gradient, regional cluster, single county.
+- John Snow's 1854 cholera map plotted deaths as dots and pumps as marks; the cluster around the Broad Street pump was visible instantly, where calculation would have needed luck and labor to find the same result. Graphical analysis can testify about data far more efficiently than computation.
+- *Caveat (anticipates the blot-map failure, §9):* shaded-area maps weight by geographic area, not population — sparse western counties loom large, dense eastern ones recede.
 
-> "The most extensive data maps... place millions of bits of information on a single page before our eyes. No other method for the display of statistical information is so powerful."
-> — *The Visual Display of Quantitative Information* (p. 26)
+### 2. Time-series
+The dominant published form: **more than three-quarters** of graphics in major newspapers and magazines (surveyed 1974–1980) were time-series. The natural left-to-right ordering of the time axis gives an interpretive ease no other arrangement matches. Failure mode: a smooth monotonic change that one or two numbers capture does not justify the form — reserve time-series for genuinely variable, complex material.
 
-John Snow's 1854 cholera dot map: deaths as dots, water pumps as crosses. The spatial pattern was immediately visible; calculation would have required "good luck and hard work" to find the same result. "Graphical analysis testifies about the data far more efficiently than calculation."
+### 3. Narrative graphics of space and time
+The fourth form combines geography *and* chronology in one frame — the category Minard's Napoleon map belongs to, alongside Marey's graphical Paris–Lyon train schedule (time on one axis, distance/stations on the other, each train a diagonal whose slope is its speed). These narrate movement through space over time, doing what neither a pure map nor a pure time-series can. This is the natural home of the multivariate masterpiece in §7.
 
-### Time-Series
-More than 75% of all graphics published in 15 major newspapers and magazines from 1974 to 1980 were time-series. The form earns its dominance: the natural ordering of the time axis provides "a strength and efficiency of interpretation found in no other graphic arrangement." But the form has a failure mode: simple linear changes that can be summarized in one or two numbers do not justify a time-series. Reserve the form for "richer, more complex, more difficult statistical material."
+### 4. Relational graphics (scatterplot)
+About **40%** of graphics in scientific publications are relational. Tufte rates the scatterplot the strongest design of all:
 
-### Relational Graphics (Scatterplot)
-About 40% of published graphics in modern scientific literature have a relational form. The scatterplot and its variants are:
+   > "the greatest of all graphical designs." — Tufte, *The Visual Display of Quantitative Information*
 
-> "the greatest of all graphical designs. It links at least two variables, encouraging and even imploring the viewer to assess the possible causal relationship between the plotted variables."
-> — *The Visual Display of Quantitative Information* (p. 47)
-
-The cigarette/lung cancer scatterplot (Doll, 1955): per-capita cigarette consumption in 1930 vs. male lung cancer death rate in 1950, across 11 countries. The causal hypothesis is visible instantly; a table of the same numbers is inert by comparison.
-
-### Small Multiples
-The same graphical design structure repeated for each slice of a variable. "Once viewers understand the design of one slice, they have immediate access to the data in all the other slices." The constancy of design forces attention onto changes in the data rather than changes in presentation. Nine Phillips-curve plots for nine countries showing the collapse of an assumed relationship is readable in seconds precisely because design is constant.
+It links two or more variables and pushes the viewer to weigh a possible causal relationship. Example: per-capita cigarette consumption (around 1930) plotted against male lung-cancer death rates (around 1950) across eleven countries — the strong positive relationship is obvious at a glance and inert in the equivalent table.
 
 ---
 
 ## §7. Multivariate as the Default Standard
 
-"Graphical excellence is nearly always multivariate." This is not an aspiration — it is a criterion. A graphic that shows one variable when two or more are causally or structurally related is failing at its job.
+Criterion 4 is a grading rule, not an aspiration: showing one variable where two or more are structurally linked is a failure.
 
-| Variable count | Graphic type | Excellence verdict |
+| Variables | Typical form | Verdict |
 |---|---|---|
-| 1 variable | Bar chart, pie chart | Usually better as a table or single number |
-| 2 variables | Scatterplot | Minimum threshold for graphical form |
-| 3–4 variables | Layered time-series, annotated map | Strong candidates for graphic form |
-| 5–6 variables | Space-time narrative (Minard) | The exemplary form |
-| Hundreds of thousands | Data map | The form where graphics have no competitor |
+| 1 | Bar / pie chart | Usually better as a table or a single number |
+| 2 | Scatterplot | Minimum threshold for the graphic form |
+| 3–4 | Layered time-series, annotated map | Strong candidate |
+| 5–6 | Space-time narrative (Minard) | The exemplary form |
+| 10⁵+ | Data map | Graphics have no competitor |
 
-Minard's Napoleon map encodes six variables without advertising its technique. The variables are:
-1. Army size (band width, proportional to 1mm = 10,000 men)
-2. Geographic longitude (horizontal axis)
-3. Geographic latitude (vertical axis)
-4. Direction of march (advance tan, retreat black)
-5. Temperature (separate scale at bottom)
-6. Date (linked to temperature and position)
+**Minard's six variables, woven into one band:**
+1. Army size — width of the band
+2. Longitude — horizontal position
+3. Latitude — vertical position
+4. Direction of march — color (advance vs. retreat)
+5. Temperature during the retreat — a linked lower line graph
+6. Time — dates tied to position along the retreat
 
-Tufte observes that the six variables are woven together so seamlessly that viewers absorb a four-to-five-dimensional picture of the campaign without registering the complexity of what they are reading.
+The reader absorbs a four-to-five-dimensional account of the campaign without ever feeling the complexity of what is being read. That seamlessness is the goal: multivariate depth that does not announce its own technique.
 
 ---
 
-## §8. Failure Modes: Named and Concrete
+## §8. What Graphical Excellence Is Not
 
-| Failure Mode | Description | Example from VDQI |
+Tufte names two wrong assumptions that produced the "graphically barren years" of roughly 1930–1970:
+- **Wrong assumption 1 — graphics must be "livened up"** with decoration and exaggeration or the audience drifts.
+- **Wrong assumption 2 — the analyst's main job is detecting and denouncing lies.** (Integrity is necessary, but it is a floor, not the point.)
+
+| Not excellence | Why it fails |
+|---|---|
+| Decoration / ornament | Non-data ink steals attention from data ink |
+| "Pretty" independent of content | Aesthetics unmoored from data add noise |
+| One dramatic summary | A good graphic reveals more than any single statistic could |
+| Univariate display | One variable rarely justifies the medium; a table beats it |
+| Mere chronology | Passage of time is not causal explanation |
+| Distortion | Truth is a precondition, not a bonus |
+
+---
+
+## §9. Named Failure Modes
+
+| Failure mode | Description | Illustration |
 |---|---|---|
-| **Substance failure** | Data too simple to deserve a graphic | Simple linear trend chart; should be two numbers |
-| **Decoration failure** | Non-data ink dominates the surface | Annual report bar chart with photographs behind bars |
-| **Univariate failure** | One variable shown where more are needed | Single time-series with no comparison variable |
-| **Distortion** | Visual representation inconsistent with numerical representation | Bars starting at negative baseline disguised as zero; 3D perspective inflating visual differences |
-| **Chronological confusion** | Time-series treated as causal when time is not the explanatory variable | Time-series of a variable that actually depends on an unshown third variable |
-| **Table masquerading as graphic** | Highly labeled, small N, non-comparative data forced into chart form | Playfair's Scotland exports bar chart — he admitted it was inferior to the table form |
-| **Blot map problem** | Shaded-area maps equate visual weight with geographic area, not population or event count | Cancer atlas: visually large but sparsely populated western counties dominate, dense northeastern counties recede |
+| **Substance failure** | Data too thin to deserve a graphic | A single smooth trend that two numbers summarize |
+| **Decoration failure** | Non-data ink dominates the surface | Bars with photos behind them; 3-D shading on flat data |
+| **Univariate failure** | One variable shown where more are needed | A lone time-series with nothing to compare against |
+| **Distortion** | Visual magnitude ≠ numerical magnitude | Truncated/hidden baseline; perspective inflating differences |
+| **Chronological confusion** | Time-series read as causal when time isn't the cause | A trend actually driven by an unshown third variable |
+| **Table-as-graphic** | Small, labeled, non-comparative data forced into a chart | Sparse data that a table would serve better |
+| **Blot-map problem** | Area shading weights by geography, not by population/count | Cancer map where empty large counties dominate dense small ones |
 
 ---
 
-## §9. The Truth Requirement as Hard Constraint
+## §10. The Truth Requirement (bridge to integrity)
 
-Excellence requires truth. This is not rhetorical; it is structural. A graphic that lies about the data cannot be excellent regardless of how many variables it shows or how little ink it uses. Tufte frames this as the starting point:
+Truth is criterion 5 and a hard gate: a graphic that misrepresents its data cannot be excellent no matter how multivariate or ink-efficient it is. The disappearing baseline, the perspective trick that inflates differences, the comparison of six months against twelve — each fails at the foundation, and no sophistication elsewhere rescues it.
 
-> "Graphical excellence begins with telling the truth about the data."
-> — *The Visual Display of Quantitative Information* (p. 53)
+The quantitative measure (developed in Chapter 2, Graphical Integrity) is the **Lie Factor**:
 
-The disappearing-baseline annual report bars, the 3D perspective charts that inflate visual differences, the time-series comparing six months of data against twelve months — these fail at the most fundamental condition. No amount of multivariate sophistication or ink efficiency rescues a graphic built on distortion.
+```
+Lie Factor = (size of effect shown in the graphic) / (size of effect in the data)
+```
 
-Tufte introduces the Lie Factor concept (developed in chapter 2) as the quantitative measure of distortion:
-
-**Lie Factor = size of effect shown in graphic / size of effect in data**
-
-A Lie Factor of 1.0 is truthful. Values substantially above or below 1.0 indicate distortion in either direction.
+- **= 1.0** — truthful.
+- **> 1.0** — exaggerated (the usual case).
+- **< 1.0** — understated.
+- Treat anything outside roughly **0.95–1.05** as distortion to fix.
 
 ---
 
-## §10. Application Checklist
+## §11. Application: Do / Don't and Checklist
 
-Before publishing any data graphic, verify against the excellence criteria:
+**Named do / don't pairs (concrete):**
+- **Relationships → DO** plot two linked variables as a scatterplot so the correlation is visible at a glance. **DON'T** bury the same paired numbers in a table where the relationship stays hidden.
+- **Variable trend → DO** use a time-series for richly varying data (a year of daily temperature swings). **DON'T** spend a time-series on a smooth monotonic trend that two endpoints capture.
+- **Spatial pattern → DO** map events over geography (cholera deaths over streets) to expose the cluster. **DON'T** rely on summary statistics and hope the spatial structure falls out — it usually won't.
+- **Linked variables → DO** weave causally-related variables into one frame (Minard). **DON'T** scatter them across separate univariate charts that force the reader to reintegrate them mentally.
+- **Thin data → DO** ship a table or the bare numbers. **DON'T** dress one or two values up as a chart.
 
-- [ ] Is the data interesting and complex enough to warrant a graphic, or should this be a table or a number?
-- [ ] Does the graphic show at least two variables? If one, justify why the graphic form is needed.
-- [ ] Can a viewer with no prior briefing understand the structure within 10–30 seconds?
-- [ ] Is every mark earning its place, or is there non-data ink that could be removed?
-- [ ] Is the density high — many data points per square centimeter?
-- [ ] Is the visual representation consistent with the numerical representation (Lie Factor near 1.0)?
-- [ ] Does the graphic reveal something that a single statistical summary would hide?
-- [ ] Is the design constant across panels if using small multiples?
+**Pre-publish checklist:**
+- [ ] Is the data interesting and complex enough to deserve a graphic, or is a table/number better? (substance)
+- [ ] Are at least two variables shown? If one, is the graphic form justified? (multivariate)
+- [ ] Can a cold viewer read the structure in ~10–30 seconds? (time)
+- [ ] Is every mark data-bearing — any non-data ink to erase? (ink)
+- [ ] Is density high — many data points per square centimeter? (space)
+- [ ] Does visual magnitude match numerical magnitude — Lie Factor ≈ 1.0? (truth)
+- [ ] Does it reveal something a single summary statistic would hide? (statistics)
+- [ ] Did I pick the right form for the job — map, time-series, space-time narrative, or scatterplot? (§6)

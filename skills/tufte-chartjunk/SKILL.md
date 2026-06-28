@@ -1,249 +1,197 @@
 ---
 name: tufte-chartjunk
-description: Identifies and eliminates the three categories of chartjunk — vibrations, grids, and ducks — that corrupt data communication by generating graphic activity unrelated to information.
-tags: [tufte, data-visualization, chartjunk, visual-noise, data-ink]
+description: Identifies and eliminates the three categories of chartjunk — vibrations, grids, and ducks — graphic activity that consumes ink, area, and attention while communicating no data. Use when auditing or designing any chart, dashboard, or data graphic for visual noise.
+tags: [tufte, data-visualization, chartjunk, visual-noise, data-ink, moire]
 ---
 # Chartjunk
 
 ## Overview
-Chartjunk is any graphical element that does not communicate data — it consumes ink, area, and viewer attention while adding nothing to meaning. Tufte names three distinct types: vibrations (optical illusions from busy patterns), grids (heavy lines that compete with data), and ducks (decorative forms that overwhelm the data they supposedly display). The governing principle is that graphics stand or fall on their content, and no amount of ornament rescues a thin dataset or compensates for poor design. Decoration may amplify a weak graphic's failure, but it cannot generate insight where none exists.
+Chartjunk is any graphical element that does not communicate data — it burns ink, area, and viewer attention while adding nothing to meaning. Tufte sorts it into three kinds: **vibrations** (optical interference from busy patterns), **grids** (reference lines that overpower the data they support), and **ducks** (decoration that becomes, or buries, the data). The governing law is that a graphic succeeds or fails on its content, gracefully displayed: ornament can amplify a dull graphic's failure but has never rescued a thin data set from its own emptiness. The practical test is therefore subtractive — strip every mark that does not encode data or serve as a minimal navigational aid, then see what is lost.
 
 ---
 
-## §1. Vibrations — Optical Illusions from Busy Patterns
+## §1. Vibrations — Optical Interference from Busy Patterns
 
-Vibrations are optical interference effects produced when dense, repetitive patterns are applied to graphic elements. The most common source is moiré: two or more fine regular patterns (crosshatching, diagonal lines, dot screens) overlaid at slight angles produce a shimmering, unstable illusion that the eye cannot resolve into stable information.
+A vibration is a perceptual artifact: dense, regular, high-contrast patterns applied to a graphic make the eye see shimmer, motion, or depth that is not in the data. The dominant source is **moiré** — two or more fine regular patterns (crosshatching, diagonal hatching, dot screens) overlaid or printed close together produce an unstable, eye-straining flicker. Moiré is unintentional optical art: the same effect 1960s Op artists pursued on purpose, smuggled into statistical graphics by default fill patterns.
 
 ### Mechanism
-The visual system interprets closely spaced alternating high-contrast lines as motion or depth — a perceptual artifact, not data. The result is an eye-straining quality that contaminates the entire graphic and makes accurate reading of the underlying quantities impossible.
+The visual system reads closely spaced alternating lines as movement or relief — a low-level artifact, not information. Adjacent active lines also imply forms that were never drawn (the perceptual "1 + 1 = 3 or more" effect Tufte names in *Envisioning Information*): the more active marks crowd together, the more spurious structure the eye invents. The result is a raised visual noise floor that contaminates the whole graphic and makes the underlying quantities harder to read.
 
-### Moiré as the Primary Vibration Source
-Crosshatching applied to bar charts and area fills is the chief culprit in print and early computer graphics. Tufte's survey of textbooks and software manuals quantified prevalence:
+### Tufte's moiré survey
+Tufte surveyed a century of statistical-graphics manuals and software documentation and found moiré vibration pervasive across the entire literature — and worst in early computer plotting packages, which emitted crosshatch fills by default. The takeaway is structural, not anecdotal: when the tool ships vibration as the default, vibration is produced at scale by people who never chose it. (VDQI's survey table gives the per-source percentages; the robust finding is the default-driven prevalence and the software peak.)
 
-| Publication | Year | % Graphics with Moiré Vibration | Total Graphics |
-|---|---|---|---|
-| Willard C. Brinton, *Graphic Methods for Presenting Facts* | 1914 | 12% | 255 |
-| R. Satet, *Les Graphiques* | 1932 | 29% | 28 |
-| Herbert Arkin & Raymond R. Colton, *Graphs: How to Make and Use Them* | 1936 | 17% | 95 |
-| Mary Eleanor Spear, *Charting Statistics* | 1952 | 46% | 134 |
-| Anna C. Rogers, *Graphic Charts Handbook* | 1961 | 32% | 201 |
-| F. J. Monkhouse & H. R. Wilkinson, *Maps and Diagrams* | 1971 | 14% | 322 |
-| Calvin F. Schmid & Stanton E. Schmid, *Handbook of Graphic Presentation* | 1979 | 22% | 399 |
-| A. J. MacGregor, *Graphics Simplified* | 1979 | 34% | 65 |
-| *SAS/GRAPH User's Guide* | 1980 | 68% | 28 |
-| *Tell-A-Graf User's Manual* | 1981 | 53% | 459 |
-
-The computer graphics manuals (SAS/GRAPH at 68%, Tell-A-Graf at 53%) show the worst rates — software that generates vibration by default is actively producing chartjunk at scale.
-
-### The Bertin Test
-Jacques Bertin argued that a designer's duty is to obtain resonance of moiré vibration without provoking an uncomfortable sensation — to "flirt with ambiguity without succumbing to it." Tufte's rebuttal:
-
-> "Moiré vibration is an *undisciplined* ambiguity, with an illusive, eye-straining quality that contaminates the entire graphic. It has no place in data graphical design."
-> — *The Visual Display of Quantitative Information*
-
-No good examples exist of statistical graphics that successfully "flirt with ambiguity" via vibration. The pattern is always cost without benefit.
+### The Bertin rebuttal
+Jacques Bertin argued a designer could court controlled moiré — flirt with ambiguity without surrendering to it. Tufte rejects this for data graphics: moiré is an *undisciplined* ambiguity with an eye-straining, illusive quality that pollutes the whole image, and there are no good examples of statistical graphics that gain anything from it. For data, vibration is always cost without benefit.
 
 ### Do / Don't: Vibrations
 
 | Do | Don't |
 |---|---|
-| Solid fills, distinct grays, or white space to differentiate areas | Crosshatching, diagonal lines, or dot patterns on fills |
-| Light gray or open fills for secondary data series | Dense alternating line patterns at any scale |
-| Color saturation differences (print-safe) for categorical distinction | Overlapping screen patterns that produce moiré at any zoom level |
-| Test fills at actual print resolution before committing | Rely on software defaults — most generate vibration by default |
+| Solid fills, distinct grays, or open white to separate areas | Crosshatch, diagonal hatching, or dot screens on any fill |
+| Differentiate series with a lightness ramp (white → light → mid → dark gray → black) | Dense alternating line patterns at any scale or zoom |
+| Choose hue/saturation steps (print-safe) for categories | Overlapping screens that produce moiré at print resolution |
+| Proof fills at the actual output resolution before committing | Accept software default fills — most generate vibration |
 
-**Failure mode — "The We-Used-A-Computer-To-Build-A-Duck Syndrome":** Computer output crosshatching is pointlessly ordered, produces optical vibration, and signals technology over content. The correct response to software-generated crosshatching is to turn it off, not to select a different pattern.
+**Failure mode — "we used a computer to build a duck":** the rendering tool fills bars with ordered crosshatch by default, producing optical vibration and signaling technology over content. The fix is to turn the pattern off, not to pick a different pattern.
 
 ---
 
-## §2. Grids — Lines That Compete with Data
+## §2. Grids — Reference Lines That Overpower the Data
 
-The grid is the most sedate form of chartjunk, but when heavy it is still chartjunk. Grid lines serve one legitimate purpose: helping a viewer read and interpolate values. When they are darker, heavier, or denser than the data they support, they reverse priority — the grid becomes the graphic and data becomes secondary.
+The grid is the most sedate chartjunk, but a heavy grid is still chartjunk. A grid has exactly one legitimate job: helping a reader look up or interpolate values. When grid lines are darker, heavier, or denser than the data, figure and ground reverse — the grid becomes the graphic and the data recedes. Tufte's rule of thumb: grids are for the working stage, plotting data at home or in the office; in finished print they should be muted or suppressed.
 
-### The Governing Rule
+### Grid weight hierarchy (best → worst)
 
-In *The Visual Display of Quantitative Information*, Tufte argues that the grid should be muted or suppressed entirely in final output, kept implicit so it never competes with the data itself. Grids belong to the working stage — for plotting data at home or in the office — not to finished print graphics. Dark grid lines are, by definition, chartjunk.
-
-### Grid Weight Hierarchy (ordered by correctness)
-
-| Grid treatment | Data priority | Verdict |
+| Grid treatment | Effect on figure/ground | Verdict |
 |---|---|---|
-| No grid, data-derived tick marks only | Data dominant | Preferred for most charts |
-| Light gray grid, weight well below data strokes | Data dominant | Acceptable when look-up is required |
-| White grid on filled bars (negative space grid) | Data dominant | Elegant alternative for bar charts/histograms |
-| Medium gray grid, equal weight to data | Competing | Marginal; suppress if possible |
-| Dark/black grid, full weight | Grid dominant | Chartjunk — suppress |
-| Doubled grid lines (heavy box + inner grid) | Grid dominant | Severe chartjunk |
+| No grid; data-derived tick marks only | Data dominant | Preferred for most charts |
+| Light **gray** grid, weight well under the data strokes | Data dominant | Acceptable when look-up is the task |
+| **White** grid (gaps inside filled bars / erased to white) | Data dominant | Elegant for bar charts and histograms |
+| Mid-gray grid, equal weight to the data | Competing | Marginal; suppress if you can |
+| Dark/black grid at full weight | Grid dominant | Chartjunk — suppress |
+| Doubled grid lines (box frame + inner grid) | Grid dominant | Severe chartjunk; also vibrates at intersections |
 
-### Named Example: Population of France, 1967
-The original age-sex pyramid appeared with a full dark grid. The grid camouflaged the profile of the data — the staircase shape encoding military losses (World War I, World War II) and post-war baby boom was buried in the grid lines. Removing the grid and letting the data silhouette speak produced a graphic where the historically significant notches became immediately visible.
+### Named example: Marey's train schedule
+E. J. Marey's Paris–Lyon timetable (a Tufte touchstone) is extremely data-dense: every diagonal is a train, every crossing a stop. The grid must not compete with that thicket of lines. Three treatments, ranked:
 
-### Named Example: Particle Physics Multiwindow Plot (Tukey & Tukey)
-A "multiwindow plot" used doubled grid lines to separate panels. The doubled lines consumed **18 percent of the graphic's total area** — nearly one-fifth of the available space dedicated to structural decoration rather than data. Optical white dots appeared at grid intersections, adding a second vibration artifact on top of the grid. Redrawing with light panel separators eliminated both problems.
-
-### Named Example: Marey Train Schedule
-E. J. Marey's classic Paris-Lyon train schedule is an extremely data-dense graphic — every diagonal line is a train, every intersection a station stop. The original heavy grid is very active and competes with the train-line data. Three treatments compared:
-
-| Treatment | Result |
+| Grid treatment | Result |
 |---|---|
-| Heavy black grid (original) | Grid dominates; trains hard to trace |
-| Thinned black grid | Helps a little; trains more readable |
-| Gray grid | Best; trains clearly foreground; grid recedes to reference layer |
+| Heavy black grid (as often reproduced) | Grid dominates; trains hard to trace |
+| Thinned black grid | Slightly better; trains more legible |
+| Gray grid | Best; trains read as foreground, grid recedes to a reference layer |
 
-The correct fix is always a gray (not thinned-black) grid when a grid is required. Most ready-made graph paper comes with a darkly printed grid; use the reverse (unprinted) side so lines show through faintly without cluttering data.
+The correct fix is always a **gray** grid, never a thinned-black one. Most ready-made graph paper is printed in a dark grid; plot on the **reverse (unprinted) side** so the lines show through faintly without cluttering the data.
 
-### The Look-Up Exception
-When a graphic functions as a look-up table — where readers will interpolate specific values — a grid may legitimately help. Even then: gray, muted, never dark. A gray grid with a delicate line may promote more accurate data reconstruction than a dark grid that visually overwhelms the points being read.
+### The look-up exception
+When a graphic functions as a look-up table — readers will read off specific values — a grid earns its keep. Even then: gray, delicate, never dark. A delicate gray grid supports more accurate reconstruction of values than a dark grid that visually swamps the points being read.
 
 ### Do / Don't: Grids
 
 | Do | Don't |
 |---|---|
-| Suppress grid entirely for most charts | Heavy/dark grid lines in any published graphic |
-| Use light gray grid only when look-up is the primary task | Doubled grid lines or box frames around panels |
-| Use a white grid (negative space) within filled bar charts | Graph paper printed-side-up as a plotting surface for publication |
-| Match grid weight to roughly 20-30% of data stroke weight | Grid lines equal to or heavier than data strokes |
-| If grid is necessary, prefer gray over any thinned black | Dense grids in data-rich graphics where lines already cross frequently |
+| Delete the grid first; restore only if reading fails | Ship heavy or dark grid lines in any published graphic |
+| Use a light gray grid only when look-up is the primary task | Use doubled grid lines or a box frame around panels |
+| Use a white (negative-space) grid inside filled bars | Plot on graph paper printed-side-up for publication |
+| Keep grid stroke ≈ 20–30% of the data stroke weight | Let grid lines equal or exceed the data strokes |
+| Prefer gray over thinned black when a grid is required | Pile a dense grid onto an already line-rich graphic |
+
+**Failure mode — the grid that buries the data:** a full dark grid over an age/sex pyramid or a trend line camouflages the very profile that matters (the notch, the staircase, the slope). Removing the grid lets the data silhouette speak.
 
 ---
 
-## §3. Ducks — Self-Promoting Graphics
+## §3. Ducks — Decoration That Becomes the Data
 
-The duck is chartjunk at its most severe: decoration that overwhelms, replaces, or structurally becomes the data. Named after "Big Duck," a duck-shaped building in Flanders, New York (photographed by Tufte), where the entire structure is decoration — the building is its own sign.
+The duck is chartjunk at its most extreme: decoration that overwhelms, replaces, or structurally *becomes* the data. The name comes from the **Big Duck**, a duck-shaped retail building on Long Island (Flanders, NY) where the entire structure is its own sign — form swallows function. In Tufte's terms a graphic is a duck when decorative forms or computer debris take over, when the data measures and structures turn into Design Elements, and when the display purveys graphical style instead of quantitative information.
 
-> "When a graphic is taken over by decorative forms or computer debris, when the data measures and structures become Design Elements, when the overall design purveys Graphical Style rather than quantitative information, then that graphic may be called a *duck*."
-> — *The Visual Display of Quantitative Information*
+### The architectural rule (Learning from Las Vegas)
+Tufte borrows from Venturi, Scott Brown & Izenour: modernists who renounced applied ornament ended up designing buildings that *were* ornament. The rule that follows transfers directly to data graphics:
 
-### The Architectural Analogy (Venturi, Scott Brown, Izenour)
-From *Learning from Las Vegas* (1977, p. 163): Modern architects who abandoned applied ornament unconsciously designed buildings that *were* ornament. The rule that follows:
+> "It is all right to decorate construction but never construct decoration." — Venturi, Scott Brown & Izenour, *Learning from Las Vegas*
 
-> "It is all right to decorate construction but never construct decoration."
+Applied: you may style the axis labels, type, weights, and annotations (decorate construction), but the graphic's structure must never itself be ornament. When fake perspective, 3-D extrusion, or a pictorial frame *is* the structure, the graphic is a duck.
 
-Applied to data graphics: axis labels, fills, borders, and annotations may be styled — but the graphic's structure must not itself become decoration. When fake perspective, 3-D extrusion, or pictorial frames are the structure, the graphic is a duck.
+### Named example: crosshatched bar chart → table
+A common duck is a multi-category bar chart where each bar carries a different crosshatch (moiré on top of a duck) and the axis is choked with percentage ticks and all-caps labels. Tufte's remedy is to redraw it as a plain table. The table wins on every count: exact values instead of estimated bar heights, full category names instead of cramped labels, room for a second data column, and zero vibration. When the data is a handful of numbers attached to many words, the table is the graphic.
 
-### Named Examples of Ducks
+### Interior decoration — symptoms
+Treating a chart as a canvas to be styled rather than a message to be optimized. Watch for:
 
-**American Education age-structure chart (1970s):** Five colors report five pieces of data — the percentage split between under-25 and 25-and-over college enrollees across five years. The design features blobs of color with organic, wave-like fills, dramatic curves, and no clear reading path. Five numbers require five data points, not a full-page color illustration. Tufte calls this "may well be the worst graphic ever to find its way into print."
+- Fake perspective on bars or pies to look "modern"
+- 3-D extrusion that breaks comparison (the visible front face ≠ the value)
+- Pictorial fills (stacked coins for money, little people for population) that obscure the quantity they claim to show
+- Color gradients laid over areas whose value is already encoded by area
+- Drop shadows, glows, or embossing on chart elements
+- Complexity as a credential — "remarkable that the computer drew this" instead of "what interesting data"
 
-**California Water Atlas, Applied Irrigation Water 1972:** A superbly produced duck — the colored block grids placed on each hydrologic basin region of California are visually spectacular. The heavy mosaic patterns produce vibration effects and the decorative density of the block grids overwhelms the quantitative information (acre-feet by crop type). Excellent craft in service of chartjunk.
-
-**Cross-hatched bar chart from *American Political Science Review* (1979):** Nine categories of newspaper coverage, each bar filled with a different crosshatch pattern, axis overcrowded with percentage markers and labels, all text in upper-case sans serif. The "We-Used-A-Computer-To-Build-A-Duck Syndrome" in full effect: the correct response is a simple table.
-
-The same data as a table:
-
-| Issue Area | Number of Articles | % with Negative Criticism |
-|---|---|---|
-| Watergate | 537 | 49% |
-| Inflation, high cost of living | 415 | 28% |
-| Government competence | 322 | 30% |
-| Confidence in government | 266 | 52% |
-| Government power | 154 | 42% |
-| Crime | 123 | 30% |
-| Race | 103 | 25% |
-| Unemployment | 100 | 13% |
-| Shortages: energy, food | 68 | 16% |
-
-The table conveys more: exact numbers, full category names, two columns of data — no vibration, no visual noise, immediate reading.
-
-### Interior Decoration — The Core Failure Mode
-The "interior decoration" failure mode is the duck expressed as a general design philosophy: treating a chart as a canvas to be styled rather than a communication to be optimized. Symptoms:
-
-- Fake perspective added to bar or pie charts to appear "modern"
-- 3-D extrusion that makes quantitative comparison impossible (the front face ≠ the data value)
-- Pictorial fills (dollar bills in money charts, people icons in population charts) that obscure the very quantities they represent
-- Color gradients applied to areas whose value is encoded by area, not color
-- Drop shadows, glows, or embossing on any chart element
-- Graphic complexity as a credential signal: "Isn't it remarkable that the computer can draw like that?" instead of "My, what interesting data."
-
-### "Boutique Data Graphics" — The High-Fashion Duck
-Corporate annual reports, mass media, and advertising actively cultivate the duck aesthetic. Tufte labels this "Boutique Data Graphics" — chartjunk at high fashion, producing visually elaborate displays whose complexity is inversely related to their informational value. Fake perspective is the signature technique of this genre.
+### Boutique data graphics — the high-fashion duck
+Annual reports, mass media, and advertising actively cultivate the duck. Tufte's label is **boutique data graphics**: elaborate displays whose visual complexity is inversely related to their information content. Fake perspective is the signature move of the genre.
 
 ### Do / Don't: Ducks
 
 | Do | Don't |
 |---|---|
-| Let data structure determine graphic structure | Let graphic structure become decoration |
-| Use a table when the data is a few numbers and many words | Use a multicolor chart for 5 data points |
-| Design to provoke "My, what interesting data" | Design to provoke "Isn't it remarkable the computer drew that" |
-| Decorate construction (style axis labels, type, weight) | Construct decoration (extrude bars into 3-D, add fake perspective) |
-| Test: can the decoration be removed without losing information? | Any decoration that cannot be removed without information loss |
+| Let the data's structure set the graphic's structure | Let the graphic's structure turn into decoration |
+| Use a table for a few numbers and many words | Use a multicolor full-page illustration for ~5 data points |
+| Design to provoke "what interesting data" | Design to provoke "remarkable the computer drew that" |
+| Decorate construction (style labels, type, weight) | Construct decoration (extrude to 3-D, add fake perspective) |
+| Keep every mark removable only at the cost of information | Keep any element that survives a "what does this encode?" test as "no data" |
+
+**Failure mode — the sham dimension:** adding a depth axis the data does not have. Extruding 2-D bars into 3-D both adds non-data ink *and* distorts the data ink, because the value now maps ambiguously to a front face, a back face, or a volume. This is the same offense the **Lie Factor / dimensionality** rule attacks (VDQI ch. 2): an n-dimensional quantity drawn in more than n dimensions overstates change. Cross-check sham dimension against `tufte-graphical-integrity`.
 
 ---
 
-## §4. Chartjunk and Data Density — The Corruption Mechanism
+## §4. Why Chartjunk Corrupts — and How to Detect It
 
-Chartjunk does not merely waste space — it actively corrupts. The corruption operates through three channels:
+Chartjunk is not neutral waste; it actively degrades reading through three channels:
 
-**1. Perceptual masking.** Vibration and heavy grids raise the visual noise floor. Data signals that are genuinely present (the notch in the French population pyramid, the slope of a trend line) become unreadable against the background noise.
+1. **Perceptual masking.** Vibration and heavy grids raise the visual noise floor, so genuine signals (the notch, the slope, the outlier) drop below it and become unreadable.
+2. **False complexity.** Crosshatch, borders, grids, and fills make a graphic *look* information-dense while it encodes five numbers; the reader spends attention decoding structure instead of reading data.
+3. **Displaced trust.** When the rendering shows off, attention shifts from message to medium — but a graphic's credibility rests on the data, not the sophistication of the draftsmanship.
 
-**2. False complexity.** A graphic crammed with crosshatching, borders, grids, and fills reads as information-dense even when it encodes 5 data points. The viewer's time and attention are consumed decoding the structure rather than reading the data.
-
-**3. Displaced trust.** When a graphic evokes "remarkable that a computer drew this," viewer attention shifts to the medium rather than the message. The data's credibility depends on the data, not on the sophistication of the rendering.
-
-### The Fundamental Test
-
-In *The Visual Display of Quantitative Information*, Tufte argues that chartjunk fails even on its own terms. Data graphics succeed or fail on their content, gracefully displayed; ornamental hatching and false perspective add nothing to a weak dataset. Decoration can amplify the failure of a dull graphic — making it worse — but it has never rescued a thin data set from its own emptiness.
-
-### Data-Ink Ratio as a Chartjunk Detector
-Every element of chartjunk reduces the data-ink ratio. Applying the ratio as an audit:
+### Data-ink ratio as a chartjunk detector
+Every chartjunk element lowers the data-ink ratio, so a chartjunk audit *is* a data-ink audit:
 
 ```
-Data-Ink Ratio = Data Ink / Total Ink Used to Print the Graphic
+data-ink ratio = (ink used to present data) / (total ink used to print the graphic)
 ```
 
-- Moiré fill on a bar: adds non-data ink, reduces ratio
-- Heavy grid: adds non-data ink, reduces ratio
-- 3-D extrusion: adds non-data ink AND distorts data ink, doubly penalized
-- Decorative border: adds non-data ink, reduces ratio
+| Chartjunk element | Penalty |
+|---|---|
+| Moiré / crosshatch fill | Adds non-data ink |
+| Heavy or doubled grid | Adds non-data ink |
+| Decorative border or frame | Adds non-data ink |
+| 3-D extrusion / fake perspective | Adds non-data ink **and** distorts data ink — doubly penalized |
 
-A chartjunk audit is a data-ink ratio audit. Every element that cannot be defended as encoding data or as a minimal navigational aid (a single axis line, a muted grid for look-up) is chartjunk.
+Any mark that cannot be defended as encoding data, or as a minimal aid (one axis line, a muted look-up grid), is chartjunk. See `tufte-data-ink-ratio` for the maximization procedure.
 
 ---
 
-## §5. Diagnosis Checklist — Identifying Chartjunk
+## §5. Diagnosis Checklist
 
-Run these checks before publishing any chart:
+Run before publishing any chart. Any failed row names the chartjunk type to fix.
 
-| Check | Pass condition | Fail = chartjunk type |
+| Check | Pass condition | Fail = |
 |---|---|---|
-| Are fills solid, gray, or open? | Yes | Vibration (crosshatch/moiré) |
-| Is the grid lighter than data strokes? | Yes, or no grid | Grid chartjunk |
-| Does the grid use gray rather than black? | Yes, or no grid | Grid chartjunk |
-| Can you read the data profile without the grid? | Yes | Grid chartjunk |
-| Does removing any element lose information? | Yes for each element kept | Duck (decoration) |
-| Is the number of ink marks proportional to the number of data points? | Roughly yes | Duck |
-| Does the chart evoke curiosity about the data, not the rendering? | Yes | Duck |
-| Are there more percentage markers on the axis than data points? | No | Duck (overcrowded axis) |
-| Is perspective purely flat/2-D? | Yes | Duck (fake 3-D) |
-| Would a table communicate this more accurately? | No | Duck (few numbers, chart form unjustified) |
+| Are fills solid, gray, or open (no patterns)? | Yes | Vibration (crosshatch/moiré) |
+| Does any series rely on hatching to be told apart? | No | Vibration |
+| Is the grid lighter than the data strokes? | Yes, or no grid | Grid chartjunk |
+| Is the grid gray rather than black, single not doubled? | Yes, or no grid | Grid chartjunk |
+| Can you read the data profile with the grid hidden? | Yes | Grid chartjunk |
+| Does every remaining mark encode data or aid navigation? | Yes | Duck (decoration) |
+| Is the count of ink marks ~proportional to the data points? | Roughly | Duck (false complexity) |
+| More percentage ticks on the axis than data points? | No | Duck (overcrowded axis) |
+| Is the depiction flat — no perspective the data lacks? | Yes | Duck (sham dimension / 3-D) |
+| Would a plain table read more accurately than this chart? | No | Duck (chart form unjustified) |
 
 ---
 
 ## §6. Remediation Patterns
 
-### Vibration Fix
-1. Replace all crosshatch/pattern fills with solid fills, grays, or white.
-2. If differentiating multiple series: use lightness steps (white → light gray → medium gray → dark gray → black) before resorting to patterns.
-3. If software generates crosshatch by default: override in the rendering layer; never accept default fill patterns.
+### Vibration fix
+1. Replace every crosshatch/pattern fill with solid fill, gray, or white.
+2. To separate multiple series, use a lightness ramp before reaching for any pattern.
+3. If the tool emits crosshatch by default, override it in the rendering layer — never accept default fills.
 
-### Grid Fix
-1. First attempt: delete the grid entirely. Can you still read the chart? If yes, leave it deleted.
-2. If look-up is required: set grid stroke to 10-20% gray, weight 0.25pt or below (vs. ~1pt for data).
-3. Alternative: use a white grid (plot grid as gaps within filled bars, or erase grid lines to white on a gray/colored background).
-4. Never use graph paper printed-side-up. Use back side or plain paper.
+### Grid fix
+1. Delete the grid. If the chart still reads, leave it deleted.
+2. If look-up is required, set the grid to ~10–20% gray at ~0.25pt against ~1pt data strokes (≈ 20–30% of the data weight).
+3. Alternative: a **white** grid — gaps inside filled bars, or grid lines erased to white over a tinted ground.
+4. Never plot on graph paper printed-side-up; use the unprinted reverse or plain paper.
 
-### Duck Fix
-1. Remove all elements that do not encode data.
-2. Flatten any 3-D extrusion to 2-D.
-3. Remove fake perspective.
-4. If the graphic structure itself is decoration (the fill is the message), redraw from scratch as a 2-D chart or table.
-5. When data is fewer than ~10 numbers and the story is comparative: use a table, not a chart.
+### Duck fix
+1. Remove everything that does not encode data.
+2. Flatten any 3-D extrusion to 2-D; delete fake perspective.
+3. If the structure itself is the decoration (the fill is the message), redraw from scratch as a flat chart — or a table.
+4. When the data is fewer than ~10 numbers and the story is comparative, ship a table, not a chart.
 
 ---
 
-## §7. The Conclusion Tufte States Directly
+## §7. The Bottom Line
 
-> "Forgo chartjunk, including moiré vibration, the grid, and the duck."
-> — *The Visual Display of Quantitative Information*
+No information, discovery, wonder, or substance is ever generated by chartjunk. The graphics that endure — Minard on Napoleon's march, Marey's train schedule, the newspaper weather history — are gripping because of narrative power, immense honest detail, and genuinely interesting data, never because of decoration.
 
-No information, no sense of discovery, no wonder, no substance is generated by chartjunk. The best graphics — Minard on Napoleon in Russia, Marey's train schedule, the *Times* weather history of New York City — are intriguing and curiosity-provoking through narrative power, immense detail, or elegant presentation of genuinely interesting data. None of these qualities is achievable through decoration.
+> "Forgo chartjunk, including moiré vibration, the grid, and the duck." — Tufte, *The Visual Display of Quantitative Information*
+
+---
+
+*Source: Edward R. Tufte, **The Visual Display of Quantitative Information**, ch. 5 "Chartjunk: Vibrations, Grids, and Ducks," with the architectural rule from Venturi, Scott Brown & Izenour, *Learning from Las Vegas*. Concepts paraphrased; quotations limited to single attributed sentences. Where VDQI gives specific historical survey figures (the moiré-prevalence table, exhibit-level percentages), this skill states the robust finding rather than unverified exact values.*

@@ -38,8 +38,8 @@ Tufte draws the parallel directly in *Visual Explanations* (p. 44): the Thiokol 
 
 Time-series is the default graphic form. It is almost never the right form for causal argument.
 
-> "Descriptive narration is not causal explanation; the passage of time is a poor explanatory variable, practically useless in discovering a strategy of how to intervene and stop the epidemic."
-> — *Visual Explanations*, p. 29
+> "the passage of time is a poor explanatory variable, practically useless in discovering a strategy of how to intervene and stop the epidemic."
+> — Tufte, *Visual Explanations*, p. 29
 
 Snow's original data was a list of 83 deaths in date order — a natural time-series. Plotted as daily counts, the chart shows the epidemic's rise and fall but reveals nothing about cause: there is no pump on the chart, no geography, no comparison. The chart is purely descriptive.
 
@@ -47,8 +47,7 @@ Snow converted the 1D temporal ordering into a 2D spatial comparison: deaths plo
 
 The Thiokol engineers faced the same choice and made the wrong one. Their 48-rocket iconographic display arranged the rockets in temporal order — SRM 1 through SRM 24. The causal variable, temperature, was written sideways in small type near each rocket. Tufte's corrected version places rockets in temperature order along the horizontal axis, with damage markers, and adds the Challenger forecast position at 29°F — far beyond all previous experience. The pattern is immediately visible.
 
-> "Information displays should serve the analytic purpose at hand; if the substantive matter is a possible cause-effect relationship, then graphs should organize data so as to illuminate such a link."
-> — *Visual Explanations*, p. 49
+Tufte's rule (*Visual Explanations*, p. 49) is that a display must serve the analytic purpose in front of it. When that purpose is testing a possible cause-and-effect relationship, the graphic's only job is to arrange the data so the causal link becomes visible. Time and sequence are the wrong organizing axes unless time is itself the suspected cause.
 
 ### Choosing the display axis
 
@@ -59,14 +58,17 @@ The Thiokol engineers faced the same choice and made the wrong one. Their 48-roc
 | Drug efficacy by patient subgroup | Enrollment date | Dosage or patient characteristic |
 | Equipment failure rates | Serial number / production date | Operating temperature or stress load |
 
-### Aggregation artifacts
+### Aggregation artifacts (temporal and spatial)
 
-Temporal aggregation can manufacture or destroy a signal. Daily Challenger deaths from cholera show a smooth decline already well underway when the pump handle was removed (September 8). Grouped into weekly intervals with the conventional Sunday-to-Saturday boundary, the handle removal appears to cut weekly deaths from 458 to 112 — a dramatic "effect" produced entirely by the arbitrary choice of interval boundary.
+Aggregation can manufacture or destroy a signal on either axis. The artifact is a property of where the bin edges fall, not of reality.
 
-> "Time-series are exquisitely sensitive to choice of intervals and end points."
-> — *Visual Explanations*, p. 37
+**Temporal.** Snow's daily cholera death counts show a smooth decline that is already well underway and is left essentially unchanged by the removal of the Broad Street pump handle (early morning, September 8, 1854). Add the same daily data into weekly intervals of September 1–7 and 8–14, and the removal suddenly appears to cut the weekly toll from 458 to 112 — an "effect" produced entirely by the aggregation, since the daily series shows no such break. Shift the interval boundaries by as little as two days (lagging the post-removal count to begin September 10, allowing for the incubation delay between drinking the water and dying) and the chart's shape changes yet again. Time-series displays are acutely sensitive to the choice of interval length and end points; small changes in either can reverse the apparent story.
 
-Rule: when in doubt, graph the detailed underlying data and assess the effects of aggregation afterward. Never publish only the aggregated result without checking that the signal survives across plausible alternative groupings.
+**Spatial.** The same trap operates geographically. Mark Monmonier (*How to Lie with Maps*, pp. 142–143) re-binned Snow's individual death locations into different sets of areas, shading each area by its death count. Under one partition into six areas the Broad Street cluster is obvious; under a second the counts are nearly equal across areas and the cluster disappears; under a third the two darkest (deadliest) areas do not even contain the infected pump. Snow's dot map of individual deaths survives all of these re-partitions; every area-aggregated version distorts or erases the signal. (A dot map carries the opposite cost — it shows counts, not rates, so it cannot by itself answer "compared with what?" about the population at risk. The complete answer is a dot map plus a population-rate map.)
+
+**Specification searching.** Tufte also names the modern, computing-enabled form of this hazard: with fast tools you can sift thousands of alternative aggregations, groupings, and models, then report only the one that flatters your case. The statistical literature calls this *data mining*, *multiplicity*, or *specification searching* (Tukey; Leamer; Fisher). Treat any single presented chart as the most favorable of many that were silently tried, unless the analyst documents the alternatives examined.
+
+Rule: when in doubt, graph the detailed underlying data and assess the effects of aggregation afterward. A real signal survives reasonable changes of interval, bin, and area boundary; an artifact does not. Never publish only the aggregated result without checking that the signal holds across plausible alternative groupings.
 
 ---
 
@@ -116,11 +118,10 @@ Tufte observes in *Visual Explanations* (p. 43) that every display of evidence s
 
 **Failure mode 5 — Chartjunk obscuring the signal.** The outline shapes of 48 little rockets dominated the visual field. The marks encoding actual data were small, opaque, and scattered inside the rocket silhouettes.
 
-> "Chartjunk indicates statistical stupidity, just as weak writing often reflects weak thought: 'Neither can his mind be thought to be in tune, whose words do jarre, nor his reason in frame, whose sentence is preposterous.'"
-> — *Visual Explanations*, p. 48 (quoting Ben Jonson)
+Tufte equates chartjunk with statistical incompetence, the visual analog of muddled writing — invoking Ben Jonson's observation that a mind is out of tune when its words jar and a reason out of frame when its sentences are preposterous (*Visual Explanations*, p. 48).
 
 > "A lack of visual clarity in arranging evidence is a sign of a lack of intellectual clarity in reasoning about evidence."
-> — *Visual Explanations*, p. 48
+> — Tufte, *Visual Explanations*, p. 48
 
 ### What the correct display would have shown
 
@@ -145,7 +146,9 @@ Tufte's corrected scatterplot in *Visual Explanations* (p. 45) — plotting all 
 | **Anecdote substitution** | Using 1-2 cases as if they establish cause and effect | Blow-by on SRM 15 and SRM 22 only; n = 2 |
 | **Iconographic corruption** | Using decorative pictorial units that resist proportional measurement | 48 little rockets with damage coded as opaque interior marks |
 | **Disappearing legend** | Calibration code visible on one slide, gone on the next | Damage severity scale present on 9-rocket chart, absent on 48-rocket chart |
-| **Aggregation artifact** | Choosing aggregation intervals that manufacture or destroy a signal | Weekly cholera groupings make pump-handle removal look decisive |
+| **Temporal aggregation artifact** | Choosing time-interval boundaries that manufacture or destroy a signal | Weekly cholera bins (Sept 1–7 vs 8–14) make pump-handle removal look decisive; daily data show no break |
+| **Spatial aggregation artifact** | Choosing area boundaries that hide or relocate a geographic cluster | Monmonier's re-partitions of Snow's deaths erase the Broad Street cluster; deadliest areas exclude the pump |
+| **Specification searching** | Sifting many aggregations/models and reporting only the favorable one (multiplicity) | One chosen chart presented as if it were the only analysis run |
 | **One-glass experiment** | Demonstrating an effect without a controlled comparison | Feynman's O-ring in ice water: no dry O-ring shown alongside, cause (cold vs. wet vs. clamped) unresolved |
 | **Mechanism without quantification** | Naming the mechanism but not linking it measurably to the outcome | Charts show O-ring rotation physics but do not connect rotation magnitude to temperature |
 | **Extrapolation without acknowledgment** | Plotting a recommendation (53°F minimum) based on a sample of one without stating the inference problem | 53°F line drawn from SRM 15 alone |

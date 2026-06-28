@@ -1,237 +1,225 @@
 ---
 name: tufte-data-ink-ratio
-description: Apply Tufte's data-ink ratio framework to strip non-data ink and redundant data ink from statistical graphics, raising the ratio toward 0.9 through iterative erasure and redesign.
+description: Apply Tufte's data-ink ratio to strip non-data ink and redundant data ink from statistical graphics — through the two-pass erasure procedure, graphical redesign, and converting frame/tick ink into data — so the largest possible share of ink carries information.
 tags: [tufte, data-visualization, graphical-design, chartjunk, statistical-graphics]
 ---
 # Data-Ink Ratio
 
 ## Overview
-The data-ink ratio measures how much of a graphic's ink is doing real informational work. Tufte's core claim: the larger the share of ink devoted to data, the better the graphic. The ratio gives a concrete lever — identify what can be erased without losing data, then erase it. This solves the chronic problem of decoration, redundancy, and convention adding ink that competes with rather than conveys information.
+The data-ink ratio measures how much of a graphic's ink is doing real informational work. Tufte's core claim in *The Visual Display of Quantitative Information* (Chapter 4): the larger the share of ink devoted to data, the better the graphic, other things equal. The ratio is not a grade to chase but a lever — it tells you to find every mark that could be erased without losing data, then erase it. This dissolves the chronic problem of decoration, redundancy, and convention adding ink that competes with the data instead of conveying it.
 
-## §1. The Formula and Thresholds
+## §1. The Ratio: One Definition, Three Equivalent Forms
+
+Data-ink is the part of a graphic that responds to the numbers. Tufte's canonical definition:
+
+> "Data-ink is the non-erasable core of a graphic, the non-redundant ink arranged in response to variation in the numbers represented." — Tufte, *The Visual Display of Quantitative Information*
+
+The ratio has three equivalent formulations. The skill must carry all three, because each exposes a different lever:
 
 ```
-Data-ink ratio = data-ink / total ink used in the graphic
+(1)  data-ink ratio = data-ink / total ink used to print the graphic
+
+(2)  = the proportion of a graphic's ink devoted to the
+       non-redundant display of data-information
+
+(3)  = 1.0 − the proportion of a graphic that can be erased
+       without loss of data-information
 ```
 
-> "The larger the share of a graphic's ink devoted to data, the better (other relevant matters being equal): Maximize the data-ink ratio, within reason."
-> — *The Visual Display of Quantitative Information*
+- **Form (1)** is the accounting definition: a fraction of total ink.
+- **Form (2)** restates it as a proportion and embeds the redundancy test — only *non-redundant* data display counts.
+- **Form (3) is the operational lever.** It reframes the whole task as a hunt for erasable ink: find what you can delete with zero loss of information, subtract it, and what remains is your ratio. You raise the ratio by erasing, not by adding. Work from form (3).
 
-In *The Visual Display of Quantitative Information*, Tufte argues that every mark placed on a graphic must justify its presence, and that justification should almost always be that the mark conveys information not represented anywhere else on the graphic.
+### Practical interpretation of the ratio
 
-| Ratio | Assessment |
-|---|---|
-| < 0.5 | Problematic — ink is mostly decoration or redundancy |
-| ~0.6 | Marginal — Tufte explicitly flags this as too low (atomic volume chart with 63 grid ticks over 76 data points) |
-| 0.7–0.8 | Acceptable after one round of editing |
-| ~0.9 | Target — reached after erasing grid ticks from the atomic volume chart, "only the frame lines remaining as pure non-information" |
-| 1.0 | Theoretical maximum; frame lines and axis labels still carry some non-data ink |
+Tufte gives the directive "maximize, within reason" — he does **not** publish numeric pass/fail grades. The bands below are a practitioner heuristic for *talking about* a graphic, not Tufte's measured thresholds. Treat them as a smell test, not a target to optimize blindly.
 
-The "within reason" qualifier matters. Redundancy occasionally earns its ink (see §6). The ratio is a tool for finding waste, not a score to maximize blindly.
-
-## §2. What Counts as Data-Ink vs Non-Data-Ink
-
-**Data-ink:** ink that, if erased, would destroy some part of the data information. The ink that changes when the data changes.
-
-**Non-data-ink:** ink that could be erased without losing data — borders, frames, grid lines, background shading, decorative fills, tick marks when labels serve.
-
-**Redundant data-ink:** ink that depicts the same number more than once. A shaded, labeled, bordered bar locates its value in six independent ways — five of those representations are redundant.
-
-| Ink type | Example | Erase? |
+| Approx. ratio | What it usually means | Action |
 |---|---|---|
-| Data-ink | Plotted point position, line path, height of a bar's top edge | No |
-| Non-data-ink | Frame borders, background shading, grid mesh, axis tick marks when axis labels exist | Yes — erase first |
-| Redundant data-ink | Bar fill shading (the bar height already encodes the value), bilateral symmetry in box plots, the second half of a Chernoff face | Yes — erase second |
-| Justified redundancy | Repeated cycle in a periodic time-series so the eye can track without jumping back to the start | Keep — purposeful |
+| Low (much ink erasable) | Mostly decoration, frames, fill, or redundancy | Run both erasure passes; redesign |
+| Middle | Typical after one editing pass; some waste remains | Second pass on redundant data-ink |
+| High (little erasable) | Most ink moves with the data | Stop erasing; check legibility, add labels in recovered space |
+| Near 1.0 | Theoretical ceiling; axis labels and a minimal frame still carry some non-data ink | Diminishing returns — do not strip below legibility |
 
-### The bar chart's six-way redundancy
-A single shaded, labeled, bordered bar unambiguously locates its value via:
-1. Height of the left line
-2. Height of the shading
-3. Height of the right line
-4. Position of the top horizontal line
-5. Position (not content) of the number at the bar's top
-6. The number itself
+The "within reason" qualifier is load-bearing: redundancy and a little structure occasionally earn their ink (see §7). Past the point of legibility, erasing makes the graphic worse, not better.
 
-Any five of those six can be erased; the sixth still locates the value. All five are redundant data-ink.
+## §2. Data-Ink vs Non-Data-Ink vs Redundant Data-Ink
 
-## §3. The Five Principles of Graphical Redesign
+Three categories. Erase the last two, in that order.
 
-Tufte's conclusion to the data-ink chapter states these in order of priority:
+| Ink type | Definition | Examples | Erase? |
+|---|---|---|---|
+| **Data-ink** | Ink that, if erased, destroys some part of the data; it changes when the data changes | Plotted point positions, a line's path, the top edge of a bar | No — this is the core |
+| **Non-data-ink** | Ink that depicts no statistical information at all | Box frames, background shading, grid mesh, tick marks once axis labels exist | Yes — erase first |
+| **Redundant data-ink** | Ink that depicts a number already shown elsewhere on the graphic | Bar fill (the height already encodes the value), bilateral symmetry, duplicated axis | Yes — erase second |
+
+The test for any mark: *does it change if the data changes?* If no, it is a candidate for erasure.
+
+### A bar encodes its single value many times over
+
+One shaded, bordered, labeled bar locates its value redundantly through several independent encodings:
+
+1. Height of the left edge
+2. Height of the fill
+3. Height of the right edge
+4. Position of the top horizontal edge
+5. Position of the printed number at the top
+6. The printed number itself
+
+Any one of these locates the value; the rest are redundant data-ink. Tufte's progression — solid bar → open bar (edges only) → range bar (one line plus a tick) — strips the redundancy one layer at a time while the value stays readable (see §6).
+
+## §3. The Five Principles of Graphical Redesign (in order)
+
+Tufte closes the data-ink chapter with five principles. The order *is* the procedure.
 
 1. **Above all else show the data.**
-2. **Maximize the data-ink ratio.**
-3. **Erase non-data-ink.**
-4. **Erase redundant data-ink.**
+2. **Maximize the data-ink ratio (within reason).**
+3. **Erase non-data-ink (within reason).**
+4. **Erase redundant data-ink (within reason).**
 5. **Revise and edit.**
 
-The sequence is the procedure: start from what the data demands (1), then maximize (2) by executing the two erasure passes (3, 4), then iterate (5). Principles 3 and 4 are the operational moves that execute principle 2.
+> "Above all else show the data." — Tufte, *The Visual Display of Quantitative Information*
 
-## §4. The Erasure Procedure
+> "Maximize the data-ink ratio, within reason." — Tufte, *The Visual Display of Quantitative Information*
 
-Two passes, in order:
+Principle 1 sets the goal: every design choice serves the data. Principle 2 is the metric. Principles 3 and 4 are the two concrete moves that execute principle 2 — they are the *how*. Principle 5 says redesign is iterative: you rarely get there in one pass.
+
+## §4. The Two-Pass Erasure Procedure
+
+Always two passes, in this order. Doing non-data-ink first matters — redundancy is far easier to see once the decorative clutter is gone.
 
 ### Pass 1 — Erase non-data-ink
-
-> "Erase non-data-ink, within reason."
-> — *The Visual Display of Quantitative Information*
-
-Remove ink that fails to depict statistical information at all. Common targets:
-- Background fills and shading on the plot area
-- Grid lines and tick marks (especially dense grids)
-- Box frames around the chart area
-- Decorative borders on bars or columns
-- 3D effects, drop shadows, perspective distortion
+Remove ink that depicts no information at all:
+- Background fills and plot-area shading
+- Grid lines and tick mesh (especially dense grids)
+- Box frames around the plotting area (drop top and right at minimum)
+- Decorative borders on bars and columns
+- 3D effects, drop shadows, perspective
 
 ### Pass 2 — Erase redundant data-ink
+Remove ink that re-depicts a number already shown:
+- Bar and area fill (the boundary already encodes the value)
+- Bilateral symmetry — box plots, Chernoff faces (one half is a mirror of the other)
+- Duplicate axis labels on both sides
+- A second axis encoding the same variable at another scale
 
-> "Erase redundant data-ink, within reason."
-> — *The Visual Display of Quantitative Information*
-
-Remove ink that depicts the same number multiple times. Common targets:
-- Fill/shading on bars (height already encodes the value)
-- Bilateral symmetry in box plots, open bars, Chernoff faces
-- Repeated axis labels when spacing makes them clear
-- Dual y-axes encoding the same variable at different scales
-
-### Post-erasure: use the recovered space
-
-Space freed by erasing is not wasted — it can carry new information. In the atomic volume redesign, erasing the grid allowed labeling the alkali elements at each period peak directly on the chart, adding information that was absent from the original dense version.
-
-The graphical arithmetic:
+### The graphical arithmetic
 
 ```
 original design = erased part + good part
 ```
 
-In the bar chart redesign, approximately **65% of the original ink** was identified as non-data-ink and redundant data-ink, then erased. The data survived intact.
+Most over-decorated graphics are a large fraction erasable ink wrapped around a small core of data-ink. The data survives erasure intact.
 
-## §5. Named Redesign Examples
+### Use the recovered space
+Space freed by erasing is not wasted white space — it is capacity for *more* information. Use it to label interesting data points directly on the plot, add a marginal distribution, or rotate a vertical axis title to horizontal so it actually reads. Erasing buys room; spend it on data, not air.
 
-### Bar chart (Kuznicki/McCutcheon taste papillae data)
+## §5. Convert Non-Data-Ink Into Data-Ink (the multifunctioning move)
 
-| Version | Ink budget | Data loss |
-|---|---|---|
-| Original | Full shading, borders, asterisks, gridlines, grouped panels | None (but ~65% redundant or non-data) |
-| After erasure | Left and top edges only for each bar; right edge and fill removed; asterisks removed from caption | None |
-| Net | ~65% of original ink erased | 0% |
+The strongest redesigns don't just erase frame and tick ink — they make that ink *do data work*. This is the most under-applied lever in the chapter.
 
-The horizontals connecting paired bars count as data-ink — they indicate the paired comparison structure and would change if the experimental design changed. They stay.
+- **Range-frame:** Draw each axis line only across the actual range of the data, from the minimum value to the maximum. The axis line now reports the data range — the frame has become data-ink instead of a decorative box. The empty corner of a conventional rectangle frame is deleted for free.
+- **Dot-dash-plot / marginal rug:** Replace evenly-spaced conventional tick marks with one tick per actual data value, projected onto each axis. The ticks now show the marginal distribution of each variable. What was the lowest-grade non-data-ink (regular ticks) becomes a second dataset.
+- **Direct labels in freed space:** After erasing a grid, label peaks, outliers, or categories where the grid used to be, so the reader never leaves the data plane to decode a legend.
 
-### Dot plot / atomic volume chart (Pauling, General Chemistry)
+The rule: before erasing a mark, ask whether it can be *repurposed* to carry data. Erase only what cannot.
 
-| Version | Data-ink ratio | Notes |
-|---|---|---|
-| Original (Hayward) | < 0.6 | 63 dark grid tick-marks compete with 76 data points and reference curves |
-| After erasing grid ticks | ~0.9 | "Only the frame lines remaining as pure non-information" |
-| Dots only, no reference curves | Ratio high but useless | Periodicity structure invisible — demonstrates that some structure ink earns its place |
-| Dots + ticks restored without curves | Worse than original | Grid competes; eye needs curves to navigate the dots-and-crosses maze |
+## §6. Named Redesigns
 
-The redesign also rotated the y-axis label from vertical (bottom-to-top) to horizontal, improving readability — space from erasing the frame interior made room.
+> Numeric ink-counts and exact ratio decimals are deliberately omitted: the source pages could not be verified, and false precision is worse than none. The qualitative structure of each redesign below is the durable, verifiable part.
 
-### Box plot
+### Box plot → quartile plot
+A conventional box plot draws each quartile boundary on both the left and right of the box; the right half is a mirror of the left and adds nothing. Tufte's quartile plot erases the box entirely: whisker lines mark the range, a small offset or gap marks the median, dots mark the quartiles. Same five-number summary, a fraction of the ink, and many plots now fit where few did.
 
-Standard bilateral box plot encodes each quartile boundary on both the left and right side of the box. The right half is a mirror of the left — it is redundant data-ink. A half-box carries the same distributional information in half the ink. Half-faces (Chernoff) carry the same information as full faces; bilateral symmetry "doubles the space consumed by the design in a graphic, without adding new information."
+### Bar → open bar → range bar
+Start with a solid filled bar (value encoded ~6 ways, §2). Erase the fill → an open bar (three edges). Erase two edges → a single vertical line with a tick at the top. Each step removes redundant data-ink; the value stays readable at every step. The line-only form lets far more bars sit side by side for comparison.
 
-### Open bar
+### Range-frame scatterplot
+A standard scatterplot sits in a four-sided box on a grid. Erase the box and grid; redraw the two axis lines to span only the data's range; project each point's value as a tick on the margin (dot-dash-plot). The frame and ticks, formerly pure decoration, now report the range and the marginal distributions. (See §5.)
 
-A solid filled bar communicates its value via three redundant encodings: left edge height, fill height, right edge height. An open bar (left edge + top edge + right edge only) erases the fill while preserving all three, then an erased bar (left edge + tick at top) preserves just one — sufficient.
+### Chernoff faces
+Full faces are bilaterally symmetric — the right side mirrors the left, doubling the space without adding a variable. Half-faces carry the same encoded data in half the area. Symmetry here is redundant data-ink, not structure.
 
-## §6. When Redundancy Has Legitimate Uses
+### The over-gridded chart (a "dreaded grid" case)
+A chart whose data plane is covered by a dense mesh of tick marks: the grid competes with the very points it is meant to help locate, and the more data points there are, the worse the competition. Erasing the grid (keeping at most a light reference line where positional reading is genuinely hard) lifts the ratio sharply and lets the data emerge. Recovered space then holds direct labels.
 
-Erasing redundancy is not unconditional. Tufte identifies purposeful redundancy:
+## §7. When Redundancy Is Justified
 
-- **Cyclical time-series:** Repeating one cycle in Marey's 1880 train schedule lets the eye track trains running off the right edge of the chart, picking them up on the left — without this redundancy, the reader must jump back to the beginning. Redundancy here supports continuous reading.
-- **Complexity navigation:** "giving a context and order to complexity, facilitating comparisons over various parts of the data, perhaps creating an aesthetic balance."
-- **One-number graphics:** A single uncomplicated value may not need the second erasing principle applied — the first (non-data-ink) is always applicable; the second (redundant data-ink) depends on whether the redundancy serves comprehension.
+Erasing redundancy is *within reason*, not unconditional. Tufte names legitimate uses — redundancy earns its ink when it helps the reader move through the data:
 
-> "Redundancy, upon occasion, has its uses: giving a context and order to complexity, facilitating comparisons over various parts of the data, perhaps creating an aesthetic balance."
-> — *The Visual Display of Quantitative Information*
+- **Cyclical / wrap-around series:** In Marey's graphical train schedule, one daily cycle is repeated at the edges so a train running off the right side is picked up again on the left, without forcing the eye back to the start. The repetition supports continuous reading.
+- **Context and orientation:** Redundancy can give order to a complex graphic, ease comparison across its parts, and create aesthetic balance.
+- **Single-value graphics:** A lone uncomplicated number may not need the redundant-data-ink pass at all; the non-data-ink pass always applies.
 
-The test: does the redundancy help the reader move through the data, or does it reinforce a number the reader already has?
+The decisive test: **does the redundant ink help the reader navigate, or does it merely restate a number the reader already has?** Help → keep. Restate → erase.
 
-## §7. Failure Modes
+## §8. Failure Modes
 
-### Chartjunk taxonomy
+These are the low-ratio patterns that recur in scientific and technical publishing. Each is a way ink piles up without conveying data.
 
-> "The interior decoration of graphics generates a lot of ink that does not tell the viewer anything new."
-> — *The Visual Display of Quantitative Information* (Chapter 5)
-
-Three categories of non-data and redundant ink that appear routinely in scientific and technical publications:
-
-| Failure mode | Description | Mechanism | Fix |
+| Failure mode | What it is | Why it fails | Fix |
 |---|---|---|---|
-| Unintentional optical art (moire) | Dense cross-hatching, parallel lines, dot grids used to fill bars or areas | Interacts with the eye's physiological tremor to produce vibration and movement; noise clouds the data | Replace hatching with a single flat gray tint; label areas with words instead |
-| The dreaded grid | Dense tick mesh arrayed across the data plane | Grid competes visually with the data marks it is meant to help locate; the more data, the worse the competition | Erase the grid; use a light reference line only when the data genuinely needs positional help |
-| Self-promoting graphical duck | Elaborate 3D constructions, pictograms scaled by area/volume, perspective distortion | Decoration overwhelms the data; one variable (stacked depth of pyramids) has no label or scale | Use simple geometric marks; map one variable to one visual attribute |
+| **Unintentional optical art (moiré)** | Cross-hatching, parallel rules, or dot patterns filling bars and areas | The pattern interacts with the eye's tremor to produce vibration and motion; noise clouds the data | One flat light-gray tint, or label the area with a word |
+| **The dreaded grid** | A dense tick mesh laid across the data plane | The grid competes with the data marks it claims to help locate; worse as data grows | Erase it; keep at most one faint reference line where positional reading is truly hard |
+| **The self-promoting duck** | Elaborate 3D constructions, area/volume pictograms, perspective | Decoration overwhelms data; an extra visual dimension (depth) is unlabeled and unscaled | Simple geometric marks; one variable to one visual attribute |
 
-### Named failure instances
+### Ratio killers, ranked by how often they appear
+1. Full-weight grid mesh across the data plane
+2. Bar / area fill (cross-hatch or solid)
+3. 3D perspective on 2D data
+4. Bilateral symmetry (box plots, faces)
+5. Duplicate axis labels on both sides
+6. Decorative four-sided frame
+7. Background color fill on the plotting area
 
-- **JASA "proper form" histogram:** Published as a model graphic; required 131 line-strokes and 15 digits to communicate simple information. The dense vertical bar shading produced visible moire vibration.
-- **Pauling atomic volume chart:** 63 grid marks (non-data-ink) competed with 76 data points; ratio dropped below 0.6.
-- **New England Journal of Medicine pyramids:** 3D stacked pyramids introduced moire, a Necker-illusion flip between back planes, and an unlabeled depth axis. A simple table would have served.
+## §9. Do / Don't Pairs
 
-### Ratio killers (ranked by frequency)
-
-1. Grid mesh printed at full weight across the data plane
-2. Bar/area fill shading (cross-hatch or dark solid)
-3. 3D perspective applied to 2D data
-4. Bilateral symmetry in box plots, bullet charts, faces
-5. Duplicate axis labels on both sides of the chart
-6. Decorative border frame around the entire graphic
-7. Background color fill on the plot area
-
-## §8. Do / Don't Pairs
-
-### Chart frames
-
+### Frames and axes
 | Do | Don't |
 |---|---|
-| Use left axis line + bottom axis line only, or none | Draw a full four-sided box around the plot |
-| Let data determine axis extent | Extend the frame beyond the data range |
+| Draw left + bottom axis lines only, or use a range-frame | Box the plot on all four sides |
+| Let the data set each axis's extent (range-frame) | Extend axis lines past the last data point |
 
 ### Bars and columns
-
 | Do | Don't |
 |---|---|
-| Use a single left edge + top horizontal edge to define each bar | Fill bars with shading or cross-hatch |
-| Label the value once (in the data or in a direct label) | Label the value and shade it and border it |
-| Use dot plots for multi-category comparisons | Use grouped 3D bars |
+| Define each bar with one edge + a top tick | Fill bars with shading or cross-hatch |
+| State each value once (in data or one direct label) | Shade it *and* border it *and* print the number *and* grid it |
+| Use dot plots for many-category comparisons | Use grouped 3D bars |
 
 ### Grids and ticks
-
 | Do | Don't |
 |---|---|
-| Use thin reference lines sparingly when positional reading is genuinely hard | Print a full mesh of grid lines at the same weight as the data |
-| Erase tick marks when axis labels provide sufficient reference | Add ticks at every integer when only 5 data points exist |
-| Use plain gray tint for area fills | Use cross-hatch, diagonal lines, or dot patterns |
+| Repurpose ticks as a marginal data rug (dot-dash-plot) | Print a full grid mesh at the weight of the data |
+| Erase ticks once axis labels give enough reference | Tick every integer when there are five data points |
+| Use a single flat gray tint for any needed area fill | Use cross-hatch, diagonals, or dot patterns |
 
-### Symmetry
-
+### Symmetry and redundancy
 | Do | Don't |
 |---|---|
-| Use a half-box plot to show distribution shape | Mirror the box plot — the right half adds nothing |
-| Use asymmetric half-faces if exploring Chernoff encoding | Display full Chernoff faces when half-faces carry the same data |
-| Show one pass of a cyclical series unless navigation requires wrapping | Repeat data in a non-cyclical series purely for visual balance |
+| Use a half-box / quartile plot for distribution shape | Mirror the box — the second half adds nothing |
+| Use half-faces if encoding with Chernoff faces | Draw full symmetric faces for the same data |
+| Repeat a cycle only when wrap-around navigation needs it | Duplicate non-cyclical data for visual balance |
 
-### Redesign editing
-
+### The redesign process
 | Do | Don't |
 |---|---|
-| Run two passes: non-data-ink first, redundant data-ink second | Try to redesign in one pass — redundancy is harder to see before non-data-ink is gone |
-| Use recovered white space to add genuinely new labels or annotations | Leave recovered space blank as a design choice unless the data needs breathing room |
-| Keep horizontal connectors in paired-comparison charts — they encode the pairing structure | Erase structural ink that would change if the experimental design changed |
+| Run two passes: non-data-ink first, redundant second | Redesign in one pass — redundancy hides behind clutter |
+| Spend recovered space on new labels or a marginal distribution | Leave erasing-freed space as decorative emptiness |
+| Keep structural ink that would change with the experiment (e.g. paired-comparison connectors) | Erase ink that encodes the study's structure |
 
-## §9. Application Checklist
+## §10. Application Checklist
 
-Before finalizing any statistical graphic, run this erasure audit:
+Run this erasure audit before finalizing any statistical graphic. Work from form (3): hunt for erasable ink.
 
-- [ ] Does every ink mark on this graphic change if the data changes? (If no, it is a candidate for erasure.)
-- [ ] Is any data value represented more than once in ink? (If yes, erase all but one representation.)
-- [ ] Are grid lines present? (Erase unless positional reading genuinely requires them; replace with light gray if keeping.)
-- [ ] Are bars or areas filled with shading or hatching? (Erase fill; keep bounding edges only.)
-- [ ] Does the chart have a four-sided frame? (Erase top and right lines at minimum.)
-- [ ] Is there bilateral symmetry for a variable that is not itself bilateral? (Erase one side.)
-- [ ] Is the y-axis label rotated 90 degrees? (Rotate to horizontal where space — recovered from erasing — permits.)
-- [ ] After erasure, is there recovered space? (Consider direct labeling of interesting data points in that space.)
-- [ ] What is the approximate data-ink ratio? (Target 0.7 minimum, 0.9 preferred.)
+- [ ] Does **every** mark change if the data changes? Any that don't are erasure candidates.
+- [ ] Is any value shown in ink more than once? Keep one encoding, erase the rest.
+- [ ] Grid lines present? Erase unless positional reading truly needs them; if kept, drop to a faint reference line.
+- [ ] Bars/areas filled? Erase the fill; keep bounding edges (or one edge + tick).
+- [ ] Four-sided frame? Drop top and right; consider a range-frame that reports the data range.
+- [ ] Ticks decorative? Repurpose them as a marginal rug, or erase once labels suffice.
+- [ ] Bilateral symmetry on a non-bilateral variable? Erase one side.
+- [ ] Axis title rotated 90°? Rotate to horizontal using recovered space.
+- [ ] After erasing, is there freed space? Spend it on direct labels or a marginal distribution.
+- [ ] Did any redundancy survive *on purpose* (cyclical wrap, navigation aid)? If you can't name why it helps the reader move through the data, erase it.
+- [ ] Stop test: would the next erasure cost legibility? If yes, stop — "within reason."

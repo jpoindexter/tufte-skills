@@ -1,252 +1,268 @@
 ---
 name: tufte-escaping-flatland
-description: Apply Tufte's six core strategies for representing multivariate data on a 2D surface — when designing any chart, map, dashboard, or data display that must show more than two dimensions.
-tags: [tufte, data-visualization, information-design, dimensionality, data-density]
+description: Apply Tufte's overarching framework for putting multivariate data on a flat surface — the TWO goals (more representable dimensions, higher data density) reached through FIVE methods (micro/macro readings, layering, small multiples, color, space-time narratives) — when designing any chart, map, dashboard, table, or display that must carry more than two variables.
+tags: [tufte, data-visualization, information-design, dimensionality, data-density, multivariate]
 ---
 # Escaping Flatland
 
 ## Overview
 
-All communication between the readers of an image and the makers of an image must take place on a two-dimensional surface. The world is multivariate; paper and screen are not. Escaping this constraint — increasing both the number of dimensions representable and the data density (information per unit area) — is the central problem of information design. Tufte identifies six design strategies that have solved this problem across 500 years of maps, scientific graphics, timetables, and statistical displays. The failure mode is chartjunk: designs that are all container and no content, substituting ornament for data, and contempt for the audience.
+The world is multivariate; paper and screen are not. Every image a maker shows a reader must live on a two-dimensional plane, so the central job of information design is to widen the resolving power of that plane — to raise both the number of dimensions it can carry and the density of data it packs per unit area. This is the opening, agenda-setting chapter of *Envisioning Information*: it states the problem, sets the two goals, previews the five methods that the rest of the book develops, and names the enemy — chartjunk and the architectural "duck," design that becomes its own content out of contempt for the data and the audience.
+
+**Read this skill for the framework and the chapter's gallery of worked examples.** For the deep mechanics of each method, go to its dedicated sibling skill (named in §2). Do not treat the five methods as six "strategies" — density is a *goal*, not a method.
 
 ---
 
 ## §1. The Flatland Problem
 
-The idea of "flatland" comes from Edwin A. Abbott's *Flatland: A Romance of Many Dimensions* (London, 1884). Tufte's application:
+The term comes from Edwin A. Abbott's novel *Flatland: A Romance of Many Dimensions* (London, 1884), about beings trapped in a two-dimensional world. Tufte's application: we navigate a three-space perceptual world and reason about higher dimensions with ease, yet every information display collapses onto the flatland of paper and screen.
 
-> "THE world is complex, dynamic, multidimensional; the paper is static, flat. How are we to represent the rich visual world of experience and measurement on mere flatland?"
-> — *Envisioning Information*
+> "Escaping this flatland is the essential task of envisioning information." — Tufte, *Envisioning Information*
 
-Tufte identifies two essential tasks for information design: escaping the two-dimensional constraint and increasing data density. Both tasks become harder as data grows more abstract — losing its connection to familiar three-dimensional experience — and as the number of variables to represent grows.
+**The toad image (chapter opener, p.14):** when a toad sheds its skin, the suit leaves life's "spaceland" and collapses into flatland — exactly what our displays do to multivariate reality. The task is to do better than a flattened-out toad suit.
 
-Two concrete goals for every display:
+**Why it gets harder:** two forces compound the difficulty.
 
-| Goal | Meaning |
+| Force | Effect |
 |---|---|
-| Increase dimensions | More variables shown on the same surface without confusion |
-| Increase data density | More information per unit area of paper or screen |
+| Abstraction | As data loses its tie to familiar three-space (temperature, GDP, sentiment), there is no physical form to lean on |
+| Variable count | Each extra variable competes for the same two axes of the surface |
 
-Paul Klee, writing in *On Modern Art* (London, 1948) and quoted by Tufte, observed that grasping a whole composed of parts from different dimensions is inherently difficult — for nature, for art, and most of all when trying to convey that whole to another person. Sequential communication cannot fully represent something that exists simultaneously in multiple dimensions.
-
-**Fundamental constraint:** "Nearly every escape from flatland demands extensive compromise, trading off one virtue against another."
+**The fundamental compromise:** nearly every escape from flatland trades one virtue for another. The literature is "partial, arbitrary, and particularistic" — no single trick solves dimensional compression in general. Paul Klee made the related point that a whole built from parts of different dimensions is hard to grasp and harder still to convey to someone else, because spoken language is sequential and cannot hold many dimensions at once. Expect tradeoffs; do not chase a universal solution.
 
 ---
 
-## §2. Strategy 1 — Micro/Macro Readings
+## §2. The Real Taxonomy — Two Goals, Five Methods (p.13, previewed p.33)
 
-Aggregate fine detail into a pattern that delivers both local readings and a global summary. The viewer can zoom: the whole reveals variation; each part reveals exact data.
+This is the chapter's actual structure. **Do not invent a six-item "strategies" list.** Tufte names two goals and five methods; data density is one of the two goals, not a method standing beside the other four.
 
-**Canonical example: Maunder's butterfly diagram (1904)**
-E.W. Maunder plotted sunspot latitude daily from 1877 to 1902. The sunspot's two areal dimensions are reduced to one content-relevant dimension (latitude in degrees). Individual observations become micro-marks; the aggregate over 28 years creates a macro-butterfly shape showing the 11-year solar cycle and the drift of sunspots toward the equator.
+**The two goals — what every display is trying to do:**
 
-The modern update increased data density tenfold — a full century of solar memoirs. Color coding (lighter = larger) encodes log of area covered. A lower time-series running in parallel shows total surface coverage. Multiple variables, one display.
-
-**Rules:**
-- Fine detail must merge into a repeated typical pattern at the macro level
-- The foremost result of a micro/macro display is a visual measure of variation around the average — both summary measures of statistical data at once
-- Reduce areal dimensions to content-relevant dimensions rather than suppressing them
-
-| Do | Don't |
+| Goal | Definition |
 |---|---|
-| Compress data into marks that aggregate into pattern | Enlarge data marks to fill whitespace |
-| Show variation alongside average | Show only the mean |
-| Let the micro-data be legible on close reading | Make micro-data decorative rather than readable |
+| Increase dimensions | Raise the number of variables representable on a plane surface, without confusion |
+| Increase data density | Raise the amount of information per unit area |
 
----
+**The five methods — how displays reach those goals (each developed in its own sibling skill):**
 
-## §3. Strategy 2 — Layering and Separation
-
-A single 2D surface can carry multiple layers of independent information when each layer is visually distinct. The key is that layers must not interfere — each must read separately AND in combination.
-
-**Canonical example: Java railroad timetable (1937)**
-A 24-hour graphical timetable for the Soerabaja-Djokjakarta line carries 16 variables simultaneously:
-- Time (horizontal axis, read across top)
-- Station location (vertical axis — towns stacked down the left, spaced proportional to distance along track)
-- Train direction (diagonal orientation: upper-left to lower-right = heading down; lower-left to upper-right = returning)
-- Train speed (slope of diagonal — steeper = faster)
-- Train type and class (line style in a 4×4 matrix: regular/seasonal/irregular/special × super express/express/passenger/mixed/cargo)
-- Seasonal pattern of operation (matrix encoding)
-- Station facilities (icons encoding cargo platforms, water towers, directional-change platforms, standby engines, etc.)
-- Elevation profile (left margin, enlarged vertical scale, with grade columns alongside)
-
-The train diagonals multiple-function: "those marks record six variables all at once: the location of a train between towns, time of that position, direction, train type, relative speed (comparing slopes of diagonals), and yearly pattern of operation."
-
-**Rules for layering:**
-- Each layer must use a visually distinct encoding (orientation, line weight, symbol type, color)
-- The same axis can carry independent variables if they are orthogonal (distance along track and elapsed time share the vertical without collision)
-- Multiple-functioning elements earn their place: one mark that encodes N variables beats N separate marks
-
-| Layered element | Variables encoded |
-|---|---|
-| Diagonal slope | Speed |
-| Diagonal direction | Train direction |
-| Diagonal line style | Train type / class |
-| Diagonal starting point | Departure time |
-| Station vertical position | Distance along route (not alphabetical) |
-| Left margin profile | Elevation and grade |
-
----
-
-## §4. Strategy 3 — Small Multiples
-
-Replicate the same graphic design structure — the same axes, the same encoding, the same scale — across a set of panels that vary by one additional variable. The reader decodes the design once and can then focus entirely on differences.
-
-In *Envisioning Information*, Tufte argues that small multiples target the core mechanism of visual reasoning: the ability to see, distinguish, and choose. Their small size keeps all comparisons within a single eyespan, so the eye moves actively between panels rather than depending on memory to bridge images spread across separate pages.
-
-**Canonical example: California air pollution (computer-generated)**
-12 panels: 3 pollutants (nitrogen oxides, carbon monoxide, reactive hydrocarbons) × 4 time-of-day slices (midnight–3am, 6–9am, noon–3pm, 3–6pm). Each panel is a 3D surface map of southern California, 2,400 grid squares at 5km per side. "A high density arrangement of data, abounding with variables."
-
-Tufte argues that small multiples produce an economy of perception: viewers decode the graphic format once and immediately have full access to every panel. Because the composition does not change from panel to panel, the eye can concentrate entirely on how the data changes — not on re-learning the visual language. A stable design surface makes the data differences visible.
-
-**Small multiples work for both spatial and tabular data:**
-- Galileo's daily sunspot diagrams (1610–1612): 36 small circles arrayed in rows, each showing spot position, date labeled. Each observation indexes on time; the sequence of small multiples reveals drift.
-- Tokyo weather history: 414 symbols across town × year × month × day × time-of-day. 1,826 days of weather in one display.
-- Compound interest tables: grid of capital × time repeated at multiple interest rate levels — small multiple style in pure numeric form.
-
-**Scaling rule:** Small multiples work because comparison is within eyespan. Scatter images across many pages and the reader must rely on memory — the comparison degrades.
-
-| Do | Don't |
-|---|---|
-| Hold axes constant across all panels | Rescale each panel to fill its frame |
-| Make panels small enough that multiple are visible at once | Space panels across separate pages |
-| Vary exactly one thing between panels | Let composition change alongside data |
-| Use the same graphical vocabulary in every panel | Re-design each panel |
-
----
-
-## §5. Strategy 4 — Color and Information
-
-Color encodes an additional variable when used with discipline. Used promiscuously, it adds noise. Tufte's treatment: color is a layering device that can separate otherwise overlapping information streams.
-
-The T-shirt example from the cover: a grid of shirts varying body color × collar color — a bivariate small multiple where color itself is the data. Every cell in the grid represents a combination; the eye can survey the 2D color space directly.
-
-The modern butterfly diagram uses color to encode log area of sunspot coverage: lighter = larger. This converts a spatial dimension (spot area) into a color dimension, freeing the x and y axes for time and latitude.
-
-**Rules from Tufte:**
-
-| Use | Avoid |
-|---|---|
-| Color to encode a specific, named variable | Color as decoration or to make the display "lively" |
-| Color differences that are perceptually equal | Rainbow gradients where hue change does not equal data change |
-| Color to separate layers that would otherwise overlap | Color to emphasize already-prominent data |
-| Subtle, light-valued colors for backgrounds | Saturated backgrounds that compete with data |
-
-**Failure mode — "Pridefully Obvious Presentation":** Orreries (planetary machine models, 1800) directed attention more toward miraculous contraptions than toward planetary motion. The display apparatus overwhelmed the data.
-
----
-
-## §6. Strategy 5 — Narratives of Space and Time
-
-Display the path an entity takes through space and/or time. The visual syntax encodes sequence, direction, and duration. Movements that are invisible in a single snapshot become legible when their trajectory is plotted.
-
-**Canonical example: Dance notation, Kellom Tomlinson (1735)**
-The flatland of a ballroom floor, coded gestures of body motion, and time sequence — four dimensions — rendered on one page. The floor plan links to music (time + tone) by step numbers. Numbers double-function: they simultaneously sequence the steps and relate movement to musical measure.
-
-**Canonical example: Japanese weather cross-section**
-A daily newspaper weather map renders Japan as a vertical cross-section rather than a plan view. Gray contours at 0° and -10°C stretch through clouds viewed from ocean-eye level. Forecasts for 15 cities annotate the cross-section. "How easily the design reads, compared to traditional weather maps that commit both their visual dimensions to a planview of latitude and longitude, suppressing the vertical."
-
-**Rules:**
-- Give each dimension a visual encoding that corresponds to its nature (time → sequential position, direction → orientation, speed → slope)
-- Use multiple-functioning marks to pack extra variables into a trajectory without adding complexity (the train diagonal encodes time, position, speed, direction simultaneously)
-- "In flatland, after all, every opportunity to spread additional information over an already-available dimension must be cherished."
-
----
-
-## §7. Strategy 6 — High Data Density
-
-Data density = amount of information per unit area. High-information displays convey statistical integrity; low-density displays invite suspicion about measurement quality.
-
-Tufte argues that data-dense displays communicate quantitative seriousness and statistical rigor. Sparse displays that carry little information relative to their surface area invite justified doubt about the quality of the underlying measurement and analysis.
-
-**Concrete benchmarks from examples in the chapter:**
-
-| Display | Data points | Notes |
+| Method | One-line mechanism | Go deep in |
 |---|---|---|
-| Maunder butterfly diagram (original, 1904) | ~28 years daily | Each mark = one sunspot observation |
-| Modern butterfly diagram | 10× density of original | Full century of solar memoirs |
-| California air pollution maps | 28,800 readings | 2,400 squares × 12 panels (except peaks masked by mountains) |
-| Tokyo weather calendar | 414 symbols | 5 years × day × night × town × weather condition |
-| Tokyo weather almanac | 1,826 days | Year-by-day matrix compounded by months |
-| Java railroad timetable | 16 variables | Single document; served as military intelligence |
+| Micro/macro readings | Fine detail aggregates into a global pattern; both visible at once | `tufte-micro-macro-readings` |
+| Layering and separation | Visually distinct layers coexist on one surface and read both apart and together | `tufte-layering-and-separation` |
+| Small multiples (multiplying images) | One design repeated across panels that vary by one variable; decode once, compare freely | `tufte-small-multiples` |
+| Color | Encodes a named variable or separates overlapping layers — used with discipline | `tufte-color-in-information-design` |
+| Narratives of space and time | The path of an entity through space and/or time, plotted as visual syntax | `tufte-narrative-and-sequence`, `tufte-space-time-graphics` |
 
-**Formula (implicit):** Data density = (number of data entries) / (area of display). The goal is not to maximize density blindly but to maximize it while maintaining legibility. Small multiples achieve this by making each panel's design decodable once.
+Related ideas the chapter leans on: multiple-functioning marks (`tufte-multifunctioning-elements`), chartjunk (`tufte-chartjunk`), data density (`tufte-data-density`). This skill's job is the *framework plus the chapter's examples*; the sibling skills carry the method theory.
 
 ---
 
-## §8. The Chartjunk Failure Mode
+## §3. The Cost of Surrender — The Ise Shrine Travel Guide (p.13)
 
-The opposite of escaping flatland is decorating it. Chartjunk is the use of display apparatus and ornamentation to compensate for thin data or to attract attention away from analytical content.
+The chapter opens its gallery with a Japanese visitor's guide to the Ise Shrine (published Ise, Japan, between Oct 1948 and April 1954). It is a **hybrid**: a bird's-eye perspective view renders the local area around the shrine in rich, recognizable detail; then, on the right margin, the design shifts abruptly to a very flat schematic map of the national railroad linking the shrine to major cities.
 
-Tufte argues that the strategies for escaping flatland share a common virtue: they are self-effacing. When the design works, only the data is visible — the container disappears. The pathological alternative is chartjunk: displays that compete with their own data, using ornament and apparatus to attract attention away from analytical content, the information-design equivalent of the architectural "duck."
+**Why it is the chapter's keystone example:** the seam between the two halves makes the cost of flatland visible. The friendly perspective gives way to "hard flatland," and you can *see* the visual dimension that gets sacrificed when scale jumps from local to national. The change of design accommodates the change of scale — local detail set inside national context, a mixed landscape of refuge and overview. A bonus: the horizontal layout cooperates with the vertical orientation of Japanese text, so the stand-up labels point precisely at their locations.
 
-The "duck" metaphor comes from Venturi: when Modern architects abandoned ornament, they unconsciously designed buildings that were ornament. The whole building became a duck — the container was the message.
+**Lesson:** when you must compress, do it deliberately and show the seam. Mixing a high-dimension local view with a low-dimension overview can be honest design — as long as you let the reader feel what was given up, rather than pretending nothing was lost.
 
-Applied to data display: a 3D bar chart where the third dimension carries no data is a duck. A fishnet-stocking grid with a cartoon character is a duck. "Credibility vanishes in clouds of chartjunk; who would trust a chart that looks like a video game?"
+---
+
+## §4. The Spectrum of Escapes — Direct vs. Encoded
+
+Five hundred years of practice (examples from 17 countries, 7 centuries, "3 planets and 1 star") fall on a spectrum from literal 3D simulation to pure symbolic encoding.
+
+| Escape | Example in the chapter | What it spends, what it buys |
+|---|---|---|
+| Physical model | Euclid's *Elements*, 1570 ed. — paper fold-up solids to teach geometry | Buys intuition for smooth shapes; useless for "obstreperous" data point clouds |
+| Conventional perspective | Perfected by Florentine architects, 15th c. | Reads instantly for physical objects; cannot show abstract multivariate data |
+| Stereo pairs | Aerial stereopair of Bonaduz, Switzerland (1975) | Vivid depth via two fused images; many viewers fail to fuse them |
+| Rotating point clouds / dodecahedron projection | MACSPIN-style statistical graphics | Self-consciously multivariate; navigation in 3D scatterplots is not trivial |
+| Mechanical simulation | Orreries, 1800 | Triumph of gear ratios — but a **failure mode** (see §10): apparatus over content |
+| Symbolic encoding | Java timetable, dance notation, sunspot charts | Carries the most variables per surface; demands the reader learn the code |
+
+**Rule:** the more abstract the data, the further right on this spectrum you must move — literal depiction runs out, and you must encode. The orrery is the cautionary midpoint: physical fidelity that drowns the very motion it was built to show.
+
+---
+
+## §5. The Sunspot Lineage — Visual Reasoning to Micro/Macro (pp.18–23)
+
+The chapter traces one dataset across ~380 years to show the same methods reappearing whenever someone faces a flood of data.
+
+**Galileo's projection method (1610–1612):** project the sun's image onto a sheet a foot from the lens, draw a circle to fit, then mark each spot at correct scale and position. This converts a glare-blinding observation into a stable mark on paper flatland.
+
+**Galileo's visual reasoning (1613):** through a chain of drawings he converts what "the eye of the forehead" merely registers into what "the eye of the mind" understands — turning raw spot positions into proof that the spots sit on a rotating spherical sun. It was more than 150 years before anyone materially improved his result.
+
+**Scheiner's small multiples (*Rosa Ursina*, 1626–1630):** daily diagrams indexed on time, then apparent-path diagrams tracking spot structure across a stationary disk — "a design simultaneously enhancing dimensionality and information density." But Scheiner filled the blank, spotless regions with his patron's and religious order's emblems (a failure mode, §10).
+
+**Maunder's butterfly diagram (1904):** decades of daily mapping (the chart spans 1877–1902, ±40° latitude). The sunspot's **two areal dimensions are reduced to one content-relevant dimension** — latitude in degrees — freeing the surface for time. Individual marks are the micro; the aggregate butterfly shape is the macro, showing the ~11-year cycle and the drift of spots toward the equator.
+
+**The micro/macro payoff and variation:** fine detail merges into a repeated typical pattern, and the foremost result is a *visual measure of variation around the average* — both fundamental summary measures of a statistical dataset shown at once.
+
+> "Measured assessments of variability are at the heart of quantitative reasoning." — Tufte, *Envisioning Information*
+
+R.A. Fisher, founder of modern statistics, wrote in 1925 that earlier workers treated variation as a nuisance detracting from the average, whereas the modern aim is to study the *causes* of variation itself. A good micro/macro display honors Fisher: it never reduces data to the mean alone.
+
+**The modern butterfly (Hathaway/NASA):** density up **tenfold**, a full century, nine cycles. The sine of latitude places each mark; **color encodes the log of area covered (lighter = larger)** — converting a spatial dimension into a color dimension; a lower time-series, summing all latitudes, restores total percent of the sun's surface covered. Parallel sequencing of the two panels enhances both dimensionality and density.
+
+---
+
+## §6. The Layering Exemplar — The Java Railroad Timetable (pp.24–26)
+
+A 1937 graphical timetable for the Soerabaja–Djokjakarta line (annotated in Dutch then Japanese) carries **16 variables** on one 24-hour sheet by smoothly suppressing a dimension here and there and finessing perspective entirely.
+
+| Encoded element | Variable(s) it carries |
+|---|---|
+| Horizontal axis | Time of day (read across top) |
+| Vertical axis | Station, spaced in proportion to distance along the track (not alphabetically) |
+| Diagonal direction | Train direction — upper-left→lower-right = "down"; lower-left→upper-right = return; an X where opposite trains pass |
+| Diagonal slope | Relative speed (steeper = faster) |
+| Diagonal line style (4×4 matrix) | Train type (super express / express / passenger / mixed / special / cargo / preferential / night cargo) × seasonality (regular / seasonal / irregular / special) |
+| Left-margin profile | Elevation at enlarged vertical scale, with grade and path columns alongside |
+| Per-station aerial insets + dingbats | Local facilities: cargo platform, livestock loading, water pump tower, directional-change platform, car repair, standby engines, relief car, closed areas |
+
+**The multiple-functioning diagonal:** one mark records **six variables at once** — a train's location between towns, the time of that position, direction, train type, relative speed (by comparing slopes), and yearly pattern. One mark doing six jobs beats six separate marks. (Tufte sources the "double-functioning element" idea from architectural criticism — Venturi, citing Wylie Sypher.)
+
+**The spy story (load-bearing detail):** this 16-variable sheet was an internal planning document, obtained by agents preparing Japan's 1942 invasion of Java, and is marked "secret" in the corner. A display this dense reads as both micro (one train) and macro (the whole system's structure) — "like an excellent map, but with many dimensions breaking free of direct cartographic analogy."
+
+**Layering rules:**
+
+| Do | Don't |
+|---|---|
+| Give each layer a distinct encoding (orientation, weight, symbol, color) | Let two layers share one visual channel and collide |
+| Share an axis only when variables are orthogonal (distance + elapsed time on one vertical) | Force unrelated variables onto the same axis |
+| Make a mark earn its place by doing two jobs | Add a separate mark for every variable |
+
+---
+
+## §7. The Narrative Exemplars — Dance and Weather (pp.27–28)
+
+**Tomlinson's dance notation (1735):** four dimensions on one page — the flatland of the ballroom floor, coded gestures of body motion, and time sequence. The floor plan links to the music (itself two dimensions plus time and tone) by **numbers that double-function**: they sequence the steps *and* tie each step to a musical measure. Movement is symbol-encoded rather than verbal because a serious notation avoids words, which are a barrier to international use. Mirrored partners are drawn in full (redundant bilateral symmetry usually wastes space) because their weaving, intermingling paths require the symmetric repetition to read.
+
+**Japanese newspaper weather cross-section (1985):** instead of the usual plan-view of latitude and longitude, the map shows Japan as a **vertical side profile, an ocean-eye view**, with gray contours tracing 0°C and -10°C through the clouds and forecast symbols for 15 cities. By spending one dimension on elevation rather than a second horizontal axis, it reads far more easily than a conventional weather map. Caveat: the trick works best for long, thin countries.
+
+**Narrative rule:** match each dimension's encoding to its nature — time → sequential position, direction → orientation, speed → slope — and cherish every chance to spread an extra variable over a dimension you already have on the page.
+
+---
+
+## §8. The Small-Multiple Exemplars and Data Density (pp.29–33)
+
+Small multiples "move to the heart of visual reasoning — to see, distinguish, choose." Their multiplied smallness forces comparisons within a single **eyespan**, so the active eye does the work rather than memory bridging images scattered across pages.
+
+**California air pollution (computer-plotted):** 3 pollutants (nitrogen oxides, carbon monoxide, reactive hydrocarbons) × 4 times of day (midnight–3am, 6–9am, noon–3pm, 3–6pm) = **12 surface maps** of southern California, each over a grid of **2,400 squares at 5 km/side = 28,800 readings** (except peaks masked by mountains). Five variables: two-space location + time-of-day + pollutant type. **Economy of perception:** decode the design once, then read every panel for free; a steady canvas makes the data changes pop.
+
+**Compound interest tables (Barème Universel, 1822):** tabular small multiples — a 2D array of capital × time, repeated at successive interest rates. The same pattern as the pollution maps, in pure numbers: a third variable on the two-surface, then the whole grid repeated at levels of a fourth.
+
+**T-shirt color grid:** children's shirts arranged by body color × collar color — a **bivariate small multiple where color itself is the data**, the eye surveying a 2D color space directly.
+
+**Data density (the second goal, with benchmarks):**
+
+| Display | Volume | Composition |
+|---|---|---|
+| Maunder butterfly (1904) | daily, 1877–1902 | each mark = one observation; two areal dims → latitude |
+| Modern butterfly | 10× the 1904 density | full century, nine cycles, color = log area |
+| California pollution | 28,800 readings | 2,400 squares × 12 maps |
+| Compound interest | full grid × rates | capital × time, repeated per interest rate |
+| Tokyo weather history | 414 data pieces | town × year × month × day × day/night + summary rows |
+| Tokyo weather almanac | 1,826 days | decade by town × year × month × day; year-by-day matrix compounded by month |
+| Java timetable | 16 variables | single sheet |
+
+**Density threshold:** high-information graphics convey "a spirit of quantitative depth and statistical integrity"; emaciated, data-thin designs provoke suspicion — rightfully — about the quality of the underlying measurement and analysis. The Tokyo almanac is the master move: it apportions *both* of the paper's dimensions to one variable (time), splitting it fine-to-coarse (day within month within year) to stretch a compact display across 1,826 days.
+
+> Implicit formula: **data density = (number of data entries) / (area of display).** Maximize it only as far as legibility holds; small multiples buy density cheaply because the design is decoded once.
+
+---
+
+## §9. Multivariate Tables — LSAT Grid and the Gotti Courtroom Chart (pp.29–31)
+
+Numbers on a plane can multiply too; two table examples close the gallery.
+
+**The LSAT bivariate grid (NYU School of Law, 1983–84):** GPA (rows) × LSAT percentile (columns) knits together every combination of grades and test scores. Each cell holds **two numbers** — applicants *and*, of those, the number actually admitted (e.g. "7-0"). The right and bottom margins sum to univariate distributions, with grand totals at lower right. The table could itself become a single cell in a higher table comparing many schools — multivariate nesting.
+
+**The Gotti chart — "Criminal Activity of Government Informants" (United States v. Gotti, 1987):** a courtroom exhibit, supplied by the defense, listing 69 crimes (murder, drugs, kidnapping, down to "pistol whipping a priest") committed by 7 prosecution witnesses. It is built to be read **both horizontally and vertically**: across a row you see how widely one crime spreads among witnesses; down a column you see one witness's full record, and the eye catches unbroken runs of X's (one witness "has something of a streak going"). Only **37% of all possible cells are marked**, yet the marked ones dominate. Placement is rhetorical — the most obnoxious crimes sit at the top (murder) and bottom (pistol-whipping a priest), exploiting the visual prominence of those edge positions.
+
+**Why tables win in a trial:** speech is linear, one-dimensional, non-reversible "talk talk talk"; a visual table is simultaneously a **wideband** and a **perceiver-controllable** channel, letting each juror read, re-edit, and reason at their own pace and in their own order.
+
+---
+
+## §10. The Failure Mode — Chartjunk and the Duck (pp.33–35)
+
+The opposite of escaping flatland is *decorating* it. The good methods are **self-effacing**: when they work, only the data is visible and the container disappears. Chartjunk inverts this — the apparatus attracts attention to itself.
+
+**The "duck" (from Venturi's *Learning from Las Vegas*):** when Modern architects abandoned applied ornament, they distorted the whole building *into* ornament — the container became the message. Pugin's warning applies to data: it is fine to decorate construction, never to construct decoration. A 3D bar chart whose third axis carries no variable is a duck; the "diamonds" chart with a fishnet-stocking thigh-graph is a duck that also confuses changes in money's value with changes in diamond prices during high inflation.
 
 **Named failure modes:**
 
-| Failure Mode | Description | Example |
+| Failure mode | Description | Example in the chapter |
 |---|---|---|
-| Pridefully Obvious Presentation | Display apparatus overwhelms data content | Orreries directing attention to gears, not planets |
-| Data decoration | Ornament substitutes for data | Scheiner's patron symbols filling blank sunspot disks |
-| Content-empty third dimension | 3D rendering with no third-variable encoding | Diamonds chart with fishnet grid and cartoon |
-| Chartjunk contempt | Assumes the audience needs distraction | Any "lively" infographic with icons replacing data marks |
-| Embellishment over data | Symbols where data should be | Cartographers filling unknown geography with elephants |
+| Pridefully Obvious Presentation | Display apparatus overwhelms the data content | Orreries directing the eye to gears, not planetary motion |
+| Embellishment-for-data | Ornament fills space that should hold data | Scheiner's patron/religious emblems in the blank, spotless disk regions |
+| The Duck | The container becomes the message; content-empty third dimension | Diamonds fishnet-thigh chart; any 3D shell with no third variable |
+| Data posterization | Closely-read data styled like a poster (strong image, big type, thin data) | Chartjunk "performances" that read like posters, not maps |
+| Contempt for the audience | Assumes readers are bored and stupid; adds ornament to "enliven" | "Lively" infographics with icons replacing data marks |
+| False escape / pretend dimensions | Fake dimensions added to an impoverished dataset | The royal dining table so caught in flatland it cannot hold the pots |
 
-Jonathan Swift's indictment of 17th-century cartographers applies equally to modern chartjunk designers:
-> "With savage pictures fill their gaps, / And o'er unhabitable downs, / Place elephants for want of towns."
-> — Jonathan Swift, as quoted in *Envisioning Information*
+Jonathan Swift's 17th-century cartographers, who filled unknown territory with pictures of elephants for want of real towns, are Tufte's image for substituting embellishment where data should be.
+
+**The moral premise — respect for the audience.** Chartjunk rests on the false belief that "if the numbers are boring, you've got the wrong numbers" is *not* true — when in fact it is. Consumers of graphics are usually smarter about the subject than the people decorating it. Standards of excellence are set by high-quality maps — bountiful detail, layered close reading, rigorous survey data — not by posters meant for viewing at a distance.
+
+> "Readers of a report should be unaware of its design." — Paul Rand, quoted in Tufte, *Envisioning Information*
+
+(Reinforced by E.B. White: no one writes decently who distrusts the reader's intelligence. Clarity and simplicity are the opposite of simple-mindedness — they are the highest respect for an alert, busy, caring reader.)
 
 ---
 
-## §9. Historical Lineage
+## §11. Historical Lineage
 
-The history of information design is a history of escaping flatland. Tufte traces this across 500 years:
-
-| Period | Development | Escape technique |
+| Date | Development | Escape technique |
 |---|---|---|
-| 15th-century Italy | Florentine architects perfect perspective geometry | Conventional 3D projection on 2D surface |
-| 1570 | Euclid's *Elements* (Billingsley edition) | Paper fold-up models for teaching solid geometry |
-| 1610–1612 | Galileo's sunspot observations | Projection method to mark spots onto paper flatland at correct scale and position |
-| 1613 | Galileo's *Istoria e Dimostrazioni* | Small multiples + time-sequenced series |
-| 1626–1630 | Scheiner's *Rosa Ursina sive Sol* | Apparent-path diagrams: tracking structure across a stationary disk |
-| c. 1735 | Tomlinson's dance notation | Perspective floor plan + coded gesture + time sequence |
-| 1800 | Orreries | Physical 3D simulation (but: Pridefully Obvious Presentation) |
-| 1904 | Maunder's butterfly diagram | Micro/macro aggregation, data compression to one content dimension |
-| 1937 | Java railroad timetable | 16-variable layering + multiple-functioning diagonals |
-| 1948–54 | Ise Shrine travel guide | Mixed perspective and flat plan in one document |
-| 1980s | California air pollution maps | Computer-generated small multiples × 3 pollutants × 4 times |
-| 1984–85 | Tokyo weather almanac | 1,826-day symbol matrix, year × month × day structure |
+| 15th c. Italy | Florentine architects perfect perspective | Conventional 3D projection on a 2D surface |
+| 1570 | Euclid's *Elements*, Billingsley ed. | Paper fold-up models for solid geometry |
+| 1610–1612 | Galileo's sunspot observations | Projection: marking spots onto paper at true scale/position |
+| 1613 | Galileo's *Istoria e Dimostrazioni* | Visual reasoning: data → mechanism |
+| 1626–1630 | Scheiner's *Rosa Ursina* | Time-indexed small multiples; apparent-path diagrams |
+| 1735 | Tomlinson's dance notation | Floor-plan + coded gesture + time, with double-functioning numbers |
+| 1800 | Orreries | Mechanical 3D simulation — but Pridefully Obvious Presentation |
+| 1822 | Barème Universel interest tables | Tabular small multiples (capital × time × rate) |
+| 1904 | Maunder's butterfly diagram | Micro/macro; areal dims reduced to latitude |
+| 1937 | Java railroad timetable | 16-variable layering; multiple-functioning diagonals |
+| 1948–54 | Ise Shrine travel guide | Hybrid perspective + flat map; the cost of flatland made visible |
+| 1980s | California air pollution maps | Computer small multiples, 3 pollutants × 4 times |
+| 1984–85 | Tokyo weather almanac | 1,826-day matrix, both paper dimensions spent on time |
+| 1985 | Japan weather cross-section | Space-time narrative as a vertical side profile |
+| 1987 | LSAT grid; Gotti courtroom chart | Bivariate tables read both directions |
 
 ---
 
-## §10. Do/Don't Summary
+## §12. Do/Don't Summary
 
 | Principle | Do | Don't |
 |---|---|---|
-| Dimensionality | Pack multiple variables into one display using encoding | Dedicate separate displays to each variable |
-| Data density | Maximize information per unit area | Fill whitespace with decoration |
-| Small multiples | Hold design constant, vary the data | Redesign each panel; scatter across pages |
-| Layering | Use distinct encodings per layer | Let layers blur into each other or fight for attention |
-| Color | Encode a specific named variable | Use color for emphasis or decoration |
-| Narrative | Plot the path through space/time | Show only snapshots |
-| Self-effacement | Make the design invisible, data visible | Make the container the message (duck) |
-| Audience respect | Assume readers are alert and caring | Add ornament to "enliven" boring numbers |
-
-Tufte holds that the moral premise of information design is respect for the audience. Readers are attentive and engaged; they may be pressed for time, but they are not incapable. Simplicity and clarity are not concessions to limited comprehension — they are the highest form of rigor.
+| Goals first | Name the two goals: more dimensions AND more density | Optimize one while ignoring the other |
+| Taxonomy | Use the five methods; treat density as a goal | List "six strategies" with density as a peer method |
+| Compression | Compress deliberately and show the seam (Ise Shrine) | Pretend nothing was lost when scale jumps |
+| Variation | Show average AND variation (Fisher, Maunder) | Reduce the data to its mean |
+| Multiple-functioning marks | Let one mark do several jobs (Java diagonal = 6) | Add a separate mark per variable |
+| Tables | Build grids readable both ways (Gotti, LSAT) | Settle for a one-direction list |
+| Density | Push density to the legibility limit | Ship emaciated, data-thin displays |
+| Self-effacement | Make the container vanish, the data show | Build a duck — container as message |
+| Audience | Assume an alert, caring, busy reader | "Enliven" numbers with ornament |
 
 ---
 
-## §11. Application Checklist
+## §13. Application Checklist
 
-Before shipping any chart, map, or data display:
+Before shipping any chart, map, table, or display:
 
-- [ ] How many variables does the data have? How many does the display encode?
-- [ ] Is every mark in the display doing at least one job? Can any mark do two jobs?
-- [ ] Does the display pass the micro/macro test: legible detail AND legible overall pattern?
-- [ ] If multiple panels: is the design truly constant, or does composition change alongside data?
-- [ ] Is data density above the minimum for the subject's complexity? ("Emaciated data-thin designs provoke suspicions.")
-- [ ] Is there any third dimension, ornamentation, or color that encodes no variable? Remove it.
-- [ ] Does the display container (axes, grid, border, legend) take up more area than the data? If so, reduce the container.
-- [ ] Would a reader familiar with the encoding be able to decode any panel without re-reading instructions?
+- [ ] State the two goals for this display: which variables/dimensions, what target density?
+- [ ] Pick which of the five methods apply, and open the matching sibling skill for mechanics.
+- [ ] How many variables does the data have vs. how many does the display encode?
+- [ ] Is every mark doing at least one job? Can any mark do two (a multiple-functioning element)?
+- [ ] Does it pass micro/macro: legible detail AND legible overall pattern? Does it show variation, not just the mean?
+- [ ] If compressing or mixing scales, is the seam honest (Ise Shrine) rather than hidden?
+- [ ] If tabular, can it be read both horizontally and vertically? Do margins carry the univariate sums?
+- [ ] Is density above the suspicion threshold for the subject's complexity, while still legible?
+- [ ] Any third dimension, ornament, or color encoding no variable? Remove it (no ducks).
+- [ ] Does the container (axes, grid, border, legend) out-area the data? Shrink the container.
+- [ ] Would a reader who knows the encoding decode any panel without re-reading the instructions?
+
+Source: *Envisioning Information* (Edward Tufte, Graphics Press, 1990), ch. 1 "Escaping Flatland," pp. 12–35 (the chapter thesis and two goals appear on pp.12–13; the five methods are previewed p.33).

@@ -1,140 +1,138 @@
 ---
 name: tufte-multifunctioning-elements
-description: Apply Tufte's principle of multifunctioning graphical elements — designing every visual component to carry multiple data dimensions simultaneously, including data-built marks, data-based grids, double-functioning labels, and the named design forms that result.
+description: Apply Tufte's principle of multifunctioning graphical elements — designing every visual component to carry several data functions at once via data-built marks, data-based grids, double-functioning labels, and the named design forms (range-frame, dot-dash-plot, quartile plot, white grid) that result.
 tags: [tufte, data-visualization, design-efficiency, information-density, multifunctioning]
 ---
 # Multifunctioning Graphical Elements
 
-**Source:** The Visual Display of Quantitative Information (VDQI), 1983/2001, Chapter 7 (pp. 138–159); named design forms first introduced in Chapter 6 (pp. 123–137) and reframed within the multifunctioning conceptual superstructure in Chapter 7.
+**Source:** *The Visual Display of Quantitative Information* (VDQI), 1983 / 2nd ed. 2001. The named design forms are introduced in **Chapter 6, "Data-Ink Maximization and Graphical Design,"** and the unifying principle in **Chapter 7, "Multifunctioning Graphical Elements"** (≈ pp. 123–160, 2nd ed.).
+
+*Verification note:* the VDQI source file was not available on disk at authoring time, so figure names and concepts below are verified against knowledge of Ch. 6–7 rather than against literal page scans. Attribution is given at chapter level on purpose; per-figure page numbers are deliberately omitted to avoid false precision. A handful of over-precise figures from a prior draft (a "rugplot" definition, a "~87% ink reduction," a "0.05 sq in" Chernoff size, a "48-state" road-stripe count) were removed because they could not be confirmed.
 
 ## Overview
 
-The same ink should often serve more than one graphical purpose. A graphical element may carry data information and also perform a design function usually left to non-data-ink. Or it might show several different pieces of data. Such *multifunctioning graphical elements*, if designed with care and subtlety, can effectively display complex, multivariate data. The conventional graphical frame performs only a modest design function — separation of the grid and data measures from the labels, and a place to hang grid ticks. With all that ink doing so little, it is a prime candidate for mobilization. Hence the range-frame, the quartile frame, and the dot-dash-plot. The principle: **"Mobilize every graphical element, perhaps several times over, to show the data."** (VDQI, p. 138)
+The same ink should usually do more than one job. A single graphical element can carry data *and* perform a design function normally handed to non-data-ink, or it can encode several variables at once. Designed with care, these *multifunctioning elements* pack complex, multivariate data into a small, legible space; designed carelessly, they collapse into puzzles only their inventor can read. The standard rectangular frame is the prime target: it does almost nothing (separating data from labels, holding ticks), so it is the first element to put to work.
 
-The danger of multifunctioning elements is that they tend to generate graphical puzzles, with encodings that can only be broken by their inventor. Design techniques for enhancing graphical clarity in the face of complexity must therefore be developed alongside multifunctioning elements.
+> "Mobilize every graphical element, perhaps several times over, to show the data." — Tufte, *VDQI*, Ch. 7
 
-## §1. Data-Built Data Measures
+## §1. Data Measures Built From the Data
 
-The graphical element that actually locates or plots the data is the *data measure*. The ink of the data measure can itself carry data. Building data measures out of the data increases the quantitative detail and dimensionality of a graphic.
+The *data measure* is the ink that actually locates or plots the value. When the data measure is built out of the data itself, the graphic gains quantitative detail and dimensions at no extra ink cost. Tukey's rule, as Tufte adopts it: if a mark must be made, make it carry meaning, and the simplest meaningful mark is a digit.
 
-**Stem-and-leaf plot** (John Tukey): The distribution of a variable constructed from the actual digits. Tukey's principle, as Tufte cites it: if a mark must be made, it should carry meaning — and the simplest meaningful mark is a digit. (VDQI, p. 140) The data form the data measure.
+| Example (VDQI Ch. 7) | The data measure is… | Functions carried |
+|---|---|---|
+| **Stem-and-leaf plot** (Tukey) | The actual digits of each value | Plots the distribution *and* preserves every original number |
+| **Ayres' chart of U.S. divisions in France, WWI** | Each division's own ID number | (1) count of divisions in France per month, (2) which specific divisions, (3) how long each one stayed — triple-functioning |
+| **Chernoff faces** (Herman Chernoff) | A cartoon face per observation; each feature (nose length, eye shape, brow angle) = one variable | Many variables per point; outliers register instantly as faces that look like "strangers" in the neighborhood |
 
-**Colonel Ayres' WWI divisions** (p. 141): A triple-functioning data measure. Each American division's numerical designation (a name) becomes both the data mark and the timeline. Shows simultaneously: (1) the number of divisions in France each month, June 1917 to October 1918; (2) which particular divisions were in France each month; and (3) the duration of each division's presence in France. Every drop of ink carries three distinct data display functions.
+Tufte frames the Chernoff face as roughly the outer limit of graphical economy — and of eccentricity. Faces stay readable when drawn small, because the perceptual system reads a face holistically.
 
-**Chernoff faces** (p. 142): Each plotted point is a cartoon face; each facial feature (nose length, eye shape, brow angle) encodes a separate variable. Legible at 0.05 square inches per face. Outliers are recognizable as "strangers" — inconsistent with others in the neighborhood. "With cartoon faces and even numbers becoming data measures, we would appear to have reached the limit of graphical economy of presentation, imagination, and, let it be admitted, eccentricity." (VDQI, p. 142)
+## §2. The Principle Is General, Not Just Statistical
 
-## §2. The Principle Is General — Not Limited to Statistical Graphics
+Multifunctioning is a design insight, not a statistics technique. Tufte proves the point with non-chart artifacts where physical form *is* the data.
 
-Chapter 7 establishes that multifunctioning is a general design insight, not a statistical technique. Two non-statistical examples:
-
-**Easter Wings by George Herbert, 1593–1633** (p. 143): A shaped poem in which the length of each line encodes quantity — all done 150 years before Playfair invented statistical graphics. Tufte observes that line length double-functions throughout: longer lines accompany themes of wealth and abundance; shorter lines correspond to poverty and diminishment; and intermediate lengths mark transitions and change. (VDQI, p. 143) Space — line length — does double duty as text and as a magnitude display. The visual shape IS the data.
-
-**W. J. Youden's typographic display** (p. 143): The statistician Youden set a sentence about the Normal Law of Error in concentric lines of increasing then decreasing width. The typographic form — line widths widening and narrowing concentrically — encodes the bell-curve shape of the distribution being described. Word arrangement serves as both text and diagram.
-
-**Road stripe chart** (p. 144): "The visual data as the data measure, as in the living histogram." The chart shows how 48 U.S. states once differed in their engineering standards for painting lane stripes on road pavement. "Portrayed in the graphic is the actual physical pattern painted on the road, with 48 U.S. states ordered by the length of the painted mark." (VDQI, p. 144) The data mark IS the road stripe itself — the graphic element and the measured phenomenon are the same object.
+- **George Herbert, "Easter Wings" (1633):** a shaped poem whose line length encodes magnitude — long lines for abundance, short lines for poverty, intermediate lines for transition — written ~150 years before Playfair invented statistical graphics. Line length does double duty as text and as a magnitude display.
+- **W. J. Youden's typographic display of the Normal law:** a sentence set in concentric lines that widen then narrow, so the typography itself draws the bell curve it describes. Word arrangement serves as both prose and diagram.
+- **Road-stripe chart:** states ordered by the length of the lane stripe each one paints on pavement, drawn as the actual stripe pattern. The data mark *is* the measured object — the graphic element and the phenomenon are the same thing. (Same family of idea as a "living histogram," where the data points physically are the thing being counted — though that is a separate figure, not this one.)
 
 ## §3. Data-Based Grids
 
-Very occasionally the grid can report directly on the data, rather than being an arbitrary coordinate structure.
+Normally a grid is arbitrary coordinate scaffolding (non-data-ink). Occasionally it can report data directly — erase it and you erase measurements.
 
-**Plasma physics grid** (p. 145): The grid is formed by the location of measurement instruments; plain dots register a zero reading in contrast with the white background where no readings were taken. Erasing the grid would erase measured data.
-
-**Galton's bivariate frequency table** (p. 145): Adult children heights vs. mid-parent heights. The arrangement of data in this table-graphic yields an internal grid — a rare example of data as grid. The grid IS the data.
-
-**Mitchell Map, 1783** (p. 146): The labeled grid is the element of interest, not the map. Each labeled square on the Mitchell map has a counterpart on the modern map, making relative stretching, compressing, and twisting of the earth's surface perceptible.
-
-**Playfair's National Debt of Britain** (p. 148): Vertical grid lines placed at historically significant events, not at regular time intervals. Tufte calls the data-based grid a shrewd device because it works with the data rather than against it — and notes the technique remains underused in contemporary graphical practice. (VDQI, p. 148)
-
-**3D religion and politics charts** (p. 147): Two 3D displays comparing the effect of religion — taking into account party affiliation — on the presidential vote in 1956 and 1960. The grid presents data on the surface of the rock; on the sides, the grid is conventional. Reading the slopes vertically shows the party effect; reading diagonally shows the religion effect; reading in the other direction shows the persistent effect of party in both elections. The viewing architecture of the 3D surface enables simultaneous access to multiple data relationships that a flat chart would force into separate panels.
+| Example | How the grid carries data |
+|---|---|
+| **Plasma-physics readings** | Grid is formed by the positions of the measuring instruments; a plain dot = a zero reading; blank background = no reading taken |
+| **Galton's bivariate height table** | Children's heights vs. mid-parent heights; the arrangement of the data *is* the internal grid — data as grid |
+| **Mitchell map (1783) vs. modern map** | The labeled grid, not the territory, is the subject; matching squares reveal how the old map stretched and twisted the earth's surface |
+| **Playfair's national-debt chart** | Vertical grid lines placed at historically significant events, not at regular time intervals — the grid works with the data, a device Tufte notes is still underused |
+| **3-D religion-and-politics charts (1956, 1960 vote)** | Grid lies on the data surface; reading vertical / diagonal / horizontal lines of sight isolates party effect, religion effect, and the persistence of party across both elections |
 
 ## §4. Double-Functioning Labels
 
-Data-based coordinate lines lead to *data-based labels*. The issue is the same: why not use the ink to show data?
+Once coordinate lines can report data, so can labels. The test is the same: why spend ink on a round number when it could report a real value?
 
-**Range-frame with range-labels** (pp. 149, 152): Frame lines trimmed to extend only to the measured limits of the data; the endpoints display the actual minimum and maximum values rather than round numbers. In Tufte's assessment, the range-frame with range-labels outperforms the version using round-number labels because it is more precise and eliminates two unnecessary ticks; both versions, however, are improvements over the standard passive frame. (VDQI, p. 149) Example: standard axis labeled 0, 10, 20, 30, 40 replaced by frame running from 4 to 37 — two fewer ticks, more precise boundaries.
+- **Range-frame with range-labels:** trim the frame to the data's extent and let the endpoints display the actual minimum and maximum instead of round numbers. More precise, and it deletes the two outermost ticks. Both range versions beat the standard passive frame.
+- **Identification numbers as a time index:** in the tungsten thermal-conductivity chart, each curve's circled ID code names the study *and*, if ordered by publication date, also encodes the time sequence of the measurements — extra information for no extra ink.
+- **Grid increments relocated to the data path:** move x-axis increments up to mark the curve's actual path, and replace the round-number y-scale with the exact data values; the column of data-positioned numbers then acts as the dot-dash-plot's marginal dashes.
+- **Enhanced dot-dash-plot with data labels:** margin numbers can replace the frame, the range-frame, and the coordinate ticks at once — showing both marginal distributions and the exact paired values per observation. Best for small sets (≈ 30 observations or fewer) where fine detail matters.
 
-**Identification numbers as temporal index** (pp. 149–150): In the thermal conductivity of tungsten chart, each plotted curve bears a circled identification number (author + year code). The numbers double-function: they identify the particular study AND, if ordered by publication date, would also indicate the time sequence in which the conductivity determinations were made. "This extra information requires no additional ink." (VDQI, p. 150)
+## §5. The Named Design Forms
 
-**Grid increments relocated to the data path** (p. 151): X-axis grid increments moved upward to mark the actual path of the data; the round-number Y-scale replaced by the exact data values at each point. "The Y-scale now resembles the dashes of the dot-dash-plot, with the vertical column of data-positioned numbers serving as the dashes to indicate the marginal distribution." (VDQI, p. 151)
+Four forms come out of putting the frame, axis, and grid to work:
 
-**Enhanced dot-dash-plot with data labels** (p. 152): The numbers in the margin eliminate the standard frame and even a range-frame, replace the coordinate ticks, show the marginal distribution of both variables, and record the exact values of the two measurements made on each unit of observation. This graphical arrangement "performs better for smaller data sets (say 30 observations or less) and when a fine level of detail is required." (VDQI, p. 152)
+- **Range-frame** — frame lines trimmed to the actual data extent on both axes; endpoints become the data's min and max. Replaces the standard non-data-bearing rectangle. Self-explanatory, no key needed.
+- **Dot-dash-plot** — a scatter plus a marginal "dash" for every observation projected onto each axis. The density of dashes shows each variable's marginal distribution while the dots show the joint (bivariate) distribution. It fuses the two fundamental statistical graphics: the marginal frequency distribution and the bivariate distribution.
+- **Quartile plot** — an "erased" box plot: drop the filled box and keep only the five-number summary (minimum, lower quartile, median, upper quartile, maximum), often with the median offset. Same information as Tukey's box plot with far less ink and no enclosed region for the eye to fight.
+- **White grid** — instead of dark grid lines drawn around or over bars, thin white lines cut *through* the bars at scale intervals. The line both partitions the scale and measures the bar, reading more precisely than ticks alone, at near-zero added ink.
 
-## §5. Named Design Forms
+### Dot-dash-plot vs. rug plot vs. quartile plot (do not conflate)
 
-**Range-frame:** Frame lines trimmed to the actual extent of the data on both axes. Frame endpoints become data (minimum and maximum). Replaces the standard non-data-bearing frame. Self-explanatory without decoding instructions.
+| Form | What it displays | What each mark means | Tufte's own term? |
+|---|---|---|---|
+| **Dot-dash-plot** | Bivariate scatter + both marginal distributions | One dash per observation, at that observation's value on each axis | **Yes** (VDQI Ch. 6) |
+| **Rug plot** | One variable's marginal distribution along an axis | One tick per observation — i.e. the dot-dash-plot's marginal dashes for a single axis | **No.** Modern statistics term (e.g. `geom_rug`); it corresponds to Tufte's marginal dashes but Tufte does not name it |
+| **Quartile plot** | A distribution's five-number summary | Min, Q1, median, Q3, max only — *not* individual observations | **Yes** (VDQI Ch. 6) |
 
-**Dot-dash-plot:** A scatterplot combined with tick marks placed on each axis at the exact position of each individual data observation — one tick per data point per axis. The density and spacing of these per-observation ticks reveals the marginal frequency distribution of each variable along that axis. Combines two fundamental graphical designs: the marginal frequency distribution and the bivariate distribution. "The dot-dash-plot combines the two fundamental graphical designs used in statistical analysis, the marginal frequency distribution and the bivariate distribution." (VDQI) The axis ticks are individual observation positions — analogous to a rug plot on each axis — not quartile summaries. The quartile plot is a distinct, separate design form.
+The trap: dashes are per-observation positions; a quartile plot shows five summary statistics. They look superficially similar and are routinely mislabeled.
 
-**Rugplot:** A series of connected dot-dash-plots. The fringe of dashes connects a series of bivariate scatters; the dashes encourage the eye to notice how each plot filters and translates the data from one adjacent plot to the next. "The quantitative history of a single observation can be traced through a series of one- and two-dimensional contexts." (VDQI, p. 135)
+## §6. Puzzles, and the Verbal-vs-Visual Test
 
-**White grid:** Instead of background grid lines (non-data-ink), white lines cut through filled bars. Coordinate lines are more precisely read than tick marks alone. The white lines serve as both gridlines and data measurement aids simultaneously.
+Multifunctioning's failure mode is the *graphical puzzle* — a crypto-graphic the reader must decrypt. The diagnostic is mechanical: **if you must read the graphic verbally rather than visually, it has failed.** A two-variable color map with crossed scales (e.g. ~16 mixed hues) forces the reader to run little naming phrases through their head — "purplish means high on both" — instead of just seeing the value. In a good graphic the visual-to-verbal translation is learned instantly and runs automatically, so the image flows straight through the verbal decoder.
 
-**Quartile plot:** An erased box plot — remove the filled box, retain only minimum, maximum, the two quartile endpoints, and the median. The original Tukey box plot requires approximately 80 straightedge placements to read parallel plots; the quartile plot requires approximately 10 — same data content, ~87% reduction in ink. Distinct from the dot-dash-plot: shows 5 summary statistics per variable, not individual observation positions.
+> "Seeing is forgetting the name of the thing one sees." — Paul Valéry (quoted in *VDQI*)
 
-## §6. Puzzles and the Hierarchy of Information
+**Color vs. gray-scale for ordered quantities:** gray has an intrinsic visual ordering (light → dark), so a gray ramp shows magnitude more directly than color, which has no natural order and triggers the verbal-decoding loop. Tufte's galaxies map used about ten gray shades effectively. Use color for *categories*, gray for *ordered amounts*. The organizing job for any complex graphic is to structure the flow of information so the eye can peel back one layer of data at a time.
 
-The complexity of multifunctioning elements can sometimes turn data graphics into visual puzzles — "crypto-graphical mysteries for the viewer to decode." (VDQI, p. 153)
+## §7. Viewing Architecture: Multiple Lines of Sight
 
-**The puzzle diagnostic:** "A sure sign of a puzzle is that the graphic must be interpreted through a verbal rather than a visual process." (VDQI, p. 153) A 16-color county map with two crossed color scales forces viewers to "run little phrases through their minds" — matching color to meaning verbally. In a non-puzzle graphic, the translation of visual to verbal is quickly learned, automatic, and implicit so that the visual image flows right through the verbal decoder.
+A dense multifunctioning graphic earns its complexity when the eye can travel several clean, independent paths through it. Tufte calls the analysis of those paths the **viewing architecture**.
 
-Paul Valéry: "Seeing is forgetting the name of the thing one sees." If the viewer must name the color to read the value, the design has failed.
+- **Keep each line of sight steady.** Every reading direction should stay fixed (ideally horizontal or vertical) so the eye watches for variation *off* that flat line. Ayres' WWI-divisions chart supports three: the horizon profile of the rising time-series, the vertical build of each bar, and the horizontal extent of each division's stay. Every drop of ink serves three functions, yet each function reaches the eye with its own integrity.
+- **Tax table-graphic** (Current Receipts of Government as a % of GDP, 1970 and 1979, for ~15 OECD countries) reads three ways at once:
+  - *Vertical* — countries ranked by tax level within each year, names spaced in proportion to the percentage.
+  - *Horizontal* — paired columns show each country's change over the decade.
+  - *Diagonal* — the slope of each connecting line shows the overall upward trend; unusual slopes stand out.
+  The data is both integrated (connected content) and separated (uncluttered, distinct paths). Diagramming these arrows is what Tufte means by analyzing a graphic's viewing architecture, and it is how you both create and evaluate hierarchical complex displays.
 
-**Color vs. gray-scale:** "Because they do have a natural visual hierarchy, varying shades of gray show varying quantities better than color." (VDQI, p. 154) Ten gray shades worked effectively in the galaxies map. Color generates verbal decoding loops — mnemonic phrases *about* the phrases required for graphical decoding. Gray-scale provides a directly comprehended order to the data measures.
+*Related but a different book:* the "read at a distance vs. up close" idea (overview vs. fine microstructure) is Tufte's **micro/macro reading**, developed in *Envisioning Information* (1990), Ch. 2 — not a separate VDQI passage. Cite it there, not here.
 
-**The organizing principle:** Central to maintaining clarity in the face of complexity are graphical methods that *organize and order the flow of graphical information* presented to the eye. The graphic must enable the viewer to peel back layer after layer of data.
+## §8. Standard → Multifunctioning Redesign (what the ink gains)
 
-## §7. Multiple Viewing Depths and Viewing Angles
-
-Complex multifunctioning graphics support hierarchical reading at multiple distances and directions.
-
-**Three viewing depths** (p. 155):
-1. **Distant overview:** what is seen from a distance — overall structure, usually aggregated from underlying microstructure
-2. **Close detail:** what is seen up close and in fine detail — the microstructure of the data
-3. **Implicit structure:** what is seen implicitly, underlying the graphic — that which is behind the graphic, the context or model it rests on
-
-**Multiple viewing angles** (p. 155): "Each separate line of sight should remain unchanging (preferably horizontal or vertical) as the eye watches for data variation off the flat of the line of sight." (VDQI) Ayres' WWI divisions graphic achieves three: "the profile of the horizon for the upward-moving time-series, the vertical for the composition of the bar, and the horizontal for each division's stay." Three separate visual angles make the flow of information coherent; thus while every drop of ink serves three different data display functions, each of the three comes to the eye with its own independence and integrity.
-
-**15-country government tax table-graphic** (pp. 158–159): Current Receipts of Government as a Percentage of GDP, 1970 and 1979, for 15 countries. This table-graphic organizes data for viewing in several directions simultaneously:
-- *Vertical read:* ranks all 15 countries by tax collections in 1970, and again in 1979, with names spaced in proportion to the percentages — a ranked display at each time point
-- *Horizontal read:* paired comparisons across columns show how each country's number changed over the decade
-- *Diagonal read:* the slopes of the connecting lines, read down the collection, show the overall upward pattern; lines of unusual slope stand out
-
-"The information shown is both integrated and separated: integrated through its connected content, separated in that the eye follows several different and uncluttered paths in looking over the data." (VDQI, p. 159) The viewing architecture diagram for this graphic shows overlapping horizontal, vertical, and diagonal arrows — all simultaneously navigable.
-
-"Such an analysis of the *viewing architecture* of a graphic will help in creating and evaluating designs that organize complex information hierarchically." (VDQI, p. 159)
-
-## §8. Quantitative Summary
-
-| Standard design | Multifunctioning redesign | Gain |
+| Standard design | Multifunctioning redesign | What the ink gains |
 |---|---|---|
-| Box plot (parallel) | Quartile plot | ~87% reduction in ink; same 5-number summary |
-| Scatter with frame to round numbers | Range-frame | Frame endpoints become data (min/max); 2 fewer ticks |
-| Scatter only | Dot-dash-plot | Per-observation marginal ticks added at no space cost |
-| Round-number axis labels | Labels at actual data values | Tick marks eliminated; precision increases |
-| Bar chart with background grid | White grid through bars | Grid ink approaches zero; coordinate precision unchanged |
-| Color for ordered quantities | Gray-scale | Removes verbal decoding; direct visual hierarchy |
+| Scatter inside a full frame drawn to round numbers | Range-frame | Frame stops at data min/max; endpoints report the range; two ticks deleted |
+| Plain scatter | Dot-dash-plot | Adds each variable's marginal distribution as per-observation dashes, at ~no extra space |
+| Tukey box plot (parallel comparisons) | Quartile plot (erased box) | Same five-number summary, far less ink, no enclosed box to fight |
+| Round-number axis labels | Data-value labels at data positions | Labels report measured values; coordinate ticks eliminated |
+| Bars over a dark background grid | White grid cut through the bars | Grid both partitions and measures; near-zero added ink, more precise read |
+| Sequential color for ordered amounts | Gray-scale ramp | Removes the verbal color-decoding loop; gray carries intrinsic order |
+| Curve labels that only name the study | ID numbers ordered by date | Same labels also encode the time sequence, no extra ink |
+| Grid lines at regular intervals | Grid lines at meaningful events / thresholds | Grid reports on the data instead of imposing an arbitrary lattice |
 
 ## §9. Failure Modes
 
-| Failure | Diagnostic | Fix |
+| Failure mode | Diagnostic | Fix |
 |---|---|---|
-| Graphical puzzle | Viewer must verbalize to decode ("purple means both high mortality AND high density") | Replace crossed color scales with gray-scale or separate panels |
-| Single-function frame | Frame extends to arbitrary round numbers; no data at endpoints | Trim to range-frame; put actual min/max at endpoints |
-| Axis as coordinate only | Axis blank between ticks; marginal distribution invisible | Add per-observation ticks (dot-dash-plot) or relocate grid increments to data path |
-| Round-number labels | Axis shows 0, 25, 50, 75, 100 when data runs 18–73 | Replace with actual data values at data positions |
-| Conflating dot-dash-plot with quartile plot | Axis ticks described as quartile summaries | Dot-dash-plot ticks = one tick per observation at its position; quartile plot = 5 summary statistics only |
-| Single viewing angle | Complex multivariate data forced into one reading direction | Design for vertical + horizontal + diagonal simultaneous readings |
+| **Graphical puzzle** | The graphic must be decoded verbally (you name the color/symbol to read the value), not seen | Replace crossed color scales with a gray ramp or split into separate panels |
+| **Inventor-only encoding** | A multifunctioning element only its designer can parse | Add organizing structure / an in-place legend, or simplify until the decode is automatic |
+| **Single-function frame** | Rectangle runs to arbitrary round numbers; endpoints carry no data | Trim to a range-frame; place the actual min/max at the endpoints |
+| **Coordinate-only axis** | Axis is blank between ticks; the variable's marginal distribution is invisible | Add per-observation dashes (dot-dash-plot) or relocate grid increments onto the data path |
+| **Round-number labels** | Axis reads 0 / 25 / 50 / 75 / 100 while the data runs 18–73 | Label the actual data values at their positions |
+| **Dot-dash / quartile conflation** | Marginal dashes described as quartile summaries, or vice versa | Dashes = one per observation at its value; quartile plot = five summary stats only |
+| **Single viewing angle** | Multivariate data crammed into one reading direction | Engineer distinct horizontal / vertical / diagonal lines of sight (viewing architecture) |
+| **Color for ordered amounts** | Reader needs a key to recover magnitude order from hues | Use a gray ramp (intrinsic order); reserve color for categories |
 
 ## §10. Do / Don't Pairs
 
 | Do | Don't |
 |---|---|
-| Build data marks from data values (stem-and-leaf, digit codes, shaped text) | Use uniform abstract dots when a digit or form would carry meaning |
-| Place grid lines at data-meaningful positions (events, significant thresholds) | Place grid lines at arbitrary round-number intervals |
-| Trim frame to actual data extent (range-frame) | Extend frame to arbitrary round numbers beyond data range |
-| Replace round-number axis labels with actual data values at data positions | Label axes 0, 25, 50, 75, 100 when data range is 18–73 |
-| Put per-observation ticks on axes to show marginal distribution (dot-dash-plot) | Conflate per-observation ticks with quartile summaries |
-| Use gray-scale for ordered quantities (direct visual hierarchy) | Use color when gray-scale ordering is sufficient |
-| Design for multiple simultaneous viewing angles and depths | Force all reading into a single direction |
-| Ask of every single-function element: what data could this also show? | Accept any graphical element at single-function without evaluation |
-| Recognize when a non-statistical artifact (poem, road stripe, typography) encodes data in its physical form | Assume multifunctioning elements apply only to statistical charts |
+| Build the data mark from the data (stem-and-leaf digits, ID codes, shaped text) | Use a uniform abstract dot when a digit or form could carry meaning |
+| Put grid lines at data-meaningful positions (events, thresholds) | Place grid lines at arbitrary round-number intervals |
+| Trim the frame to the actual data extent (range-frame), endpoints = min/max | Extend the frame to round numbers beyond the data range |
+| Replace round-number labels with actual data values at their positions | Label axes 0/25/50/75/100 when the data range is 18–73 |
+| Add per-observation marginal dashes to show distribution (dot-dash-plot) | Describe those dashes — or be described to — as quartile summaries |
+| Erase the box and keep the five-number summary (quartile plot) | Draw a full Tukey box when the box ink adds nothing |
+| Use gray for ordered amounts, color for categories | Use a color ramp where gray's intrinsic ordering would read faster |
+| Engineer multiple steady lines of sight; diagram the viewing architecture | Force all reading into one direction, or stack so many functions the decode goes verbal |
+| Ask of every single-function element: what data could this *also* show? | Accept any element at single-function without questioning it |
+| Recognize that a poem, road stripe, or typographic shape can encode data physically | Assume multifunctioning applies only to statistical charts |

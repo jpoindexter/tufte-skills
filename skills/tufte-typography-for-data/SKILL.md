@@ -1,209 +1,169 @@
 ---
 name: tufte-typography-for-data
-description: Tufte's framework for content-responsive typography in analytical displays — how space and linebreaks create or destroy meaning, direct labeling over legends, data paragraphs over LittleDataGraphics, idiosyncratic paragraphs for memory retrieval, weight hierarchy, and annotation as evidence — drawing on VDQI, EI, BE, and SWFE Chapter 2.
+description: Tufte's framework for content-responsive typography in analytical displays — how space and linebreaks make or destroy meaning, direct labeling over legends, data paragraphs over LittleDataGraphics, idiosyncratic paragraphs for memory retrieval, weight hierarchy, typeface choice, and annotation as evidence. Use when typesetting charts, tables, schedules, maps, labels, or any text that carries data. Draws on VDQI, EI, BE, and SWFE Chapter 2.
 tags: [tufte, data-visualization, typography, annotation, information-design, labeling, content-responsive]
 ---
 # Typography for Data Display
 
 ## Overview
 
-Typography in analytical displays operates on a primary ethical claim: "Typography exists to honor content" (Robert Bringhurst, cited in *Seeing With Fresh Eyes*, p. 19). The governing framework is the distinction Tufte draws in SWFE Chapter 2 between **content-responsive** and **content-hostile** typography. Content-indifferent production grids, squared-off margins, and legend-encoded labels all subordinate meaning to convenience of production. Content-responsive typography — where space, linebreaks, and label placement are driven by the data, not by style sheets — actively contributes to meaning and memory. For 1,500 years, paper cost constrained this; on display screens the marginal cost of space is zero, so content can now fully drive layout.
+Typography in an analytical display has one job: serve the content, never the production process. Tufte's governing distinction (Seeing With Fresh Eyes, Chapter 2) is between **content-responsive** typography — where space, linebreaks, and label placement are driven by the data and its structure — and **content-hostile** typography, where generic grids, squared-off margins, and legend boxes subordinate meaning to convenience of layout. For roughly 1,500 years the cost of paper constrained this; on screens the marginal cost of space is zero, so there is no longer any excuse for letting a style sheet outrank the content. The standard is borrowed from typographer Robert Bringhurst, whom Tufte cites:
+
+> "Typography exists to honor content." — Robert Bringhurst, cited in Tufte, *Seeing With Fresh Eyes*
 
 ---
 
 ## §1. Content-Responsive vs. Content-Hostile Typography
 
-The central framework of *Seeing With Fresh Eyes* (2020), Chapter 2 (pp. 49–63):
-
-In *Seeing With Fresh Eyes* (p. 49), Tufte argues that words and sentences inevitably interact with the spaces, other words, and sentences around them. Text can survive content-indifferent spacing, but surviving is not thriving. When generic production grids own the layout, the result is convenient production at the cost of inconvenient meaning. Space should instead respond to content — actively contributing to meaning — as it has long been practiced in poetry, maps, mathematics, code, comics, and scripts.
+Words and sentences interact with the spaces and the other words around them. Text can survive content-indifferent spacing, but survival is not the goal. When a generic production grid owns the layout, you get convenient production at the cost of inconvenient meaning. Space should instead respond to the content — actively building meaning — the way it long has in poetry, maps, mathematics, code, comics, and scripts.
 
 | Mode | Mechanism | Effect |
 |---|---|---|
-| Content-indifferent | Wordspaces adjusted to square off right margin | Syntactical structure lost; word salad |
-| Content-hostile | Linebreaks interrupt phrases mid-clause | Meaning actively suppressed |
-| Content-responsive | Linebreaks follow commas, semicolons, full stops; spaces clarify parallel structure | Meaning amplified; syntactic units visible |
+| Content-indifferent | Wordspaces stretched to square off the right margin | Syntactic structure lost; word salad |
+| Content-hostile | Linebreaks chop phrases mid-clause to fill a column | Meaning actively suppressed |
+| Content-responsive | Linebreaks follow commas, semicolons, full stops; spacing exposes parallel structure | Meaning amplified; syntactic units visible |
 
-**The 1,500-year grid problem:**
+**The 1,500-year grid problem:** Most of printed typographic history has been governed by grids built for production convenience, not reader comprehension. Layouts that shape space around meaning rather than around a fixed column width are simply better evidence.
 
-Tufte observes (*SWFE*, p. 17) that 1,500 years of printed typography have been governed by grids built for production convenience rather than reader comprehension. Content-responsive layouts — which shape space around meaning rather than around column widths — are simply better.
+**Do / Don't — linebreaks in a list sentence:**
 
-**The Ioannidis example (SWFE pp. 49, 52):**
-
-John Ioannidis's "Why Most Published Research Findings Are False" sentence is a 6-element list crammed into a single justified paragraph. Conventional typography: "5 semicolons must work very hard to signal each of the 6 elements. It is difficult to identify and to separate out the 6 list elements." Content-responsive typography gives each element its own line; readers scan up/down and compare elements, impossible in the conventional block.
-
-*Conventional:* "Why Most Published Research Findings Are False: when the studies conducted in a field are smaller; when effect sizes are smaller; when there is a greater number and lesser preselection of tested relationships; where there is greater flexibility in designs, definitions, outcomes, and analytical modes; when there is greater financial and other interest and prejudice; when more teams are involved in a field in chase of statistical significance."
-
-*Content-responsive:* Each condition on its own line. Structure already present in the prose becomes visible.
-
-**The Somerset Maugham passage (SWFE pp. 48, 52):**
-
-"The Book Bag" catalogues book types across 14 clauses. Conventional typography runs all clauses into a single block. Content-responsive linebreaks group by category (illness, travel, expedition) and make parallel syntax visible. Tufte notes that existing punctuation — commas, semicolons, full stops — already signals exactly where content-responsive linebreaks should fall, and the result clarifies meaning with minimal intervention.
-
----
-
-## §2. The Darwin Calculation: Scale of the Problem
-
-Darwin's *Origin of Species* provides concrete arithmetic for why content-responsive typography is not aesthetic but empirical.
-
-The *Origin* contains 14 chapters. The Table of Contents announces 133 topics. Each chapter also begins with that chapter's topic list — so each topic appears twice, yielding 1,962 words of topic lists. These use content-hostile linebreaks (grid-driven, squared-off margins), mushing section titles together.
-
-Tufte calculates (*SWFE*, p. 50) that applying content-responsive typography to Darwin's table of contents and chapter headings would cost just 2 or 3 additional pages in a 500-page book. The reader benefit compounds differently: 133 topics, each listed twice, read by perhaps 3 million serious readers plus millions more who skimmed *Origin* since 1859, yields a cumulative total of roughly 2 to 5 billion individual typographic impediments imposed across the work's readership history.
-
-The cost-benefit: 2–3 additional pages in a 500-page book eliminates billions of reader-impediments accumulated since 1859. Content-responsive linebreaks are never neutral — they are either imposing billions of friction events or eliminating them.
-
----
-
-## §3. Zero-Cost Space: The Screen Revolution
-
-For millennia, space on paper, vellum, parchment, clay, papyrus was costly. Words ran edge to edge. Then:
-
-Tufte observes (*SWFE*, p. 53) that display screens carry zero marginal cost for additional space. The entire historical constraint on layout economics has dissolved. Content can now drive every spatial decision — rather than cost-minimizing defaults, or style sheets and conventions that arbitrarily pre-specify how space is used.
-
-This inverts 1,500 years of typography economics. Continuing to use content-indifferent grids on screens is a choice to impose a pre-screen constraint that no longer applies.
-
-**Central-axis typography as a content-responsive signal:**
-
-Tufte argues (*SWFE*, p. 53) that central-axis (centered) typography offers a practical navigational advantage: both left and right margins are active, so readers see the full length of the next line before reading it, reducing the accidental line-skipping that occurs when the eye must search a flush-left margin. Ragged-left (flush-right) type serves dialogue, where the left margin identifies the speaker. Central-axis layout additionally gives readers awareness of the coming line's pace and rhythm that flush-left columns do not.
-
-| Typography mode | Signal value | Best use |
+| Practice | Verdict | Why |
 |---|---|---|
-| Justified (squared-off both margins) | None — wordspaces adjusted to fill | Dense reference text; cost-constrained media |
-| Ragged-right (flush left) | Linebreak position signals meaning | General analytical prose |
-| Central-axis (centered) | Reader sees next line length at both ends; assists pacing and rhythm | Poetry, announcements, data briefings |
-| Ragged-left (flush right) | Dialogue: each speaker identified in left space | Novel dialogue, scripts, transcripts |
+| Cram a 6-item list into one justified paragraph | Content-hostile | Punctuation alone must carry the structure; reader cannot scan or compare items |
+| Break each list element onto its own line | Content-responsive | The structure already in the prose becomes visible; items align for up/down comparison |
 
-**Poetry linebreaks as the model:**
+**The Ioannidis example (SWFE):** John Ioannidis's claim that most published research findings are false is stated as a six-condition list (smaller studies; smaller effect sizes; more and less-preselected tested relationships; more design/definition/outcome/analysis flexibility; more financial interest and prejudice; more competing teams chasing significance). Set as one justified block, five semicolons have to do all the work of separating six elements, and readers cannot pull them apart. Give each condition its own line and the list becomes scannable and comparable — nothing added, only the existing punctuation honored.
 
-> "More than meter, more than rhyme, more than images or alliteration or figurative language, line is what distinguishes our experience of poetry as poetry, rather than some other kind of writing."
-> — James Longenbach, cited in *Seeing With Fresh Eyes*, p. 15
+**The Somerset Maugham example (SWFE):** A passage from "The Book Bag" catalogues book types across about fourteen clauses. Run together, the categories vanish; broken at the existing commas, semicolons, and stops, the parallel syntax (illness, travel, expedition) becomes visible. The punctuation already marks where the content-responsive breaks belong.
 
-Helen Vendler on the line as "the most sensitive barometer of breath-units"; Edward Hirsch: "Whether end-stopped or enjambed, the line in a poem moves horizontally, the rhythm and sense also drive it vertically." (*SWFE*, p. 15). These are not aesthetic claims — they describe how spatial decisions in text carry meaning that words alone do not.
+---
 
-**Code as model for content-responsive spacing:**
+## §2. The Darwin Calculation — Scale of the Problem
 
-The Knuth-Morris-Pratt string matching algorithm: 37 lines, 75% empty space. "For coders, spaces create fluency; for machines, spaces mean nothing and are skipped over by compilers." (*SWFE*, p. 14). Minifying removes spaces; the algorithm executes identically but becomes unreadable. The lesson: spaces in analytical displays are for humans, not for the medium.
+Darwin's *Origin of Species* turns the argument from aesthetic to empirical with arithmetic.
+
+| Quantity | Value |
+|---|---|
+| Chapters | 14 |
+| Topics announced in the Table of Contents | 133 |
+| Times each topic is printed (TOC + chapter head) | 2 |
+| Total words of topic lists | 1,962 |
+| Cost to re-set them content-responsively | +2 to 3 pages in a 500-page book |
+| Readers since 1859 | ~3 million serious + millions of skimmers |
+| Cumulative reader-impediments imposed | ~2 to 5 billion |
+
+The topic lists use content-hostile, grid-driven breaks that mush section titles together. Re-setting them so each topic reads as its own unit costs only two or three extra pages, yet eliminates billions of small friction events accumulated across the book's readership since 1859. The lesson generalizes: a content-hostile linebreak is never neutral — at scale it is either imposing friction or removing it.
+
+---
+
+## §3. Zero-Cost Space — The Screen Revolution
+
+For millennia, space on clay, papyrus, vellum, and paper was expensive, so words ran edge to edge. On a display screen the marginal cost of an additional space is zero. The entire historical economic constraint on layout has dissolved, and content can now drive every spatial decision rather than deferring to cost-minimizing defaults or arbitrary style-sheet conventions. Continuing to impose content-indifferent grids on screens is a choice to honor a constraint that no longer exists.
+
+**Alignment as a content signal:** The margin treatment is itself a typographic decision that should match the content.
+
+| Alignment mode | Signal value | Best use |
+|---|---|---|
+| Justified (both margins squared) | None — wordspaces stretched to fill | Dense reference text; truly cost-constrained media |
+| Ragged-right (flush left) | Linebreak position can signal meaning | General analytical prose |
+| Central-axis (centered) | Both margins active; reader sees the next line's full length and pace before reading it, reducing accidental line-skipping | Poetry, announcements, data briefings |
+| Ragged-left (flush right) | Left space identifies the speaker | Dialogue, scripts, transcripts |
+
+**Poetry as the model:** Critics treat the line — not meter or rhyme — as the feature that makes poetry read as poetry; the line is the most sensitive register of breath and pacing, and it carries meaning vertically as well as horizontally. The point for data display: where a line breaks is information, not decoration.
+
+**Code as the model:** A clean implementation of the Knuth-Morris-Pratt string-matching algorithm is roughly 37 lines and about three-quarters empty space. For the reader those spaces create fluency; for the machine they mean nothing and are discarded at compile time. Minify it and the program runs identically but becomes unreadable. Whitespace in an analytical display is for the human, not the medium — never strip it to save room.
 
 ---
 
 ## §4. Idiosyncratic Paragraphs and Memory Retrieval
 
-Text-only paragraphs are typographically identical: same typeface, same spacing, same line length, piled into columns. This uniformity is a memory failure:
+Text-only paragraphs are typographically identical — same face, same leading, same measure, stacked into columns. That uniformity is a memory failure: with no visual anchors, a reader cannot relocate a passage they have already read. Paragraphs made visually distinct — by a table, an image, a code block, a centered passage, a quotation in its own treatment — each activate a different visual memory and become retrievable. Tufte deliberately gave nearly every paragraph in SWFE a unique appearance for exactly this reason.
 
-In *Seeing With Fresh Eyes* (p. 59), Tufte names this as a universal reader problem: the systematic regularity of body text paragraphs makes them impossible to distinguish from one another, so readers cannot locate a specific passage they have previously read. Idiosyncratic paragraphs — each visually distinct through the use of tables, images, code blocks, centered text, or other treatments — uniquely activate visual memory and make retrieval possible. Tufte deliberately made nearly every paragraph in SWFE visually unique for this reason.
-
-Readers who cannot relocate a passage they have already read are experiencing content-indifferent typography failing them. Idiosyncratic paragraphs — ones that incorporate data tables, images, code blocks, centered text, or ragged-left dialogue — are visually distinct and therefore more retrievable.
-
-**Do / Don't: Paragraph variety**
+**Do / Don't — paragraph variety:**
 
 | Practice | Verdict | Why |
 |---|---|---|
-| All body paragraphs same typeface, leading, width | Content-hostile | No visual memory anchors; reader cannot re-locate |
-| Tables formatted identically to block prose | Content-hostile | Evidence types visually indistinguishable |
-| Code blocks, callouts, quotations in distinct visual treatments | Content-responsive | Each evidence type activates distinct visual memory |
+| All body paragraphs same face, leading, measure | Content-hostile | No visual memory anchors; reader cannot re-find a passage |
+| Tables formatted identically to block prose | Content-hostile | Evidence types become visually indistinguishable |
+| Tables, code, callouts, quotations in distinct treatments | Content-responsive | Each evidence type leaves a distinct visual memory |
 | Deliberate spacing between conceptual groups | Content-responsive | Grouping is visible; transitions are marked |
 
 ---
 
 ## §5. LittleDataGraphics and Data Paragraphs
 
-**The LittleDataGraphics critique:**
-
-Tufte's term "LittleDataGraphics" (*SWFE*, p. 60) names the category of displays — pie charts, bar charts — that encode small data sets into areas and colors, requiring viewers to mentally reverse the encoding to recover the underlying numbers. These encodings are unique to each local graphic and carry no transfer value to the next one. The direct alternative: show numbers as numbers, without any intervening visual code.
+**The LittleDataGraphics critique (SWFE):** Tufte's term names the family of displays — pie charts, small bar charts — that encode a tiny data set into areas, angles, and colors, forcing the viewer to mentally reverse the encoding to recover the numbers. The code is unique to that one graphic and teaches nothing transferable. The direct alternative is to show the numbers as numbers.
 
 | Display type | Encoding | Decoding required | Verdict |
 |---|---|---|---|
-| Pie chart | Data → area/angle | Mental reconversion to proportion | Content-hostile: unique local code, zero transfer value |
-| Bar chart | Data → height | Mental reconversion to magnitude | Content-hostile: unique local code, zero transfer value |
-| Data table | Data → number | None — number is the data | Content-responsive |
-| Data paragraph | Data → words + numbers + image | None — prose is the data | Content-responsive |
+| Pie chart | Data → area / angle | Mental reconversion to proportion | Content-hostile: one-off local code, zero transfer value |
+| Bar chart (small n) | Data → height | Mental reconversion to magnitude | Content-hostile: one-off local code, zero transfer value |
+| Data table | Data → number | None — the number is the data | Content-responsive |
+| Data paragraph | Data → words + numbers + small image | None — the prose is the data | Content-responsive |
 
-**Data paragraphs as the best format for small data:**
-
-The National Weather Service briefing is the canonical example: one display presents **18 measurements** (U.S. and metric), **28 words**, and **4 links** to weather data. It simultaneously serves casual users (the sunny/cloudy icon), precise users (barometric pressure to 5 significant digits), and linked users (3-day history, hourly forecast). (*SWFE*, p. 60)
-
-Tufte argues (*SWFE*, p. 60) that effective displays serve multiple audiences simultaneously — casual users and precision analysts alike. Calibrating a display to the least-informed viewer discards most of its value; the goal is to make everyone smarter.
+**Data paragraphs for small data (SWFE):** The National Weather Service point briefing is the model — a single compact display carrying 18 measurements (US and metric), 28 words, and 4 links. It serves every audience at once: a casual user reads the sunny/cloudy icon, an analyst reads barometric pressure to five significant digits, a linked user follows the 3-day history and hourly forecast. Calibrating a display to the least-informed viewer throws away most of its value; a good display makes every audience smarter from the same ink.
 
 ---
 
 ## §6. Direct Labeling Over Legends
 
-The argument for direct labels (VDQI, EI) is concretely demonstrated in SWFE's side-by-side statistical graphic comparison (p. 63):
+A legend is a one-time local code the reader must memorize before the chart means anything. Direct labels put the name at the data, in the data's own color, and abolish the round-trip. The argument runs through VDQI and EI and is made side by side in SWFE.
 
-**Content-hostile legend (left):**
-- Legend box consumes **more than 40%** of display space
-- Order of data lines differs from order of color codes in legend
-- Labels are black regardless of line color — color matching required
-- Reader must briefly memorize a one-time local code before reading the chart
+**Do / Don't — series labels:**
 
-**Content-responsive direct labels (right):**
-- Labels placed at end of each data line, in the line's color
-- No encoding, no memorization — "Viewers read these content-responsive labels directly, no encodings"
-- More significant labels enlarged (bagging, random forest in larger type)
-- All available space shows data
+| Practice | Verdict | Why |
+|---|---|---|
+| Series names in a legend box, labels black, order ≠ line order | Content-hostile | Legend can eat >40% of the display; reader must color-match and memorize a code that order-mismatch defeats |
+| Names at each line's terminus, set in that line's color, important series enlarged | Content-responsive | No code, no memorization; all freed space shows data |
 
-> "Data graphics should have the same intense commitment to content, clarity, exactitude, integrity as mathematics, maps, computer code, science."
-> — *Seeing With Fresh Eyes*, p. 63
+The anti-legend thesis in one line:
 
-> "For 50 years, office and data-analysis software have published trillions of legends — coffins of dead conventions — and trillions of impediments to seeing and learning."
-> — *Seeing With Fresh Eyes*, p. 63
+> "...trillions of legends — coffins of dead conventions — and trillions of impediments to seeing and learning." — Tufte, *Seeing With Fresh Eyes*
 
-**Swiss topographic maps as the labeling model (SWFE, p. 62):**
+**Swiss topographic maps as the labeling model (SWFE):** Maps solve the labeling problem charts routinely fail. The place name sits at the coordinate it names, and its type size encodes the feature's importance — the typography *is* a data dimension, no legend required.
 
-Maps solve the labeling problem that data graphics routinely fail at: text is positioned content-responsively, at the data coordinate it names, with size scaled to the importance of the feature:
-
-| Population | Typeface / size on Swiss topo maps |
+| Settlement | Type treatment on Swiss topo maps |
 |---|---|
-| Town over 50,000 | BERN (large, roman caps) |
+| Town over 50,000 | BERN (large roman caps) |
 | Town 10,000–50,000 | LUGANO |
 | Municipality 2,000–10,000 | Sumvitg |
 | Municipality under 2,000 | Cressier |
 | Suburb over 2,000 | *Cassarate* (italic) |
 | Hamlet 50–100 | *Le Plan* |
-| Single house | *Tritthutte SAC* (smallest italic) |
+| Single house | *Tritthütte SAC* (smallest italic) |
 
-> "Good cartography uses multiple layers, accommodating high-dimensional data inputs."
-> — *Seeing With Fresh Eyes*, p. 62
+**The New Haven timetable (EI, pp. 104–107) — verified:** The standard railroad table devotes only **21%** of its area to the times trains actually run. The top is consumed by grids that labor to make just three binary distinctions (New York/New Haven, leaving/arriving, weekday/weekend); the 80 arrival and departure times (about 410 characters) are crammed into the leftover space; a small table carries **41 inches (104 cm) of rules**; column headings are repeated three times with 24 AM/PM markers, forcing the eye onto a serpentine path. The redesign sets the times in Matthew Carter's Bell Centennial (a telephone-book face built for tight spaces) and replaces the active colon between hours and minutes with a visually quieter dot.
 
-The typeface size IS the population data. Direct labels provide exactitude without clutter. No legend required. Place-names scaled to importance are a direct typographic encoding of the data — not a code requiring decoding.
-
-**Placement priorities for direct labels:**
-1. At the terminus of a line (rightmost point for time-series)
-2. Adjacent to the most characteristic feature of the series
-3. Leader line from nearest uncrowded whitespace to data point
-4. Never: a disconnected legend box when direct placement is possible
-
-**Timetable example (EI, pp. 104–105):** Metro-North New York–New Haven schedule used bold sans-serif caps for direction headings (low distinctiveness), colons between hours and minutes (visually active), and AM/PM flags repeated in every column. The redesign used Matthew Carter's Bell Centennial — "a telephone-book typeface designed for clarity of reading in tight spaces" — and a visually quiet dot separator instead of colon.
+**Placement priority for direct labels:**
+1. At the line's terminus (rightmost point for a time series).
+2. Adjacent to the most characteristic feature of the series.
+3. Leader line from the nearest uncrowded whitespace to the datum, only when crowded.
+4. Never a disconnected legend box when direct placement is possible.
 
 ---
 
 ## §7. Line Weight and Type Weight as Meaning Hierarchy
 
-Weight encodes semantic rank. The heavier mark receives more attention — so heavier marks must carry more meaning.
+Weight is a semantic signal: the heavier mark draws more attention, so the heavier mark must carry more meaning. The data line — the primary signal — must visually dominate the connecting verticals, grid, and frame (VDQI). The visual elegance of 18th- and 19th-century graphics came largely from copper-plate engraving's hair-thin strokes; the heavier lines of 20th-century drafting pens made charts look clumsy by comparison.
 
-In *The Visual Display of Quantitative Information* (p. 186), Tufte establishes weight as a semantic signal: contrast in line weight encodes contrast in meaning. The heavier mark must carry the greater meaning, which means the data line — the primary signal — must visually dominate the connecting verticals and other structural elements.
-
-**Weight hierarchy table:**
+**Line-weight hierarchy:**
 
 | Element | Role | Ink weight |
 |---|---|---|
 | Data series / measurement | Primary signal | Heaviest |
-| Data point labels, direct annotations | Primary context | Medium-heavy |
+| Data-point labels, direct annotations | Primary context | Medium-heavy |
 | Axis labels (named dimensions) | Frame context | Medium |
 | Tick marks, grid lines | Reference structure | Light / hairline |
 | Bounding box, axes | Container | Hairline or none |
 | Legend box border | Structural noise | Eliminate if possible |
 
-**Historical precedent:**
-
-Tufte notes (*VDQI*, p. 185) that the visual elegance of eighteenth- and nineteenth-century data graphics owes significantly to copper-plate engraving, which produced characteristically hair-thin linework. The mechanical drafting pens of the twentieth century replaced these fine strokes with heavier lines, making charts appear clumsy and unattractive by comparison.
-
-**Type weight parallel:** Bold structural labels (axis titles, category headers) while data values appear in regular weight inverts the hierarchy — structure shouts, data whispers. Data values and direct annotations at medium-heavy weight; surrounding structure in light or regular weight.
+**Type-weight parallel:** Bolding structural labels (axis titles, category headers) while data values sit in regular weight inverts the hierarchy — structure shouts, data whispers.
 
 | Element | Wrong weight | Correct weight |
 |---|---|---|
-| Data values (numbers) | Light/thin | Regular or medium |
-| Row/column labels | Bold | Regular or medium |
-| Table header | Extra bold, caps | Small caps or medium |
+| Data values (numbers) | Light / thin | Regular or medium |
+| Row / column labels | Bold | Regular or medium |
+| Table header | Extra-bold caps | Small caps or medium |
 | Footnote / source | Regular | Light or small |
 | Units ("thousands") | Regular inline | Superscript or light suffix |
 
@@ -211,34 +171,25 @@ Tufte notes (*VDQI*, p. 185) that the visual elegance of eighteenth- and ninetee
 
 ## §8. Annotation as Evidence, Not Decoration
 
-Annotation is part of the evidential record. An image without annotation is a picture; with annotation it becomes an explanatory display.
+Annotation is part of the evidential record. An unannotated image is a picture; an annotated one is an explanatory display, and the documentation itself signals that the work is evidence rather than commercial art.
 
-> "Such documentation assists understanding, helps to turn a visual representation into more precise evidence, and may even signal that the display is explanatory rather than commercial art."
-> — *Beautiful Evidence*, p. 11
+**Galileo's satellites (BE):** Galileo's notebook sketches of Jupiter's moons are annotated with times, satellite labels, and distances in Jovian radii — words, numbers, scales, and linking lines. Stripped of annotation the sketch is decorative; annotated, it is evidence of orbital motion. (Note: in SWFE, Galileo appears in a different argument — his 1601 handwritten copy of Ausonio's mirror diagram, used to show content-responsive handwriting breaking the typographic grid into two-dimensional graphical sentences. Distinct argument, same figure.)
 
-**Galileo's satellite observations (BE, pp. 10–11):**
-Jupiter's moons annotated with time, satellite labels, and distance in Jovian-radii. "Many images in Galileo's scientific notebooks are annotated with words, numbers, scales, linking lines." Without annotation the sketch is decorative; with annotation it is evidence of orbital motion. (Note: in SWFE pp. 64–65, Galileo appears in an entirely different context — his 1601 handwritten copy of Ausonio's mirror diagram, demonstrating content-responsive handwriting that breaks free of the typographic grid into 2-dimensional graphical sentences. The BE and SWFE treatments are distinct arguments using the same historical figure.)
+**Scale suppression as failure (BE):** Bloch's *Ichthyologie* (1795) drew 216 fishes all sized to fit identical boxes, so the page silently erases scale:
 
-**Scale suppression as annotation failure:**
-Bloch's *Ichthyologie* (1795): 216 fish drawn to fit identical boxes.
+> "Every fish has both a different and unknown scale of measurement." — Tufte, *Beautiful Evidence*
 
-> "Every fish has both a different and unknown scale of measurement."
-> — *Beautiful Evidence*, p. 16
-
-Adding a ruler scale below each fish promotes the drawing from picture to measurement.
-
-> "Scales of measurement are part of the news, no matter what the marketing department believes."
-> — *Beautiful Evidence*, p. 13
+Adding a centimeter ruler beneath each fish promotes the drawing from picture to measurement — scales of measurement are part of the news no matter what a marketing department prefers.
 
 | Annotation type | Function | Placement |
 |---|---|---|
-| Scale bar / ruler | Grounds image in measurable reality | Edge of subject area |
-| Direct series label | Identifies without legend round-trip | At series terminus or peak |
-| Explanatory callout | Highlights anomaly or feature | Leader line from whitespace to feature |
-| Units suffix | Disambiguates numeric values | Inline with axis label |
+| Scale bar / ruler | Grounds the image in measurable reality | Edge of the subject area |
+| Direct series label | Identifies without a legend round-trip | At the series terminus or peak |
+| Explanatory callout | Marks an anomaly or feature | Leader line from whitespace to feature |
+| Units suffix | Disambiguates numeric values | Inline with the axis label |
 | Source line | Establishes credibility | Small type, bottom edge |
 
-**Annotation density test:** Remove all labels. If the display is still fully self-explanatory, the labels were redundant. If the display becomes ambiguous or unreadable, the labels were annotation-as-evidence. Keep them.
+**Annotation density test:** Remove every label. If the display is still fully self-explanatory, the labels were redundant — cut them. If it becomes ambiguous, the labels were annotation-as-evidence — keep them.
 
 ---
 
@@ -246,33 +197,23 @@ Adding a ruler scale below each fish promotes the drawing from picture to measur
 
 | Criterion | Why it matters | Test |
 |---|---|---|
-| Legibility at small sizes | Labels must read at 6–8pt in tight spaces | Readable in telephone book column? |
-| Character distinctiveness | Numerals 0/O, 1/l/I, 6/G must not blur | Set "1Il0O6G" at target size |
-| Low ink in regular weight | Structure must not compete with data | Regular weight lighter than data marks? |
-| Tabular/lining figures | Numbers in columns must align | Equal horizontal space per digit? |
-| Horizontal readability | Axis labels run left-to-right | No optical tricks slowing horizontal scan? |
+| Legibility at small sizes | Labels must read at 6–8pt in tight spaces | Readable in a telephone-book column? |
+| Character distinctiveness | 0/O, 1/l/I, 6/G, 5/S must not blur | Set "1Il0O6G5S" at target size |
+| Low ink in regular weight | Structure must not compete with data | Is regular weight lighter than the data marks? |
+| Tabular / lining figures | Numbers in columns must align | Equal horizontal space per digit? |
+| Horizontal readability | Axis labels run left to right | Any optical trick slowing the horizontal scan? |
 
-**Bell Centennial (Matthew Carter):**
+**Bell Centennial (Matthew Carter):** Designed for telephone books — high-density numeric columns under poor printing. Its ink-trap details hold legibility at small sizes. The right model for schedules, dense tables, and tight labels.
 
-> "The numbers, no longer serpentined, are now set in Matthew Carter's Bell Centennial, a telephone-book typeface designed for clarity of reading in tight spaces."
-> — *Envisioning Information*, p. 105
+**Sans-serif caps warning (EI):** All-caps bold sans-serif has weak word-shape distinctiveness; on the New Haven schedule it left the two directions (New York to New Haven vs. the reverse) hard to tell apart. Avoid all-caps at the point of maximum semantic ambiguity.
 
-Ink-trap details preserve legibility at small sizes and under poor printing conditions. Designed for compressed, high-density numeric contexts.
-
-**Sans-serif warning:**
-
-> "Bold sans serif capitals weak in distinguishing between two directions: NEW HAVEN TO NEW YORK / NEW YORK TO NEW HAVEN"
-> — *Envisioning Information*, p. 104
-
-All-caps sans-serif has low word-shape distinctiveness. Avoid at the point of maximum semantic ambiguity.
-
-**Proportional vs. tabular figures:** In any aligned numeric column, proportional figures (where "1" is narrower than "8") destroy column alignment. Tabular figures are structural, not optional.
+**Tabular vs. proportional figures:** In any aligned numeric column, proportional figures (a narrow "1", wide "8") destroy alignment. Tabular lining figures are structural, not optional.
 
 | Context | Preference | Reason |
 |---|---|---|
 | Body text alongside charts | Serif | Text rhythm matches explanatory prose |
-| Tight data tables, schedules | Serif or humanist sans with tabular figures | Legibility in small sizes |
-| Axis labels and tick labels | Regular weight sans or serif | Must sit below data without competing |
+| Tight data tables, schedules | Serif or humanist sans with tabular figures | Legibility at small sizes |
+| Axis and tick labels | Regular-weight sans or serif | Must sit below the data without competing |
 | Numbers in columns | Tabular lining figures only | Alignment is semantic |
 | All-caps directional labels | Avoid | Low word-shape distinctiveness |
 
@@ -280,66 +221,47 @@ All-caps sans-serif has low word-shape distinctiveness. Avoid at the point of ma
 
 ## §10. Self-Exemplifying Design
 
-Tufte's governing criterion for information display (*VDQI*, p. 191) is the clear portrayal of complexity — not the complication of simple data, but the revelation of what is genuinely subtle and difficult. The designer's task is to provide visual access to the complex, not to decorate the simple.
-
-The typographic choices in a data display must embody the principles it advocates. A chart arguing for clarity while using heavy, clotted type is internally incoherent. Tufte's example from VDQI (p. 184) is a scatter plot burdened with oversized bold italic axis labels, fat data points, large text annotations placed mid-plot, all-caps labels, heavy ink texture, poor lettering, and a mismatch between the drawing style and the surrounding text — all deployed to display a small data set. The type screams while carrying very little data.
+A data display must embody the principles it advocates; a chart that argues for clarity while using heavy, clotted type is internally incoherent. Tufte's bad-example scatter plot (VDQI) carries a tiny data set under oversized bold-italic axis labels, fat data points, large mid-plot annotations, all-caps labels, heavy ink texture, and lettering that clashes with the surrounding text — the type screams while conveying almost nothing. The governing criterion (VDQI) is the clear portrayal of complexity: reveal what is genuinely subtle, do not decorate what is simple.
 
 **Self-exemplifying checklist:**
-- [ ] Does the type weight hierarchy match the data importance hierarchy?
-- [ ] Do labels appear at the data, or are they displaced to a legend?
+- [ ] Does type-weight hierarchy match the data-importance hierarchy?
+- [ ] Do labels sit at the data, or are they exiled to a legend?
 - [ ] Is the typeface legible at the smallest size it appears?
 - [ ] Do all numeric columns use tabular figures?
-- [ ] Does the typographic density match the data density?
+- [ ] Does typographic density match data density?
 - [ ] Is all type horizontal? (90-degree rotation slows reading)
-- [ ] Does the type introduce any ink not required to convey information?
-- [ ] Are content-responsive linebreaks used wherever parallel structure or lists appear?
-- [ ] Are small data sets shown as numbers directly, not encoded into chart areas or colors?
-- [ ] Are paragraphs visually distinct from each other, to assist memory retrieval?
+- [ ] Does any glyph add ink not required to convey information?
+- [ ] Are content-responsive linebreaks used wherever lists or parallel structure appear?
+- [ ] Are small data sets shown as numbers, not encoded into areas or colors?
+- [ ] Are paragraphs visually distinct enough to be re-found from memory?
 
 ---
 
 ## §11. Failure Modes
 
-**F0: LittleDataGraphics**
-Encoding small data into pie charts or bar charts. Viewers must mentally decode areas and colors back into numbers. These codes are unique to each local graphic and do not repay learning. Fix: show numbers as numbers. (*SWFE*, p. 60)
+**F0 — LittleDataGraphics.** Encoding small data into a pie or bar chart; viewers must decode areas and colors back to numbers, and the code teaches nothing. Fix: show the numbers as numbers. (SWFE)
 
-**F1: Content-Indifferent Linebreaks**
-Wordspaces and linebreaks adjusted to square off the right margin, destroying syntactic structure. Lists become word salads; parallel clauses become invisible. Fix: linebreaks follow commas, semicolons, full stops — not column width. (*SWFE*, pp. 49–52)
+**F1 — Content-indifferent linebreaks.** Wordspaces and breaks adjusted to square off the right margin, destroying syntax; lists become word salad. Fix: break at commas, semicolons, full stops — not at column width. (SWFE)
 
-**F2: The Legend Tax**
-Displacing series labels into a legend box. In the SWFE side-by-side comparison (p. 63), the legend consumes more than 40% of display space; order of labels differs from order of lines; local color code must be memorized. Fix: direct labels at series termini.
+**F2 — The legend tax.** Series names exiled to a box that can eat >40% of the display, with order mismatched to the lines and a color code to memorize. Fix: direct labels at the line termini. (SWFE)
 
-**F3: Inverted Weight Hierarchy**
-Heavy type on structural elements (axis titles, category labels, borders) while data values appear in regular or light weight. Structure dominates signal. Fix: reduce structural type weight; strengthen data label weight.
+**F3 — Inverted weight hierarchy.** Heavy type on structure (axis titles, borders) while data values stay light. Structure dominates signal. Fix: lighten structure, strengthen data labels. (VDQI)
 
-**F4: Scale Suppression**
-Omitting measurement scales from images or charts. Turns evidence into illustration. Fix: embed scale bars at point of need. (*BE*, p. 16)
+**F4 — Scale suppression.** Omitting measurement scales, turning evidence into illustration (Bloch's identically boxed fishes). Fix: embed a scale bar at the point of need. (BE)
 
-**F5: Clotted Lettering**
-Oversized, bold, or all-caps labels that consume display space without adding information. Fix: reduce to the minimum label set that keeps the display self-explanatory.
+**F5 — Clotted lettering.** Oversized, bold, or all-caps labels that consume space without adding information. Fix: reduce to the minimum label set that keeps the display self-explanatory. (VDQI)
 
-**F6: Serpentine Reading**
-Table designs that force the eye to trace a non-linear path (New Haven railroad: AM/PM markers repeated 3 times per column, direction headings in undifferentiated caps). Fix: linearize reading direction; repeat only what cannot be inferred from position.
+**F6 — Serpentine reading.** Layouts forcing a non-linear eye path — the New Haven table repeats column headings three times with 24 AM/PM markers. Fix: linearize reading order; repeat only what position cannot imply. (EI)
 
-**F7: Rotated Labels**
-Vertical (90-degree) axis labels on the y-axis.
+**F7 — Rotated labels.** Vertical (90-degree) y-axis labels. It is easier to read words that run left to right on a horizontally stretched field. Fix: stretch the graphic horizontally, transpose the display, or set labels horizontally. (VDQI)
 
-> "It is easier to write and to read words that read from left to right on a horizontally stretched plotting-field."
-> — *The Visual Display of Quantitative Information*, p. 187
+**F8 — Active punctuation in dense data.** Colons between hours and minutes, brackets around values — each mark is ink competing with numbers. Fix: use a quiet separator (a dot, a thin space) in dense numeric data. (EI)
 
-Fix: stretch the graphic horizontally; transpose the display; use horizontal labels.
+**F9 — Mismatched figure/ground.** Labels in the same weight as the data they label; viewer cannot separate signal from frame. Fix: apply the §7 weight hierarchy without exception.
 
-**F8: Active Punctuation in Dense Data**
-Colons between hours and minutes, brackets around values, in high-density numeric contexts. Each mark is ink competing with numbers. Fix: use visually quiet separators (period, thin space) in dense data.
+**F10 — Unanchored annotation.** Annotation floating in whitespace with no positional link to its datum. Fix: leader line to the datum, or place it directly adjacent.
 
-**F9: Mismatched Figure/Ground**
-Labels in the same weight as the data they label. Viewer cannot determine signal from frame. Fix: apply the weight hierarchy table from §7 without exception.
-
-**F10: Unanchored Annotation**
-Annotations placed in whitespace with no positional connection to the datum. Fix: leader line from annotation to datum, or place annotation directly adjacent.
-
-**F11: Uniform Paragraph Styling**
-All paragraphs typographically identical — same typeface, spacing, line length. Prevents memory retrieval via visual distinctiveness. Fix: idiosyncratic paragraphs; each evidence type (table, code, callout, quotation) gets a visually distinct treatment. (*SWFE*, p. 59)
+**F11 — Uniform paragraph styling.** Every paragraph typographically identical, defeating memory retrieval. Fix: idiosyncratic paragraphs — each evidence type (table, code, callout, quotation) in a distinct treatment. (SWFE)
 
 ---
 
@@ -347,20 +269,22 @@ All paragraphs typographically identical — same typeface, spacing, line length
 
 | Decision point | Tufte's guidance | Source |
 |---|---|---|
-| Minimum label size for print | Bell Centennial readable in telephone book columns (~6–7pt at 600dpi) | EI, p. 105 |
-| When to use direct label vs. leader line | Direct label when whitespace adjacent to datum; leader line when crowded | EI, p. 100 |
-| Line weight (data vs. structure) | Data line heavier than connecting verticals — no specific ratio, but data must visually dominate | VDQI, p. 186 |
-| Graphic proportions | Tend horizontal; Playfair favored 1.4–1.8 width-to-height ratio in ~66% of his 89 graphics | VDQI, p. 187 |
-| Legend failure threshold | >40% of display space consumed by a legend — the SWFE side-by-side benchmark | SWFE, p. 63 |
-| Small data set threshold | Any data set small enough to encode into a pie or bar chart is small enough to show as numbers | SWFE, p. 60 |
-| Content-responsive linebreak cost | Adding 2–3 pages to a 500-page book eliminates ~2–5 billion reader impediments; cost-benefit always favors content | SWFE, p. 50 |
-| Screen space cost | Zero — marginal cost of display screen space is zero; content-hostile grids on screens are a choice, not a constraint | SWFE, p. 53 |
+| Minimum label size in print | Bell Centennial readable in telephone-book columns (~6–7pt at 600dpi) | EI, p. 105 |
+| Direct label vs. leader line | Direct label when whitespace is adjacent to the datum; leader line only when crowded | EI, pp. 100, 105 |
+| Line weight, data vs. structure | Data line heavier than connecting verticals — no fixed ratio, but data must dominate | VDQI, p. 186 |
+| Graphic proportion | Tend horizontal; Playfair favored a ~1.4–1.8 width-to-height ratio | VDQI, p. 187 |
+| Legend failure threshold | A legend eating >40% of display area — the SWFE side-by-side benchmark | SWFE, p. 63 |
+| Hours/minutes separator | A quiet dot, not an active colon, in dense schedules | EI, p. 105 |
+| Useful-ink floor for a table | Aim well above the New Haven table's 21% of area spent on actual data | EI, p. 104 |
+| Small-data threshold | Any set small enough to encode in a pie or bar is small enough to print as numbers | SWFE, p. 60 |
+| Content-responsive linebreak cost | +2–3 pages in a 500-page book eliminates ~2–5 billion reader impediments | SWFE, p. 50 |
+| Screen space cost | Zero — content-hostile grids on screens are a choice, not a constraint | SWFE, p. 53 |
 
 ---
 
 ## References
 
-- *Seeing With Fresh Eyes: Meaning, Space, Data, Truth* — Edward R. Tufte (Graphics Press, 2020): p. 17 (1,500-year grid problem); p. 19 (Bringhurst); p. 14 (code and spacing, KMP algorithm); p. 15 (poetry linebreaks, Longenbach, Vendler, Hirsch); Chapter 2, pp. 49–63 (content-responsive typography, Ioannidis, Maugham, Darwin); p. 53 (zero-cost screen space, central-axis typography); p. 57 (ragged-left for dialogue); p. 59 (idiosyncratic paragraphs); p. 60 (LittleDataGraphics, data paragraphs, NWS briefing, 18 measurements); pp. 62–63 (Swiss topo maps, legend vs. direct labels side-by-side, 40% threshold)
-- *The Visual Display of Quantitative Information*, 2nd ed. — Edward R. Tufte (Graphics Press, 2001): pp. 177–191 (aesthetics, line weight, lettering, shape of graphics)
-- *Envisioning Information* — Edward R. Tufte (Graphics Press, 1990): pp. 98–112 (timetable design, Bell Centennial, typographic analysis of schedules)
-- *Beautiful Evidence* — Edward R. Tufte (Graphics Press, 2006): pp. 10–29 (mapped pictures, annotation as evidence, Galileo satellite observations, Bloch, Dürer, Mersenne, slave ship diagram)
+- *Seeing With Fresh Eyes: Meaning, Space, Data, Truth* — Edward R. Tufte (Graphics Press, 2020): Bringhurst on honoring content; KMP code and whitespace; poetry/line critics; Chapter 2, pp. 48–63 (content-responsive typography, Ioannidis, Maugham, Darwin pp. 49–52); p. 53 (zero-cost screen space, alignment as signal); p. 59 (idiosyncratic paragraphs); p. 60 (LittleDataGraphics, data paragraphs, NWS briefing); pp. 62–63 (Swiss topo maps, legend vs. direct labels side by side, >40% threshold).
+- *Envisioning Information* — Edward R. Tufte (Graphics Press, 1990): pp. 104–107 (New Haven timetable, 21% data area, 104 cm of rules, serpentine reading, dot-vs-colon, Bell Centennial / Matthew Carter, Playfair p. 107). **Verified against the source.**
+- *Beautiful Evidence* — Edward R. Tufte (Graphics Press, 2006): pp. 10–16 (annotation as evidence, Galileo's satellites, Bloch's *Ichthyologie* and the scale-bar redesign p. 17).
+- *The Visual Display of Quantitative Information*, 2nd ed. — Edward R. Tufte (Graphics Press, 2001): pp. 177–191 (aesthetics, line weight, lettering, shape of graphics, horizontal labels).

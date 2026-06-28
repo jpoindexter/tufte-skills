@@ -1,118 +1,95 @@
 ---
 name: tufte-visual-thinking
-description: Applies Tufte's complete framework from Seeing With Fresh Eyes — the SEE/REASON/ACT triad, model criticism, content-responsive typography, graphical sentences and stacklists, and data analysis integrity — grounded in specific quotes, examples, and concrete numbers from all four chapters.
+description: Applies Tufte's full framework from Seeing With Fresh Eyes — the SEE/REASON/ACT triad, model criticism and remodeling, content-responsive typography, graphical sentences and stacklists, and data-analysis integrity — as named failure modes, comparison tables, do/don't pairs, and concrete numbers across all four chapters.
 tags: [tufte, data-visualization, visual-thinking, analytical-thinking, perception, models, typography, graphical-sentences, data-integrity]
 ---
-# Tufte: Visual Thinking and Seeing with Fresh Eyes
+# Tufte: Visual Thinking and Seeing With Fresh Eyes
 
 ## Overview
 
-Tufte argues that visual thinking IS analytical thinking — the same cognitive process, not a separate aesthetic one. The obstacle to both is the self-confirming word, the inherited category, the default model accepted without scrutiny. *Seeing With Fresh Eyes* (2020) makes this case across four chapters: (1) fresh-eyes perception and model criticism; (2) content-responsive typography as applied remodeling; (3) graphical sentences that reason about verbs not nouns; and (4) data analysis integrity when statistical lives are at stake. Each chapter is a direct application of the same discipline: stop at what the thing names, see what the thing does.
+Tufte's claim in *Seeing With Fresh Eyes* (2020) is that visual thinking and analytical thinking are the same cognitive act, not a "creative" track and a "rigorous" track. The shared enemy of both is the self-confirming word — the inherited name or default model accepted without ever looking at the thing itself. The book argues this across four chapters that are all one discipline applied to different materials: (1) fresh-eyes perception and model criticism, (2) content-responsive typography, (3) graphical sentences built on verbs not nouns, and (4) data-analysis integrity where bad statistics kill at scale. The operating rule throughout: do not stop at what a thing is *named*; see what it *does*.
+
+> Scope note: Chapter 2 (content-responsive typography) is treated in depth in the companion skill `tufte-typography-for-data`. §4 here is the conceptual summary; load the companion when typographic execution is the task.
 
 ---
 
 ## §1. The Thinking Eye: SEE — REASON — ACT
 
-Tufte opens with a three-verb anatomy of analytical vision. All three must operate together; none is optional.
+Tufte frames analytical vision as three verbs that must run together. Dropping any one degrades the other two: seeing without reasoning is staring, reasoning without acting is chatter, acting without seeing is production.
 
 ### SEE
 
-> "To see the ordinary so intensely that the ordinary becomes extraordinary, becoming so focused, so specific about something, that it becomes something other than what it ordinarily is."
-> — *Seeing with Fresh Eyes*, p. 4
+The target is intensity: look at the ordinary so hard and so specifically that it stops being ordinary and becomes something you have never actually seen before.
 
-Operational behaviors of the thinking eye:
-- See **intensely, actively, skeptically**
-- Scan globally, focus locally
-- See at **varying scales** of space and time, approximating ways through multiplicity
-- See with "vacation eyes" — unhindered by self-confirming words, models, expectations
-- Stay in optical experience: **forget the name of what you see**
-- "not seeing something different is not seeing anything at all"
+Operational behaviors of a thinking eye:
+- See **intensely, actively, skeptically** — not passively receive.
+- Scan globally, then focus locally.
+- See at **multiple scales** of space and time at once.
+- Use "vacation eyes" — unhooked from the words, models, and expectations you arrived with.
+- Stay inside the optical experience: **forget the name of what you are looking at**.
+- Treat "not seeing anything different" as a signal you are not really seeing at all.
 
-**Grace Hopper's warning** (quoted by Tufte): "The most dangerous phrase in the language is 'We've always done it this way.'"
+> "The most dangerous phrase in the language is 'We've always done it this way.'" — Grace Hopper
 
-Defamiliarization sequence — Tufte's prescribed procedure for escaping category-lock:
-1. **Defamiliarize** — strip the label, look at the thing itself
-2. **Decontextualize** — remove from usual setting
-3. **Recontextualize** — place in a new comparison set
-4. **Reform / remodel** — propose a better model grounded in what you saw
+**Defamiliarization sequence** (the named procedure for breaking category-lock):
+1. **Defamiliarize** — strip the label, look at the bare thing.
+2. **Decontextualize** — pull it out of its usual setting.
+3. **Recontextualize** — drop it into a new comparison set.
+4. **Reform / remodel** — propose a better model grounded in what you actually saw.
 
 ### REASON
 
-Thinking eyes reason intensely about what they see —
+Reasoning eyes interrogate what they see by asking about *verbs* — links, mechanisms, connections, dynamics — and what things *do*, never what they are called.
 
-> "reason about verbs   links   mechanisms   connections   dynamics — reason about what things **do** not what things are named"
-> — *Seeing with Fresh Eyes*, p. 5
-
-- Reason across multiple time horizons: then, now, forever
-- Compare, model, choose, doubt, decide, compare again
-- Name, re-name, re-model
-- Ask: **"How do I really know that?"** and **"How could I possibly ever know that?"**
+- Reason across time horizons: then, now, forever.
+- Cycle: compare, model, choose, doubt, decide, compare again.
+- Name, re-name, re-model.
+- Two governing questions: **"How do I really know that?"** and **"How could I ever know that?"**
 
 ### ACT
 
-> "To produce, construct, model, remodel, to act is essential — it is the difference between spectator/player   consumer/producer   artchat vs. artwork   anecdote vs. evidence   process/outcome   retrospective/prospective   presentations pitching vs. demonstrations comparing"
-> — *Seeing with Fresh Eyes*, p. 5
-
-Craig Venter (quoted): "Good ideas are a dime a dozen for a smart person, what distinguishes good from great is how an idea is executed — how it becomes reality."
-
-**The triad in one line:** "seeing   learning   doing   doubting are the meaning of intelligent life."
+Producing, constructing, modeling, and remodeling are not optional output — acting is the dividing line between spectator and player, anecdote and evidence, a pitch and a demonstration, a retrospective claim and a prospective test. Tufte echoes Craig Venter's point that good ideas are cheap and what separates good from great is execution into reality. The triad compressed: seeing, learning, doing, and doubting are what intelligent life is *for*.
 
 ---
 
-## §2. Seeing vs. Naming: The Central Discipline
+## §2. Seeing vs. Naming — The Central Discipline
 
-The most persistent obstacle to fresh seeing is the category — the name that substitutes for observation.
+The most persistent obstacle to fresh seeing is the category itself: the name that arrives before observation and substitutes for it.
 
 | What naming does | What seeing does |
 |---|---|
 | Stops the eye at the label | Continues into structure and behavior |
 | Reasons about what things ARE | Reasons about what things DO |
-| Accepts inherited models | Questions assumptions underneath models |
-| Confirms prior views | Finds what is actually there |
-| Locks into discipline-local fads | Connects across fields |
+| Accepts inherited models | Questions the assumptions beneath models |
+| Confirms the prior view | Finds what is actually there |
+| Locks into discipline-local fashion | Connects across fields |
 
-### The constellation example — completed arc
+### The constellation example
 
-The Big Dipper is taught as a 2D flat pattern. The 7 stars are scattered at distances of 58, 78, 79, 81, 84, 101, and 124 light years from Earth — not co-planar, not a dipper, not stable.
+The Big Dipper is taught as a flat 2D pattern. The seven stars actually sit at wildly different distances from Earth — roughly 58, 78, 79, 81, 84, 101, and 124 light years — so they are not co-planar, not a "dipper," and not fixed. The pattern is an artifact of one viewpoint at one moment.
 
-| Epoch | Shape |
+| Epoch | Apparent shape |
 |---|---|
 | 50,000 BCE | Kite |
 | 2,000 CE (now) | Dipper |
 | 50,000 CE | Swan |
 | 100,000 CE | Grasshopper |
 
-> "Maps show what we think we know, which may not correspond to the Truth."
-> — Chris Quigg, quoted in *Seeing with Fresh Eyes*, p. 40
+The lesson, paraphrasing physicist Chris Quigg: a map shows what we *think* we know, which need not match the truth.
 
-**Named failure mode — Flatland Projection:** collapsing 3D reality into 2D models and then reasoning from the 2D model as if it were the reality. "Tiny snowflakes are not flat, they are 3 dimensional; a horizon is not a line, it is a shape."
+**Named failure mode — Flatland Projection:** collapsing a 3D reality into a 2D model, then reasoning from the 2D model as if it were the reality. A snowflake is not flat, it is three-dimensional; a horizon is not a line, it is a shape. The model is mistaken for the territory.
 
 ---
 
-## §3. Space as Content, Not Container (Chapter 1, pp. 6-48)
+## §3. Space as Content, Not Container
 
-Tufte treats space as active meaning, not empty backdrop. The discipline applies to typography, data display, physical space, and time.
+Tufte treats empty space as active meaning, not inert backdrop. The same discipline applies to typography, data displays, physical space, and time. He assembles outside voices to make the point: Miles Davis on music being the notes you *don't* play; Lao Tse on a vessel being useful through its emptiness and a wall being serviceable because of the window cut into it; György Kepes on a single character gaining meaning only through the ordered space around it; Mary Oliver on the line break being a meaningful decision every poet wrestles with for life; and Richard Serra on space being a sculptural material in its own right. Space and meaning are not opposites — they co-exist, both concrete.
 
-> *music is the space between the notes   it's not the notes you play   it's the notes you don't play*
-> — Miles Davis, quoted in *Seeing with Fresh Eyes*, p. 6
+### Space polarity table
 
-> *A vessel is useful only through its emptiness. It is the space opened in a wall that serves as a window. Thus it is the nonexistent in things which makes them serviceable.*
-> — Lao Tse, p. 6
+Each left/right pair resides together; neither term exists without the other.
 
-> *Communications are living or dead depending upon organization of their blank spaces. A single character gains clarity and meaning by orderly relationships of the surrounding space backgrounds.*
-> — György Kepes, p. 6
-
-> *This subject — turning the line in a poem — is one that every poet deals with throughout his or her working life. Every turning is a meaningful decision, the effect of which is sure to be felt by the reader. I cannot say too many times how powerful the techniques of line length and line breaks are.*
-> — Mary Oliver, p. 6
-
-> *I consider space to be a material. The articulation of space has come to take precedence over other concerns. I attempt to use sculptural form to make space distinct.*
-> — Richard Serra, p. 37
-
-### Complete space polarity table (p. 7)
-
-Both columns **reside together, concrete and intrinsic**. Neither exists without the other.
-
-| Left | Right |
+| Left (absence) | Right (presence) |
 |---|---|
 | space | meaning |
 | emptiness | fullness |
@@ -121,319 +98,244 @@ Both columns **reside together, concrete and intrinsic**. Neither exists without
 | silence | sound |
 | ground | figure |
 | negative space | positive space |
-| **air space** | **material space** |
+| air space | material space |
 | stillness | motion |
-| **transparent** | **opaque** |
+| transparent | opaque |
 | shadow | light |
 
 ### Ghostlier grids allow keener distinctions
 
-A grid exists to organize content. Grids that compete with content destroy signal.
+A grid exists to *organize* content. The moment the grid competes with the content for attention, it destroys signal.
 
-**Jocelyn Bell Burnell** (p. 24): recognized evidence of pulsars (rotating neutron stars) and annotated her data traces at the Cambridge 4 Acre Array radio telescope. "The grid paper provides exactitude, clarity, permanence."
+- **Jocelyn Bell Burnell** annotated her data traces at the Cambridge radio array and recognized the evidence for pulsars; the grid paper gave her exactitude, clarity, and permanence without taking over.
+- **E.J. Marey** (~1880) ghosted a faint substrate grid behind early motion studies — visible enough to hold alignment, faint enough to let the moving figure dominate.
+- **Curie, Pauling, Knuth** kept lab notebooks on ghost-grids: lines clear enough to maintain rough horizontal/vertical alignment, ghostly enough to avoid clutter.
 
-**E.J. Marey** (p. 25): his ghosted substrate grid in early films of animal and human movement (~1880) enables motion detection — the grid is faint enough to maintain alignment, invisible enough to let the moving figure dominate.
+**Named failure mode — Grid Dominance:** the organizing structure becomes more visually prominent than the content it organizes. Concrete case: a real-time medical interface whose loudest elements were cyan grid bars and stripe artifacts rather than the patient data — the grid was actively making clinical decisions harder. On the same page an image matrix was only ~42% images; the other ~58% was frame furniture, oversized checkmarks, and tiny labels.
 
-**Marie Curie, Linus Pauling, Donald Knuth** (p. 25): scientific notebooks use ghost-grids — grid lines clear enough to maintain approximate horizontal/vertical alignments, "but ghostly enough to avoid optical clutter."
+**Ghosted global data as substrate:** the Financial Times COVID charts (John Burn-Murdoch) showed 54 countries as small multiples, each foregrounded against all other countries' trajectories grayed into the background. Every country is read in the scaled context of all countries. Topographic maps do the same — thin contour lines run underneath the type.
 
-**Named failure mode — Grid Dominance:** when the organizational structure becomes more visually prominent than the content it organizes. Concrete case: a real-time medical interface where the strongest visual elements were cyan grid bars and horizontal stripe artifacts — not the patient data. The grid was making clinical decisions harder. (The image matrix on the same page was only 42% images, with 58% non-content spaced-out frame stuff, over-large checkmarks, and tiny word labels.)
+### Image quilts
 
-**Ghosted global data as substrate** (p. 26): Financial Times COVID data (John Burn-Murdoch) — 54 countries shown as small multiples, each with all other countries' trajectories grayed and ghosted in the background. Every country is located and scaled in the context of all countries. Topographic maps use the same technique: thin contour lines underlying type.
+An image quilt gathers many images to tell a story, make comparisons, and set context. Its elements vary in size, carry no heavy frames, and abut directly so the eye can compare across the seam. The Marey quilt orders varied-size frames to narrate his work on velocity and motion pictures.
 
-### Image quilts (pp. 29-30)
+**On frames:** frames can isolate color and cut screen glare, but over-framing is endemic in published image matrices — it adds noise, eats content space, and blocks the direct comparison that abutting enables. Algorithmic 2D-packing does not rescue it; ragged margins and small black surrounds beat heavy frames.
 
-> "Image quilts gather multiple images to tell a story, make comparisons, set context. Quilt elements vary in size, have no overt frames, and abut."
-> — *Seeing with Fresh Eyes*, p. 29
+Measles-vaccination quilt: 88 million disease instances located in space and time from 1880–2011, with an estimated 103 million U.S. cases prevented since 1924 — a natural experiment in which each state acts as its own control across years.
 
-The E.J. Marey image quilt celebrates his work on velocity, motion pictures, data collection, and visualization. Directly adjacent abutting images with no frames enable comparison; image size varies and is ordered to tell a story.
+### Cézanne and multiple local grids
 
-**On frames:** Tufte notes that while frames around images can help isolate color and reduce screen glare, over-framing is endemic in published image matrices — producing visual noise, consuming content space, and blocking the direct comparisons that abutting images enable. Algorithmic 2D-packing solutions don't help; ragged margins and small black surrounds work better.
+Cézanne composed with several local grids at once, remodeling the single-viewpoint perspective model that had governed painting for centuries and photography for decades — integrating about 4 distinct viewpoints in one canvas. Hockney later assembled ~750 photographs in the same spirit; Google Street View places ~19 view signs at their exact driver-visible positions. A living, moving eye registers thousands of viewpoints an hour, so one-point perspective is a model that mismatches how vision actually works.
 
-Measles vaccination image quilt (p. 31): 88 million disease instances located in space and time 1880-2011; 103 million disease cases prevented since 1924 in the United States — a natural experiment where each state serves as its own control across years.
+### Maya Lin's Women's Table
 
-### Cézanne and multiple local grids (p. 8)
+For Yale's Women's Table, Maya Lin chose a spiral of numbers — open-ended, to signal an ongoing history — beginning with a long run of zeros for the centuries Yale admitted no women. She drew the form from a spiral graphic in Tufte's *Envisioning Information* and worked directly with Tufte and Inge Druckrey on the data layout.
 
-Cézanne deployed multiple local grids to compose local content, **remodeling conventional one-eyed perspective models** that had governed painting for centuries and photography for decades. The result: 4 distinct viewpoints integrated in one painting. Hockney assembled 750 photographs with Cézanne-like perspectives. Google Maps locates 19 street-view signs at their exact driver-visible positions. Living, moving eyes register 1000s of viewpoints per hour — single-point perspective is a model mismatch with how vision actually works.
+### Cleveland Clinic thought-bubble typography
 
-### Maya Lin's Women's Table (p. 23)
+The Cleveland Clinic empathy video positions text as thought-bubbles that move *with* each person in frame ("nearing the end of a 12-hour shift"; "determined to make it to her daughter's wedding Saturday"). This is a local grid carrying metaphorical meaning: content locates the typography, and the words travel alongside each person rather than being stamped over them — a quiet signal of respect, and a demonstration that location and line breaks create meaning.
 
-Maya Lin, on designing the Yale Women's Table:
-> "It's open-ended. Commemorating women at Yale, we have a beginning, but certainly, it's ongoing. So I thought of a spiral. I was looking at one of Edward Tufte's books, *Envisioning Information*. He had a beautiful spiral of numbers... I called him up, and both Professor Tufte and his wife Inge Druckrey... were unbelievably helpful in helping me come up with the spiral numbers, how to lay it out, everything. And it's a spiral starting with many zeros signifying there were no women at Yale for a very, very long time."
+### Remodeling scatterplots
 
-The spiral model originated from the spiral graphic of the periodic table of elements in *Envisioning Information*. Tufte worked directly with Lin on the data layout.
+Conventional scatterplots are anonymous plot-dots at (x, y). Remodel them by placing images of the actual things at their data coordinates: a brain-mass vs. body-mass plot drawn with little animals (bird, goldfish, snake, bat, frog, mouse, elephant, whale, dinosaurs) on a logarithmic ghost-grid. The marks self-label; no legend is needed.
 
-### Cleveland Clinic thought-bubble typography (p. 19)
+### Remodeling spreadsheets: sparklines
 
-Cleveland Clinic's *Empathy: The Human Connection to Patient Care* video uses text appearing as thought-bubbles directly positioned in the frame, moving with the patients: "Nearing the end of a 12 hour shift." "Daughter is getting married on Saturday. Determined to be there." "Has been dreading this appointment. Fears he waited too long."
+A spreadsheet cell holding one lonely number can hold a whole time series instead. Michael Fogleman's PAC-MAN example recorded each frame at 60 fps by active memory address over 10 seconds, yielding **264 sparklines** laid on an invisible grid — every cell now a behavior over time rather than a single value.
 
-This is a **local grid with metaphorical meaning** — "content locates typography   space, location, linebreaks create and clarify meaning." The thought-bubble metaphor is invisible and dynamic; thought-words move along with each person, not superimposed over people (a quiet signal of respect).
+### Models are a way of seeing
 
-### Remodeling scatterplots (p. 22)
+A model summarizes and explains something relevant in order to drive consequential action — and some models are simply better than others. Models in physics and engineering get a special guarantee because they rest on Nature's universal mathematical laws; the human sciences lack that guarantee, which is exactly why they are *harder* than rocket science. To choose a model is to choose its assumptions, most of them unseen and forgotten — and some assumptions are far worse than others.
 
-Conventional scatterplots show plot-dots (x,y). Remodel: images of the actual things at data coordinates. The brain-mass vs. body-mass scatterplot places illustrations of animals — bird, goldfish, snake, bat, frog, mouse, elephant, whale, dinosaurs — directly at their data coordinates on a logarithmic ghost-grid. The animals are self-labeling; no legend needed.
+**Named failure mode — Discipline Capture:** a model stops being accountable to outside evidence because insiders control what counts as evidence. Sanctified, lucrative specialties congeal into monopolies that become more about themselves and less about their original subject; local optimizing adds up to global pessimizing. The reform usually comes from the margin or from outsiders — Tim Berners-Lee inventing the Web at CERN, Tversky and Kahneman falsifying rational-choice economics.
 
-### Remodeling spreadsheets: sparklines (p. 22)
+**Named failure mode — Default Format Acceptance:** treating the production system's output format as if it were the content's natural shape. "We've always done it this way" ends thought, censors deviation, and blocks the search for alternatives. The corrective is not to reject all convention reflexively — many conventions have earned their place — but to *test* whether each still holds rather than assuming it.
 
-PAC-MAN example: values of each frame (60 fps) by active memory address were recorded for 10 seconds, yielding **264 sparklines** displayed by Michael Fogleman. Each sparkline represents many numbers in each cell, arrayed on an invisible grid. A single lonely number per cell replaced by a full time series.
+### Remodeling proposals
 
-### Models are a way of seeing (p. 8)
-
-> "Models summarize, show, and explain something relevant. Their purpose is to lead to consequential actions. Some models are better than others. Models in science and engineering are special, because they are based on Nature's forever universal laws, expressed in mathematics describing the physical world. Lacking the guarantee of Nature's mathematical laws, the human sciences are much harder than rocket science."
-> — *Seeing with Fresh Eyes*, p. 8
-
-> "To choose a model is to choose assumptions — unknown, unseen, forgotten. Some assumptions are worse than others."
-> — *Seeing with Fresh Eyes*, p. 8
-
-> "Models sanctified and celebrated by insiders can evolve into uncontested, lucrative, congealed monopolies/specialties/cartels/cults/disciplines — which in time, become self-centered and selfish, more and more about themselves, and less and less about their original substantive content. Local optimizing adds up to global pessimizing."
-> — *Seeing with Fresh Eyes*, p. 8
-
-**Named failure mode — Discipline Capture:** when a model is no longer held accountable to external evidence because insiders control the standards of evidence. "Disciplines require hard-working true believers in local doctrines/assumptions that do not correspond to the truth." Revolutionary reforms are sometimes produced by those on the margin or outsiders: Tim Berners-Lee at CERN inventing the Web; Tversky and Kahneman falsifying rational-choice economic models.
-
-**Named failure mode — Default Format Acceptance:** accepting the production system's format as if it were the natural format of the content. Tufte argues that "we've always done it this way" ends thought — it censors deviations and blocks the search for alternatives. That said, many conventions have earned their place; fresh remodeling tests whether they still hold rather than assuming they do or don't.
-
-### Remodeling proposals (p. 9)
-
-| Conventional | Replaced by | Verb |
+| Conventional default | Remodeled to | Action |
 |---|---|---|
-| Hierarchical trees of nouns | Web of links and verbs | destroys |
+| Hierarchical trees of nouns | A web of links and verbs | destroys the tree |
 | Content-indifferent typography | Content-responsive typography | replaces |
-| Plot-dots in scatterplots | Images of actual things at data coordinates | remodels |
-| Single number per spreadsheet cell | Sparklines (full time series per cell) | eliminates LittleDataGraphics |
-| Image matrices with frames | Abutting unframed image quilts | remodels |
-| Color-coded legends outside data | Direct content-responsive labels | replaces |
-| Conventional one-point perspective | Multiple local views ordered in 2-space | challenges |
+| Plot-dots in scatterplots | Images of the real things at data coordinates | remodels |
+| One number per spreadsheet cell | A sparkline (full series per cell) | eliminates LittleDataGraphics |
+| Framed image matrices | Abutting unframed image quilts | remodels |
+| Color-coded legend outside the data | Direct labels at the content, in data color | replaces |
+| One-point perspective | Multiple local views ordered in 2-space | challenges |
 
-**Maps as outsider comparison set:** Maps have solved inherent data display issues — color, content-located typography, massive data density, diverse users. "Compare an interface or data graphic side-by-side with a good map."
+**Maps as the outsider comparison set:** maps already solved the hard data-display problems — color, content-located type, enormous density, diverse simultaneous users. Put any interface or data graphic side by side with a good map and the gaps show.
 
-### Curse of Dimensionality (p. 41)
+### Curse of dimensionality
 
-> "The curse of dimensionality refers to phenomena that arise when analyzing data in high dimensional spaces (often with 100s or 1000s of dimensions) that do not occur or exist in low-dimensional settings such as the 3-dimensional physical space of everyday experience."
-> — Wikipedia, quoted in *Seeing with Fresh Eyes*, p. 41
+Phenomena that appear in high-dimensional spaces (hundreds or thousands of dimensions) simply do not occur in the 3D space of everyday experience. Coined by Richard Bellman in dynamic-optimization work: as dimensionality rises, volume explodes so fast that any fixed amount of data becomes sparse. It is a case where model dimensionality and truth diverge — the model has more dimensions than the data can support.
 
-Coined by Richard Bellman considering problems in dynamic optimization. When dimensionality increases, the volume of the space increases so fast that available data become sparse. This is a case where model dimensionality and truth diverge — the model has more dimensions than the data can support.
+### Sense of the relevant
 
-### Sense of the relevant (p. 46)
+Thinking eyes have a sense of what matters — the ability to spot, in a mass of data, the few things whose consequences reach beyond themselves, where leverage lives. Cross-field learning is disciplined looting: creativity is connecting things across domains, while connections formed inside a single discipline narrow and exhaust over time. The practice is concrete — listen more than you talk, steer experts toward your own questions, probe every explanation with "why is that?" and "how do you know?", stay skeptical of what you are told, and feel no obligation to accept a field's inherited doctrines. Outsiders are freed from the assumptions insiders have forgotten they hold.
 
-> "Thinking/seeing/analytical/fresh eyes have a sense of what is relevant, finding what is important in a mass of data and knowledge, seeing something worthwhile, where to gain leverage. A sense of the relevant is the ability to identify and detect those things that have consequences beyond themselves."
-> — *Seeing with Fresh Eyes*, p. 46
+### Identifying excellence
 
-Tufte describes cross-field learning as disciplined looting: creativity is connecting things across domains, but connections formed inside a discipline narrow and exhaust over time. The practice is concrete — listen more than talk, guide experts toward your interests, probe explanations with "why is that?" and "how do you know that?" Be skeptical of what you learn, and never feel obligated to accept the field's inherited doctrines. Outsiders are freed from the assumptions insiders have forgotten they're making.
-
-### Identifying excellence (p. 47)
-
-> "Excellence is long-term knowledge, even forever knowledge."
-> — *Seeing with Fresh Eyes*, p. 47
-
-> "Excellence, like good taste, is perhaps a universal quality. Analytical thinking is about the relationship between evidence and conclusions, and is fundamental to all empirical work, regardless of field, discipline, specialty. Thus it is possible at times to assess credibility of nonfiction work without being a content expert. Thinking eyes may well have an eye for excellence, regardless of field or discipline."
-> — *Seeing with Fresh Eyes*, p. 47
-
-Maira Kalman: "And what is it you know once you think you know?"
-
-Chris Quigg: "What do we know that is not true?"
+Excellence is long-term, even forever, knowledge. Because analytical thinking is fundamentally about the relationship between evidence and conclusions — the same in every field — it is sometimes possible to judge the credibility of nonfiction work *without* being a content expert. A thinking eye can have an eye for excellence across disciplines. Maira Kalman's prod — what is it you know once you think you know? — and Quigg's — what do we know that is not true? — are the standing audit questions.
 
 ---
 
-## §4. Content-Responsive Typography (Chapter 2, pp. 49-63)
+## §4. Content-Responsive Typography
 
-Tufte treats content-responsive typography as the most direct applied consequence of fresh-eyes thinking: 1500 years of text grids have been indifferent to meaning, governing space by production convenience rather than content.
+Tufte calls content-responsive typography the most direct applied consequence of fresh-eyes thinking. For ~1500 years text grids have been indifferent to meaning, governing space by production convenience rather than by content — Robert Bringhurst's standard that typography exists to honor content, taken literally and to the data. Space should be content-responsive: actively contributing to meaning, as it always has in poetry, maps, math, code, comics, and scripts.
 
-> "Text space should not be owned and governed by generic production grids, which make for convenient production but inconvenient meaning. Space can and should be content-responsive, actively contributing to meaning — forever practices in poetry, maps, math, computer code, comics, theater/movie scripts, posters."
-> — *Seeing with Fresh Eyes*, p. 49
+### The Darwin threshold
 
-> "Typography exists to honor content."
-> — Robert Bringhurst, p. 19
+*On the Origin of Species* has 14 chapters and 133 topics, each topic appearing twice (table of contents and chapter openings). The topic lists suffer content-hostile line breaks — the right margin squared off by the grid, mashing distinct section titles together. Setting those 133 topics responsively:
+- Adds only **2–3 pages** to a ~500-page book.
+- Removes an estimated **2,000,000,000 to 5,000,000,000** reading impediments across ~3 million serious readers plus millions of skimmers since 1859.
 
-### The Darwin threshold (p. 50)
+### Do/don't pairs
 
-Darwin's *Origin of Species* has 14 chapters, 133 topics, each topic appearing twice in both the table of contents and chapter openings. Topic lists suffer from content-hostile linebreaks — grid-driven squaring-off of the right margin mushing section titles together.
-
-Content-responsive typography for these 133 topics:
-- Adds only 2-3 pages to Origin's 500 pages
-- Eliminates an estimated **2,000,000,000 to 5,000,000,000** typographic impediments across ~3 million serious readers and millions of skimmers since 1859
-
-### Do/don't pairs: conventional vs. content-responsive
-
-| Conventional typography | Content-responsive typography |
+| Conventional (grid-driven) | Content-responsive |
 |---|---|
-| Wordspaces adjusted to square-off right margin | Linebreaks identify meaning units |
-| 5 semicolons work hard to signal 6 list elements | Separate linebreaks identify each list element |
-| 6 sentences run together, masking vacuum/void distinction | Line space separates vacuum sentences from void sentences |
-| Syntactical structure lost, creating a "word salad" | Readers compare and remember list-elements by scanning up/down |
-| Content-indifferent labels in colored legends | Direct labels placed at content, in data color |
+| Word spaces stretched to square off the right margin | Line breaks mark meaning units |
+| 5 semicolons strain to signal 6 list items | Separate line breaks make each item self-evident |
+| 6 sentences run together, hiding the vacuum/void distinction | Line space separates the distinct sentences |
+| Syntax dissolves into word-salad | Reader scans up/down to compare and remember items |
+| Indifferent labels parked in a colored legend | Direct labels placed at the content, in the data's color |
 
-### The Great Disjunction (p. 17)
+### The Great Disjunction
 
-Tufte frames this as a 1500-year problem: print conventions built grids for production convenience, not meaning. Display screens change the economics — the marginal cost of space is zero, so content can now drive spatial decisions rather than cost constraints or inherited style conventions. Writers gain a second expressive channel beyond words; readers gain efficiency and depth.
+This is a 1500-year cost problem: print built grids for production economy, not for meaning. Screens change the economics — the marginal cost of space is effectively zero — so content, not cost or inherited style, can finally drive spatial decisions. Writers gain a second expressive channel beyond the words; readers gain speed and depth.
 
-### Code and poetry as models (pp. 14-15)
+### Code and poetry as existing models
 
-Computer code resides in the plane, with content-driven spaces within and between lines. The Knuth-Morris-Pratt string matching algorithm is 37 lines and 75% empty spaces. For coders, spaces create fluency; for machines, spaces mean nothing and are skipped by compilers. Minified KMP code without spacing executes properly but is very difficult to read.
+Code already lives in the plane with content-driven spacing within and between lines. The Knuth–Morris–Pratt string-match algorithm is ~37 lines and roughly 75% empty space; that space creates fluency for the human reader, while the compiler skips it entirely. Minify it and it still runs — and becomes nearly unreadable. Poetry is the older model: 5 of the first 8 lines of Eliot's *The Waste Land* are enjambed, and the line break is the unit that distinguishes verse from prose — meaning moves horizontally along the line and vertically across the breaks at once.
 
-Poetry: 5 of the first 8 lines of T.S. Eliot's *The Waste Land* are enjambed. Linebreaks are not arbitrary — they are the characteristic unit distinguishing poetry from prose (James Longenback). "Whether end-stopped or enjambed, the line in a poem moves horizontally, the rhythm and sense also drive it vertically, and the meaning continues to accrue as the poem develops and unfolds" (Edward Hirsch).
+### LittleDataGraphics replaced by data paragraphs
 
-### LittleDataGraphics replaced by data paragraphs (p. 60)
-
-Tufte's case against LittleDataGraphics: pie charts and bar charts encode numbers as areas and colors, requiring viewers to mentally decode them back into the original values. That encoding-decoding round-trip is lossy and forces learning a local legend that won't transfer to the next graphic. For small data sets, showing numbers directly is faster and more precise. The prescription: no more LittleDataGraphics.
-
-The National Weather Service KSFO briefing: 18 measurements (US and metric), 28 words, 4 links — simultaneously serving weather experts interested in the 5th significant digit of barometric pressure and casual users who can't look out the window.
+Pie and bar charts encode numbers as areas and colors, forcing the viewer to decode them back into the original values — a lossy round-trip that also demands learning a local legend that won't transfer to the next chart. For small data sets, showing the numbers directly is faster and more precise. The prescription: no more LittleDataGraphics. Example of dense honest text-as-data — the National Weather Service KSFO briefing packs 18 measurements (U.S. and metric), 28 words, and 4 links, serving both the expert who wants the fifth significant digit of barometric pressure and the casual user who can't see the sky.
 
 ---
 
-## §5. Graphical Sentences: Nouns and Verbs (Chapter 3, pp. 64-79)
+## §5. Graphical Sentences — Nouns and Verbs
 
-The core principle: reason about **verbs**, not nouns. Graphical sentences live in the plane, not in the line. Linking lines aspire to be sentences — with subjects, verbs, objects. Annotated links show what things DO.
+The core move: reason about **verbs**, not nouns, and let graphical sentences live in the plane rather than the line. A linking line should aspire to be a real sentence with subject, verb, and object. An unannotated arrow — x → y with no label — asserts only that x and y have *some* unstated relationship, which is to say nothing; such links have no character.
 
-> "Unannotated links lack character. No more x→y or x→y saying that x and y have something, who-knows-what, to do with one another."
-> — *Seeing with Fresh Eyes*, p. 68
+### The Ausonio / Galileo mirror diagram
 
-### Ausonio/Galileo mirror diagram (pp. 64-65)
+Around 1560 Ettore Ausonio built an immense diagram (about 44×74 cm) of reflections from concave spherical mirrors. Between 1592 and 1601, while teaching at Padua, Galileo made a handwritten copy. It deploys three architectures for off-the-grid sentences: **word trees, stacklists, and annotated linking lines**. The *Tree of Reflections* is a single 2D graphical sentence of 218 words, 29 branches, and 13 stacklists, with one ~130-word paragraph annotating a single line of the diagram. Unlike the strict logic of Markov chains or decision trees, its branches meander and end "in full leaf" as quasi-paragraphs. Galileo's collected works run to 21 volumes and ~12,000 pages, returning over and over to the forever question of science: what do objects *do* in 3-space and time?
 
-In ~1560 Ettore Ausonio constructed an immense (44×74 cm) diagram depicting reflections from concave spherical mirrors. Between 1592 and 1601, while teaching at the University of Padua, Galileo made this handwritten copy. Three architectures for off-the-grid sentences are deployed: **word trees, stacklists, annotated linking lines**.
+### Stacklists
 
-The *Tree of Reflections by a Concave Spherical Mirror* is a 2D graphical sentence with 218 words, 29 branches, 13 stacklists. A paragraph of 130 words annotates a single line of the mirror diagram. Unlike the more rigorous logic of Markov chains and decision trees, its branches meander — intensely annotated lines and stacklists, "their branches ending in full leaf, quasi-paragraphs of words."
+A stacklist organizes complex material in 2-space so the reader slows down — deliberately — to connect words vertically within each stack and horizontally across stacks. The contrast is with the conventional inline list: a freight train of words on a single narrow track, where it is hard to tell which words belong to which list or to compare items within and between lists. Any content can stack: words, graphics, numbers, links, code, images. Linked stacks of overlapping sparklines can show pulsar data as 4 simultaneous views (~4,000 numbers).
 
-Galileo's collected works = 21 volumes and 12,000 pages, filled with intriguing diagrams, hands-on data collection, visual intelligence, and the forever issue in science: what do objects do in 3-space and time?
+- **Polyphony:** some musical scores stack performer-improvisation options on adjacent staves, each option vertically aligned with the rest of the score (the practice Elaine Gould documents; Birtwistle's *Versus for Ensembles*, 1972).
+- **Nesting:** Wendy MacNaughton's *The Universe and Forever* nests two word-stacklists inside an enclosing one; code does the same. Complex meaning is often better built and read in a smart 2-space than in a single linear sentence.
 
-### Stacklists (pp. 66-70)
+### The Walt Disney profit-formula diagram
 
-> "Stacklists organize and clarify complex material in 2-space. Readers read more slowly, and that's good: to think, look again, and connect words vertically within each stack and horizontally between stacks. Instead of polyphony, conventional inline lists are a freight train of words along a one-way narrow track, making it difficult to identify which words belong to which list and to link and compare elements within and between lists."
-> — *Seeing with Fresh Eyes*, p. 66
+The 1957 Walt Disney Productions profit diagram is built from 37 graphical sentences mapping a live network of interactions and job instructions. Every link names what it *does* — "feeds record material (tunes and talent)," "publicizes products of music div.," "provides interchange of stars" — so it has subjects, verbs, and objects. It demonstrates that real organizations are not the anonymous one-way streets drawn in conventional org charts, where know-nothing links connect boxes full of proper nouns.
 
-Any content-relevant elements can appear in a stacklist: words, graphics, numbers, links, code, images. Linked stacks of overlapping sparklines depict measurements of pulsar data, showing 4 data views simultaneously (~4000 numbers).
+### Fox and Hedgehog — a model-quality framework
 
-**Stacklist polyphony:** In a few musical scores, stacklists point to performer improvisations by showing multiple possible paths through the music — "place alternatives on adjacent staves, one above the other... each option has vertical alignment with other parts in a score" (Elaine Gould, *Behind Bars*). Harrison Birtwistle's *Versus for Ensembles*, 1972.
+Tufte borrows Isaiah Berlin's 1953 essay, itself drawing on Archilochus's ancient contrast: the fox pursues many things, the hedgehog one big thing.
 
-Wendy MacNaughton's *The Universe and Forever* contains 2 stacklists of words nested in an enclosing stacklist. Computer code also uses nested stacklists. "Better to develop, understand, and express complex meaning in smart 2-spaces than rely solely on linear sentences."
-
-### Walt Disney 37-sentence diagram (p. 68)
-
-37 graphical sentences in the Walt Disney Productions 1957 profit formula reveal a lively complex network of interactions and job instructions. "This amazing diagram demonstrates real worlds do not consist of anonymous one-way streets, as assumed in organization charts with generic know-nothing links between boxes filled with proper nouns."
-
-Every link is annotated with what it does: "FEEDS RECORD MATERIAL (TUNES AND TALENT)"; "PUBLICIZES PRODUCTS OF MUSIC DIV."; "PROVIDES INTERCHANGE OF STARS." The diagram has subjects, verbs, objects — graphical sentences in the full sense.
-
-### Fox and Hedgehog: a framework for model quality (pp. 76-77)
-
-Isaiah Berlin, *The Hedgehog and the Fox: An Essay on Tolstoy's View of History*, 1953. Greek poet Archilochus: "The fox knows many things, but the hedgehog knows one big thing."
-
-| Foxes | Hedgehogs |
+| Fox | Hedgehog |
 |---|---|
-| Pursue many ends, often unrelated and contradictory | Relate everything to a single central vision |
-| Thought scattered or diffused, moving on many levels | One system, less or more coherent or articulate |
-| Seize essence of vast variety of experiences | Single, universal, organising principle |
+| Pursues many ends, often unrelated or contradictory | Relates everything to one central vision |
+| Thought scattered, moving on many levels | One system, more or less coherent |
+| Seizes the essence of vast variety | One universal organizing principle |
 | Shakespeare, Herodotus, Aristotle, Montaigne, Erasmus, Molière, Goethe, Pushkin, Balzac, Joyce | Dante, Plato, Lucretius, Pascal, Hegel, Dostoevsky, Nietzsche, Ibsen, Proust |
-| skulk, group, epidemiologists, webs, skeptical/doubt | array, individual, medical specialists, hierarchies, true believers/faith |
-| university presidents, Bob Dylan | university faculty, not Bob Dylan |
+| Group, webs, epidemiologists, skeptical / doubt | Individual, hierarchies, specialists, true believers / faith |
+| University presidents; Bob Dylan | University faculty; not Bob Dylan |
 
-Berlin's original text has **broken parallelism** — begins fox-first, hedgehog-second, then switches order repeatedly — creating confusion that stacklist remodeling clarifies.
-
-Tufte uses this distinction directly as a **model-quality framework**: personalized precision medicine (n=1, hedgehog) vs. vaccination (n=3,000,000,000, fox). Local optimizing (hedgehog) vs. global pessimizing. Insider discipline capture (hedgehog) vs. outsider comparison sets (fox).
+Berlin's prose has **broken parallelism** — it opens fox-first, hedgehog-second, then keeps switching order — which a stacklist remodeling clarifies. Tufte uses the contrast directly to grade models: precision medicine for one patient (n=1, hedgehog) vs. vaccination at population scale (n≈3,000,000,000, fox); local optimizing (hedgehog) vs. avoiding global pessimizing (fox); insider Discipline Capture (hedgehog) vs. outsider comparison sets (fox).
 
 ---
 
-## §6. Data Analysis Integrity (Chapter 4, pp. 81-95)
+## §6. Data-Analysis Integrity
 
-The same principles that govern seeing govern evidence and conclusions. Truth is not a discipline preference.
+The same discipline that governs seeing governs the relationship between evidence and conclusions. Truth is not a matter of disciplinary preference.
 
-> "Although we often hear that data speak for themselves, their voices can be soft and sly. It is easy to lie with statistics; it is easier to lie without them."
-> — Frederick Mosteller, p. 81
+> "The first principle is that you must not fool yourself, and you are the easiest person to fool." — Richard Feynman
 
-> "The first principle is that you must not fool yourself, and you are the easiest person to fool."
-> — Richard Feynman, p. 80
+> "It is easy to lie with statistics; it is easier to lie without them." — Frederick Mosteller
 
-> "It is a principle that shines impartially on the just and the unjust alike that once you have a point of view all history will back you up."
-> — Van Wyck Brooks, p. 81 (on confirmation bias)
+Confirmation bias is the structural hazard — paraphrasing Van Wyck Brooks, once you hold a point of view, all of history seems to back you up. The fundamental obligations of analytical thinking — reason about causality and mechanism, explain, compare, assess the credibility of measurements and inferences, validate, and keep honest — **cannot be repealed** by assumptions, discipline, fashion, marketing, or what a sponsor wants the answer to be.
 
-The fundamental principles of analytical thinking — reason about causality and mechanism, explain something, make comparisons, assess credibility of measurements and inferences, validate findings, enforce integrity and honesty — **cannot be altered or repealed** by assumptions, discipline or specialty, political and intellectual fashions, marketing or monetizing, what sponsors desire or demand.
+### Statistical lives vs. individual lives
 
-### Statistical lives vs. individual lives (p. 81)
+Paraphrasing Andrew Vickers: a mistake in the operating room threatens one patient, but a mistake in a statistical analysis can cause hundreds of early deaths — yet we require years of training to hold a scalpel and hand SPSS, R, Python, Matlab, and ML to nearly anyone. The named distinction is **precision medicine (n=1) vs. vaccination (n≈3,000,000,000)**: we will spend almost anything to rescue one *named* life, while comparable spending could save millions of anonymous *statistical* lives, often at far lower cost per life. The stakes are real — global life expectancy roughly doubled from about 48 years in 1950 to about 71 in 2019.
 
-> "A mistake in the operating room can threaten the life of one patient, a mistake in statistical analysis or interpretation can lead to hundreds of early deaths. So it is odd that, while we allow a doctor to conduct surgery only after years of training, we give software packages — SPSS, R, Python, Matlab, Machine Learning, et al — for statistical analysis to almost anyone."
-> — Andrew Vickers, p. 81
-
-Named distinction: **personalized precision medicine (n=1) vs. vaccination (n=3,000,000,000)**. There is a common preference to rescue and extend named individual lives, no matter what the cost. Yet comparable investments might save millions of anonymous statistical lives, since the cost of extending a statistical life is often small compared to extending a named life. Life expectancy has doubled globally since 1900 — in 1950 worldwide life expectancy was 48 years; in 2019, 71 years.
-
-### Prevalence of data integrity failures (pp. 83-95)
-
-Concrete rates from meta-research:
+### Prevalence of data-integrity failures
 
 | Problem | Rate | Source |
 |---|---|---|
-| Inappropriate image duplication in published papers | 3.8% of 20,621 papers (1995-2014, 40 journals); half suggesting deliberate manipulation | Elisabeth Bik et al, *ASM mBio*, 2016 |
-| Image duplication in Molecular/Cellular Biology papers | 6.1% (59 of 960 papers, 2009-2016); led to 41 corrections, 5 retractions | Bik et al, MCB 2018 |
-| Gene name errors from Excel default conversions | 20% of papers with supplementary Excel gene lists; 704 papers in 18 genomics journals 2005-2015 | Ziemann et al, *Genome Biology* 17 (2016) |
-| Research articles that mention measurement errors | 44% of 565 articles in 12 major medical/epidemiology journals | Brakenhoff et al, *J Clinical Epidemiology*, 2018 |
-| Of those, articles that investigate or correct the errors | 7% (i.e., 97% of 565 failed to deal with measurement errors) | Same |
-| Mediterranean Diet study: secondary articles still at large after retraction | 267 secondary articles based on incorrect data | Agarwal and Ioannidis, *BMJ*, 7 Feb 2019 |
-| Randomization messes detected | Based on 5,087 randomized controlled trials | Carlisle, *Anesthesia* 72 (2017) |
+| Inappropriate image duplication in published papers | 3.8% of 20,621 papers (1995–2014, 40 journals); ~half suggesting deliberate manipulation | Bik et al., *mBio*, 2016 |
+| Image duplication, molecular/cellular biology | 6.1% (59 of 960 papers, 2009–2016); led to 41 corrections, 5 retractions | Bik et al., *MCB*, 2018 |
+| Gene-name errors from Excel auto-conversion | ~20% of papers with supplementary Excel gene lists; 704 papers across 18 genomics journals, 2005–2015 | Ziemann et al., *Genome Biology*, 2016 |
+| Articles that even mention measurement error | 44% of 565 articles in 12 major medical/epidemiology journals | Brakenhoff et al., *J. Clin. Epidemiology*, 2018 |
+| Of those, articles that investigate or correct it | 7% (i.e., ~97% of the 565 never addressed it) | same |
+| Secondary articles still citing retracted Mediterranean-diet data | 267 secondary articles built on the bad data | Agarwal & Ioannidis, *BMJ*, 2019 |
+| Randomization anomalies audited | across 5,087 randomized controlled trials | Carlisle, *Anaesthesia*, 2017 |
 
-**Biostatistician survey** (p. 92): 522 consulting biostatisticians were surveyed; 75% responded. Inappropriate researcher requests included: "removing or altering some data records to better support the research hypothesis; interpreting the statistical findings on the basis of expectation, not actual results; not reporting the presence of key missing data that might bias the results; ignoring violations of assumptions that would reverse the results." (*Annals of Internal Medicine*, 2018)
+**Biostatistician survey:** of 522 consulting biostatisticians surveyed, 75% responded. Inappropriate requests they reported receiving included: deleting or altering records to better fit the hypothesis; interpreting results by expectation rather than by what the data showed; not reporting key missing data that would bias results; and ignoring assumption violations that would reverse the conclusion (*Annals of Internal Medicine*, 2018).
 
-### Observe data at the moment of measurement (pp. 84-85)
+### Observe data at the moment of measurement
 
-> "You never learn more about a process than when you directly observe how data are actually measured."
-> — Cuthbert Daniel, quoted in *Seeing with Fresh Eyes*, p. 84
+Paraphrasing Cuthbert Daniel: you never learn more about a process than by directly watching how its data are actually measured. Standing questions: do the measurers know the desired answer? Are they skilled, alert, honest — or biased, sloppy, tired? Do sites differ in what they record? How are outliers adjudicated?
 
-Key questions: Do those measuring know the desired answer? Are those measuring skilled, alert, honest, biased, incompetent, sloppy, tired and emotional? Do hospitals vary in what they measure? How are outliers adjudicated?
+**The river-polluter example:** a company polluted a river; cleanup orders required daily water samples to track progress. Watch the actual sampling and you see a boat go out, the driver dip a container on a pole — *after scanning around for the cleanest-looking water*.
 
-**The river polluter example** (p. 84): A big company polluted a big river; environmental agencies forced cleanup and required daily water samples to monitor progress. On direct observation: a small boat goes out, the boat driver has a container on the end of a pole, dips it into water — after looking around for cleaner water. "Statisticians call this 'sampling to please.' Observing actual data collection reveals the early limits of self-monitoring, and that people can't keep their own score."
+**Named failure mode — Sampling to Please:** when data collectors know the desired answer and (consciously or not) sample to produce it. People cannot keep their own score; detecting this requires observing collection at the exact moment of measurement, not just reading the published result.
 
-**Named failure mode — Sampling to Please:** when data collectors know the desired answer and sample accordingly. Detecting this requires observing data collection at the exact moment of measurement, not just at the moment of publication.
+**Three traceability questions** (from the 2002 Lucent scientific-misconduct investigation):
+1. Can the presented data be traced back to primary data, free of processing or manipulation?
+2. Is there clear evidence the data do *not* come from the measurements described — data substitution, unreasonable precision, contradictory physics?
+3. If the data are invalid, are there mitigating circumstances explaining the misrepresentation?
 
-Three investigative questions that data should be traceable to (p. 85, from Lucent Technologies Scientific Misconduct investigation, 2002):
-1. Can the data presented be traced back to primary data, free of any data processing or other manipulation?
-2. Is there clear evidence that the data do not come from the measurements described? (Data Substitution, Unreasonable Precision, Contradictory Physics)
-3. If the data are not valid, are there mitigating circumstances that explain how the data came to be misrepresented?
+### Forensic data audit
 
-### Forensic data audit (p. 91)
-
-Prior to data analysis, conduct an independent forensic data audit. Chris Groskopf's *Guide to Bad Data* reveals 46 data quality issues in spreadsheets (a good start). **"Data cleaning" is not a forensic audit.** Data cleaning corrects logical inconsistencies, duplications, impossible values — but has difficulties detecting systemic biases, falsification, and too-good-to-be-true findings, "which require experience and honest judgement."
-
-Nate Silver: "Going through some old data/code. One thing I've learned is when combining different datasets or doing complicated data processing, it pays to be compulsive about missing data or data that doesn't pass sanity checks. More often than you might think, the missing/miscoded/outlier cases indicate a larger, more systematic problem with your code or data."
+Run an independent forensic audit *before* analysis. Chris Groskopf's *Guide to Bad Data* catalogs ~46 spreadsheet data-quality issues as a starting checklist. Crucially, **"data cleaning" is not a forensic audit:** cleaning fixes logical inconsistencies, duplicates, and impossible values, but struggles to detect systemic bias, falsification, and too-good-to-be-true findings — those need experience and honest judgment. Paraphrasing Nate Silver: when merging datasets or doing complex processing, be compulsive about missing data and sanity-check failures, because the missing, miscoded, and outlier cases more often than not flag a larger, systematic problem in the code or data.
 
 ---
 
-## §7. Clarity vs. Simplicity — The Critical Distinction
+## §7. Clarity vs. Simplicity
 
-| | Simplicity | Clarity |
+|  | Simplicity | Clarity |
 |---|---|---|
-| When data is simple | Appropriate | Appropriate |
-| When data is complex | **Dishonest** — hides the truth | **Required** — show the complexity honestly |
-| What it does to the audience | Reduces cognitive load by reducing content | Trusts audience to handle real content |
+| When the data is simple | Appropriate | Appropriate |
+| When the data is complex | **Dishonest** — hides the truth | **Required** — show the complexity honestly |
+| Effect on the audience | Cuts load by cutting content | Trusts the audience with real content |
 | Design virtue | Surface-level | Genuine |
 
-**Named failure mode — False Simplicity:** replacing a complex reality with a simpler model, then presenting that model as if it were the reality. The Darwin typography example: content-responsive linebreaks added only 2-3 pages to a 500-page book while eliminating an estimated 2-5 billion reading impediments. The "simpler" conventional typography was not actually simpler — it was harder to read.
+**Named failure mode — False Simplicity:** swapping a complex reality for a simpler model, then presenting the model *as* the reality. The Darwin typography case shows the trap from the other side: the content-responsive setting added only 2–3 pages to a 500-page book while removing an estimated 2–5 billion reading impediments — so the "simpler" conventional setting was never actually simpler, just harder to read.
 
 ---
 
 ## §8. Concrete and Specific — The Operational Standard
 
-Abstract discussion cannot substitute for direct observation. Ken Kocienda on Apple's iPhone design process:
+Abstraction cannot substitute for a thing you can point at. Paraphrasing Ken Kocienda on the iPhone team (*Creative Selection*, 2018): collaboration came down to showing each other *demos*, and a demo was only useful if it was concrete and specific, because even a weak idea is impossible to discuss constructively in the abstract — a concrete example turns an impossible conversation into child's play.
 
-> "Exactly how we collaborated mattered, and it reduced to a basic idea: We showed demos to each other. Every major feature on the iPhone started as a demonstration, and for a demo to be useful to us, it had to be *concrete and specific*. We needed concrete and specific demos to guide our work, since even an unsophisticated idea is hard to discuss constructively... Concrete and specific examples make the difference between a discussion that is difficult and perhaps *impossible* to have, compared to one that feels like child's play."
-> — Ken Kocienda, *Creative Selection*, 2018, pp. 153-155
+**Named failure mode — Cute Puppy Problem:** two people each picture "a cute puppy" and have no way to compare their mental images. Without a concrete, specific instance there is no progress, because abstractions cannot be compared — only instances can.
 
-**Named failure mode — Cute Puppy Problem:** two people imagine the same abstract concept (a cute puppy) and cannot compare their mental models. "Without a concrete and specific example of a cute puppy, there's no way to make progress." Abstractions cannot be compared — only instances can.
-
-**Named failure mode — Empty-Head Remodeling:** skepticism without standards; treating any alternative as equally valid. "Remodeling requires an open searching mind and at the same time rigorous standards of evidence and judgment. It is even more difficult to hold in mind simultaneously and without premature judgment of your own ideas and opposing ideas. Few are able to do so."
+**Named failure mode — Empty-Head Remodeling:** skepticism without standards — treating every alternative as equally valid. Real remodeling demands an open, searching mind *and*, simultaneously, rigorous standards of evidence and judgment, held over both your own ideas and the opposing ones without premature verdict. Few manage to hold both at once.
 
 ---
 
 ## §9. Applying Fresh Eyes — Checklist
 
-Before presenting any information display, data graphic, interface, or argument:
+Before shipping any information display, data graphic, interface, or argument:
 
-- **Name the model.** What assumptions are built into it? Who built it — insiders or outsiders?
-- **What is the 3D reality this 2D model represents?** What does the projection lose? (Constellation → Flatland Projection)
-- **What does the content actually DO?** Not: what is it named?
-- **Is your comparison set too local?** Find an outsider comparison (maps, code, poetry).
-- **Is any grid more prominent than the data?** Ghost it or remove it.
-- **Is space doing meaningful work, or just filling area?**
-- **Is the format the shape of the content, or the shape of the production system?** (Sombreros vs. square hats)
-- **Is the complexity real?** If so, show it — do not simplify away truth.
-- **Can you make it concrete and specific?** If not, you may not understand it yet.
-- **Are links annotated with verbs?** Unannotated links lack character.
-- **If data is involved: can it be traced to primary measurement?** Observe data collection at the moment of measurement, not just at publication.
+- **Name the model.** What assumptions are baked in, and who built it — insiders or outsiders? (Discipline Capture)
+- **What 3D reality does this 2D model stand for, and what does the projection lose?** (Flatland Projection)
+- **What does the content actually DO** — not what is it named?
+- **Is the comparison set too local?** Pull in an outsider one — maps, code, poetry.
+- **Is any grid louder than the data?** Ghost it or remove it. (Grid Dominance)
+- **Is the space doing meaningful work, or just filling area?**
+- **Is the format the shape of the content, or the shape of the production system?** (Default Format Acceptance)
+- **Is the complexity real?** If so, show it — do not simplify away the truth. (False Simplicity)
+- **Can you make it concrete and specific?** If not, you may not understand it yet. (Cute Puppy Problem)
+- **Are the links annotated with verbs?** Unannotated links have no character.
+- **If data is involved, can it be traced to primary measurement?** Observe collection at the moment of measurement, not just at publication. (Sampling to Please)
 - **Fox or hedgehog?** Are you optimizing locally at the cost of global pessimizing?
 
-Source book: *Seeing with Fresh Eyes: Meaning, Space, Data, Truth* by Edward Tufte (Graphics Press LLC, 2020)
-Relevant pages: 1-95 (Introduction + Chapters 1-4)
+---
+
+*Source: Edward Tufte, "Seeing With Fresh Eyes: Meaning, Space, Data, Truth" (Graphics Press LLC, 2020), Introduction and Chapters 1–4. All passages paraphrased; quoted lines limited to short attributed fragments.*

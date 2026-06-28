@@ -6,18 +6,18 @@ tags: [tufte, data-visualization, comparison, data-density, trellis, layout]
 # Small Multiples
 
 ## Overview
-Small multiples are a series of graphics sharing the same design structure, the same scale, and the same visual encoding — varying only the data across panels. Because the design is constant, the viewer's eye is freed from re-learning each chart and can focus entirely on shifts in the data. The pattern is the single most effective method Tufte describes for multivariate comparison: it is simultaneously more honest, more dense, and more legible than animation, sequential views, or overlaid series.
+Small multiples are a series of graphics sharing the same design structure, the same scale, and the same visual encoding — varying only the data across panels. Because the design is constant, the viewer's eye stops re-learning each chart and attends entirely to shifts in the data. Tufte presents the pattern as the single most effective method for multivariate comparison: simultaneously more honest, more dense, and more legible than animation, sequential views, or overlaid series.
 
-The underlying mechanism is the Shrink Principle applied repeatedly: shrink a graphic to the minimum size that preserves legibility, then array many of them. The result is a high-density matrix that can show thousands of data points in the area a conventional graphic would use for dozens.
+Two mechanisms power it. First, the Shrink Principle applied repeatedly: reduce one graphic to the minimum size that stays legible, then array many copies. Second, a large underlying data matrix: small multiples take a wide table of numbers and lay it out so the eye reads thousands of values at once, in the area a conventional graphic would spend on dozens.
 
 ---
 
 ## §1. Definition and Core Rules
 
-> "Small multiples resemble the frames of a movie: a series of graphics, showing the same combination of variables, indexed by changes in another variable... The design remains constant through all the frames, so that attention is devoted entirely to shifts in the data."
-> — *The Visual Display of Quantitative Information*, p. 170
+> "Small multiples resemble the frames of a movie: a series of graphics, showing the same combination of variables, indexed by changes in another variable."
+> — Tufte, *The Visual Display of Quantitative Information*, p. 170
 
-The three invariants that define a valid small multiple:
+The design holds constant across every frame so that attention goes entirely to how the data shifts. The three invariants that define a valid small multiple:
 
 | Invariant | What it means | What breaks it |
 |---|---|---|
@@ -25,55 +25,51 @@ The three invariants that define a valid small multiple:
 | Same scale | Shared axis ranges across all panels | Per-panel auto-scaling |
 | Same encoding | Identical use of color, size, shape, line weight | Changing what a color encodes per panel |
 
-The one thing that changes: **the data** (indexed by the varying variable — time, category, condition, geography, etc.).
+The one thing that changes: **the data**, indexed by the varying variable (time, category, condition, geography, etc.).
 
 **The index variable** is the dimension that varies across panels. It can be:
-- A single variable (one panel per year, per species, per demographic)
-- Two variables simultaneously, producing a 2D matrix of panels (rows = one variable, columns = another)
+- A single variable (one panel per year, per species, per demographic).
+- Two variables at once, producing a 2D matrix of panels (rows = one variable, columns = another). See §7.
 
-Two-dimensional indexing is explicitly endorsed:
-
-> "Simultaneous two-dimensional indexing of the multiplied image, flatland within flatland, significantly deepens displays, with little added complication in reading."
-> — *Envisioning Information*, p. 78
-
-Example: neurometric brain maps arraying frequency bands (delta/theta/alpha/beta) across columns and diagnostic groups (Normal, Unipolar depression, Bipolar depression, Alcoholism, Schizophrenia, Dementia) across rows — a 6×4 matrix that communicates what no single chart could.
+Tufte endorses two-dimensional indexing explicitly — what he calls "flatland within flatland" (*Envisioning Information*, p. 78): stacking a second index on the multiplied image deepens the display while adding almost nothing to reading effort. His neurometric example arrays brain-electrical maps with frequency bands (delta, theta, alpha, beta) across the columns and diagnostic groups down the rows — every cell drawn identically.
 
 ---
 
-## §2. The Shrink Principle and Data Density
+## §2. The Shrink Principle, Data Density, and the Data Matrix
 
-The small multiple pattern depends on shrinking panels aggressively. Tufte states the governing rule:
+The pattern depends on shrinking panels aggressively. Tufte's governing claims (VDQI, pp. 168–169), paraphrased:
 
-> "Graphics can be shrunk way down."
-> — *The Visual Display of Quantitative Information*, p. 169
+- Graphics can be shrunk far down. Many data graphics lose roughly half their published area with virtually no loss in legibility or information.
+- The twin design goal is to maximize **data density** *and* **the size of the data matrix**, within reason.
 
-> "Many data graphics can be reduced in area to half their currently published size with virtually no loss in legibility and information."
-> — *The Visual Display of Quantitative Information*, p. 169
+These are two distinct targets, and small multiples maximize both:
 
-The principle follows directly from the data density goal:
+| Term | Definition | How small multiples push it |
+|---|---|---|
+| Data density | Data entries ÷ area of the graphic | Shrinking panels packs more entries into the same eyespan |
+| Size of the data matrix | Total rows × columns of underlying numbers | One cell-graphic is multiplied across every row and column of a wide table |
 
-> "Maximize data density and the size of the data matrix, within reason."
-> — *The Visual Display of Quantitative Information*, p. 168
+The corollary: small multiples are usually built *from* a large data matrix (VDQI, p. 175). If the underlying table is small, the pattern earns nothing — an overlay or a single chart is faster. The power appears when a wide matrix is laid out so the eye scans many cells at once.
 
-Tufte cites Bertin: a crisp, elegant line style allows 17 small-scale graphics on a single page alongside extensive text. The implication: most designers make individual panels far larger than necessary, which reduces how many can fit within eyespan and thus prevents comparison.
+Tufte cites Bertin: a crisp, elegant line style fits 17 small-scale graphics on one page alongside extensive text. The implication — most designers oversize individual panels, which cuts how many fit within eyespan and so prevents comparison.
 
 **Concrete density benchmarks from Tufte:**
-- Wall Street Journal, The Times (London), Asahi: data-rich, high-density graphics
-- US Geological Survey topographic quadrangle (17×23 inches): ~250,000 bits per square inch
-- Most American papers and magazines: publish less data per graphic than major industrialized-country papers
+- Wall Street Journal, The Times (London), Asahi: data-rich, high-density graphics.
+- US Geological Survey topographic quadrangle (17×23 inches): ~250,000 bits per square inch.
+- Most American papers and magazines: less data per graphic than major industrialized-country papers.
 
-As panel count rises and panel size shrinks, data measures within each panel must also shrink (thinner lines, smaller dots). Chartjunk, non-data-ink, and redundant data-ink become more costly as density increases — every pixel of decoration displaces data.
+As panel count rises and panel size shrinks, the data marks inside each panel must shrink too (thinner lines, smaller dots). Chartjunk, non-data-ink, and redundant data-ink get more expensive as density rises — every pixel of decoration displaces a data value.
 
 ---
 
 ## §3. Eyespan and the Comparison Constraint
 
-The single most operationally important constraint on small multiples:
+The single most operationally important constraint:
 
 > "Comparisons must be enforced within the scope of the eyespan, a fundamental point occasionally forgotten in practice."
-> — *Envisioning Information*, p. 76
+> — Tufte, *Envisioning Information*, p. 76
 
-This rules out pagination as a comparison mechanism. If the viewer must scroll, tab, or turn a page to see panel B after panel A, the comparison is broken. All panels being compared must be simultaneously visible.
+This rules out pagination as a comparison mechanism. If the viewer must scroll, tab, or turn a page to see panel B after panel A, the comparison is broken — it happens from memory, not from the eye.
 
 **Practical consequences:**
 
@@ -81,24 +77,19 @@ This rules out pagination as a comparison mechanism. If the viewer must scroll, 
 |---|---|
 | 4–9 panels | Usually fits one screen/page; straightforward |
 | 10–25 panels | Requires aggressive shrinking; still viable |
-| 25+ panels | Possible (Tufte shows 23-panel air pollution array) but requires very high information density per panel and small panel size |
+| 25+ panels | Possible (Tufte's 23-panel air-pollution array, p. 170) but demands very high per-panel density and small panels |
 | Panels on separate pages | Not a small multiple — sequential presentation, not comparative display |
-| Animation/slideshow | Not a small multiple — viewer cannot hold prior frame in memory for direct comparison |
-
-The Los Angeles air pollution example in VDQI (p. 170) shows 23 panels (hourly hydrocarbon distributions over a city) arrayed in a single view. The design is unchanged frame to frame; only the pollution distribution shifts. This works because all frames are visible simultaneously.
+| Animation / slideshow | Not a small multiple — viewer can't hold the prior frame in memory for direct comparison |
 
 ---
 
 ## §4. Panel Structure: Labeling, Axes, and Borders
 
-**Shared axes:** All panels share axis ranges. Never auto-scale per panel — this destroys the visual comparison by encoding the same data value as different heights in different panels.
+**Shared axes:** all panels share axis ranges. Never auto-scale per panel — that encodes the same data value as different heights in different panels and destroys the comparison.
 
-**Labels:** Minimal. The index variable label (year, condition name, time of day) should appear once per panel in the smallest legible type. Labels are part of the data display, not decoration; they should not compete with the data marks for visual weight.
+**Labels:** minimal. The index-variable label (year, condition, time of day) appears once per panel in the smallest legible type. Labels are part of the data display, not decoration, and must not compete with the data marks for visual weight.
 
-**Borders and grids:** Use implicit structure rather than heavy rules.
-
-> "In our neurometric example... the dark colors surrounding each image generate disruptive white stripes. Locations can be signaled by nearly silent methods... where an implicit grid pairs each insect with its fly-fishing simulation."
-> — *Envisioning Information*, p. 79
+**Borders and grids:** use implicit structure, not heavy rules. Tufte's caution (paraphrasing *Envisioning Information*, p. 79): dark surrounds around each image generate disruptive white stripes where panels meet, pulling more attention than the data; locations can instead be signaled by nearly silent methods such as an implicit, evenly spaced grid.
 
 Do/don't pairs for panel framing:
 
@@ -108,31 +99,51 @@ Do/don't pairs for panel framing:
 | Implicit spatial grid (consistent spacing) | Explicit grid lines that create disruptive stripes |
 | Labels directly on or adjacent to the data | Separate legend requiring eye travel |
 | White or neutral background per panel | Dark surrounds (generate disruptive white stripes at edges) |
-| Single shared legend/scale bar at array edge | Repeated legend in every panel |
+| Single shared legend / scale bar at the array edge | Repeated legend in every panel |
 
-**Spacing as data:** Panels can be spaced in proportion to the values of the index variable. Tufte notes of the ghost-figure small multiple: "the ghosts even could be spaced in proportion to the date they were drawn." Time-proportional spacing makes the gaps themselves encode information.
-
----
-
-## §5. What Small Multiples Beat
-
-Tufte presents small multiples as superior to three common alternatives for multivariate comparison:
-
-| Alternative | Why it fails |
-|---|---|
-| Animation / sequential frames | Viewer cannot hold prior frame in memory; comparison requires simultaneous view |
-| Overlaid series (multiple lines on one chart) | Lines cross, colors multiply, visual complexity grows faster than data |
-| Separate single charts (one per report/page) | Comparisons require memory across page turns; eyespan constraint violated |
-
-The *Consumer Reports* frequency-of-repair example (VDQI, p. 174) demonstrates this decisively: 12 car models × 6 model years × 18 trouble spots, encoded as a circle-fill matrix. Tufte calls it "a particularly ingenious mix of table and graphic, portraying a complex set of comparisons between manufacturers, types of cars, year, and trouble spots." A conventional approach would require 12 separate bar charts and defeat the comparison entirely.
-
-The herring-catch example (VDQI, p. 172) — 6 distributions arrayed vertically for years 1908–1913 with a shared x-axis — shows a 1904 cohort aging through the catch data year by year. The story is only readable because all six panels share the same age axis and are stacked for simultaneous comparison.
+**Spacing as data:** panels can be spaced in proportion to the values of the index variable. Tufte notes that his ghost-figure multiples could even be spaced in proportion to the dates the figures were drawn — making the gaps themselves encode information. Use proportional spacing whenever the index has uneven intervals (irregular dates, non-uniform doses).
 
 ---
 
-## §6. Two-Dimensional Indexing (the Trellis Pattern)
+## §5. Tufte's Exemplars (VDQI Chapter 8)
 
-When two categorical variables each index a dimension, the result is a 2D panel matrix — what statisticians later named "trellis" displays (Cleveland) or "facets" (ggplot2). Tufte establishes the principle visually through several examples before naming it explicitly.
+Tufte builds the case for small multiples through a sequence of examples in the data-density / small-multiples chapter. Studying the set is more instructive than any single one, because each isolates a different reason the pattern works.
+
+| Example (page) | Structure | Index variable | What it reveals / why it qualifies |
+|---|---|---|---|
+| LA air pollution (p. 170) | 23 panels, each a distribution of hydrocarbon concentration over the city | Hour of day | Design unchanged frame to frame; only the pollution distribution shifts. All 23 visible at once — the canonical large-array small multiple |
+| Melanoma sites (p. 171) | Body-map diagrams showing anatomical distribution of 269 primary melanomas | Sex (and body region) | Identical body diagram repeated; only lesion-location data changes, so site patterns by sex compare straight across |
+| Sampling-error distributions (p. 172) | 12 panels, each a histogram of 50 random normal deviates | Replicate sample | Identical underlying process; the panel-to-panel scatter *is* the lesson — sampling variation made visible |
+| Herring catch (p. 172) | 6 distributions stacked vertically, 1908–1913, shared age x-axis | Year | The strong 1904 year-class ages through successive catches — a bump migrating rightward year by year. Readable only because the age axis is shared and panels are stacked for one eyespan |
+| Human/ape chromosomes (p. 173) | Chromosome banding strips arrayed across 4 primate species (human + three apes) | Species | Identical chromosome-strip design lets homologous bands be compared band-for-band across species |
+| Consumer Reports frequency-of-repair (p. 174) | Circle-fill matrix: 12 car models × 6 model years × 19 rows — 17 trouble spots plus a summary Trouble Index and Cost Index — repair rate encoded as fill density | Model × year | A table-graphic hybrid carrying a dense, multivariate comparison no set of bar charts could match |
+
+Of the Consumer Reports figure Tufte writes:
+
+> "a particularly ingenious mix of table and graphic, portraying a complex set of comparisons between manufacturers, types of cars, year, and trouble spots."
+> — Tufte, *The Visual Display of Quantitative Information*, p. 174
+
+> Count note: the repair matrix has **17 trouble spots plus a Trouble Index and a Cost Index = 19 rows**, not 18. This aligns with the figure on p. 174 and with the `tufte-data-density` skill.
+
+---
+
+## §6. What Small Multiples Beat
+
+Tufte positions small multiples as superior to three common alternatives for multivariate comparison:
+
+| Alternative | Why it fails | Small-multiple fix |
+|---|---|---|
+| Animation / sequential frames | Viewer can't hold the prior frame in memory; comparison needs a simultaneous view | Lay every frame out at once |
+| Overlaid series (many lines on one chart) | Lines cross, colors multiply; visual complexity grows faster than the data | Give each series its own identical panel |
+| Separate single charts (one per report/page) | Comparison requires memory across page turns; eyespan constraint violated | Shrink and array within one eyespan |
+
+The Consumer Reports matrix (§5) settles it: a conventional approach would need a dozen separate bar charts and would defeat the cross-comparison entirely.
+
+---
+
+## §7. Two-Dimensional Indexing (the Trellis Pattern)
+
+When two categorical variables each index a dimension, the result is a 2D panel matrix — later named "trellis" displays (Cleveland) or "facets" (ggplot2). Tufte establishes the principle visually before anyone named it.
 
 Structure:
 ```
@@ -146,22 +157,29 @@ var  R2 | panel  panel  panel  panel
      R6 | panel  panel  panel  panel
 ```
 
-Requirements for a valid 2D small multiple matrix:
-- Row variable is categorical, ordered by a meaningful criterion (not alphabetical)
-- Column variable is categorical or ordinal, also ordered meaningfully
-- Every cell uses identical design, scale, and encoding
-- Axis labels appear once (left edge for rows, top or bottom for columns)
-- A single shared color scale / legend appears outside the matrix
+Requirements for a valid 2D small-multiple matrix:
+- Row variable categorical, ordered by a meaningful criterion (not alphabetical).
+- Column variable categorical or ordinal, also ordered meaningfully.
+- Every cell uses identical design, scale, and encoding.
+- Axis labels appear once (left edge for rows, top or bottom for columns).
+- A single shared color scale / legend sits outside the matrix.
 
-The neurometric example (EI, p. 78) is a 6×4 matrix: diagnosis (rows) × brain-wave frequency band (columns). Reading across a row shows one patient group's brain electrical pattern across four frequencies. Reading down a column shows how a given frequency band differs across diagnoses. Both readings are available simultaneously without any redesign.
+The neurometric example (*Envisioning Information*, p. 78) is exactly this: diagnostic groups (rows) × brain-wave frequency band — delta, theta, alpha, beta (columns). Reading across a row shows one patient group across all four bands; reading down a column shows how one band differs across diagnoses. Both readings are available at once, with no redesign — Tufte's "flatland within flatland."
 
 ---
 
-## §7. Conclusion: Properties of Well-Designed Small Multiples
+## §8. Conclusion: Properties of Well-Designed Small Multiples
 
-In *The Visual Display of Quantitative Information* (p. 175), Tufte enumerates the defining properties of well-designed small multiples. They are inevitably comparative and deftly multivariate; they are shrunken, high-density graphics, usually built from a large data matrix; they are drawn almost entirely with data-ink; they are efficient to interpret; and they are often narrative in content — revealing how the relationship between variables shifts as the index variable changes, thereby making interaction and multiplicative effects visible.
+Tufte enumerates the defining properties (VDQI, p. 175). Well-designed small multiples are:
 
-The governing logic follows from this: non-data-ink should be minimized (less is more), while data-ink should be maximized (less is a bore). Tufte makes this tension explicit as the underlying theory of small multiples (*The Visual Display of Quantitative Information*, p. 175).
+- **Inevitably comparative** — comparison is the entire point.
+- **Deftly multivariate** — they carry many variables without confusion.
+- **Shrunken, high-density**, and **usually built from a large data matrix**.
+- **Drawn almost entirely with data-ink** — little non-data decoration.
+- **Efficient to interpret** once the single shared design is learned.
+- **Often narrative** — they reveal how the relationship between variables shifts as the index changes, exposing interaction and multiplicative effects a single chart would hide.
+
+The governing logic: minimize non-data-ink (less is more) while maximizing data-ink (less is a bore). That tension is the underlying theory of the whole pattern.
 
 **Summary: do/don't table**
 
@@ -170,30 +188,33 @@ The governing logic follows from this: non-data-ink should be minimized (less is
 | Share axis ranges across all panels | Auto-scale each panel independently |
 | Shrink panels to minimum legible size | Make panels larger than the data requires |
 | Array all comparison panels within one eyespan | Paginate or animate panels being compared |
-| Use implicit grid or hairlines to separate panels | Use dark heavy borders (creates disruptive stripes) |
-| Label with the index variable directly on each panel | Repeat full legend in every panel |
+| Build from a large data matrix | Apply the pattern to a tiny table where an overlay is faster |
+| Use an implicit grid or hairlines to separate panels | Use dark heavy borders (creates disruptive stripes) |
+| Label with the index variable directly on each panel | Repeat the full legend in every panel |
 | Order panels by a meaningful criterion (time, magnitude) | Default to alphabetical or arbitrary order |
 | Use 2D indexing (rows + columns) for two categorical variables | Flatten a 2D comparison into a single long row |
-| Keep design structure, scale, encoding identical across panels | Change chart type, encoding, or scale between panels |
-| Space panels proportionally to index variable when appropriate | Use uniform spacing regardless of uneven intervals |
+| Keep design, scale, encoding identical across panels | Change chart type, encoding, or scale between panels |
+| Space panels proportionally to the index when intervals are uneven | Use uniform spacing regardless of uneven intervals |
 | Draw almost entirely with data-ink | Add decorative fills, gradients, or chartjunk |
 
 ---
 
-## §8. Failure Modes
+## §9. Failure Modes
 
-**Broken scale:** Each panel's y-axis rescales to local data range. The viewer sees all panels reaching the same height, eliminating the comparative signal entirely. Common in spreadsheet software defaults. Fix: set explicit shared min/max on all axes.
+**Broken scale:** each panel's axis rescales to its local data range, so every panel reaches the same height and the comparative signal vanishes. Common in spreadsheet defaults. Fix: set an explicit shared min/max on all axes.
 
-**Eyespan violation:** Panels are spread across slides, tabs, or pages. The viewer is asked to compare from memory. Fix: all compared panels must fit simultaneously in view.
+**Eyespan violation:** panels are spread across slides, tabs, or pages, forcing comparison from memory. Fix: every compared panel must fit simultaneously in view.
 
-**Structural drift:** Panel 1 is a line chart, panel 6 is a bar chart because "the data type changed." The viewer must re-learn encoding for each panel. Fix: commit to one chart type at the outset; if the data type genuinely forces a change, it is not a small multiple.
+**Structural drift:** panel 1 is a line chart, panel 6 a bar chart because "the data type changed," so the viewer re-learns the encoding each time. Fix: commit to one chart type at the outset; if the data genuinely forces a change, it is not a small multiple.
 
-**Disruptive borders:** Heavy black rules around each panel create a grid of white stripes where panels meet, pulling more visual attention than the data. Fix: use thin hairlines, white gutters, or purely spatial separation.
+**Disruptive borders:** heavy black rules around each panel create a grid of white stripes where panels meet, outweighing the data. Fix: thin hairlines, white gutters, or purely spatial separation.
 
-**Over-labeling:** Each panel carries full axis tick labels, gridlines, and a repeated legend, consuming more space than the data marks. Fix: tick labels on the outer edges only; single legend outside the array; internal panels carry only the data.
+**Over-labeling:** every panel carries full tick labels, gridlines, and a repeated legend, consuming more space than the data marks. Fix: tick labels on outer edges only; one legend outside the array; interior panels carry only data.
 
-**Alphabetical panel order:** The index variable is ordered A–Z rather than by data value, time, or logical sequence. Narrative and trend detection both require meaningful ordering. Fix: order by the dimension that best surfaces the story (time, magnitude, geography).
+**Alphabetical panel order:** the index is ordered A–Z rather than by value, time, or logical sequence, killing narrative and trend detection. Fix: order by the dimension that best surfaces the story (time, magnitude, geography).
 
-**Too few panels:** Two panels do not need the small multiple treatment — a simple overlay or direct label is faster to read. Small multiples earn their overhead at roughly 4+ panels where overlay would create crossing lines or color confusion.
+**Too few panels:** two or three panels rarely justify the overhead — a labeled overlay reads faster. Small multiples earn their keep at roughly 4+ panels, where an overlay would produce crossing lines or color confusion.
 
-**Inconsistent aspect ratio:** Panels vary in height or width because labels differ in length, or a particular panel has an outlier label. Fix: fix panel dimensions absolutely; truncate or abbreviate labels to fit rather than expanding the panel.
+**Tiny data matrix:** the pattern is applied to a handful of numbers, so shrinking gains nothing and the array just adds chrome. Fix: reserve small multiples for a genuinely large underlying matrix; otherwise use a single chart.
+
+**Inconsistent aspect ratio:** panels vary in size because labels differ in length or one panel has an outlier label. Fix: fix panel dimensions absolutely; truncate or abbreviate labels rather than expanding the panel.

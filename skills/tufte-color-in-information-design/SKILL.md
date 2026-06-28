@@ -1,62 +1,74 @@
 ---
 name: tufte-color-in-information-design
-description: Apply Tufte's principles for color in data graphics — the four functional uses, Imhof's four rules, palette strategy, contextual effects, and redundant coding — to maximize information density while minimizing color damage.
+description: Apply Tufte's principles for color in data graphics — the four functional uses, color's three dimensions, Imhof's four rules, palette strategy, contextual effects, and redundant coding — to maximize information density while minimizing color damage.
 tags: [tufte, data-visualization, color, information-design, cartography]
 ---
 # Color in Information Design
 
 ## Overview
-Color in information design is not decoration — it is a channel for transmitting data. Tufte's *Envisioning Information* (Chapter 5) establishes that human eyes can discriminate up to 1,000,000 colors in controlled pairwise comparisons, yet for encoding abstract information more than 20–30 colors produce not diminishing but negative returns. The central discipline is restraint: use the least color that conveys the most information, and above all, do no harm.
+Color is a channel for transmitting data, not decoration. In *Envisioning Information* (Chapter 5, "Color and Information"), Tufte shows the eye is exquisitely sensitive — a trained colorist distinguishes ~1,000,000 colors under contrived pairwise tests — yet for encoding abstract information more than 20–30 colors produce not diminishing but *negative* returns, because the binding limit is human visual *memory*, not local discrimination. Even putting a good color in a good place is hard, so the governing principle is restraint:
+
+> "Above all, do no harm."
+> — Tufte, *Envisioning Information*, p. 81
 
 ---
 
 ## §1. The Four Functional Uses of Color
 
-Every color mark in a display serves one of four roles. Knowing which role applies determines the correct palette strategy.
+Every color mark serves one of four roles. Naming the role determines the correct palette strategy. Tufte reads all four off a single Swiss alpine map (the Matterhorn sheet): water distinguished from stone and glacier (label), altitude shown by contour and rate of change by darkening (measure), river blues and shadow hachures (representation), and the topography enlivened beyond what black-and-white could do (decoration).
 
-| Role | Color Acts As | Example | Palette Constraint |
+| Role | Color Acts As | Map Example | Palette Constraint |
 |---|---|---|---|
-| **Label** | Noun — names a category | Water vs. stone vs. glacier on a topo map | Max 5–7 distinguishable hues; primaries + black give maximum separation |
-| **Measure** | Quantity — encodes a scalar | Ocean depth in 21 value steps (bathymetric tints) | Sequential value scale (light → dark); avoid rainbow |
-| **Representation** | Imitates reality | River blues, shadow hachures on terrain | Match perceptual expectation; blue for water, brown for land |
-| **Decoration** | Beauty / attention | Colored borders, ornamental fills | Avoid entirely in data graphics; subordinate completely to data |
+| **Label** | Noun — names a category | Water vs. stone vs. glacier | Primaries + black for maximum separation; few categories |
+| **Measure** | Quantity — encodes a scalar | Altitude/depth darkening with value | Sequential value scale, light → dark; never rainbow |
+| **Representation** | Imitates reality | River blues, shadow hachures | Match perceptual expectation: blue for water, brown for land |
+| **Decoration** | Beauty / enlivening | Overall vitality of the sheet | Earn it from data first; never let it compete |
 
-> "At work in this fine Swiss mountain map are the fundamental uses of color in information design: to label (color as noun), to measure (color as quantity), to represent or imitate reality (color as representation), and to enliven or decorate (color as beauty)."
-> — *Envisioning Information*, p. 81
-
-**Rule:** Assign each color mark to exactly one functional role. Mixed-role color creates ambiguity and forces the viewer to decode intent before reading data.
+**Rule:** Assign each color mark to exactly one role. Mixed-role color forces the viewer to decode *intent* before reading data. Decoration is the only role that must justify itself against "do no harm" — if a color carries no label, measure, or representation, strip it.
 
 ---
 
 ## §2. The Capacity Constraint — How Many Colors
 
-Color capacity is far lower than human discrimination ability suggests. The limit is imposed by working memory and the absence of a reference legend during reading.
+Capacity is far lower than raw discrimination suggests, because reading happens from memory without a legend in hand.
 
-| Condition | Approx. Colors Accessible |
-|---|---|
-| Trained colorist, pairwise comparison | ~1,000,000 |
-| Practical viewers without legend | ~20,000 |
-| Effective for encoding abstract info | 5–7 max |
-| More than this → negative returns | >20–30 |
+| Condition | Approx. Colors | Source |
+|---|---|---|
+| Trained colorist, contrived pairwise comparison | ~1,000,000 | Tufte, EI p.81 |
+| Accessible to many viewers in practice | ~20,000 | Tufte, EI p.81 |
+| Encoding abstract information beyond this | >20–30 → negative returns | Tufte, EI p.81 |
+| Categories trackable from memory without a legend | ≤ ~7 | working-memory limit (Miller), *not* Tufte |
 
-> "For encoding abstract information, however, more than 20 or 30 colors frequently produce not diminishing but negative returns."
-> — *Envisioning Information*, p. 81
+> The constraint is set by the early limits of human visual *memory*, not the capacity to discriminate between adjacent tints. — paraphrase of Tufte, EI p.81
 
-**The 1.5-bit heuristic:** Effective data graphics rarely require more than ~3 distinguishable values per color dimension (label use). Three values = log₂(3) ≈ 1.58 bits. Anything beyond this demands legend-mediated lookup, not direct perception.
+The ≤7 figure is a practical working-memory guideline (Miller's 7±2), not from this chapter; Tufte's own ceiling for abstract encoding is the 20–30 threshold. Both point the same way: add hues and you cross from direct perception into legend-mediated lookup.
 
-**Failure mode — Color Inflation:** Adding colors to "look comprehensive" while viewers can only actively track 5–7 named hues. Every additional hue past ~7 forces legend dependency, slowing reading and increasing decoding errors.
+**Failure mode — Color Inflation:** Adding hues to "look comprehensive." Every hue past what memory holds forces legend round-trips, slowing reading and raising decoding error. Fix: collapse categories, or split into small multiples.
 
 ---
 
-## §3. Imhof's Four Rules (from Cartographic ReliefPresentation)
+## §3. Color is Three-Dimensional — Multidimensional Encoding
 
-Eduard Imhof's rules, derived from Swiss cartographic practice, are the most actionable palette and placement guidance Tufte endorses. They generalize beyond maps to any data graphic.
+Every one of the ~50 color-organization systems locates a color in *three* dimensions: hue/saturation/value (Munsell and perceptual schemes), red/green/blue (additive, video screens), cyan/magenta/yellow (subtractive, printing inks). Always three axes — which is why one color mark can carry more than one variable at once.
+
+**Implication:** color can encode multidimensional data. Tufte's example (Ware & Beatty) spreads data points across an X–Y plane, then lights each point's RGB components in proportion to three *additional* variables, yielding visible clusters of three-dimensional similarity — better than black-only dots.
+
+| Do | Don't |
+|---|---|
+| Use value + saturation of one hue to carry two related variables | Stack three independent variables on RGB and expect precise reads |
+| Reserve multidimensional color for *cluster detection* (a coarse read) | Use it where exact values must be recovered per point |
+| Pair it with position (the X–Y plane) so color is not the only channel | Ask viewers to mentally invert a color into a 3-D coordinate for serious analysis |
+
+**Threshold:** multidimensional color succeeds for spotting simple clusters; it fails as soon as a viewer must read a precise value back out of a color, because that requires visualizing the mark as a specific point in 3-space.
+
+---
+
+## §4. Imhof's Four Rules
+
+Eduard Imhof's rules (from *Cartographic Relief Presentation*, the design code behind the Swiss maps) are the most actionable palette guidance Tufte endorses, and they generalize beyond maps. Rules 1–2 minimize color *damage*; rules 3–4 build *harmony*.
 
 ### Rule 1 — Strong Colors Only on Small Areas
-
-Imhof observed that pure, bright, or very strong colors become visually overwhelming when they cover large adjacent areas without relief — the effect is loud and unpleasant. Used sparingly against muted background tones, however, the same colors achieve extraordinary impact. The analogy he drew was musical: only a quiet passage makes a crescendo and forte register as powerful.
-
-**Threshold:** Extremes of any variable (highest peaks, deepest trenches, temperature maxima) typically enclose small areas only. Reserve saturated, strong color for these small-area extremes. Apply muted, low-saturation color to large background regions.
+Pure, bright, very strong colors are loud and unbearable when they stand unrelieved over large adjacent areas, but achieve extraordinary effect used sparingly on or between dull background tones. Imhof's analogy is musical: only a quiet ground lets a colorful theme register as a crescendo. Nature cooperates — extremes (highest peaks, deepest trenches, temperature maxima/minima) enclose only small areas, so reserve saturated color for those.
 
 | Area Size | Color Saturation |
 |---|---|
@@ -64,190 +76,162 @@ Imhof observed that pure, bright, or very strong colors become visually overwhel
 | Medium context zone | Low-to-mid saturation |
 | Small extreme / focal point | Full saturation, strong |
 
-If you give all areas glaring, rich colors: "the pictures have brilliant, disordered, confusing and unpleasant effects." — Imhof
+Give *all* areas glaring rich color and the result is brilliant, disordered, confusing, and unpleasant.
 
 ### Rule 2 — No Adjacent Pastels at Large Scale
-
-Light, bright colors mixed with white, placed next to each other over large areas, produce perceptually unpleasant results. This is the pastel-on-pastel failure mode common in presentation software defaults.
+Light, bright colors mixed with white, placed next to each other over large areas, usually look unpleasant. This is the pastel-on-pastel default of presentation software. Worse, dark-value versions of these strong colors produce 1+1=3 phantom bands at their boundaries that fight the encoded data.
 
 ### Rule 3 — Muted Backgrounds, Vivid Foregrounds
-
-Imhof held that large background areas should operate quietly, so that smaller vivid accent areas can stand out with maximum force. He considered gray one of the most valuable and versatile colors in the toolkit — strongly muted tones mixed with gray create the ideal ground against which a colorful data theme can register.
-
-Gray is not a compromise — it is a deliberate tool. The muted ground makes vivid spots maximally legible. Local emphasis for data is given by spot highlights of strong color woven through the serene background.
+Large background or base colors should work quietly so smaller bright areas stand out vividly. Gray is the most versatile color in the toolkit; strongly muted tones mixed with gray make the best ground for a colored theme. Gray is a deliberate instrument, not a compromise. Local emphasis comes from spot highlights of strong color woven through the serene background.
 
 ### Rule 4 — Interweave, Don't Partition
+Two or more large enclosed areas in different colors make the picture fall apart. Unity holds when the colors of one area are intermingled into the other, carpet-fashion, so all colors of the main theme scatter like islands across the background.
 
-If a graphic contains two or more large enclosed color areas, the image falls apart visually. Unity is maintained when colors of one area are repeatedly intermingled in the other — woven carpet-fashion — so all colors of the main theme appear scattered as islands in the background color.
+> **Tufte's caveat (do not skip):** he flags rule 4 as pushed too far toward a general theory of aesthetics. Mondrian, Malevich, and others routinely violate it to great effect, and Tufte sides with them — the fault lies in the rule, not in Mondrian. Apply rule 4 to dense thematic data, not as a universal law.
 
-**Failure mode — Color Partition:** A choropleth map where each region is one solid color with no interweaving creates competing color blocks that assert visual dominance over the data they encode.
+**Failure mode — Color Partition:** a choropleth where each region is one solid block, no interweaving, so the color blocks assert dominance over the data they encode. Fix: intermingle, or drop to a value scale.
 
 ---
 
-## §4. Color as Label — Maximum Differentiation
+## §5. Color as Label — Maximum Differentiation
 
-For categorical labeling, maximum differentiation per hue count is the goal. Byrne's 1847 visual Euclid is Tufte's primary example.
+For categorical labeling, the goal is maximum perceptual distance per slot. Tufte's exemplar is Oliver Byrne's 1847 visual *Euclid*, which discards the letter-coding of geometry: each element names *itself* by consistent shape, color, and orientation, so the thing is its own label — replacing an "alphabetic macaroni" of dozens of coded links between diagram and proof.
 
 > "Use of the primary colors and black provides maximum differentiation (no four colors differ more)."
-> — *Envisioning Information*, p. 86
+> — Tufte, *Envisioning Information*, p. 86
 
-**Palette for label use:**
-- Red, blue, yellow, black — four primaries give the largest perceptual distance per slot
-- Each element names itself by consistent shape + color + orientation simultaneously
-- Removes the alphabetic intermediary: the thing IS its label, not a code to decode
+Byrne tunes even the primaries for the page: yellow is broken with orange and darkened in value to sharpen its edge against white paper; blue is kept relatively light to hold its distance from black; black is the least-used color and is avoided for large solid elements, muting unnecessary contrast.
 
-**Do / Don't — Labeling:**
+**Redundant labeling nuance:** Tufte's redraw couples Byrne's color method *with* conventional letter-coding. Intermingling the two does not feel fussy — it speeds recognition and lets viewers choose how they link text to diagram. Redundancy helps when it resolves a real linking task.
 
 | Do | Don't |
 |---|---|
-| Assign one hue per category consistently throughout the display | Reuse hues across categories |
-| Choose hues with maximum perceptual distance (primaries + black) | Choose adjacent hues on the color wheel |
-| Use color redundantly with shape or position | Rely on color alone as the sole distinguishing signal |
-| Limit to ≤7 categories before splitting the display | Encode 10+ categories by color expecting direct recognition |
+| Assign one hue per category, used consistently throughout | Reuse a hue across categories |
+| Choose maximum perceptual distance (primaries + black) | Choose adjacent hues on the wheel |
+| Tune value within a hue to sharpen edges (Byrne's yellow/blue) | Use raw saturated primaries at full strength on large fills |
+| Pair color with shape or position | Rely on color alone to distinguish a category |
+| Keep categories within working memory (≤ ~7) | Encode 10+ categories by color expecting direct recognition |
 
 ---
 
-## §5. Color as Measure — Sequential Scales
+## §6. Color as Measure — Sequential Scales
 
-Color as quantity requires a perceptually monotonic scale. Value (lightness) is the most reliable dimension.
+Color quantifies along a perceptually continuous span (in value and saturation) of fine distinction, at precision comparable to most measurement. Value (lightness) is the most reliable axis: order it light → dark.
 
-> "Color is a natural quantifier, with a perceptually continuous (in value and saturation) span of incredible fineness of distinction, at a precision comparable to most measurement."
-> — *Envisioning Information*, p. 91
-
-**The ROYGBIV problem:**
-
-Rainbow (ROYGBIV) scales replace clear light-to-dark visual sequence with a disorderly red, orange, yellow, green, blue, indigo, violet encoding. This:
-- Has no natural order in human perception
-- Reduces viewers to memorizing color names and their corresponding numbers
-- Violates Paul Valery's axiom: "To see is to forget the name of the thing one sees"
-- Produces "rainbow encipherment" — viewers must fall back on contour, edge, and labels to read data
+**The ROYGBIV problem.** A rainbow scale replaces the clear light-to-dark sequence with a disorderly red–orange–yellow–green–blue–indigo–violet ordering that has no perceptual order. Viewers fall back to mumbling color names and the numbers they stand for — contrary to Valéry's axiom that to see is to forget the name of the thing one sees.
 
 > "The mind's eye does not readily give an order to ROYGBIV."
-> — *Envisioning Information*, p. 92
+> — Tufte, *Envisioning Information*, p. 92
 
-**Sequential scale rules:**
+Faced with this "rainbow encipherment," viewers must turn to other cues (contour, edge, labels) to read the data at all.
 
-| Criterion | Value Scale (light→dark) | Rainbow Scale |
+**Hue can *extend* a value scale (nuance, EI p.91 n.9):** controlled, gentle hue variation layered onto a value ramp increases fineness of differentiation while *keeping* a natural visual sequence. The sin is disordered hue (ROYGBIV), not hue per se.
+
+| Criterion | Value Scale (light→dark) | Rainbow (ROYGBIV) |
 |---|---|---|
 | Perceptual order | Intuitive — darker = more | Must be memorized |
 | Contextual sensitivity | Moderate (edge fluting) | Severe |
 | Color-deficient viewers | Generally safe | High error rate |
-| Works without legend | Often | Rarely |
-| Tufte endorsement | Yes | No |
+| Readable without a legend | Often | Rarely |
+| Tufte's endorsement | Yes | No |
 
-**Best example:** The General Bathymetric Chart of the Oceans (GEBCO) encodes ocean depth in 21 sequential value steps (hypsometric tints), with "the deeper or higher, the darker" as the visual metaphor. Numbered contour lines provide redundant measurement. Every color mark records four variables: latitude, longitude, sea or land, and depth/altitude in meters.
+**Exemplar — GEBCO.** The General Bathymetric Chart of the Oceans records ocean *depth* (bathymetric tints) and land *height* (hypsometric tints) across **21 steps**, the tint darkening as depth or altitude increases. Numbered contours outline each color field to improve reading accuracy; near-transparent gray tracks for sounding lines sit on a separate visual plane. Every color mark signals **four variables**: latitude, longitude, sea-or-land, and depth-or-altitude in meters.
 
 ---
 
-## §6. Contextual Color Effects and Their Dangers
+## §7. Contextual Color Effects and Their Dangers
 
-Perceived color is not a stable property of a mark — it is a function of surrounding context. This makes pure color coding fragile.
-
-Tufte notes in *Envisioning Information* (p. 92) that any color-coded quantity — whether encoded by hue, value, or saturation — is vulnerable to perceptual context effects. Although such shifts are an infrequent threat in routine information design, they are vivid enough when they occur to argue against color differences as the sole signal for any important data distinction.
-
-Key mechanisms:
+Perceived color is not a stable property of a mark — it is a function of its surround. Any color coding of quantity (hue, value, or saturation) is sensitive to these shifts. They are an infrequent threat in routine work but vivid when they strike, which argues against color as the *sole* signal for any important distinction.
 
 | Effect | What Happens | Implication |
 |---|---|---|
-| Simultaneous contrast | Adjacent colors shift each other's perceived hue and value | Same color looks different on different grounds |
-| Edge fluting | Light-dark boundaries create illusory bands | Value scales appear non-monotonic near transitions |
-| Color subtraction (Albers) | "Any ground subtracts its own hue from colors which it carries" | Two colors can be made to look identical or like different colors depending on ground |
+| Simultaneous contrast | Adjacent colors shift each other's perceived hue and value | One color looks different on different grounds |
+| Edge fluting | Light–dark boundaries create illusory bands | Value scales look non-monotonic near transitions |
+| Color subtraction (Albers) | A ground subtracts its own hue from the colors it carries | Two equal colors can be made to look different — or two different colors made to look alike |
 
-> "Repeated experiments with adjacent colors will show that any ground subtracts its own hue from colors which it carries and therefore influences."
-> — Josef Albers, quoted in *Envisioning Information*, p. 93
+**Constructive use (don't only fear it):** on a conventional road map, a thin red line (small roads) deepens to a richer red where flanked by parallel blue stripes (large roads) — the surround's subtraction *extends* the label palette without printing an extra flat color. Context effects are a tool when deployed knowingly.
 
-**Practical consequence:** Color-to-number translations are nonlinear (gamma curves), noisy, and idiosyncratic. Several percent of viewers are color-deficient. Avoid placing crucial data distinctions solely on the red-green difference.
+**Why color-to-number is fragile:** the translation from a printed mark to a quantity in the viewer's mind is nonlinear (gamma curves), noisy, and idiosyncratic, and several percent of viewers are color-deficient. The standard clinical figure is ~8% of males with red–green deficiency (Tufte states "several percent"); avoid placing crucial distinctions on the red–green axis.
 
-**Failure mode — Solo Color Encoding:** Displaying a key distinction by color alone without shape, position, or contour reinforcement. When contextual shifts move that color, the distinction vanishes or reverses.
+**Failure mode — Solo Color Encoding:** a key distinction carried by color alone with no shape, position, or contour backup. When the surround shifts that color, the distinction blurs or reverses. Fix: add a non-color channel.
 
 ---
 
-## §7. Redundant Coding — The Escape from Contextual Ambiguity
+## §8. Redundant Coding — The Escape from Ambiguity
 
-The solution to color's instability is not to abandon color, but to layer it with non-color signals.
+The cure for color's instability is not to abandon color but to layer it with non-color signals. Redundant, partially overlapping encodings yield a sturdy design that survives the failure of any single channel — at the risk of fussy, committee-style clutter. The target is a *crystalline, lucid redundancy*.
 
-Tufte argues in *Envisioning Information* (p. 93) that layering multiple, partially overlapping signals is the way out of color's perceptual instability. Redundant encoding yields a resilient design — one that stays readable even when a single channel fails. The risk is a cluttered, committee-feel result; the target is what he calls a crystalline, lucid redundancy.
+**Redundancy must be earned.** Tufte requires two conditions before adding a signal: (1) a genuine ambiguity in the display that multiplicity can actually reduce, and (2) the right technique to reduce *that* ambiguity. Add signals without a confusion to fix and you propagate gratuitous multiplicity.
 
-**What redundant coding looks like:**
-- Color fields (value scale) + contour lines labeled with measurements (GEBCO ocean map)
-- Contours eliminate edge fluting, make each field a more coherent whole, minimize within-field variation, maximize between-field differences
-- 3% and 7% screen tints for ground/building: barely distinguishable without edges; clearly distinct when contour is added
-
-Human cognitive processing gives "considerable and often decisive weight to contour information." Contours do the heavy lifting; color reduces effort and adds layering.
-
-**Do / Don't — Redundant Coding:**
+**What it looks like (GEBCO again):** color fields encoding depth are delineated by contours labeled with depth measurements. The contours eliminate edge fluting, make each field a coherent whole, minimize within-field variation, and maximize between-field difference — letting *finer* value distinctions read reliably. With 3% and 7% screen tints for ground vs. building, the two are barely separable bare and clearly distinct once an edge is added. Vision research (Marr) confirms human processing gives decisive weight to contour, so contours do the heavy lifting and color adds the layering.
 
 | Do | Don't |
 |---|---|
+| Add a signal only where a real ambiguity exists | Layer signals reflexively until the graphic is busy |
 | Pair color fields with labeled contour lines | Use color as the only quantitative encoding |
-| Use shape + color for category labels | Use color alone for categorical distinction |
-| Apply contours or borders to sharpen color region boundaries | Rely on color area edges alone |
-| Make redundancy crystalline and lucid | Layer signals until the graphic is cluttered |
+| Use shape + color together for categories | Use color alone for categorical distinction |
+| Sharpen color-region edges with thin contours | Rely on color-area edges alone |
+| Keep redundancy crystalline and lucid | Produce fussy, insecure, committee-style design |
 
 ---
 
-## §8. The Nature Palette Strategy
+## §9. The Nature Palette Strategy
 
-Tufte's overarching palette strategy in *Envisioning Information* (p. 90) is to draw from nature's colors — particularly the lighter register: sky blues, shadow grays, straw yellows. These tones carry a widely recognized coherence, their authority grounded in the physical world itself. A palette built from nature's colors naturally suppresses the production of garish, data-free color junk.
+Tufte's grand palette strategy: draw from nature's colors, especially the lighter side — blues, yellows, and grays of sky and shadow. These are familiar and coherent, carry a widely accepted harmony, and their source lends a certain authority. A nature palette suppresses garish, content-empty colorjunk by holding chroma to what the physical world contains.
 
-**Why nature's palette works:**
-- Pre-calibrated harmony: human visual systems evolved with these colors
-- Suppresses garish color junk by limiting chroma to what occurs in the physical world
-- Light-biased: sky blues, shadow grays, straw yellows sit in the muted register Imhof's Rule 3 demands for backgrounds
-- Local emphasis is then given by spot highlights of strong color woven through the serene background
+**Why it works:**
+- Pre-calibrated harmony — the visual system evolved with these colors.
+- Light-biased — sky blues, shadow grays, straw yellows sit in the muted register rule 3 wants for backgrounds.
+- Emphasis is then spot highlights of strong color woven through the serene ground.
 
 **Implementation:**
-1. Set the large-area ground in muted nature colors (gray-blue sky tones, warm stone tones, neutral gray)
-2. Reserve saturated primaries or strong accent colors for the focal data (outliers, extremes, selection states)
-3. The contrast between the muted ground and the vivid spot does the highlighting work
+1. Set the large-area ground in muted nature colors (gray-blue sky, warm stone, neutral gray).
+2. Reserve saturated accents for focal data (outliers, extremes, selection states).
+3. Let the contrast between muted ground and vivid spot do the highlighting — no boxes or rules needed.
 
 ---
 
-## §9. Color for Layering and Separation
+## §10. Layering, Separation, and the Screen
 
-Color enables visual layering — the ability to stack multiple information planes in the same display space without confusion.
+Color stacks information planes in one space without confusion: a muted background plane (context/geography), a low-saturation mid-plane (secondary data), and saturated foreground spots (the primary signal). The eye reads these as depth planes without borders. Spots against a light, muted field highlight and italicize the data while weaving overall harmony.
 
-> "Color spots against a light gray or muted field highlight and italicize data, and also help to weave an overall harmony."
-> — *Envisioning Information*, p. 83
+**On screens specifically.** Computer displays are low-resolution, running at 1/10 to 1/1000 the data density of a map or book page, and their bright white emits glare like a light bulb. Color helps: softening the white background calms glare, and color edges let a grid be removed entirely (de-gridding kills the 1+1=3 clutter of closely spaced dark grid lines). For an active-window frame, the color must be *light in value* (to mute 1+1=3 noise against content) and *intense/saturated* (to signal "active") at the same time — **yellow is the only color satisfying both**, so a two-dimensional task is met by two dimensions of one color.
 
-**Layering via color:**
-- Muted background plane (infrastructure, context, geography)
-- Mid-ground plane in low-saturation hue (secondary data)
-- Foreground spots in saturated accent (primary data signal)
-
-The eye registers these as distinct depth planes without borders or separators. Color does the layer separation work that would otherwise require additional spatial structure.
-
-**Failure mode — 1+1=3 Effects:** Closely-spaced dark grid lines or adjacent strong background colors generate visual noise beyond the sum of their parts. Dark grid on white background produces a gray field not present in either element. Remedy: mute the grid to near-white, or replace with spot color for the active element only.
-
-**Screen context example:** Yellow satisfies two simultaneous requirements for a UI active-window frame: light in value (muting 1+1=3 noise with the surrounding content), and relatively intense and saturated (providing a strong visual signal). No other color satisfies both conditions simultaneously.
+**Failure mode — 1+1=3 Effects:** closely spaced dark grid lines or adjacent strong backgrounds generate phantom fields beyond the sum of their parts (dark grid on white reads as a gray haze present in neither element). Fix: mute the grid toward the background, or replace it with spot color on the active element only.
 
 ---
 
-## §10. Named Failure Modes Summary
+## §11. Named Failure Modes Summary
 
 | Failure Mode | Description | Fix |
 |---|---|---|
-| **Color Inflation** | >7–10 hues encoding categories | Collapse categories; use small multiples |
-| **Color Partition** | Large solid color blocks compete with data | Interweave colors per Imhof Rule 4 |
-| **Rainbow Encipherment** | ROYGBIV for sequential data | Replace with light-to-dark value scale |
-| **Solo Color Encoding** | Key distinction carried by color alone | Add contour, shape, or position redundancy |
-| **Pastel-on-Pastel** | Light saturated colors adjacent at large scale | Mute to gray or separate with value contrast |
-| **Decoration Masquerading** | Color applied to large areas with no data role | Strip to black/white; re-earn each color mark |
-| **1+1=3 Noise** | Adjacent strong colors or dense dark grids create phantom visual fields | Mute backgrounds; use spot accent only |
-| **Contextual Collapse** | Color distinction that works on one ground fails on another | Always add non-color redundant signal |
-| **Red-Green Solo** | Critical distinction depends on red-green difference | ~8% of male viewers are red-green deficient; add shape/label |
+| **Color Inflation** | More hues than memory can track (>20–30 abstract; > ~7 categories) | Collapse categories; use small multiples |
+| **Color Partition** | Large solid color blocks compete with data | Interweave colors (Imhof rule 4, on dense data) |
+| **Rainbow Encipherment** | ROYGBIV for sequential data | Replace with light→dark value scale; gentle hue only to extend it |
+| **Solo Color Encoding** | Key distinction carried by color alone | Add contour, shape, or position |
+| **Pastel-on-Pastel** | Light colors with white, adjacent, large areas | Mute toward gray; separate by value |
+| **Decoration Masquerading** | Color on large areas with no data role | Strip to monochrome; re-earn each mark |
+| **1+1=3 Noise** | Adjacent strong colors / dense dark grids make phantom fields | Mute backgrounds; de-grid; spot accent only |
+| **Contextual Collapse** | A distinction that works on one ground fails on another | Always add a non-color redundant signal |
+| **Red–Green Solo** | Critical distinction depends on red vs. green | ~8% of males are red-green deficient; add shape/label |
+| **Gratuitous Multiplicity** | Redundant signals added with no ambiguity to resolve | Remove; redundancy must fix a real confusion |
 
 ---
 
-## §11. Decision Checklist Before Applying Color
+## §12. Decision Checklist Before Applying Color
 
-1. What functional role does this color serve? (Label / Measure / Represent / Decorate) — if Decorate, remove it.
-2. Is the large-area background muted? Strong accent only on small-area extremes?
-3. Does the sequential scale run light-to-dark in value? No ROYGBIV?
-4. Is each categorical hue used consistently and assigned maximum perceptual distance from neighbors?
-5. Is there a non-color redundant signal (contour, shape, position) backing up any critical color distinction?
+1. What role does this mark serve — Label / Measure / Represent / Decorate? If Decorate, can you strip it? ("Do no harm.")
+2. Is the large-area background muted, with strong color only on small-area extremes (Imhof 1 & 3)?
+3. Sequential data: does the scale run light → dark in value, with no ROYGBIV? (Hue only to *extend* the ramp.)
+4. Categorical data: one consistent hue per category, maximum perceptual distance (primaries + black), ≤ ~7 categories?
+5. Is any critical color distinction backed by a non-color signal (contour, shape, position)?
 6. Does the palette come from nature's lighter register for backgrounds?
-7. Are colors intermingled across large areas (Imhof Rule 4) rather than partitioned?
-8. Have contextual effects (simultaneous contrast, edge fluting) been tested against real surrounding content?
-9. Are color-deficient viewers accommodated (no red-green solo encoding)?
-10. Total hue count for categorical use ≤7?
+7. Are colors intermingled across large areas (Imhof 4) rather than partitioned — and is rule 4 appropriate here at all?
+8. Tested against real surrounding content for simultaneous contrast and edge fluting?
+9. Color-deficient viewers accommodated (no red–green solo encoding)?
+10. If using multidimensional color (RGB), is the read coarse (clusters) rather than exact values?
+11. Each redundant signal: does it resolve a real ambiguity, or is it gratuitous multiplicity?
+
+---
+
+Source: Edward Tufte, *Envisioning Information*, Chapter 5 "Color and Information," pp. 81–95.

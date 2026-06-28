@@ -1,224 +1,280 @@
 ---
 name: tufte-link-differentiation
-description: Design linking lines, arrows, and connectors so their visual properties — type, weight, annotation, direction — function as evidence about the relationship they encode, not mere geometry connecting nodes.
-tags: [tufte, data-visualization, diagrams, information-design, evidence, graphical-integrity, arrows, connectors]
+description: Design and audit diagram connectors — links, arrows, causal lines — as differentiated evidence about each specific relationship (its type, direction, strength, certainty, and mechanism) rather than generic geometry, following Tufte's "Links and Causal Arrows" chapter in Beautiful Evidence. Use when building or critiquing flow charts, networks, webs, trees, org charts, project/parse trees, influence diagrams, or any graphic that ties nouns together with lines.
+tags: [tufte, data-visualization, diagrams, information-design, evidence, graphical-integrity, arrows, connectors, causality, networks]
 ---
-# Link and Arrow Differentiation in Diagrams
+# Links and Causal Arrows
 
 ## Overview
 
-Every connector drawn on a diagram is an implicit claim: that a relationship exists, that it has a particular character, a direction, a strength, a degree of certainty. Generic identical arrows suppress all of that evidence behind uniform geometry. Tufte's prescription — drawn across *Visual Explanations*, *Envisioning Information*, and *Beautiful Evidence* — is that linking lines must earn their place by encoding the relationship they represent, using the full cartographic vocabulary of weight, style, annotation, and direction. A diagram in which all arrows look alike is a diagram that lies by omission.
+A diagram ties nouns together with lines, and every line is a claim: that a relationship exists, of a specific kind, with a direction, a strength, a degree of certainty. Tufte's "Links and Causal Arrows" chapter (*Beautiful Evidence*, 2006, pp. 64–81) makes one argument: nouns are specific but the connectors between them are usually generic, identical, and ambiguous, which means the diagram suppresses most of what it claims to show. The fix is to make connectors as articulate and differentiated as the relationships they encode — annotate them, vary them, give them a dictionary — and to treat the absence of a link as a claim too.
+
+**Provenance note.** Most of the source chapter is built on worked examples (Barr's art chart, Mark Lombardi's networks, cartographic legends, Verrocchio's horse, a primate cladogram, Feynman diagrams, the SARS transmission chart, Galileo). The concrete encoding scales, arrowhead tables, and per-domain line styles in §8 are a faithful **applied extension** of Tufte's principle, not text from the chapter — that boundary is marked where it occurs.
 
 ---
 
-## §1. The Generic Arrow Fallacy
+## §1. The Core Thesis: Specific Nouns, Generic Links
 
-The dominant failure in diagram design is treating the connector as pure topology: something is connected to something else, and an arrow shows which way. This flattens the evidence.
+When nouns get linked by arrows, the level of analysis quietly shifts. The nouns each name a particular thing; the connectors collapse into one undifferentiated mark used everywhere. Sameness of the visual element implies sameness of what it represents — as if one identical process operated between every connected pair, which is almost never true (p. 70).
 
-A relationship has at minimum four attributes that connectors routinely discard:
+Tufte's central claims, paraphrased:
 
-| Relationship attribute | What the generic arrow does | What it should do |
+- **Nouns name a specific something; links are too often non-specific, generic, identical, undifferentiated, ambiguous** (p. 70).
+- **The evidence for variation between connections is stronger than the evidence for sameness** — it would be astonishing if every relationship in a diagram were genuinely identical (p. 70).
+- Therefore connectors **should become more articulate, more differentiated, less generic** (p. 70).
+- The diagnostic test for any link diagram is a set of questions about meaning, not aesthetics (p. 64):
+
+> "The more generic the arrows and lines, the greater the ambiguity."
+> — Edward R. Tufte, *Beautiful Evidence* (p. 68)
+
+### The four framing questions (apply to every link diagram)
+
+Tufte poses these of flow charts, networks, webs, influence patterns, project-management charts, trees of origin, parse trees, and Feynman diagrams alike (p. 64):
+
+1. What precisely do the arrows mean?
+2. What do all those lines stand for?
+3. Where is their dictionary — the legend that fixes each line's meaning?
+4. How could the connectors carry more informative, more precise meanings?
+
+A diagram whose connectors cannot answer these is operating at a high level of generality and omitting the variables that matter.
+
+**Named failure mode — Generic Undifferentiated Link:** every connector is the same weight, style, and head, so the graphic shows only *that* nodes connect, never *how*. The reader must reconstruct relationship type, strength, and certainty from surrounding prose or domain knowledge. Sameness of mark falsely asserts sameness of process.
+
+---
+
+## §2. The Barr Art Chart: Ambiguity in Action
+
+The chapter's anchor example is Alfred Barr's 1936 *Cubism and Abstract Art* flow chart. It is, Tufte stresses, an imaginative and important diagram — the critique is about its connectors, not its ambition.
+
+| Property | Value | What it costs |
 |---|---|---|
-| **Type** (causal, correlational, definitional, speculative) | Ignores — one line style for all | Encode with line style (solid, dashed, dotted, double) |
-| **Strength** (strong, moderate, weak) | Ignores — one weight for all | Encode with stroke weight |
-| **Certainty** (confirmed, probable, hypothetical) | Ignores — arrow implies certainty | Encode with weight + style (thin dotted = uncertain) |
-| **Direction** (unidirectional, bidirectional, non-directional) | Often guessed or ambiguous | Encode with arrowhead count and placement |
+| Coverage | 45 years (1890–1935), flowing top to bottom | High generality forced by scope |
+| Nouns | ~80 words (mostly styles; 6 dead artists, a few places) | Living artists excluded; one lonely Brancusi |
+| Arrows | 51, each a causal claim about existence/direction/timing of influence | Verbs of the analysis, all drawn identically |
+| Scope of influence | Only influences *internal* to art | External forces (science, tech, politics, literature) omitted |
+| Direction | Single-headed arrows only | No mutual influence or feedback expressible (see §3) |
 
-> "Clutter and confusion are not attributes of information; they are failures of design."
-> — Edward R. Tufte, *Envisioning Information* (1990), p. 53
+Two structural points generalize beyond this chart:
 
-The failure is not that the connector carries too much information. It is that it carries none.
+- **Erasing the connectors guts the diagram.** Tufte's experiment: strip the 51 arrows and 19 bracket lines and the chart collapses into scattered, dislocated nouns (he likens it to Apollinaire's *Calligrammes*). The connectors carry most of the analytical content — which is exactly why drawing them generically wastes the diagram's main channel.
+- **Absent arrows are silent claims.** Every noun-pair *without* a line implicitly asserts non-influence. Why one arrow out of FUTURISM and none from BAUHAUS to GEOMETRICAL ABSTRACT ART? The gaps are unexamined assertions that no relationship exists (p. 64).
 
-**Named failure mode — Topology Without Semantics:** The diagram correctly shows which nodes connect but tells the reader nothing about what kind of connection it is, how strong, or how certain. The reader must infer all of this from surrounding text, a buried legend, or domain knowledge — shifting the interpretive burden away from the graphic and onto the viewer.
+Tufte contrasts Barr's spare chart with Ad Reinhardt's 1946 satirical cartoon of the same space — a useful reminder that density and differentiation are choices, not accidents:
 
----
-
-## §2. Cartographic Line Vocabulary Applied to Diagrams
-
-Cartographers solved this problem centuries ago. Maps must show roads and rivers and borders and rail lines and projected coastlines all simultaneously without confusion, and they do so through a stable, learned vocabulary of line differentiation. That vocabulary transfers directly to diagram connectors.
-
-### Core cartographic conventions adapted for diagrams
-
-| Visual property | Cartographic origin | Diagram application |
+| Measure | Barr (MoMA chart) | Reinhardt (cartoon) |
 |---|---|---|
-| **Solid, heavy** | Major road / certain boundary | Strong, well-established causal link |
-| **Solid, medium** | Secondary road / confirmed feature | Moderate, documented relationship |
-| **Solid, light** | Minor road / surveyed boundary | Weak or less-documented relationship |
-| **Dashed** | Uncertain or interpolated boundary | Correlational or inferred link |
-| **Dotted** | Projected or estimated feature | Speculative, hypothetical, or modeled link |
-| **Double line** | Expressway / structural boundary | Definitional or containment relationship |
-| **Dash-dot** | Administrative boundary (type 2) | Second-order or mediated relationship |
+| Text | 673 characters | 3,160 characters |
+| Names | 7 artists | 263 artists/illustrators/friends |
+| Influences shown | 55 | 36 |
+| Pepsi-Cola contest winners | 0 | 18 (mocked, marked with a bottle) |
 
-A diagram with three relationship kinds needs three visually distinct connector types. A diagram with five relationship kinds needs five. The visual vocabulary does not run out before the semantic distinctions do.
-
-> "The number of information-carrying (variable) dimensions depicted should not exceed the number of dimensions in the data."
-> — Edward R. Tufte, *The Visual Display of Quantitative Information* (1983), p. 71
-
-The corollary for connectors: the number of visually distinct connector types must equal the number of semantically distinct relationship types. Fewer visual types than semantic types = information suppression.
+**Named failure mode — The Implicit Non-Influence Claim:** a diagram is audited only on the links it draws, never on the links it omits. Each missing connector is an assertion of "no relationship here" that no one checked. Audit the white space as hard as the lines.
 
 ---
 
-## §3. Weight as Strength and Certainty Encoding
+## §3. Baxandall's Differentiated Verbs (the chapter's richest idea)
 
-Line weight is the most perceptually reliable channel for encoding a scalar quantity in a connector. Two principles govern its use:
+This is the single strongest argument in the chapter and the heart of the skill. Barr's 51 identical arrows all mean the vague noun "influence." Art historian Michael Baxandall (*Patterns of Intention*, 1985, pp. 58–59) shows why "influence" is the wrong word and the generic arrow is the wrong mark.
 
-**Strength encoding:** Relationship magnitude maps to stroke weight. The ratio should be proportional within perceptual limits — a relationship three times stronger warrants a line visually distinguishable as substantially heavier, not merely 0.1pt thicker.
+**The grammatical prejudice.** "Influence" reverses agency. "X influenced Y" says X *did something to* Y — yet with good artists the lively reality is the opposite: Y is the agent who *did something with* X. The generic arrow → freezes the wrong actor as the cause.
 
-**Certainty encoding:** When strength and certainty are separate dimensions (common in scientific and medical diagrams), weight encodes certainty and style (solid/dashed/dotted) encodes type, leaving color as a third channel if needed.
+**The reversal test.** For any causal link, do not accept "X acts on Y" at face value. Test it against:
+- the reverse: *Might it instead be that Y acts on X?* The arrowhead may be on the wrong end.
+- the paired/mutual case: is this actually back-and-forth interplay (Braque ⇄ Picasso), not a one-way push?
 
-### Practical weight scale for diagrams
+**The single-headed-arrow fiction.** Single-headed arrows depict causality flowing one way only. They encode a major and often false assumption about the *allowable scope* of the mechanism — they forbid mutual influence and feedback by construction. Barr's chart has no paired arrows (⇄) and no double-headed arrows (↔), so contemporaneous, reciprocal influence simply cannot be stated (p. 67).
 
-| Certainty level | Weight (pt, screen) | Weight (pt, print) | Style |
-|---|---|---|---|
-| Confirmed / high confidence | 2.0–3.0 | 1.5–2.0 | Solid |
-| Probable / well-supported | 1.0–1.5 | 0.75–1.0 | Solid |
-| Inferred / moderate support | 0.75–1.0 | 0.5–0.75 | Dashed |
-| Speculative / low confidence | 0.5 | 0.25–0.5 | Dotted or dash-dot |
-| Hypothetical / untested | 0.25–0.5 | 0.25 | Dotted, thin |
+**The cure: specific verbs, not a generic arrow.** Baxandall's catalog shows how rich the vocabulary becomes once Y is the agent. Replace one undifferentiated "influence" arrow with the verb that actually applies — representative differentiation vocabulary from his list (p. 67): adapt, appropriate from, resort to, avail oneself of, refer to, pick up, take on, engage with, react to, quote, differentiate oneself from, assimilate, align with, copy, paraphrase, absorb, make a variation on, revive, remodel, emulate, travesty, parody, extract from, distort, resist, simplify, elaborate on, develop, master, subvert, reduce, promote, respond to, transform.
 
-**Do:** Establish a weight scale before drawing any connectors. Derive every line weight from it mechanically.
+Generic arrows blunt thought by impoverishing the means of differentiation; a precise verb restores it (Baxandall, paraphrased, p. 67).
 
-**Don't:** Choose weights by eye for visual balance. Visual balance optimizes the appearance of the diagram; mechanical derivation from the data optimizes its accuracy.
-
-**Named failure mode — The Uniform Weight Trap:** All connectors drawn at the same weight (typically 1pt, the default in diagram tools) because the designer chose not to introduce visual hierarchy. This makes confirmed causal links and speculative correlations visually indistinguishable.
-
----
-
-## §4. Annotated Arrows: The Galileo Prescription
-
-In Galileo's optical and mechanical diagrams, connectors are never mute geometry. Each is annotated on or immediately adjacent to the line with the mechanism it represents: the physical quantity transferred, the direction of effect, the empirical basis. The annotation is on the link, not outsourced to a legend the reader must locate and cross-reference.
-
-This is the prescription for any diagram where relationships carry complex or varied content:
-
-1. **Label the link with mechanism** — what is actually flowing, transferring, causing, or correlating along this connector.
-2. **Label the link with magnitude** — where quantifiable, the amount or rate (e.g. "r = 0.73", "~40% of variance", "3× effect").
-3. **Label the link with evidence basis** — where certainty varies, a brief qualifier ("confirmed RCT", "modeled", "assumed for baseline").
-
-In *The Visual Display of Quantitative Information*, Tufte argues that detailed, specific labeling applied directly to the graphic is the primary defense against distortion and ambiguity — explanations and named events belong on the data itself, not displaced to a caption or external legend.
-
-### Annotation placement rules
-
-| Annotation type | Placement |
+| Do | Don't |
 |---|---|
-| Mechanism label | Along the line, rotated to match connector angle, at midpoint |
-| Magnitude | Same as mechanism, immediately below in smaller type, or inline in parentheses |
-| Certainty qualifier | At the arrowhead, in smaller type; alternatively coded in the line style |
-| Source reference | At the tail, superscript footnote style |
+| Label the link with the verb that fits: "Picasso **parodies** Cézanne," "Bauhaus **absorbs** De Stijl." | Draw one identical → and call the relationship "influence." |
+| Use ↔ or ⇄ when the relationship is mutual/feedback; run the reversal test before fixing an arrowhead. | Default every causal link to a single head pointing the way you first imagined it. |
+| Treat the verb set as the diagram's dictionary (answering §1's question 3). | Leave the reader to guess whether → means causes, precedes, resembles, or funds. |
 
-**Do:** Annotate at the link. The label travels with the connection.
-
-**Don't:** Move all labels to a legend panel. The reader cannot hold the legend mapping in working memory while reading the diagram topology.
-
-**Named failure mode — Legend Displacement:** All semantic content about relationship type and certainty lives in a separate legend, requiring the reader to shuttle back and forth between the diagram and the key. The graphic nominally contains the information but functionally suppresses it.
+**Named failure mode — The One-Directional Influence Fiction:** every relationship is drawn as a single-headed arrow meaning the catch-all "influence/causes," which (a) may point the wrong way and (b) silently forbids feedback and mutual interplay the data may actually contain.
 
 ---
 
-## §5. Arrowhead Grammar for Direction and Symmetry
+## §4. The Cartographic Standard for Differentiated Lines
 
-Arrowheads are the most visible component of a connector and carry direction claims. They must be precise.
+Maps have solved link differentiation for centuries: they show roads, rails, rivers, borders, contours, and power lines simultaneously without confusion, using a stable, learned line vocabulary. Tufte's benchmark is concrete (p. 71):
 
-### Arrowhead vocabulary
+- Three real cartographic legends he reproduces make **34, 15, and 17 distinctions** in line meaning. The visual vocabulary does not run out before the semantic distinctions do.
+- **Cartographic lines have high-resolution lightness and clarity, like good typography.** Finely textured, lighter lines avoid the optical clutter and moiré vibration of heavy, clunky connectors.
+- His tree-of-life redesign calms the connectors but exposes the deeper problem: even after cleanup, the links all look alike *even though the histories they summarize differ* — calming a diagram is not the same as differentiating it (p. 71).
 
-| Configuration | Meaning | When to use |
+The governing metaphor for any analytical link diagram:
+
+> "The metaphor is the map, not stupidity."
+> — Edward R. Tufte, *Beautiful Evidence* (p. 79)
+
+| Do | Don't |
+|---|---|
+| Give the diagram a real legend that fixes each line's meaning, as a map does. | Ship a network drawing whose lines have no dictionary at all. |
+| Prefer finely textured, lighter lines that read cleanly at density. | Use heavy, chunky links that vibrate and clutter when packed together. |
+| Let the number of visually distinct line types match the number of relationship types. | Collapse five kinds of relationship onto one kind of line "to keep it clean." |
+
+---
+
+## §5. Annotated Linking Lines and Annotated Nouns
+
+Differentiation by style alone is coarse. The chapter's higher standard is *annotation on the connector itself* — and on the nouns.
+
+**Verrocchio's measured horse (c. 1483–88, p. 73).** Verrocchio's dimension lines measure the horse in 1/16-horsehead units. Each line carries *both* a number (the proportional unit) *and* words describing its endpoints (e.g., "from top of front leg bone to top of back leg bone"). The line is not mute geometry; it states what it measures and how much. Tufte's extension: **a sparkline can double as a linking line**, so the connector itself conveys the link's statistical character — variation over time, frequency of contact, strength, reliability, back-and-forth influence (p. 73).
+
+**Annotated linking lines (SARS practice, p. 79).** Links should provide specifics: *when and how* the link operates, its strength and persistence, and the credibility of the evidence for it. Identical links are justified only when identical processes operate everywhere — which is rare (echoing §1).
+
+**Annotated nouns (p. 79).** Differentiation is not only about the lines. Nouns, too, should be labeled, annotated, explained, described. The SARS chart shows each patient with virus-strain ID, clinical description, and travel history. (It begins at Patient 1 in Hong Kong, not Patient 0 in Guangdong, because that earlier data was suppressed — annotation also exposes what is missing.)
+
+| Annotation target | What to put on it | Source pattern |
 |---|---|---|
-| Single filled arrowhead → | Asymmetric, directed relationship | A causes B; A sends to B; A precedes B |
-| Double arrowhead ↔ | Bidirectional, symmetric relationship | A and B mutually influence each other |
-| Open arrowhead → | Weaker direction claim, correlation | A is associated with B; A predicts B |
-| No arrowhead — | Non-directional relationship | Co-occurrence, co-membership, grouping |
-| Filled dot at one end ●— | Origin/source endpoint | A is the source of this flow |
-| Perpendicular tick ⊣ | Inhibitory or suppressive relationship | A inhibits B (common in biology, signal diagrams) |
+| The link | mechanism/verb, magnitude, certainty, evidence basis | Verrocchio's words+numbers; SARS annotated arrows |
+| The noun | identity, classification, description, provenance | SARS patient strain IDs and travels |
+| The gap | why no link here? is non-influence actually claimed? | Barr's absent arrows (§2) |
 
-**Do:** Choose arrowhead style from the vocabulary above before drawing. Commit to it across the diagram.
+| Do | Don't |
+|---|---|
+| Annotate at the link so the label travels with the connection. | Push all meaning into a distant legend the reader must shuttle to and from. |
+| Annotate nouns as richly as links — both carry evidence. | Differentiate the arrows but leave the boxes/nodes as bare labels. |
 
-**Don't:** Use arrowhead style for visual decoration — tapered, 3D, or ornamental arrowheads chosen for visual interest rather than semantic content. Decoration erases the distinction between directed and bidirectional relationships.
-
-**Named failure mode — Bidirectional Ambiguity:** A relationship that is genuinely bidirectional is drawn with a single arrowhead because "it looks cleaner." The diagram then claims a directed relationship that does not exist in the data. This is a graphical lie of the same class as a truncated axis.
+**Named failure mode — Legend Displacement:** all relationship semantics live in a separate key, so the reader cannot read the topology and its meaning at once. The graphic nominally contains the information but functionally suppresses it. A legend should *supplement* on-link annotation, not replace it.
 
 ---
 
-## §6. Line Style as Relationship Type Encoding
+## §6. Encoding Variation Across Channels
 
-When a diagram contains multiple relationship kinds, each kind gets a dedicated style. The mapping must be defined explicitly before the first connector is drawn.
+Once you accept that connections vary, you have several channels to encode the variation. The chapter demonstrates each.
 
-### Recommended style assignments by domain
+**Color-coded and scaled links (primate cladogram, p. 74).** A single tree branch uses *scaled* line lengths, *color-coded* links (blue = diurnal, green = nocturnal, orange = equivocal), typographic symbols (†, *) on nouns, marginal annotation, and position among splits. Multiple splits encode *uncertain evidence*, not simultaneous biological events. But color must map sensibly: Tufte's needle — *why orange for equivocal and not the more obvious black for nocturnal?* — a color code that fights expectation adds friction.
 
-**Process / systems diagrams**
+**Line weight (Feynman diagrams, p. 76–77).** The first published Feynman diagram commits what Tufte names **the classic design error of equal line weight for all visual elements**: pointer/reference lines and substantive object lines (traces of quantum dynamics) are drawn identically and get confused, exactly as dimension lines blur into object lines in bad engineering drawings. His redesign removes pointer lines entirely except time's arrow; modern Feynman diagrams use colored lines like road maps. (For scale of stakes: in 1983 the electron's magnetic moment was computed to 12 significant digits from 900 diagrams and 100,000 terms — predicting 1.00115965246 against a measured 1.00115965221.)
 
-| Relationship | Style | Reasoning |
+**Mark Lombardi's varied-link legend (p. 70).** Lombardi's conspiracy network drawings deliberately deploy a *legend of distinct link types* — influence/control, mutual association, flow of money, sale/transfer of an asset, blocked/incomplete transaction, sale/spin-off of a property — each a different mark. This is the affirmative model: one mark per relationship kind, fixed in a dictionary.
+
+**The "extend the scope" strategy (p. 77).** A reliably good move in analytical design is to take one good design element and extend it — increase the dimensionality of the space it lives in, raise its resolution, multiply it, and integrate it into other displays. Feynman diagrams themselves are this strategy applied over decades.
+
+| Channel | Encodes well | Watch out for |
 |---|---|---|
-| Direct causation | Solid, heavy | Highest confidence, primary structural claim |
-| Mediated causation | Solid, light, with midpoint label | Weaker, mechanism named explicitly |
-| Correlation (non-causal) | Dashed | Visually distinct from causal; no arrowhead or open arrowhead |
-| Feedback loop | Solid with circular routing | Distinctive path geometry encodes feedback |
-| Inhibition | Solid with ⊣ endpoint | Domain convention, inherited from biology/electronics |
-| Assumed / modeled | Dotted | Not yet empirically confirmed |
-
-**Network / graph diagrams**
-
-| Relationship | Style | Reasoning |
-|---|---|---|
-| Structural membership | Double line | Containment/hierarchy; cartographic border convention |
-| Strong tie | Solid, heavy | Weight reflects tie strength directly |
-| Weak tie | Solid, thin | Granovetter's distinction; visually encodes bridging function |
-| Inferred tie | Dashed | Not directly observed; constructed from proxy |
-| Absent (shown for contrast) | Dotted, grey | Present to show non-relationship; must not read as a weak tie |
-
-**Named failure mode — The Style Collision:** Two semantically distinct relationship types are assigned visually similar styles (e.g. dashed for both "indirect causation" and "correlational"). A reader cannot distinguish them without a legend, which defeats the purpose of the encoding.
+| Line style (solid/dashed/dotted/double) | relationship *type* and certainty | style collision — two types reading alike |
+| Line weight | strength/magnitude, figure-vs-pointer hierarchy | equal weight for all elements (Feynman error) |
+| Color | category of link or node | codes that fight expectation (black-for-nocturnal problem) |
+| Length / scaling | quantitative span (time, count, distance) | implying a scale that doesn't exist |
+| On-link text / sparkline | mechanism, magnitude, reliability over time | crowding; illegibility at angle |
 
 ---
 
-## §7. The Evidence Principle for Connectors
+## §7. The Six Analytical Practices for Link/Arrow Diagrams (SARS synthesis)
 
-The unifying prescription, stated precisely:
+The chapter's checklist. Tufte derives six practices from the SARS molecular-epidemiology chart (*The Lancet*, 2004) — ~20 arrows tracing super-spreading patients from Guangdong to Hong Kong, Vietnam, Singapore, and Canada. These apply to all link diagrams: timelines, trees, networks, org charts, project charts (p. 78–79).
 
-**Every connector is a claim about a relationship. Its visual properties are evidence about the character of that claim. Design the connector so that its visual properties are as honest and specific as the underlying data permit.**
-
-This re-frames the designer's task. The question is not "how should this line look?" but "what does this relationship actually consist of, how strong is it, how certain is it, and how do I encode those facts faithfully in the line?"
-
-> "Show data variation, not design variation."
-> — Edward R. Tufte, *The Visual Display of Quantitative Information* (1983), p. 77
-
-Applied to connectors: vary the connector when and only when the relationship varies. Identical relationships get identical connectors. Different relationships get different connectors. Varying the connector for visual interest — to break up the monotony of a dense diagram — introduces false signal.
-
-### Pre-drawing checklist for every connector
-
-- [ ] What type of relationship is this? Is a dedicated style assigned to this type?
-- [ ] How strong is this relationship? Is the line weight derived from the scale?
-- [ ] How certain is this relationship? Is certainty encoded (weight, style, or both)?
-- [ ] What is the direction? Is the arrowhead configuration accurate (unidirectional / bidirectional / inhibitory / non-directional)?
-- [ ] Does this connector need an annotation label? If the relationship has a named mechanism or quantifiable magnitude, is it annotated on the line?
-- [ ] Is there a legend? If yes: does the legend merely repeat what the visual encoding already makes clear, or is it doing work the connector should do?
-
-**Named failure mode — The Designer's Rationalization:** The diagram is drawn with generic connectors and then a justification is constructed: "the relationships are too complex to encode visually." This is always false. The complexity belongs in the diagram. What is actually too complex is the designer's reluctance to make the encoding decisions the data require.
-
----
-
-## §8. Named Failure Modes: Complete Reference
-
-| Failure mode | Description | Diagnostic signal | Fix |
+| # | Practice | What it demands | Concrete tell |
 |---|---|---|---|
-| **Topology Without Semantics** | Connectors show only which nodes link; no relationship type, strength, or certainty encoded | All connectors identical in weight and style | Assign a style per relationship type before drawing |
-| **Uniform Weight Trap** | All connectors drawn at the same weight (typically tool default 1pt) | Cannot distinguish strong from weak relationships visually | Define a weight scale; derive each connector weight from it |
-| **Legend Displacement** | Semantic content moved to a separate legend requiring back-and-forth reading | Reader must interrupt diagram reading to consult legend | Annotate at the link; legend is supplementary, not primary |
-| **Bidirectional Ambiguity** | A symmetric relationship drawn with a single arrowhead | "It causes A and B causes it, but I used →" | Use ↔ for bidirectional; reserve → for strictly directed |
-| **Style Collision** | Two different relationship types share similar visual styles | Reader conflates inferred ties with weak ties | Ensure minimum distinguishable visual distance between styles |
-| **Decorative Arrowhead** | Arrowhead style (tapered, ornate, 3D) chosen for aesthetics | Heads inconsistent across diagram; style varies without semantic reason | Choose one arrowhead style per relationship type; no decoration |
-| **Designer's Rationalization** | Generic encoding justified as "keeping it simple" | Diagram fails to distinguish confirmed from speculative relationships | Complexity belongs in the diagram; simplicity that suppresses evidence is dishonesty |
-| **The PowerPoint Default** | Clip-art arrows, gradient fills, shadow effects applied to connectors | Connectors have drop shadows, gradient fills, or chunky cartoon heads | Strip all decoration; encode only with weight, style, direction, annotation |
+| 1 | **Focus on causality** | State the causal mechanism the diagram claims; show uncertainty in the links *graphically*. | SARS marks uncertain transmission routes with dotted arrows. |
+| 2 | **Multiple sources & levels of data** | Combine whatever evidence it takes — don't rely on one data type or one level of analysis. | SARS fuses molecular isolates, clinical observation, detective work, public-health statistics. |
+| 3 | **Annotated linking lines** | Specify when/how each link operates, its strength, persistence, and evidential credibility. | SARS distinguishes more- and less-certain links and annotates them. |
+| 4 | **Annotated nouns** | Label, describe, and classify the nodes, not only the links. | SARS shows strain IDs, descriptions, travel per patient. |
+| 5 | **Efficiency of design** | Clear, undecorated, maplike; strip chartjunk. | No clunky boxes, cartoony arrows, amateur type, decorative color. |
+| 6 | **Credibility** | Give reasons to believe; expose competing diagrams and alternative assumptions. | Peer-reviewed; 17 public-health authors; coherent story, diverse data. |
+
+Two enforcement rules from practice 5:
+
+- **Maplike, not corporate.** If the display looks like a knock-off of a corporate annual report or a PowerPoint pitch, start over. The content should be intense, explanatory, evidential, maplike — *the metaphor is the map, not stupidity* (§4).
+- **Don't box every noun.** Org-chart boxes are rarely needed; a map doesn't draw a box around each city name. Position alone locates a node, and the space saved by dropping boxes can carry real information (e.g., the salary or headcount equivalent of each now-unboxed unit).
+
+> "Maps don't put boxes around city names."
+> — Edward R. Tufte, *Beautiful Evidence* (p. 79)
+
+Practice 6 has teeth even on quantities: the chapter mocks **suspicious precision** — indices reported to 4 significant digits from crude 1-or-2-digit measurements, a fossil dated "54.97 million years," and "feel-good pitch words" like "strict consensus of parsimonious trees" whose technical and cheerleading meanings are conflated (p. 75). Annotate links and nouns with honest precision, not borrowed authority.
 
 ---
 
-## §9. Summary Principles
+## §8. Applied Encoding System (extension — not from the chapter)
 
-1. **A connector is a claim.** Design it to be as specific and honest as the data permit.
-2. **Type, weight, style, annotation, and arrowhead grammar are the encoding channels.** Use all that are warranted.
-3. **Derive weight from a defined scale.** Never choose weights by eye for visual balance.
-4. **Annotate at the link.** Mechanism, magnitude, and certainty qualify belong on the connector, not in an external legend.
-5. **Differentiate only when the relationships differ.** Identical connectors for identical relationships; different connectors for different relationships — never the reverse.
-6. **Strip decoration.** Any connector property that does not encode a data attribute adds noise and obscures signal.
-7. **Match the cartographic tradition.** Solid-to-dotted encodes certainty; heavy-to-light encodes magnitude. These conventions are learned, stable, and widely understood.
+**Extension note.** The chapter argues *that* connectors must be differentiated and annotated; it does not prescribe point sizes or an arrowhead grammar. The tables below are a faithful operationalization of that principle for screen and print, consistent with Tufte but authored here. Treat them as a sensible default, not a Tufte citation.
 
-> "Graphics must not quote data out of context."
-> — Edward R. Tufte, *The Visual Display of Quantitative Information* (1983), p. 74
+### 8.1 Line style → relationship type
 
-A diagram whose connectors all look alike quotes the topology out of context. It shows that a relationship exists while stripping away all evidence of what kind, how strong, and how certain — which is to say, stripping away the substance of the claim.
+| Style | Default meaning | Cartographic ancestor |
+|---|---|---|
+| Solid, heavy | strong / well-established causal link | major road, certain boundary |
+| Solid, light | weaker or less-documented relationship | minor road, surveyed boundary |
+| Dashed | correlational or inferred link | interpolated boundary |
+| Dotted | speculative / hypothetical / modeled | projected feature; SARS uncertain route |
+| Double line | definitional / containment / membership | expressway, structural border |
+
+### 8.2 Weight → strength and certainty
+
+Define the scale *before* drawing; derive every weight from it mechanically. Make a 3×-stronger link visibly heavier, not 0.1 pt thicker.
+
+| Certainty / strength | Weight (pt, screen) | Weight (pt, print) | Style |
+|---|---|---|---|
+| Confirmed / high | 2.0–3.0 | 1.5–2.0 | solid |
+| Probable | 1.0–1.5 | 0.75–1.0 | solid |
+| Inferred | 0.75–1.0 | 0.5–0.75 | dashed |
+| Speculative | 0.5 | 0.25–0.5 | dotted |
+| Hypothetical | 0.25–0.5 | 0.25 | dotted, thin |
+
+### 8.3 Arrowhead grammar → direction and symmetry
+
+| Configuration | Meaning |
+|---|---|
+| Single filled → | directed: A causes / sends to / precedes B |
+| Double ↔ or paired ⇄ | mutual influence / feedback (run the §3 reversal test) |
+| Open → | weaker direction claim / association |
+| No head — | non-directional: co-occurrence, grouping |
+| Perpendicular tick ⊣ | inhibition / suppression (biology, signal diagrams) |
+
+**Do:** pick one head per relationship type and commit across the diagram. **Don't:** use tapered, 3-D, or ornamental heads chosen for decoration — they erase the directed/bidirectional distinction.
+
+**Named failure mode — Style Collision:** two distinct relationship types are assigned visually similar marks (e.g., dashed for both "indirect causation" and "correlation"), so the differentiation exists on paper but not to the eye. Keep a minimum perceptual distance between assigned styles.
+
+---
+
+## §9. Named Failure Modes: Complete Reference
+
+| Failure mode | Source | Diagnostic signal | Fix |
+|---|---|---|---|
+| **Generic Undifferentiated Link** | p. 70 | all connectors identical in weight/style/head | one differentiated mark per relationship type; give it a dictionary |
+| **The Implicit Non-Influence Claim** | p. 64 | only drawn links are audited | check the gaps — each absent link asserts "no relationship" |
+| **One-Directional Influence Fiction** | p. 67 | all single-headed arrows meaning "influence" | run the reversal test; use ↔/⇄ for mutual; label with a specific verb |
+| **Equal Line Weight for All Elements** | p. 77 | pointer lines and object lines indistinguishable | weight by importance; remove pointer lines except where essential |
+| **Box-Around-Every-Noun** | p. 79 | org-chart boxes around every label | drop boxes; position locates the node; reclaim the space for data |
+| **Chartjunk / PowerPoint Connectors** | p. 79 | clunky boxes, cartoony 3-D arrows, decorative color | strip to maplike, undecorated marks |
+| **Mismatched Color Code** | p. 74 | color assignments fight expectation | map colors to intuitive meaning; document the code |
+| **Suspicious Precision** | p. 75 | 4-sig-dig indices from crude data; pitch words | annotate to honest precision; expose assumptions |
+| **Legend Displacement** | p. 79 | all meaning in a distant key | annotate at the link; legend supplements, not replaces |
+| **Style Collision** | §8 (applied) | two types read alike | enforce minimum perceptual distance between marks |
+
+---
+
+## §10. Pre-Drawing Checklist, Galileo's Standard, and Summary
+
+### Per-connector checklist
+
+- [ ] What *specific verb*/mechanism is this link? Not "influence" — which one? (§3)
+- [ ] Run the reversal test: could the arrowhead be on the wrong end? Is it actually mutual (↔/⇄)? (§3)
+- [ ] Is this link's *type* encoded by style, its *strength* by weight, its *certainty* by style/weight? (§6, §8)
+- [ ] Is the link annotated with mechanism, magnitude, and evidence basis — on the line, not in a distant key? (§5)
+- [ ] Is the *noun* at each end annotated as richly as the link? (§5)
+- [ ] Does the diagram have a dictionary that answers "what do these lines mean?" (§1)
+- [ ] Have you audited the *absent* links — does each gap correctly claim non-influence? (§2)
+- [ ] Six practices: causality, multiple sources, annotated links, annotated nouns, maplike efficiency, credibility? (§7)
+- [ ] Is precision honest — no 4-sig-dig numbers from crude data, no pitch words? (§7)
+
+### Galileo's standard
+
+Tufte closes by reproducing a 1610 Galileo optics drawing whose links are carefully articulated, each differentiated by detailed annotation, and ends with the instruction (p. 81): *we should do as well.* Four-hundred-year-old manuscript practice is the bar — articulate, annotated, differentiated links.
+
+### Summary principles
+
+1. **A connector is a claim.** Make it as specific and honest as the data permit.
+2. **Nouns are specific; do not let links be generic.** Variation between connections is the norm, not the exception.
+3. **Differentiate by a real channel** — style, weight, color, length, or on-link annotation — and fix it in a dictionary.
+4. **Prefer the specific verb to the generic arrow** (Baxandall); run the reversal test before committing a direction.
+5. **Annotate links *and* nouns**; annotation beats a distant legend.
+6. **Audit the gaps** — absent links are unexamined non-influence claims.
+7. **Be maplike** — clear, undecorated, evidential; no boxes around city names, no chartjunk arrows.
+8. **Apply the six analytical practices** and report precision honestly.

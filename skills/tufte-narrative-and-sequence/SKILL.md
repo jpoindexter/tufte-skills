@@ -1,7 +1,7 @@
 ---
 name: tufte-narrative-and-sequence
-description: Apply Tufte's principles for visual explanations of process, causality, and change — selecting the causally relevant axis variable, showing all data including zero-effect cases, enforcing spatial adjacency for comparison, representing motion and sequence in static displays, using PGP narrative structure, applying the smallest effective difference, and avoiding faulty parallelism.
-tags: [tufte, narrative, sequence, causality, process, animation, data-visualization, small-multiples, parallelism]
+description: Apply Tufte's principles for visual explanations of process, causality, and change — keeping images quantified (scales, labels, orientation), selecting the causally relevant axis variable, showing all data including zero-effect cases, enforcing spatial adjacency for comparison, representing motion and sequence in static displays, inverting magicians' disinformation tactics into honest design, using PGP narrative structure, applying the smallest effective difference, and avoiding faulty parallelism.
+tags: [tufte, narrative, sequence, causality, process, dequantification, disinformation, animation, data-visualization, small-multiples, parallelism]
 ---
 # Narrative and Sequence
 
@@ -9,224 +9,281 @@ tags: [tufte, narrative, sequence, causality, process, animation, data-visualiza
 
 ## Overview
 
-Visual explanations are distinct from data displays: they explain *why* and *how*, not just *what*. The central principle is evidence-based causality — showing all relevant data with the causally meaningful variable on the correct axis, making comparisons within the eyespan, and never omitting the cases that fail to confirm a pattern. Tufte's most consequential case study is the Challenger disaster: seven people died in part because engineers showed flight number (irrelevant) instead of temperature (causal) on the x-axis and omitted all 17 flights with no O-ring damage. Visual sequence and narrative design are therefore not aesthetic choices — they are epistemic ones with consequences.
+Visual explanations explain *why* and *how*, not just *what* — they depict process, causality, motion, and change. Two failures recur and both are epistemic, not aesthetic: **dequantification** (images stripped of the scales, labels, and orientation that answer *how many / how often / where / how much / at what rate*) and **disinformation design** (display tactics, borrowed knowingly or not from magicians, that conceal rather than reveal). The governing standard is the same one a scientist uses: show all the relevant data, put the causally meaningful variable on the correct axis, make comparisons within the eyespan, and never drop the cases that fail to confirm the pattern. Tufte's most consequential case is the Challenger launch decision — engineers plotted flight number (irrelevant) instead of temperature (causal) and omitted all 17 flights with no O-ring damage; seven people died. Sequence and narrative design carry life-and-death weight.
 
-> "Clear and precise seeing becomes as one with clear and precise thinking." (VE, p.53)
+> "People can see more clearly if they have the right idea." — Tufte, *Visual Explanations*, p.107
 
 ---
 
-## §1. The Evidence of Causality — Challenger Rules (Ch.2, pp.27–53)
+## §1. Images and Quantities — The Dequantification Problem (Ch.1, pp.13–26)
 
-**Rule 1: Show ALL the data, including cases where the effect did not occur.**
+The foundational theme of the book: scientific and artistic images routinely shed their quantitative scaffolding. A picture without scale, orientation, and labels cannot answer the analytic questions — *How many? How often? Where? How much? At what rate?* Restoring those answers is "quantifying" the image.
 
-Engineers showed only the 7 flights with O-ring damage. The 17 flights with no damage were omitted — yet when all 24 are plotted, the temperature pattern becomes unmistakable. Omitting disconfirming cases destroys pattern detection.
+**How the 2-D plane became quantified (the history of the statistical graphic):**
+- For roughly **5,000 years**, two coordinates of a flat surface (maps) encoded only place-names — nouns in space, not measured variables.
+- **van Langren, 1644** — a Flemish astronomer's chart of **12 estimates** of the Toledo-to-Rome distance in degrees of longitude. The true value is **16°30'**; every estimate ran too large, with Rome sprawled out to **22°–25°** (far east, into the Adriatic). It arranges (not merely tabulates) measurements in space relative to a true value — Tufte's candidate for the **earliest display of a distribution of common measurements**, the first statistical graphic.
+- **Lambert, 1765** — described a *general* graphical grid with no map analogy: for each abscissa *x*, plot the corresponding ordinate *y*. This quantified the plane for any measured data and made fitted models — and therefore cause-and-effect display — possible.
 
-**Rule 2: Put the causally relevant variable on the axis.**
+**The multivariate problem:** most real problems are not two-dimensional. The central design challenge is representing three or more dimensions of data on a flat surface (paper, canvas, screen) — long handled by perspective in art and architecture, and now by data graphics.
 
-Engineers plotted O-ring damage against flight number — an arbitrary, meaningless sequence. Temperature was the causal variable and appeared nowhere on the chart. The pattern becomes visible only when the correct variable (launch temperature, °F) maps to the x-axis.
+**Named Ch.1 examples (each a dequantification lesson):**
 
-**Rule 3: Show the decision boundary.**
+| Example | Quantification device | Failure / fix |
+|---|---|---|
+| Repton, Brighton Pavilion perspective | Three figures with ten-foot poles placed in the scene for self-scaling, plus direct labels | The deep-background pole-person is drawn too small; "before/after" exaggerated (Lilliputian pole-people vs. comfortable giants in the "after") — scaling cheat |
+| Lichtenstein, *Mural with Blue Brushstroke* (68×32 ft / 21×10 m) | Artist photographed atop a ladder as a self-representing scale | Published reproductions almost never convey original size; fix is a consistent-scale set of works |
+| Herbert Matter / Giacometti portfolio | All sculptures photographed at one common scale, "as if in a gallery" — also ideal for field guides (birds, fish, plants) | 56 copies; sheet 20×48 in (51×123 cm); sculptures shown at 19% of actual size on the sheet, 7% in the book — small but mutually comparable |
+| NCSA thunderstorm animation | Redesign adds a 3-D tripod of labeled axes + directional arrows | See below |
+| Magellan Venus flyover | (none) | 22.5× vertical exaggeration — see Failure Modes |
+| Cleveland sunspot series | Aspect-ratio "banking to 45°" | See below |
 
-A vertical reference line at 29°F (the planned launch temperature) on a temperature-vs.-damage chart would have immediately shown that the planned launch was outside all prior experience — no data existed in that temperature range.
+**The thunderstorm animation redesign (pp.20–23) — Ch.1, not Ch.4:** A supercomputer animation built from **9 time-dependent partial differential equations**; a **5-minute movie of a 2 hr 20 min storm**. The original is informationally flat — its dominant visual element (more than half the pixels) is a heavy "orthodontic" perspective grid resembling a Renaissance *pavimento* tiled floor; quantitative scales appear for only **14 of 315 seconds**. Tufte's redesign locates the storm inside a **3-D tripod of labeled scales** (16 km vertical, 100 km ground, North/East arrows) and adds **six small clouds as 3-D tick-marks** along a **red time-line flowing left to right** (5 → 105 minutes; frame samples at 25/48/71/94/117/140). Restoring scale converts television into evidence.
+
+**Cleveland's aspect-ratio rescaling — "banking to 45 degrees" (p.25):** For the sunspot series 1749–1924, choose the plot's aspect ratio so the absolute values of the slopes of selected line segments center on **45°** (computed iteratively). The reshaped graph reveals that cycles rise rapidly and decline slowly — an asymmetry strongest for sharp peaks, weaker for medium peaks, absent for small ones. Aspect ratio is a quantitative design variable, not a layout afterthought.
+
+**Quantitative scale of evidence (the compilation audit, pp.20–21):** Across **19 articles by 43 authors** (134 color scientific images): **65% had no scales or labeled dimensions, 22% partial, only 13% complete.** Twelve other compilations were equally dismal — dequantification is systemic, not anecdotal.
+
+**Ethical floor (p.25):** When an image serves as evidence, show the **innocent, unprocessed natural image alongside the manipulated one**, document the manipulators and methods, and reveal the full pool of images the displayed one was selected from.
+
+---
+
+## §2. The Evidence of Causality — Challenger Rules (Ch.2, pp.27–53)
+
+**Rule 1: Show ALL the data, including cases where the effect did not occur.** Engineers showed only the 7 flights with O-ring damage and omitted the 17 with none; plotting all 24 makes the temperature pattern unmistakable. Dropping disconfirming cases destroys pattern detection.
+
+**Rule 2: Put the causally relevant variable on the axis.** Damage was plotted against flight number — an arbitrary sequence. Temperature, the causal variable, appeared nowhere. The pattern emerges only when launch temperature (°F) maps to x.
+
+**Rule 3: Show the decision boundary.** A vertical reference line at the planned 29°F launch temperature would have shown instantly that the launch sat outside all prior experience — no data existed there.
 
 **The correct display:**
-- X-axis: launch temperature (°F), 26°–81°
-- Y-axis: number of O-rings with thermal distress (0–6)
-- All 24 flights plotted, including the 17 with zero damage
+- X: launch temperature (°F), 26°–81°
+- Y: O-rings with thermal distress (0–6)
+- All 24 flights, including the 17 zero-damage cases
 - Vertical reference line at 29°F
 
 ---
 
-## §2. Six Principles of Evidence Reasoning (Ch.2, p.53)
+## §3. Six Principles of Evidence Reasoning (Ch.2, p.53)
 
-Both the Broad Street cholera investigation (Snow, 1854) and the Challenger post-mortem reveal the same six principles — applicable equally to epidemiology, statistical graphics, and visual explanation:
+Both the Broad Street cholera investigation (Snow, 1854) and the Challenger post-mortem expose the same six principles — applicable to epidemiology, statistical graphics, and visual explanation alike:
 
-1. Documenting sources and characteristics of data
-2. Insistently enforcing appropriate comparisons
-3. Demonstrating mechanisms of cause and effect
-4. Expressing those mechanisms quantitatively
-5. Recognizing the inherently multivariate nature of analytic problems
-6. Inspecting and evaluating alternative explanations
+1. Document the sources and characteristics of the data.
+2. Insistently enforce appropriate comparisons.
+3. Demonstrate the mechanisms of cause and effect.
+4. Express those mechanisms quantitatively.
+5. Recognize that analytic problems are inherently multivariate.
+6. Inspect and evaluate alternative explanations.
 
-Tufte argues in *Visual Explanations* (p.53) that information displays must be held to the same epistemic standards as scientific reasoning — the principles governing analytical argument apply equally to analytical graphics. Design reasoning is not separate from scientific reasoning; it is an expression of it. Clear seeing and clear thinking are the same act.
+Information displays must meet the same epistemic standard as scientific reasoning: design reasoning is not separate from analytical reasoning, it is an expression of it. Clear seeing and clear thinking are one act.
 
 ---
 
-## §3. Explaining with Clarity — The PGP Method (Ch.3, pp.55–71)
+## §4. Explaining Magic and Disinformation Design (Ch.3, pp.55–71)
 
-Tufte derives presentation principles by inverting the tactics magicians use to *suppress* understanding. The method of **PGP** (Particular → General → Particular) is the structural core.
+The actual chapter title is **"Explaining Magic: Pictorial Instructions and Disinformation Design."** Its method: catalog how magicians *suppress* understanding, then **invert** each tactic into honest design. An inventory of conjuring methods is an inventory of *what not to do*.
 
-> "there is no magic in still-land" (VE, p.63)
+**Why diagrams beat eye and camera.** A drawing can show what no single real-world viewpoint can — the revealed illusion and the concealed gimmick simultaneously, the audience view and the backstage view together. Showing a sequence of changes over time is identical to showing adjacent layers of information: **on paper, time and space are as one.** The simplest rule for two viewpoints is to draw both (the conjurer-flap trick, c.1581, shows the audience's view on top and the workings beneath the flap).
 
-Still images cannot perform the misdirection that live magic requires — they are available for re-examination, annotation, and scrutiny. This is why still images, not video, are the gold standard for analytical explanation.
+| Instruction diagram | Quantified / layered device |
+|---|---|
+| Cards-in-Envelope (*Royal Road to Card Magic*) | **Ten** distinct depicted layers, with annotation pointing to each |
+| Mitral-valve heart surgery | Layered hidden views from impossible viewpoints; a generic, idealized heart (useful abstraction) |
+| Strike-second-deal (*Expert Card Technique*) | Arrow-line traces the path of the *absent* thumb; rotated 180° to the operator's view because the audience here is the student of magic |
 
-**Six rules for technical presentations (VE, Ch.3, pp.68–70):**
+**Misdirection inverted into a design principle — larger motions hide smaller motions.** A coin vanishes via the *backpalm* (Downs Eureka Pass): the small concealing move is masked under a large tossing motion of the hand. This is both Gestalt psychology and the core of misdirection. Henning Nelms' rule: movement attracts attention but *diminishes* visibility. Perception research calls it **visual masking** — a target stimulus made less visible by a spatiotemporally overlapping mask. In conjuring the mask makes the magic; in a display the same move makes a lie.
 
-1. Near the beginning, tell the audience: what the problem is, why the problem matters, and what the solution is.
-2. To explain complex ideas or data, use PGP: begin with a concrete particular case → abstract to the general principle → return to a concrete particular showing the principle in action.
-3. Give every person in the audience one or more pieces of paper packed with material related to your presentation.
-4. Analyze the details of your presentation; then master those details by practice, practice, practice.
-5. Show up early. Something good is bound to happen.
+> "there is no magic in still-land." — Tufte, *Visual Explanations*, p.63
+
+**Still-land vs. video-land.** Paper explains step-by-step mechanics well but cannot convey swift dexterity, the spark of conjuring, or the *retention-of-vision* timing a live illusion depends on. Yet video is no analytical refuge: it has credibility problems (did the assistant vanish, or was the camera turned off?), and unlike paper it denies the viewer control over pace, sequence, direction, and focus. For analysis, the self-paced still image wins.
+
+**Combining text with images.** In roughly **80%** of magic literature, two nearly separate stories march along apart — the trick described in words, then again in pictures — forcing Euclid-style back-and-forth between "triangle ABC" in the text and ABC in a far-off diagram. Good pictorial instruction tightly fuses the shared verbs of text and image inside one figure (e.g., "pivots up to cross over and drop on").
+
+**Disinformation in real displays (the inverted catalog, pp.64–65):**
+- **Treacherous staircase** — a noisy, repetitive carpet pattern masks the edge of each step. At one NYC railroad station, lined treads caused **1,400+ falls in six weeks** before correction.
+- **Cigarette billboard** — a thick frame and sans-serif capitals clutter and flatten the Surgeon General's warning; where scrutiny is damaging, scrutiny is diverted.
+- **Chartjunk** — decoration triumphing over information is the same masking move applied to statistical graphics.
+
+**The Automaton Chess Player — technically excellent diagrams that are FALSE (pp.66–67).** A sensation of the late 1700s: von Kempelen's machine (built **1769**, toured **50 years**; Franklin played and lost) appeared to play chess mechanically.
+- **Willis, 1821** — analysis in **36 pages, 11 diagrams**, drawn in a murky dotted-outline language, **printed separately** from the text and bound front and back, requiring dozens of cross-references through a **19-letter call-out code**.
+- **Brewster, 1834** — wholesale-plagiarized Willis, all **11 diagrams**, and *improved* the craft: crisp line-vs.-darkened-silhouette distinctions that cleanly layer revealed and concealed. But the incomplete copy **dropped the scale of measurement** (plagiarism → dequantification), kept the clumsy call-outs, and stranded captions pages away. Reproduced in **12 editions** of *Letters on Natural Magic*; admired by Edgar Allan Poe; it became the definitive account.
+- **The point:** the diagrams are beautifully executed *wrong guesses*. No human climbed up into the Turk; the machine was a **puppet worked by long sticks** from a director hidden below. Plausible, vivid, copied — and false. The folklore principle: the truth never stands in the way of a good story, or a good illustration.
+
+**More copied-error / truth-telling failures (p.71):** the **1622 "California as an Island" map** reproduced in **182 variants** (last copyist **1745**); **Dürer's two-horned rhinoceros (1513)**, copied as real for ~200 years; six-fingered conjurers in magic illustrations. Errors propagate because copying is cheaper than checking.
+
+**Integrity test (conclusion, p.70) — apply to any explanatory display:**
+1. Is the display revealing the truth?
+2. Is the representation accurate?
+3. Are the data carefully documented?
+4. Do the methods of display avoid spurious readings?
+5. Are appropriate comparisons and contexts shown?
+
+---
+
+## §5. Presentation Structure — PGP and the Six Rules (Ch.3, pp.68–70)
+
+The same magic tactics, **reversed**, become teaching strategy. Hoffmann's 1876 rules for magicians were *suppress context* and *prevent reflective analysis* ("never tell the audience beforehand," "never perform the same trick twice"). A presenter does the opposite: tell them in advance, and repeat to reinforce.
+
+**PGP (Particular → General → Particular)** is the structural core: open on one concrete case, abstract to the general principle, then return to a second concrete case showing the principle in action. Two particulars beat one anecdote.
+
+**Six rules for technical presentations:**
+1. Near the start, state the problem, why it matters, and the solution. (If you can't state the problem clearly, the content is deficient.)
+2. Explain complex ideas with PGP.
+3. Give everyone in the audience paper packed with relevant material (the high-resolution, file-able, accountable channel — unlike evanescent projected slides).
+4. Analyze your details, then master them by practice.
+5. Show up early.
 6. Finish early.
 
 **PGP applied to data displays:**
-- Particular: a single patient chart, one flight's O-ring data, one train on a timetable
-- General: the temperature-damage regression, the epidemic curve, the full timetable grid
-- Particular: the decision boundary case — this flight, this date, this patient
+- Particular: one patient chart, one flight's O-ring data, one train on a timetable.
+- General: the temperature-damage regression, the epidemic curve, the full timetable grid.
+- Particular: the decision-boundary case — this flight, this date, this patient.
 
 ---
 
-## §4. The Smallest Effective Difference (Ch.4, pp.73–77)
+## §6. The Smallest Effective Difference (Ch.4, pp.73–77)
 
-> "Make all visual distinctions as subtle as possible, but still clear and effective." (VE, p.73)
+> "Make all visual distinctions as subtle as possible, but still clear and effective." — Tufte, *Visual Explanations*, p.73
 
-This is Tufte's visual Occam's razor: what can be done with fewer visual elements is done in vain with more. Subtle distinctions leave room for *more* distinctions — the visual field is not depleted by heavy-handed contrast.
+The visual Occam's razor: what can be done with fewer visual means is done in vain with more. Subtle distinctions leave room for *more* distinctions — heavy contrast depletes the field.
 
-**Applies to all secondary display elements:**
-- Pointer lines and leaders
-- Grid lines and tick marks
-- Scale labels and axis frames
-- Boxes, borders, and legends
-- Highlights, shadows, and codes
+**The driving example (p.73) — the anatomical ear, not the thunderstorm:** an ear diagram pierced by **25 thick pointer-lines** (acupuncture-needle weight), heavier than the ear itself, doing the trivial job of linking parts to a coded list. (It echoes the 1517 woodcut "The Wound Man.") The redesign **mutes the pointers** to clarify the ear and **replaces the letter-coded parts list with direct labels**.
 
-**The thunderstorm animation redesign (VE, Ch.4):** The original animated weather map gave the grid, domain-rectangle shadow, and boundary lines the same visual weight as the storm data. The redesign muted all secondary elements to the minimum contrast needed for legibility. Result: the data — the storm's movement and intensity — became immediately visible without competing elements.
+**Just-noticeable vs. just-notable:** the human eye can detect *just-noticeable differences* across a continuous spectrum of ~**100,000 colors**. Reinhardt's near-black paintings exploit such vaporous gradations — fine for art, useless for data. Data displays need *just-notable differences*: definite, effective, minimal — stronger than Reinhardt's, far lighter than the ear pointers.
 
-**Rule:** Any visual element that is not data should be as close to invisible as its functional role permits.
+**Applies to every non-data element:** arrows, pointer lines, dimension lines, tick marks, scales, grids, meshes, rules, underlines, frames, boxes, compartments, codes, legends, highlights, accents, bevels, shadows, fills.
+
+**Mechanism (figure/ground):** muting secondary elements relative to the negative space produces a visual hierarchy — inactive background, secondary structure, notable content. When *everything* is emphasized, *nothing* is; strong secondary contrasts also visually activate (and clutter) the background.
+
+**Rule:** any element that is not data should be as close to invisible as its function permits.
 
 ---
 
-## §5. Parallelism — Space vs. Time (Ch.5, pp.79–103)
+## §7. Parallelism — Space vs. Time (Ch.5, pp.79–103)
 
-The primary axis of parallelism design is spatial vs. temporal comparison.
-
-> "comparisons are usually more effective when the information is adjacent in space rather than stacked in time" (VE, p.81)
+The primary design axis is spatial vs. temporal comparison. Comparisons are more effective when information sits adjacent in space rather than stacked in time.
 
 | Method | Mechanism | Memory required | Effectiveness |
 |---|---|---|---|
-| Spatial adjacency (small multiples) | Both states visible simultaneously within eyespan | None | Highest |
+| Spatial adjacency (small multiples) | Both states visible at once within the eyespan | None | Highest |
 | Temporal flip (Repton flap) | Rapid physical alternation — quasi-spatial | Minimal | Medium-high |
-| Slide or animation sequence | One state at a time, serially | Full visual memory | Low |
+| Slide / animation sequence | One state at a time, serially | Full visual memory | Low |
 
-> "This temporal flip-parallelism enhances the reading of differences" (VE, p.81)
+**Parallelism connections (p.82)** are built by: position, orientation, overlap, synchronization, and similarities in content. Good form is clear without becoming spectacle; a structure of rhythms and relationships turns parallelism into the poetry of visual information.
 
-**Repton's landscape "before/after" flap (pp.80–81):** Humphry Repton's Red Books (c. 1800) used a hinged flap: lift it and the proposed landscape "after" replaced the existing "before." When flipped rapidly, the near-simultaneous alternation reveals differences that pure sequential comparison would lose to memory decay.
+**Repton's before/after flap (pp.80–81):** Humphry Repton's Red Books (c.1800) used a hinged flap — lift it and the proposed "after" landscape replaces the existing "before." Rapid flipping creates near-simultaneous alternation, reading out differences that pure sequence loses to memory decay.
 
-**Salyut 6 cyclogram (pp.92–95):** Hand-drawn by cosmonauts Georgi Grechko and Yuri Romanenko during their 96-day flight (December 10, 1977 to March 16, 1978), the cyclogram tracked 8 simultaneous dimensions in a single parallel grid:
-1. Phases of the moon
-2. Holidays
-3. Weeks (red tick marks)
-4. Fraction of total flight completed
-5. Dates
-6. Elapsed days
-7. Total weeks remaining
-8. Total weeks finished
+**Salyut-6 cyclogram (pp.92–95):** hand-drawn by cosmonauts Georgi Grechko and Yuri Romanenko during their **96-day flight (Dec 10, 1977 – Mar 16, 1978)**, tracking **8 simultaneous dimensions** on one sheet, all within the eyespan:
+1. Moon phases · 2. Holidays · 3. Weeks (red ticks) · 4. Fraction of flight completed · 5. Dates · 6. Elapsed days · 7. Weeks remaining · 8. Weeks finished.
 
-Eight variables, one sheet of paper, all readable within the eyespan.
-
-**Beethoven 9th CD Companion (pp.88–89):** Synchronized visual parallelism of 6 musical motifs (Opening Ritornello vs. Exposition) combined with actual sound playback. Listeners click boxes to hear individual segments — spatial layout of time-based data, enabling navigation without imposed sequencing.
-
-**Parallelism connections built by (VE, p.82):** position, orientation, overlap, synchronization, similarities in content.
-
-> "good form is clear but not a spectacle" (VE, p.82)
-
-> "by establishing a structure of rhythms and relationships, parallelism becomes the poetry of visual information" (VE, p.103)
+**Beethoven 9th CD Companion (pp.88–89):** synchronized visual parallelism of **6 musical motifs** (Opening Ritornello vs. Exposition) with playable audio — spatial layout of time-based data, navigable without imposed sequence.
 
 ---
 
-## §6. Faulty Parallelism — Named Examples (Ch.5, pp.100–103)
+## §8. Faulty Parallelism — Named Examples (Ch.5, pp.100–103)
 
 Parallelism fails when parallel structures are not comparable on the same terms.
 
-**Repton's own flaw (VE, p.102):** Repton's "after" views contained elements not present in the "before" — nine full-sized boats vs. tiny boats in the original, deer added to meadows. Each embellishment beyond scope breaks the comparison: viewers cannot distinguish "what changed by the intervention" from "what the designer added for appeal."
+**Repton's own flaw (p.102):** his "after" views added elements absent from "before" — **nine** full-sized boats vs. tiny ones, deer added to meadows. Embellishment beyond scope makes "what the intervention changed" indistinguishable from "what the designer added for appeal."
 
-**NYT Yanomami photograph (VE, p.102):** A photograph ran with the caption "Napoleon A. Chagnon, left" — but the man in the loin cloth identified on the left was not Chagnon. The stated parallel (image position → named identity) was false. Faulty parallelism in caption design.
+**NYT Yanomami photograph (p.102):** the caption read **"Napoleon A. Chagnon, left,"** but the man on the left was not Chagnon. The stated parallel (position → named identity) was false — faulty parallelism in caption design.
 
-**HIV mortality two-graph (VE, p.103):** Two adjacent charts compared AIDS deaths for men (vertical scale: 0–65) and women (vertical scale: 0–30). The unequal scales made the women's slope appear proportionally similar to the men's — but men's overall death risk was more than double women's. Unequal scales on nominally parallel charts prevent valid comparison and actively mislead.
+**HIV mortality two-graph (p.103):** adjacent charts gave men a vertical scale of **0–65** and women **0–30**, making the women's slope look comparable though men's death risk was more than double. Unequal scales on nominally parallel charts actively mislead.
 
-**Rule:** Every element of a parallel structure that differs between panels must differ *because the data differ* — never because of design additions, caption errors, or inconsistent scales.
-
----
-
-## §7. Six Functions of Small Multiples (Ch.6, pp.105–120)
-
-Tufte identifies six functions that multiple images serve (VE, p.105):
-
-1. **Reveal:** Multiple images surface repetition and change, pattern and surprise — the elements that constitute information.
-2. **Compare:** Multiples make comparisons direct and visual, embodying the essence of statistical thinking.
-3. **Dimensionalize:** Multiples add depth to the flatlands of paper and screen by arraying panels and slices of information.
-4. **Enumerate:** Multiples create visual lists of objects and activities, supporting analysis, comparison, and decision-making.
-5. **Narrate:** Multiples represent and track sequences of motion through time.
-6. **Intensify:** Multiples amplify and reinforce the meaning of individual images.
-
-**Huygens' *Systema Saturnium* (1659) (VE, pp.106–108):** 32 Saturn images at different orbital positions, each paired with a telescope view from Earth. "A tight collation of explanatory text and small drawings, much like a scientific notebook, the Galileo-Huygens design narrates a sequence of observational slices in a time-series, as changes in the multiple images represent the verbs of motion." (VE, p.106)
-
-**13 Saturn interpretations (VE, p.107):** A foldout shows 13 geometrically distinct wrong answers — Galileo through Fontana, 1610–1645 — all predating Huygens' geometric model. "People can see more clearly if they have the right idea, as our cases of the cholera epidemic and Challenger accident suggest." (VE, p.107)
-
-**Graphical patient status (VE, pp.110–111):** 24 small images per patient — laboratory readings, medicines, x-rays — on one page. The display contains 11,616 cells and 1,786 values previously scattered across multiple paper records. Rate of information transfer: 10–20× improvement over a verbal presentation.
-
-**Organizational apparatus (VE, p.118):** Tufte notes that multiples are organized through devices such as grids, compartments, call-outs, narrative sequence, and element overlap — but all such apparatus should consume as little visual space as possible. The organizational structure exists to serve the information, not to fill the display.
-
-**Low-resolution screens (VE, p.116):** On low-resolution screens, multiple images cannot coexist in the eyespan — viewers must scroll or page through them sequentially, losing the spatial comparison that makes multiples effective. Higher screen resolution directly enables better analytical comparison by allowing more frames to coexist within view.
-
-**False clustering (VE, p.112):** Accidental communalities in design — shared colors, border weights, spatial proximity — can easily induce false groupings in the eyes of viewers, who are often busy searching for visual hints that help to boil down, organize, group, and otherwise make sense of multiple images. False *temporal* clusters arise as well: sequential display creates apparent patterns as the viewer moves frame to frame.
-
-**Administrative bloat (VE, p.118):** Ad Reinhardt's 12-version wine glass multiple was surrounded by noisy borders "that consume an astonishing 42% of space in each framed rectangle." Tufte's redesign strips all frames — the edge of each image defines itself.
-
-> Ad Reinhardt: "As for a picture, if it isn't worth a thousand words, the hell with it." (VE, p.119)
+**Rule:** every element that differs between parallel panels must differ *because the data differ* — never from design additions, caption errors, or inconsistent scales.
 
 ---
 
-## §8. Motion and Sequence in Still Images (Ch.6, pp.108–109)
+## §9. Six Functions of Small Multiples (Ch.6, pp.105–120)
 
-In static displays of motion, Tufte explains, space takes over the role that time plays in video — adjacent frames replace temporal succession. This spatial layout lets viewers assess change and rates of change across frames, and critically, at their own analytical pace rather than at the pace imposed by the medium. (VE, p.109)
+Multiple images serve six functions (p.105):
 
-Still images lose the experience of duration — the rates and rhythms of actual motion. This loss is structurally unavoidable. But it is compounded by a design failure: Tufte observes that still-image motion multiples frequently omit any explicit time scale — yet another instance of the dequantification problem he identifies throughout his work. Without a time axis, the viewer cannot judge rates of change between frames. (VE, p.109)
+1. **Reveal** — surface repetition, change, pattern, and surprise.
+2. **Compare** — make comparison direct and visual (the essence of statistical thinking).
+3. **Dimensionalize** — add depth to flat paper/screen by arraying panels and slices.
+4. **Enumerate** — build visual lists of objects and activities for analysis and decision.
+5. **Narrate** — track sequences of motion through time.
+6. **Intensify** — amplify and reinforce the meaning of single images.
 
-**Temporal density rule:** The tempo of time-sampling must match the character of the motion.
-- Smooth, deliberate, incremental motion (planetary orbit, continental drift): few frames suffice. Huygens gaps 1.8 Earth-years between Saturn positions — tolerable because the motion is smooth and predictable.
-- Abrupt, irregular motion requires denser sampling. Muybridge used 18 photographs to capture a few seconds of leapfrog.
+**Huygens' *Systema Saturnium* (1659, pp.106–108):** **32 Saturn images** at different orbital positions, each paired with an Earth telescope view — a notebook-like collation in which changes across the multiples are the verbs of motion in a time-series.
 
-**The interpolation problem:** "To resolve such discontinuous spatial representations of continuous temporal activity, viewers must interpolate between images, closing up the gaps." (VE, p.108) When motion is irregular, large gaps between frames mislead.
+**13 Saturn interpretations (p.107):** a foldout of **13 geometrically distinct wrong answers**, Galileo through Fontana, **1610–1645**, all predating Huygens' correct model — the case for having the right idea before you can see clearly.
 
-**Why still images support analysis:** Still images allow the viewer to set their own pace, return to earlier frames, and compare non-adjacent frames — none of which continuous video permits. The analytical advantage is self-pacing and the spatial adjacency of frames.
+**Graphical patient status (pp.110–111):** **24 small images per patient** (labs, medicines, x-rays) on one page — **11,616 cells and 1,786 values** formerly scattered across paper records, at a **10–20×** improvement in information-transfer rate over verbal presentation.
 
-**Note on Ybry's graphical timetable:** Ybry's 1846 train timetable, encoding time, station, train, speed, and type as a grid of diagonal lines, is documented in *Envisioning Information* (EI), Tufte, 1990, pp. 97–113 — not in VE. VE footnote 12 (p.93) explicitly redirects: "For space-by-time and time-by-time grids, see Edward R. Tufte, *Envisioning Information* (Cheshire, Connecticut, 1990), pp. 32, 45, 97–113."
+**Administrative bloat / organizational apparatus (p.118):** Ad Reinhardt's 12-version wine-glass multiple wasted **42%** of each framed rectangle on noisy borders; the redesign strips all frames so each image's edge defines itself. Organizing devices (grids, compartments, call-outs, narrative sequence, overlap) must consume as little space as possible.
+
+**Resolution and the eyespan (p.116):** low-resolution screens prevent multiples from coexisting in view, forcing serial scrolling and destroying spatial comparison. Higher resolution directly enables better analytical comparison.
+
+**False clustering (p.112):** accidental design communalities (shared color, border weight, proximity) induce groupings unrelated to the data; sequential display likewise creates false *temporal* clusters as the viewer moves frame to frame.
 
 ---
 
-## §9. Named Failure Modes
+## §10. Motion and Sequence in Still Images (Ch.6, pp.108–109)
 
-| Failure mode | Source location | Description |
+In static motion displays, **space takes over the role time plays in video** — adjacent frames replace temporal succession, letting viewers assess change and rates of change at their own analytic pace rather than the medium's. Still images permit self-pacing, return to earlier frames, and comparison of non-adjacent frames — none of which continuous video allows.
+
+The unavoidable loss is duration (the rhythms of real motion). The avoidable failure is **dequantification**: motion multiples that omit any explicit time scale, so the viewer cannot judge rates between frames.
+
+**Temporal density rule — match sampling tempo to the motion's character:**
+- Smooth, incremental motion (orbits, continental drift): few frames suffice. Huygens spaced Saturn positions **1.8 Earth-years** apart — fine because the motion is smooth and predictable.
+- Abrupt, irregular motion needs dense sampling. Muybridge used **18 photographs** for a few seconds of leapfrog.
+
+**The interpolation problem:** discontinuous spatial frames of continuous activity force the viewer to interpolate across the gaps; when motion is irregular, large gaps mislead.
+
+**Worked motion-narrative examples:** Descartes' rotating-ruler bug (ghosted labels XYY signal direction; an explicit arrow would clarify); the Marey/Weber overlapping-image walk cycle; the three-panel stickleback "distraction display," where separate panels are paragraphs of activity, dotted lines track motion within a panel, varied postures imply movement, and panels are divided merely by the absence of background — a design so unobtrusive it disappears into the content.
+
+**Note on Ybry's graphical timetable:** the 1846 train timetable (time, station, train, speed, type as diagonal lines) is documented in *Envisioning Information* (1990), pp.97–113 — **not** in VE. VE footnote 12 (p.93) explicitly redirects there for space-by-time grids.
+
+---
+
+## §11. Named Failure Modes
+
+| Failure mode | Source | Description |
 |---|---|---|
-| Selective data display | VE, Ch.2 | Showing only confirming cases; the 7 O-ring flights without the 17 no-damage flights |
-| Wrong variable on axis | VE, Ch.2 | Arbitrary sequence (flight number, alphabet) instead of the causal variable |
-| Missing decision boundary | VE, Ch.2 | No reference line showing where the threshold falls in the data space |
-| Dequantification | VE, p.109 | Still-image multiples without an explicit time axis |
-| Faulty parallelism — content | VE, p.102 | Parallel structures not comparable on same terms (Repton boats, deer added to "after") |
-| Faulty parallelism — caption | VE, p.102 | Positional label does not correspond to the named person (Yanomami photograph) |
-| Unequal parallel scales | VE, p.103 | HIV mortality charts — different vertical extents prevent valid slope comparison |
-| False visual clustering | VE, p.112 | Accidental design similarities (color, border) induce groupings unrelated to data |
-| False temporal clustering | VE, p.112 | Sequential display creates apparent patterns as viewer moves frame to frame |
-| Administrative bloat | VE, p.118 | 42% of frame area consumed by borders instead of information (Reinhardt multiple) |
-| Screen-to-screen sequencing | VE, p.116 | Low-resolution forces temporal comparison instead of spatial adjacency |
-| Heavy secondary elements | VE, Ch.4 | Grids, borders, shadows given same visual weight as data signal |
+| Dequantification (image) | VE Ch.1, p.20 | Scientific/art image stripped of scales, labels, orientation — can't answer how many/how often/where/how much/at what rate |
+| False scaling / vertical exaggeration | VE pp.20–24 | Magellan Venus flyover stretched **22.5×** vertically — 3°-slope plains read as near-vertical peaks; fix is a Repton-style natural-vs-hyped before/after |
+| Wrong aspect ratio | VE p.25 | Slopes not banked near 45° hide cyclic structure (Cleveland sunspots) |
+| Selective data display | VE Ch.2 | Only confirming cases shown — 7 O-ring flights without the 17 no-damage flights |
+| Wrong variable on axis | VE Ch.2 | Arbitrary sequence (flight number, alphabet) instead of the causal variable |
+| Missing decision boundary | VE Ch.2 | No reference line marking the threshold in the data space |
+| Disinformation design | VE pp.64–65 | Display tactics that conceal — masking carpet on stairs, frame/caps cluttering a warning, chartjunk |
+| False-but-plausible diagram | VE pp.66–67 | Technically crisp drawing that is a wrong guess; copied for its clarity (Automaton Chess Player) |
+| Plagiarism-induced dequantification | VE p.67 | Incomplete copying drops the scale of measurement (Brewster's redrawing of Willis) |
+| Propagated copied error | VE p.71 | California-as-island (182 variants), Dürer's two-horned rhinoceros |
+| Text/image disjunction | VE p.63 | Words and pictures run as two separate stories, forcing Euclid-style cross-reference |
+| Still-image motion without time scale | VE p.109 | Motion multiple omits an explicit time axis; rates unjudgeable |
+| Mismatched temporal density | VE pp.108–109 | Uniform frame spacing for irregular motion; large gaps mislead |
+| Faulty parallelism — content | VE p.102 | Added elements break comparability (Repton nine boats, deer) |
+| Faulty parallelism — caption | VE p.102 | Positional label ≠ named person (Yanomami "Chagnon, left") |
+| Unequal parallel scales | VE p.103 | HIV mortality charts 0–65 vs 0–30 prevent valid slope comparison |
+| False visual clustering | VE p.112 | Accidental color/border similarity induces groupings unrelated to data |
+| False temporal clustering | VE p.112 | Serial display fabricates patterns as the viewer pages through |
+| Administrative bloat | VE p.118 | **42%** of frame area spent on borders, not information (Reinhardt multiple) |
+| Screen-to-screen sequencing | VE p.116 | Low resolution forces temporal comparison instead of spatial adjacency |
+| Heavy secondary elements | VE Ch.4 | Pointers/grids/borders given data-level visual weight (25-pointer ear) |
 
 ---
 
-## §10. Do / Don't Pairs
+## §12. Do / Don't Pairs
 
 | Do | Don't |
 |---|---|
+| Quantify every image — explicit scales, orientation, labels | Publish a dequantified picture that can't answer how much / at what rate |
+| Show natural and stretched scales as a before/after when exaggerating | Ship a 22.5×-exaggerated flyover with no honest baseline |
+| Bank slopes toward 45° to expose cyclic structure | Accept the default aspect ratio and bury the pattern |
 | Show all data including zero-effect cases | Show only confirming cases |
-| Put causally relevant variable on axis | Put arbitrary sequence (flight number, alphabet) on axis |
-| Show decision boundary as explicit reference line | Leave threshold implicit |
-| Place before/after states adjacent in space | Show them in temporal sequence only |
-| Maintain strict parallelism — same scales, same terms, same elements in both panels | Add elements to "after" not in "before"; use different vertical scales |
-| Label time axis explicitly on every motion multiple | Let viewer infer time scale |
-| Match temporal density to abruptness of motion | Apply uniform frame density regardless of motion character |
-| Mute all secondary visual elements to minimum effective contrast | Give grids, borders, and labels the same visual weight as data |
-| Use still images adjacent in space for analytical comparisons | Default to video when stop-action enables better analysis |
-| Organize multiples by data-meaningful dimension (time, frequency, type) | Organize alphabetically or arbitrarily |
-| Keep organizational apparatus (grids, compartments) visually minimal | Devote space to administrative framing instead of information |
-| Tell the audience the problem, its importance, and the solution at the start (PGP rule 1) | Begin with methodology before the audience knows what the problem is |
-| Begin with a concrete particular, then generalize, then return to a particular (PGP) | Present general principles before the audience has a concrete anchor |
+| Put the causally relevant variable on the axis | Put an arbitrary sequence (flight number, alphabet) on the axis |
+| Draw the decision boundary as an explicit reference line | Leave the threshold implicit |
+| Place before/after states adjacent in space | Show them only in temporal sequence |
+| Keep parallel panels identical except where the data differ — same scales, terms, elements | Add elements to "after" not in "before"; use unequal vertical scales |
+| Invert magicians' tactics into honest design — reveal the gimmick, mask nothing | Let a noisy pattern, frame, or chartjunk mask the signal (disinformation design) |
+| Treat a clear, plausible diagram as a hypothesis to verify against reality | Copy a crisp diagram because it looks authoritative (Automaton) |
+| Fuse the shared verbs of text and image in one figure | Run words and pictures as two separate stories needing cross-reference |
+| Label the time axis on every motion multiple | Let the viewer infer the time scale |
+| Match frame density to the abruptness of the motion | Apply uniform frame spacing regardless of motion character |
+| Mute every secondary element to the smallest notable difference | Give grids, pointers, borders the same weight as the data |
+| Use self-paced still images adjacent in space for analysis | Default to video when stop-action enables better study |
+| Keep organizing apparatus visually minimal | Spend frame area on administrative framing instead of information |
+| Open with problem → importance → solution; use PGP (particular → general → particular) | Lead with methodology before the audience knows the problem |
+| Give the audience dense paper, repeat to reinforce, finish early | Rely on evanescent slides; suppress context like a magician |
+| Run the integrity test: truthful, accurate, documented, no spurious readings, fair comparisons | Trust a display because it is vivid and well-executed |

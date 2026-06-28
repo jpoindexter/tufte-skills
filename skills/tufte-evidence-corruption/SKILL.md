@@ -93,6 +93,12 @@ In medical research the pattern is structural and measurable. Tufte observes tha
 
 The Evidence Decay Cycle is not a rare exception. It is the expected outcome when research design quality is not controlled for.
 
+### The Peacock Anecdote: Why Controls Go Missing
+
+Before the Chalmers data, Tufte tells a story (pp. 144-145) that explains *why* uncontrolled, cherry-pickable studies dominate medicine. The Boston surgeon Dr. E.E. Peacock presented a series of his surgical cases at a conference. An audience member asked the central methodological question: "Do you have any controls?" After it was clarified that a control group would mean operating on only half the patients and withholding the surgery from the other half, Peacock's answer was a single rhetorical question — "Which half?" — meaning he could never bring himself to deny treatment to any of his patients.
+
+The anecdote is the human engine behind the Evidence Decay Cycle: clinicians' understandable reluctance to randomize is exactly what produces the flood of poorly controlled, enthusiastic studies. The reasons controls are skipped are sympathetic; the consequence — a corrupt evidence base that reliably over-endorses treatments — is not. This is the setup for the Chalmers count below.
+
 ### The Chalmers Portcaval Shunt Study: Concrete Data
 
 Thomas Chalmers, a founder of evidence-based medicine, quantified this mechanism directly. Chalmers and colleagues examined **53 published reports** evaluating a surgical procedure — a portcaval shunt for esophageal bleeding. Each study was rated on two dimensions: (1) enthusiasm of the findings for the surgery; (2) quality of research design (good = random assignment to treatment or control; bad = no proper control group).
@@ -135,6 +141,8 @@ Retrospective, nonexperimental observation — the standard methodology in econo
 
 The arithmetic of available models: for *k* explanatory variables, there are 2^k − 1 possible fitted models — multiplied further by notions and data-handling decisions. Tufte notes that routinely 10^4 to 10^7 computable models are available, all quickly sortable, from which only one or a few will be published (*Beautiful Evidence*, p. 146). "This latitude for evidence selection makes it difficult to distinguish between reliable findings and cherry-pickings."
 
+**Shrinkage** is the model-builder's name for the tell-tale symptom (*Beautiful Evidence*, p. 146, fn. 10): the explained variance (R²) of a model selected by searching always *shrinks* — often dramatically — when the model is re-tested on fresh, independent data it did not help to choose. The original fit was inflated by the search itself; the search captured noise specific to the training data along with signal. Shrinkage is therefore the quantitative signature of model-searching cherry-picking, and the reason fresh-data validation is mandatory: a found model's on-the-spot R² is an overestimate by construction.
+
 Credible explanations grow from **three mutually reinforcing sources**: explanatory theory, empirical evidence, and rejection of competing alternative explanations. Cherry-picking dilutes and confounds all three into wishful circular thinking — the Pilgrim's Progress pattern where Ignorance concludes "my heart tells me so."
 
 **Detection questions for model-searching cherry-picking:**
@@ -160,6 +168,8 @@ measurements           representation                  tables, diagrams, images,
 Data are selected, sorted, edited, summarized, massaged, and arranged into published graphics. This sequence is not a black box but a gray area — it consists of all the decisions that *cause* the published findings of a report. Those decisions are made, to varying degrees, both in the spirit of analytical detective work and in the spirit of advancing a favored point of view.
 
 Tufte argues that a report's integrity rests not just on its conclusions but on the integrity of its entire evidence-construction process — and that alert consumers should seek assurance that those intermediate steps were sensible and honest (*Beautiful Evidence*, p. 147).
+
+Tufte anchors the stakes with a citation (p. 147, fn. 12) to John P. A. Ioannidis, "Why Most Published Research Findings Are False" (*PLoS Medicine*, 2005) — the formal demonstration that across many fields the published literature is dominated by false positives, precisely because of small samples, flexible analysis, many tested models, and the search-and-select behavior catalogued in §3. The evidence reduction chain is not a hypothetical worry; it is the documented default state of published findings.
 
 When secondary bureaucracies of presentation get access to primary reports — public relations, advertising, schoolbook publishing, journalism, Ministries of Propaganda — they add their own interpretive filter:
 
@@ -192,9 +202,20 @@ David Galenson's *Painting Outside the Lines: Patterns of Creativity in Modern A
 
 The dictionary meanings of "valuable" are (1) monetary worth and (2) meritorious, admirable, esteemed comparative. The paragraph's final sentence completes the punning equation: a rhetorical maneuver turns auction prices into "*importance* of artistic work" via the intermediate term "most valuable work."
 
+This maneuver has a formal name. Tufte cites the historian David Hackett Fischer's catalogue of logical errors: the value pun is a textbook **fallacy of equivocation** — an argument that stays valid-looking only because a key word silently shifts meaning between premises and conclusion (here, "value/valuable" slides from price to merit). Naming the fallacy is the detection method: once you tag the equivocation, the inference from auction prices to artistic importance collapses, because no single consistent meaning of the term survives the whole chain.
+
 The pun enables a 7-meaning overload: auction prices carry information about (1) most valuable meaning both price and merit, (2) historical importance, (3) best artistic work, (4) artistic productivity, (5) creativity, (6) how artists conceive their works, (7) how artists paint their works.
 
 Tufte proposes a diagnostic thought experiment: if theories about artistic productivity, creativity, historical importance, and artistic process would change when new auction price data become available, then those theories are reducible to price data — and the punning equation between price and merit is exposed. If the theories would *not* change with new price data, then auction prices are irrelevant to the claimed conclusions about patterns of creativity (*Beautiful Evidence*, p. 149).
+
+### The All-Seasons Concept and the Signature Maxim
+
+The fatal property of the value pun is that, by carrying seven meanings at once, "price" ends up explaining everything and therefore explaining nothing. Tufte states the principle directly:
+
+> "Concepts that explain everything explain nothing."
+> — Tufte, *Beautiful Evidence*, p. 149
+
+He draws an explicit parallel to anthropology. Clifford Geertz observed that the word *culture* had been stretched until it became an "all-seasons explanation" — invoked for any phenomenon, and so useless for distinguishing one from another. Tufte's verdict: in Galenson, the explanatory meaning of *price* is as mushy as the meaning of *culture*. A term flexible enough to fit every case carries no information about any particular case. This is the diagnostic core of overreaching: the more a single concept is asked to explain, the less explanatory content it actually has.
 
 ### The Evidence Void Behind the Claims
 
@@ -221,11 +242,13 @@ Tufte's principle for concept sprawl: when a narrow technical idea is extended b
 
 Tufte coins *economisting* to describe the analytical vice of converting limited evidence into grand claims through punning, overloaded terminology, and overreaching — specifically, the practice of treating empirical evidence as capable only of confirming a favored theory, never disconfirming it, so that conclusions become theory-driven rather than evidence-based. The term encompasses confirmation bias, painting with a broad brush, and the structural confusion between market prices and substantive merit (*Beautiful Evidence*, p. 149).
 
+The coinage is itself a loaded pun, and Tufte builds in a mock dictionary entry to expose it. Spoken with the accents falling on *con* and *mist* — e-CON-o-MIST-ing — the word announces its two ingredients: *con* (deception, the confidence trick) and *mist* (obscuring fog). Tufte presses the joke further: in German, *Mist* means manure. The name therefore encodes its own diagnosis — economisting is con plus fog plus dung dressed up as analysis. The bilingual gag is not decoration; it is the compressed definition.
+
 **Named failure modes — overreaching:**
 
 | Failure mode | Description | Detection |
 |---|---|---|
-| **Value pun** | A term used in both monetary and evaluative senses, conflating price with merit | Count how many distinct meanings the key term carries in the text |
+| **Value pun (fallacy of equivocation)** | A term used in both monetary and evaluative senses, conflating price with merit; Fischer's named logical fallacy of a word shifting meaning mid-argument | Count how many distinct meanings the key term carries; demand one consistent sense across premises and conclusion |
 | **Concept sprawl** | A precise technical concept extended outside its domain without fresh evidence | Ask whether the extended claims could be falsified by domain-specific data |
 | **Statistical significance pun** | "Significant" used to mean important or meaningful rather than non-null-hypothesis | Verify whether the claimed significance is statistical, practical, or rhetorical |
 | **Data-free graphs** | Graphs whose axes represent data but contain no actual data points | Check whether the visual curves could be drawn without any underlying data |
@@ -293,7 +316,9 @@ The audience scaling problem for a new drug, as primary evidence passes through 
 
 For government commission reports: for each reader of the original, there are perhaps **100,000 readers of mediated secondary versions**. For college textbooks: a successful text is assigned to 200,000 students; the primary works summarized by the textbook are read by a few researchers.
 
-In repackagings, a persistent *rage to conclude* denies the implications, complexities, and uncertainties of primary evidence. A strong selection bias operates: news wins out over nuance, recency rather than quality of evidence decides relevance.
+Why do producers of careful primary evidence feed this distorting machine at all? Tufte answers with P.T. Barnum (p. 155): in Barnum's quip, the terrible thing that happens without publicity is *nothing*. Reach lives almost entirely in the secondary and tertiary repackagings, so producers tolerate the corruption of their evidence as the price of an audience. The asymmetry above is the leverage: the repackagers control the 100,000-to-1 amplification, and the original author who refuses them is read by no one.
+
+In repackagings, a persistent *rage to conclude* denies the implications, complexities, and uncertainties of primary evidence. A strong selection bias operates. In Tufte's deliberate pun, *news wins out over olds*: recency, not quality of evidence, decides what gets through the repackaging filter.
 
 Tufte warns that if corruption in primary reports is concerning, secondary presentations are far worse — each stage of repackaging adds its own interpretive filter that compounds and amplifies distortions from the primary evidence (*Beautiful Evidence*, p. 154).
 
@@ -330,8 +355,10 @@ These are the specific, named failure modes from chapter 6. Apply to any evidenc
 | **Evidence Decay Cycle** | First published study is poorly controlled and most enthusiastic; controlled studies systematically less enthusiastic | Ask: what was the research design quality? What happened in follow-up studies? |
 | **Portcaval pattern** | Poorly designed studies (72%) endorse procedures that well-designed studies (0% marked enthusiasm) do not | Check: were RCT-quality controls used? Is the evidence base dominated by poorly designed studies? |
 | **Model-searching without replication** | 10^4-10^7 fitted models searched; cherry-picked best-fit published; tested on same data that generated it | Ask: how many models were tested? Was the finding replicated on independent data? |
-| **Value pun** | Key term carries both technical and evaluative meaning, enabling conversion of price data into merit claims | Identify all distinct meanings the key term can carry; ask whether each use is internally consistent |
+| **Shrinkage** | A found model's explained variance (R²) drops sharply on fresh data, exposing the original fit as search-inflated noise | Re-test the model on independent data; if R² shrinks, the in-sample fit was an overestimate by construction |
+| **Value pun / fallacy of equivocation** | A key word silently changes meaning between premises and conclusion (price → merit), preserving only the *appearance* of valid inference | Tag the shifting term (Fischer's named fallacy); demand one consistent meaning across the whole argument |
 | **Economisting** | Limited evidence converted into grand claims via punning, multiplicity of meaning, overreaching | Ask: could the claimed relationship be falsified by domain-specific empirical data? |
+| **All-seasons concept** | A term stretched to explain every case (price, culture) and therefore explaining none | Ask what observation the concept would *rule out*; if nothing, it carries no explanatory content |
 | **Data-free quantitative claim** | Graphs or tables that depict the form of quantitative relationships without actual transaction data | Check whether any graph axes contain measurable values traceable to original transactions |
 | **Statistical significance pun** | "Significant" used to mean important rather than non-null | Verify: does the claimed significance mean the effect size matters, or only that n was large? |
 | **Chartjunk distortion** | Graphic encoding amplifies the apparent size of differences beyond data values | Compute the ratio of visual change (area, volume) to data change; anything > 1:1 is distortion |

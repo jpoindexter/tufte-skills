@@ -1,237 +1,214 @@
 ---
 name: tufte-micro-macro-readings
-description: Design displays that function simultaneously at microscopic detail and macroscopic overview — layered data structures where complexity rewards close inspection without sacrificing legibility at a distance.
+description: Design displays that read at two scales at once — the individual datum up close and the aggregate pattern from a distance — by layering immense detail so complexity rewards inspection without sacrificing legibility at a glance. Grounded in the "Micro/Macro Readings" chapter of Tufte's Envisioning Information.
 tags: [tufte, data-visualization, information-density, layered-data, cartography, multiscale]
 ---
 # Micro/Macro Readings
 
 ## Overview
 
-Micro/macro design is the practice of building displays where the same marks serve multiple simultaneous readings: the individual datum at close range and the aggregate pattern from a distance. The governing insight is that visual complexity is not cognitive confusion — clutter and confusion are failures of design, not attributes of information. A well-constructed high-density display organizes immense detail through hierarchical layers of contextual reading, giving viewers both the freedom of an overview and the precision of inspection.
+Micro/macro design builds displays where the same marks serve more than one reading simultaneously: the precise individual value at close range, the gestalt pattern from afar, and the transition between them. The governing claim is counterintuitive and load-bearing — visual complexity is not cognitive confusion. Clutter and confusion are failures of design, never properties of information. A well-built high-density display organizes immense detail through layered, often hierarchical contexts of reading, handing the viewer both the freedom of an overview and the precision of inspection. The chapter's one-line thesis inverts every "simplify it" reflex:
+
+> "to clarify, add detail." — Edward Tufte, *Envisioning Information* (p. 37)
 
 ## §1. The Core Principle
 
-Tufte describes how panoramic views deliver the freedom of an overview — the ability to compare, sort, and search across detail. Simultaneously, the micro-information in a high-density display functions like fine texture in landscape perception: it slows the pace of reading, makes it personal, and gives the viewer a place to dwell.
-— *Envisioning Information*
+Detail does not obscure the big picture — detail *builds* it. On Constantine Anderson's axonometric Manhattan map, thousands of tiny individually-drawn windows gray into surfaces at a distance to form whole buildings; the macro shape *is* the accumulated micro. Simplicity of reading comes not from removing data but from arranging detailed, complex information well.
 
-> "Such designs can report immense detail, organizing complexity through multiple and (often) hierarchical layers of contextual reading."
-> — *Envisioning Information*
+Tufte's two-part argument for why this works:
 
-The principle: every graphical element should carry information at more than one scale simultaneously. This is not a secondary concern — it is the primary test of whether a display is well-designed.
+- **Freedom of the overview.** Panorama, vista, and prospect give the viewer the freedom to compare, sort, and search across detail — choosing where to look rather than being marched through a sequence.
+- **A refuge in the micro.** Fine micro-information acts like the small texture of a landscape (Jay Appleton's *Experience of Landscape*): it slows the pace of reading, makes it personal, and gives the eye a place to dwell. These responses are universal, rooted in everyday human information-processing.
 
-**The two reading modes that must coexist:**
+**The reading modes that must coexist:**
 
-| Reading mode | Distance | What the viewer gets |
-|---|---|---|
-| Macro | Far / glance | Pattern, trend, overall distribution, gestalt shape |
-| Micro | Close / inspect | Individual datum, precise value, local anomaly |
-| Transition | Moving in/out | The relationship between the two — which is the richest zone |
+| Reading mode | Distance | What the viewer gets | Fails if absent |
+|---|---|---|---|
+| Macro | Far / glance | Pattern, trend, distribution, gestalt shape | Display is a lookup table, not a picture |
+| Micro | Close / inspect | Individual datum, exact value, local anomaly | Display is a vague blob with no payoff for looking closer |
+| Transition | Moving in/out | How one resolves into the other — the richest zone | Two disconnected displays, not one multiscale design |
 
-A display that collapses at either end has failed.
+**Why density matches the mind, not fights it.** Humans thrive in information-thick worlds precisely because of a deep everyday repertoire — we select, edit, single out, group, merge, synthesize, sort, filter, cluster, summarize, skim, winnow, and separate signal from noise constantly (Tufte lists roughly fifty such verbs, p. 50). Data-rich displays are not merely an acceptable complement to that capability; when the task is contrast, comparison, or choice, the more relevant information held within a single eyespan, the better. Sparse displays squander the apparatus.
 
-## §2. The Four Layers of Micro/Macro Data
+## §2. The Four Data Layers (and a Fifth in Time)
 
-Tufte's analysis of the electrical resistivity and thermal conductivity graphs (*Envisioning Information*, p. 39) identifies four distinct data layers operating simultaneously in a single display:
+Tufte's analysis of the multi-layered electrical-resistivity and thermal-conductivity graphs (p. 39) names four data layers operating at once in a single chart. Both axes are logarithmic, cycling through 3.5 to 6 orders of magnitude, so the spread is enormous yet readable:
 
-1. **Individual points** — each measurement from each laboratory, cited by identification number
-2. **Connected curves** — results from a single publication linked into a continuous line
-3. **Conglomeration of curves** — the ensemble of all studies, showing spread and agreement
-4. **Standard reference curve** — labeled `RECOMMENDED`, against which all others are compared
+1. **Individual points** — each measurement from each study, cited by identification number.
+2. **Connected curves** — points from a single publication linked into one continuous line.
+3. **Conglomeration of curves** — the ensemble of all studies, showing agreement and scatter.
+4. **Standard reference curve** — a solid line labeled `RECOMMENDED`, the benchmark every other curve is read against.
 
-> "In this micro/macro arrangement, 4 layers of data are placed in evidence — individual points measured within each study, connected curves formed by those results, and, finally, an overall conglomeration of curves (which are compared with the standard)."
-> — *Envisioning Information*
+**The fifth layer is temporal.** Order the study list by publication date instead of alphabetically by author, and the identification codes (e.g. `61c` = third paper published in 1961) become a chronological index. The reader can now see *which study first reached the right answer* and watch the field converge on the recommended curve over decades — a micro/macro reading across time, layered onto the same marks.
 
-This layering structure is the template. Apply it: what are the individual atoms? What do atoms form when grouped? What does the whole ensemble reveal? What reference or benchmark anchors the reading?
+**The template to copy:** What are the individual atoms? What do atoms form when grouped? What does the whole ensemble reveal? What reference anchors the comparison? Is there an ordering that adds a time (or other) dimension for free?
 
 ## §3. Canonical Examples and What They Teach
 
-### The Aerial Photograph (Senlis, France)
+### Lead example — Constantine Anderson's axonometric Manhattan (p. 37)
 
-A high-resolution aerial photograph of Senlis arrays micro-details mixing into overall pattern. Digitizing such images requires 10^6 to 10^8 bits. The intensity of detail is not noise — it is the data.
+A precise axonometric projection of midtown New York, refined over **20 years**, in the tradition of the 1739 Bretez–Turgot *Plan de Paris*.
 
-**What it teaches:** Resolution is information. The texture visible up close (individual buildings, streets, the Gallo-Roman fortification ring) is also the mechanism that produces the macro pattern (the medieval town plan). The same marks do both jobs.
-
-### Tokyo Population Density Mesh Maps
-
-Japan's 1980 census mapped 379,000 equal-sized 1 km grid squares. Each square carries a precise local density; the ensemble of squares reveals regional patterns, rail-corridor clustering, the suburban ring of children.
-
-**The choropleth problem it solves:**
-
-| Choropleth map flaw | Mesh map fix |
+| Property | Value |
 |---|---|
-| Area sizes non-uniform — large empty regions dominate visually | Equal-sized cells — visual weight proportional to data, not land area |
-| Color proportional to land area, not to the phenomenon | Color proportional to the measured value at each cell |
-| Political boundary changes break continuity of statistical comparison | Boundaries are statistically chosen, arbitrary but stable |
+| Map size | 60 × 92 cm (24 × 36 in) |
+| Named buildings, stores, parks | 1,686 |
+| Specific street addresses | 657 |
+| Typographic density | 3 characters / cm² (20 / sq in) |
+| Micro detail rendered | individual windows, subway stations, bus shelters, telephone booths, canopies, trees, sidewalk planters |
+| Only concession to flatland | streets widened slightly so buildings mask each other less |
 
-> "Arbitrary but statistically wise boundaries now cradle the micro-data."
-> — *Envisioning Information*
+**What it teaches:** Exquisite micro-detail invites personal micro-readings (the shop you visited, the window of the office you worked in) while the same ink cumulates into coherent macro-structures (a building, a block, a neighborhood). Note the discipline: exactly *one* deliberate distortion (widened streets), introduced only to keep data legible — not for decoration.
 
-### The Vietnam Veterans Memorial
+### Aerial photograph of Senlis (p. 38)
 
-58,000 names engraved on black granite. At distance: a statistical blur of marks, a visual measure of what 58,000 means. Up close: individual names, touchable letters, personal micro-reading.
+A high-resolution aerial photo of Senlis (its Notre-Dame begun in 1153). Micro-details mix into overall pattern; the encircling ring of former Gallo-Roman fortification, now replaced by houses laid along the memory of the old town plan, is visible only because the texture is dense. Digitizing such an image takes 10⁶ to 10⁸ bits.
 
-**Triple-function of each engraved name:**
-1. Memorialize the specific individual who died
-2. Contribute one mark to the aggregate count — adding up to the total toll
-3. Encode chronological sequence — approximate date of death via position
+**What it teaches:** Resolution *is* information. The texture you see up close (streets, individual buildings, the fortification ring) is the very mechanism that produces the macro pattern (the medieval plan). The same marks do both jobs — strip the texture and the pattern disappears too.
 
-The directory book (alphabetical) functions as a finder pointing to a panel and line number — a macro-to-micro navigation tool physically separate from but linked to the display itself.
+### Gustav Klutsis Soviet poster, 1930 (p. 38)
 
-> "Thus the names on stone triple-function: to memorialize each person who died, to make a mark adding up to the total, and to indicate sequence and approximate date of death."
-> — *Envisioning Information*
+A celebrated micro/macro composition: many individual hands, drawn in aggregate, form one larger gesture. The design and its political message correspond exactly — from the collaborative work of many, one great plan is fulfilled.
 
-**Design decision:** Maya Lin insisted on chronological ordering rather than alphabetical. Alphabetical listing would have made the wall a telephone book — destroying the micro/macro relationship by severing the individual name from the collective narrative of the war.
+**What it teaches:** Micro/macro is a compositional principle, not just a data-graphics trick. The same logic that governs a statistical map governs persuasive imagery: parts that are individually legible and collectively form a whole.
 
-### Japanese Shinkansen Graphical Timetable
+### Tokyo population-density mesh maps (pp. 40–41)
 
-Station stops plotted vertically; time of day horizontally; each train's space-time path as a diagonal line. Individual lines are micro-readable (this train departs Osaka at 09:14, arrives Tokyo at 11:52). The ensemble of lines is macro-readable (morning rush concentration, gap at midday, evening surge).
+Statistical maps reporting data for hundreds of thousands of tiny grid squares, 1 km on a side (from the *1980 Population Census Results*, Tokyo, 1985). Density concentrations trace rail lines and station stops; a companion map shows the share of children per cell — low in central Tokyo, high in a suburban ring. To build them, the whole of Japan was divided into **379,000 equal-sized units** and census data and addresses re-collated to match the grid.
 
-Tokyo control room operators run thousands of journeys daily from a single graphical timetable — illustrating the practical operational advantage of seeing information rather than tabulating data.
+**The choropleth problem the mesh map solves:**
 
-### Stem-and-Leaf Plots
-
-Each data point simultaneously states its value (micro) and fills a space that builds the histogram (macro). John Tukey, cited in *Envisioning Information*, argued that if a mark must be made, it should carry meaning. The most economical meaningful mark, he proposed, is a digit — which simultaneously states a precise value and fills a position in a distribution.
-
-Heights of 218 volcanoes: each individual number helps build the distribution profile. The digit is both the datum and the bin-fill.
-
-### Space Debris Orbital Map
-
-7,000 individual dots (each >10 cm in diameter, tracked by military computers) simultaneously represent individual tracked objects (micro) and the overall pattern of orbital pollution (macro). At distance: a ring around the Earth, with geosynchronous satellite concentration visible. Up close: 7,000 individually distinguishable marks, each one a real tracked object.
-
-### Swiss National Topographic Maps (*Beautiful Evidence*, p. 58)
-
-Tufte identifies cartography as a domain where sparkline-like micro/macro density appears naturally. Switzerland's national maps exemplify this: precisely engraved contour lines trace constant elevations across a surface dense with place names and altitude numbers — images, numbers, and words forming simultaneous layers of context.
-
-High-resolution engraving lines serve a triple purpose: they show elevation change (micro), they build terrain texture (meso), and they render the overall mountain form legible at a glance (macro).
-
-## §4. Complexity is Not Confusion
-
-This is the most politically important claim in the chapter. Designers who simplify data to reduce "clutter" are solving the wrong problem.
-
-Tufte argues in *Envisioning Information* that clutter and confusion are design failures, not properties of information itself. Simpler marks often produce more ambiguity, not less. Stripping detail from data, he contends, is a choice driven by aesthetic preference and fashion — entirely indifferent to the substance the display is meant to communicate.
-
-Tufte rejects the popular equation of simple data with clear reading as false. Simpleness is an aesthetic preference masquerading as information strategy. The actual goal is a rich texture of data — comparative, contextual, complex in content — revealed with economy of means.
-
-Robert Venturi, on architecture (cited by Tufte as applicable to information design):
-
-> "I speak of a complex and contradictory architecture based on the richness and ambiguity of modern experience... Blatant simplification means bland architecture. Less is a bore."
-> — Robert Venturi, *Complexity and Contradiction in Architecture* (1966), pp. 16–17
-
-Mies van der Rohe's counter-maxim, cited as capturing the essential quality of micro/macro performances:
-
-> "God is in the details."
-
-**Do/don't pairs on complexity:**
-
-| Do | Don't |
+| Choropleth (blot-map) flaw | Mesh-map fix |
 |---|---|
-| Add detail that serves multiple reading scales | Add decoration that serves only one scale or none |
-| Let density arise from data density | Let density arise from chartjunk (frames, grid, fills) |
-| Trust the reader to navigate layers | Pre-simplify to a single reading depth |
-| Design for both the glance and the close read | Optimize only for the glance |
-| Make each mark multifunctioning | Make marks that carry only one informational purpose |
+| Area sizes are non-uniform | Equal-sized cells — visual weight tracks data, not land area |
+| Color fills land area, so large near-empty regions get the greatest visual emphasis | Color encodes the measured value at each cell |
+| Historical changes in political boundaries break continuity of statistical comparison | Boundaries are statistically chosen — arbitrary but stable, cradling the micro-data |
+
+### Vietnam Veterans Memorial (pp. 43–44)
+
+58,000 names of the dead cut into black granite. From a distance the letters blur into a gray field — a visual measure of what 58,000 means, cumulating toward the final toll. Approach, and the field resolves into individual names that visitors touch. The descending grade and the polished stone reflecting visitors, trees, and (at a distance) the Lincoln and Washington memorials enlarge the context.
+
+**Each engraved name triple-functions:** (1) memorialize the specific person who died; (2) add one mark to the total count; (3) encode sequence and approximate date of death via position.
+
+**The ordering decision (the key lesson):** designer Maya Ying Lin insisted on **chronological** order, not alphabetical. The reasoning was concrete — there were over 600 Smiths and 16 men named James Jones; an alphabetical wall would read like a telephone book engraved in granite, scattering each tour-of-duty cohort and destroying the sense of unique loss. A separate alphabetical directory-book serves as a *finder*: it points the visitor from a name to a panel and line number. Ordering carries macro meaning; the finder restores random access without polluting the display.
+
+### Japanese Shinkansen graphical timetable (p. 45)
+
+Station stops down the side, time of day across the top, each train's space-time path a diagonal line (operation diagram for 12:00 noon, 25 July 1985, Tōkaidō and San'yō lines). One line is micro-readable (this train's exact schedule); the ensemble is macro-readable (rush-hour density, midday slack, network load). Tokyo's control room runs thousands of journeys a day from these — the operational advantage of *seeing* information rather than tabulating it.
+
+### Stem-and-leaf plots (pp. 46–47)
+
+Each data point simultaneously states its value *and* fills a slot that builds the histogram — like a Vietnam name, the digit is both the datum and the bin-fill. Shown: the heights of 218 volcanoes (unit 100 feet). Tukey's design rule:
+
+> "The simplest — and most useful — meaningful mark is a digit." — John Tukey, quoted in *Envisioning Information* (p. 46)
+
+A Japanese train schedule applies the same idea: stacking minute-digits under shared hour-digits so departure times *form* a frequency distribution. The stem-and-leaf version holds 292 daily trains in 619 numbers; the plain typographic version needs 1,396 numbers and periods and still fails to show frequency by hour — the multifunctioning design saves 777 characters *and* says more. (A "back-to-back" stem-and-leaf grows leaves from both sides of a central stem when two related distributions share a scale.)
+
+### Space-debris orbital map (pp. 48–49)
+
+Some 7,000 tracked objects larger than 10 cm — dead and live satellites, explosion fragments, jettisoned hardware, 34 nuclear reactors, an escaped wrench, a toothbrush — each plotted as a dot (state at 0:00 UT, 1 July 1987). Only about 5% are working satellites. Up close: 7,000 distinguishable real objects. At a distance: a shell of orbital pollution, with a clear ring of geosynchronous satellites farther out. (Not shown: ~50,000 objects of 1–10 cm and 10–100 billion paint chips.) Collision risk runs ~1 in 500 over several years; the debris volume has doubled roughly every 5 years.
+
+**What it teaches:** With one multifunctioning mark per object, scale itself becomes the message — the count is felt, not just stated.
+
+## §4. Complexity Is Not Confusion
+
+This is the chapter's most consequential and most contrarian claim. Designers who strip data to "reduce clutter" are solving the wrong problem.
+
+> "Clutter and confusion are failures of design, not attributes of information." — Edward Tufte, *Envisioning Information* (p. 51)
+
+The quantity of detail is an issue *completely separate* from the difficulty of reading. Often the *less* complex and subtle the line, the *more* ambiguous and less interesting the reading. Stripping detail is a style driven by personal preference and fashion — considerations indifferent to the substance the display is supposed to convey. Tufte recruits three allies: Josef Albers (we read whole word-pictures, not letters, so more-differentiated forms read *easier* — all-caps and sans-serif read worse, against the constructivist dogma that simpler letterforms read simpler); Robert Venturi (where simplicity cannot work, simpleness results — minimalism is merely boring); and Mies van der Rohe (excellence lives in the details). The false equation to reject: *simpleness of data = clarity of reading*. The real goal: a rich texture of data — comparative, contextual, complex in content — revealed with an economy of means.
+
+**Do / don't (with concrete anchors):**
+
+| Do | Don't | Anchor |
+|---|---|---|
+| Add detail that serves two or more reading scales | Add decoration that serves one scale or none | Manhattan windows (micro) → buildings (macro) |
+| Let density arise from data | Let density arise from frames, fills, 3-D, grid | space-debris dots are all data |
+| Trust the reader to navigate layers | Pre-flatten to a single reading depth | Tokyo mesh map vs. a single national average |
+| Pick an ordering that encodes macro meaning | Default to alphabetical when sequence matters | Vietnam wall: chronological, not A–Z |
+| Make every mark multifunctioning | Spend ink on marks that do one job | stem-and-leaf digit = value + bin |
+| Distort only when legibility demands it, and minimally | Distort or embellish for style | Manhattan: streets widened, nothing else |
 
 ## §5. Data Density Benchmarks
 
-Tufte gives specific figures for human visual capacity and reference display densities (*Envisioning Information*, p. 49):
+Nearly every example in the chapter pushes the limits of printing technology — up to thousands of bits per cm² and ~20 million bits per page. Tufte's capacity figures (p. 49):
 
 | System | Capacity |
 |---|---|
 | Human eye | 150 million bits |
-| 35mm slide | 25 million bits |
+| 35 mm slide | ~25 million bits |
 | Conventional large-scale topographic map | up to 150 million bits |
-| Computer screen (small personal computer, circa 1990) | 8 million bits |
-| High-quality printed page (micro/macro design) | up to 20 million bits per page, thousands of bits per square centimeter |
-| Books on non-fiction bestseller lists | 5,000–15,000 characters per page |
-| Reference books | ~28,000 characters per page |
-| World telephone books | 10,000–18,000 characters per page |
+| Color screen, small personal computer (c. 1990) | 8 million bits |
+| Dense micro/macro printed page | up to ~20 million bits/page; thousands of bits/cm² |
+| Reference books | ~28,000 characters/page |
+| Non-fiction best-seller list books | 5,000–15,000 characters/page |
+| World telephone books | 10,000–18,000 characters/page |
 
-**Implication:** Statistical graphics and information displays "should do so well" — meaning they should approach the density levels of cartography and reference publishing, not the sparse levels of typical slide presentations. A display that uses 8 million bits of screen space to show 200 data points has wasted 99.997% of available resolution.
-
-From *Beautiful Evidence* (p. 63): for monitoring environments requiring many sparklines, Tufte recommends printing at a density of **500 sparklines on A3 paper** (25 × 45 cm / 11 × 17 in), noting this is "the data-equivalent of about 15 large computer screens or 300 PowerPoint slides."
-
-**Why spatial adjacency beats temporal stacking:**
-
-In *Beautiful Evidence*, Tufte notes that 500 sparklines on a large page are adjacent in space rather than stacked in time. Spatial co-presence within a single eyespan enables comparison, search, pattern-finding, exploration, and review that any sequential navigation strategy cannot replicate.
+**Implication:** Tufte argues statistical graphics and information displays should match these densities — approaching the level of cartography and reference publishing, not the sparsity of slideware. A screen carries only ~8M bits against the eye's 150M; a display that spends those 8M bits on 200 data points has wasted nearly all of its resolution *and* most of the viewer's.
 
 ## §6. Design Patterns for Multi-Scale Displays
 
-### Multifunctioning Marks
+### Multifunctioning marks
 
-> "In all these micro/macro designs, the same ink serves more than one informational purpose; graphical elements are multifunctioning."
-> — *Envisioning Information*
-
-The test: can every mark in the display be read at more than one scale? If a mark contributes only to the macro pattern (a background fill, a frame, a grid line) or only to the micro datum (an isolated point with no context), it is underperforming.
-
-**Multifunctioning element examples:**
+Across every micro/macro design, the same ink serves more than one informational purpose — graphical elements are *multifunctioning*. The test: can each mark be read at more than one scale? A mark that contributes *only* to the macro pattern (a frame, a fill, a gridline) or *only* to an isolated micro datum (a point with no context) is underperforming.
 
 | Element | Micro function | Macro function |
 |---|---|---|
-| Vietnam Memorial name | Individual identity | One count in 58,000 |
-| Stem-and-leaf digit | Exact value | Bin-fill in histogram |
-| Mesh map cell | Local density value | Regional density gradient |
-| Shinkansen timetable line | Single train schedule | Network capacity and load pattern |
-| Orbital debris dot | One tracked object | Overall debris cloud geometry |
+| Manhattan window | One drawn window | Surface/face of a building |
+| Vietnam name | One person's identity | One count toward 58,000 |
+| Stem-and-leaf digit | Exact value | Bin-fill in the histogram |
+| Mesh-map cell | Local density value | Regional density gradient |
+| Shinkansen line | One train's schedule | Network capacity and load |
+| Debris dot | One tracked object | Geometry of the debris shell |
 
-### Layered Hierarchy
+### Layered hierarchy
 
-Structure the display so a viewer can enter at any depth:
-1. **Glance layer** (1–3 seconds): dominant pattern, overall shape, major anomalies
-2. **Scan layer** (5–30 seconds): sub-patterns, groupings, regional variation
-3. **Inspection layer** (minutes): individual values, specific cases, local detail
+Let a viewer enter at any depth, and make each layer add genuine information, not mere magnification:
+1. **Glance (1–3 s):** dominant pattern, overall shape, major anomalies.
+2. **Scan (5–30 s):** sub-patterns, groupings, regional variation.
+3. **Inspect (minutes):** individual values, specific cases, local detail.
 
-Each layer should add genuine information, not just magnification of the previous layer.
+### Equal-unit encodings
 
-### Equal-Unit Encodings
+Where a datum has a natural unit, render it at that unit instead of pre-aggregating into proportional bins: one cell per km² (mesh map), one character per observation (stem-and-leaf), one name per soldier (memorial), one dot per object (debris). The micro layer survives and the macro layer assembles itself automatically.
 
-Where the data unit has a natural size, encode it visually at that size rather than aggregating into proportionally-sized bins. The mesh map uses equal-sized cells. The stem-and-leaf plot uses one character per observation. The Vietnam Memorial uses one engraved name per soldier. This preserves the micro layer while the aggregate builds the macro layer automatically.
+### Navigation between layers (the finder)
 
-### Navigation Between Layers
-
-For very large displays, provide a finder — a mechanism that allows a viewer who has identified something at macro scale to navigate to it at micro scale. The Vietnam Memorial directory is a physical finder (alphabetical list + panel/line reference). Topographic map grids and index squares serve the same purpose. On-screen: zoom, search, and linked highlighting.
+For very large displays, supply a finder so a viewer who spots something at macro scale can reach it at micro scale: the Vietnam directory-book (alphabetical list → panel/line), a topographic-map index grid, or on-screen zoom, search, and linked highlighting. Critically, the finder lives *beside* the display — it restores random access without imposing alphabetical order on the wall itself.
 
 ## §7. Failure Modes
 
-### Failure Mode 1: The Posterization Trap
-Spreading data across multiple pages/slides to "simplify" each view destroys the micro/macro relationship. A viewer must hold the macro pattern in visual memory while reading micro details — a weak cognitive capability.
+### Failure Mode 1 — The posterization trap
+Spreading data thinly across page after page (or slide after slide) to "simplify" each view forces the viewer to hold the macro pattern in visual memory — a weak skill — while reading micro detail elsewhere. **Symptom:** information that would be comprehensible on one dense page is fanned across 10+ panels to reduce apparent complexity. A single high-density page can replace twenty scattered posterizations; build the dense page.
 
-> "Vacant, low-density displays, the dreaded posterization of data spread over pages and pages, require viewers to rely on visual memory — a weak skill — to make a contrast, a comparison, a choice."
-> — *Envisioning Information*
+### Failure Mode 2 — Choropleth distortion
+Aggregating to political or administrative areas unrelated to the phenomenon. Large near-empty regions grab false visual emphasis, fills track land area instead of activity, and boundary changes corrupt longitudinal comparison. **Fix:** equal-area grids, mesh cells, or hexbins when the phenomenon varies continuously across space.
 
-**Symptom:** The same information would be comprehensible on one dense page but is spread across 10+ slides/panels to reduce visual complexity.
+### Failure Mode 3 — Severing micro from macro narrative
+Choosing an ordering that destroys the link between the individual mark and the aggregate story. An alphabetical Vietnam wall is individually locatable but narratively inert; chronological order ties each name to the arc of the war. **Always ask:** does the arrangement of micro-elements encode something true about the macro pattern? If not, reorder.
 
-### Failure Mode 2: Choropleth Distortion
-Aggregating to politically or administratively bounded areas when those boundaries have nothing to do with the phenomenon being measured. Large empty areas receive false visual emphasis. Political boundary changes corrupt longitudinal comparison.
+### Failure Mode 4 — Context switching between layers
+In software, replacing one view with another (a scatterplot vanishes, a menu appears, then the scatterplot returns) means the viewer can never see both at once. Short-term memory gets consumed by the incidentals of navigation instead of the analysis. The micro/macro relationship requires *spatial co-presence* — both layers visible simultaneously, no mode-flip required.
 
-**Fix:** Use equal-area grids, hexbins, or other boundary-agnostic units when the phenomenon is continuous across space.
+### Failure Mode 5 — Medium/density mismatch
+Designing a dense multiscale display for a medium that cannot hold the micro layer. A small computer screen carries ~8 million bits against a topographic map's ~150 million and a fine printed page's ~20 million; rendered there, the fine layer collapses into mush. **Rule:** match the medium to the density the display demands. For genuinely dense multiscale work, paper and film beat the screen — push the highest-resolution medium available, and if the screen is fixed, reduce scope rather than fake the detail.
 
-### Failure Mode 3: Confusing Density with Chartjunk
-Adding visual complexity through decorative elements (gradient fills, 3D effects, heavy frames, background patterns) rather than through data. The result is high visual load with no corresponding information gain.
-
-**The diagnostic question:** "Do the prominent visual effects convey relevant content?" (*Beautiful Evidence*, p. 62). If the most prominent visual element in a display is not the data, the design has failed.
-
-### Failure Mode 4: Severing Micro from Macro Narrative
-Alphabetical ordering of the Vietnam Memorial names would have made it a telephone book — individually locatable but narratively inert. Chronological ordering links each micro-element (one name) to the macro-element (the arc of the war). Always ask: does the ordering/arrangement of micro-elements encode or reveal something about the macro pattern?
-
-### Failure Mode 5: Resolution Mismatch
-Building a micro/macro display for a medium that cannot render the micro layer. Computer screens at ~10% of paper's resolution cannot faithfully render sparklines or fine contour lines at print quality.
-
-In *Beautiful Evidence*, Tufte observes that sparklines require intense rendering resolution, on par with fine typography and cartography. At the time of writing, such resolution was achievable only on paper, film, and metal at 1,200+ dpi — not on the screens of that era.
-
-**Rule:** Match the rendering medium to the resolution demands of the display. For dense multi-scale displays, print > screen.
-
-### Failure Mode 6: Context Switching Between Layers
-In software interfaces, showing one view (scatterplot) then replacing it with another (menu, table) means the user cannot see both simultaneously. The micro/macro relationship requires spatial co-presence — both layers visible at the same time without navigating between them.
+### Failure Mode 6 — Decoration mistaken for density
+Adding visual load that is *not data* — gradient fills, 3-D, heavy frames, background texture — and calling the result "rich." It is the opposite of micro/macro density: high ink, zero information gain. **Diagnostic:** is the most prominent element on the page the data, or the styling? If a mark cannot be assigned a micro *or* macro informational job (per §6), it is decoration — cut it. The Manhattan map's discipline is the standard: exactly one non-data concession (widened streets), made solely to keep the data legible.
 
 ## §8. Application Checklist
 
-Before finalizing any dense data display:
+Before shipping any dense data display:
 
-- [ ] Can a viewer get the dominant pattern in under 3 seconds at reading distance?
-- [ ] Can a viewer inspect individual values at close range without losing macro context?
-- [ ] Does every mark serve at least two informational purposes?
-- [ ] Is complexity arising from data density, not decorative elements?
+- [ ] Can a viewer grasp the dominant pattern in under 3 seconds at reading distance?
+- [ ] Can a viewer inspect individual values up close without losing the macro context?
+- [ ] Does every mark do at least two informational jobs (a micro reading *and* a macro reading)?
+- [ ] Is the density made of data, not decoration (frames, fills, 3-D, texture)?
 - [ ] Does the ordering/arrangement of micro-elements encode macro-level meaning?
-- [ ] Is the rendering medium capable of reproducing the micro layer?
-- [ ] Is there a navigation mechanism (finder, index, zoom) if the display is very large?
-- [ ] Would spreading this across multiple pages/slides destroy the comparison?
+- [ ] Is there a temporal or comparative ordering that adds a dimension for free?
+- [ ] Can the medium actually hold the micro layer's resolution (bits/cm²)?
+- [ ] Is there a finder (index, directory, zoom, search) if the display is large?
+- [ ] Are both layers spatially co-present, with no mode-switch to see one or the other?
+- [ ] Would fanning this across multiple pages/slides destroy the comparison? If so, keep it on one page.
+
+Source: Tufte, *Envisioning Information* (Graphics Press, 1990), Chapter 2, "Micro/Macro Readings," pp. 37–51.

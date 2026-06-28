@@ -7,202 +7,174 @@ tags: [tufte, data-visualization, space-time, timetables, scheduling, informatio
 
 ## Overview
 
-Space-time graphics place a spatial dimension (route position, stations, distance along a path) on one axis and time on the other, so that a moving entity traces a line whose angle encodes its speed, whose crossings reveal encounters, and whose density reveals congestion. The form originated with Charles Ybry's 1846 British patent for railway scheduling, was popularized by E.J. Marey for the Paris-Lyon line, and extends to any phenomenon where something moves or develops through both space and time simultaneously.
+Space-time graphics place a spatial dimension (route position, stations, distance along a path) on one axis and time on the other, so a moving entity traces a line whose angle encodes its speed, whose crossings reveal encounters, and whose density reveals congestion. The form was developed by the Paris engineer Charles Ybry in his 1846 British patent for railway scheduling, later carried into the famous Paris-Lyon graphical train schedule, and it extends to any phenomenon that moves or develops through both space and time at once. The payoff: one flat graphic narrates a four-or-five-variable story (entity identity, departure place, arrival place, departure time, arrival time, speed) without a table of numbers.
 
-The central insight is that a single two-dimensional graphic narrates what is inherently a four-or-five-variable story: entity identity, departure location, arrival location, departure time, arrival time, and speed — all at once, without a table.
-
-> "The issues of timetable design are at the heart of envisioning data — large arrays of fussily annotated numbers, thick information densities, type and image together, and multivariate techniques for narrating what is a four or five variable story."
-> — *Envisioning Information*, p. 101
+**Source note (read this first).** The substance here lives in *Envisioning Information* (EI), the chapter "Narratives of Space and Time," pp. 101–113, with the grid-weight progression from *The Visual Display of Quantitative Information* (VDQI) pp. 115–116. *Visual Explanations* (VE) itself redirects this material: its footnote 12 (p. 93) points the reader to EI pp. 32, 45, 97–113. The one genuine space-by-time grid inside VE is the **Salyut-6 cyclogram** (pp. 92–95) — see §13, which bridges this skill to VE.
 
 ---
 
 ## §1. The Canonical Axis Setup
 
-The standard space-time graphic for a linear route:
+The standard graphical timetable for a linear route:
 
-| Axis | What it encodes | Typical direction |
+| Axis | Encodes | Typical direction |
 |---|---|---|
 | Horizontal | Time | Left = earlier, right = later |
 | Vertical | Space (position along route) | Top = one terminus, bottom = other |
 
-**Station placement**: stations are marked as horizontal bands or tick lines at their true proportional distance from the terminus. A route with unequal station spacing produces unequal vertical gaps — and this is correct. Compressing equal-time intervals into equal vertical space would be a lie.
+**Station placement:** stations sit as horizontal bands or tick lines at their *true proportional distance* from the terminus. Unequal real spacing produces unequal vertical gaps — that is correct. Forcing equal vertical spacing onto unequal distances corrupts every slope on the chart.
 
-**Time scale**: the horizontal scale is uniform clock time. For 24-hour coverage, the schedule can be wrapped end-to-end into a cylinder so midnight connects seamlessly to the following day:
+**Time scale:** uniform clock time across the horizontal. To cover a full 24 hours without a hard cut at midnight, Tufte gives two devices: glue the schedule end-to-end onto a cylinder so midnight joins the next day seamlessly, or simply prolong the grid a few extra hours (as in his Atlanta-to-Chicago airplane schedule) to expose the complete cycle.
 
-> "The 24-hour graphical timetable can likewise be glued end-to-end onto a cylinder, to show a fully connected cycle and to prevent running off the right side of a schedule at midnight."
-> — *Envisioning Information*, p. 107
+**Dimensional compression:** the graphic measures distance *along the rail line itself*, collapsing three-space geography into a one-dimensional "lineland" path — the same trick as an itinerary or strip map. Curvature and compass heading of the real route are discarded; only along-track position survives on the spatial axis.
 
-**Which axis gets space vs. time**: the spatial axis is almost always vertical, time horizontal. Reversing this (time vertical) is used only when the motion is primarily vertical by nature — as in the esophageal transit study and the Jupiter satellite corkscrew diagrams, where the spatial dimension is itself a vertical column from top (start of body, or east of Jupiter) to bottom (stomach, or west of Jupiter).
+**Which axis gets space vs. time:** time is *normally* horizontal, space vertical. Two named departures:
+- **Reversed (time vertical):** the Jupiter/Saturn satellite corkscrew diagrams (Galileo 1613, Cassini 1668) run successive nights *down* the page and satellite east-west position *across* it — time vertical, space horizontal.
+- **Doubled (two variables on one axis):** the Japanese-beetle life cycle (§7) carries *both* time and a horizontal ground-position on the horizontal axis while a second spatial dimension (depth, underground→surface) runs vertical.
+
+**Note — common mislabeling:** the esophageal transit study is **NOT** a reversal. It uses the standard orientation — time horizontal (12 s), space (mouth→stomach) vertical. The reversed/doubled cases above are the only departures; §7 has the full set.
 
 ---
 
 ## §2. Reading Speed from Line Angle
 
-Every moving entity traces a diagonal line. The line's angle against the horizontal is a direct visual encoding of speed:
+Every moving entity traces a diagonal. Its angle against the horizontal *is* its speed.
 
 ```
-Vertical axis = distance (km or stations)
-Horizontal axis = time (hours)
-
-Slope of line = Δdistance / Δtime = speed
+vertical axis   = distance (km or stations)
+horizontal axis = time (hours)
+slope of line   = Δdistance / Δtime = speed
 ```
 
 | Line appearance | Meaning |
 |---|---|
-| Steep diagonal (close to vertical) | Fast — large distance covered per unit of time |
-| Shallow diagonal (close to horizontal) | Slow — small distance covered per unit of time |
-| Horizontal segment | Stopped — time passing, no spatial movement (dwell at station) |
-| Vertical segment | Impossible in real schedules — instantaneous teleportation |
+| Steep (toward vertical) | Fast — much distance per unit time |
+| Shallow (toward horizontal) | Slow — little distance per unit time |
+| Horizontal segment | Stopped — time passing, no movement (dwell at station) |
+| Vertical segment | Impossible — instantaneous teleportation |
 
-**Direction**: trains going in opposite directions produce lines with opposite slopes — one tilts upper-left to lower-right, the other tilts lower-left to upper-right. The two populations of lines lean against each other across the grid.
+- **Direction:** opposite travel directions produce opposite slopes (one leans `\`, the other `/`); the two line populations lean against each other across the grid.
+- **Comparison without arithmetic:** an express reads as one steep clean diagonal; a local reads as a shallower line broken by many short horizontal dwell steps. Speed comparison is pure angle comparison.
 
-**Speed comparison**: two trains on the same route can be compared by slope alone. No arithmetic needed. A faster express train produces a steeper line; a local stopping train produces a shallower line with many short horizontal dwell segments at each stop.
-
-Ybry's original patent specification:
-
-> "The engine driver and guards having such time table with them will be enabled to regulate the speeds of the different trains with great exactness, and in cases where special trains are required the diagonal lines of their speed can at once be determined and ruled on the table."
-> — Charles Ybry, British Patent No. 11,868, 1846, as quoted in *Envisioning Information*, p. 108
+Ybry's 1846 patent already states the design use: with the table in hand, drivers and guards regulate train speeds exactly, and for a special train its speed line can be ruled straight onto the chart to keep it clear of every preceding train. (Charles Ybry, British Patent No. 11,868, 1846, paraphrased; quoted in EI p. 108.)
 
 ---
 
-## §3. Identifying Crossings, Gaps, and Density
+## §3. Crossings, Gaps, and Density
 
-### Line crossings: trains passing each other
+### Line crossings — trains meeting
+Two lines intersecting means two trains share one location at one moment. Unremarkable on double track; a hard constraint on single track.
+- x-coordinate of the crossing = the time they meet.
+- y-coordinate = the station or milepost where they meet.
+- Crossing *between* stations on a single-track line = a physically impossible schedule — a fatal conflict requiring redesign.
 
-When two train lines intersect, two trains are at the same location at the same time. On a multi-track line, this is unremarkable. On a single-track line, it is a physical impossibility unless a siding is available — and therefore a planning constraint.
+### Gaps — dwell time
+A horizontal segment = a stopped train; its horizontal length = minutes stopped. Instantly visible here; in a numeric timetable dwell time is invisible unless explicitly listed, and it rarely is.
 
-Reading a crossing:
-- The x-coordinate of the crossing = the time trains meet
-- The y-coordinate of the crossing = the station or milepost where they meet
-- If the crossing falls between stations on a single-track line: the schedule is impossible as drawn — a fatal conflict requiring redesign
-
-### Gaps: dwell time at stations
-
-A horizontal segment in a train line means the train is stopped. The length of the segment along the horizontal axis = the number of minutes stopped. This is immediately readable at a glance; in a typographic timetable, "dwell time" is invisible unless explicitly listed, and rarely is.
-
-### Line density: congestion and frequency
-
-Dense clustering of lines during a time window = high frequency of service = rush hour. The visual effect is pronounced: lines pack together, approaching spaghetti-like density.
-
-> "During rush hours, lines densely crowd into spaghetti — but then service is so frequent that the jumble of lines informs the rider simply to show up, for there will be virtually no wait for whatever bus it is that arrives."
-> — *Envisioning Information*, p. 108
-
-Sparse regions of the grid (few lines, wide gaps) = low-frequency periods, typically mid-day or late night. A reader scanning the schedule sees service patterns across the whole day in one glance — something a column-of-numbers timetable cannot convey.
+### Density — frequency and congestion
+Tight clustering of lines in a time window = high frequency = rush hour, packing toward spaghetti. The density is itself the message: when lines crowd that tightly, service is frequent enough that the rider just shows up. Sparse regions (few lines, wide gaps) = low-frequency midday or late night. The whole day's service pattern is legible in one glance — something a column of numbers cannot deliver.
 
 ---
 
 ## §4. Single-Track Planning: Crossings Only at Sidings
 
-On single-track railways, trains going in opposite directions must coordinate their passing points. The graphical timetable makes this constraint visible and manageable in a way no typographic format can match.
+On single track, opposite-direction trains can pass only where a siding exists. Tufte's example is a Swiss Federal Railroad chart of a few daily trains from La Chaux-de-Fonds (1932): the diagonals cross *only at stations*, revealing that the line is single-track and trains pass only at sidings within those stations.
 
-In *Envisioning Information*, Tufte notes that on a correctly planned single-track schedule, the crossing of diagonal lines in opposite directions occurs only at station positions — revealing that opposing trains can pass only at sidings within those stations. Planning these passings graphically is natural and direct; attempting the same task nonvisually would be clumsy and error-prone.
-
-**Visual signature of single-track schedules**: all line crossings fall on horizontal station bands. If a crossing appears between stations, the schedule contains a collision. On a correctly planned single-track schedule, the crossing pattern has a strict rhythmic regularity — up-trains and down-trains interleave at sidings.
-
-**Planning use**: railways used graphical timetables as the primary design tool for negotiating passing sequences across systems of immense complexity — "thousands of station stops" — before computational optimization existed.
+- **Visual signature:** every crossing lands on a horizontal station band. A crossing between bands = a collision designed into the schedule.
+- **Correctly planned:** up-trains and down-trains interleave at sidings with strict rhythmic regularity.
+- **Planning use:** railways used the graphical form as the primary design tool for negotiating passing sequences across systems of immense complexity (thousands of station stops) long before computational optimization. Doing the same task nonvisually is clumsy and error-prone.
 
 ---
 
-## §5. Grid Treatment for Space-Time Graphics
+## §5. Grid Treatment
 
-The space-time graphic requires a grid more than most chart types, because readers need to interpolate precise times and locations. But the grid competes with the data lines if drawn too heavily.
+The space-time graphic needs a grid more than most charts, because readers interpolate precise times and locations from it — but the grid must never compete with the data lines.
 
-The progression Tufte demonstrates (VDQI, pp. 115-116):
+The weight progression Tufte demonstrates (VDQI pp. 115–116):
 
 | Grid treatment | Effect | Verdict |
 |---|---|---|
-| Dark black grid | Grid dominates; data lines lost in visual noise; moiré where lines are dense | Chartjunk |
-| Thinned dark grid | Slightly better; still competes with data | Marginal improvement |
-| Gray grid (light gray lines) | Grid recedes; data lines read clearly; interpolation still possible | Correct |
+| Dark black grid | Grid dominates; data lines lost; moiré (1+1=3) where lines are dense | Chartjunk |
+| Thinned dark grid | Better, still competes | Marginal |
+| Light gray grid | Grid recedes; data reads clearly; interpolation still possible | Correct |
 
-In *The Visual Display of Quantitative Information* (p. 116), Tufte argues that when a graphic doubles as a lookup table, a grid aids interpolation — but the grid must always remain subordinate to the data. A light gray grid, drawn with a delicate line, actually supports more accurate data reconstruction than a heavy dark one.
-
-**Interval**: for transit schedules, Tufte used a gray grid at ten-minute intervals, sufficient for visual interpolation without overcrowding.
-
-**Paper**: Tufte notes (*VDQI*, p. 116) that standard graph paper has a grid printed too dark for data graphics; using the reverse side lets the lines show through faintly without cluttering the data.
+- **Subordination rule:** when a graphic doubles as a lookup table a grid genuinely aids interpolation, but it must stay subordinate — a delicate gray grid supports *more* accurate data reconstruction than a heavy dark one.
+- **Interval (concrete):** for transit, a gray grid at **ten-minute intervals** — fine enough to interpolate arrivals, coarse enough to stay quiet.
+  > "The gray grid is set at ten-minute intervals in order to ease visual interpolation of the times of arrival." — Tufte, *Envisioning Information*, p. 110
+- **Paper trick (VDQI):** ordinary graph paper prints its grid too dark for data; work on the reverse side so the rules show through faintly.
 
 ---
 
 ## §6. Spatial Detail vs. Temporal Precision: The Tradeoff
 
-The space-time graphic must allocate two finite axes between two continuous variables. Every design choice shifts emphasis:
+Two finite axes must be split between two continuous variables. Every choice shifts emphasis:
 
 | More spatial detail | More temporal precision |
 |---|---|
-| More stations shown on vertical axis | Finer time increments on horizontal axis |
-| True proportional distance between stations | Equal-interval clock time always preserved |
+| More stations on the spatial axis | Finer time increments on the time axis |
+| True proportional distance preserved | Equal-interval clock time preserved |
 | Route topology visible | Individual minutes readable |
-| Large-scale maps integrated | Dense schedule data legible |
+| Maps integrated into the structure | Dense schedule data legible |
 
-**The Czechoslovak Air Transport Company (1933)** merged route map and schedule by using a network map as the spatial structure and encoding flight times and identifiers as edge annotations. This sacrifices temporal granularity (no minute-by-minute reading) but reveals spatial topology.
+Worked resolutions:
+- **Czechoslovak Air Transport (1933):** a route network *is* the spatial structure, with flight times and flight numbers annotated on the edges. Sacrifices minute-by-minute reading; reveals topology.
+- **China Railway index (200-page):** route map carries page numbers along each line, pointing to where the detailed schedule lives. Sacrifices temporal data on the map entirely; provides a spatial index into a large document and avoids a witless alphabetical index.
+- **Hoboken-NYC bus schedule (Tufte & Druckrey):** layers two full-fidelity representations — an aerial photograph at *house resolution* for space, a complete graphical timetable for time — neither compressing the other. Residents personalize the photo (finding their own street), then read the schedule above it.
 
-**The Hoboken-NYC bus schedule (Tufte and Druckrey)** resolved the tradeoff by layering two separate representations: an aerial photograph at house-resolution detail for space, and a full graphical timetable for time — placed one above the other. Readers get both at full fidelity; neither compresses the other.
-
-**The China Railway index** combined route map and timetable page numbers — sacrificing temporal data entirely from the map layer, but providing a spatial index for locating temporal data elsewhere in a 200-page document.
-
-The tradeoff is not solvable by a single "correct" ratio. The design decision depends on whether readers primarily need to plan routes (spatial detail dominant) or plan departures (temporal precision dominant).
+There is no single correct ratio. Decide by reader task: planning routes → spatial detail dominant; planning departures → temporal precision dominant.
 
 ---
 
 ## §7. The Space-Time Grid's Natural Universality
 
-> "The space-time grid has a natural universality, with nearly boundless subtleties and extensions."
-> — *Envisioning Information*, p. 110
+> "The space-time grid has a natural universality, with nearly boundless subtleties and extensions." — Tufte, *Envisioning Information*, p. 110
 
-The same two-axis structure — one spatial dimension on one axis, time on the other — applies across domains that appear superficially unrelated:
+One spatial dimension on one axis, time on the other — the same structure spans unrelated domains. Note the orientation column; most are standard, two are not.
 
-| Domain | Spatial axis | Time axis | What lines show |
-|---|---|---|---|
-| Transit scheduling | Stations along route (distance) | Clock time | Train/bus journeys |
-| Single-track railway planning | Same | Same | Crossing conflicts at sidings |
-| Jupiter's satellites (Galileo 1613; Cassini 1668) | East-west position relative to Jupiter | Successive nights | Orbital cycles of Io, Europa, Ganymede, Callisto |
-| Biological life cycle | Position in development (underground to surface) | Months of year (Jan-Dec) | Popillia japonica (Japanese beetle) complete annual cycle |
-| Medical transit | Spatial span from mouth to stomach | 12 seconds | Food bolus transit through esophagus |
-| Competitive rowing (bumps chart) | Starting rank | Race days (Feb) | Rank changes when one boat overtakes another |
-| Opera composition (Wagner) | Compositional milestones (first idea → first performance) | Years (1835-1881) | Development trajectory of each opera |
+| Domain | Spatial axis | Time axis | Lines show | Orientation |
+|---|---|---|---|---|
+| Transit scheduling | Stations / distance (vertical) | Clock time (horizontal) | Train/bus journeys | Standard |
+| Single-track planning | Same | Same | Crossing conflicts at sidings | Standard |
+| Jupiter & Saturn satellites (Galileo 1613; Cassini 1668) | East-west position vs. Jupiter (horizontal) | Successive nights (vertical, downward) | Corkscrew orbits of Io, Europa, Ganymede, Callisto | **Reversed** (time vertical) |
+| Japanese beetle life cycle | Depth, underground→surface (vertical) | Months Jan–Dec, doubled with ground-position (horizontal) | Annual cycle of *Popillia japonica* | **Doubled** (two variables on horizontal) |
+| Esophageal transit | Mouth→stomach (vertical) | 12 seconds (horizontal) | Food bolus descent | Standard |
+| Bumps chart (rowing) | Starting rank (vertical) | Race days (horizontal) | Rank changes; crossings = passes | Standard |
+| Wagner operas | Compositional milestones, first idea→first performance (vertical) | Years, roughly 1830s–1880s (horizontal) | Each opera's development trajectory | Standard |
 
 ### Esophageal timetable (medical)
+Eight consecutive video frames of 0.2 s each, 64×64 pixels, are compressed: each frame is summed along its horizontal rows into a single 1-pixel-wide column. The columns are assembled side by side — 60 in the full study — to build one condensed dynamic image of a complete swallow.
+- Horizontal axis: 12 seconds total. Vertical axis: mouth (top) → stomach (bottom).
+- Reading: a clean downward bolus trajectory is normal; descent rate reads from slope; reflux would appear as upward motion. (Standard orientation — time horizontal.)
 
-Eight video frames of 0.2 seconds each, each 64×64 pixels, were compressed: each frame reduced to a single 1-pixel-wide column by summing along horizontal rows. The 60 columns assembled side-by-side produce a condensed dynamic image of a complete swallow:
+### Japanese-beetle life cycle (biological)
+*Popillia japonica* Newman's full year is shown by *doubling* variables on the horizontal axis: it carries both the months (Jan–Dec) and the beetle's horizontal ground-position, while the vertical axis is depth (deep underground at bottom, surface at top). The illustrated organism sits at its true spatial-temporal position at each stage — a smooth escape from flatland.
 
-- Horizontal axis: 12 seconds total duration
-- Vertical axis: spatial span from mouth (top) to stomach (bottom)
-- Reading: downward trajectory of the bolus, rate of descent readable from slope, any reflux would show as upward motion
-
-### Biological lifecycle (Japanese beetle)
-
-Popillia japonica Newman's complete year-long life cycle is shown simultaneously in space and time:
-- Horizontal axis: months (January through December)
-- Vertical axis: spatial position (deep underground at bottom, surface at top)
-- The organism's illustrated form at each stage occupies its true position in the spatial-temporal grid
+### Jupiter/Saturn corkscrew (astronomy)
+Three centuries of individual nightly observations are joined into continuous spirals (Io, Europa, Ganymede, Callisto). The diagram is a true micro/macro space-time grid — one spatial dimension stretched by time — but **reversed**: time runs vertically, satellite east-west position horizontally. Tufte mutes the horizontal "prison-bar" gridlines to kill the 1+1=3 clutter (see §5). The continuous-curve form arrived only in the 20th century, ~300 years after Galileo's dots.
 
 ### Bumps chart (competitive rowing)
-
-Oxford and Cambridge colleges race on narrow rivers where boats cannot pass side-by-side on bends. Boats start at intervals; each must catch and "bump" the boat ahead to advance one rank. The chart:
-- Vertical axis: college teams (by starting rank)
-- Horizontal axis: race days
-- Lines track rank changes; crossings show when one boat overtook another
-- Historically, a passing was signaled by boats physically touching; the chart records these events as crossed lines
+The example is the **Oxford University Torpids** (Oxford colleges; redrawn from *The Times*, 3 March 1987) — *not* Oxford-and-Cambridge. Rivers are too narrow for crews to row side by side (on bends, room for one boat), so crews start spaced apart and chase the boat ahead; catching it ("bumping," historically a literal touch) advances a rank.
+- Vertical axis: crews by starting rank. Horizontal axis: race days.
+- Crossed lines record each overtake. The form depends on the physical no-passing constraint of the narrow river.
 
 ---
 
 ## §8. Conventional Typographic Timetable vs. Graphical Timetable
 
-Tufte's analysis of the New York–New Haven Metro-North timetable (1983) documents the defects of the typographic form:
+Tufte's analysis of the New York–New Haven Metro-North table (1983), *Envisioning Information* pp. 104–105:
 
-| Problem | Consequence |
+| Defect | Consequence |
 |---|---|
-| Only 21% of table area shows times trains run | Structural waste: 79% of ink is scaffold, not data |
-| 24 AM/PM labels (column headings repeated 3×) | Eye traces serpentine path through folded time sequence |
-| 41 inches (104 cm) of rules for this small table | Rules signal order; they impose it without delivering it |
-| Bold sans-serif for direction labels | Weak differentiation between two directions of travel |
-| Rush-hour section (most used) is most cluttered | Heavy screen tint + symbol density obscures peak-service times |
-| Poor column break: last peak-hour train orphaned | Cognitive discontinuity at most critical transition |
+| Only 21% of table area shows train times | 79% is scaffold, not data — 80 times / 410 characters buried under grids |
+| Column headings repeated 3×; 24 AM/PM labels | Folded sequence forces the eye on a serpentine path; another for weekends |
+| 41 inches (104 cm) of rules for a small table | Rules impose an appearance of order without delivering it |
+| Bold sans-serif direction labels | Weak distinction between the two travel directions |
+| Most-used rush-hour block is most cluttered | Murky screen tint + heavy symbols obscure peak service |
+| Poor column break orphans the last peak-hour train | Cognitive discontinuity at the most critical transition |
 
-The graphical alternative resolves all of these simultaneously. Direction of travel = slope direction. Rush-hour density = visible line crowding. Speed comparisons = angle comparisons. Dwell time = horizontal segments. The whole day is legible at once.
+> "Only 21 percent of the timetable's area is devoted to display of times that trains run." — Tufte, *Envisioning Information*, p. 104
 
-> "The visual timetable provides a detailed reading of times of a particular train along with an overview of the daily structure of times, stations, and routes — separating and combining micro/macro data."
-> — *Envisioning Information*, p. 108
+The graphical form resolves all of these at once: direction = slope direction; rush-hour load = visible crowding; speed comparison = angle comparison; dwell = horizontal segment; whole-day structure = one glance. It gives both the precise reading of one train and the macro overview of the day's structure — micro and macro together. (Tufte's redesign also reset the numbers in Carter's Bell Centennial, a typeface built for legibility in tight space.)
 
 ---
 
@@ -210,93 +182,91 @@ The graphical alternative resolves all of these simultaneously. Direction of tra
 
 | Do | Don't |
 |---|---|
-| Place stations at proportionally correct distances on the spatial axis | Space stations equally regardless of true distance between them |
-| Use a gray or light grid for interpolation; ten-minute intervals for transit | Use dark black grid lines; they compete with and obscure data lines |
-| Let line angle speak: steep = fast, shallow = slow | Add redundant speed labels when slope already encodes speed |
-| Mark station positions with labeled horizontal rules or bands | Omit station labels; the spatial axis is useless without them |
-| Use opposite slopes for opposite directions; let crossings emerge naturally | Color-code direction instead of relying on slope direction |
-| Plan single-track passings graphically: ensure crossings land only on siding stations | Attempt single-track conflict resolution in a typographic timetable |
-| Combine aerial photograph or route map with graphical timetable in separate layers | Compress both spatial topology and temporal detail into one overloaded axis |
-| Extend the schedule beyond midnight to show complete cycle; glue end-to-end conceptually | Let the schedule stop at midnight, hiding the pattern of overnight service |
-| Identify rush-hour density as a design signal: dense lines tell riders to just show up | Over-annotate dense periods; the density itself is the message |
-| Use the esophageal/pixel-compression technique for video sequences (compress each frame to 1px column) | Display sequential video frames as separate panels when spatial progression through time is the question |
+| Place stations at true proportional distance on the spatial axis | Space stations equally regardless of real distance |
+| Use a light gray grid; ten-minute intervals for transit | Use a dark black grid — it competes with and obscures the data |
+| Let line angle carry speed (steep = fast, shallow = slow) | Add redundant speed labels the slope already encodes |
+| Mark stations with labeled horizontal rules/bands | Omit station labels — the spatial axis is then useless |
+| Use opposite slopes for opposite directions; let crossings emerge | Color-code direction instead of relying on slope |
+| Plan single-track passings graphically; force every crossing onto a siding station | Resolve single-track conflicts in a numeric timetable (it hides them) |
+| Layer aerial photo / route map and graphical timetable separately | Cram spatial topology and temporal detail onto one overloaded axis |
+| Extend past midnight (cylinder, or prolong the grid a few hours) | Cut the schedule at midnight and hide the overnight pattern |
+| Let dense rush-hour lines speak ("just show up") | Over-annotate dense periods — density is the message |
+| Compress a video sequence to 1-px columns when one spatial axis matters (esophageal trick) | Lay sequential frames out as separate panels when the question is spatial progression over time |
 
 ---
 
 ## §10. Failure Modes
 
-### Failure mode 1: Equally spaced stations (false geography)
-Spacing stations at equal vertical intervals when their actual distances are unequal distorts slope, misrepresents speed, and makes crossings appear at incorrect locations. The slope is only meaningful when vertical position is proportional to true distance.
-
-### Failure mode 2: Dark grid destroying data legibility
-The canonical failure. The Marey train schedule with a full black grid produces moiré vibration at line intersections and makes individual train lines hard to trace. Fix: gray grid, or use the reverse (unprinted) side of graph paper.
-
-### Failure mode 3: Ignoring single-track constraints
-Drawing crossings between stations on a single-track schedule is a physical scheduling error made invisible by a typographic timetable but immediately exposed by the graphical one. The graphical form is the correct planning tool; the typographic form hides fatal conflicts.
-
-### Failure mode 4: Collapsing spatial detail and temporal detail onto one axis
-Some schedules list stations as row labels in a table and use columns for time — destroying both the spatial proportionality and the slope-as-speed encoding. This produces the conventional typographic timetable with all its defects.
-
-### Failure mode 5: Truncating the time axis at midnight
-A 6am–midnight schedule conceals the overnight pattern and creates an artificial discontinuity. The cylindrical extension (wrap at midnight) shows the complete 24-hour cycle.
-
-### Failure mode 6: Using the graphical form for public consumption without spatial anchoring
-Ybry's hope for public use of graphical timetables "has not been realized." The form is natural to railway engineers, who read it daily, but unfamiliar to passengers. Tufte and Druckrey's Hoboken-NYC bus schedule addressed this by grounding the graphical strip against an aerial photograph of the actual route at house resolution — readers orient themselves to their own street, then read the schedule above.
-
-### Failure mode 7: Omitting dwell time
-Horizontal segments at stations are load-bearing data. Omitting them and treating departures and arrivals as single points falsifies the schedule and eliminates the information about which stops are operationally expensive.
-
-### Failure mode 8: Applying bumps-chart logic to routes with no passing constraint
-The bumps chart works because the narrowness of rivers is a physical constraint that prevents side-by-side racing. Applying the same ranked-line format to competitions where simultaneous racing is possible loses the spatial constraint that gives the form its meaning.
+1. **Equally spaced stations (false geography).** Equal vertical spacing on unequal real distances distorts every slope, misrepresents speed, and puts crossings at wrong locations. Slope is meaningful only when vertical position is proportional to true distance.
+2. **Dark grid destroying data.** A full black grid over the lines vibrates (moiré / 1+1=3) at intersections and buries individual trains. Fix: light gray grid, or the reverse side of graph paper (VDQI).
+3. **Ignoring single-track constraints.** Crossings drawn between stations on single track are physical scheduling errors — invisible in a numeric table, immediately exposed graphically. Use the graphical form as the planning tool.
+4. **Collapsing space and time onto one axis.** Listing stations as table rows and times as columns destroys both proportional spacing and slope-as-speed — that *is* the conventional timetable, with all its defects.
+5. **Truncating time at midnight.** A 6am–midnight cut conceals overnight service and creates an artificial discontinuity. Wrap (cylinder) or prolong the grid to show the full cycle.
+6. **Graphical form for the public without spatial anchoring.** Ybry's hope for public use went unrealized: the form is native to engineers, alien to passengers. Anchor it — the Hoboken-NYC bus schedule grounds the graphical strip on an aerial photo at house resolution so riders locate their own street first.
+7. **Omitting dwell time.** Horizontal segments at stations are load-bearing. Treating arrival and departure as one point falsifies the schedule and erases which stops are operationally expensive.
+8. **Bumps-chart logic without a passing constraint.** The bumps chart works *because* a narrow river physically prevents side-by-side racing. Apply the ranked-crossing form to a contest that allows simultaneous racing and you lose the constraint that gives it meaning.
 
 ---
 
 ## §11. Implementation Formulas
 
 **Speed from line angle**
-
 ```
 speed = (distance between two stations) / (time to travel between them)
-      = Δy / Δx  [in whatever units the axes use]
-
-slope of line (rise/run) = speed
-steeper slope → faster train
+      = Δy / Δx        [in the axes' own units]
+slope (rise/run) = speed     →    steeper = faster
 ```
 
-**Single-track feasibility check**
-
-For each pair of trains going in opposite directions on the same single-track segment:
-- Find the x-coordinates (times) at which their lines would cross
-- Find the y-coordinate (location) of that crossing
-- If the y-coordinate falls between station bands: conflict — redesign departure times or add siding
-
-**Pixel-compression formula (esophageal / video)**
-
+**Single-track feasibility check** — for each pair of opposite-direction trains on a shared single-track segment:
 ```
-n frames × (height pixels) → n columns of 1px width assembled horizontally
-Each column[i] = sum of pixel intensities along row[j] for frame[i]
-Result: (n pixels wide) × (height pixels tall) condensed dynamic image
-Horizontal axis = time, vertical axis = spatial position
+1. find x (time) where their lines would cross
+2. find y (location) of that crossing
+3. if y falls between station bands → CONFLICT
+   → shift departure times or add a siding at y
 ```
 
-**Rush-hour density signal**
+**Pixel-compression (esophageal / any one-spatial-axis video)**
+```
+n frames, each H pixels tall → n columns, each 1 px wide, assembled left→right
+column[i] = Σ over rows j of pixel intensity in frame[i]   (sum each frame to one column)
+result: (n px wide) × (H px tall) condensed dynamic image
+horizontal axis = time, vertical axis = the single spatial dimension
+worked values: 8 shown / 60 total frames, 0.2 s each, 64×64 source, → 12 s span
+```
 
-No formula needed. When lines are so dense that individual identification is impractical, the correct design response is to let density itself communicate "service so frequent no schedule is needed." Do not annotate; do not color-code individual lines. Density is the message.
+**Rush-hour density signal** — no formula. When lines are too dense to trace individually, let density itself say "service so frequent no schedule is needed." Do not annotate; do not color-code individual lines.
 
 ---
 
-## §12. When Space-Time Graphics Beat Conventional Alternatives
+## §12. When Space-Time Graphics Beat the Alternatives
 
-| Task | Space-time graphic | Conventional timetable | Map | Gantt chart |
+| Task | Space-time graphic | Numeric timetable | Map | Gantt |
 |---|---|---|---|---|
-| Read single departure time | Possible but slower | Fast (designed for this) | No | No |
-| Compare speeds of two trains | Immediate (slope angle) | Requires arithmetic | No | No |
-| Identify rush-hour congestion | Immediate (line density) | Requires counting rows | No | Partial |
-| Spot single-track conflicts | Immediate (crossings between stations) | Invisible | No | No |
-| Plan single-track passing sequence | Natural design tool | Clumsy and error-prone | No | No |
-| Show complete daily service pattern | One glance | Requires scanning all rows | No | Partial |
-| Show lifecycle/development over space and time | Yes (biological, medical) | No | No | Partial |
-| Show competitive overtaking (bumps) | Yes (crossed lines) | No | No | No |
+| Read one departure time | Possible, slower | Fast (built for it) | No | No |
+| Compare two trains' speeds | Immediate (angle) | Arithmetic needed | No | No |
+| Spot rush-hour congestion | Immediate (density) | Count rows | No | Partial |
+| Spot single-track conflicts | Immediate (crossing between stations) | Invisible | No | No |
+| Plan a single-track passing sequence | Natural design tool | Clumsy, error-prone | No | No |
+| See the whole day's service pattern | One glance | Scan all rows | No | Partial |
+| Show lifecycle/development over space + time | Yes (beetle, esophageal) | No | No | Partial |
+| Show competitive overtaking | Yes (crossed lines) | No | No | No |
 | Show geographic route topology | Only with map overlay | No | Yes | No |
 
-In *Envisioning Information* (p. 101), Tufte notes that schedules rank among the most widely reproduced information displays — printed in volumes comparable to road maps and telephone books — and that 150 years of design effort across the world have produced a rich range of display strategies.
+Schedules rank among the most widely reproduced information displays — comparable in printed volume to road maps, weather charts, and telephone books — and 150 years of worldwide design effort have produced a rich range of strategies (EI p. 101). The graphical timetable is the form that turns that fussy numeric array into a legible multivariate narrative.
+
+---
+
+## §13. Cross-Reference: The Salyut-6 Cyclogram (the bridge into *Visual Explanations*)
+
+The space-by-time grid is not confined to EI. The one clear instance inside *Visual Explanations* is the Soviet **Salyut-6 cyclogram** (VE pp. 92–95): a mission schedule plotting **orbit-minutes on the vertical axis against trip-days on the horizontal axis**, so the cosmonauts' repeating daily activity cycle stacks across the duration of the flight. It is the same orthogonal space/time structure as the graphical timetable, applied to an orbital mission.
+
+- **Why it matters here:** VE's footnote 12 (p. 93) explicitly sends the reader back to EI pp. 32, 45, 97–113 for the timetable / space-by-time material — VE points *out* to EI rather than developing it. The cyclogram is the natural hinge between the two books.
+- **Use:** when working from VE, treat the cyclogram as the worked space-time example and reach for EI's "Narratives of Space and Time" for the full design vocabulary (slope = speed, crossings, dwell, density, grid weight, single-track planning) laid out above.
+
+---
+
+## Sources & scope
+
+- **Primary:** Tufte, *Envisioning Information*, "Narratives of Space and Time," pp. 101–113 — Ybry/graphical timetable, Czech 1933, China 200-page index, Metro-North critique (21% / 41 in / 24 AM-PM / 410 chars), Hoboken-NYC bus schedule (ten-minute gray grid, house-resolution aerial photo), Chaux-de-Fonds 1932 single track, Jupiter/Saturn corkscrew, Japanese beetle, esophageal timetable, Oxford Torpids bumps chart, Wagner operas, cylinder/midnight gluing.
+- **Grid weight:** Tufte, *VDQI*, pp. 115–116 (dark→thinned→gray progression; reverse-side graph-paper trick).
+- **Bridge:** Tufte, *Visual Explanations*, pp. 92–95 (Salyut-6 cyclogram) and footnote 12, p. 93 (redirect to EI pp. 32, 45, 97–113).

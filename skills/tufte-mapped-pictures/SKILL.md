@@ -1,313 +1,260 @@
 ---
 name: tufte-mapped-pictures
-description: Establishes when and how to annotate any visual — photograph, map, drawing, satellite image, anatomical plate — with scale bars, coordinate grids, categorical overlays, cross-section markers, and quantitative legends so it functions as falsifiable, readable evidence rather than decoration.
-tags: [tufte, data-visualization, mapped-pictures, images-as-evidence, annotation, cartography, information-design, scale-references]
+description: From Beautiful Evidence's "Mapped Pictures" chapter — turn any representational image (photograph, painting, drawing, micrograph, satellite or scientific image) into evidence by adding measurement scales, the universal x-y-z-t grid, labels placed on the image, and an explanatory mapping; and judge mapping theories by explanatory tightness and falsifiability rather than by eyeballing.
+tags: [tufte, beautiful-evidence, mapped-pictures, scale-of-measurement, universal-grid, image-as-evidence, explanatory-mapping, falsifiability, labels]
 ---
-# Mapped Pictures: Images as Evidence
+# Mapped Pictures: Images as Evidence and Explanation
 
 ## Overview
 
-A picture without quantitative annotation is decoration. The same picture with a calibrated scale bar, a coordinate grid, and a labeled overlay becomes a data display capable of carrying thousands of numbers, generating hypotheses, and supporting causal arguments. Tufte's mapped-pictures framework identifies the specific additions — scale references, symbol systems, cross-section markers, coordinate grids, multi-variable encodings — that cross a visual from illustration into evidence. The test is strict: a viewer must be able to extract a number from the image without leaving it.
+A representational image shows what something looks like; a mapped picture lets a viewer measure it, place it, compare it, and test the claim being made about it. Tufte's argument in *Beautiful Evidence* is that explanatory, journalistic, and scientific images should nearly always be mapped — fitted with scales, a coordinate grid, labels, and overlays — and that a mapping is itself a claim, so it must be held to the same standards of credibility as any explanation. The chapter's two halves are equally important: how to map an image (scale, grid, labels), and how to tell a credible mapping from a crank one (explanatory tightness, falsifiability, flatland-vs-spaceland). The current skill title drops "and Explanation"; do not — the second half is where most real failures live.
 
-The data map is the oldest form of this transformation. A geographic outline is not evidence. A geographic outline overlaid with dot-density, shaded counties, directional vectors, and a calibrated legend carries 21,000 numbers in the space of a page — and that density is the argument.
-
----
-
-## §1. The Evidentiary Standard: Illustration vs. Evidence
-
-The core distinction is measurability. An illustrative picture shows what something looks like. An evidentiary picture lets the viewer measure, compare, and falsify.
-
-In *The Visual Display of Quantitative Information*, Tufte observes that no other format can compress as many data points into a single page as a mapped image can — and that the same image supports simultaneous analysis at multiple scales, from the broad geographic pattern down to fine county-by-county detail.
-
-**The measurability test** — ask these three questions before calling an annotated image complete:
-
-1. Can a viewer extract at least one specific number without leaving the image?
-2. Can two points in the image be compared quantitatively, not just visually?
-3. Does the annotation survive removal of prior knowledge — would a stranger read the same value?
-
-If any answer is no, the image is still illustration.
-
-| Image type | Illustrative form | Evidentiary form |
-|---|---|---|
-| Street map | Named roads, building outlines | + Scale bar, dot per death, pump locations (John Snow, 1854) |
-| Geographic outline | Coastline and county borders | + Shaded tones keyed to 5 statistical significance levels (cancer atlas) |
-| Sky photograph | Star field | + Grid of 1,024 × 2,222 cells, 10-tone galaxy-count key |
-| Engineering drawing | Bridge elevation | + Water-level marker, foundation-depth cross-section, stratigraphy labels |
-| World map | Continent outlines | + Directional stroke vectors for wind (Halley, 1686) |
-
-**DO:** Ask what number a viewer should be able to read before designing the annotation.
-
-**DON'T:** Add annotation after the image is "done" — it will be cosmetic rather than structural.
+> "Mapped pictures combine representational images with scales, diagrams, overlays, numbers, words, images." — Tufte, *Beautiful Evidence*
 
 ---
 
-## §2. Scale References: The First Obligation
+## §1. What a Mapped Picture Is: Image Qualities + Diagram Qualities
 
-Every spatially interpreted image requires at least one calibrated scale reference. Without it, relative sizes, distances, and densities are guesses.
+A mapped picture is not an illustration with decoration added. It is the *fusion* of two complementary things: the evidential richness of a representational image and the focusing power of a diagram. Each contributes qualities the other lacks; the map is what binds them.
 
-### Forms of scale reference
-
-**External scale bar** — a labeled ruler placed in the image margin or a corner. John Snow's 1854 cholera map carries a scale bar reading "50 — 0 — 50 Yards — 100 — 150 — 200" with X marks for pumps and dots for deaths. The scale bar makes the spatial clustering around the Broad Street pump not merely visible but measurable: the pump sits at the center of the death cluster within a radius of roughly 250 yards.
-
-**Internal coordinate grid** — the grid itself is the scale. The Yü Chi Thu (Map of the Tracks of Yü the Great), carved in stone in 1137 CE but probably dating from before 1100, uses a regular grid at 100 *li* per division across the entire map surface. Needham observed that the map's grid holds to 100 *li* per division, that its coastal outline is reasonably accurate, and that the river network is rendered with exceptional precision — all in a stone carving roughly three feet square. He concluded that European cartography produced nothing comparable until around 1550. (*Science and Civilisation in China*, vol. 3, pp. 546–547, cited in *The Visual Display of Quantitative Information*, p. 20.)
-
-**Tone/density legend** — when the scale encodes intensity rather than distance, a keyed legend strip is the scale reference. The Lick Observatory galaxy-count map divides the northern galactic hemisphere into 1,024 × 2,222 rectangles (2,275,328 total cells). The scale strip at the bottom maps 10 gray tones to galaxy counts; without it the image is a texture, not a measurement.
-
-**Proportional symbol key** — when symbol size encodes magnitude, a labeled example symbol sets the unit. Minard's 1864 French wine export map uses flow-line width proportional to export volume; a labeled reference width in the legend converts any measured line width to tonnes.
-
-### Scale resolution rule
-
-Scale resolution should match the finest distinction the data actually supports. A scale bar calibrated to 10 meters is misleading when the underlying data has 50-meter precision. Over-precision invites false readings; under-precision destroys the scale's utility.
-
-| Image context | Minimum scale requirement | Common failure |
-|---|---|---|
-| Medical/anatomical plate | Linear ruler with stated magnification (e.g., "×40") | "Not to scale" caption with no reference |
-| Satellite/aerial image | Scale bar + north arrow | Resolution stated in text only, not visually |
-| Choropleth map | Classified legend with exact breakpoints | Color gradient with no value stops |
-| Scientific micrograph | Bar with unit (nm, µm, mm) embedded in image | Bar in caption only, not in image |
-| Architectural section | Dimension lines or bar scale | Decorative "scale figure" without measurement |
-
----
-
-## §3. Coordinate Grids: Making Position Measurable
-
-A coordinate grid transforms a picture into a measuring instrument. Any point in a gridded image can be located, returned to, and compared with any other point. Without a grid, position is approximate; with one, it is exact.
-
-### What the grid commits to
-
-Imposing a grid is an epistemological commitment: the producer is asserting that location within the image is meaningful and should be comparable across the entire surface. The Yü Chi Thu's 100-*li* grid was not decorative — it allowed distances between any two cities to be read directly off the stone. The 1,024 × 2,222 cell grid of the galaxy-count map is not an aesthetic choice; it is the unit of measurement for galaxy density.
-
-The 1546 *Cosmographia* by Petrus Apianus showed European cartography approaching statistical graphicacy — latitude and longitude coordinates occupied every intersection. What was missing was the final step: placing a *measured quantity* at the intersection instead of a city name. As Tufte observes in *The Visual Display of Quantitative Information* (p. 22), no one had yet made the abstraction of substituting a measured quantity for a city name at each grid intersection — let alone the further step of replacing geographic coordinates with other dimensions entirely, such as time and money.
-
-### When to add a grid
-
-Add a coordinate grid when:
-- Position within the image is itself the variable of interest (spatial distribution of disease, pollution, galaxies)
-- The viewer needs to locate specific features reproducibly across multiple images
-- Small multiples of the same image are compared (same grid enables direct visual alignment)
-
-Omit or suppress the grid when:
-- The grid competes with the data signal (rule: grid lines should be lighter than any data mark)
-- The image is relational rather than spatial (a scatterplot uses axes, not a geographic grid)
-
-**DO:** Set grid-line weight to no more than 30% of the weight of the primary data marks.
-
-**DON'T:** Use a grid as decoration — if it doesn't enable measurement, remove it.
-
----
-
-## §4. Categorical and Quantitative Symbol Overlays
-
-Overlays encode additional variables on top of a base image without replacing the image. The overlay must be legible against the background and must carry a key that converts visual properties to measured values.
-
-### The cancer atlas: five-level statistical significance coding
-
-The Atlas of Cancer Mortality for U.S. Counties, 1950–1969, redesigned by Lawrence Fahey and Edward Tufte, applies a five-level shade system to 3,056 county polygons across six cancer types and two sexes — approximately 21,000 numbers in six maps. Each county receives one of:
-
-| Shade | Meaning |
+| Image contributes | Diagram contributes |
 |---|---|
-| Black (solid) | Highest decile, statistically significant |
-| Dark gray | Significantly high, but not highest decile |
-| Medium gray | Highest decile, but not statistically significant |
-| Light gray | Not significantly different from U.S. as a whole |
-| White | Significantly lower than U.S. as a whole |
+| Representational — shows the real thing | Contextualizing — places it on a shared scale |
+| Local, specific — this individual case | Abstracting — pulls out the general structure |
+| Realistic, unique, detailed | Focusing, explanatory — directs attention, makes a claim |
 
-This five-level key encodes two dimensions simultaneously — magnitude (decile) and confidence (statistical significance) — in a single visual channel. The maps enabled a real investigative outcome: Salem County, New Jersey's elevated bladder cancer rate was traced to occupational exposure in chemical plants; at least 330 workers at a single plant had developed bladder cancer over 50 years.
+The test for whether a picture has been *mapped* (not merely captioned): could a stranger, with no prior knowledge, extract a measured value and locate any feature in shared coordinates without leaving the image? If the scale, grid, or labels live only in a separate caption or legend that travels separately, the image is still unmapped.
 
-Tufte notes in *The Visual Display of Quantitative Information* that well-designed cancer maps draw the viewer immediately into the data's substance — geographic patterns of disease — rather than into questions about how the data was collected or displayed.
+**DO:** Decide the single number or comparison the viewer should be able to read *off the image*, then build the scale/grid/labels to deliver it.
 
-### Halley's directional vector field (1686)
+**DON'T:** Treat annotation as a finishing coat applied after the image is "done" — added late, it decorates instead of measures.
 
-Edmond Halley's 1686 world wind chart encodes continuous directional data across the globe using oriented stroke symbols. Each stroke's sharp end points toward the wind's origin. Where monsoons occur, strokes alternate direction, creating a visually denser texture that encodes not just direction but the alternating nature of monsoon winds.
+---
 
-> ". . . the sharp end of each little stroak pointing out that part of the Horizon, from whence the wind continually comes; and where there are Monsoons the rows of stroaks run alternately backwards and forwards, by which means they are thicker [denser] than elsewhere."
-> — Halley, *Philosophical Transactions*, 183 (1686), 153–168, quoted in *The Visual Display of Quantitative Information*, p. 23
+## §2. The Scale of Measurement: Put Every Image on the Universal Ruler
 
-This is a complete vector field: direction and relative intensity, encoded in a symbol system that overlays the geographic base without obscuring it.
+The first and most-skipped obligation. Without a scale of measurement, sizes and distances are guesses, and two images cannot be compared at all. Tufte's worked examples are a catalog of how to attach a ruler to an image.
 
-### Overlay design rules
+### Forms of scale reference (worked from the chapter)
 
-| Variable type | Encoding method | Key requirement |
+- **Native unit overlaid on the drawing.** Galileo recorded Jupiter's satellites with hundreds of annotated, scaled sketches — observation time noted, the satellites labeled, distances measured in *Jovian-radii*, the only relevant unit available. The annotation is what turned telescopic sketches into credible quantitative evidence of orbital motion.
+- **An explicit scale bar with a stated conversion.** The Crick–Watson DNA demonstration model is photographed with a scale reading 0 to 10 ångströms. The payoff is the conversion the scale forces into view: 1 cm = 100,000,000 ångströms (10⁸), 1 inch = 254,000,000 ångströms. The bar both quantifies the model and signals the image is explanatory, not commercial art.
+- **A comparison object of known size.** Placing Earth beside Saturn gives millions of casual viewers a sense of scale that a lone "celebratory photograph" never does. Scale is part of the news whatever the marketing department believes.
+- **A ruler drawn into the plate.** Brisson/Martinet's 1760 cockatoo carries a "scale of 6 inches" (échelle de 6 pouces) at lower right; objects of roughly known size (plant leaves) reinforce it.
+- **Rescaling instructions when the drawing is reduced.** Lilienthal's stork wing is drawn at ¼ natural size; the redrawn plate states "multiply by 9.4 to obtain real stork size," and the flapping-wing motion tracings carry their own scales (1/20 head-on, 1/50 side view).
+
+### The anti-example: the "different and unknown scale"
+
+Bloch's *Ichthyologie* (1795) draws 216 fishes — seahorses to sharks — each forced to fill an *identical* framing box. The beauty hides a defect: every fish therefore has a *different and unknown* scale, so no two can be compared. Tufte's fix is the redraw — gentle redesigns that add 0/5/10 cm measurement scales and mark cross-section locations, "mapping the images on the universal ruler."
+
+### Density is not a substitute for scale, but it is the reward
+
+Dense annotated images repay the scale apparatus. Dürer's 1525 construction packs ~48 numbers mapping 3 line-traces (one of 100 such plates in a book literally titled *a course in the art of measurement*); Mersenne's 1636 lute engraving carries 80 numbers (312 digits) over a 19-string lute and 21-string theorbo. The lesson: when the image is information-rich, the ruler is what makes that information legible rather than ornamental.
+
+| Image context | Minimum scale obligation | Common failure |
 |---|---|---|
-| Continuous magnitude | Tone gradient / color ramp | Minimum 5 labeled stops with values |
-| Discrete categories with ordering | Stepped gray scale | Each step labeled with exact breakpoints |
-| Directional / vector | Oriented symbols | Example symbol with labeled bearing |
-| Count / density | Dot density (1 dot = N units) | "1 dot = N" statement in legend |
-| Proportion | Proportional symbol size | Labeled reference symbol at ≥2 sizes |
+| Scientific micrograph / AFM | Bar with unit (nm, µm) *in* each panel; state z-range | Beauty shot, no scale (the celebratory image) |
+| Astronomical / deep-space image | Scale + comparison object; native unit | "Notoriously unscaled and dequantified" PR image |
+| Natural-history / specimen plate | Real ruler in the plate, not identical framing boxes | Bloch's "different and unknown scale" |
+| Reduced/reproduced drawing | Scale bar + explicit rescale factor | "Not to scale" — a confession, not a fix |
+| Engineering / forensic drawing | Scale of feet/metres + dated conditions | Dimensions buried in caption |
 
-**DO:** Make the overlay key self-contained — a viewer who has only the legend and one image region should be able to read a value.
+**DO:** State the conversion (1 cm = N units) so the viewer can compute any measurement directly.
 
-**DON'T:** Use more than two overlay channels on a single base image without small-multiple decomposition.
-
----
-
-## §5. Cross-Section Markers and Structural Annotation
-
-Cross-sections reveal internal structure that plan views and photographs cannot show: depth, stratigraphy, foundation geometry, internal tissue layers. A cross-section marker on an image — the A–A' line with an accompanying section drawing — is the standard form.
-
-### The Minard bridge cross-section
-
-Charles Joseph Minard's 1856 analysis of the collapse of the bridge at Bourg-St-Andeol on the Rhône provides a worked example. The image combines:
-
-- An elevation drawing of the bridge showing the structure above water
-- A cross-section below the water line showing foundation depth and riverbed stratigraphy
-- A water-level marker ("Crue du 2 Nov. 1840" — the flood level of November 2, 1840)
-- A directional arrow showing current flow
-- Labeled depth dimensions for the foundation pilings
-
-Each annotation layer answers a specific question the elevation view cannot: How deep did the foundations go? What was the riverbed composition? At what water level did the structure fail? The cross-section converts a picture of a collapsed bridge into evidence about *why* it collapsed.
-
-### Rules for structural annotation
-
-1. **Name what is labeled** — every arrow or leader line must terminate at a labeled structure with a precise name, not a generic "A" or "1."
-2. **Dimension what matters** — if depth, width, or length is the argument, state the value directly on the dimension line. Do not force the viewer to compute from scale.
-3. **Mark the section cut** — a section drawing without a section-cut line on the plan/elevation is unverifiable. The viewer cannot know where the section was taken.
-4. **Date field conditions** — in forensic or temporal contexts (collapse analysis, medical imaging), mark the date and conditions of the image as part of the image, not only the caption.
-
-**DO:** Integrate dimension values directly into the image where they are measured.
-
-**DON'T:** Relegate structural data to a caption that will be separated from the image in reproduction.
+**DON'T:** Force heterogeneous subjects into identical frames — it silently rescales each one and destroys comparison.
 
 ---
 
-## §6. Multi-Variable Integration: The Fully Mapped Picture
+## §3. The Map Metaphor: Labels Belong on Images, Grids Scale Them, Context Makes Data Credible
 
-The highest form of the mapped picture integrates multiple quantitative variables into a single display without losing any of them to visual confusion. Minard's 1869 map of Napoleon's Russian campaign is the standard example.
+Bayer's *Uranometria* (1603) is Tufte's cleanest statement of the map metaphor. The star atlas locates stars on a measured, labeled two-dimensional grid, encodes brightness by star-size (like city-size on a road map) and by Greek letter (α brightest, β next), and so yields a *dual context*: the universal sky grid plus the local neighborhood of nearby stars.
 
-### Minard's six-variable integration
+> "For showing evidence, the map metaphor suggests that labels belong on images, that external grids help to scale images, and that data are more credible when contextualized." — Tufte, *Beautiful Evidence*
 
-The map encodes six distinct variables:
+Three operational rules fall out of the metaphor:
 
-| Variable | Encoding |
-|---|---|
-| Army size | Band width (1 mm = 10,000 men) |
-| Geographic position | x–y location on map |
-| Direction of movement | Band color (tan = advance, black = retreat) |
-| Temperature during retreat | Separate scaled line below the map |
-| Date | Labels on temperature scale |
-| Auxiliary troop movements | Separate flow lines for flanking corps |
+1. **Labels go on the image**, next to what they name (see §5).
+2. **An external grid scales the image** without competing with it (keep grid weight well below the data marks).
+3. **Context confers credibility** — an isolated mark is a rumor; the same mark on a shared grid is evidence.
 
-Numerical anchors: 422,000 men crossed into Russia; 100,000 reached Moscow; 10,000 returned to Poland. The Berezina River crossing is visible as a sudden narrowing of the retreat band. Temperature reached −30° Réaumur (approximately −38°C) during the worst days.
-
-> "Described by E. J. Marey as seeming to defy the pen of the historian by its brutal eloquence, this combination of data map and time-series, drawn in 1869, portrays a sequence of devastating losses suffered in Napoleon's Russian campaign of 1812."
-> — *The Visual Display of Quantitative Information*, p. 40
-
-> "It may well be the best statistical graphic ever drawn."
-> — *The Visual Display of Quantitative Information*, p. 40
-
-### The integration budget
-
-Each additional variable added to an image competes with existing variables for visual attention. The budget is approximately:
-
-- **2 variables**: baseline (position × one encoded measure) — always viable
-- **3–4 variables**: achievable with distinct encoding channels (size + color + position)
-- **5–6 variables**: requires deliberate layering; test with naive readers before publishing
-- **7+ variables**: almost always requires decomposition into small multiples
-
-**Rule:** Add a variable only if it can be encoded in a channel not yet used, and only if its addition does not reduce the legibility of any existing channel by more than ~20% (assessed empirically, not by feel).
-
-Tufte argues in *The Visual Display of Quantitative Information* that the most information-dense mapped pictures — the cancer atlas, the galaxy count — compress millions of measurements onto a single page, and that no other statistical display format achieves comparable density. (p. 26)
+Note Bayer's honest weakness, which Tufte flags rather than hides: where real stars run out, the *myth* (Leo the lion) fills the gap — a reminder that the decorative layer must never be confused with the measured one. Galileo's telescope soon replaced the myth with real stars.
 
 ---
 
-## §7. Data Density Thresholds
+## §4. The Universal Grid: x, y, z, t
 
-A mapped picture's power scales with its data density. Images carrying too few numbers for the annotation complexity they impose are over-engineered illustration.
+The chapter's governing principle, stated at the close:
 
-| Image scale | Minimum data density to justify annotation | Reference |
+**Every image — whether for explanation or for exploration — should reside on the universal measurement grid of 3-space and time: x, y, z, t.** The grid must travel with the image through every transformation: it should accompany rescaling and zooming in and out, so a viewer never loses the absolute frame while inspecting a detail (as in the 3-image photosynthesis sequence, where every magnification still carries its scale bar and z-range).
+
+Relative-only scaling is insufficient. Peterson's bird field guide scales birds *relative to one another*, which is not universal — Tufte's remedy is to add a constant external referent (a common plant, a few clams for shorebirds) or, far better, a real measurement scale. The principle generalizes the special cases of §2 and §3: a scale bar fixes one axis, a grid fixes two, the universal grid fixes all four and binds every image in a document into one comparable space.
+
+**DO:** Keep the universal grid (or at minimum a scale + orientation) attached through every zoom, crop, and rescale.
+
+**DON'T:** Rely on within-image relative scaling ("this bird is bigger than that bird") as if it were measurement — it breaks the moment the image is compared with anything else.
+
+---
+
+## §5. Labels on the Image vs. the Dreaded Letter Code
+
+Where the label sits decides whether the viewer reads or decodes.
+
+- **Names directly on the image** tie the word to the thing. The dog group portrait labels each animal (Anna, Zerlina, Alex, Abby) in place; Bella's nine-week growth series puts the measurement labels *in the photograph where they belong* — Tufte's standard for honest scientific imaging ("Science should use Bella reporting standards"), set against astronomical images that are extensively color-processed yet "notoriously unscaled and dequantified."
+- **The dreaded letter code** (A, B, C keyed to a separate list) should be avoided whenever possible. It forces the eye to ping-pong between image and legend and loses the tie between sign and referent.
+- **The diagram-as-caption / profile outline** is the legitimate workaround when the image is too dense or too precious to letter directly. A traced outline placed *beside* the image (Marey's 1902 reunion: hat-and-head silhouettes carrying each scientist's name and affiliation; the dogs' profile-outline key) can hold richer captions than fit on the picture, and it can be drawn at a reduced scale to act as a compact legend. Loran's Cézanne mappings work the same way — placed *adjacent to* the painting, not overlaid on it.
+
+| Labeling method | Use when | Cost |
 |---|---|---|
-| Single map (full page) | ≥500 distinct values | Cancer atlas: ~3,500 per map |
-| Small-multiple grid (12 panels) | ≥200 values per panel | LA air pollution: 2,400 spatial locations × 12 panels = 28,800 readings |
-| Galaxy-count map | 2,275,328 cells, 10 tone levels | ~22.7M measurable states |
-| Time-series with spatial context | ≥1,000 data points | NY weather: 1,888 numbers |
+| Names on the image | Few features, room to letter in place | None — preferred default |
+| Profile outline / diagram beside image | Image too dense or precious to mark; captions need detail | Eye travels once to a parallel diagram, not a code list |
+| Letter/number code → external legend | Truly unavoidable (extreme density) | Constant decode tax; ties broken — last resort |
 
-A mapped picture that carries fewer than 50 numbers should be examined for whether a table or a plain chart would serve better. Annotation overhead — scale bars, legends, grid, labels — is fixed cost; it is only justified when the data density makes it pay off.
+**DO:** Put the name on the thing; if the image is too dense, trace a parallel outline as the legend.
 
----
-
-## §8. Failure Modes
-
-### AREA-WEIGHT DISTORTION (choropleth maps)
-**Name:** The patch-map problem ("blot maps").
-**What happens:** Large-area counties with sparse populations dominate the visual impression. A sparsely populated western county with high cancer rates appears more important than a densely populated northeastern county with equally high rates.
-**Tufte:** "The maps wrongly equate the visual importance of each county with its geographic area rather than with the number of people living in the county."
-**Fix:** Use dot-density, cartogram (area proportional to population), or explicit population-weighted analysis.
-
-### SOURCE CONTAMINATION
-**Name:** Diagnostic-fashion confounding.
-**What happens:** The measurement instrument (death certificates, diagnostic codes, observational protocol) varies systematically across the geography being mapped.
-**Tufte:** Regional clustering in the cancer atlas may "reflect varying diagnostic customs and fads along with the actual differences in cancer rates between areas."
-**Fix:** State the data source and its known limitations directly in the image caption, not in an appendix.
-
-### SCALE ABSENCE
-**Name:** The unanchored picture.
-**What happens:** No scale reference exists; distances and sizes are impressionistic. Viewers cannot extract a number.
-**Fix:** Add at minimum one calibrated reference (bar, grid division, labeled symbol). "Not to scale" is not a fix — it is a confession.
-
-### ANNOTATION OVERDOMINANCE
-**Name:** Legend eating the map.
-**What happens:** The annotation apparatus (labels, arrows, legend, scale bar) occupies more visual space than the data, or the grid weight exceeds the data-mark weight.
-**Fix:** Reduce all non-data ink until it is clearly subordinate. Grid lines at ≤30% of data-mark weight. Legend outside the data field unless space is critical.
-
-### PRECISION MISMATCH
-**Name:** False precision.
-**What happens:** The scale bar or key implies a resolution the underlying data does not support. A 1-meter scale bar on satellite imagery with 30-meter resolution.
-**Fix:** Match scale resolution to actual data precision. State the data's native resolution in the caption.
-
-### VARIABLE OVERLOAD
-**Name:** The seven-variable swamp.
-**What happens:** Too many overlaid variables compete for the same visual channels; all become unreadable.
-**Fix:** Apply the integration budget (§6). Decompose into small multiples — one variable separated per panel, sharing the same base image format.
-
-### ILLUSTRATION MASQUERADING AS EVIDENCE
-**Name:** The decorative diagram.
-**What happens:** The image carries no quantitative annotation but is presented in an evidential context (scientific paper, report) where readers assume measurability.
-**Fix:** Apply the measurability test (§1). If the image fails all three questions, either annotate it or reclassify it explicitly as illustration.
+**DON'T:** Default to A/B/C codes — Lichtenstein could parody Loran's earnest "DIAGRAM/A-B-C" precisely because the code-and-legend habit is so mechanical.
 
 ---
 
-## §9. Evaluation Checklist: Is This Image Doing Explanatory Work?
+## §6. Explanatory vs. Exploratory Mapping
 
-Run this before publishing any annotated image.
+Whether to annotate aggressively depends on the job.
 
-**Scale and measurement**
-- [ ] At least one calibrated scale reference is embedded in the image (not only in caption)
-- [ ] Scale resolution matches actual data precision
-- [ ] A viewer can extract a specific number without prior knowledge
+- **Explanatory presentation** (you already know what matters and are showing it): point out the important comparisons with annotations, arrows, labels, highlighting. Peterson's field guide uses pointer-line "keys" to call out the distinctive marks that separate similar birds — exactly right for teaching identification.
+- **Exploratory analysis** (you are still discovering what is there): *premature* mapping diverts the viewer, forecloses alternative readings, and masks subtle detail. The analyst should look with fresh eyes and deliberately ignore the directive hints. Premature closure and "viewing-to-please" turn open analysis into advocacy and marketing.
 
-**Annotation completeness**
-- [ ] Every symbol in the image appears in a keyed legend with labeled values
-- [ ] All leader lines and arrows terminate at named, labeled features
-- [ ] Cross-section cuts are marked on the corresponding plan/elevation view
+**The both-views method (underused):** show the unmapped image *and* the mapped image — a clean look first, then what the mapping brought to it. This lets the viewer audit the mapping instead of swallowing it. Tufte says this should be done much more frequently.
 
-**Data density**
-- [ ] The annotation overhead (legend, scale, labels) is justified by data density (≥50 numbers minimum; aim for hundreds)
-- [ ] If fewer than 50 numbers: consider whether a table is the right format
+**DO:** In exploration, present the clean image first; add the mapping only after the viewer (or you) has looked freshly.
 
-**Integrity**
-- [ ] Data source and its known limitations are stated
-- [ ] Area-weighting or sampling distortions are acknowledged
-- [ ] No scale bar implies precision beyond what the data supports
-
-**Multi-variable integration**
-- [ ] Each encoded variable uses a distinct visual channel
-- [ ] Adding any overlay did not measurably reduce legibility of prior overlays
-- [ ] If ≥5 variables: tested with at least one naive reader
-
-**Reproduction robustness**
-- [ ] Image remains legible at half its designed size
-- [ ] All annotation is legible in grayscale (color is not the sole encoding channel)
-- [ ] Legend is not separated from the image in the document layout
+**DON'T:** Pre-annotate an image you are still trying to understand — you will see only what the arrows told you to see.
 
 ---
 
-## Quick Reference: Annotation Channel Selection
+## §7. Explanatory Tightness: Credible Mapping vs. Crank Mapping
 
-| Data type | Primary channel | Secondary channel | Avoid |
-|---|---|---|---|
-| Magnitude (continuous) | Tone/value | Size | Hue alone |
-| Direction / vector | Symbol orientation | Density/texture | Color alone |
-| Category (ordered) | Stepped gray scale | Shape | Random hue assignment |
-| Count / frequency | Dot density | Symbol size | Area shading without key |
-| Temporal change | Overlaid before/after lines | Separate panels | Animated GIF in static documents |
-| Depth / stratigraphy | Cross-section drawing | Hatching convention | Perspective without section |
+The chapter's hardest and most original argument: **when a mapping makes an explanatory claim about an image, it inherits the standards of credible explanation.** A mapping can be drawn beautifully and still be worthless evidence.
+
+### The dividing line
+
+What separates Loran's Cézanne analyses and Hockney's optical-instrument hypothesis (perspective lines traced on Holbein's *Ambassadors* to argue divergent vanishing points imply a mirror lens) from crank work is **explanatory tightness**: their mappings are *specific, coherent, credible, and testable* — they try to explain a particular thing and could in principle be wrong. Mössel's 300+ geometric overlays (in a 534-page book claiming Ur-Forms beneath nearly all art) are the opposite: flexible enough to fit anything, refutable by nothing.
+
+> "...no possible empirical evidence can ever refute a Mössel, who explains everything and therefore nothing." — Tufte, *Beautiful Evidence*
+
+### Why crank mappings always "work"
+
+- **Too many degrees of freedom.** Different grids fit the same artwork; dots could plausibly sit elsewhere; even fixed dots can be connected many ways. A scheme that fits every case discriminates none. (Feller demolished the same move in statistics: a "law of logistic growth" was fitted to populations, bacteria, railroads, plant and animal size — but normal, Cauchy, and other distributions fit the same data *as well or better*, so the logistic explained nothing distinctive.)
+- **Alignment-to-please / viewing-to-please.** A registration will "lock right into place if the desired answer is already known." Tufte aligning a sculpture plate to a north marker could gain ±3° just by tilting his head; land surveyors mapping the same parcel get divergent results depending on the client's interest. **Construct the mapping independently of the result you want.**
+- **The flatland–spaceland mismatch (catastrophic).** Mössel maps a single *one-eyed flatland photograph* of a real 3-dimensional object and treats the result as a fact about the object. A photograph is not the artwork; a flatland mapping cannot capture spaceland reality. No amount of re-aligning a grid-net over one projection recovers the lost dimension.
+
+### Test before you trust a mapping
+
+| Question | Credible (Loran, Hockney) | Crank (Mössel, golden-section-everywhere) |
+|---|---|---|
+| Specific claim about a specific image? | Yes | No — universal, vague |
+| Could evidence refute it? (falsifiable) | Yes | No — fits anything |
+| Built independently of the wanted answer? | Yes | No — alignment-to-please |
+| Maps the 3-D object, not one flat photo of it? | Accounts for the projection | Maps a single flatland image, claims spaceland truth |
+| Survives connecting the marks a different way? | Yes | No — many contrary mappings fit |
+
+**DO:** Demand a mapping be specific, coherent, credible, and testable, and build it blind to the result you hope for.
+
+**DON'T:** Accept a mapping because it "fits" — a theory that fits everything has told you nothing; check it could have failed.
+
+---
+
+## §8. Mapping Motion, and Images That Map Other Images
+
+### Motion in still-land ("movie-land")
+
+Showing a moving thing in a static frame is inherently hard. The toolkit: directional arrows, floor plans, trace lines, linked images, and words. The 1762 contredanse pamphlet maps a dance as **small multiples** — 8 movements across a consistent grid, each cell combining figures, two floor-plans, trace-tracks, and music. Read *down* a column for the sequence within a movement, *across* for the sequence of movements; the steady repeated format is "a canvas upon which to paint, preserve, and reason about the changing information." Tufte flags its honest gap: the floor-tracks lack an explanatory legend. *How to Ski by the French Method* does the same with 200 motion-stopped photos, overlaying 2-color diagrams so the analytical variables (time, slope grade) read left to right. Good still-land strategies usually translate to actual motion graphics — design for both.
+
+### Images mapping images
+
+An image can map another image: a before/after history, a painting beside its forgery, similar species side by side. The photosynthesis AFM triptych maps molecular dynamics with x-y scale bars per panel and a color scale for z (depth). Tufte's own Rock/Braque/Picasso trio (each carrying a 1 cm bar) maps a fractured rock against two Cubist paintings to argue that Cubism pictures real fractured 3-D planes. The rule that makes these work is §4: even comparison images must share the universal grid, or the comparison is impressionistic.
+
+**DO:** Use a constant repeated frame (small multiples) for sequence and motion so only the data changes cell to cell.
+
+**DON'T:** Compare two images that lack a shared scale/grid — "looks bigger" is not a measurement.
+
+---
+
+## §9. Worked Example: The Vigilante (the chapter's own mapped picture)
+
+The 1823 anti-slavery plan and cross-section of the slave ship *Vigilante* (London Religious Society of Friends; folding plate engraved by J. Hawkesworth) is the chapter's central demonstration that a *moral* document gains force from engineering-diagram rigor.
+
+- **Plan, elevation, and cross-section** of the ship captured off Africa in April 1822, with a **"Scale of Feet"** along the bottom and a **"Water Line"** on the section — the full apparatus of a measured drawing.
+- Nearly identical human figures count out the numbers: **227 men and 120 women**, 347 people; the elevation's double layer shows the packing; the labels mark Captain's cabin and wine lockers against the human cargo.
+- The facticity — individuals cumulating into an overview, hidden lines, plan views, elevations, labels, a measurement scale — gives it "the straightforward quality and credible precision of an engineering diagram," and that precision is exactly what makes it more damning than any still-life or photograph. The detail signals the ship was examined carefully, which *adds to the credibility* of the claim about 12–20 million people transported.
+
+The lesson: mapping does not cool an image; the measured grid is what makes the evidence undeniable.
+
+---
+
+## §10. Failure Modes
+
+### THE DIFFERENT-AND-UNKNOWN SCALE
+**What happens:** Heterogeneous subjects are forced into identical frames (Bloch's 216 fishes in equal boxes), so each is silently rescaled and none can be compared.
+**Fix:** Put every image on the universal ruler — a real scale bar per image (the redraw), never uniform framing as a stand-in for scale.
+
+### THE DEQUANTIFIED CELEBRATORY IMAGE
+**What happens:** A scientific or journalistic image is published as a beauty shot — color-processed, dramatic, and unscaled ("the marketing department"); the most extensively manipulated images (deep-space photos) are the least quantified.
+**Fix:** Bella reporting standards — scale bar plus measurement labels embedded in the image; a comparison object of known size at minimum.
+
+### THE DREADED LETTER CODE
+**What happens:** Features are tagged A/B/C and keyed to a separate legend, breaking the tie between sign and referent and taxing the eye.
+**Fix:** Name things directly on the image; when density forbids it, use an adjacent profile-outline diagram as the legend.
+
+### THE FLATLAND–SPACELAND MISMATCH
+**What happens:** A single flat photograph of a 3-D object is mapped and the result is claimed as a truth about the object (Mössel's grids over one-eyed photos of sculptures).
+**Fix:** Map the object in 3-space — multiple viewpoints, cross-sections, x/y/z scales; never over-read one projection.
+
+### THE UNFALSIFIABLE MAPPING
+**What happens:** A scheme (Ur-Forms, golden-section-everywhere) is flexible enough to fit any image and refutable by no evidence — it explains everything and therefore nothing.
+**Fix:** Require explanatory tightness — specific, coherent, credible, testable; confirm the mapping *could* have failed and survives connecting the marks differently.
+
+### ALIGNMENT-TO-PLEASE / PREMATURE CLOSURE
+**What happens:** The mapper unconsciously tilts the registration until it confirms the wanted answer (±3° free just by moving the head); or premature annotation in exploration forecloses alternative readings.
+**Fix:** Construct the mapping independently of the desired result; in exploration show the unmapped image first; state alignment tolerance honestly.
+
+---
+
+## §11. Evaluation Checklist
+
+Run before publishing any explanatory or evidential image.
+
+**Scale and grid**
+- [ ] A measurement scale is embedded *in* the image (not only the caption), with its conversion stated
+- [ ] The scale survives reproduction/rescaling, with an explicit rescale factor if reduced
+- [ ] The image sits on a universal frame (x, y, z, t as applicable), and the grid stays attached through zoom/crop
+- [ ] Comparison images share one scale/grid, not relative-only sizing
+
+**Labels and context**
+- [ ] Names sit on the things they name; no A/B/C code unless density truly forbids in-place labels
+- [ ] If a code/legend is unavoidable, it is a parallel outline diagram, not a bare list
+- [ ] Each mark is contextualized (neighborhood + universal frame), not floating
+
+**Explanatory integrity**
+- [ ] The mapping makes a specific, falsifiable claim — name what evidence would refute it
+- [ ] It was built independently of the desired answer (no alignment-to-please)
+- [ ] It maps the real object, not a single flat photo treated as the object
+- [ ] It still holds if the marks are connected a different way
+
+**Mode and motion**
+- [ ] Exploratory images shown clean first; aggressive annotation reserved for explanation
+- [ ] Both unmapped and mapped versions offered where the mapping is contestable
+- [ ] Motion/sequence uses a constant small-multiple frame; any track/legend gap is acknowledged
+
+---
+
+## Quick Reference: Mapping Decision Table
+
+| Goal | Add to the image | Watch for |
+|---|---|---|
+| Make sizes/distances readable | Scale bar + stated conversion, or known comparison object | "Not to scale"; identical framing boxes |
+| Make position comparable | External grid lighter than data; universal x/y/z/t | Grid heavier than the data it measures |
+| Name parts | Labels on the things | Dreaded A/B/C letter code |
+| Caption a dense/precious image | Adjacent profile-outline diagram as legend | Overlay that obscures the evidence |
+| Show motion / sequence | Small multiples, constant frame, trace lines | Tracks with no explanatory legend |
+| Compare two images | Shared scale/grid across both | "Looks bigger" relative-only judgment |
+| Argue a theory about an image | Specific, testable, independently built mapping | Schemes that fit everything; flatland over 3-D |
+| Explore an unknown image | Clean image first; minimal hints | Premature mapping, viewing-to-please |

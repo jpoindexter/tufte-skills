@@ -1,149 +1,163 @@
 ---
 name: tufte-aesthetics-and-technique
-description: Apply Tufte's core aesthetic and technical principles for data graphic design — the data-ink ratio, the erasure procedure, graphic proportion, line weight, the six qualities of attractive displays, and the foundational relationship between honest design and good aesthetics.
-tags: [tufte, aesthetics, data-visualization, design-principles, data-ink, chartjunk, information-design]
+description: Apply Tufte's Chapter 9 + Epilogue principles for the visual craft of a finished data graphic — the qualities of attractive displays, friendly vs unfriendly graphics, horizontal proportion and the golden rectangle, thin-line copper-plate craft, words/numbers/drawing integration, format selection, and the thesis that beauty is a by-product of clarity and data complexity. Use when judging or refining the look and technique of a graphic, not its data integrity or chartjunk count.
+tags: [tufte, aesthetics, technique, data-visualization, proportion, line-weight, information-design]
 ---
 # Aesthetics and Technique in Data Graphic Design
 
-**Source:** The Visual Display of Quantitative Information (VDQI), 1983/2001, Chapters 4–5, 9; Beautiful Evidence (BE), 2006
+**Source:** *The Visual Display of Quantitative Information* (VDQI), 1983/2001 — Chapter 9 ("Aesthetics and Technique") and the Epilogue (pp. 177–197). One observation from *Beautiful Evidence* (BE), 2006, is tagged inline.
+
+**Scope note:** This skill is about visual *craft* — proportion, line, typography, format, and the relationship between honesty and beauty. The data-ink ratio formula and the erasure procedure live in **`tufte-data-ink-ratio`**; the three chartjunk types (vibration, grid, duck) live in **`tufte-chartjunk`**. This skill references them as inputs to aesthetics rather than re-deriving them.
 
 ## Overview
-Tufte's aesthetic theory is empirical, not decorative: good design is design that shows the data, and beautiful design is design that shows complex data clearly. "Graphical elegance is often found in simplicity of design and complexity of data." (VDQI) The five redesign principles — show data, maximize data-ink ratio, erase non-data-ink, erase redundant data-ink, revise and edit — are both a technical procedure and an aesthetic program. They converge because honesty and clarity are the same thing. The final goal: "the revelation of the complex." (VDQI, Epilogue)
+Tufte's aesthetic theory is empirical, not ornamental: beauty in a data graphic is a *by-product* of clarity plus rich content, never a layer applied on top. A graphic is attractive when it shows a complex, important dataset with simple, disciplined means. You cannot decorate your way to elegance, and you cannot make a trivial dataset beautiful. The aesthetic and the technical converge because the same act — removing noise and showing more real data — improves both at once. The final aim is the revelation of the complex: giving visual access to what is genuinely subtle and difficult.
 
-## §1. The Five Principles
+## §1. The Aesthetic Thesis — Beauty Is Derived, Not Added
 
-In order:
+> "Graphical elegance is often found in simplicity of design and complexity of data." — Tufte, *The Visual Display of Quantitative Information*
 
-1. **Above all else show the data.**
-2. **Maximize the data-ink ratio** — within reason.
-3. **Erase non-data-ink** — within reason.
-4. **Erase redundant data-ink** — within reason.
-5. **Revise and edit.**
+The thesis, restated as operating rules:
 
-**The data-ink ratio formula:**
-```
-Data-ink ratio = data-ink / total ink used to print the graphic
-             = proportion of a graphic's ink devoted to the
-               non-redundant display of data-information
-             = 1.0 - proportion of a graphic that can be erased
-               without loss of data-information
-```
+- **Elegance = simple design × complex data.** Both factors required. A simple design over thin data is empty; a busy design over rich data is noise. Elegance is the product, not either alone.
+- **Beauty is a by-product of clarity.** The cues that make a graphic clear — high data density, direct labels, thin lines, honest proportion — are the same cues that make it look good. You do not pursue beauty directly; you pursue clarity and richness, and beauty follows.
+- **Content comes first.** A graphic's worth tracks the quality, relevance, and integrity of what it shows (BE). Devices, color, and interactivity cannot rescue failed content. The first question is never "how should this look" but "what task is this display for."
+- **Subject matters.** The best graphics concern important, substantive content, not the trivial — paraphrasing Tufte: serious displays are about life, death, and the universe, not filler. Minard never names Napoleon (VDQI); withholding the expected celebrity name concentrates all attention on the dead soldiers, which is itself an aesthetic choice in service of content.
+- **Technique is in service of both.** Craft (line weight, typography, proportion) is how clarity and richness become visible. It is the last 5%, applied to a graphic that already has the right data and the right format.
 
-Target: as close to 1.0 as reasonable.
-Typical published graphic: 0.1–0.2.
+## §2. The Qualities of Attractive Displays
 
-## §2. The Six Qualities of Attractive Statistical Displays (VDQI Chapter 9)
+Tufte enumerates these in Chapter 9 as a prose list (it is not a fixed numbered canon — treat it as a checklist of seven recurring properties, not a sacred six or seven). Attractive statistical displays tend to:
 
-1. Have a properly chosen format and design
-2. Use words, numbers, and drawing together
-3. Reflect a balance, a proportion, a sense of relevant scale
-4. Display an accessible complexity of detail
-5. Often have a narrative quality — a story to tell about the data
-6. Are drawn in a professional manner, with technical details done with care
-7. Avoid content-free decoration, including chartjunk
+1. **Choose format and design well** — the right kind of display for the data and task (see §6).
+2. **Use words, numbers, and drawing together** — integrated, not segregated into separate zones (see §5).
+3. **Reflect balance, proportion, and a sense of relevant scale** — honest shape and aspect ratio (see §3).
+4. **Display an accessible complexity of detail** — rich data made legible, not data thinned for comfort.
+5. **Often carry a narrative quality** — a story the data tells, a sequence or comparison worth following.
+6. **Be drawn professionally** — technical production details (registration, line, type, spacing) done with care (see §4).
+7. **Avoid content-free decoration**, including chartjunk — no ink that fails to carry information (see `tufte-chartjunk`).
 
-"Graphical elegance is often found in simplicity of design and complexity of data." (VDQI)
+## §3. Proportion and Shape — Horizontal and Near the Golden Rectangle
 
-"Beautiful graphics do not traffic with the trivial. The best graphics are about the useful and important, about life and death, about the universe." (VDQI)
+Default a graphic toward the horizontal: greater in width than in height.
 
-## §3. The Content Principle
+**Four reasons for the horizontal preference:**
 
-"Analytical presentations ultimately stand or fall depending on the quality, relevance, and integrity of their content." (BE)
+1. **Horizon analogy** — the visual system is practiced at reading deviations from the horizontal, so trends laid along a wide axis read more accurately.
+2. **Ease of labeling** — words sit and read left-to-right on a wide field; a tall field forces vertical or cramped text.
+3. **Cause-and-effect mapping** — graphics often plot an effect (Y) against a cause or time (X); a longer horizontal axis gives the explanatory variable room to elaborate.
+4. **Tukey's counsel** (paraphrased) — such plots are, more often than not, better made wider than tall.
 
-- Design devices and gimmicks cannot salvage failed content
-- The first questions are never about color, technology, or interactivity — they are: What are the content-related tasks this display is supposed to help with?
-- "Minard never mentions Napoleon" (VDQI) — full attention given to the dead soldiers rather than the celebrity; the absence of the expected name concentrates meaning
+**The golden rectangle.** When the data themselves do not dictate a shape, Tufte points proportion toward the neighborhood of the golden rectangle:
 
-## §4. Graphic Proportion and Shape
-
-"Graphics should tend toward the horizontal, greater in length than height." (VDQI)
-
-**Four reasons for horizontal preference:**
-1. **Horizon analogy:** the eye is naturally practiced at detecting deviations from the horizontal
-2. **Ease of labeling:** easier to write and read words left-to-right on a horizontal field
-3. **Causal emphasis:** graphics often plot effect (Y) vs. cause (X); a longer horizontal elaborates the causal variable
-4. **Tukey's counsel:** "Such plots are rather more often better made wider than tall"
-
-**Evidence from Playfair:** of 89 graphics in six books, 92% are wider than tall. Playfair favored proportions between 1.4 and 1.8 in about two-thirds of his published graphics.
-
-**Practical prescription:**
-1. If the nature of the data suggests a shape, follow that suggestion.
-2. Otherwise: default to approximately **50% wider than tall** (roughly 2:3 height-to-width ratio).
-
-**Aspect ratio and slopes:** Calibrate aspect ratio so that typical slopes or trend lines read at approximately 45°. When trend direction is the data, the aspect ratio is part of the encoding.
-
-## §5. Line Weight
-
-"Lines in data graphics should be thin." (VDQI)
-
-18th–19th century copper-plate graphics had "characteristic hair-thin lines." Twentieth-century mechanical drafting pens thickened linework — a regression.
-
-**Weight hierarchy:**
-
-| Element | Weight |
+| Anchor | Ratio (width : height) |
 |---|---|
-| Data lines | Heaviest — they are the information |
-| Frame and axis lines | Medium |
-| Reference/grid lines | Lightest — structure, not information |
-| Label text | Should not compete visually with data lines |
+| Golden rectangle (φ) | ≈ 1.618 : 1 |
+| Tufte's working default | ≈ 1.5 : 1 (about 50% wider than tall; height ≈ 2/3 of width) |
+| Playfair's common range | 1.4 – 1.8 : 1 (brackets φ) |
 
-Tufte argues that line weight should map directly to information priority: heavier lines carry more meaning, so data lines must outweigh structural elements like connecting verticals. (VDQI)
+**Evidence from Playfair:** across 89 graphics in six books, ~92% are wider than tall; roughly two-thirds fall in the 1.4–1.8 proportion band — clustering right around the golden rectangle.
 
-## §6. The Erasure Procedure
+**Prescription:**
+1. If the data suggest a shape (e.g., a map's true geography, a matrix's natural squareness), follow the data.
+2. Otherwise default to ~1.5:1 horizontal, drifting toward φ (1.618:1). Never default to portrait or to whatever the software hands you.
 
-1. Take the standard version of the graphic.
-2. Ask: what ink can be erased without losing any data information?
-3. Erase it.
-4. Ask: what ink represents data already shown elsewhere?
-5. Erase it (or make it substantially lighter).
-6. Ask: does the graphic now look wrong, incomplete, or unclear?
-7. If yes, restore the minimum ink necessary to restore clarity.
-8. Revise and edit.
+> **Adjacent principle — not Tufte (Cleveland, 1985).** Banking to 45°: choose the aspect ratio so the *median absolute slope* of trend segments reads near 45°, maximizing slope discrimination. It post-dates VDQI and is Cleveland's, not Tufte's — useful, but do not attribute it to VDQI. When slope *is* the message, treat aspect ratio as part of the encoding.
 
-Result: data-ink ratios regularly increase from 0.1–0.2 to nearly 1.0. The graphic shows the same information in less space with less visual noise.
+## §4. Line Weight and the Copper-Plate Tradition
 
-## §7. Chartjunk — Three Types
+Lines in data graphics should be thin. The hair-thin lines of 18th–19th century copper-plate engraving are the craft benchmark; 20th-century mechanical drafting pens (and many default rendering libraries) thickened linework into a regression.
 
-Tufte argues that chartjunk fails on its own terms: decorative elements don't make graphics more compelling. What makes a graphic work is its content, clearly presented — and no amount of ornamental hatching or false perspective can substitute for that. (VDQI)
+**Weight hierarchy — line weight maps to information priority:**
 
-**Type 1: Moiré vibration** — cross-hatching patterns that vibrate optically. "The most common form of graphical clutter." (VDQI) Rule: avoid cross-hatching; use gray shading instead.
+| Element | Weight | Rationale |
+|---|---|---|
+| Data lines / marks | Heaviest | They *are* the information |
+| Frame, axis lines | Medium / thin | Orientation, not data |
+| Reference / grid lines | Lightest (pale gray) or erased | Scaffolding used during construction |
+| Connecting / structural verticals | Thinnest | Pure plumbing — must never outweigh data |
+| Label type | Quiet | Present but not competing with data marks |
 
-**Type 2: The grid** — heavy grid lines that dominate the data. "Grids are mostly for the initial setting up of a graphic; once used they can be erased." (VDQI) If grid lines are present at all, they must be "muted and pale."
+Rule of thumb: if a non-data line is as dark or heavy as a data line, the graphic has miscalibrated its priorities. Thin everything that is not data; let the data carry the visual weight.
 
-**Type 3: The duck** — graphic form distorted to symbolically represent data. "It is all right to decorate construction but never construct decoration." (VDQI, quoting Pugin via Venturi) When the graphic form becomes an illustration (a dollar sign for financial data, a human figure for population data, a 3D barrel for oil prices), information is lost to imagery.
+## §5. Friendly vs Unfriendly Data Graphics
 
-## §8. The Sentence vs. Table vs. Graphic Decision
+Chapter 9's concrete craft checklist. "Friendly" graphics integrate words, numbers, and drawing and respect the reader; "unfriendly" ones force decoding labor. Aim every column at the left side:
 
-| Format | Best when |
+| Friendly (do) | Unfriendly (avoid) |
 |---|---|
-| Sentence | Fewer than 4 numbers; comparison not important |
-| Text-table | Numbers need vertical alignment for comparison |
-| Table | Exact values required; data set is small to medium |
-| Graphic | Data is complex, multi-variable, or narrative; pattern matters more than exact values |
-| Pie chart | Never — "a table is nearly always better than a dumb pie chart" (VDQI) |
+| Words spelled out; mysterious abbreviations avoided | Abbreviations everywhere, forcing the reader to decode |
+| Words run left-to-right, the normal reading direction | Words run vertically (esp. up the Y-axis) or in several directions |
+| Small explanatory messages sit near the data they explain | Graphic is cryptic; reader hunts through scattered text |
+| Labels placed directly on the graphic — no legend needed | Obscure codings force back-and-forth to a separate legend |
+| Elaborate shadings / cross-hatching avoided | Dense encoded shadings; repellent, chartjunk-filled |
+| Colors chosen so color-deficient viewers can read it (blue is broadly safe) | Red/green carry essential contrasts — fails color-blind readers |
+| Type upper-and-lower case, with serifs; clear, precise, modest | Type all-caps, sans serif, clotted and overbearing |
+| Invites the viewer, provokes curiosity | Repels the viewer |
 
-"The only worse design than a dumb pie chart is several of them, for then the viewer is asked to compare quantities located in spatial disarray both within and between pies." (VDQI)
+The unifying move is **direct labeling**: put the word on the line, not in a key. A legend is a deferred lookup; an on-graphic label is immediate. Eliminating the legend is one of the highest-leverage friendliness gains.
 
-"One supertable is far better than a hundred little bar charts." (VDQI)
+## §6. Format Selection — Sentence, Table, Graphic
 
-## §9. The Final Goal
+Match the format to the data's size and the reader's task before refining any visuals.
 
-In *Visual Display*, Tufte frames the designer's goal as making the genuinely difficult legible — not adding complexity to simple things, but opening up access to what is inherently intricate. The task is giving visual access to the subtle and the difficult: the revelation of the complex. (VDQI, Epilogue)
+| Format | Use when |
+|---|---|
+| Sentence / prose | 2–3 numbers; no real comparison structure; numbers belong in the flow of text |
+| Text-table (aligned numbers in running text) | A handful of numbers that benefit from vertical alignment for comparison |
+| Table | Small-to-medium dataset; exact values needed; local, look-up comparisons |
+| Supertable | Many related series at once — one dense, well-ordered table beats a wall of little charts |
+| Graphic | Large, complex, multivariate, or narrative data; *pattern* matters more than exact values |
+| Pie chart | Avoid; a table almost always beats it, and never use several |
 
-"The principles should not be applied rigidly or in a peevish spirit; they are not logically or mathematically certain; and it is better to violate any principle than to place graceless or inelegant marks on paper." (VDQI, Epilogue)
+> "A table is nearly always better than a dumb pie chart." — Tufte, *The Visual Display of Quantitative Information*
+
+- **Supertable over chart-litter:** when you are tempted to scatter dozens of tiny bar charts, a single dense, sorted supertable usually communicates the comparisons better.
+- **Pie proliferation is the worst case:** several pies force the eye to compare quantities scattered both within and between circles — spatial disarray. If you must compare proportions across categories, use a table or a small-multiple of bars.
+
+## §7. Technique as Revision
+
+Aesthetic quality is reached by editing, the same way good prose is.
+
+1. Start from the standard/first-draft graphic.
+2. Apply the data-ink discipline — erase non-data ink and redundant data ink (full procedure in **`tufte-data-ink-ratio`**). Mute or delete grids; this is where most clutter dies.
+3. Set proportion (§3) and line weight (§4).
+4. Replace legends and abbreviations with direct labels and spelled-out words (§5).
+5. Check format is right at all (§6) — a wrong format cannot be polished into a right one.
+6. Revise and edit again. First-draft graphics ship as rarely as first-draft paragraphs.
+
+The payoff is simultaneous: the graphic gets clearer *and* more attractive from the same edits, because in Tufte's frame they are the same property viewed twice.
+
+## §8. The Epilogue — Revelation of the Complex, Applied with Judgment
+
+The designer's goal is not to complicate the simple but to make the genuinely difficult legible — to give visual access to the subtle and intricate. That is the *revelation of the complex*.
+
+But the principles are heuristics, not theorems. They are not logically or mathematically certain, and applying them rigidly or in a fault-finding spirit misses the point:
+
+> "It is better to violate any principle than to place graceless or inelegant marks on paper." — Tufte, *The Visual Display of Quantitative Information*
+
+Read this as license to use judgment, not as license to ornament. When a rule (maximize data-ink, go horizontal, thin the lines) would make a specific graphic worse or uglier, break the rule for that graphic — and only that graphic. The standard is grace and legibility, not rule-compliance.
+
+## §9. Named Failure Modes
+
+- **The portrait default** — accepting the software's square or tall aspect ratio. Trends get compressed, slopes become unreadable, and horizontal labeling fights the frame. *Fix:* set ~1.5:1 horizontal toward φ unless the data demand otherwise (§3).
+- **Legend dependency** — encoding categories with abstract shadings or color keys so the reader ping-pongs between plot and legend. *Fix:* direct on-graphic labels; spell words out (§5).
+- **Decoration-as-rescue** — bolting ornament, 3D, or texture onto a thin dataset to make it look substantial. Beauty cannot be added; thin data stays thin. *Fix:* add real data or change the format, not the ornament (§1, §6).
+- **Uniform line weight** — drawing data lines, frames, gridlines, and connectors at the same thickness, so structure competes with information. *Fix:* impose the weight hierarchy; data heaviest, scaffolding palest (§4).
+- **Pie proliferation** — several pie charts placed for comparison, scattering quantities across circles. *Fix:* one table or a small-multiple of bars (§6).
+- **Polish-before-format** — refining type and color on a graphic that chose the wrong format entirely. *Fix:* verify format and data density first; craft is the last step, not the first (§7).
 
 ## §10. Do / Don't Pairs
 
 | Do | Don't |
 |---|---|
-| Show the data — always, first, above everything | Decorate to make thin data look more interesting |
-| Erase any ink removable without information loss | Keep decorative elements for visual interest |
-| Use thin lines; weight data lines heaviest | Use uniform heavy linework throughout |
-| Default to horizontal graphics ~50% wider than tall | Default to square or portrait aspect ratio |
-| Calibrate aspect ratio so typical slopes read ~45° | Accept default software aspect ratio |
-| Use gray shading to differentiate bars or areas | Use cross-hatching (moiré vibration) |
-| Use pale gray or no grid at all | Use dark heavy grid lines |
-| Use tables for exact values and small data | Use pie charts for proportion data |
-| Make every mark justify its existence as data-ink | Add marks to fill space or complete a template |
-| Revise and edit graphics as rigorously as text | Publish first-draft graphics |
-| Use small multiples for multivariate comparison | Force all variables into one complex graphic |
+| Earn beauty through clarity + rich data | Add decoration to make thin data look interesting |
+| Let format follow data size and task | Polish a graphic that is in the wrong format |
+| Default to ~1.5:1 horizontal, toward the golden rectangle | Accept portrait/square or the software default aspect |
+| Treat aspect ratio as encoding when slope is the message | Ignore that shape changes how trends read |
+| Weight data lines heaviest; pale or erase scaffolding | Use one uniform heavy line weight throughout |
+| Label directly on the graphic; spell words out | Force the reader into a legend or abbreviation key |
+| Run words left-to-right; upper-and-lower case, serif | Run type vertically or set it all-caps and clotted |
+| Choose colors color-deficient readers can resolve | Carry essential contrasts on red vs green |
+| Use a table for exact values; a supertable for many series | Use a pie chart — and never several pies |
+| Revise and edit graphics as hard as prose | Ship first-draft graphics |
+| Break any rule when it would leave a graceless mark | Apply the principles rigidly or in a peevish spirit |
