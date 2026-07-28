@@ -4,9 +4,23 @@
 
 When a skill is installed, the agent loads its full content at the start of a relevant design task and works from the actual principle, not a vague memory of it.
 
+Every claim in every skill has been read back against the printed page. The library was built in four passes: extract, re-extract, adversarially verify each skill against its source book, then test the router itself against realistic tasks. That process removed roughly a hundred factual and citation errors — including an inverted framing, a misattributed quotation, and a chapter-boundary error that had propagated across three files — and the pack carries no run of two consecutive sentences from any source.
+
 ## The router — `/tufte`
 
-`skills/tufte/` is the pack's front door. Invoke it by name (`/tufte` in Claude Code, `$tufte` in Codex, or just "tufte" in any agent) with a task, and it routes to the smallest set of the 38 skills via a signal→skill table, then runs a 12-point Master Audit before any display ships. It loads siblings by file path (`../<slug>/SKILL.md`), so it works in every runtime — no Claude-specific tooling required. `skills/tufte/CANON.md` is the single-file fallback: the whole pack condensed into one document for runtimes where loading siblings is impractical.
+**Don't pick a skill. Describe the task and let the router pick.**
+
+`skills/tufte/` is the pack's only front door. Invoke it by name (`/tufte` in Claude Code, `$tufte` in Codex, or just "tufte" in any agent) and hand it the work — "audit this dashboard", "our funnel chart for the board deck", "this 200-row table reads like a wall". The router matches the task against a 49-row signal→skill table, decides which 1–4 skills apply, loads them, and applies them. It is a dispatcher, not a document: it never returns a catalogue of the pack.
+
+Three things make that decision reliable:
+
+- **A precedence block** for the collisions that actually happen — dataset-vs-presentation-vs-causal-claim audits, meeting-format vs deck-format questions, photo annotation vs chart annotation. When several rows fire, it takes the narrowest and at most one broader.
+- **A 12-point Master Audit** to run before any display ships, each point naming the skill to load on a failure.
+- **Triggers written in your vocabulary, not Tufte's** — "dashboard", "heatmap", "mobile", "accessibility", "PRD", "vendor demo", "changelog". The routing table was scored against 25 realistic product-design tasks and rebuilt where it missed.
+
+It loads siblings by file path (`../<slug>/SKILL.md`), so it works in every runtime — no Claude-specific tooling required. `skills/tufte/CANON.md` is the single-file fallback: the whole pack condensed into one document, one section per skill, for runtimes where loading siblings is impractical.
+
+Invoking a skill directly still works (`/tufte-sparklines`), and agents with auto-discovery will load one when a task matches its description — but the router is the intended entry point.
 
 ---
 
@@ -119,16 +133,21 @@ npx tufte-skills
 
 ---
 
-## Using a skill
+## Using the pack
 
-Route through the pack (recommended):
+Describe the work; the router chooses the skills:
 
 ```
-/tufte audit this dashboard          # Claude Code
-$tufte audit this dashboard          # Codex CLI
+/tufte audit this dashboard                      # Claude Code
+$tufte our funnel chart for the board deck       # Codex CLI
+/tufte this 200-row table reads like a wall
+/tufte is this A/B readout actually causal?
+/tufte the deck for Thursday's design review
 ```
 
-Or invoke any skill directly by name — `/tufte-data-ink-ratio`, `/tufte-graphical-integrity`, `/tufte-small-multiples` — or reference it in context: "Apply tufte-sparklines to this dashboard design," or "audit this chart with tufte-chartjunk." Agents with skill auto-discovery also load the relevant skill when a design task matches its description.
+Each of those hits a different row and loads a different set — sparklines + tables + data-density for the dashboard; graphical-integrity for the funnel's 1-D-drawn-as-2-D taper; micro-macro + tables for the long table; causal-reasoning for the readout; meetings-and-documents for the review. You don't have to know that mapping, which is the point.
+
+Direct invocation still works when you already know what you want — `/tufte-data-ink-ratio`, `/tufte-graphical-integrity`, `/tufte-small-multiples` — as does referencing one in context ("audit this chart with tufte-chartjunk"). Agents with skill auto-discovery will also load a skill whose description matches the task.
 
 In agents without native skill support, point the agent at the installed files: "read `~/.agents/skills/tufte/SKILL.md` and follow it" — the router's sibling references are plain file paths, so routing works from a file-read alone.
 
@@ -153,7 +172,7 @@ Each skill follows this structure:
 ```
 ---
 name: tufte-<slug>
-description: <one-sentence description of what it covers and when to use it>
+description: "Use when <trigger conditions and symptoms — never a summary of contents>"
 tags: [tufte, data-visualization, ...]
 ---
 # <Principle Title>
