@@ -1,6 +1,6 @@
 ---
 name: tufte-cognitive-style
-description: Tufte's analysis of how PowerPoint's bullet-and-slide format degrades analytical reasoning — the named deficiencies, the bullet list's three-relationship limit, density and pairwise-comparison thresholds, the Columbia case study, and the written-report/4-pager remedy — for use when designing, reviewing, or replacing any slide deck or analytical presentation.
+description: "Use when building, reviewing, or replacing a slide deck, briefing, or analytical presentation; when deciding between slides and a written report or handout; when a deck's density, bullet structure, or headline framing is in question; or when diagnosing how a presentation format degraded the reasoning it was supposed to carry."
 tags: [tufte, cognitive-style, powerpoint, analytical-communication, evidence, presentations, data-visualization]
 ---
 # The Cognitive Style of PowerPoint
@@ -57,7 +57,10 @@ Bullet lists can communicate only three logical relationships, and only one at a
 
 **What a bullet list structurally cannot express:** causality, conditionality ("if X then Y"), exception ("X holds except when Y"), mechanism ("X causes Y via Z"), quantified comparison, or any two-dimensional relationship. The HBR study found bullets leave "critical assumptions about how the business works unstated" and displace narrative, the actual tool of causal thinking.
 
-Tufte's own escalation rule (p. 171): the more an analysis becomes causal, multivariate, comparative, evidence-based, and resolution-intense, the more damaging the bullet list becomes. The deeper the hierarchy, the greater the loss of explanatory resolution — the container dominates the thing contained.
+Two distinct claims, on two pages — keep them apart:
+
+- **p. 170 — the container dominates the thing contained.** The deeper the bullet hierarchy, the more the *format* asserts itself over the content, until the reader is parsing indent levels rather than an argument.
+- **p. 171 — the escalation rule.** The more an analysis becomes causal, multivariate, comparative, evidence-based, and resolution-intense, the more damaging the bullet list becomes. The harm is not constant; it scales with how much reasoning the material actually contains.
 
 ### The sentence is the unit of analysis
 The sentence (subjects/predicates, nouns/verbs, agents/effects) is the minimum structure that can carry: agency (who acts), direction (acts on what), conditionality (when/under what limits), causality (why the effect follows), and quantified comparison (how much vs. what).
@@ -96,7 +99,9 @@ Density is measured as characters per square inch on a page-image (p. 180).
 
 **Words per text-only slide (p. 169):** Columbia/Boeing median 97; internet PP reports median 40; PP textbooks median 15. A typical 40-word slide is ~8 seconds of silent reading; a 15-word textbook slide is ~3–4 seconds. The PP design style spends only ~40%–60% of slide space on unique content; the rest goes to Phluff, bullets, frames, and branding.
 
-**The reading/listening asymmetry:** people read 300–1,000 printed words/minute; a talk runs 100–160 spoken words/minute — readers move ~3× faster than presenters can talk. Thin slides waste that reader capacity and refill the gap with repetition and decoration.
+**The reading/listening asymmetry:** people read 300–1,000 printed words/minute; a talk runs 100–160 spoken words/minute (raw rates, p. 169). Tufte states the ratio explicitly at **p. 184**: people can read about **3× faster** than presenters can talk. Thin slides waste that reader capacity and refill the gap with repetition and decoration.
+
+**Cross-book note (*Envisioning Information*, p. 31).** The asymmetry has a structural cause, not just a speed one: **speech is linear, non-reversible, and one-dimensional**, while a visual display is wideband and under the *perceiver's* control — the reader chooses the order, the re-reads, and the comparisons. A slide deck takes a wideband medium and forces it back into speech's single serial channel, which is why the remedy in §12 is a document rather than better slides. *EI* p. 89 adds the resolution half of the argument: screens run at roughly **1/10 to 1/1000** the information density of paper.
 
 > "The PP slide format has the worst signal/noise ratio of any known method of communication on paper or computer screen." — Tufte, *Beautiful Evidence*
 
@@ -123,7 +128,7 @@ Median number of entries in the data matrices behind statistical graphics, by pu
 PP graphics are the thinnest of all except the propaganda organ of a totalitarian state. Tufte's verdict: doing a bit better than *Pravda* is not good enough. (The 28 PP books' 217 model graphics average ~12 numbers each.)
 
 ### Debunking the "7 bullets" rule (p. 160)
-Interface designers and PP style guides cite George Miller's 1956 paper "The Magical Number Seven, Plus or Minus Two" to claim only 7 items belong on a slide — a conclusion reachable only by not reading the paper. Miller's paper concerns short-term recall of *unrelated, meaningless* items and states no rule for information per slide. When Miller himself gave a talk (Williams College, 2000) on the optimal number of bullets per slide and the optimal number of slides, his answer was **zero in both cases**. The actionable point: place evidence *in context* so it extends the reach of memory, rather than capping content to a recall limit.
+Interface designers and PP style guides cite George Miller's 1956 paper "The Magical Number Seven, Plus or Minus Two" to claim only 7 items belong on a slide — a conclusion reachable only by not reading the paper. Miller's paper concerns short-term recall of *unrelated, meaningless* items and states no rule for information per slide. Tufte adds the refutation by demonstration: at Williams College in September 2000 he *watched* Miller give a presentation that used the optimal number of bullet points and the optimal number of slides — **zero in both cases**. Miller did not argue the point or give a talk about it; his own practice simply ignored the rule his paper is cited to support. The actionable point: place evidence *in context* so it extends the reach of memory, rather than capping content to a recall limit.
 
 ### Correlation vs. causation (p. 159)
 A statistics-course slide reduced the idea to "Correlation is not causation," a slogan stripped of its real content. The shortest *true* statement, Tufte notes, is closer to: empirically observed covariation is a necessary but not sufficient condition for causality. True statements are often too long for a slide — the lesson is not to abbreviate the truth to fit the format, but to choose a better tool.
@@ -164,6 +169,16 @@ For tables, the analytical payoff is comparisons, and comparisons grow with the 
 
 **Diagnostic:** Is this structure determined by the logic of the evidence, or by the org chart of the people who made it?
 
+### PowerPoint in schools (p. 161)
+
+Tufte singles out the spread of PP into schools as the most disturbing application, because it trains the cognitive style before students have a writing practice to protect.
+
+- The exercise he measures: **5 to 20 words plus a piece of clip art per slide, across 3 to 6 slides** — perhaps **80 words** total, about **20 seconds** of silent reading, representing a week of a student's work.
+- What is being taught is not explanation but decoration: the format's real subjects are the client pitch and the infomercial.
+- His alternative is concrete and cheap: have students write an **illustrated essay** that explains something. Sentences force agency and causality; the illustration earns its place by carrying evidence.
+
+**Where this applies beyond schools:** any onboarding, training, or internal-education material. If a week of someone's work reduces to 80 words and a stock image, the format has consumed the assignment. Ask what the artifact would look like as two pages of prose with two real figures — and whether anyone could tell the difference in what was learned.
+
 ## §10. The Columbia Case Study (corrected)
 
 **This is Columbia (2003), not Challenger (1986).** Feynman's bullet-style observations came from the 1986 Challenger investigation and are cited only as supporting evidence; the analyzed slide concerns Columbia, and the critical decision was made **while Columbia was already in orbit and damaged** — not before launch (pp. 162–166).
@@ -181,11 +196,90 @@ For tables, the analytical payoff is comparisons, and comparisons grow with the 
 | Buried lede | the "flight condition is significantly outside test database" warning is a 3rd-level bullet; the actual magnitude — debris volume 1920 vs. 3 cu in, i.e. **640× beyond the tested range** (1920 ÷ 3 = 640) — is the *concluding 4th-level bullet* |
 | Reassuring-headline inversion | the title implies safety ("Conservatism"); the honest headline would report the test data's irrelevance |
 | Scope substitution | the analysis is scoped to *tile* penetration, while the foam in fact struck the wing-leading-edge reinforced carbon-carbon (RCC) that actually failed |
-| Foreshortened density | ~630 characters carry a life-and-death analysis; vague pronoun "it," inconsistent units (3cu. In / 1920cu in / 3 cu in), typographic orphans dangling on 4 lines |
+| Foreshortened density | The three Boeing reports average **~630 characters per slide** (deck average, from the density table on p. 180 — not a measurement of this one slide); vague pronoun "it," inconsistent units (3cu. In / 1920cu in / 3 cu in), typographic orphans dangling on 4 lines |
 
 **What the boards concluded:**
 - **CAIB (Report vol. 1, p. 201):** the choice of headings, the arrangement of information, and the size of bullets on the key chart served to highlight what management already believed; uncertainties that signaled danger dropped out of the information chain as the briefing was condensed up the hierarchy — the PP cognitive style interacting with bureaucratic filtering (Conway's Law again).
 - **Return to Flight Task Group (2005, after reviewing hundreds of NASA PP decks):** engineering decisions and their rationale were often recorded *only* in PowerPoint and email rather than in reports; such presentations "should never be allowed to replace, or even supplement, formal documentation." Both boards concluded PowerPoint is inappropriate for engineering work and that the technical report is superior.
+
+## §10b. The Gettysburg PowerPoint Presentation — Parody as Diagnostic (pp. 172–173)
+
+Peter Norvig's parody renders Lincoln's Gettysburg Address as a PowerPoint deck. Tufte reproduces it not as a joke but as **evidence**, and the argument he builds on it is the fastest way to make the "format is not neutral" claim land.
+
+**The deck's structure:** a title slide, then "Organizational Overview," "Agenda," "Review of Key Objectives & Critical Success Factors," a slide headed "Not on Agenda!", and "Summary."
+
+**The standout gag:** a bar chart plotting "New Nations" against an x-axis of **−87 years vs. Now** — "four score and seven years ago" rendered as a two-bar chart. The most compressed and resonant clause in American public prose becomes a quantity with no comparison worth making.
+
+**The provenance twist:** several slides were generated by Microsoft's **AutoContent Wizard**, which Ian Parker (*The New Yorker*, 28 May 2001) described as a rare instance of a product named in outright mockery of its own customers.
+
+**Tufte's actual argument, and why it is not merely funny:**
+
+| Claim | How the parody establishes it |
+|---|---|
+| The PP cognitive style has a distinctive, recognizable signature | You can identify a deck as PP-shaped from structure alone, without reading a word of content |
+| The style is so strong it overrides content quality | It degrades the best-known short speech in English to boilerplate |
+| Template-driven real decks are **indistinguishable from deliberate parody** | The parody uses the software's own automated content generator |
+
+**The diagnostic that follows:** *parody is the test.* Take any deck you are reviewing and ask whether a satirist trying to mock your organization would have produced something meaningfully different. If not — if the agenda slide, the objectives slide, and the summary slide would appear in both — then the format, not the author, is writing the document. A style that cannot be distinguished from its own parody has no content-bearing capacity left.
+
+---
+
+## §10c. What Causes a Bad Presentation — the Rebuttal Section (pp. 182–183)
+
+This is the section to reach for when someone answers the critique with **"don't blame the tool, blame the user."** Tufte asks the question directly — what are the *causes* of a visual presentation? — and answers that the causal structure is **multivariate, the causes interact, and improvement requires working on all the factors at once.**
+
+**The four explanatory variables, borrowed from art history:**
+
+1. Differences among **styles**.
+2. Differences among **practitioners working within a style**.
+3. The **interplay** among practitioners and styles.
+4. The **sources of new styles**.
+
+**Why "blame the inept user" fails as an argument.** That defense explains all the observed variation by variable (2) — practitioner skill — while holding variable (1), the style, fixed and unexamined. That move is legitimate *only if the style is a given*, which is precisely the question under dispute. Holding the disputed variable constant and then reporting that it explains nothing is not evidence; it is assumption laundering. Tufte's own method answers this structurally: the **same-user/same-content matched comparisons** in §1 vary the format while holding the practitioner constant, which is the only design that can separate the two causes.
+
+**Orwell's Principle as the model of a non-mono-causal explanation (p. 181).** From "Politics and the English Language": degraded thought produces degraded language, **and** degraded language in turn makes degraded thought easier. The causation runs both ways, and neither direction excuses the other. Applied here: weak thinkers produce bad decks, *and* the deck format makes weak thinking easier for everyone — including strong thinkers. Both are true; "blame the user" asserts only the first half and calls the argument settled.
+
+| Counter-argument you will hear | The reply |
+|---|---|
+| "A good presenter can use PP well." | True and irrelevant — it varies practitioners while holding style fixed. Run the matched comparison instead. |
+| "Bad decks are made by bad analysts." | Orwell's Principle: the causation is bidirectional. The format lowers the floor for everyone. |
+| "The tool is neutral; it's just a container." | The container dominates the thing contained (p. 170), and the escalation rule (p. 171) says the harm grows with the analytical content at stake. |
+| "Our people are trained." | Then the format's cost shows up as the *training tax* — the effort spent neutralizing a default, which a better default would return. |
+
+---
+
+## §10d. Why PowerPoint Does Not Improve (p. 183)
+
+The natural follow-up: if the format is this harmful, why hasn't competition fixed it? Tufte's answer is **market structure**, not user preference.
+
+- Across versions, the **intellectual level and analytical quality have rarely improved**. New releases add more Phluff and more therapeutic features, making each version *different* rather than smarter.
+- The causal account: a **monopoly product with an 86% gross profit margin** (as reported in antitrust proceedings) faces few incentives for meaningful change. Monopolies can blame consumers for poor performance; competitive markets are forced to improve instead.
+- His verdict: it is scandalous that no coherent software for serious presentations exists.
+- His closing image: using PP is like being trapped in the style of early Egyptian flatland cartoons instead of using the tools of Renaissance visual representation.
+
+**Why this belongs in the skill.** It is the reason the remedy in §12 is **tool replacement, not tool reform**. Waiting for the incumbent to get better is not a strategy — the market structure that produced the defaults is still producing them. This also explains why the practical advice is to reach for word-processing or page-layout software: not because those tools are excellent for evidence, but because they impose no cognitive style of their own.
+
+---
+
+## §10e. Specification for the Tool That Should Exist (p. 184)
+
+Tufte lists what a real technical-reporting tool would combine. It doubles as an **evaluation rubric** for any authoring tool a team is considering — score a candidate against these and the gaps become concrete.
+
+| Requirement | What it means in practice |
+|---|---|
+| Page and screen layout templates modelled on **serious news reports, a *Nature* article, and Feynman's physics text** | The reference designs are dense, integrated documents — not decks |
+| **Publication-quality statistical graphics and tables** | Real charting, not a template gallery |
+| **Scientific notation and typography** | Units, exponents, and math set correctly |
+| Tools for placing **annotated measurement scales *in* images** | The mapped-pictures requirement, made a software feature |
+| **Spellchecking for technical terms** | Domain vocabularies, not just prose dictionaries |
+| **Within-document editing** of words, tables, graphics, and images | No round-trip through separate single-mode applications |
+| **Open, non-proprietary document formats** | The evidence outlives the vendor |
+| **Fast large-format color printing** | Because paper carries ~10× the density of a screen |
+| A **slide manager** for talks | PP's one genuinely competent function, kept and demoted |
+
+**How to use it:** run a candidate tool against the nine rows before adopting it. A tool that scores well on the last row and badly on the first eight is a projector operating system, and adopting it will import a cognitive style along with the file format.
+
+---
 
 ## §11. Named Failure Modes (quick reference)
 
@@ -201,6 +295,23 @@ For tables, the analytical payoff is comparisons, and comparisons grow with the 
 | Conway's Law structure | Outline mirrors the org chart, not the argument | 7 sections = 7 departments |
 | Phluff vicious circle | Thin content → boredom → decoration → more boredom → more decoration | Animation and clip art standing in for substance |
 | Pravda-level density | Data matrices of ~5–12 entries | Thinner than any real publication |
+| Indistinguishable from parody | The deck's structure matches what a satirist would produce | Agenda / objectives / summary slides carrying no content (§10b) |
+| Blame-the-user deflection | Format critique answered by citing practitioner skill | Style held constant while practitioner variability is asked to explain everything (§10c) |
+| Mutual pretense | Everyone in the room dislikes the format and no one stops using it | Nobody can answer "why are we having this meeting?" (§11b) |
+
+## §11b. The Mutual-Pretense Mechanism — Why the Format Survives (p. 185)
+
+Every failure mode above is widely known, and the format persists anyway. Tufte's explanation is social rather than technical, and it is his sharpest statement of what the cognitive style is actually *for*.
+
+Rather than providing information, PowerPoint lets **speakers pretend they are giving a real talk and audiences pretend they are listening**. He calls the arrangement a prankish conspiracy against evidence and thought. Neither side has to do the hard thing — the speaker need not construct an argument, the audience need not evaluate one — and both leave having performed a meeting.
+
+**Consequences worth acting on:**
+
+- **The format is stable because it is convenient for both parties.** Complaints about it are sincere and change nothing, because the complainers are also its beneficiaries. Expect resistance to replacement from people who genuinely dislike decks.
+- **Consumers should be actively skeptical of speakers who lean on the style.** Phluff is frequently masking thin content; the decoration budget is a signal about the evidence budget.
+- **The intervention is a question, not a redesign.** Tufte's response to the whole apparatus is: ***Why are we having this meeting?*** If the honest answer is "because it is on the calendar" or "so people feel informed," no improvement to the slides will help — the meeting is the artifact that needs deleting.
+
+This is the missing answer to "if it's so bad, why doesn't it die." It does not die because it is not failing at its real function.
 
 ## §12. The Remedy — Written Reports and the 4-Pager
 

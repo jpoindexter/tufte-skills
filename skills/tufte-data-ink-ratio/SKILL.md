@@ -1,6 +1,6 @@
 ---
 name: tufte-data-ink-ratio
-description: Apply Tufte's data-ink ratio to strip non-data ink and redundant data ink from statistical graphics — through the two-pass erasure procedure, graphical redesign, and converting frame/tick ink into data — so the largest possible share of ink carries information.
+description: "Use when a chart, graph, or dashboard looks cluttered, over-decorated, or 'busy' — heavy grids, filled bars, box frames, duplicate axes — or before shipping any statistical graphic. Covers Tufte's data-ink ratio, the two-pass erasure procedure, and converting frame/tick ink into data."
 tags: [tufte, data-visualization, graphical-design, chartjunk, statistical-graphics]
 ---
 # Data-Ink Ratio
@@ -42,6 +42,8 @@ Tufte gives the directive "maximize, within reason" — he does **not** publish 
 | Near 1.0 | Theoretical ceiling; axis labels and a minimal frame still carry some non-data ink | Diminishing returns — do not strip below legibility |
 
 The "within reason" qualifier is load-bearing: redundancy and a little structure occasionally earn their ink (see §7). Past the point of legibility, erasing makes the graphic worse, not better.
+
+**Scope limit (p. 96):** Tufte scopes the principle himself — maximizing data-ink generates sound advice "for perhaps two-thirds of all statistical graphics"; for the remaining third the ratio is ill-defined or the wrong lens. Treat it as the default tool, not a universal law.
 
 ## §2. Data-Ink vs Non-Data-Ink vs Redundant Data-Ink
 
@@ -126,10 +128,10 @@ The rule: before erasing a mark, ask whether it can be *repurposed* to carry dat
 
 ## §6. Named Redesigns
 
-> Numeric ink-counts and exact ratio decimals are deliberately omitted: the source pages could not be verified, and false precision is worse than none. The qualitative structure of each redesign below is the durable, verifiable part.
+**Published figures (verified against VDQI):** a Bonner scatterplot runs only ≈10–20% non-data-ink (p. 94); a registration-rates chart redrawn reaches ≈0.7 (p. 95); a third reprint that forgot to plot the data points earns Tufte's verdict "a graphical absolute zero, a null data-ink ratio" (p. 95); the Kuznicki bar chart loses ~65% of its ink with zero data loss (p. 101); Pauling's atomic-volume chart rises from <0.6 to ~0.9 after erasing its 63-tick "marching band of mosquitoes" (pp. 102–103); across the book's redesigns, ratios rise from 0.1–0.2 to nearly 1.0 (p. 136).
 
 ### Box plot → quartile plot
-A conventional box plot draws each quartile boundary on both the left and right of the box; the right half is a mirror of the left and adds nothing. Tufte's quartile plot erases the box entirely: whisker lines mark the range, a small offset or gap marks the median, dots mark the quartiles. Same five-number summary, a fraction of the ink, and many plots now fit where few did.
+A conventional box plot draws each quartile boundary on both the left and right of the box; the right half is a mirror of the left and adds nothing. Tufte's quartile plot erases the box entirely (pp. 123–124): in the erased design a **dot marks the median** and the line's endpoints and breaks mark the extremes and quartiles; in Tufte's preferred variant, the **middle half (the interquartile segment) is drawn offset** from the whisker line. Same five-number summary, a fraction of the ink, and many plots now fit where few did. Erasure also pays in analyst time: ten conventional box plots take ~80 straightedge placings to draw; the erased version takes 10 (p. 125).
 
 ### Bar → open bar → range bar
 Start with a solid filled bar (value encoded ~6 ways, §2). Erase the fill → an open bar (three edges). Erase two edges → a single vertical line with a tick at the top. Each step removes redundant data-ink; the value stays readable at every step. The line-only form lets far more bars sit side by side for comparison.
@@ -143,15 +145,21 @@ Full faces are bilaterally symmetric — the right side mirrors the left, doubli
 ### The over-gridded chart (a "dreaded grid" case)
 A chart whose data plane is covered by a dense mesh of tick marks: the grid competes with the very points it is meant to help locate, and the more data points there are, the worse the competition. Erasing the grid (keeping at most a light reference line where positional reading is genuinely hard) lifts the ratio sharply and lets the data emerge. Recovered space then holds direct labels.
 
+**The Pauling lesson — structure vs. grid (pp. 103–104):** erasing the grid from Pauling's chart exposed misfit elements — but the *reference curves* proved essential, because they organize the periodicity the chart exists to show; restoring the grid instead failed. Some non-data-ink (organizing curves, study-structure connectors) earns its place. The grid never did. Classify before erasing.
+
 ## §7. When Redundancy Is Justified
 
 Erasing redundancy is *within reason*, not unconditional. Tufte names legitimate uses — redundancy earns its ink when it helps the reader move through the data:
 
-- **Cyclical / wrap-around series:** In Marey's graphical train schedule, one daily cycle is repeated at the edges so a train running off the right side is picked up again on the left, without forcing the eye back to the start. The repetition supports continuous reading.
+- **Cyclical / wrap-around series:** In Marey's graphical train schedule, an extra **half cycle** is attached at the edge (p. 98) so a train running off the side is picked up again without forcing the eye back to the start. The repetition supports continuous reading.
 - **Context and orientation:** Redundancy can give order to a complex graphic, ease comparison across its parts, and create aesthetic balance.
 - **Single-value graphics:** A lone uncomplicated number may not need the redundant-data-ink pass at all; the non-data-ink pass always applies.
 
 The decisive test: **does the redundant ink help the reader navigate, or does it merely restate a number the reader already has?** Help → keep. Restate → erase.
+
+### Defending erased designs to an audience (p. 136)
+
+Erased, unfamiliar forms draw the objection "readers won't get it." Tufte's four-point reply: the design carries more information per unit of ink and space; graphics improve through revision like prose; do not underestimate the audience — "if you understand it, most other readers will, too," and graphics should be as intelligent as the accompanying text; odd-looking designs are odd only from unfamiliarity. And the closing scope note (p. 137): data-ink maximization is one dimension of a multivariate design task that also weighs complexity, structure, density, and beauty.
 
 ## §8. Failure Modes
 

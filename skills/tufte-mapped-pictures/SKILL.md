@@ -1,6 +1,6 @@
 ---
 name: tufte-mapped-pictures
-description: From Beautiful Evidence's "Mapped Pictures" chapter — turn any representational image (photograph, painting, drawing, micrograph, satellite or scientific image) into evidence by adding measurement scales, the universal x-y-z-t grid, labels placed on the image, and an explanatory mapping; and judge mapping theories by explanatory tightness and falsifiability rather than by eyeballing.
+description: "Use when preparing or auditing an image meant to serve as evidence — a photograph, scientific micrograph, satellite or astronomical picture, diagram, drawing, or painting — and it needs measurement scales, a coordinate grid, or labels; also when judging whether a mapping or overlay laid on top of an image is a credible explanation or an unfalsifiable one."
 tags: [tufte, beautiful-evidence, mapped-pictures, scale-of-measurement, universal-grid, image-as-evidence, explanatory-mapping, falsifiability, labels]
 ---
 # Mapped Pictures: Images as Evidence and Explanation
@@ -9,7 +9,11 @@ tags: [tufte, beautiful-evidence, mapped-pictures, scale-of-measurement, univers
 
 A representational image shows what something looks like; a mapped picture lets a viewer measure it, place it, compare it, and test the claim being made about it. Tufte's argument in *Beautiful Evidence* is that explanatory, journalistic, and scientific images should nearly always be mapped — fitted with scales, a coordinate grid, labels, and overlays — and that a mapping is itself a claim, so it must be held to the same standards of credibility as any explanation. The chapter's two halves are equally important: how to map an image (scale, grid, labels), and how to tell a credible mapping from a crank one (explanatory tightness, falsifiability, flatland-vs-spaceland). The current skill title drops "and Explanation"; do not — the second half is where most real failures live.
 
-> "Mapped pictures combine representational images with scales, diagrams, overlays, numbers, words, images." — Tufte, *Beautiful Evidence*
+> "Mapped pictures combine representational images with scales, diagrams, overlays, numbers, words, images." — Tufte, *Beautiful Evidence*, p. 13
+
+**Chapter and citation note.** "Mapped Pictures: Images as Evidence and Explanation" runs printed **pp. 12–45**. Page citations throughout are printed page numbers. Four items marked *(pp. 112–121)* come from the adjacent "Words, Numbers, Images — Together" chapter; they are flagged where they occur because they serve this thesis more directly than any other.
+
+**Provenance across the canon.** The idea does not originate here. *Visual Explanations* ch. 1 supplies the direct ancestor — direct labels, encodings, and self-representing scales (p. 13), the NCSA tripod-of-scales redesign (pp. 20–23), Repton's pole-people as human-scale referents (pp. 16–17). *Envisioning Information* pp. 108–109 gives the earliest worked case: an aerial photograph of Hoboken overlaid with a route and place labels.
 
 ---
 
@@ -41,7 +45,7 @@ The first and most-skipped obligation. Without a scale of measurement, sizes and
 - **An explicit scale bar with a stated conversion.** The Crick–Watson DNA demonstration model is photographed with a scale reading 0 to 10 ångströms. The payoff is the conversion the scale forces into view: 1 cm = 100,000,000 ångströms (10⁸), 1 inch = 254,000,000 ångströms. The bar both quantifies the model and signals the image is explanatory, not commercial art.
 - **A comparison object of known size.** Placing Earth beside Saturn gives millions of casual viewers a sense of scale that a lone "celebratory photograph" never does. Scale is part of the news whatever the marketing department believes.
 - **A ruler drawn into the plate.** Brisson/Martinet's 1760 cockatoo carries a "scale of 6 inches" (échelle de 6 pouces) at lower right; objects of roughly known size (plant leaves) reinforce it.
-- **Rescaling instructions when the drawing is reduced.** Lilienthal's stork wing is drawn at ¼ natural size; the redrawn plate states "multiply by 9.4 to obtain real stork size," and the flapping-wing motion tracings carry their own scales (1/20 head-on, 1/50 side view).
+- **Rescaling instructions when the drawing is reduced (pp. 34–35).** Lilienthal's plate calculates the wing area of a 4 kg stork with rectangles and measurements overlaid on the drawing. Lilienthal drew it at **⅛ natural size**; because *Beautiful Evidence* reproduces it at a further reduction, Tufte adds the instruction to **multiply by 9.4 to obtain real stork size**. The two figures are not in conflict — ⅛ is the original plate's scale, 9.4 is the factor for the reproduction in front of you, which is exactly why a rescaled image must state its *own* factor rather than inheriting the original's. The flapping-wing space-time tracings carry their own separate scales (1/20 head-on, 1/50 bird-side view). Tufte's complementary complaint on the same page: this plate and 7 others were **folded up and stuffed in the back of the book**, convenient for printing and binding and inconvenient for seeing and reading.
 
 ### The anti-example: the "different and unknown scale"
 
@@ -67,9 +71,9 @@ Dense annotated images repay the scale apparatus. Dürer's 1525 construction pac
 
 ## §3. The Map Metaphor: Labels Belong on Images, Grids Scale Them, Context Makes Data Credible
 
-Bayer's *Uranometria* (1603) is Tufte's cleanest statement of the map metaphor. The star atlas locates stars on a measured, labeled two-dimensional grid, encodes brightness by star-size (like city-size on a road map) and by Greek letter (α brightest, β next), and so yields a *dual context*: the universal sky grid plus the local neighborhood of nearby stars.
+Bayer's *Uranometria* (1603, engravings by Alexander Mair; pp. 20–21) is Tufte's cleanest statement of the map metaphor. The star atlas locates stars on a measured, labeled two-dimensional grid, encodes brightness by star-size (like city-size on a road map) and by Greek letter (α brightest, β next), and so yields a *dual context*: the universal sky grid plus the local neighborhood of nearby stars.
 
-> "For showing evidence, the map metaphor suggests that labels belong on images, that external grids help to scale images, and that data are more credible when contextualized." — Tufte, *Beautiful Evidence*
+> "For showing evidence, the map metaphor suggests that labels belong on images, that external grids help to scale images, and that data are more credible when contextualized." — Tufte, *Beautiful Evidence*, pp. 20–21
 
 Three operational rules fall out of the metaphor:
 
@@ -85,7 +89,7 @@ Note Bayer's honest weakness, which Tufte flags rather than hides: where real st
 
 The chapter's governing principle, stated at the close:
 
-**Every image — whether for explanation or for exploration — should reside on the universal measurement grid of 3-space and time: x, y, z, t.** The grid must travel with the image through every transformation: it should accompany rescaling and zooming in and out, so a viewer never loses the absolute frame while inspecting a detail (as in the 3-image photosynthesis sequence, where every magnification still carries its scale bar and z-range).
+**Every image — whether for explanation or for exploration — should reside on the universal measurement grid of 3-space and time: x, y, z, t** (chapter close, p. 45). The grid must travel with the image through every transformation: it should accompany rescaling and zooming in and out, so a viewer never loses the absolute frame while inspecting a detail (as in the 3-image photosynthesis sequence, where every magnification still carries its scale bar and z-range).
 
 Relative-only scaling is insufficient. Peterson's bird field guide scales birds *relative to one another*, which is not universal — Tufte's remedy is to add a constant external referent (a common plant, a few clams for shorebirds) or, far better, a real measurement scale. The principle generalizes the special cases of §2 and §3: a scale bar fixes one axis, a grid fixes two, the universal grid fixes all four and binds every image in a document into one comparable space.
 
@@ -128,6 +132,26 @@ Whether to annotate aggressively depends on the job.
 
 **DON'T:** Pre-annotate an image you are still trying to understand — you will see only what the arrows told you to see.
 
+### Where the mapping apparatus comes from (p. 115, adjacent chapter)
+
+Having decided *to* map, how do you choose what apparatus to add? Tufte's rule: metaphors and analogies can genuinely assist reasoning about analytical design, **but the metaphors should derive from the content and from the reasoning associated with that content** — not from computer interfaces.
+
+His worked positive case is the Golden Field Guide's jay spread (Robbins, Bruun & Zim, *Birds of North America*, 1966, illustrated by Arthur Singer). The task is *visual recognition of physical objects, joined to new verbal, geographic, and graphical information*, and every element of the apparatus is derived from that task:
+
+| Apparatus element | The task requirement it answers |
+|---|---|
+| Painted images of each bird | Recognition of the object itself |
+| A 7-bird profile-comparison strip across the top | Discriminating similar species by silhouette |
+| Location maps per species | Ruling out species that do not occur where you are |
+| Song scores in musical notation | Identification by ear when the bird is not visible |
+| Verbal description and identifying keys | The distinguishing marks that images alone under-specify |
+
+**The location maps are the sharpest illustration.** They earn their space by preventing a specific, nameable error class: confidently identifying a bird in **Montreal** that in fact lives only in **Acapulco**. That is what content-derived apparatus looks like — each addition eliminates a known failure of the actual task.
+
+**The rule for §6, stated operationally:** derive the mapping apparatus from the identification or reasoning task, not from a UI pattern library. "Add a tooltip / a legend / a zoom control" are interface metaphors and answer no question the content posed. Ask instead: *what mistake will a competent viewer make with this image, and what annotation makes that mistake impossible?*
+
+**DON'T:** Base the design of an evidence display on a computer-interface metaphor — Tufte's explicit exclusion. The apparatus should look like the subject's own reasoning, not like software.
+
 ---
 
 ## §7. Explanatory Tightness: Credible Mapping vs. Crank Mapping
@@ -136,15 +160,15 @@ The chapter's hardest and most original argument: **when a mapping makes an expl
 
 ### The dividing line
 
-What separates Loran's Cézanne analyses and Hockney's optical-instrument hypothesis (perspective lines traced on Holbein's *Ambassadors* to argue divergent vanishing points imply a mirror lens) from crank work is **explanatory tightness**: their mappings are *specific, coherent, credible, and testable* — they try to explain a particular thing and could in principle be wrong. Mössel's 300+ geometric overlays (in a 534-page book claiming Ur-Forms beneath nearly all art) are the opposite: flexible enough to fit anything, refutable by nothing.
+What separates Loran's Cézanne analyses and Hockney's optical-instrument hypothesis (perspective lines traced on Holbein's *Ambassadors* to argue divergent vanishing points imply a mirror lens) from crank work is **explanatory tightness**: their mappings are *specific, coherent, credible, and testable* — they try to explain a particular thing and could in principle be wrong. Mössel's 300+ geometric overlays (in a 534-page book claiming Ur-Forms beneath nearly all art; p. 30) are the opposite: flexible enough to fit anything, refutable by nothing.
 
-> "...no possible empirical evidence can ever refute a Mössel, who explains everything and therefore nothing." — Tufte, *Beautiful Evidence*
+> "...no possible empirical evidence can ever refute a Mössel, who explains everything and therefore nothing." — Tufte, *Beautiful Evidence*, p. 30
 
 ### Why crank mappings always "work"
 
 - **Too many degrees of freedom.** Different grids fit the same artwork; dots could plausibly sit elsewhere; even fixed dots can be connected many ways. A scheme that fits every case discriminates none. (Feller demolished the same move in statistics: a "law of logistic growth" was fitted to populations, bacteria, railroads, plant and animal size — but normal, Cauchy, and other distributions fit the same data *as well or better*, so the logistic explained nothing distinctive.)
 - **Alignment-to-please / viewing-to-please.** A registration will "lock right into place if the desired answer is already known." Tufte aligning a sculpture plate to a north marker could gain ±3° just by tilting his head; land surveyors mapping the same parcel get divergent results depending on the client's interest. **Construct the mapping independently of the result you want.**
-- **The flatland–spaceland mismatch (catastrophic).** Mössel maps a single *one-eyed flatland photograph* of a real 3-dimensional object and treats the result as a fact about the object. A photograph is not the artwork; a flatland mapping cannot capture spaceland reality. No amount of re-aligning a grid-net over one projection recovers the lost dimension.
+- **The flatland–spaceland mismatch (catastrophic; p. 30).** Mössel maps a single *one-eyed flatland photograph* of a real 3-dimensional object and treats the result as a fact about the object. A photograph is not the artwork; a flatland mapping cannot capture spaceland reality. No amount of re-aligning a grid-net over one projection recovers the lost dimension.
 
 ### Test before you trust a mapping
 
@@ -180,13 +204,33 @@ An image can map another image: a before/after history, a painting beside its fo
 
 ## §9. Worked Example: The Vigilante (the chapter's own mapped picture)
 
-The 1823 anti-slavery plan and cross-section of the slave ship *Vigilante* (London Religious Society of Friends; folding plate engraved by J. Hawkesworth) is the chapter's central demonstration that a *moral* document gains force from engineering-diagram rigor.
+The 1823 anti-slavery plan and cross-section of the slave ship *Vigilante* (pp. 22–23; London Religious Society of Friends, *Case of The Vigilante, A Ship Employed in the Slave-Trade*; folding plate engraved by J. Hawkesworth) is the chapter's central demonstration that a *moral* document gains force from engineering-diagram rigor.
 
 - **Plan, elevation, and cross-section** of the ship captured off Africa in April 1822, with a **"Scale of Feet"** along the bottom and a **"Water Line"** on the section — the full apparatus of a measured drawing.
 - Nearly identical human figures count out the numbers: **227 men and 120 women**, 347 people; the elevation's double layer shows the packing; the labels mark Captain's cabin and wine lockers against the human cargo.
-- The facticity — individuals cumulating into an overview, hidden lines, plan views, elevations, labels, a measurement scale — gives it "the straightforward quality and credible precision of an engineering diagram," and that precision is exactly what makes it more damning than any still-life or photograph. The detail signals the ship was examined carefully, which *adds to the credibility* of the claim about 12–20 million people transported.
+- The facticity — individuals cumulating into an overview, hidden lines, plan views, elevations, labels, a measurement scale — gives it "the straightforward quality and credible precision of an engineering diagram," and that precision is exactly what makes it more damning than any still-life or photograph. The detail signals the ship was examined carefully, which *adds to the credibility* of the image — and of the surrounding claim about the **12,000,000 to 20,000,000** people eventually carried into America and the New World by the trade (p. 22). Tufte's own comparison on the page is to Minard's 1812 graphic: both earn their force from the straightforward quality and credible precision of an engineering diagram.
 
 The lesson: mapping does not cool an image; the measured grid is what makes the evidence undeniable.
+
+---
+
+## §9b. The Designer-as-Researcher Standard (pp. 116–117, adjacent chapter)
+
+The *Vigilante* shows what a well-mapped image achieves. This shows what production arrangement makes one possible.
+
+Tufte's model of mapped motion is **Megan Jaegerman's "Spotting a Hidden Handgun,"** parts of which appeared in *The New York Times*, 26 May 1992. It choreographs movement in 3-space using sequences, call-outs, motion arrows, mappings, and **multiple viewpoints** — silhouette, 3-dimensional figure, and flatland footprints — with words and images working together to describe an extended causal sequence: asymmetrical gait, upper-body shift, the quick adjustment when a gun's weight shifts, running from the rain, conspicuous clothing.
+
+**The claim that matters is not about the drawing.** Jaegerman did **both the research and the design**, breaking what Tufte calls their common alienation. The design amplifies the content *because the designer created the content* — she knew which asymmetry mattered because she had interviewed the detective, watched him act out the motions, and handled the weapons herself.
+
+He then reproduces her **backup documentation** as evidence of the care the work required: confirmation of Detective Robert T. Gallagher's identity and record against a public database, notes on his 18 years with the NYPD and his years in the anti-robbery tactical unit, the 1,200 gun arrests and near-flawless conviction rate, and — decisively for the graphic's logic — the legal sequence from suspicious demeanor to probable cause to frisk to arrest, which is *why* the tell-tale signs shown are the ones that matter.
+
+**The rule for this skill:** mapping quality is downstream of whether the mapper did the reporting.
+
+| Do | Don't |
+|---|---|
+| Have the person who understands the content produce the mapping, or make the researcher and designer work as one unit | Hand finished findings to a designer to "visualize" — the annotations will mark what looks important, not what is |
+| Keep and show backup documentation: sources, interviews, verifications, what was checked and how | Present a mapped image whose provenance chain exists nowhere |
+| Let the domain's own decision logic (here: suspicion → probable cause → frisk) determine which features get annotated | Annotate the visually striking features and hope they are the diagnostic ones |
 
 ---
 

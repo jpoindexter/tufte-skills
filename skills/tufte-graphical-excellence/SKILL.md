@@ -1,6 +1,6 @@
 ---
 name: tufte-graphical-excellence
-description: Defines graphical excellence per Tufte's VDQI Chapter 1 — the five criteria, the ideas/time/ink/space formula, the four exemplary graphic forms, the substance/statistics/design test, and named failure modes — to apply when designing or evaluating any data graphic.
+description: "Use when designing a new data graphic, grading or reviewing an existing chart, or deciding whether data deserves a graphic at all — especially when a chart looks polished but feels thin, shows a single variable, forces a slow read, or when summary statistics are being offered in place of a plot of the actual data."
 tags: [tufte, data-visualization, graphical-excellence, information-design, statistical-graphics]
 ---
 # Graphical Excellence
@@ -25,6 +25,10 @@ Tufte's closing summary of the chapter states five criteria. They are constraint
 5. **Truth.** Excellence requires telling the truth about the data; distortion voids it (§10).
 
 A graphic can be beautiful and still fail by being univariate, or honest and still fail by taking ten minutes to surrender three numbers.
+
+### The longer canon — nine "Graphical displays should…" principles (p. 13)
+
+Before the p. 51 five, the chapter opens with a nine-item list of what graphical displays should do (paraphrased): show the data; steer the viewer to the substance rather than to the method or the design; avoid distorting what the data say; present many numbers in a small space; make large datasets coherent; nudge the eye toward comparing different pieces of the data; reveal the data at several levels, from broad overview to fine structure; serve a reasonably clear purpose — description, exploration, tabulation, or decoration; and mesh tightly with the statistical and verbal descriptions of the same dataset. Treat p. 13 as the working checklist and p. 51 as the closing verdict.
 
 ---
 
@@ -67,7 +71,7 @@ A point easy to miss: statistical graphics are a *young* invention — roughly t
 
 | Origin | Contribution |
 |---|---|
-| **Oldest known time-series** | A tenth- or eleventh-century manuscript graph charting the inclinations of the planetary orbits against time (the zodiac on the horizontal axis) — an isolated precursor that left no tradition. |
+| **Oldest known time-series** | A tenth- or eleventh-century manuscript graph charting the inclinations of the planetary orbits as a function of time (p. 28) — an isolated precursor that left no tradition. |
 | **J. H. Lambert (18th c.)** | Early systematic use of line graphs / time-series to show measured relationships. |
 | **William Playfair (1786, 1801)** | Inventor of most modern statistical graphic forms — the time-series line graph and the bar chart in the *Commercial and Political Atlas* (1786), the pie and circle charts in the *Statistical Breviary* (1801). |
 
@@ -87,6 +91,10 @@ Excellence sometimes means *not* drawing a graphic. Tufte is explicit that small
 | Small N, highly labeled, non-comparative | No | Yes |
 | Single linear trend; 1–2 numbers suffice | No | Yes (or just the numbers) |
 
+**Numeric threshold (p. 56).** Tables usually outperform graphics for datasets of roughly twenty numbers or fewer — the book's own cutoff for where the graphic form starts to earn its keep.
+
+**Anscombe's quartet (pp. 13–14) — why "just report the regression" fails.** Four small datasets share the same means, fitted regression line, and correlation to two decimal places, yet plotted they are four utterly different structures: a well-behaved linear cloud, a smooth curve, a tight line wrecked by one outlier, and a vertical stack with a single leverage point. Identical summary statistics, completely different data behavior. Graphing is an act of analysis, not decoration — the graphic reveals what the numbers conceal — so the quartet is the standing rebuttal whenever a table of summaries is offered in place of a plot.
+
 **Density threshold (the case *for* the graphic).** The New York City weather summary for 1980 packs **1,888 numbers** into one chart — daily highs and lows against the long-run normal, plus precipitation and humidity — and lets the viewer compare any part to any other and read a year as a story. No table does that. Use a graphic when it organizes a large collection of numbers, supports comparison across parts, and tells a story; otherwise prefer the table.
 
 ---
@@ -96,7 +104,7 @@ Excellence sometimes means *not* drawing a graphic. Tufte is explicit that small
 VDQI Chapter 1 surveys four major forms and tests each against the excellence criteria. (Small multiples is a Chapter-8 technique, *not* one of these four.)
 
 ### 1. Data maps
-The densest form. The U.S. cancer-mortality atlas places an age-adjusted rate for **each of 3,056 counties** on a single map, with separate maps per cancer site and sex — a volume of data no other display can carry in the space. Data maps read at several scales at once: continental gradient, regional cluster, single county.
+The densest form. The U.S. cancer-mortality atlas places an age-adjusted rate for **each of 3,056 counties** on a single map — roughly **21,000 numbers per map** once rate, location, and county size and shape are counted (p. 17) — with separate maps per cancer site and sex. A volume of data no other display can carry in the space. Data maps read at several scales at once: continental gradient, regional cluster, single county.
 - John Snow's 1854 cholera map plotted deaths as dots and pumps as marks; the cluster around the Broad Street pump was visible instantly, where calculation would have needed luck and labor to find the same result. Graphical analysis can testify about data far more efficiently than computation.
 - *Caveat (anticipates the blot-map failure, §9):* shaded-area maps weight by geographic area, not population — sparse western counties loom large, dense eastern ones recede.
 
@@ -135,13 +143,13 @@ Criterion 4 is a grading rule, not an aspiration: showing one variable where two
 5. Temperature during the retreat — a linked lower line graph
 6. Time — dates tied to position along the retreat
 
-The reader absorbs a four-to-five-dimensional account of the campaign without ever feeling the complexity of what is being read. That seamlessness is the goal: multivariate depth that does not announce its own technique.
+The narrative payload of those six variables (pp. 40–41): **422,000** men cross into Russia, **100,000** reach Moscow, **10,000** return. The reader absorbs a four-to-five-dimensional account of the campaign without ever feeling the complexity of what is being read. That seamlessness is the goal: multivariate depth that does not announce its own technique.
 
 ---
 
 ## §8. What Graphical Excellence Is Not
 
-Tufte names two wrong assumptions that produced the "graphically barren years" of roughly 1930–1970:
+Opening Chapter 2 (p. 53), Tufte names two wrong assumptions that produced the graphically barren years from 1930 to 1970:
 - **Wrong assumption 1 — graphics must be "livened up"** with decoration and exaggeration or the audience drifts.
 - **Wrong assumption 2 — the analyst's main job is detecting and denouncing lies.** (Integrity is necessary, but it is a floor, not the point.)
 
@@ -172,7 +180,7 @@ Tufte names two wrong assumptions that produced the "graphically barren years" o
 
 ## §10. The Truth Requirement (bridge to integrity)
 
-Truth is criterion 5 and a hard gate: a graphic that misrepresents its data cannot be excellent no matter how multivariate or ink-efficient it is. The disappearing baseline, the perspective trick that inflates differences, the comparison of six months against twelve — each fails at the foundation, and no sophistication elsewhere rescues it.
+Truth is criterion 5 and a hard gate: a graphic that misrepresents its data cannot be excellent no matter how multivariate or ink-efficient it is. The disappearing baseline, the perspective trick that inflates differences, the Nobel-prizes chart that counts prizes in decade intervals but ends on a 4-year interval — manufacturing a fake final decline, which Tufte flatly calls a big lie (p. 60) — each fails at the foundation, and no sophistication elsewhere rescues it.
 
 The quantitative measure (developed in Chapter 2, Graphical Integrity) is the **Lie Factor**:
 

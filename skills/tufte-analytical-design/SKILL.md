@@ -1,6 +1,6 @@
 ---
 name: tufte-analytical-design
-description: The six principles of analytical design from Beautiful Evidence — how to build evidence presentations that assist reasoning rather than decorate reports, why those principles are universal (from the first stone map to any future display), and how to distinguish analytical from decorative design.
+description: "Use when designing, reviewing, or defending an evidence presentation — a report, dashboard, scientific figure, policy brief, or technical display — and a standard is needed for whether it assists reasoning; when arguing that a design choice follows from the intellectual task rather than from a template or tool; or when working through Minard's 1869 map as a reference implementation."
 tags: [tufte, data-visualization, analytical-thinking, evidence, information-design, principles]
 ---
 # Tufte: Principles of Analytical Design
@@ -60,6 +60,18 @@ These two anchors map onto the principles: Durkheim's categories say *what* to s
 
 ---
 
+### Before the design analysis: the scale of the content (p. 126)
+
+Start any Minard walkthrough with the numbers, not the design. They are what make Principle 6 ("content counts most") concrete rather than pious.
+
+- The 1812 campaign's total toll, French and Russian combined, was roughly **700,000 to 1,000,000 dead**.
+- Of the 422,000 who crossed into Russia, about **100,000 reached Moscow** — a city by then sacked, deserted, and burning. Minard draws only the *departure* from Moscow, as the dark lower line.
+- **E. J. Marey** (*La méthode graphique*, 1878) described the map's effect as a brutal eloquence that seems to defy the historian's pen. Tufte uses this as the framing claim for why the graphic outperforms the prose account of the same events.
+
+**Practical upshot:** the reason to study this map is not that it is pretty at six variables. It is that a single sheet carries a scale of catastrophe that narrative prose reports without conveying. Establish the magnitude first; then ask what design decisions made it legible.
+
+---
+
 ### Principle 1: Comparisons (p. 127)
 
 **State it as:** *make comparisons, contrasts, and differences explicit and visible.*
@@ -92,7 +104,23 @@ Either way, the width of two lines communicates a six-month, hundreds-of-miles c
 
 Causal thinking is not optional in serious analytical work. Scientific inquiry is structured by causal laws; medical reasoning about prevention, diagnosis, and intervention requires causal models; policy and reform require knowing which causes to govern — policy decisions *are* causal decisions about which lever to pull. Displays that show only effects, without causes, cannot support the reasoning they exist to enable.
 
-Minard's temperature graph along the bottom of the map is the causal argument: cold explains *why* men died during the retreat, not merely *that* they died. The map gives location; the temperature curve gives mechanism.
+**Tufte's named authorities for the principle (p. 128):**
+- **Robert Dahl**, "Cause and Effect in the Study of Politics" (1965): thinking about policy is, and has to be, thinking about causality. The claim that policy decisions *are* causal decisions is Dahl's, and should be cited as such rather than asserted.
+- **Rudolf Virchow**, *Die Medizinische Reform* (1848), quoted on p. 128: medical statistics will be the standard of measurement — weigh life for life and see where the dead lie thicker, among the workers or among the privileged. One sentence, and it demonstrates that a **comparison is already a causal argument**: the class difference in mortality is both the measurement and the accusation.
+- Tufte's connective claim: measurements are inherently comparative, and comparisons promptly provoke reasoning about the sources of difference and variability. Principle 1 therefore feeds Principle 2 mechanically — you do not add causality to a comparison as a second step; a well-posed comparison already demands a causal account.
+
+**Minard's causal analysis is thin — and Tufte says so (p. 129).**
+
+This is the part most retellings of the map get backwards, so state it carefully. The temperature graph along the bottom is a *reminder of intense cold*, dated at each point, and it reads as though it explains the deaths on the retreat. Tufte's own verdict is that the map's causal analysis is weak: the retreating army's path loosely parallels the falling-temperature line, but that **symbolic parallelism carries no evidential value**. Two curves descending together is not a mechanism, and the map contains nothing that rules out the alternatives — attrition, starvation, disease, desertion, pursuit.
+
+Where does the causal link actually live? In the **five historical sources** Minard names (see Principle 5), not in the graphic. The map *gestures at* mechanism and points to where the argument was made; it does not itself make it.
+
+| Read the map as… | Verdict |
+|---|---|
+| A demonstration that cold caused the deaths | Wrong — parallel curves are not evidence; Tufte rejects this reading |
+| A display that *includes* the variable a causal account would need, and cites the sources that argue it | Correct, and the more useful teaching point |
+
+**Why this is the better lesson.** The best-known analytical graphic ever made shows a causal variable *without* establishing causation — which is exactly the trap most dashboards and charts fall into. Plotting the suspected cause alongside the outcome is a necessary first move and a wholly insufficient last one. If your display's causal claim rests on two lines moving together, you have Minard's weakness without Minard's five sources.
 
 **Do / Don't pairs:**
 
@@ -103,6 +131,7 @@ Minard's temperature graph along the bottom of the map is the causal argument: c
 | Draw causal diagrams: A → B → C | Show outcomes with no link between them |
 | Distinguish correlation from mechanism explicitly | Imply causation from co-occurrence |
 | Name the mechanism in the title or annotation | Leave causation buried in the verbal text |
+| Cite where the causal argument was actually made, as Minard cites his five sources | Let two parallel curves stand in for a mechanism (Minard's own weakness, p. 129) |
 
 **Failure mode — Effects Without Causes:** a display reports outcomes — what happened — with no agent, mechanism, or sequence. Location without cause; result without actor. The reader cannot reason about *what to do* because there is no causal model to act on. (For the specific corruption-chapter cases — agentless strategic-plan bullet lists and anti-causal statistics — see **§7**.)
 
@@ -132,7 +161,11 @@ Two-dimensionality is a constraint of the medium, not of the subject. Presentati
 | Annotate data points with words that carry more data | Push extra variables into a legend that must be decoded |
 | Show 6 variables in one display when content demands | Slice into 6 slides, each showing 1 variable |
 
-**Concrete benchmark (from the source):** physical and biological science journals (*Nature*, *Science*) publish statistical graphics with a **median of more than 1,000 numbers**; applied medical research (*The Lancet*) averages about **45 numbers per graphic**. High numeric density is the scientific norm; the low end is a presentation convention, not a content requirement.
+**Concrete benchmark (from the source, p. 138):** physical and biological science journals (*Nature*, *Science*) publish statistical graphics with a **median of more than 1,000 numbers**; applied medical research (*The Lancet*) averages about **45 numbers per graphic**. High numeric density is the scientific norm; the low end is a presentation convention, not a content requirement.
+
+**Why multivariate display is *required*, not impressive (p. 138).** Tufte concedes that social-science evidence lacks the replication guarantees of the physical sciences, citing Merton on unanticipated consequences, and he quotes **Bernard Berelson's** threefold summary of what social science reliably knows: *some do and some don't; the differences aren't very great; it's more complicated than that.* His medical illustration is the same shape — a treatment arm at **21% survival against 15% for controls**.
+
+That calibration is the real argument for Principle 3. Real effects in human-scale domains are **small, confounded, and context-dependent**. A display stripped to one or two variables cannot distinguish a 6-point difference that is causal from one produced by case-mix, and it gives the reader no way to assess fit, variability, or alternative explanation. Showing many variables is not a display of analytical virtuosity; it is the minimum needed to reason honestly about marginal effects.
 
 **Failure mode — Forced Flatland:** an inherently multivariate phenomenon (6+ variables) shown with only 1–2, so the appearance of simplicity conceals the real complexity. The reader can't assess fit, variability, outliers, or alternative explanations from the exposed slice alone. (Descriptive label — Tufte's own term for the flat-medium problem is "flatland.")
 
@@ -144,7 +177,11 @@ Two-dimensionality is a constraint of the medium, not of the subject. Presentati
 
 The evidence doesn't care what mode it arrives in. Segregating it by mode — all images in one section, all tables in an appendix, all text in the body — is organizational convenience that actively impairs reasoning. Maps, the best practice in analytical display, have always integrated multiple modes on a single surface. The distinctions between evidence *types* matter far less than their combined bearing on the question being investigated, so modes must be assembled where the evidence is needed, not where the production system finds them convenient.
 
-Minard integrates a paragraph of words (title, legend, assumptions), a geographic map (spatial position), flow-lines (army size and direction), temperature data (cause), dates (time), and place names (context) — all within one **25 × 21 inch** surface.
+Minard integrates a paragraph of words (title, legend, assumptions), a geographic map (spatial position), flow-lines (army size and direction), temperature data (cause), dates (time), and place names (context) — all within one surface measuring **62 × 30 cm, or 25 × 12 inches** (p. 122 caption; item 28 of Minard's *Tableaux Graphiques et Cartes Figuratives*, Bibliothèque de l'École Nationale des Ponts et Chaussées).
+
+> **Dimension warning.** The frequently quoted **25 × 21 in (62 × 54 cm)** is *not* this map. That is the size of the **two-map lithograph sheet** of 1869 (p. 135), which carries the Hannibal map above and the Russia map below. Attaching the sheet's dimensions to the single map roughly doubles its stated area and quietly inflates every density claim made about it.
+
+**The technique that makes integration physically possible (p. 131).** Minard drew the flow-band in a light, unsaturated **tan**, chosen so that the place-names and river lines underneath read *through* it rather than being covered by it. Tufte notes that roughly **20** of Minard's figurative maps use transparent overlays this way. The general lesson: integration on a crowded surface is not achieved by finding empty space for each mode — there is never enough — but by **layering and separation**, putting modes on different visual levels so they coexist without occlusion. Without that move, adding the flow-band would have destroyed the map beneath it, and Principle 4 would be unachievable in practice.
 
 Galileo's annotated telescope drawings (1610) show the same move: he wrote observation time, satellite identity, and distance (in Jovian radii) directly onto each sketch, turning still drawings into credible quantitative evidence about satellite motion rather than mere pictures of what the telescope showed.
 
@@ -210,6 +247,10 @@ This is the supremacy principle; it overrides the other five. No design techniqu
 
 Minard never names Napoleon on a map of Napoleon's own march — a design choice that reinforces the content priority: memorialize the dead, don't celebrate the surviving celebrity.
 
+**The biography behind the content (pp. 134–135).** Minard retired at 70 and produced roughly **50 maps** over the following 18 years. The Russia map was published in **November 1869, when he was 88** — the last sheet of his lifetime portfolio. He had himself been trapped in besieged **Antwerp in 1813**, during the same war. The map is an anti-war document made by someone with a personal stake in the subject, which is precisely Principle 6's claim: the design follows from caring about the content, and no technique substitutes for that.
+
+**The sheet is a small multiple, not one map (p. 135).** The 1869 lithograph carries **two** flow-maps: **Hannibal's crossing into Italy** above (96,000 → 26,000 men) and **Napoleon in Russia** below. Treating the poster as a single map loses a built-in comparison across roughly **2,000 years** of the same phenomenon, drawn in the same visual language at the same scale of encoding. The parallel structure is itself the argument: armies are destroyed by campaigns in a recognizable way, and the reader can verify it by looking at both bands without leaving the sheet.
+
 The most direct route to a better presentation is therefore stronger content, not a better visual container.
 
 **Do / Don't pairs:**
@@ -248,12 +289,12 @@ Analytical design is the design of evidence presentations — scientific reports
 
 ## §4. Minard's Map as Reference Implementation
 
-Charles Joseph Minard's 1869 *Carte Figurative* of Napoleon's Russian campaign is Tufte's primary exemplar because it satisfies all six principles at once in a single **25 × 21 inch** display:
+Charles Joseph Minard's 1869 *Carte Figurative* of Napoleon's Russian campaign is Tufte's primary exemplar because it satisfies all six principles at once in a single **62 × 30 cm / 25 × 12 inch** display (p. 122). It shares a **25 × 21 in (62 × 54 cm)** lithograph sheet with Minard's Hannibal map (p. 135) — the sheet's dimensions are not the map's.
 
 | Principle | How Minard satisfies it |
 |---|---|
 | 1. Comparisons | 422,000 entering vs. ~10,000 returning — survival ratio ≈ **1:42** (bands as drawn at the Niemen ≈ **1:28**, p. 127); the Berezina crossing collapses ~50,000 to ~28,000 |
-| 2. Causality | Temperature curve along the bottom, each point dated; cold explains deaths during the retreat |
+| 2. Causality | Temperature curve along the bottom, each point dated — but **partially**: Tufte judges the causal analysis thin, since the parallel between retreat and falling temperature has no evidential value; the causal argument lives in the five cited sources (p. 129) |
 | 3. Multivariate | 6 variables: army size, geography (x, y), direction, temperature, date — all in one image |
 | 4. Integration | Words (title, legend, annotations), numbers (troop counts at each location), flow-map diagram, temperature graphic, geographic map — fully fused |
 | 5. Documentation | Author, role, place, date, 5 named sources, 3 measurement scales, stated assumptions |
@@ -265,7 +306,7 @@ Flow-line scale: **1 millimeter = 10,000 men** — the one number needed to read
 
 ## §5. Failure Modes Catalog
 
-Source column distinguishes the analytical-design chapter (pp. 122–139) from the adjacent corruption chapter (pp. 140–145, see §7).
+Source column distinguishes the analytical-design chapter (pp. 122–139) from the adjacent corruption chapter (pp. 140–155, see §7).
 
 | Failure Mode | Principle Violated | Source | Diagnostic Signal |
 |---|---|---|---|
@@ -277,9 +318,9 @@ Source column distinguishes the analytical-design chapter (pp. 122–139) from t
 | Anonymous Authorship | 5 Documentation | 122–139 | No author, sources, scale, or date |
 | Chartjunk as Substitute | 6 Content | 122–139 | Visual elaboration rising as content weakens |
 | Technology-Driven | 6 Content | 122–139 | Design chosen by tool capability, not by evidence |
-| Agentless Effects (strategic-plan bullets, passive voice) | 2 Causality | 140–145 | "Accelerate Revenue Recognition!" with no actor or mechanism |
-| Anti-causal Statistics | 2 Causality | 140–145 | Data mining / factor analysis offered as explanation |
-| Corrupt Measurement | 5 Documentation | 140–145 | Gamed base years, time-shifted or unadjusted numbers |
+| Agentless Effects (strategic-plan bullets, passive voice) | 2 Causality | 140–155 | "Accelerate Revenue Recognition!" with no actor or mechanism |
+| Anti-causal Statistics | 2 Causality | 140–155 | Data mining / factor analysis offered as explanation |
+| Corrupt Measurement | 5 Documentation | 140–155 | Gamed base years, time-shifted or unadjusted numbers |
 
 ---
 
@@ -297,9 +338,9 @@ Before shipping any analytical display, verify each principle:
 
 ---
 
-## §7. Corruption in Evidence Presentations (adjacent chapter, pp. 140–145)
+## §7. Corruption in Evidence Presentations (adjacent chapter, pp. 140–155)
 
-These cases come from the chapter that *follows* the six principles, not from the principles chapter itself. They are included because each is a canonical, real-world inversion of a specific principle — useful for diagnosis, but cite them to pp. 140–145, not to the principle's own page.
+These cases come from the chapter that *follows* the six principles, not from the principles chapter itself. They are included because each is a canonical, real-world inversion of a specific principle — useful for diagnosis, but cite them to pp. 140–155, not to the principle's own page. (The chapter runs pp. 140–155: epigraphs on p. 140, text 141–155. The corrupt-measurement and anti-causal material sits at 142–143 and 146; the secondary-presentation bureaucracies and the rage to conclude at 154–155.)
 
 | Corruption | Inverts | Diagnostic signal |
 |---|---|---|
@@ -309,6 +350,5 @@ These cases come from the chapter that *follows* the six principles, not from th
 
 **Rule of thumb:** corruption is what principle-violation looks like once *incentive* enters. The fix is the same as the principle's fix — name the agent, test the model, disclose the scale — applied against someone who benefits from the fog.
 
-Source book: /tmp/tufte/beautiful-evidence.pdf
-Read pages: "9-45,122-145"
-(Read in chunks of ≤20 pages if the range is large)
+Source book: *Beautiful Evidence* (Cheshire, Connecticut: Graphics Press, 2006)
+Relevant chapters: Ch. 5 — "Corruption in Evidence Presentations" is the adjacent chapter at pp. 140–155; the six principles are Ch. 4, "The Fundamental Principles of Analytical Design," pp. 122–139. Minard material also appears in *The Visual Display of Quantitative Information*, pp. 40–41, 176.

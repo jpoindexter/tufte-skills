@@ -1,6 +1,6 @@
 ---
 name: tufte-evidence-corruption
-description: How evidence presentations are corrupted through effects without causes, cherry-picking, overreaching, chartjunk, and the rage to conclude — with detection methods for each, drawn from Beautiful Evidence ch. 6 (pp. 140-155).
+description: "Use when auditing an evidence presentation, research report, press release, or repackaged summary for corruption — passive-voice effects without causes, cherry-picked or culled data, model-search shopping, punning and overreaching claims, chartjunk, or a rage to conclude — and when deciding how much to trust a secondary or tertiary account of primary evidence."
 tags: [tufte, evidence, cherry-picking, analytical-communication, data-presentation, research-integrity]
 ---
 # Corruption in Evidence Presentations: Effects Without Causes, Cherry-Picking, Overreaching, Chartjunk, and the Rage to Conclude
@@ -93,11 +93,22 @@ In medical research the pattern is structural and measurable. Tufte observes tha
 
 The Evidence Decay Cycle is not a rare exception. It is the expected outcome when research design quality is not controlled for.
 
-### The Peacock Anecdote: Why Controls Go Missing
+### "Which Half?" — the Rebuke of Uncontrolled Confidence
 
-Before the Chalmers data, Tufte tells a story (pp. 144-145) that explains *why* uncontrolled, cherry-pickable studies dominate medicine. The Boston surgeon Dr. E.E. Peacock presented a series of his surgical cases at a conference. An audience member asked the central methodological question: "Do you have any controls?" After it was clarified that a control group would mean operating on only half the patients and withholding the surgery from the other half, Peacock's answer was a single rhetorical question — "Which half?" — meaning he could never bring himself to deny treatment to any of his patients.
+Before the Chalmers data, Tufte reproduces a short first-person recollection (pp. 144-145, footnote 6 attributing it to Dr. E. E. Peacock, Jr., University of Arizona College of Medicine, via *Medical World News*, 1 September 1972). **Peacock is the narrator, not the surgeon on stage.** He was a junior medical student at the time.
 
-The anecdote is the human engine behind the Evidence Decay Cycle: clinicians' understandable reluctance to randomize is exactly what produces the flood of poorly controlled, enthusiastic studies. The reasons controls are skipped are sympathetic; the consequence — a corrupt evidence base that reliably over-endorses treatments — is not. This is the setup for the Chalmers count below.
+The scene: an unnamed and very important Boston surgeon presents a large series of successful vascular-reconstruction operations. A young student at the back of the room asks whether there were any controls. The surgeon thunders that of course there were not — a control group would have doomed half of those patients to their death. In the silence that follows, the same small student voice asks: **"Which half?"**
+
+The two words are the student's rebuttal, and they carry the chapter's whole argument about medical evidence. *Without controls you cannot know which half the operation dooms.* The surgeon is certain he is saving lives; that certainty is exactly the unwarranted quantity, because the uncontrolled series contains no information capable of telling saving from killing. The moral objection to randomizing ("I refuse to withhold treatment") presupposes the very fact the trial exists to establish.
+
+Read the anecdote as a *detection tool*, not a sympathy plea:
+
+| Move | What it sounds like | What it actually concedes |
+|---|---|---|
+| Certainty without a control | "A control group would have condemned half these patients." | The presenter is asserting efficacy as a premise, then citing that premise as grounds for never testing it. |
+| The student's question | "Which half?" | No uncontrolled series can identify the harmed subgroup — or rule out that the harmed subgroup is the treated one. |
+
+**Detection question to carry forward:** when someone declines controls on ethical grounds, ask what evidence establishes the direction of the effect they are protecting. If the answer is the uncontrolled series itself, the argument is circular and the Evidence Decay Cycle below is the expected outcome — not because clinicians are villains, but because confident, uncontrolled work reliably produces enthusiastic, unreliable reports. This is the setup for the Chalmers count.
 
 ### The Chalmers Portcaval Shunt Study: Concrete Data
 
@@ -116,6 +127,18 @@ Of the 53 studies, only **6 were well-designed (RCT)**. Results:
 > — *Beautiful Evidence*, p. 145
 
 72% (34 of 47) of poorly controlled studies endorsed a surgical procedure unwarranted by the RCT gold standard. This link between lousy research design and wrongly enthusiastic reports has been replicated across drugs and surgical procedures. Loosely designed studies allow the underlying medical reality to be filtered and cherry-picked so as to reliably produce unreliable evidence for favored treatments.
+
+### The Zone of Boredom, Ambiguity, and Unpublishability
+
+Cherry-picking is usually invisible inside one report, but it leaves a visible fingerprint across a *literature*. Tufte's named artifact (p. 144, fn. 5) is the **Zone of Boredom, Ambiguity, and Unpublishability**.
+
+- The evidence: **248 t-statistics** drawn from **17 published studies** of election-year macroeconomic conditions.
+- The pattern: the distribution shows a conspicuous **gap in the range of roughly 1.6 to 2.0** — the band sitting just below conventional statistical significance.
+- The interpretation: a result landing in that band is neither publishable nor interesting. It is quietly dropped, re-specified, or re-run with different variables until it clears the threshold — or it is abandoned. The hole in the histogram is not a property of the world; it is the fingerprint of the filtering.
+
+**Why it matters for detection:** shrinkage (§3) shows that a *single* found model's fit was inflated by search. The ZBAU shows that the *whole published literature* was pre-filtered before you ever read it. Both are needed: one audits the report, the other audits the field.
+
+**Applied test:** collect the reported test statistics or p-values across a body of work in your domain and look at the shape near the significance threshold. A missing band below the cut-point, or a suspicious pile-up just above it, is evidence about the publication process rather than about the phenomenon.
 
 **Detection questions for cherry-picking in a single report:**
 
@@ -142,6 +165,8 @@ Retrospective, nonexperimental observation — the standard methodology in econo
 The arithmetic of available models: for *k* explanatory variables, there are 2^k − 1 possible fitted models — multiplied further by notions and data-handling decisions. Tufte notes that routinely 10^4 to 10^7 computable models are available, all quickly sortable, from which only one or a few will be published (*Beautiful Evidence*, p. 146). "This latitude for evidence selection makes it difficult to distinguish between reliable findings and cherry-pickings."
 
 **Shrinkage** is the model-builder's name for the tell-tale symptom (*Beautiful Evidence*, p. 146, fn. 10): the explained variance (R²) of a model selected by searching always *shrinks* — often dramatically — when the model is re-tested on fresh, independent data it did not help to choose. The original fit was inflated by the search itself; the search captured noise specific to the training data along with signal. Shrinkage is therefore the quantitative signature of model-searching cherry-picking, and the reason fresh-data validation is mandatory: a found model's on-the-spot R² is an overestimate by construction.
+
+**The vice predates the computer (p. 146, fn. 9).** Tufte quotes Francis Galton on the researcher's habit of exercising a right of occasional suppression and slight modification, and on how plastic a limited number of observations becomes in the hands of people who already hold a preconceived idea. The pairing is the point: Galton describes the 19th-century, hand-computed version of the same behavior that now produces 10^4–10^7 candidate models. Model-searching is a property of **human judgment operating under discretion**, not a side effect of computing power — so faster machines enlarge the option space without creating the vice, and taking the machines away would not remove it. Only pre-registration, held-out data, and disclosure of the search do.
 
 Credible explanations grow from **three mutually reinforcing sources**: explanatory theory, empirical evidence, and rejection of competing alternative explanations. Cherry-picking dilutes and confounds all three into wishful circular thinking — the Pilgrim's Progress pattern where Ignorance concludes "my heart tells me so."
 
@@ -195,6 +220,15 @@ bureaucracies of secondary and tertiary presentations ← corrupting feedback
 ---
 
 ## §5. Punning, Overreaching, and Economisting
+
+### Two of the chapter's epigraphs frame the punning argument (p. 140)
+
+The chapter opens on a page of five epigraphs, and two of them are about exactly this failure — worth naming, because they show the punning critique is Tufte's argument rather than an imported logic-textbook label.
+
+- **T. S. Eliot**, from *Burnt Norton* (*Four Quartets*): words strain and crack under the burden loaded onto them, and sometimes break. That is the literary description of what the value-pun below does to "valuable" — one word asked to carry price, merit, importance, creativity, and process at once until it stops carrying anything.
+- **Claude Lévi-Strauss**, on the accomplished philosopher's habit of verbal punning: the anthropological version of the same move, and the bridge to the Geertz all-seasons-concept argument used later in this section.
+
+Read together, they say the diagnosis is old and cross-disciplinary: a term stretched across incompatible senses does not gain explanatory reach, it loses load-bearing capacity.
 
 ### The Galenson Case: "Value" as a Pun
 
@@ -282,6 +316,8 @@ Microsoft Excel and PowerPoint produce, ineptly, many of the data graphics and t
 > "Very little chartjunk appears in the sports, weather, and financial tables in newspapers, or in the tables and graphs published in major scientific journals — since the content is too important and too complex for fooling around with chartjunk."
 > — *Beautiful Evidence*, p. 153
 
+**Cross-book note — the same argument, 23 years earlier.** *The Visual Display of Quantitative Information* ch. 3 (pp. 76–87) is the long-form version of this section and supplies the causal account the *Beautiful Evidence* passage compresses: illustrators trained without quantitative skill; the working doctrines that statistics are boring and that graphics exist for unsophisticated readers; and the resulting **double standard** — serious prose paired with stupid graphics in the same publication (p. 86), what Tufte calls a pre-adult level of intelligence in graphical design (p. 84). His remedy there is that graphical competence requires **three** skills at once — substantive, statistical, and artistic — and that letting artists control all three is like letting typographers edit the prose (p. 87). Use VDQI ch. 3 when you need to explain *why* an organization keeps producing chartjunk; use this chapter when you need to detect it in one artifact.
+
 **Detection checklist — chartjunk:**
 
 | Signal | Action |
@@ -318,6 +354,18 @@ For government commission reports: for each reader of the original, there are pe
 
 Why do producers of careful primary evidence feed this distorting machine at all? Tufte answers with P.T. Barnum (p. 155): in Barnum's quip, the terrible thing that happens without publicity is *nothing*. Reach lives almost entirely in the secondary and tertiary repackagings, so producers tolerate the corruption of their evidence as the price of an audience. The asymmetry above is the leverage: the repackagers control the 100,000-to-1 amplification, and the original author who refuses them is read by no one.
 
+### Follow the Budget, Not the Byline (p. 154)
+
+The repackaging bureaucracies are not an incidental nuisance; they are where the money is, and that is what makes the distortion structural. Tufte's three examples:
+
+| Sector | Spends more on… | …than on |
+|---|---|---|
+| Pharmaceuticals | marketing drugs | discovering them |
+| Schoolbook publishing | lobbying textbook-selection committees | writing the books |
+| Financial services | promoting investment products | identifying them |
+
+**The detection rule that falls out of it:** follow the budget, not the byline. Wherever promotion consistently outspends production, expect the evidence chain to have been optimized for the pitch — the selection, framing, and simplification decisions upstream will have been made by people paid to persuade rather than to find out. This is a structural prior you can apply before reading a single number.
+
 In repackagings, a persistent *rage to conclude* denies the implications, complexities, and uncertainties of primary evidence. A strong selection bias operates. In Tufte's deliberate pun, *news wins out over olds*: recency, not quality of evidence, decides what gets through the repackaging filter.
 
 Tufte warns that if corruption in primary reports is concerning, secondary presentations are far worse — each stage of repackaging adds its own interpretive filter that compounds and amplifies distortions from the primary evidence (*Beautiful Evidence*, p. 154).
@@ -329,14 +377,17 @@ Tufte identifies the most insidious organizational consequence: an organization 
 The mechanism:
 - If a corporation distorts evidence presented to consumers, stockholders, and journalists, it may soon lie to itself.
 - Government intelligence agencies: once evidence collection becomes fixed around a predetermined policy line, agencies may become perpetually unintelligent, confused about the difference between detective work and marketing.
-- Martin Amis: "Cliché spreads inwards from the language of the book to its heart. Cliché always does."
+- Martin Amis, quoted by Tufte on how the corruption travels: "Cliché spreads inwards from the language of the book to its heart."
+
+**The anti-motivated-reasoning clause (p. 141).** Tufte states at the chapter opening that one's allies are not appreciably less likely to corrupt evidence than one's opponents. The corruption catalogue is not a weapon for use on the other side. Apply every detection method in this skill first to the reports whose conclusions you already like — those are the ones your own filtering will wave through.
 
 Indicators of an untrustworthy secondary presentation bureaucracy:
 - It denies access to primary evidence (requires all publications to be pre-approved by the PR department)
 - Its repackagings always manage to support a predetermined line
 - It limits access to primary reports through copyrights, inconvenient subscriptions, or overreaching claims of corporate privilege or government secrecy
 
-**Defenses for producers of primary reports:**
+**Defenses for producers of primary reports (p. 155):**
+- **Never surrender rights to original work.** This is the load-bearing one and the precondition for the rest. The leverage the secondary bureaucracies hold is *access*; rights are the mechanism by which access is controlled. A creator who has signed away rights cannot self-publish, cannot re-release, and cannot compel a correction — so every other defense below becomes unavailable at the moment it is needed.
 - Make primary reports inexpensively and directly available (internet, self-publishing, leaks to journalists), short-circuiting secondary bureaucracies
 - Prepare their own secondary reports to replace repackagings
 - Police secondary mediated versions and turn mistakes of the pitch culture into notorious examples
@@ -354,6 +405,9 @@ These are the specific, named failure modes from chapter 6. Apply to any evidenc
 | **Cherry-picking: too good to be true** | Selects only favorable evidence, suppresses disconfirming evidence | Report appears to contradict the usual complexity of the domain; "it's more complicated than that" response |
 | **Evidence Decay Cycle** | First published study is poorly controlled and most enthusiastic; controlled studies systematically less enthusiastic | Ask: what was the research design quality? What happened in follow-up studies? |
 | **Portcaval pattern** | Poorly designed studies (72%) endorse procedures that well-designed studies (0% marked enthusiasm) do not | Check: were RCT-quality controls used? Is the evidence base dominated by poorly designed studies? |
+| **"Which half?" circularity** | Controls are refused on ethical grounds, using the unproven efficacy as the reason not to test efficacy | Ask what evidence establishes the *direction* of the effect being protected; if it is the uncontrolled series itself, the argument is circular |
+| **Zone of Boredom, Ambiguity, and Unpublishability** | A literature is pre-filtered before publication: results just short of significance are dropped or re-specified | Plot the reported test statistics across the field; a gap just below the threshold (≈1.6–2.0) or a pile-up just above it is a fingerprint of filtering |
+| **Promotion outspends production** | Marketing, lobbying, or distribution budgets exceed the budget for discovery, writing, or identification | Follow the budget, not the byline; expect the evidence chain to be optimized for the pitch |
 | **Model-searching without replication** | 10^4-10^7 fitted models searched; cherry-picked best-fit published; tested on same data that generated it | Ask: how many models were tested? Was the finding replicated on independent data? |
 | **Shrinkage** | A found model's explained variance (R²) drops sharply on fresh data, exposing the original fit as search-inflated noise | Re-test the model on independent data; if R² shrinks, the in-sample fit was an overestimate by construction |
 | **Value pun / fallacy of equivocation** | A key word silently changes meaning between premises and conclusion (price → merit), preserving only the *appearance* of valid inference | Tag the shifting term (Fischer's named fallacy); demand one consistent meaning across the whole argument |
@@ -370,9 +424,9 @@ These are the specific, named failure modes from chapter 6. Apply to any evidenc
 
 ## §9. The Moral Frame
 
-Tufte opens and closes the chapter with moral framing, not just methodological critique. He argues that presenting evidence carries ethical weight, not just analytical obligation. A presenter who deploys rhetorical manipulations — lying, flagwaving, personal attacks, false dichotomies, misdirection, jargon as cover, evasion of key issues, feigned objectivity, willful misreading of opposing views — signals both a lack of credibility and a lack of genuine evidence (*Beautiful Evidence*, p. 140).
+Tufte opens and closes the chapter with moral framing, not just methodological critique. He argues that presenting evidence carries ethical weight, not just analytical obligation. A presenter who deploys rhetorical manipulations — lying, flagwaving, personal attacks, false dichotomies, misdirection, jargon as cover, evasion of key issues, feigned objectivity, willful misreading of opposing views — signals both a lack of credibility and a lack of genuine evidence (*Beautiful Evidence*, p. 141; p. 140 is the chapter's epigraphs page).
 
-The responsibility, Tufte argues, falls equally on the audience: consumers of presentations must demand intellectual and ethical accountability from presenters — insisting that what is shown and told can be justified. Consuming evidence is itself a moral act (*Beautiful Evidence*, p. 140).
+The responsibility, Tufte argues, falls equally on the audience: consumers of presentations must demand intellectual and ethical accountability from presenters — insisting that what is shown and told can be justified. Consuming evidence is itself a moral act (*Beautiful Evidence*, p. 141). And the obligation is symmetrical across sides: allies corrupt evidence at about the rate opponents do (p. 141), so the moral frame has no exemption for the conclusions you happen to want.
 
 Despite the threat of corruption, a consumer of presentations should try to be hopeful and curious, avoid premature skepticism, and maintain an open mind — but not an empty head. Many presentations are not corrupt. A presenter engaging in corrupt maneuvers might be reporting what eventually turns out to be accurate and truthful conclusions. "A particular danger of corrupt maneuvers is not only that they enable lying but also that they place the truth in disrepute."
 

@@ -1,6 +1,6 @@
 ---
 name: tufte-data-density
-description: Covers Tufte's dual principle of data density AND data-matrix size (VDQI ch.8, pp.161-176) — the formulas, the typographic-density yardstick, empirical benchmarks across 21 publications, the Shrink Principle, three viewing depths, multifunctioning elements, small multiples, and the supertable — for designing, evaluating, or critiquing any statistical graphic.
+description: "Use when a graphic feels sparse, oversized, or padded for one chart's worth of data — when deciding how much data a display should carry, how small it can shrink, whether a dense chart is really cluttered or just rich, or when choosing between one big chart, small multiples, and a dense table for a large dataset."
 tags: [tufte, data-visualization, information-density, data-matrix, small-multiples, data-ink]
 ---
 # Data Density and the Size of the Data Matrix
@@ -8,7 +8,7 @@ tags: [tufte, data-visualization, information-density, data-matrix, small-multip
 ## Overview
 The chapter's title names two co-equal quantities, not one: the **density** of a graphic (data per unit area) and the **size of its data matrix** (total data the graphic carries). Tufte's empirical finding, from sampling published graphics circa 1979-1980, is that most graphics fail on both — the average published graphic shows about 50 numbers at roughly 10 per square inch, when the printed medium supports thousands per square inch and matrices in the thousands. High density is not clutter: clutter is non-data-ink competing for space; high density is data-ink filling it. The two require opposite remedies, and the governing instruction is to push both quantities up together.
 
-Source: *The Visual Display of Quantitative Information*, Chapter 8, "Data Density and Small Multiples," pp.161-176; Chapter 7, "Multifunctioning Graphical Elements," pp.138-159.
+Source: *The Visual Display of Quantitative Information*, Chapter 8, "Data Density and Small Multiples," pp.161-176; Chapter 7, "Multifunctioning Graphical Elements," pp.139-159.
 
 ## §1. The Two Formulas
 
@@ -47,6 +47,10 @@ Tufte calibrates "dense" against fine printed type. The U.S. Statistical Abstrac
 
 Statistical graphics rarely reach the information rates that ordinary maps achieve — the gap is the headroom most charts leave on the table (p.168).
 
+**Cross-book benchmarks (later Tufte):**
+- *Visual Explanations* extends the yardstick to screens: a TV-resolution display shows ~53 characters where a printed page carries 1,000–50,000, and screen resolution runs roughly 5–10% of a printed map's (VE pp.149–150).
+- *Beautiful Evidence* adds Graunt's Table of Casualties: 1,855 counts spanning 1629–1659 yield 1,719,585 pairwise comparisons within one eyespan — the n(n−1)/2 arithmetic of density (BE pp.178–179). It also notes that newspaper sports, weather, and financial pages routinely carry hundreds to thousands of numbers with almost no chartjunk, because the content matters too much to its readers to fool with (BE pp.153, 178).
+
 ## §3. Data Density Across Publications
 
 Tufte sampled at least 20 graphics from each publication (circa 1979-1980). Density in numbers per square inch, ranked by median. This is the complete 21-publication table from p.167.
@@ -84,18 +88,19 @@ The p.167 table also records the **size of the data matrix** (numbers per graphi
 | Reference | Matrix size (numbers/graphic) | Meaning |
 |---|---|---|
 | Typical published graphic | **~50** | Tufte's overall finding; the low baseline to beat |
-| *Nature* (median) | **~177** | Largest median matrix among sampled news/science publications |
+| *Journal of the Royal Statistical Society, B* (median) | **200** | Largest median matrix among the 21 sampled publications |
+| *Nature* (median) | **177** | Highest median *density* in the sample; its median matrix trails JRSS-B (JASA: 150) |
 | *New England Journal of Medicine* (densest sampled) | **up to ~3,600** | Top of the sampled range — a single graphic carrying thousands of values |
 | Bertin communes map | **240,000** | Numbers required to reconstruct it |
 | Galaxy map | **~6,800,000** | 2,275,328 rectangles × 3 numbers |
 
-Read this against §3: *Nature* leads on both axes (highest median density **and** largest median matrix), which is why Tufte treats it as the benchmark publication. Raising density by shrinking a 50-number chart helps; the larger win is carrying 177 or 3,600 numbers in the first place.
+Read this against §3: the two axes have different leaders — *Nature* tops density (48/sq in median) while *JRSS-B* tops matrix size (200 median), so no single publication wins both. Raising density by shrinking a 50-number chart helps; the larger win is carrying 200 or 3,600 numbers in the first place.
 
 ## §5. The Dual Maximization Principle
 
 > "Maximize data density and the size of the data matrix, within reason." — Tufte, *The Visual Display of Quantitative Information*, p.168
 
-Both nouns are load-bearing. "Within reason" is narrow: if a graphic overcrowds, apply data-reduction (averaging, clustering, smoothing) **before** plotting — thin the numbers if you must, but do not enlarge the area as a first resort.
+Both nouns are load-bearing. "Within reason" is narrow: if a graphic overcrowds, apply data-reduction (averaging, clustering, smoothing) **before** plotting — thin the numbers if you must, but do not enlarge the area as a first resort. And the bar for "overcrowded" is high: Tufte's caveat is that a display representing several thousand numbers may be just fine as it stands, needing no reduction at all (p.168).
 
 ### Why more information wins
 - The marginal cost of handling additional information is low for most graphics.
@@ -148,8 +153,11 @@ Grids placed at measurement-instrument locations or data-significant events repo
 ### Range-frame and data-based labels (pp.149-152)
 Replace the round-number axis frame (0 to 40) with a range-frame spanning only the actual extremes (4 to 37): two non-data ticks gone, the data range now encoded in the frame. Replace round-number scale labels with exact data values and each label becomes a measurement.
 
-### Dot-dash-plot / rugplot
-Marginal distribution marks along both scatterplot axes. A vertical column of data-positioned numbers doubles as the dashes showing the marginal distribution — no extra ink, since the numbers replace conventional ticks. Best for ≤30 observations, where fine detail reads.
+### Dot-dash-plot (marginal dashes)
+Marginal distribution marks along both scatterplot axes. A vertical column of data-positioned numbers doubles as the dashes showing the marginal distribution — no extra ink, since the numbers replace conventional ticks. Best for ≤30 observations, where fine detail reads. (The modern "rug plot" / `geom_rug` corresponds to these marginal dashes; do not call the dot-dash-plot a rugplot — Tufte reserves that word for a different design, below.)
+
+### Tufte's rugplot (p.135)
+A chained series of bivariate scatterplots joined by their shared marginal dashes, so a single observation's history can be traced through successive one- and two-dimensional contexts; the sequence of variables can wander wherever the analysis leads. The shared fringes are what link the panels — each dash column serves two adjacent scatters at once.
 
 **Design test:** before adding any structural element (frame, grid, tick, label), ask whether that same ink can also show data. If yes, the multifunctioning version wins.
 
@@ -187,8 +195,8 @@ Tufte's verdict on pies is categorical: their low density and failure to order n
 
 The primary pattern for high density across complex, multivariate data: a series of graphics showing the same variable combination, indexed by a changing variable. The design stays constant so attention goes entirely to shifts in the data.
 
-### Seven-property conclusion (p.175)
-Well-designed small multiples are: inevitably comparative; deftly multivariate; shrunken, high-density graphics; usually built on a large data matrix; drawn almost entirely with data-ink; efficient to interpret; and often narrative — showing how relationships shift as the index variable changes, revealing interaction or multiplicative effects.
+### Seven-property conclusion (p.175, paraphrased)
+Well-designed small multiples: exist to be compared panel against panel; carry several variables at once without strain; are reduced in size and dense with data; usually rest on a large underlying matrix; spend nearly all their ink on data rather than apparatus; read quickly once the one shared design is learned; and often tell a story — how relationships shift as the index variable changes, revealing interaction or multiplicative effects.
 
 ### Examples Tufte cites (pp.170-174)
 
@@ -236,7 +244,7 @@ The worked example is the 410-number *New York Times* presidential-vote table (N
 
 ## §14. The Governing Aphorism
 
-Tufte closes ch.8 on the asymmetry between the two kinds of ink: cut non-data-ink (decoration, redundancy, chartjunk); never cut data-ink, because removing it removes information. He frames it by borrowing two architectural slogans — Mies van der Rohe's "less is more" for non-data-ink, and Robert Venturi's retort "less is a bore" (*Complexity and Contradiction in Architecture*, 1966) for data-ink (footnote 6, p.175). So: **for non-data-ink, less is more; for data-ink, less is a bore.**
+Tufte closes ch.8 on the asymmetry between the two kinds of ink: cut non-data-ink (decoration, redundancy, chartjunk); never cut data-ink, because removing it removes information. He frames it by borrowing two architectural slogans — Mies van der Rohe's "less is more" for non-data-ink, and Robert Venturi's retort "less is a bore" (*Complexity and Contradiction in Architecture*, 1966; the VDQI footnote cites the 2nd ed., 1977) for data-ink (footnote 6, p.175). So: **for non-data-ink, less is more; for data-ink, less is a bore.**
 
 Operational test before any edit: classify the element first. Non-data-ink → remove it. Data-ink → preserve by default; the burden of proof is on removal.
 
@@ -244,7 +252,7 @@ Operational test before any edit: classify the element first. Non-data-ink → r
 
 | Check | Pass condition |
 |---|---|
-| Matrix size | Is the source matrix as large as the question warrants (beating the ~50-number baseline; nearer *Nature*'s ~177)? |
+| Matrix size | Is the source matrix as large as the question warrants (beating the ~50-number baseline; nearer the leading journals' medians — *Nature* 177, *JRSS-B* 200)? |
 | Density benchmark | Computed density above ~10/sq in (JASA territory)? Strong graphics approach ~185/sq in printed-text density |
 | Both axes | Are density **and** matrix size both being pushed up, or only one? |
 | Graphic area | Could it shrink to half size without information loss? |

@@ -1,14 +1,18 @@
-# Tufte Skills — Edward Tufte's Visual Design Principles as Claude Code Skills
+# Tufte Skills — Edward Tufte's Visual Design Principles as Agent Skills
 
-**27 reference-grade skills** extracted from all five Edward Tufte books, formatted as Claude Code `SKILL.md` files. Each skill carries Tufte's named principles, formulas and thresholds (Lie Factor, data-ink ratio, the 1+1=3 noise rule, aspect-ratio math), comparison tables, do/don't pairs, and named failure modes — written as original reference prose with brief attributed quotations, not reproductions of the source text.
+**30 reference-grade skills + a `tufte` router**, extracted from all five Edward Tufte books as agent-agnostic `SKILL.md` files — they work in Claude Code, Codex CLI, Copilot CLI, Gemini CLI, and any agent that can read a file. Each skill carries Tufte's named principles, formulas and thresholds (Lie Factor, data-ink ratio, the 1+1=3 noise rule, aspect-ratio math), comparison tables, do/don't pairs, and named failure modes — written as original reference prose with brief attributed quotations, not reproductions of the source text.
 
-When a skill is installed, Claude loads its full content at the start of a relevant design task and works from the actual principle, not a vague memory of it.
+When a skill is installed, the agent loads its full content at the start of a relevant design task and works from the actual principle, not a vague memory of it.
+
+## The router — `/tufte`
+
+`skills/tufte/` is the pack's front door. Invoke it by name (`/tufte` in Claude Code, `$tufte` in Codex, or just "tufte" in any agent) with a task, and it routes to the smallest set of the 30 skills via a signal→skill table, then runs a 12-point Master Audit before any display ships. It loads siblings by file path (`../<slug>/SKILL.md`), so it works in every runtime — no Claude-specific tooling required. `skills/tufte/CANON.md` is the single-file fallback: the whole pack condensed into one document for runtimes where loading siblings is impractical.
 
 ---
 
-## Skills (27 total)
+## Skills (30 + router)
 
-Grouped by primary source book. Many principles span several books; each skill names every source it draws from.
+Grouped by primary source book. Many principles span several books; each skill names every source it draws from. The `tufte` router (above) fronts them all.
 
 ### The Visual Display of Quantitative Information (VDQI, 1983 / 2001)
 
@@ -54,6 +58,7 @@ Grouped by primary source book. Many principles span several books; each skill n
 | `tufte-link-differentiation` | Diagram connectors as differentiated evidence about each relationship — type, direction, strength, certainty, mechanism |
 | `tufte-parallelism` | Visual parallels that answer "compared with what?" — position, orientation, overlap, synchronization; flap/superimposed/synchronized variants |
 | `tufte-visual-confections` | Compositions that juxtapose heterogeneous, real-and-imagined image-events to make an argument |
+| `tufte-integration-of-modes` | Words, numbers, and images together — mode segregation as a production artifact, the Newton's *Opticks* 300-year case, layering over deletion |
 
 ### Seeing with Fresh Eyes (SWFE, 2020)
 
@@ -61,6 +66,8 @@ Grouped by primary source book. Many principles span several books; each skill n
 |---|---|
 | `tufte-visual-thinking` | The SEE / REASON / ACT triad, model criticism and remodeling, graphical sentences and stacklists, data-analysis integrity |
 | `tufte-typography-for-data` | Content-responsive typography: space and linebreaks as meaning, direct labeling over legends, data paragraphs, annotation as evidence (VDQI + EI + BE + SWFE) |
+| `tufte-annotation-as-thinking` | Annotation as a mode of thinking — the expert-at-your-side principle, layered commentary from Kircher to the Talmud page; unannotated evidence is decorative |
+| `tufte-instructions-at-point-of-need` | Instructions at the exact place and moment of action — wayfinding, stroke-order coding, real-time surgical checklists, glare and legibility in the physical environment |
 
 ---
 
@@ -74,13 +81,27 @@ cd tufte-skills
 ./install.sh
 ```
 
-Skills install to `~/.claude/skills/<slug>/SKILL.md`. Reload Claude Code to pick them up.
+Skills install to every detected agent skills directory:
+
+| Agent | Directory |
+|---|---|
+| Claude Code | `~/.claude/skills/` |
+| Codex CLI | `~/.codex/skills/` |
+| Copilot CLI / agentskills-spec agents | `~/.agents/skills/` |
+
+Override the targets with a colon-separated list:
+
+```bash
+TUFTE_SKILLS_DIRS="$HOME/.claude/skills:$HOME/.config/opencode/skills" ./install.sh
+```
 
 Dry run (shows what would be installed without writing):
 
 ```bash
 ./install.sh --dry-run
 ```
+
+Restart your agent to pick up new skills.
 
 ### Via npx
 
@@ -92,15 +113,16 @@ npx tufte-skills
 
 ## Using a skill
 
-Once installed, invoke any skill by name in Claude Code:
+Route through the pack (recommended):
 
 ```
-/tufte-data-ink-ratio
-/tufte-graphical-integrity
-/tufte-small-multiples
+/tufte audit this dashboard          # Claude Code
+$tufte audit this dashboard          # Codex CLI
 ```
 
-Or reference it in context: "Apply tufte-sparklines to this dashboard design," or "audit this chart with tufte-chartjunk." Claude also auto-loads the relevant skill when a design task matches its description.
+Or invoke any skill directly by name — `/tufte-data-ink-ratio`, `/tufte-graphical-integrity`, `/tufte-small-multiples` — or reference it in context: "Apply tufte-sparklines to this dashboard design," or "audit this chart with tufte-chartjunk." Agents with skill auto-discovery also load the relevant skill when a design task matches its description.
+
+In agents without native skill support, point the agent at the installed files: "read `~/.agents/skills/tufte/SKILL.md` and follow it" — the router's sibling references are plain file paths, so routing works from a file-read alone.
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: tufte-graphical-integrity
-description: Apply Tufte's six principles of graphical integrity and the Lie Factor to detect, measure, and eliminate distortion in data graphics — use when designing, reviewing, or auditing any chart for truthfulness.
+description: "Use when designing, reviewing, or auditing any chart for truthfulness — truncated baselines, scaled pictograms, dual axes, perspective or 3-D effects, nominal-dollar time series, or any display where the visual effect may exceed the effect in the data. Covers the Lie Factor and Tufte's six principles of graphical integrity."
 tags: [tufte, data-visualization, graphical-integrity, lie-factor, statistical-graphics]
 ---
 # Graphical Integrity
@@ -8,7 +8,7 @@ tags: [tufte, data-visualization, graphical-integrity, lie-factor, statistical-g
 ## Overview
 A graphic has integrity when the physical size of the marks on its surface is directly proportional to the numbers they stand for. Most distortions are not random: they systematically exaggerate the magnitude of recent change. Tufte's contribution is to make distortion measurable — the Lie Factor turns "this chart feels misleading" into a number you can compute and defend.
 
-**Sourcing note.** The only two Lie Factors below that Tufte himself computes and publishes in VDQI Ch. 2 are the fuel-economy graphic (14.8) and the shrinking-doctors graphic (2.8). Every other numeric figure in this skill is an illustrative derivation of the stated mechanism, labeled as such — never cite it as a Tufte-stated value. This is the integrity discipline the skill teaches, applied to the skill itself.
+**Sourcing note.** Tufte computes and publishes five Lie Factors in VDQI Ch. 2: fuel economy **14.8** (p. 57); the Time "In the Barrel" oil-price barrel **9.4** — +454% drawn as +4,280% (p. 62); the Washington Post oil derricks **9.5** — 708% drawn as 6,700% (p. 62); the shrinking family doctor **2.8** (p. 69); and **59.4** — "a record" — when the Time barrel is read as a volume, 27,000% vs. 454% (p. 71). Any other numeric figure in this skill is an illustrative derivation of the stated mechanism, labeled as such — never cite it as a Tufte-stated value.
 
 ## §1. The Lie Factor
 
@@ -42,7 +42,9 @@ Lie Factor = (size of the effect shown in the graphic) / (size of the effect in 
 | Graphic: line drawn 0.6 in (1978) → 5.3 in (1985) | (5.3 − 0.6)/0.6 = **+783%** |
 | **Lie Factor** | 783 / 53 = **14.8** |
 
-The road also recedes toward a vanishing point, so the receding-line distortion and the data change are visually inseparable, and the date labels shrink with perspective while the data does not.
+The road also recedes toward a vanishing point — drawn in *reversed* perspective, with the future in front and large (p. 58). The date labels on the left stay a constant size as they recede, while the mpg numbers on the right shrink under two simultaneous effects at once: the value change and the perspective. Data change and design distortion become visually inseparable.
+
+A related perceptual fact grounds the whole chapter (p. 55): reported experiments find the perceived area of a circle grows roughly as (actual area)^0.8, with the exponent varying about ±0.3 by person and context — so even a "correctly scaled" area encoding misreads, and different viewers misread it differently.
 
 ## §2. The Six Principles of Graphical Integrity
 
@@ -78,10 +80,14 @@ Six recurring ways a graphic lies. For each: the cue that exposes it, and the pr
 | Out-of-context quoting | Two data points, or one group, with no surrounding series | 6 | Extend the series; add control groups (§7) |
 | Stripped labeling | Bare numbers, no units, no index base, no source | 2 | Restore units, base year, source, event annotations |
 
-**Tufte's two published Lie Factors (the only source-stated figures):**
+**Tufte's five published Lie Factors (VDQI Ch. 2):**
 
-- **Fuel Economy Standards (NYT, 1978) — Lie Factor 14.8.** Receding-road line lengths; see §1. Mode: perspective baseline.
-- **The Shrinking Family Doctor (LA Times, 1979) — Lie Factor 2.8.** Share of family-practice doctors falls from 27% (1964) to 12% (1990); the human figures shrink far more than the percentages do, and the 2.8 is *before* counting extra distortion from perspective and uneven spacing of the years. Mode: dimension inflation (a 2-D figure for a 1-D percentage).
+- **Fuel Economy Standards (NYT, 1978) — Lie Factor 14.8** (p. 57). Receding-road line lengths; see §1. Mode: perspective baseline.
+- **"In the Barrel" oil price (Time, 1979) — Lie Factor 9.4** (p. 62). A +454% price change drawn as +4,280%. Mode: dimension inflation. Read as a *volume*, the same barrel reaches **59.4 — "a record"** (p. 71): 27,000% of ink for 454% of data.
+- **Oil derricks (Washington Post) — Lie Factor 9.5** (p. 62). 708% drawn as 6,700%. Mode: dimension inflation.
+- **The Shrinking Family Doctor (LA Times, 1979) — Lie Factor 2.8** (p. 69). Share of family-practice doctors falls from 27% (1964) to 12% (1990); the human figures shrink far more than the percentages do, and the 2.8 is *before* counting extra distortion from perspective and uneven spacing of the years. Mode: dimension inflation (a 2-D figure for a 1-D percentage).
+
+**The editorializing rule (p. 59):** decoration and editorial comment on a graphic are permitted; distorting the *data measures* to make the editorial point is not. A cartoon pictogram that implies no quantitative precision at all (the 4,340-pound-chicken drawing, p. 73) is exempt from the proportionality principle — the lie begins only when a mark pretends to be scaled.
 
 ## §4. Proportional Representation: the Dimension Trap
 
@@ -113,6 +119,8 @@ Same datum, no change in the number — the distortion comes purely from the spa
 
 The subtlest lie: the canvas itself changes across the graphic, so the eye attributes layout changes to the data. The remedy is a stable, uniform frame — one data unit occupies the same printed size everywhere on the surface.
 
+**The canonical case — the OPEC five-scale chart (p. 61):** one NYT graphic uses five different vertical scales (from $8.00 to $3.92 per inch) and two horizontal scales, so the same price change looks up to 15.1× bigger depending on where on the chart it happens to sit.
+
 | Design-variation type | Mechanism | Cue to catch it | Fix |
 |---|---|---|---|
 | Mid-chart scale change | Same quantity occupies different printed sizes by position | Two y-axes, or a scale break with no zigzag mark | One scale, full range |
@@ -139,6 +147,8 @@ Nominal-dollar time series almost always overstate real growth, because the doll
 | **Neutralize aspect ratio** | A tall canvas exaggerates the climb | The real slope, neither steepened nor flattened |
 
 **Pattern to watch:** a nominal chart shows steep continuous growth; after deflating and dividing by population, the same series turns flat — sometimes into an outright real-terms *cut*. The actual news (the decline) was invisible in nominal units. Always state on the graphic whether dollars are nominal or real, and which base year the deflator uses.
+
+**Worked example — the NY State budget "Magical Parallelepipeds" (pp. 66–68):** population +10% over the period; the dollar of 1967 = $2.03 by 1977. Deflated per-capita spending rises ~20% to 1970, flattens, then *declines* in 1977 — while the nominal chart showed an unbroken boom. Same pattern in oil (p. 63): in the four years before the 1979–80 price surge, the *real* price of oil had been declining — "the graphic had missed the news."
 
 ## §7. Context: "Compared to What?"
 
@@ -184,6 +194,8 @@ It does not hold:
 - Numbers carry **magnitude, not just order**. A graphic that preserves only direction has discarded most of the information and kept the part a single sentence could have stated.
 
 Getting the arrow to point the right way is never a defense for fabricating how far it points.
+
+**The second defense (p. 77):** "the true numbers are printed right there on the graphic, so the drawing's distortion is excused." It fails the same way — honesty in one corner of the image does not license a fifteenfold lie in the rest of it. The marks are what the eye reads; the printed numbers are an alibi, not a correction.
 
 ## §10. Quick-Reference Audit Protocol
 

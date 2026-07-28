@@ -1,13 +1,13 @@
 ---
 name: tufte-causal-reasoning-in-graphics
-description: How to design graphics that demonstrate causality rather than mere correlation, drawn from Tufte's analysis of the Snow cholera map and the Challenger O-ring disaster; use when building or critiquing any display whose purpose is to support a causal claim or policy decision.
+description: "Use when building or critiquing any display whose job is to support a causal claim or a go/no-go decision — epidemic maps, risk scatterplots, failure analyses, treatment comparisons, policy charts — or when reviewing whether a graphic shows why something happened rather than merely when it happened."
 tags: [tufte, data-visualization, causal-inference, evidence-design, decision-making]
 ---
 # Causal Reasoning in Graphics
 
 ## Overview
 
-Most data graphics describe; few argue. The difference is whether the display is organized around the causal variable or merely around time and sequence. Tufte's chapter "Visual and Statistical Thinking" in *Visual Explanations* establishes the standard through two paired case studies: John Snow's 1854 cholera map, which correctly displays a causal argument and helps end an epidemic, and the 13 Morton Thiokol charts faxed to NASA the night before the Challenger launch, which contained the right data but displayed it in a way that concealed the causal signal and contributed to seven deaths. The lesson is not stylistic: how data is arranged determines whether a causal relationship is visible or invisible, and that invisibility can be fatal.
+Most data graphics describe; few argue. The difference is whether the display is organized around the causal variable or merely around time and sequence. Tufte's chapter "Visual and Statistical Thinking" in *Visual Explanations* establishes the standard through two paired case studies: John Snow's 1854 cholera map, which correctly displays a causal argument and helps end an epidemic, and the 13 Morton Thiokol charts faxed to NASA the night before the Challenger launch, which rested on the right causal theory but selected and arranged the data in ways that concealed the causal signal and contributed to seven deaths. The lesson is not stylistic: how data is arranged determines whether a causal relationship is visible or invisible, and that invisibility can be fatal.
 
 ---
 
@@ -19,7 +19,7 @@ Tufte identifies "Compared with what?" as the foundational question in statistic
 
 Snow had 83 deaths mapped. The map's causal argument depended equally on showing the spaces with no deaths — the brewery (70+ workers, no cholera; they drank malt liquor and never used the Broad Street pump) and the workhouse (535 inmates, only 5 deaths; they had their own well and never sent to Broad Street for water). Both anomalies are visible only because they appear on the same map as the deaths.
 
-The Thiokol engineers committed the mirror failure: their 13 charts showed only the 7 flights with O-ring damage, omitting the 17 flights without damage. Those undamaged flights, almost all at warm temperatures, are the statistical leverage that reveals the temperature-damage correlation.
+The Thiokol engineers committed the mirror failure. Pre-launch, their damage-history chart listed the damaged flights with no temperatures attached, and their temperature chart covered just two launches plus four test motors (p.43) — the 17 flights without damage, almost all at warm temperatures, never entered the evidence. (The familiar 7-damaged-vs-17-undamaged split describes the post-accident 48-rocket chart, pp.46–47.) Those undamaged flights are the statistical leverage that reveals the temperature-damage correlation.
 
 Tufte draws the parallel directly in *Visual Explanations* (p. 44): the Thiokol engineers' data selection was equivalent to Snow having mapped only a subset of cholera deaths while ignoring all the disease-free areas and their pumps. The undamaged flights carry the statistical leverage that makes the temperature pattern visible — numbers become evidence only when placed in relation to each other.
 
@@ -45,7 +45,7 @@ Snow's original data was a list of 83 deaths in date order — a natural time-se
 
 Snow converted the 1D temporal ordering into a 2D spatial comparison: deaths plotted by address on a street map, with all 13 community pumps also marked. This recast the same data into a form that could bear a causal argument.
 
-The Thiokol engineers faced the same choice and made the wrong one. Their 48-rocket iconographic display arranged the rockets in temporal order — SRM 1 through SRM 24. The causal variable, temperature, was written sideways in small type near each rocket. Tufte's corrected version places rockets in temperature order along the horizontal axis, with damage markers, and adds the Challenger forecast position at 29°F — far beyond all previous experience. The pattern is immediately visible.
+NASA and Thiokol got the same choice wrong twice. Pre-launch, none of the 13 charts arranged damage against temperature. After the accident, the display prepared for the presidential commission — 48 rocket icons, SRM 1 through SRM 24 — again arranged the rockets in temporal order, with the causal variable, temperature, written sideways in small type near each rocket (pp.46–47). Tufte's corrected version places rockets in temperature order along the horizontal axis, with damage markers, and adds the Challenger's 26°–29°F forecast position — far beyond all previous experience. The pattern is immediately visible. Tufte's own sentence keeps the two failures distinct: the principles of evidence display were violated in the 13 pre-launch charts as well as in the post-launch display that arranged the 48 little rockets in temporal rather than causal order (p.52).
 
 Tufte's rule (*Visual Explanations*, p. 49) is that a display must serve the analytic purpose in front of it. When that purpose is testing a possible cause-and-effect relationship, the graphic's only job is to arrange the data so the causal link becomes visible. Time and sequence are the wrong organizing axes unless time is itself the suspected cause.
 
@@ -104,35 +104,53 @@ The engineers at Morton Thiokol who opposed the Challenger launch had the correc
 
 Tufte's verdict in *Visual Explanations* (p. 44) is precise: the engineers had reached the correct conclusion and held the right causal theory, but their thirteen charts organized the data in ways that made the temperature-damage relationship invisible. They were thinking causally without displaying causally.
 
-### The specific failures of the 13 charts
+### The specific failures — 13 pre-launch charts, then post-accident commission displays
 
-**Failure mode 1 — Wrong measure of effect.** The title chart focused on "blow-by" (soot passing the primary O-ring) rather than erosion, the more serious damage mode. SRM 15 at 53°F had substantial erosion and blow-by; SRM 22 at 75°F had blow-by only. The comparison invited the rebuttal: "We had blow-by on the hottest motor and on the coldest motor" — making temperature appear irrelevant. With only two cases, no statistical statement about cause and effect was possible.
+Two families of displays failed, at different times, and conflating them is itself an evidence error. Tufte separates them explicitly: the six principles were violated in the 13 pre-launch charts as well as in the post-launch 48-rocket display (p.52).
 
-**Failure mode 2 — Selective data.** The temperature chart reported data for 4 development motors, 2 qualifying motors, and 2 actual launches with blow-by. Missing: 92% of temperature data, covering 5 flights with erosion and 17 flights without damage. The chart defined the database for the decision.
+**Pre-launch (the 13 charts faxed to NASA, January 27, 1986):**
+
+**Failure mode 1 — Anonymous authorship (p.40).** The title chart, "Temperature Concern on SRM Joints," named no individual authors or preparers — responsibility diluted, no one standing behind the analysis.
+
+**Failure mode 2 — Three names for one rocket (p.40).** The charts switched among NASA flight number (61-A), Thiokol motor number (SRM no. 22A), and launch date for the same booster, forcing viewers to perform cross-chart record-linkage in their heads. A causal display spanning multiple views must key every observation to one stable identifier.
+
+**Failure mode 3 — Anecdote in place of evidence (p.42).** The blow-by history chart rested the temperature case on two flights: SRM 15 at 53°F (substantial erosion plus blow-by) against SRM 22 at 75°F (blow-by only). It invited the fatal rebuttal — "We had blow-by on the hottest motor and on the coldest motor" — making temperature appear irrelevant; with only two cases, no statistical statement about cause and effect was possible, and erosion, the graver damage mode, was sidelined.
+
+**Failure mode 4 — Fragmented outcome measure (p.41).** O-ring damage was scattered across six descriptive types — erosion, soot/blow-by, depth, location, extent, view — stupefying fragments with no overall severity measure. Tufte's damage index (fn.36, p.44), a severity-weighted composite per launch, is what later makes a single y-axis possible; constructing a defensible outcome index is part of causal display design.
+
+**Failure mode 5 — Selective data (p.43).** The History-of-O-ring-Temperatures chart reported two developmental motors (DM-4, DM-2), two qualifying motors (QM-3, QM-4), and the two launches with blow-by (SRM-15, SRM-22). Missing: 92% of temperature data, covering 5 flights with erosion and 17 flights without damage. The chart defined the database for the decision.
 
 Tufte observes in *Visual Explanations* (p. 43) that every display of evidence silently defines what counts as relevant — the presented data is always a selection from a larger pool. The choice of what to include is as consequential as the data itself.
 
-**Failure mode 3 — Wrong ordering.** The 48-rocket iconographic chart arranged launches in temporal sequence. The causal variable, temperature, appeared only as small numbers written sideways. Any viewer trying to assess temperature-damage correlation had to mentally extract and re-sort 48 numbers while reading across two sequentially projected slides.
+**Post-accident (evidence prepared for the presidential commission, pp.46–47):**
 
-**Failure mode 4 — Disappearing legend.** The damage-severity code used on the 9-rocket chart vanished when that chart was replaced by the 48-rocket chart on the overhead projector. Viewers had to memorize the code across slides to read the damage values on the full chart.
+**Failure mode 6 — Wrong ordering.** The 48-rocket iconographic chart arranged launches in temporal sequence. The causal variable, temperature, appeared only as small numbers written sideways. Any viewer trying to assess temperature-damage correlation had to mentally extract and re-sort 48 numbers while reading across two sequentially projected slides.
 
-**Failure mode 5 — Chartjunk obscuring the signal.** The outline shapes of 48 little rockets dominated the visual field. The marks encoding actual data were small, opaque, and scattered inside the rocket silhouettes.
+**Failure mode 7 — Disappearing legend (p.47).** The damage-severity code used on the 9-rocket chart vanished when that chart was replaced by the 48-rocket chart on the overhead projector at the hearings. Viewers had to memorize the code across slides to read the damage values on the full chart.
+
+**Failure mode 8 — Chartjunk obscuring the signal.** The outline shapes of 48 little rockets dominated the visual field. The marks encoding actual data were small, opaque, and scattered inside the rocket silhouettes.
+
+**Failure mode 9 — Defensive caveats, or CYA notices (pp.46–47).** The post-accident charts carried legalistic, self-protective disclaimers. A display that needs an oral escort or a lawyer's caveat to be read is advocacy scaffolding, not evidence.
 
 Tufte equates chartjunk with statistical incompetence, the visual analog of muddled writing — invoking Ben Jonson's observation that a mind is out of tune when its words jar and a reason out of frame when its sentences are preposterous (*Visual Explanations*, p. 48).
 
 > "A lack of visual clarity in arranging evidence is a sign of a lack of intellectual clarity in reasoning about evidence."
 > — Tufte, *Visual Explanations*, p. 48
 
-### What the correct display would have shown
+### What the correct display would have shown — and its provenance
 
-A complete scatterplot of all 24 previous launches — O-ring damage index (y-axis) vs. temperature at launch (x-axis), with the Challenger forecast temperature of 29°F marked on the extended x-axis — makes the relationship visible in seconds:
+A complete scatterplot of all 24 previous launches — O-ring damage index, 0–12, on the y-axis (the severity-weighted composite of fn.36, p.44) vs. temperature at launch on an x-axis running 25°–85°F, with the 26°–29°F launch-day forecast range marked as a labeled band on the extended axis — makes the relationship visible in seconds:
 
 - Every launch below 66°F resulted in damaged O-rings
 - The coolest launch without damage was at 66°F
 - The Challenger forecast of 29°F was 5.7 standard deviations below the mean launch temperature
 - 29°F was 37°F colder than any previous undamaged launch
 
-Tufte's corrected scatterplot in *Visual Explanations* (p. 45) — plotting all 24 pre-Challenger launches by temperature and O-ring damage — makes the risk visible at a glance: every launch below 66°F had damaged O-rings, and the Challenger's 29°F forecast falls far beyond the range of any prior flight.
+Tufte's corrected scatterplot in *Visual Explanations* (p. 45) — plotting all 24 pre-Challenger launches by temperature and O-ring damage index — makes the risk visible at a glance: every launch below 66°F had damaged O-rings, and the Challenger's 26°–29°F forecast falls far beyond the range of any prior flight.
+
+**Display provenance (fn.39, p.46).** The famous damage-vs-temperature scatterplot most books reproduce as "the chart the engineers had" is itself post-hoc: two commission staff members drew it after the accident as a simulation of the pre-launch reasoning. It was never faxed, never seen before launch, and implies an analysis of 7 flights at 7 temperatures that no one performed — pre-launch, only two blow-by cases were ever tied to temperature. When retelling an evidence failure, verify which displays existed at decision time; a post-hoc reconstruction is evidence that must itself be documented.
+
+**The evidential counterfactual (pp.39, 52).** This was Thiokol's only no-launch recommendation in 12 years, made against intense schedule and political pressure — a presidential State of the Union address was scheduled hours after launch. Tufte's judgment is that those pressures would likely not have prevailed over a clear, credible display of all the evidence. The display's failure mattered precisely because a strong display is the instrument that resists ambient pressure.
 
 ---
 
@@ -140,9 +158,12 @@ Tufte's corrected scatterplot in *Visual Explanations* (p. 45) — plotting all 
 
 | Failure mode | Description | Example |
 |---|---|---|
-| **Control omission** | Showing only cases, not non-cases; omitting the comparison baseline | 13 charts show 7 damaged flights; omit 17 undamaged flights |
-| **Temporal displacement** | Organizing by time when the causal variable is not time | Rockets ordered by launch sequence, not temperature |
-| **Selective database** | Defining the dataset to include only data consistent with advocacy position | Temperature chart covers 7 of 24 flights; 92% missing |
+| **Control omission** | Showing only cases, not non-cases; omitting the comparison baseline | Pre-launch evidence never assembled the 17 undamaged (warm) flights |
+| **Temporal displacement** | Organizing by time when the causal variable is not time | Rockets ordered by launch sequence, not temperature (post-accident 48-rocket chart, pp.46–47) |
+| **Selective database** | Defining the dataset to include only data consistent with advocacy position | Temperature chart: 2 developmental + 2 qualifying motors + 2 blow-by launches; 92% missing (p.43) |
+| **Unstable identifiers** | Naming the same unit differently across views, forcing mental record-linkage | 61-A / SRM no. 22A / launch date for one booster (p.40) |
+| **Fragmented outcome measure** | Splitting the effect into descriptive shards with no composite severity index | Six damage types, no overall measure (p.41); fixed by the damage index (fn.36, p.44) |
+| **Defensive caveat (CYA notice)** | Display carries self-protective disclaimers requiring an oral escort | Post-accident commission charts' legalistic notices (pp.46–47) |
 | **Anecdote substitution** | Using 1-2 cases as if they establish cause and effect | Blow-by on SRM 15 and SRM 22 only; n = 2 |
 | **Iconographic corruption** | Using decorative pictorial units that resist proportional measurement | 48 little rockets with damage coded as opaque interior marks |
 | **Disappearing legend** | Calibration code visible on one slide, gone on the next | Damage severity scale present on 9-rocket chart, absent on 48-rocket chart |
@@ -181,7 +202,7 @@ Before finalizing any display intended to support a causal claim:
 - [ ] **Is the full dataset shown?** List what data exists and what fraction appears in the display. If less than 100%, state why.
 - [ ] **Are contrary cases investigated and reported?** The two or three data points that do not fit the pattern need explicit explanation on the display or in adjacent annotation.
 - [ ] **Is the proposed intervention temperature / dose / quantity shown at its actual value on the axis?** The Challenger argument required seeing 29°F on the same axis as 53°–81°F. Without that extension the extrapolation is invisible.
-- [ ] **Can the display be read without an oral explanation?** If a caveat says "cannot be considered complete without the oral discussion," the display is not a display — it is a prop for advocacy.
+- [ ] **Can the display be read without an oral explanation?** If a caveat says "cannot be considered complete without the oral discussion," the display is not a display — it is a prop for advocacy (a "CYA notice," pp.46–47).
 - [ ] **Are all aggregation choices tested for sensitivity?** Daily, weekly, monthly groupings of the same data should tell the same story. If they do not, show the detailed data.
 
 ---
@@ -204,3 +225,10 @@ This applies to all demonstrations and "proof of concept" displays: a single evo
 > — Richard Feynman, quoted in *Visual Explanations*, p. 53
 
 Applied to display design: a graphic that persuades by concealing the full evidence is not a successful display, even if it wins the argument in the room. The Thiokol engineers' charts failed not because they were deliberately dishonest, but because the designers did not impose the discipline of showing all the data in the right order. The discipline is not optional when the decision has irreversible consequences.
+
+---
+
+## Cross-book notes
+
+- *Seeing with Fresh Eyes* (p.80): Tolstoy's account of Napoleon "commanding" — thousands of consecutive, mutually dependent orders, of which history remembers only the few that happened to be executed — is a compact image of causal-selection bias: surviving records over-represent the causes that "worked."
+- *Beautiful Evidence* (p.163): the Columbia debris analysis had a simple causal skeleton — debris kinetic energy, plus strike location on a wing of varying vulnerability, yields threat level during re-entry heating — and the slide format still obscured it. Format can defeat even a short causal chain.

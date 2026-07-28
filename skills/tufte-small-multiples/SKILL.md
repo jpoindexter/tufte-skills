@@ -1,11 +1,16 @@
 ---
 name: tufte-small-multiples
-description: Apply Tufte's small multiples pattern — identical design structure, shared scale, and shared encoding across panels where only the data changes — to enable direct visual comparison across conditions, time, categories, or variables.
+description: "Use when comparing the same measurement across many conditions, categories, times, or places — when an overlaid chart drowns in crossing lines, an animation or slideshow forces comparison from memory, panels auto-scale to different ranges, or a faceted/trellis/grid layout is being designed or reviewed for panel size, ordering, borders, and shared scales."
 tags: [tufte, data-visualization, comparison, data-density, trellis, layout]
 ---
 # Small Multiples
 
 ## Overview
+
+> "At the heart of quantitative reasoning is a single question: *Compared to what?*" — Tufte, *Envisioning Information*, p. 67
+
+Small multiples answer that question directly: they enforce comparisons of changes, of differences among objects, of the scope of alternatives. Tufte's verdict in the same passage is that for a wide range of data-presentation problems, small multiples are the best design solution.
+
 Small multiples are a series of graphics sharing the same design structure, the same scale, and the same visual encoding — varying only the data across panels. Because the design is constant, the viewer's eye stops re-learning each chart and attends entirely to shifts in the data. Tufte presents the pattern as the single most effective method for multivariate comparison: simultaneously more honest, more dense, and more legible than animation, sequential views, or overlaid series.
 
 Two mechanisms power it. First, the Shrink Principle applied repeatedly: reduce one graphic to the minimum size that stays legible, then array many copies. Second, a large underlying data matrix: small multiples take a wide table of numbers and lay it out so the eye reads thousands of values at once, in the area a conventional graphic would spend on dozens.
@@ -17,7 +22,11 @@ Two mechanisms power it. First, the Shrink Principle applied repeatedly: reduce 
 > "Small multiples resemble the frames of a movie: a series of graphics, showing the same combination of variables, indexed by changes in another variable."
 > — Tufte, *The Visual Display of Quantitative Information*, p. 170
 
-The design holds constant across every frame so that attention goes entirely to how the data shifts. The three invariants that define a valid small multiple:
+The design holds constant across every frame so that attention goes entirely to how the data shifts. *Envisioning Information* states the invariant principle in one sentence:
+
+> "Constancy of design puts the emphasis on changes in data, not changes in data frames." — Tufte, *Envisioning Information*, p. 67
+
+The three invariants that define a valid small multiple:
 
 | Invariant | What it means | What breaks it |
 |---|---|---|
@@ -51,7 +60,7 @@ These are two distinct targets, and small multiples maximize both:
 
 The corollary: small multiples are usually built *from* a large data matrix (VDQI, p. 175). If the underlying table is small, the pattern earns nothing — an overlay or a single chart is faster. The power appears when a wide matrix is laid out so the eye scans many cells at once.
 
-Tufte cites Bertin: a crisp, elegant line style fits 17 small-scale graphics on one page alongside extensive text. The implication — most designers oversize individual panels, which cuts how many fit within eyespan and so prevents comparison.
+Tufte cites Bertin: a crisp, elegant line style fits 17 small-scale graphics on one page alongside extensive text — and the page is itself a small multiple *of design advice*, each of the 17 cells a before/after redesign (VDQI p. 169). The implication — most designers oversize individual panels, which cuts how many fit within eyespan and so prevents comparison.
 
 **Concrete density benchmarks from Tufte:**
 - Wall Street Journal, The Times (London), Asahi: data-rich, high-density graphics.
@@ -91,6 +100,8 @@ This rules out pagination as a comparison mechanism. If the viewer must scroll, 
 
 **Borders and grids:** use implicit structure, not heavy rules. Tufte's caution (paraphrasing *Envisioning Information*, p. 79): dark surrounds around each image generate disruptive white stripes where panels meet, pulling more attention than the data; locations can instead be signaled by nearly silent methods such as an implicit, evenly spaced grid.
 
+The VDQI source of this border discipline is the erased Tukey multiwindow plot: Tufte links the LA pollution multiple's graphical arithmetic to it directly (pp. 114, 171) — panels shed interior frames and grids and keep only data, exactly as the multiwindow redraw did.
+
 Do/don't pairs for panel framing:
 
 | Do | Don't |
@@ -112,7 +123,7 @@ Tufte builds the case for small multiples through a sequence of examples in the 
 | Example (page) | Structure | Index variable | What it reveals / why it qualifies |
 |---|---|---|---|
 | LA air pollution (p. 170) | 23 panels, each a distribution of hydrocarbon concentration over the city | Hour of day | Design unchanged frame to frame; only the pollution distribution shifts. All 23 visible at once — the canonical large-array small multiple |
-| Melanoma sites (p. 171) | Body-map diagrams showing anatomical distribution of 269 primary melanomas | Sex (and body region) | Identical body diagram repeated; only lesion-location data changes, so site patterns by sex compare straight across |
+| Melanoma sites — Wiskemann (p. 171) | Head-and-neck maps ("Kopf und Hals") locating 269 primary melanomas; 3 panels — both sexes combined, men, women | Sex | Identical head-and-neck diagram repeated; only lesion-location data changes, so site patterns compare straight across |
 | Sampling-error distributions (p. 172) | 12 panels, each a histogram of 50 random normal deviates | Replicate sample | Identical underlying process; the panel-to-panel scatter *is* the lesson — sampling variation made visible |
 | Herring catch (p. 172) | 6 distributions stacked vertically, 1908–1913, shared age x-axis | Year | The strong 1904 year-class ages through successive catches — a bump migrating rightward year by year. Readable only because the age axis is shared and panels are stacked for one eyespan |
 | Human/ape chromosomes (p. 173) | Chromosome banding strips arrayed across 4 primate species (human + three apes) | Species | Identical chromosome-strip design lets homologous bands be compared band-for-band across species |
@@ -124,6 +135,16 @@ Of the Consumer Reports figure Tufte writes:
 > — Tufte, *The Visual Display of Quantitative Information*, p. 174
 
 > Count note: the repair matrix has **17 trouble spots plus a Trouble Index and a Cost Index = 19 rows**, not 18. This aligns with the figure on p. 174 and with the `tufte-data-density` skill.
+
+### Exemplars beyond VDQI
+
+- **Huygens, 1659 (EI p. 67)** — the earliest dated small multiple in the canon: 32 drawings of Saturn at different three-space locations, from the vantage points of two different observers, opening EI's chapter. *Visual Explanations* returns to Huygens's ring diagram as an information-design classic and arrays 13 earlier *wrong* interpretations of Saturn beside it — people see more clearly once they have the right idea (VE pp. 106–108).
+- **Dighton Rock (EI pp. 72–73)** — the same rock drawn by different observers from 1680 to 1854, arrayed as a comparative multiple: constancy of subject exposes observer bias, wishful scholarship made visible.
+- **Chinese poets (EI pp. 74–75)** — 10,086 poets across four dynasties carried in one multiple array.
+- **Rivers (EI pp. 76–77)** — Tufte names the design tension outright: a struggle between maintaining each river's context and enforcing comparison across rivers. Every small-multiple design sits somewhere on that axis.
+- **Contredanse grid, 1762 (BE pp. 32–33)** — eight movements in a constant frame; read down for the sequence within a movement, across for the sequence between movements.
+- **FT COVID daily-death multiples (SWFE p. 26)** — every country's trajectory ghosted behind each panel, so each country is read scaled against all countries. (Body text says 54 countries; the red header on the same page says 61 — both figures appear in the book.)
+- ***Visual Explanations* on function and order** — VE's small-multiples pages name six distinct functions the format serves (p. 105) and recommend ordering panels by frequency of occurrence rather than arbitrary sequence (pp. 115–116).
 
 ---
 
@@ -138,6 +159,8 @@ Tufte positions small multiples as superior to three common alternatives for mul
 | Separate single charts (one per report/page) | Comparison requires memory across page turns; eyespan constraint violated | Shrink and array within one eyespan |
 
 The Consumer Reports matrix (§5) settles it: a conventional approach would need a dozen separate bar charts and would defeat the cross-comparison entirely.
+
+Small multiples also *argue*: EI (p. 30) frames them as efficient, convincing summaries that press the same point again and again through complementary variations on one substantive theme — repetition as rhetoric, with each panel a fresh witness.
 
 ---
 
@@ -170,14 +193,14 @@ The neurometric example (*Envisioning Information*, p. 78) is exactly this: diag
 
 ## §8. Conclusion: Properties of Well-Designed Small Multiples
 
-Tufte enumerates the defining properties (VDQI, p. 175). Well-designed small multiples are:
+Tufte closes the chapter with the defining properties (VDQI, p. 175, paraphrased). Well-designed small multiples:
 
-- **Inevitably comparative** — comparison is the entire point.
-- **Deftly multivariate** — they carry many variables without confusion.
-- **Shrunken, high-density**, and **usually built from a large data matrix**.
-- **Drawn almost entirely with data-ink** — little non-data decoration.
-- **Efficient to interpret** once the single shared design is learned.
-- **Often narrative** — they reveal how the relationship between variables shifts as the index changes, exposing interaction and multiplicative effects a single chart would hide.
+- **Exist to be compared** — panel weighed against panel is the array's entire job.
+- **Carry several variables at once** without strain or confusion.
+- **Run small and dense, resting on a large underlying table** — each panel reduced toward its legibility floor.
+- **Spend nearly all their ink on data** — almost none on apparatus or decoration.
+- **Read quickly** once the one shared design is learned.
+- **Often tell a story** — they reveal how the relationship between variables shifts as the index changes, exposing interaction and multiplicative effects a single chart would hide.
 
 The governing logic: minimize non-data-ink (less is more) while maximizing data-ink (less is a bore). That tension is the underlying theory of the whole pattern.
 

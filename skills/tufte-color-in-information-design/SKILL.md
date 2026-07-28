@@ -1,6 +1,6 @@
 ---
 name: tufte-color-in-information-design
-description: Apply Tufte's principles for color in data graphics — the four functional uses, color's three dimensions, Imhof's four rules, palette strategy, contextual effects, and redundant coding — to maximize information density while minimizing color damage.
+description: "Use when choosing or auditing color in a data graphic and something is off — rainbow scales on ordered data, more hues than a viewer can remember, saturated fields drowning small marks, key distinctions riding on color alone, adjacent pastels over large areas, phantom bands appearing at color boundaries, or color that decorates without labeling, measuring, or representing anything."
 tags: [tufte, data-visualization, color, information-design, cartography]
 ---
 # Color in Information Design
@@ -68,7 +68,7 @@ Every one of the ~50 color-organization systems locates a color in *three* dimen
 Eduard Imhof's rules (from *Cartographic Relief Presentation*, the design code behind the Swiss maps) are the most actionable palette guidance Tufte endorses, and they generalize beyond maps. Rules 1–2 minimize color *damage*; rules 3–4 build *harmony*.
 
 ### Rule 1 — Strong Colors Only on Small Areas
-Pure, bright, very strong colors are loud and unbearable when they stand unrelieved over large adjacent areas, but achieve extraordinary effect used sparingly on or between dull background tones. Imhof's analogy is musical: only a quiet ground lets a colorful theme register as a crescendo. Nature cooperates — extremes (highest peaks, deepest trenches, temperature maxima/minima) enclose only small areas, so reserve saturated color for those.
+Saturated, intense hues overwhelm the eye — even punish it — when they cover large adjoining regions without relief; rationed to small doses amid dull surrounding tones, the very same hues gain remarkable force. Imhof's analogy is musical: only a quiet ground lets a colorful theme register as a crescendo. Nature cooperates — extremes (highest peaks, deepest trenches, temperature maxima/minima) enclose only small areas, so reserve saturated color for those.
 
 | Area Size | Color Saturation |
 |---|---|
@@ -82,7 +82,7 @@ Give *all* areas glaring rich color and the result is brilliant, disordered, con
 Light, bright colors mixed with white, placed next to each other over large areas, usually look unpleasant. This is the pastel-on-pastel default of presentation software. Worse, dark-value versions of these strong colors produce 1+1=3 phantom bands at their boundaries that fight the encoded data.
 
 ### Rule 3 — Muted Backgrounds, Vivid Foregrounds
-Large background or base colors should work quietly so smaller bright areas stand out vividly. Gray is the most versatile color in the toolkit; strongly muted tones mixed with gray make the best ground for a colored theme. Gray is a deliberate instrument, not a compromise. Local emphasis comes from spot highlights of strong color woven through the serene background.
+Let the big background and base areas do quiet work, so the small bright zones read with maximum vividness. Gray is the most versatile color in the toolkit; strongly muted tones mixed with gray make the best ground for a colored theme. Gray is a deliberate instrument, not a compromise. Local emphasis comes from spot highlights of strong color woven through the serene background.
 
 ### Rule 4 — Interweave, Don't Partition
 Two or more large enclosed areas in different colors make the picture fall apart. Unity holds when the colors of one area are intermingled into the other, carpet-fashion, so all colors of the main theme scatter like islands across the background.
@@ -91,11 +91,19 @@ Two or more large enclosed areas in different colors make the picture fall apart
 
 **Failure mode — Color Partition:** a choropleth where each region is one solid block, no interweaving, so the color blocks assert dominance over the data they encode. Fix: intermingle, or drop to a value scale.
 
+### The Damage Gallery — Imhof's Rules Violated and Obeyed
+
+- **US county home-heating-fuel map, 1970 (p. 82):** strong dark colors plus a saturated surrounding blue generate a strange puffy white band that becomes the map's dominant visual statement — 1+1=3 at war with the encoding; the concrete violation of rules 1–2.
+- **The Hampshire map pair (pp. 94–95):** broad unrefined bands of strong color merely outline a shape every viewer already knows, destroy focus on detail, and turn a close-reading document into a poster. The beautiful original instead lets color gently define roads, boundaries, and cities — a clear statement about geography rather than a statement about color.
+- **The boundary rule (same passage):** a boundary's whole job is to show clearly what falls on which side of it; color cross-hatching that obscures the sides defeats the point of drawing a boundary at all.
+- **Burnham's 1909 Plan of Chicago drawing (p. 83):** small red and green color spots on a large muted field — coherent, vivid, textured, without clutter; the constructive face of rule 1.
+- **Tschichold's canceled layout (p. 83):** a single transparent red X striking through the classical page — one strong spot as a complete argument.
+
 ---
 
 ## §5. Color as Label — Maximum Differentiation
 
-For categorical labeling, the goal is maximum perceptual distance per slot. Tufte's exemplar is Oliver Byrne's 1847 visual *Euclid*, which discards the letter-coding of geometry: each element names *itself* by consistent shape, color, and orientation, so the thing is its own label — replacing an "alphabetic macaroni" of dozens of coded links between diagram and proof.
+For categorical labeling, the goal is maximum perceptual distance per slot. Tufte's exemplar is Oliver Byrne's 1847 visual *Euclid*, which discards the letter-coding of geometry: each element names *itself* by consistent shape, color, and orientation, so the thing is its own label — replacing an "alphabetic macaroni" of 63 encoded links between diagram and proof (p. 84).
 
 > "Use of the primary colors and black provides maximum differentiation (no four colors differ more)."
 > — Tufte, *Envisioning Information*, p. 86
@@ -125,7 +133,7 @@ Color quantifies along a perceptually continuous span (in value and saturation) 
 
 Faced with this "rainbow encipherment," viewers must turn to other cues (contour, edge, labels) to read the data at all.
 
-**Hue can *extend* a value scale (nuance, EI p.91 n.9):** controlled, gentle hue variation layered onto a value ramp increases fineness of differentiation while *keeping* a natural visual sequence. The sin is disordered hue (ROYGBIV), not hue per se.
+**Hue can *extend* a value scale (nuance, EI p. 92 n. 9):** controlled, gentle hue variation layered onto a value ramp increases fineness of differentiation while *keeping* a natural visual sequence. The sin is disordered hue (ROYGBIV), not hue per se.
 
 | Criterion | Value Scale (light→dark) | Rainbow (ROYGBIV) |
 |---|---|---|
@@ -151,6 +159,8 @@ Perceived color is not a stable property of a mark — it is a function of its s
 
 **Constructive use (don't only fear it):** on a conventional road map, a thin red line (small roads) deepens to a richer red where flanked by parallel blue stripes (large roads) — the surround's subtraction *extends* the label palette without printing an extra flat color. Context effects are a tool when deployed knowingly.
 
+**Albers's simultaneous-comparison rule (p. 93 fn. 10):** proper color comparison requires seeing both fields at the same moment — hold your gaze between the two rectangles for a sufficient length of time. Glancing back and forth instead produces shifting after-images that make comparison under equal conditions impossible. Directly actionable for palette QA: judge candidate colors side by side, never sequentially.
+
 **Why color-to-number is fragile:** the translation from a printed mark to a quantity in the viewer's mind is nonlinear (gamma curves), noisy, and idiosyncratic, and several percent of viewers are color-deficient. The standard clinical figure is ~8% of males with red–green deficiency (Tufte states "several percent"); avoid placing crucial distinctions on the red–green axis.
 
 **Failure mode — Solo Color Encoding:** a key distinction carried by color alone with no shape, position, or contour backup. When the surround shifts that color, the distinction blurs or reverses. Fix: add a non-color channel.
@@ -164,6 +174,8 @@ The cure for color's instability is not to abandon color but to layer it with no
 **Redundancy must be earned.** Tufte requires two conditions before adding a signal: (1) a genuine ambiguity in the display that multiplicity can actually reduce, and (2) the right technique to reduce *that* ambiguity. Add signals without a confusion to fix and you propagate gratuitous multiplicity.
 
 **What it looks like (GEBCO again):** color fields encoding depth are delineated by contours labeled with depth measurements. The contours eliminate edge fluting, make each field a coherent whole, minimize within-field variation, and maximize between-field difference — letting *finer* value distinctions read reliably. With 3% and 7% screen tints for ground vs. building, the two are barely separable bare and clearly distinct once an edge is added. Vision research (Marr) confirms human processing gives decisive weight to contour, so contours do the heavy lifting and color adds the layering.
+
+**Cognitive contours (p. 95):** in the Japanese textile pattern, white dots plus a narrow band of contextually shifted color generate cognitive contours that produce a homogeneous, cleanly edged field — the same perceptual mechanism behind GEBCO's contour edging and the 3%/7% planviews, seen from the vision-science side. Edges can be *induced* as well as drawn.
 
 | Do | Don't |
 |---|---|
@@ -235,3 +247,5 @@ Color stacks information planes in one space without confusion: a muted backgrou
 ---
 
 Source: Edward Tufte, *Envisioning Information*, Chapter 5 "Color and Information," pp. 81–95.
+
+Cross-book notes: *Beautiful Evidence* p. 120 shows red as an extraction device — pulling the evidence curve out of graphic debris while text and linework stay unified. *VDQI* p. 154 argues shades of gray beat color for ordered quantities (ten grays in the galaxies map), with blue the safest hue for color-deficient viewers (p. 183).

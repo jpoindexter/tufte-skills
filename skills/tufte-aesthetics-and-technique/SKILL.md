@@ -1,11 +1,11 @@
 ---
 name: tufte-aesthetics-and-technique
-description: Apply Tufte's Chapter 9 + Epilogue principles for the visual craft of a finished data graphic — the qualities of attractive displays, friendly vs unfriendly graphics, horizontal proportion and the golden rectangle, thin-line copper-plate craft, words/numbers/drawing integration, format selection, and the thesis that beauty is a by-product of clarity and data complexity. Use when judging or refining the look and technique of a graphic, not its data integrity or chartjunk count.
+description: "Use when refining or judging the look of a finished data graphic — aspect ratio and proportion, line weights, type choices, legend versus direct labels, integrating a graphic with its surrounding text — or when a chart is technically correct but ugly, portrait-shaped by software default, legend-dependent, set in clotted all-caps type, or exiled from the prose it belongs to. Not for data-integrity or chartjunk audits."
 tags: [tufte, aesthetics, technique, data-visualization, proportion, line-weight, information-design]
 ---
 # Aesthetics and Technique in Data Graphic Design
 
-**Source:** *The Visual Display of Quantitative Information* (VDQI), 1983/2001 — Chapter 9 ("Aesthetics and Technique") and the Epilogue (pp. 177–197). One observation from *Beautiful Evidence* (BE), 2006, is tagged inline.
+**Source:** *The Visual Display of Quantitative Information* (VDQI), 1983/2001 — Chapter 9 ("Aesthetics and Technique," pp. 177–190) and the Epilogue (p. 191). Observations from *Beautiful Evidence* (BE), 2006, and *Seeing With Fresh Eyes* (SWFE), 2020, are tagged inline.
 
 **Scope note:** This skill is about visual *craft* — proportion, line, typography, format, and the relationship between honesty and beauty. The data-ink ratio formula and the erasure procedure live in **`tufte-data-ink-ratio`**; the three chartjunk types (vibration, grid, duck) live in **`tufte-chartjunk`**. This skill references them as inputs to aesthetics rather than re-deriving them.
 
@@ -21,8 +21,9 @@ The thesis, restated as operating rules:
 - **Elegance = simple design × complex data.** Both factors required. A simple design over thin data is empty; a busy design over rich data is noise. Elegance is the product, not either alone.
 - **Beauty is a by-product of clarity.** The cues that make a graphic clear — high data density, direct labels, thin lines, honest proportion — are the same cues that make it look good. You do not pursue beauty directly; you pursue clarity and richness, and beauty follows.
 - **Content comes first.** A graphic's worth tracks the quality, relevance, and integrity of what it shows (BE). Devices, color, and interactivity cannot rescue failed content. The first question is never "how should this look" but "what task is this display for."
-- **Subject matters.** The best graphics concern important, substantive content, not the trivial — paraphrasing Tufte: serious displays are about life, death, and the universe, not filler. Minard never names Napoleon (VDQI); withholding the expected celebrity name concentrates all attention on the dead soldiers, which is itself an aesthetic choice in service of content.
+- **Subject matters.** The best graphics concern important, substantive content, not the trivial — paraphrasing Tufte: serious displays are about life, death, and the universe, not filler. Minard never names Napoleon (an observation from BE, not VDQI); withholding the expected celebrity name concentrates all attention on the dead soldiers, which is itself an aesthetic choice in service of content.
 - **Technique is in service of both.** Craft (line weight, typography, proportion) is how clarity and richness become visible. It is the last 5%, applied to a graphic that already has the right data and the right format.
+- **No recipes for masterpieces (p. 177).** The uniquely spectacular graphic can be admired but not derived from rules — Tufte cites Barnett Newman's quip that aesthetics is for the artist as ornithology is for the birds. These principles target routine, workaday designs; that is their honest scope.
 
 ## §2. The Qualities of Attractive Displays
 
@@ -47,21 +48,22 @@ Default a graphic toward the horizontal: greater in width than in height.
 3. **Cause-and-effect mapping** — graphics often plot an effect (Y) against a cause or time (X); a longer horizontal axis gives the explanatory variable room to elaborate.
 4. **Tukey's counsel** (paraphrased) — such plots are, more often than not, better made wider than tall.
 
-**The golden rectangle.** When the data themselves do not dictate a shape, Tufte points proportion toward the neighborhood of the golden rectangle:
+**The golden rectangle — reported, not prescribed.** Tufte is explicitly skeptical of φ-worship: he calls the Golden Section a venerable (fifth-century B.C.) but *dubious* rule of aesthetic proportion (p. 189), notes that Birkhoff listed five other candidate "aesthetic" rectangles (ratios 1, 1.414, 1.618, 1.732, 2), and finds the psychology-of-preference literature hardly decisive — reported preferences range from about 1.2 to 2.2 and swing with context (p. 190). His actual conclusion is modest:
 
-| Anchor | Ratio (width : height) |
-|---|---|
-| Golden rectangle (φ) | ≈ 1.618 : 1 |
-| Tufte's working default | ≈ 1.5 : 1 (about 50% wider than tall; height ≈ 2/3 of width) |
-| Playfair's common range | 1.4 – 1.8 : 1 (brackets φ) |
+| Anchor | Ratio (width : height) | Status |
+|---|---|---|
+| The data's own shape (a map's geography, a matrix's squareness) | — | First authority; always follow it |
+| Tufte's working default | ≈ 1.5 : 1 (about 50% wider than tall) | The book's only prescription (p. 190) |
+| Playfair's observed practice | ~two-thirds fall in 1.4 – 1.8 : 1 | Empirical clustering Tufte *reports* (p. 189), not a rule |
+| Golden rectangle (φ ≈ 1.618 : 1) | Falls inside Playfair's band | A historical talking point, not Tufte's target |
 
-**Evidence from Playfair:** across 89 graphics in six books, ~92% are wider than tall; roughly two-thirds fall in the 1.4–1.8 proportion band — clustering right around the golden rectangle.
+**Evidence from Playfair:** across 89 graphics in six books, ~92% are wider than tall; roughly two-thirds fall in the 1.4–1.8 proportion band (pp. 188–189). Tufte reports that clustering as Playfair's practice — he does not elevate φ into a principle.
 
 **Prescription:**
 1. If the data suggest a shape (e.g., a map's true geography, a matrix's natural squareness), follow the data.
-2. Otherwise default to ~1.5:1 horizontal, drifting toward φ (1.618:1). Never default to portrait or to whatever the software hands you.
+2. Otherwise default to about 50% wider than tall (~1.5:1). Do not chase φ, and never default to portrait or to whatever the software hands you.
 
-> **Adjacent principle — not Tufte (Cleveland, 1985).** Banking to 45°: choose the aspect ratio so the *median absolute slope* of trend segments reads near 45°, maximizing slope discrimination. It post-dates VDQI and is Cleveland's, not Tufte's — useful, but do not attribute it to VDQI. When slope *is* the message, treat aspect ratio as part of the encoding.
+> **Adjacent principle — not Tufte (Cleveland, 1985).** Banking to 45°: choose the aspect ratio so the *median absolute slope* of trend segments reads near 45°, maximizing slope discrimination. It post-dates VDQI and is Cleveland's, not Tufte's — useful, but do not attribute it to VDQI. When slope *is* the message, treat aspect ratio as part of the encoding. Tufte himself later endorses banking to ~45° (citing Heer & Agrawala) and attacks style sheets and legacy code that dictate aspect ratio regardless of the data (SWFE p. 63).
 
 ## §4. Line Weight and the Copper-Plate Tradition
 
@@ -90,11 +92,24 @@ Chapter 9's concrete craft checklist. "Friendly" graphics integrate words, numbe
 | Small explanatory messages sit near the data they explain | Graphic is cryptic; reader hunts through scattered text |
 | Labels placed directly on the graphic — no legend needed | Obscure codings force back-and-forth to a separate legend |
 | Elaborate shadings / cross-hatching avoided | Dense encoded shadings; repellent, chartjunk-filled |
-| Colors chosen so color-deficient viewers can read it (blue is broadly safe) | Red/green carry essential contrasts — fails color-blind readers |
+| Colors chosen so color-deficient viewers can read it — 5–10% of viewers are color-deficient, and blue is the hue most of them can distinguish (p. 183) | Red/green carry essential contrasts — fails color-blind readers |
 | Type upper-and-lower case, with serifs; clear, precise, modest | Type all-caps, sans serif, clotted and overbearing |
 | Invites the viewer, provokes curiosity | Repels the viewer |
 
 The unifying move is **direct labeling**: put the word on the line, not in a key. A legend is a deferred lookup; an on-graphic label is immediate. Eliminating the legend is one of the highest-leverage friendliness gains.
+
+### Data/text integration (pp. 180–182)
+
+The chapter's largest block of advice, and its most quotable principle:
+
+> "Data graphics are paragraphs about data and should be treated as such." — Tufte, *The Visual Display of Quantitative Information*, p. 181
+
+- **Run tables and graphics into the text** at the exact point of reference; reprint a display near each later reference rather than forcing the reader to flip back to "Fig. 2." (Tufte adds that abbreviating "Figure" to "Fig." is not worth the two character-spaces saved; p. 181 + fn. 3.)
+- **Same typeface for text and graphic**, and avoid ruled lines separating different kinds of information (p. 181).
+- **Segregation is a production artifact, not a communication choice.** Splitting graphics from prose reflects the historical division of labor in page make-up — Biderman's point that the graphic became a victim of adverse discrimination — while Leonardo's manuscripts, where drawing and word share every page, remain the integration benchmark (pp. 181–182).
+- **Type on graphics can be quite small:** short phrases and labels do not fatigue readers the way running text does (pp. 180–181).
+
+**The exploratory caveat (p. 182):** words on a graphic steer attention powerfully. In exploratory work, the words should tell the viewer *how to read the design*, not *what to read in terms of content* — annotation that pre-announces the conclusion contaminates the exploration.
 
 ## §6. Format Selection — Sentence, Table, Graphic
 
@@ -102,7 +117,7 @@ Match the format to the data's size and the reader's task before refining any vi
 
 | Format | Use when |
 |---|---|
-| Sentence / prose | 2–3 numbers; no real comparison structure; numbers belong in the flow of text |
+| Sentence / prose | Up to two numbers — the conventional sentence is a poor way to show more than two (p. 178); numbers belong in the flow of text |
 | Text-table (aligned numbers in running text) | A handful of numbers that benefit from vertical alignment for comparison |
 | Table | Small-to-medium dataset; exact values needed; local, look-up comparisons |
 | Supertable | Many related series at once — one dense, well-ordered table beats a wall of little charts |
@@ -137,9 +152,11 @@ But the principles are heuristics, not theorems. They are not logically or mathe
 
 Read this as license to use judgment, not as license to ornament. When a rule (maximize data-ink, go horizontal, thin the lines) would make a specific graphic worse or uglier, break the rule for that graphic — and only that graphic. The standard is grace and legibility, not rule-compliance.
 
+The Epilogue's second warning (p. 191) completes the license: principles received without skepticism train us to see only through the lenses of word authority rather than with our own eyes. Judge the graphic itself, not the rulebook's approval of it — the skepticism applies to Tufte's own principles too.
+
 ## §9. Named Failure Modes
 
-- **The portrait default** — accepting the software's square or tall aspect ratio. Trends get compressed, slopes become unreadable, and horizontal labeling fights the frame. *Fix:* set ~1.5:1 horizontal toward φ unless the data demand otherwise (§3).
+- **The portrait default** — accepting the software's square or tall aspect ratio. Trends get compressed, slopes become unreadable, and horizontal labeling fights the frame. *Fix:* set about 50% wider than tall (~1.5:1) unless the data demand otherwise (§3).
 - **Legend dependency** — encoding categories with abstract shadings or color keys so the reader ping-pongs between plot and legend. *Fix:* direct on-graphic labels; spell words out (§5).
 - **Decoration-as-rescue** — bolting ornament, 3D, or texture onto a thin dataset to make it look substantial. Beauty cannot be added; thin data stays thin. *Fix:* add real data or change the format, not the ornament (§1, §6).
 - **Uniform line weight** — drawing data lines, frames, gridlines, and connectors at the same thickness, so structure competes with information. *Fix:* impose the weight hierarchy; data heaviest, scaffolding palest (§4).
@@ -152,7 +169,7 @@ Read this as license to use judgment, not as license to ornament. When a rule (m
 |---|---|
 | Earn beauty through clarity + rich data | Add decoration to make thin data look interesting |
 | Let format follow data size and task | Polish a graphic that is in the wrong format |
-| Default to ~1.5:1 horizontal, toward the golden rectangle | Accept portrait/square or the software default aspect |
+| Default to ~1.5:1 horizontal (about 50% wider than tall) | Accept portrait/square or the software default aspect — or treat φ as a rule Tufte never made |
 | Treat aspect ratio as encoding when slope is the message | Ignore that shape changes how trends read |
 | Weight data lines heaviest; pale or erase scaffolding | Use one uniform heavy line weight throughout |
 | Label directly on the graphic; spell words out | Force the reader into a legend or abbreviation key |

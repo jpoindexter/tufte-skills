@@ -1,6 +1,6 @@
 ---
 name: tufte-data-maps
-description: Design data maps the way Tufte treats them in Envisioning Information — as the benchmark of information design and the densest, most multidimensional escapes from flatland — by increasing dimensions and data density, rewarding micro and macro reading, and letting the data question override cartographic convention.
+description: "Use when designing or auditing a map that carries data and something is off — a plan view spending both axes on geography the question does not need, poster-thin density that collapses on close inspection, ornament filling empty regions, one rigid scale forcing a choice between detail and overview, aggregation to political areas distorting the signal, or map small multiples restyled per panel."
 tags: [tufte, data-visualization, cartography, data-maps, information-design, escaping-flatland, micro-macro, small-multiples, spatial-data]
 ---
 # Tufte: Data Maps as the Standard of Information Design
@@ -9,7 +9,7 @@ tags: [tufte, data-visualization, cartography, data-maps, information-design, es
 
 In *Envisioning Information* Tufte does not treat the map as one chart type among many; he treats high-quality maps as the **gold standard of all information design** — bountiful detail, several layers of close reading combined with an overview, rigorous survey data. A good map is the most demanding escape from "flatland": it increases (1) the number of dimensions shown on a plane surface and (2) the data density per unit area, and it rewards both a distant macro glance and close micro inspection. The chronic failure is the **"duck"** — pretend dimensions, ornament, and posterized thinness substituted for data.
 
-**Scope note.** This skill covers Tufte's map argument in *Envisioning Information* ch. 1–2 (Escaping Flatland, Micro/Macro Readings). His separate choropleth / shaded-area "area is not data" critique belongs to *The Visual Display of Quantitative Information*, not here — do not cite *EI* for patch-map distortion, classification schemes, or modern cartographic conventions (Jenks, Moran's I, ColorBrewer); those are out of scope for this source.
+**Scope note.** This skill covers Tufte's map argument in *Envisioning Information*, chiefly ch. 1–2 (Escaping Flatland, Micro/Macro Readings). *EI* does carry its own choropleth critique: pp. 40–41 fault the shaded "blot map" on three grounds — non-uniform area sizes, color filling often-nearly-empty land so large unpopulated regions get the greatest visual emphasis, and historical boundary changes breaking statistical comparison — and present the fix, mesh maps built on Japan's division into 379,000 equal-sized cells (developed in `tufte-micro-macro-readings`; cite EI pp. 40–41 for it). What remains *VDQI* territory: the fuller "area is not data" patch-map treatment and classification schemes. Modern conventions (Jenks, Moran's I, ColorBrewer) are out of scope for both sources.
 
 ---
 
@@ -63,9 +63,14 @@ Tufte's strongest map lesson here: choose orientation and projection to *free a 
 |---|---|---|---|
 | Where does each value sit in 2-D space, plus one or more extra variables? | Relief/surface **small multiples** | LA smog (pp. 28–29) | each panel a surface for a 3rd variable; panels form a matrix |
 | How does a quantity vary along a single path (route, track, river)? | **Graphic timetable / linear-distance** map | Java railroad (pp. 24–26) | collapse 3 spatial dims to track-distance; free other axes for time, speed |
+| Does the traveler only need the route itself? | **Strip / itinerary** map | London–Dover / Calais–Paris (pp. 112–113) | trades flatland for "lineland" — context is sacrificed, but the viewer can edit down to and focus directly on the relevant |
 | Does the answer live in a vertical/sectional dimension the plan view hides? | **Profile / section** map | Japan weather (p. 28) | side view frees the vertical for temperature/altitude |
 | Need fine local detail *and* a global frame at once? | **Multi-scale / axonometric** map | Ise Shrine (p. 13), Manhattan (p. 37) | combines a close view with an overview |
+| Must every mark carry several variables at once? | **Multivariate tinted** map | GEBCO bathymetric chart (p. 91) | each color mark signals four variables — latitude, longitude, sea-or-land, and metric depth or altitude |
+| Are many layers jumbling into one visual level? | **Layered** map — separate by shape, value, size, color | Simla vs. Tokyo Prefecture (p. 58) | the Simla map's equal-everything jumble vs. Tokyo's calm layered separation; mechanics in `tufte-layering-and-separation` |
 | Is the lat/long plan view itself the literal answer? | Conventional **plan-view** map | (traditional weather map, named as the foil) | only when both 2-D axes genuinely carry the question |
+
+**Strip maps, expanded (EI pp. 112–113).** The 1801 London–Dover / Calais–Paris guide compresses each leg into a narrow vertical strip: a deliberate "wrong-way" departure from flatland toward lineland whose merit depends entirely on what is done with the freed second dimension. Two design details: the normally fixed compass pointer *rotates strip by strip* as the route bends, re-referencing orientation to the traveler rather than to north; and 19th-century Japanese book-length tour guides go further, printing the journey as one continuous horizontal strip gathered into bound, flowing pages — no strip discontinuities — with the vertical writing system conveniently labeling the horizontal path (as in Moronobu's 1690 Tokaido panorama).
 
 ---
 
@@ -171,3 +176,10 @@ Apply in order when building or auditing a data map:
 5. **If repeated, lock the canvas.** For small-multiple maps, hold scale/projection/framing/color constant so only data changes (§7).
 6. **Hunt the failure modes.** Ducks, posterization, ornament in empty space, plan-view waste, relief masking, marginal-only display (§8).
 7. **Confirm self-effacement.** The reader's attention should land on the data, not on the cleverness of the graphic.
+
+---
+
+## Cross-book notes
+
+- **VDQI pp. 16–27 is the pack's richest data-map vein:** the cancer atlas (3,056 counties, ~21,000 numbers per map), Snow's cholera dot map, the French wine-exports flow map, the 1.3-million-galaxy map (2,275,328 rectangles in ten grays), and the observation that data maps arrived only in the 17th–18th centuries despite millennia of cartography — cite VDQI, not EI, for these.
+- **Beautiful Evidence:** Swiss topographic maps as the standard for contour lines flowing over place-names (pp. 58–59); cartographic legends distinguishing 34, 15, and 17 line types with typographic clarity (p. 71); and the blunt rule "Maps don't put boxes around city names" (p. 79).

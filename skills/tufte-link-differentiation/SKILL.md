@@ -1,6 +1,6 @@
 ---
 name: tufte-link-differentiation
-description: Design and audit diagram connectors — links, arrows, causal lines — as differentiated evidence about each specific relationship (its type, direction, strength, certainty, and mechanism) rather than generic geometry, following Tufte's "Links and Causal Arrows" chapter in Beautiful Evidence. Use when building or critiquing flow charts, networks, webs, trees, org charts, project/parse trees, influence diagrams, or any graphic that ties nouns together with lines.
+description: "Use when designing or critiquing any diagram that ties nouns together with lines — flow charts, networks, webs, trees, cladograms, org charts, project or parse trees, influence and causal diagrams — and the connectors need to carry relationship type, direction, strength, certainty, or mechanism; also when auditing what a diagram's missing links silently claim."
 tags: [tufte, data-visualization, diagrams, information-design, evidence, graphical-integrity, arrows, connectors, causality, networks]
 ---
 # Links and Causal Arrows
@@ -29,7 +29,7 @@ Tufte's central claims, paraphrased:
 
 ### The four framing questions (apply to every link diagram)
 
-Tufte poses these of flow charts, networks, webs, influence patterns, project-management charts, trees of origin, parse trees, and Feynman diagrams alike (p. 64):
+Tufte poses these of flow charts, networks, webs, influence patterns, project-management charts, trees of origin, parse trees, and Feynman diagrams alike (p. 65 — the questions appear in the chapter's opening text; p. 64 is the full-page Barr plate):
 
 1. What precisely do the arrows mean?
 2. What do all those lines stand for?
@@ -67,6 +67,20 @@ Tufte contrasts Barr's spare chart with Ad Reinhardt's 1946 satirical cartoon of
 | Names | 7 artists | 263 artists/illustrators/friends |
 | Influences shown | 55 | 36 |
 | Pepsi-Cola contest winners | 0 | 18 (mocked, marked with a bottle) |
+
+### Fairness note: Barr *did* differentiate — just not the arrows (pp. 64–68)
+
+State this before anyone looks at the plate, or the critique will read as overstated. Barr deployed real encoding channels; the failure is specific and localized.
+
+| Channel Barr used | How he used it | What it encodes |
+|---|---|---|
+| **Type size** | CUBISM set largest; ORPHISM and SUPREMATISM smaller | Historical importance — exactly as city-name size works on a road map |
+| **Color** | Orange boxes for Japanese Prints, Near-Eastern Art, Negro Sculpture, Machine Esthetic | Figure/ground separation of influences arriving from *outside* the European avant-garde |
+| **Direction of the time axis** | 1890 at top, 1935 at bottom — time runs **downward** | Sequence without implying upward progress |
+
+The chart also works as an exhibition catalog cover and table of contents, readable as a curatorial map of museum rooms: CUBISM has 5 entrances and 7 exits, FAUVISM 6 entrances and a single exit.
+
+**Why this sharpens rather than softens the thesis.** Barr differentiated his **nouns** by size and his influence **origins** by color. He was plainly capable of encoding distinctions and plainly willing to. What he left wholly generic was the one channel carrying the analysis: the **51 arrows**. A designer who differentiates everything *except* the verbs has demonstrated that the omission is not a skills gap — it is the default blindness this chapter exists to name. Generic connectors survive in otherwise sophisticated diagrams precisely because links are not perceived as an encoding decision at all.
 
 **Named failure mode — The Implicit Non-Influence Claim:** a diagram is audited only on the links it draws, never on the links it omits. Each missing connector is an assertion of "no relationship here" that no one checked. Audit the white space as hard as the lines.
 
@@ -142,6 +156,31 @@ Differentiation by style alone is coarse. The chapter's higher standard is *anno
 
 **Named failure mode — Legend Displacement:** all relationship semantics live in a separate key, so the reader cannot read the topology and its meaning at once. The graphic nominally contains the information but functionally suppresses it. A legend should *supplement* on-link annotation, not replace it.
 
+### The doctrine, stated at its sharpest (cross-book: *Seeing With Fresh Eyes*, p. 68)
+
+Tufte's later formulation is the most compressed version of this whole chapter, and worth carrying as the working standard:
+
+- **Linking lines aspire to be sentences** — with subjects, verbs, and objects. A connector that cannot be read aloud as a sentence has not yet said anything.
+- Annotated links show **causes, effects, mechanisms, trade-offs, flows, and feedback**.
+- **Unannotated links lack character.** No more `x–y`; no more `x→y`.
+- The positive case there is a 1957 Disney organizational chart carrying **37 annotated graphical sentences** — an org chart that explains how the parts of a business feed each other, set against the know-nothing links of the standard hierarchy diagram.
+
+**Practical test:** read every connector in your diagram aloud as a sentence. Where you can only say "A relates to B," you have found an unarticulated claim, not a finished one.
+
+### Kill the cross-reference numbers (p. 77)
+
+A concrete integration technique from this chapter, easy to apply and rarely applied.
+
+Martinus Veltman's *Diagrammatica* **dispenses with numbering for equations and figures**, placing each one where it is needed instead. Tufte's stated payoff: the reader is not required to keep fingers at eleven different places in the book.
+
+The connection to this skill: a cross-reference number ("see Fig. 4," "per Eq. 12") is itself a species of the **dreaded letter code** — an arbitrary token standing in for the thing, redeemable only by travelling somewhere else. The fix is the same as for links: **co-location**. Put the figure where its argument happens, even at the cost of repeating it.
+
+| Do | Don't |
+|---|---|
+| Repeat a diagram at each place it is discussed | Number it once and send the reader back |
+| Place equations and figures inline at the point of need | Build a numbered apparatus that must be navigated |
+| Treat repetition as cheaper than navigation | Treat page count as the resource being conserved |
+
 ---
 
 ## §6. Encoding Variation Across Channels
@@ -182,12 +221,52 @@ The chapter's checklist. Tufte derives six practices from the SARS molecular-epi
 Two enforcement rules from practice 5:
 
 - **Maplike, not corporate.** If the display looks like a knock-off of a corporate annual report or a PowerPoint pitch, start over. The content should be intense, explanatory, evidential, maplike — *the metaphor is the map, not stupidity* (§4).
-- **Don't box every noun.** Org-chart boxes are rarely needed; a map doesn't draw a box around each city name. Position alone locates a node, and the space saved by dropping boxes can carry real information (e.g., the salary or headcount equivalent of each now-unboxed unit).
+- **Don't box every noun.** Org-chart boxes are rarely needed; a map doesn't draw a box around each city name. Position alone locates a node, and the space saved by dropping boxes can carry real information.
+
+**The org-chart redesign, worked (p. 79).** Tufte does not stop at "drop the boxes" — he shows what to do with the reclaimed area. He unboxes an academic organization chart and spends the recovered space on **real quantitative content**: the headcount or salary equivalent of each unit. The chart stops reporting only *hierarchy* and starts reporting **resource allocation**, which is the question anyone actually brings to an org chart.
+
+The satirical target on the same page — an "Assistant Dean of Bureaucracy" — carries the second half of the point: **a box dignifies a unit; an unboxed chart with numbers exposes it.** Boxes equalize. Every node gets the same rectangle regardless of whether it commands 200 people or two, so the format flatters small empires and hides large ones.
+
+**Restate practice 5 accordingly:** dropping boxes is not minimalism or decluttering. It is **capacity reclamation** — you are buying space, and the discipline is to spend it on evidence rather than on white space.
+
+| Do | Don't |
+|---|---|
+| Drop the boxes, then fill the reclaimed area with headcount, budget, or output per unit | Drop the boxes and call the emptier chart an improvement |
+| Let the size or annotation of a node report its actual weight | Give every unit an identical rectangle regardless of scale |
 
 > "Maps don't put boxes around city names."
 > — Edward R. Tufte, *Beautiful Evidence* (p. 79)
 
 Practice 6 has teeth even on quantities: the chapter mocks **suspicious precision** — indices reported to 4 significant digits from crude 1-or-2-digit measurements, a fossil dated "54.97 million years," and "feel-good pitch words" like "strict consensus of parsimonious trees" whose technical and cheerleading meanings are conflated (p. 75). Annotate links and nouns with honest precision, not borrowed authority.
+
+### §7b. The Cladogram Interrogation — how to audit a link diagram someone hands you
+
+The six practices above tell you how to *draw* a good link diagram. This sequence — Tufte's questioning of a published primate cladogram (pp. 74–75) — tells you how to **interrogate** one, and it generalizes to every link diagram.
+
+**1. What causal mechanism does the diagram claim?**
+Name it out loud. A tree of descent claims a specific historical process; a network of arrows claims transmission, influence, or control. If nobody can state the mechanism in a sentence, the topology is decoration.
+
+**2. What 2-space does the diagram reside in?**
+The cladogram's horizontal dimension carries branching order, but its **vertical dimension carries little meaning** — the species could be stacked in many orders without changing any claim. Half the display's geometry is therefore unearned, while looking exactly as authoritative as the half that is earned. Ask of any diagram: what does *each* axis mean, and what would change if a node moved along it?
+
+**3. Show me the data matrix.**
+This tree is derived from roughly **15,000 numbers** — a character-by-taxon matrix the diagram never exposes. The reader is shown the conclusion and withheld the evidence. Demand the matrix, or at minimum a statement of its size, source, and coding rules.
+
+**4. What modeling assumptions produced this shape?**
+**Parsimony is a statistical modeling assumption, not a proven property of biology.** It is a rule for choosing among trees, imported from methodology rather than discovered in the organisms. Every link diagram built by an algorithm carries assumptions of this kind; they belong in the caption, not in the tool's defaults.
+
+**5. How many equally good alternatives were there?**
+There were **33 equally parsimonious trees.** The published single tree is a *selection from a candidate set*, presented with none of that selection visible. A diagram drawn from many near-equivalent candidates is a **brittle, over-fitted model** — and this is precisely the failure the evidence-corruption chapter names as model-search cherry-picking (pp. 146–147), here appearing not as a regression table but as a **picture**. The picture is more dangerous, because it displays none of the machinery that would let a reader discount it.
+
+| Question to ask | Failure signal |
+|---|---|
+| What mechanism is claimed? | No one can state it in a sentence |
+| What does each axis mean? | An axis carries no meaning but occupies half the geometry |
+| Where is the underlying data matrix? | Never shown, never sized, never sourced |
+| What modeling assumption chose this shape? | Presented as a finding rather than as a method |
+| How many equally good alternatives existed? | Many — and only one was drawn |
+
+**The general lesson:** a diagram launders model uncertainty. A table of 33 candidate models invites scrutiny; one clean tree invites belief. Treat any single published diagram derived from a search as the equivalent of a single published regression from 10^4 candidates — and ask for the same disclosures.
 
 ---
 
@@ -238,7 +317,7 @@ Define the scale *before* drawing; derive every weight from it mechanically. Mak
 | Failure mode | Source | Diagnostic signal | Fix |
 |---|---|---|---|
 | **Generic Undifferentiated Link** | p. 70 | all connectors identical in weight/style/head | one differentiated mark per relationship type; give it a dictionary |
-| **The Implicit Non-Influence Claim** | p. 64 | only drawn links are audited | check the gaps — each absent link asserts "no relationship" |
+| **The Implicit Non-Influence Claim** | p. 65 | only drawn links are audited | check the gaps — each absent link asserts "no relationship" |
 | **One-Directional Influence Fiction** | p. 67 | all single-headed arrows meaning "influence" | run the reversal test; use ↔/⇄ for mutual; label with a specific verb |
 | **Equal Line Weight for All Elements** | p. 77 | pointer lines and object lines indistinguishable | weight by importance; remove pointer lines except where essential |
 | **Box-Around-Every-Noun** | p. 79 | org-chart boxes around every label | drop boxes; position locates the node; reclaim the space for data |
@@ -246,6 +325,10 @@ Define the scale *before* drawing; derive every weight from it mechanically. Mak
 | **Mismatched Color Code** | p. 74 | color assignments fight expectation | map colors to intuitive meaning; document the code |
 | **Suspicious Precision** | p. 75 | 4-sig-dig indices from crude data; pitch words | annotate to honest precision; expose assumptions |
 | **Legend Displacement** | p. 79 | all meaning in a distant key | annotate at the link; legend supplements, not replaces |
+| **Unearned Geometry** | pp. 74–75 | an axis or dimension carries no meaning yet looks as authoritative as one that does | state what each axis encodes; collapse or annotate the empty dimension |
+| **Hidden Data Matrix** | pp. 74–75 | the numbers behind the topology (~15,000 here) are never shown or sized | publish the matrix, its source, and its coding rules alongside the diagram |
+| **Laundered Model Search** | pp. 74–75 | one clean diagram selected from many equally good candidates (33 trees) | report the candidate count and the selection rule; treat the diagram as one draw, not a finding |
+| **Cross-Reference Code** | p. 77 | "see Fig. 4" / "per Eq. 12" forces navigation | co-locate; repeat the figure where it is discussed (Veltman) |
 | **Style Collision** | §8 (applied) | two types read alike | enforce minimum perceptual distance between marks |
 
 ---
@@ -260,6 +343,7 @@ Define the scale *before* drawing; derive every weight from it mechanically. Mak
 - [ ] Is the link annotated with mechanism, magnitude, and evidence basis — on the line, not in a distant key? (§5)
 - [ ] Is the *noun* at each end annotated as richly as the link? (§5)
 - [ ] Does the diagram have a dictionary that answers "what do these lines mean?" (§1)
+- [ ] Could each link be read aloud as a **sentence** — subject, verb, object? If it reduces to "x–y" or "x→y," it has no character yet (§5)
 - [ ] Have you audited the *absent* links — does each gap correctly claim non-influence? (§2)
 - [ ] Six practices: causality, multiple sources, annotated links, annotated nouns, maplike efficiency, credibility? (§7)
 - [ ] Is precision honest — no 4-sig-dig numbers from crude data, no pitch words? (§7)

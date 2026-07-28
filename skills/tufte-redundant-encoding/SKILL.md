@@ -1,6 +1,6 @@
 ---
 name: tufte-redundant-encoding
-description: Apply Tufte's principles for warranted redundant and multi-channel visual encoding — riding the same variable on several perceptual channels to win robustness, separation, and accessibility, while avoiding the 1+1=3 noise that overlapping marks generate. Anchored in Envisioning Information's layering-and-separation chapter and the Swiss topographic map's four uses of color.
+description: "Use when deciding whether a variable should ride on more than one visual channel, or when a display shows symptoms of getting that wrong — hue-only encoding that dies in grayscale or for color-deficient viewers, channels colliding into moire or 1+1=3 noise, a second encoding that buys no robustness or separation, or cyclic data severed at an arbitrary boundary such as midnight."
 tags: [tufte, data-visualization, redundant-encoding, layering, cartography, color, accessibility, perception]
 ---
 # Tufte: Redundant and Multi-Channel Encoding
@@ -13,7 +13,7 @@ Mapping one data variable to more than one visual channel at the same time is de
 
 ## §1. The EI Principle — Differences That Make a Difference
 
-Tufte's governing statement for this whole topic is not the data-ink erasing rule from his earlier book; it is the closing line of the layering chapter:
+Tufte's governing statement for this whole topic is not the data-ink erasing rule from his earlier book; it is the sentence that opens the final passage of the layering chapter (EI p. 65):
 
 > "INFORMATION consists of differences that make a difference." — Tufte, *Envisioning Information*
 
@@ -104,7 +104,7 @@ Altitude is encoded *redundantly and complementarily*: hypsometric color band (i
 
 **The over-specification payoff:** any one channel of the stack is legible; any two are robust; all together survive color print, grayscale, reduced scale, and color-deficient viewing. Redundancy here is fault tolerance, not decoration.
 
-**Imhof's co-registration constraint:** color-field boundaries must align exactly with contour lines. A color zone that bleeds across a contour creates a phantom step-edge — the 1+1=3 effect reappearing as a registration artifact. The map also shows the discipline directly: contour-line color *changes as the background shifts* so the edge never collides with its field.
+**Co-registration (design inference — not a stated Imhof or Tufte rule):** what EI actually states is that GEBCO's color fields are delineated by contours labeled with depth measurements (p. 94), and that on the Swiss map the contour-line color *changes as the background shifts* (p. 81). The inferred discipline, flagged as such: keep color-field boundaries aligned with contour lines — a color zone bleeding across a contour would manufacture a phantom step-edge, the 1+1=3 effect returning as a registration artifact.
 
 **The color-budget formula (EI p. 81):**
 - A trained eye discriminates ~**1,000,000** colors under contrived pairwise comparison.
@@ -113,6 +113,8 @@ Altitude is encoded *redundantly and complementarily*: hypsometric color band (i
 - First principle of color in information design:
 
 > "Above all, do no harm." — Tufte's first rule for color in information, *Envisioning Information*
+
+**Byrne's dual labeling (EI p. 87) — the book's most explicit warranted redundancy.** Tufte's redraw of Oliver Byrne's color *Euclid* reinstates conventional letter labels *alongside* Byrne's color coding. Intermingling the two methods does not read as fussy: it speeds recognition, and it lets each viewer choose their own way of linking text to diagram — with both methods likely used together. This is the working model for §11's purpose test: the second channel earns its place because it resolves a real linking ambiguity.
 
 ---
 
@@ -137,15 +139,17 @@ EI's redesigns all enact this:
 
 ---
 
-## §6. Cyclic Redundancy — Marey's Schedule and Ocean Currents
+## §6. Cyclic Redundancy — Gluing the Data Surface (EI p. 107)
 
-The structural (non-color) case for genuine redundancy is cyclic data, treated in Tufte's *Narratives of Space and Time* material (EI ch. 5 and *The Visual Display of Quantitative Information*), not the layering chapter — flagged here for honest provenance.
+The structural (non-color) case for genuine redundancy is cyclic data, treated in EI's "Narratives of Space and Time" chapter (ch. 6, pp. 97–119; the gluing devices sit on p. 107) — not the layering chapter, flagged here for honest provenance. Three devices share one page, and each spends repetition to *remove an arbitrary cut*, never to add data:
 
-Marey's Paris–Lyon train schedule plots each train as a sloped line on a station × time grid. In a single 24-hour panel, any train running off the right edge forces the reader to mentally wrap back to the left — an invisible cut that severs the line. The fix is spatial repetition: extend the time axis past one period so every trajectory plots as one continuous, unbroken line. The extension carries **no new information**; it removes an arbitrary cut.
+1. **Playfair's Ordnance chart → torus-graphic.** William Playfair handled outlying war-spending peaks first by temporarily extending the grid upward — Tufte's analogy is ledger lines in musical notation — and then by topologically gluing the data surface from top around to bottom, the graphical counterpart of octave displacement. The glued result is a torus-graphic. Thick horizontal bars flag war periods, and the topology surfaces a substantive finding: a ratchet effect, with postwar expense never shrinking back to its prewar level.
+2. **The 24-hour timetable.** A daily graphical schedule can likewise be glued end-to-end onto a cylinder, so the cycle is fully connected and no train runs off the right edge at midnight — or the grid can simply be prolonged a few extra hours on flat paper, as in the Tufte/Druckrey Atlanta–Chicago airplane schedule, to expose the complete cycle.
+3. **Recycled globes.** A world map may repeat the globe so that, somewhere in the picture, every country and ocean appears whole — which also avoids ethnocentrism, since no region is condemned to the cut. EI's illustration, the Bryan–Cox world-ocean map, is printed wrapped roughly 1⅔ times around; the figure suggests sizing the overlap to keep the longest continuous feature unbroken and no more — an inference from the illustration, not a rule Tufte states.
 
-**Threshold for cyclic repeat:** size the overlap to the *longest continuous feature in the data*, not to a round number. For a world map of ocean surface currents Tufte notes that "one and two-thirds times around is better" than once — enough overlap to keep the longest current unbroken, no more.
+**Attribution note:** the graphical train schedule EI credits in this chapter is Charles Ybry's (British patent No. 11,868, 1846). The Paris–Lyon chart commonly attributed to Marey is *VDQI* material — do not source it to EI.
 
-**Do:** repeat a cyclic axis when a natural traversal crosses the boundary, sized to the longest contiguous path.
+**Do:** repeat a cyclic axis when a natural traversal crosses the boundary, keeping the repetition to what closes the cut.
 **Don't:** wrap non-cyclic data onto a torus or repeat a full second period when a fraction suffices — that is density without benefit.
 
 ---
@@ -157,7 +161,7 @@ The small-multiples chapter (EI ch. 4) is redundant encoding's structural cousin
 | Example | Repeated (muted) | Differentiator (foregrounded) |
 |---|---|---|
 | Hudson & Manhattan train signals | The repeated train outline | Color of the signal lights — redrawing mutes the outline so color reads |
-| Birthplaces of Chinese poets (10,086 across 4 dynasties) | Base map, panel layout | Circle *area* + red — magnitude redundantly on size and color |
+| Birthplaces of Chinese poets (10,086 across 4 dynasties) | Base map, panel layout, and red — the constant hue of every circle across all four maps | Circle *size* alone carries the poet counts; red is not a second magnitude channel but the single foregrounded data layer |
 | Neurometric brain maps | Grid of disk frames | Limited focused color, "more effective than strong rainbow colors" |
 | Fly-fisher plate | Implicit grid | Pairs each insect with its fly-fishing imitation |
 
@@ -243,4 +247,6 @@ The governing asymmetry: a warranted channel costs some density and design time;
 
 ---
 
-*Sources: Edward Tufte, Envisioning Information — ch. 3 "Layering and Separation" (pp. 53–65), ch. 4 "Small Multiples" (pp. 67–79), and the opening of ch. 5 "Color and Information" (pp. 80–81, the Swiss map and the four uses of color). Josef Albers, "One Plus One Equals Three" (1+1=3 effect, quoted in EI). Eduard Imhof, Cartographic Relief Presentation (color-composition rules, quoted in EI). Cyclic-redundancy material from EI ch. 5 / Tufte, The Visual Display of Quantitative Information. §8 accessibility is post-Tufte current practice (WCAG 2.2; CIE/Oklab perceptual color; CVD epidemiology), consistent with Tufte's robustness argument but not from the book.*
+*Sources: Edward Tufte, Envisioning Information — ch. 3 "Layering and Separation" (pp. 53–65), ch. 4 "Small Multiples" (pp. 67–79), ch. 5 "Color and Information" (pp. 81–95; the Swiss map and four uses of color pp. 80–81, Byrne's dual labeling p. 87), and ch. 6 "Narratives of Space and Time" (pp. 97–119; the cyclic gluing devices at p. 107). Josef Albers, "One Plus One Equals Three" (1+1=3 effect, quoted in EI). Eduard Imhof, Cartographic Relief Presentation (color-composition rules, quoted in EI). §8 accessibility is post-Tufte current practice (WCAG 2.2; CIE/Oklab perceptual color; CVD epidemiology), consistent with Tufte's robustness argument but not from the book.*
+
+*Cross-book notes:* VDQI ch. 4 (pp. 96–100) carries Tufte's own inventory of legitimate redundancy — context, comparison, aesthetic balance, and cyclical wrap-around — plus the six-way redundant bar; cite it for the general warrant argument. *Seeing With Fresh Eyes* p. 61 shows a typeface split (sans vs. serif team names inside one baseball data paragraph) carrying an entire categorical variable with no label — a zero-extra-ink second channel.

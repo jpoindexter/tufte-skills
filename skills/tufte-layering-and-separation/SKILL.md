@@ -1,6 +1,6 @@
 ---
 name: tufte-layering-and-separation
-description: How to stack multiple information streams on a flat surface without generating visual noise — the 1+1=3 principle, the noise formula, figure/ground, weight hierarchy, grids, type placement, and color as a layering tool, with worked editing techniques.
+description: "Use when a display's layers fight each other — grids louder than the data, vibrating or shimmering edges, boxed words with white halos, moire beating between overlapping patterns, every element at one equal visual weight, or labels breeding bright stripes against the marks they name. Applies to any surface stacking data over scaffolding: maps, tables, timetables, dashboards, dense diagrams."
 tags: [tufte, data-visualization, layering, figure-ground, visual-hierarchy, color]
 ---
 # Layering and Separation
@@ -24,7 +24,7 @@ Josef Albers proved the arithmetic with two cardboard strips ("One Plus One Equa
 | 2 strips crossing at centers | 4 arms, 4 rectangles, 4 triangles, 4 squares — many meanings from two marks |
 | Crossing off-center | the in-between figures go unequal — even more shapes |
 
-Albers' move was to see *area and surface* rather than *border and edge* — which is how you escape the "magic" of optical illusion and reason instead about negative-space activation. Gaetano Kanizsa's subjective-contours demonstrations (Nolli/Turgot maps, illusory triangles; *Scientific American*, 1976, cited p. 60) make the same point from the other side: the eye constructs a whole shape — with a crisp edge — from marks that never draw that edge. Marks generate form in the gaps; the only question is whether that form is information or noise.
+Albers' move was to see *area and surface* rather than *border and edge* — which is how you escape the "magic" of optical illusion and reason instead about negative-space activation. Gaetano Kanizsa's subjective-contours demonstrations (illusory triangles; *Scientific American*, 1976, cited p. 60) make the same point from the other side: the eye constructs a whole shape — with a crisp edge — from marks that never draw that edge. Tufte's own footnote carries the observation into cartography (p. 61, fn. 7): on the Nolli and Turgot maps, the streets are defined tersely by the surrounding ink of blocks and buildings — the street edge is never drawn, only implied. Marks generate form in the gaps; the only question is whether that form is information or noise.
 
 **The two-step editing discipline (p. 61):**
 
@@ -50,7 +50,7 @@ Tufte states the relationship as a law, not a preference (p. 62):
 
 ### The worked technique: thin two sides of every block
 
-Tufte's three-map sequence (Jon Wertheimer, Yale student project, p. 62) shows the formula applied as a concrete editing move, not just a principle:
+Tufte's three-map sequence (p. 62; the middle map is a Yale student project by Jon Wertheimer, 1985–86) shows the formula applied as a concrete editing move, not just a principle:
 
 | Map | Treatment | Effect |
 |---|---|---|
@@ -94,7 +94,7 @@ Color is the most powerful layering device on flatland: it separates streams wit
 
 ### Imhof's two rules (Eduard Imhof, *Cartographic Relief Presentation*, p. 72, quoted by Tufte twice)
 
-- **Large areas, muted (p. 58, fn. 3 — Imhof's "first rule of color composition").** Pure, bright, or very strong colors have loud, unbearable effects when spread unrelieved over large adjacent areas; the same colors achieve extraordinary effect used sparingly on or between dull background tones. Imhof quotes Windisch: noise is not music — only on a quiet background can a colorful theme be built. The background's quietness is what gives accents their force.
+- **Large areas, muted (p. 58, fn. 3 — Imhof's "first rule of color composition").** Saturated, intense hues turn overwhelming — even punishing — when they cover large adjoining regions without relief; deployed in small doses against dull surrounding tones, the very same hues gain unusual force. Imhof quotes Windisch: noise is not music — only on a quiet background can a colorful theme be built. The background's quietness is what gives accents their force.
 - **Small areas, intense (p. 63, fn. 10 — the complementary rule).** Confine strong, heavy, rich, solid color to the small areas of extremes; let large background and base areas work quietly — muted, grayish, or neutral — so the small bright areas stand out most vividly. Tufte calls small spots of intense saturated color carrying information a design secret of classical cartography (and of traffic lights).
 
 ### Worked color-layer examples
@@ -119,6 +119,8 @@ Color is the most powerful layering device on flatland: it separates streams wit
 Weight hierarchy assigns line weight, type size, and mark intensity in proportion to information importance. Scaffolding — grids, rules, borders — gets the least. The decisive quality is relational: each layer's visual weight must be in proportion and in harmony with the substance it conveys (p. 54). Concrete test: if the grid is more prominent than the data, the proportion is wrong.
 
 ### Tschichold's table-rule hierarchy (Jan Tschichold, *Asymmetric Typography*, 1935/1967, p. 62, cited p. 55)
+
+The enclosure habit is centuries old: Tufte introduces the Tschichold passage against a hand-ruled, "touchingly ramshackle" grid from a 1535 edition of *Cosmographia* (p. 55) — proof that imprisoning data in boxes long predates any modern design tool, and that the discipline against it must be re-learned in every era.
 
 | Treatment | When to use | Tufte/Tschichold rule |
 |---|---|---|
@@ -170,6 +172,10 @@ The original aircraft-marshalling chart is an "information prison": a narrow ran
 4. **Differentiates the type** — set in Gill Sans, no longer equal in weight to the motion arrows; the title emerges from its "foggy closet."
 
 Result: figure separates from ground cleanly, with strictly less ink.
+
+### Worked subtraction: the p. 62 statistical-graph edit
+
+Distinct from the p. 64 multi-window plot: a graph of variability about local averages is cluttered by parallel lines and equal-width white bands that read as their own pattern. The redesign sweeps that noise away and lets small spots of color track the path of the averages — a single color spot replacing an entire line layer. This is the layering chapter's own demonstration that color can *substitute* for a layer of linework, not merely tint it.
 
 ---
 
@@ -245,3 +251,5 @@ These are not data-visualization inventions; they are the oldest discipline of m
 - [ ] **Design the blank space:** are the negative areas doing work, or just left over?
 
 Source: Edward Tufte, *Envisioning Information*, Chapter 3 "Layering and Separation," pp. 53–65.
+
+Cross-book notes: *Seeing With Fresh Eyes* (pp. 24–26) names the ghost grid as the canonical layering device — Bell Burnell's pulsar traces, Curie's and Pauling's lab charts, Knuth 2019, Marey ~1880, even an 1800 BCE clay-tablet grid, with topographic contours running *underneath* the type; its counter-case is a real-time medical interface whose loudest elements are cyan grid bars. *Beautiful Evidence* (p. 120) restates the goal as a layered depth of reading — not a hierarchy of verbal over quantitative information but a pluralism of distinctions, with red pulling the evidence curve out of administrative debris in the Hayward/Strong chart pair.

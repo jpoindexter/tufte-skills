@@ -1,6 +1,6 @@
 ---
 name: tufte-micro-macro-readings
-description: Design displays that read at two scales at once — the individual datum up close and the aggregate pattern from a distance — by layering immense detail so complexity rewards inspection without sacrificing legibility at a glance. Grounded in the "Micro/Macro Readings" chapter of Tufte's Envisioning Information.
+description: "Use when a dense display must read at two scales at once and is failing at either — the glance shows no pattern, close inspection yields no individual values, detail is being stripped to 'reduce clutter,' data is fanned thinly across many pages or slides, or an ordering choice (alphabetical vs. meaningful) is severing individual marks from the aggregate story."
 tags: [tufte, data-visualization, information-density, layered-data, cartography, multiscale]
 ---
 # Micro/Macro Readings
@@ -17,7 +17,7 @@ Detail does not obscure the big picture — detail *builds* it. On Constantine A
 
 Tufte's two-part argument for why this works:
 
-- **Freedom of the overview.** Panorama, vista, and prospect give the viewer the freedom to compare, sort, and search across detail — choosing where to look rather than being marched through a sequence.
+- **Freedom of the overview.** A broad prospect hands the viewer their own path through the data — sorting, comparing, hunting across the detail, choosing where to look rather than being marched through a sequence.
 - **A refuge in the micro.** Fine micro-information acts like the small texture of a landscape (Jay Appleton's *Experience of Landscape*): it slows the pace of reading, makes it personal, and gives the eye a place to dwell. These responses are universal, rooted in everyday human information-processing.
 
 **The reading modes that must coexist:**
@@ -29,6 +29,10 @@ Tufte's two-part argument for why this works:
 | Transition | Moving in/out | How one resolves into the other — the richest zone | Two disconnected displays, not one multiscale design |
 
 **Why density matches the mind, not fights it.** Humans thrive in information-thick worlds precisely because of a deep everyday repertoire — we select, edit, single out, group, merge, synthesize, sort, filter, cluster, summarize, skim, winnow, and separate signal from noise constantly (Tufte lists roughly fifty such verbs, p. 50). Data-rich displays are not merely an acceptable complement to that capability; when the task is contrast, comparison, or choice, the more relevant information held within a single eyespan, the better. Sparse displays squander the apparatus.
+
+**Viewer control and credibility (p. 50).** High-density design shifts control of the information to the viewer — away from editors, designers, and decorators. Readers select, narrate, recast, and personalize the data for their own uses. Data-thin, forgetful displays do the opposite: they push viewers toward passivity and corrode the source's credibility — a sparse graphic rightly provokes the suspicions *what are they leaving out? is that really everything they know? what are they hiding?* And against the claim that generous empty space is "friendly," Tufte calls friendliness an anthropomorphizing muddle: what matters is not how much white space or how much information a display holds, but how effectively it is arranged.
+
+**The economics of density (p. 50).** Serious micro/macro work carries the costs of first-class cartography — data collection, custom computing, image processing, fine printing — historically affordable mostly to governments. The offset is real: one high-density page can replace twenty scattered posterizations, with savings across design, paper, printing, binding, warehousing, and shipping, and readers keep the one informative sheet instead of the twenty.
 
 ## §2. The Four Data Layers (and a Fifth in Time)
 
@@ -74,7 +78,7 @@ A celebrated micro/macro composition: many individual hands, drawn in aggregate,
 
 ### Tokyo population-density mesh maps (pp. 40–41)
 
-Statistical maps reporting data for hundreds of thousands of tiny grid squares, 1 km on a side (from the *1980 Population Census Results*, Tokyo, 1985). Density concentrations trace rail lines and station stops; a companion map shows the share of children per cell — low in central Tokyo, high in a suburban ring. To build them, the whole of Japan was divided into **379,000 equal-sized units** and census data and addresses re-collated to match the grid.
+Statistical maps reporting data for thousands of tiny grid squares per map, each 1 km on a side (from the *1980 Population Census Results*, Tokyo, 1985). Density concentrations trace rail lines and station stops; a companion map shows the share of children per cell — low in central Tokyo, high in a suburban ring. To build them, the whole of Japan was divided into **379,000 equal-sized units** and census data and addresses re-collated to match the grid.
 
 **The choropleth problem the mesh map solves:**
 
@@ -116,7 +120,7 @@ This is the chapter's most consequential and most contrarian claim. Designers wh
 
 > "Clutter and confusion are failures of design, not attributes of information." — Edward Tufte, *Envisioning Information* (p. 51)
 
-The quantity of detail is an issue *completely separate* from the difficulty of reading. Often the *less* complex and subtle the line, the *more* ambiguous and less interesting the reading. Stripping detail is a style driven by personal preference and fashion — considerations indifferent to the substance the display is supposed to convey. Tufte recruits three allies: Josef Albers (we read whole word-pictures, not letters, so more-differentiated forms read *easier* — all-caps and sans-serif read worse, against the constructivist dogma that simpler letterforms read simpler); Robert Venturi (where simplicity cannot work, simpleness results — minimalism is merely boring); and Mies van der Rohe (excellence lives in the details). The false equation to reject: *simpleness of data = clarity of reading*. The real goal: a rich texture of data — comparative, contextual, complex in content — revealed with an economy of means.
+The quantity of detail is an issue *completely separate* from the difficulty of reading. Often the *less* complex and subtle the line, the *more* ambiguous and less interesting the reading. Stripping detail is a style driven by personal preference and fashion — considerations indifferent to the substance the display is supposed to convey. Tufte recruits three allies: Josef Albers (we read whole word-pictures, not letters, so more-differentiated forms read *easier* — all-caps and sans-serif read worse, against the constructivist dogma that simpler letterforms read simpler); Robert Venturi (where simplicity cannot work, simpleness results — minimalism is merely boring); and Mies van der Rohe — "God is in the details," as quoted at p. 51. The false equation to reject: *simpleness of data = clarity of reading*. The real goal: a rich texture of data — comparative, contextual, complex in content — revealed with an economy of means.
 
 **Do / don't (with concrete anchors):**
 
@@ -212,3 +216,5 @@ Before shipping any dense data display:
 - [ ] Would fanning this across multiple pages/slides destroy the comparison? If so, keep it on one page.
 
 Source: Tufte, *Envisioning Information* (Graphics Press, 1990), Chapter 2, "Micro/Macro Readings," pp. 37–51.
+
+Cross-book notes: *VDQI* pp. 155 and 159 (three viewing depths; the 400,000-point census map) are the in-book seeds of this chapter. *Seeing With Fresh Eyes* pp. 126–129 gives the deepest historical case: the Talmud page, with 18 separate rabbinical mark-up traditions accumulated over a thousand years and editions running ~6,200 pages with over 100,000 annotations.

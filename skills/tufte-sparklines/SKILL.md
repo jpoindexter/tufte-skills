@@ -1,6 +1,6 @@
 ---
 name: tufte-sparklines
-description: Design rules, the typographic and density arguments, aspect-ratio math, variations, anchoring methods, and domain applications for Tufte's sparklines — intense, simple, word-sized data graphics embedded in prose, tables, and numbers.
+description: "Use when a number, table, or dashboard metric needs its history shown in the space of a word; when embedding data graphics in prose, tables, or clinical, financial, sports, and scientific displays; when choosing sparkline aspect ratio, color, or anchoring method; or when arguing for higher information density against low-resolution charts and slides."
 tags: [tufte, data-visualization, sparklines, information-density, typography, dataword]
 ---
 # Sparklines: Intense, Simple, Word-Sized Graphics
@@ -8,7 +8,9 @@ tags: [tufte, data-visualization, sparklines, information-density, typography, d
 ## Overview
 A sparkline is a small, high-resolution graphic embedded directly in a sentence, a table cell, or beside a number — a "dataword" with the same intensity of visual distinctions as a printed word. It shows the full shape and history of a measure at word scale, not precise read-off values. The core problem it solves: a lone number or a recent-change column has no context, so readers over-weight the latest value (recency bias); a sparkline puts the current reading inside its entire past in the space of a word.
 
-The chapter is titled *Sparklines: Intense, Simple, Word-Sized Graphics* in *Beautiful Evidence* (printed pp. 47–63). All page citations below are the book's printed page numbers.
+The chapter is titled *Sparklines: Intense, Simple, Word-Sized Graphics* in *Beautiful Evidence* (printed **pp. 46–63** — chapter plate p. 46, title page p. 47). All page citations below are the book's printed page numbers.
+
+**The goal in one line: de-ceremonialize the data graphic.** Tufte's stated end-point (p. 63) is that data graphics stop being a *special occasion* — a framed thing in a separate place, captioned "Fig. 17-B" on some slide. The variable that changes is **frequency, not quality**. Charts are events; sparklines are everywhere. Every design rule below follows from wanting data graphics to be as unremarkable as words.
 
 ---
 
@@ -94,7 +96,7 @@ Two concrete, **separate** tables prove it — do not merge them:
 
 Scaling to publication:
 - **Newspaper finance:** at 8 lines/inch, ~160 sparklines per column → **~400,000 additional daily graphical prices and changes per 5-column page** (p. 51).
-- **Scientific journals:** only ~3–5% of published graphics reach sparkline-like resolution today; by 2006 the median *Nature*/*Science* data graphic carried >1,000 numbers, and published data densities doubled over a decade — Tufte argues this should be far higher (p. 53).
+- **Scientific journals:** only ~3–5% of published graphics reach sparkline-like resolution today; by 2006 the median *Nature*/*Science* data graphic carried **>1,000 numbers** (p. 53, corroborated at p. 138) — Tufte argues this should be far higher. *(A frequently repeated claim that published data densities "doubled over a decade" could not be located in the chapter on a full-text check; treat it as unverified and do not cite it to this source.)*
 - **Overall:** sparklines run at **5 to 100× the resolution of conventional graphics and tables** (p. 63).
 
 Density also fixes attention span: a year of daily history beside the current number reduces recency bias. Tables that show only current levels or recent changes reinforce it.
@@ -276,4 +278,20 @@ Sparklines push statistical graphics up to the routine resolving power of the hu
 
 ---
 
-Source: *Beautiful Evidence*, Edward Tufte — chapter "Sparklines: Intense, Simple, Word-Sized Graphics," printed pp. 46–63 (`/tmp/tufte/beautiful-evidence.pdf`, PDF pp. 42–59; printed = PDF + 4).
+## §15. The Resolution Upgrade You Already Have (p. 63)
+
+Tufte closes the chapter with a thought experiment worth repeating whenever a team is waiting on better tooling.
+
+Imagine new software, or a new display technology, that hugely improved the resolution of data graphics — how valuable would that be? Then observe: **sparklines deliver exactly that improvement by design**, at **5 to 100× the resolution** of conventional graphics and tables, through direct, public, open-source methods rather than through a vendor's roadmap.
+
+**The reframe:** adopting sparklines is a refusal of the tooling-upgrade treadmill. It is a design decision, not a procurement decision, and it is available today at zero technology cost. This pairs directly with §11's critique of single-mode applications — the constraint that keeps most displays low-resolution is the application architecture, not the screen, the printer, or the eye.
+
+| Waiting for | Available now |
+|---|---|
+| A vendor to ship a higher-resolution charting feature | 5–100× resolution from a design change you can make this week |
+| A new display technology | Paper at >1,200 dpi, already on the desk (§12) |
+| A tool that integrates words, numbers, and images | Sparklines, which make no distinction among them by construction |
+
+---
+
+Source: *Beautiful Evidence*, Edward Tufte — chapter "Sparklines: Intense, Simple, Word-Sized Graphics," printed **pp. 46–63**.

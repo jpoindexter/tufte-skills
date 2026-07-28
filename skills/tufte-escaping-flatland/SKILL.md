@@ -1,6 +1,6 @@
 ---
 name: tufte-escaping-flatland
-description: Apply Tufte's overarching framework for putting multivariate data on a flat surface — the TWO goals (more representable dimensions, higher data density) reached through FIVE methods (micro/macro readings, layering, small multiples, color, space-time narratives) — when designing any chart, map, dashboard, table, or display that must carry more than two variables.
+description: "Use when a chart, map, dashboard, table, or display must carry more than two variables and the flat surface is running out of room — symptoms include fake 3-D or ornament standing in for data, one separate mark per variable, density so thin it invites suspicion, or uncertainty about which of Tufte's five envisioning methods (micro/macro, layering, small multiples, color, space-time narratives) the problem calls for."
 tags: [tufte, data-visualization, information-design, dimensionality, data-density, multivariate]
 ---
 # Escaping Flatland
@@ -27,6 +27,8 @@ The term comes from Edwin A. Abbott's novel *Flatland: A Romance of Many Dimensi
 |---|---|
 | Abstraction | As data loses its tie to familiar three-space (temperature, GDP, sentiment), there is no physical form to lean on |
 | Variable count | Each extra variable competes for the same two axes of the surface |
+
+**The chapter's closing frame (p. 33):** we envision information in order to reason about, communicate, document, and preserve knowledge — activities conducted almost entirely on two-dimensional paper and screen. The escapes grow harder along exactly the two axes above: as the data's ties to familiar three-space weaken (ever more abstract measures) and as the dimension count climbs (ever more complex data).
 
 **The fundamental compromise:** nearly every escape from flatland trades one virtue for another. The literature is "partial, arbitrary, and particularistic" — no single trick solves dimensional compression in general. Paul Klee made the related point that a whole built from parts of different dimensions is hard to grasp and harder still to convey to someone else, because spoken language is sequential and cannot hold many dimensions at once. Expect tradeoffs; do not chase a universal solution.
 
@@ -82,6 +84,10 @@ Five hundred years of practice (examples from 17 countries, 7 centuries, "3 plan
 
 **Rule:** the more abstract the data, the further right on this spectrum you must move — literal depiction runs out, and you must encode. The orrery is the cautionary midpoint: physical fidelity that drowns the very motion it was built to show.
 
+**The documented escape — the periodic table (pp. 14–15).** Tufte's named case of a well-worked compression problem is the periodic table of the elements: several hundred arrangements have been proposed in the attempt to capture its complexities, including triangular layouts, a spiral, and looping-orbit forms (Zmaczynski, Mazurs). One dataset supporting radically different escapes is the chapter's evidence that dimensional compression admits many defensible answers — and its anchor example of abstract multivariate data predating statistical graphics.
+
+**The dodecahedron's six faces (p. 15).** The Tukey display slices the data and projects it onto six of the twelve faces of a pentagonal dodecahedron — six suffice because opposite faces are parallel and would show identical views. A worked lesson in spending exactly as many panels as the geometry requires, no more.
+
 ---
 
 ## §5. The Sunspot Lineage — Visual Reasoning to Micro/Macro (pp.18–23)
@@ -92,7 +98,7 @@ The chapter traces one dataset across ~380 years to show the same methods reappe
 
 **Galileo's visual reasoning (1613):** through a chain of drawings he converts what "the eye of the forehead" merely registers into what "the eye of the mind" understands — turning raw spot positions into proof that the spots sit on a rotating spherical sun. It was more than 150 years before anyone materially improved his result.
 
-**Scheiner's small multiples (*Rosa Ursina*, 1626–1630):** daily diagrams indexed on time, then apparent-path diagrams tracking spot structure across a stationary disk — "a design simultaneously enhancing dimensionality and information density." But Scheiner filled the blank, spotless regions with his patron's and religious order's emblems (a failure mode, §10).
+**Scheiner's small multiples (1613 and 1626–1630):** the daily diagrams indexed on time come from Scheiner's *De Maculis Solaribus* (Rome, 1613, published under the pseudonym "Apelles"), with one further plate from *Rosa Ursina*; the apparent-path diagrams tracking spot structure across a stationary disk are the contribution of his later *Rosa Ursina* (completed 1630) — "a design simultaneously enhancing dimensionality and information density." But Scheiner filled the blank, spotless regions with his patron's and religious order's emblems (a failure mode, §10).
 
 **Maunder's butterfly diagram (1904):** decades of daily mapping (the chart spans 1877–1902, ±40° latitude). The sunspot's **two areal dimensions are reduced to one content-relevant dimension** — latitude in degrees — freeing the surface for time. Individual marks are the micro; the aggregate butterfly shape is the macro, showing the ~11-year cycle and the drift of spots toward the equator.
 
@@ -116,13 +122,13 @@ A 1937 graphical timetable for the Soerabaja–Djokjakarta line (annotated in Du
 | Vertical axis | Station, spaced in proportion to distance along the track (not alphabetically) |
 | Diagonal direction | Train direction — upper-left→lower-right = "down"; lower-left→upper-right = return; an X where opposite trains pass |
 | Diagonal slope | Relative speed (steeper = faster) |
-| Diagonal line style (4×4 matrix) | Train type (super express / express / passenger / mixed / special / cargo / preferential / night cargo) × seasonality (regular / seasonal / irregular / special) |
+| Diagonal line style (8×4 matrix) | 8 train types (super express / express / passenger / mixed / special / cargo / preferential / night cargo) × 4 seasonal patterns (regular / seasonal / irregular / special) |
 | Left-margin profile | Elevation at enlarged vertical scale, with grade and path columns alongside |
 | Per-station aerial insets + dingbats | Local facilities: cargo platform, livestock loading, water pump tower, directional-change platform, car repair, standby engines, relief car, closed areas |
 
 **The multiple-functioning diagonal:** one mark records **six variables at once** — a train's location between towns, the time of that position, direction, train type, relative speed (by comparing slopes), and yearly pattern. One mark doing six jobs beats six separate marks. (Tufte sources the "double-functioning element" idea from architectural criticism — Venturi, citing Wylie Sypher.)
 
-**The spy story (load-bearing detail):** this 16-variable sheet was an internal planning document, obtained by agents preparing Japan's 1942 invasion of Java, and is marked "secret" in the corner. A display this dense reads as both micro (one train) and macro (the whole system's structure) — "like an excellent map, but with many dimensions breaking free of direct cartographic analogy."
+**The spy story (load-bearing detail):** this 16-variable sheet was an internal planning document, obtained by agents preparing Japan's 1942 invasion of Java, and is marked "secret" in the corner. A display this dense reads as both micro (one train) and macro (the whole system's structure): "It is very much like an excellent map, but with many dimensions breaking free of direct analogy to conventional cartographic flatland." (EI p. 26)
 
 **Layering rules:**
 
@@ -138,13 +144,13 @@ A 1937 graphical timetable for the Soerabaja–Djokjakarta line (annotated in Du
 
 **Tomlinson's dance notation (1735):** four dimensions on one page — the flatland of the ballroom floor, coded gestures of body motion, and time sequence. The floor plan links to the music (itself two dimensions plus time and tone) by **numbers that double-function**: they sequence the steps *and* tie each step to a musical measure. Movement is symbol-encoded rather than verbal because a serious notation avoids words, which are a barrier to international use. Mirrored partners are drawn in full (redundant bilateral symmetry usually wastes space) because their weaving, intermingling paths require the symmetric repetition to read.
 
-**Japanese newspaper weather cross-section (1985):** instead of the usual plan-view of latitude and longitude, the map shows Japan as a **vertical side profile, an ocean-eye view**, with gray contours tracing 0°C and -10°C through the clouds and forecast symbols for 15 cities. By spending one dimension on elevation rather than a second horizontal axis, it reads far more easily than a conventional weather map. Caveat: the trick works best for long, thin countries.
+**Japanese newspaper weather cross-section (1985):** instead of the usual plan-view of latitude and longitude, the map shows Japan as a **vertical side profile, an ocean-eye view**, with gray contours tracing 0°C and -10°C through the clouds and forecast symbols for 15 areas. By spending one dimension on elevation rather than a second horizontal axis, it reads far more easily than a conventional weather map. Caveat: the trick works best for long, thin countries.
 
 **Narrative rule:** match each dimension's encoding to its nature — time → sequential position, direction → orientation, speed → slope — and cherish every chance to spread an extra variable over a dimension you already have on the page.
 
 ---
 
-## §8. The Small-Multiple Exemplars and Data Density (pp.29–33)
+## §8. The Small-Multiple Exemplars and Data Density (pp.28–33)
 
 Small multiples "move to the heart of visual reasoning — to see, distinguish, choose." Their multiplied smallness forces comparisons within a single **eyespan**, so the active eye does the work rather than memory bridging images scattered across pages.
 
@@ -219,7 +225,8 @@ Jonathan Swift's 17th-century cartographers, who filled unknown territory with p
 | 1570 | Euclid's *Elements*, Billingsley ed. | Paper fold-up models for solid geometry |
 | 1610–1612 | Galileo's sunspot observations | Projection: marking spots onto paper at true scale/position |
 | 1613 | Galileo's *Istoria e Dimostrazioni* | Visual reasoning: data → mechanism |
-| 1626–1630 | Scheiner's *Rosa Ursina* | Time-indexed small multiples; apparent-path diagrams |
+| 1613 | Scheiner's *De Maculis Solaribus* (as "Apelles") | Daily time-indexed small multiples of sunspots |
+| 1626–1630 | Scheiner's *Rosa Ursina* | Apparent-path diagrams across a stationary disk |
 | 1735 | Tomlinson's dance notation | Floor-plan + coded gesture + time, with double-functioning numbers |
 | 1800 | Orreries | Mechanical 3D simulation — but Pridefully Obvious Presentation |
 | 1822 | Barème Universel interest tables | Tabular small multiples (capital × time × rate) |
@@ -266,3 +273,5 @@ Before shipping any chart, map, table, or display:
 - [ ] Would a reader who knows the encoding decode any panel without re-reading the instructions?
 
 Source: *Envisioning Information* (Edward Tufte, Graphics Press, 1990), ch. 1 "Escaping Flatland," pp. 12–35 (the chapter thesis and two goals appear on pp.12–13; the five methods are previewed p.33).
+
+Cross-book notes: *Visual Explanations* restates the framing as a question — how to depict a world of three or more dimensions on the two-dimensional flatlands of paper (VE p. 141). *Beautiful Evidence* sharpens it into an epistemic warning: the only two-dimensional thing about evidence is the physical flatland of paper and screen, and flatlandy display technologies encourage flatlandy thinking (BE p. 130).
