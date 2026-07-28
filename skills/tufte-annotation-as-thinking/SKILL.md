@@ -36,14 +36,14 @@ A good annotation is doing more than naming a part. Tufte's formulation on p. 12
 |---|---|---|
 | Caption below the frame naming the figure | Weak | Identifies only; does not explain and does not teach the reading |
 | Words placed at the feature they describe, containing a verb | Strong | Identify + explain in one act, no decode round trip |
-| A key that maps A, B, C to phrases underneath | Content-hostile | Forces the exact decode round trip a legend forces (see `tufte-typography-for-data` §, p. 55) |
+| A key that maps A, B, C to phrases underneath | Content-hostile | Forces the exact decode round trip a legend forces (see `tufte-typography-for-data`; SWFE p. 55) |
 | Second-color annotations correcting first-color annotations in place | Strong | The display holds a dispute rather than a conclusion |
 
 ---
 
 ## §2. Annotation Across Notational Systems — Kircher, 1650
 
-In Athanasius Kircher's *Musurgia universalis* (1650), five birdsongs annotate five bird images (p. 121). The songs run as musical notation on staves that curve and blow across the plate; the birds are engraved illustrations; the sounds themselves are written as non-lexical vocables — syllables with no word meaning, the *gucu gucu* of a cuckoo. Tufte's point is that images, staves, Latin labels, and nonsense syllables all play together at once, the way an opera score does. The parrot's line is set in ancient Greek.
+In Athanasius Kircher's *Musurgia universalis* (1650), five birdsongs annotate five bird images (p. 121). The songs run as musical notation on staves that curve and blow across the plate; the birds are engraved illustrations; the sounds themselves are written as non-lexical vocables — syllables with no word meaning, the *gucu gucu* of a cuckoo. Tufte's point is that images, staves, Latin labels, and nonsense syllables all play together at once, the way an opera score does. The parrot says *hello* in ancient Greek.
 
 **The transferable move:** annotation is not restricted to the annotator's home notation. Any mode that carries the content — words, numbers, musical notation, sketches, arrows, color, a photograph — is admissible in the same field, and the mix is a feature rather than a mess.
 
@@ -53,7 +53,7 @@ In Athanasius Kircher's *Musurgia universalis* (1650), five birdsongs annotate f
 
 ## §3. Annotating a Work of Art in a Newspaper — Reinhardt, 1947
 
-Ad Reinhardt's "How to look at a mural" (*P.M.* daily newspaper, Brooklyn, January 5, 1947) is reproduced across pp. 122–123. Reinhardt reproduces Picasso's *Guernica* — a mural of roughly 12 × 26 feet, painted for the Spanish Loyalist Government's pavilion at the 1937 Paris World's Fair, later toured through London and America's seven largest cities and seen by over a million people — and pins about fifteen labeled readings directly onto its parts: the bull, the dying horse, the mother with the lifeless child, the electric-bulb sun as an all-seeing eye, the severed hand with its crossed life-lines, the decapitated statue, the clenched fist and broken sword.
+Ad Reinhardt's "How to look at a mural" (*P.M.* daily newspaper, Brooklyn, January 5, 1947) is reproduced across pp. 122–123. Reinhardt reproduces Picasso's *Guernica* — a 12 × 26 foot mural that represented the Spanish Loyalist Government at the 1937 Paris World's Fair, later toured London and America's seven largest cities and was seen by over a million people — and pins about fifteen labeled readings directly onto its parts: the bull, the dying horse, the mother with the lifeless child, the electric-bulb sun as an all-seeing eye, the severed hand with its crossed life-lines, the decapitated statue, the clenched fist and broken sword.
 
 Three design decisions worth stealing:
 
@@ -65,7 +65,7 @@ Three design decisions worth stealing:
 
 ## §4. Macro-Annotations on Micro-Data — the ICU Billing Record
 
-The strongest worked example in the chapter is Tufte's own (p. 124, revised from *Envisioning Information*, 1990, p. 56, redrawn from David Hellerstein, "The Slow, Costly Death of Mrs. K——," *Harper's* 268, March 1984, 84–89). A machine-printed hospital bill — dense columns of dates, procedure codes, and dollar amounts — runs down the center of the page. Flanking it in the left and right margins are hand-written prose annotations that turn the printout into a 26-day narrative of a life and death in an intensive care unit.
+The strongest worked example in the chapter is Tufte's own (p. 124, revised from *Envisioning Information*, 1990, p. 56, redrawn from David Hellerstein, "The Slow, Costly Death of Mrs. K——," *Harper's* 268, March 1984, 84–89). A machine-printed hospital bill — dense columns of dates, procedure codes, and dollar amounts — runs down the center of the page. Flanking it in the left and right margins are prose annotations that turn the printout into a 26-day narrative of a life and death in an intensive care unit.
 
 | Layer | Content | Where it sits |
 |---|---|---|
@@ -74,7 +74,7 @@ The strongest worked example in the chapter is Tufte's own (p. 124, revised from
 | Commentary | Clinical meaning, comparative costs, the patient's deterioration | Left and right margins, prose |
 | Linking marks | Red asterisks tying a paragraph to a specific line item | Between the layers |
 
-Tufte's own description of the effect is that the design stays transparent to the disturbing data as a **layered polyphony of voices** — sequence, accounting data, and commentary weaving together to trace out days, hours, minutes, money. The annotations import macro-data the bill itself cannot show: the California ICU base rate against Mississippi's, the daily cost of an inhalation blood-gas monitor against the price of buying the machine outright, the going rate for a blood-chemistry panel against what hospitals charge for it, the clinical-laboratory profit center, ICU psychosis and vest restraints. A single instruction makes the whole thing legible thirty-eight years later: the costs were incurred in 1982, so multiply by 7.5 to express them in 2020 dollars.
+Tufte's own description of the effect is that the design stays transparent to the disturbing data as a **layered polyphony of voices** — sequence, accounting data, and commentary weaving together to trace out days, hours, minutes, money. The annotations import macro-data the bill itself cannot show: the California ICU base rate against Mississippi's, the daily rental cost of a respirator against the roughly $15,000 price of buying the machine outright, what independent labs charge for a blood-chemistry panel against what hospitals charge, the clinical laboratory as a profit center, ICU psychosis and vest restraints. A single instruction makes the whole thing legible thirty-eight years later: the costs were incurred in 1982, so multiply by 7.5 to express them in 2020 dollars.
 
 **Do / Don't — annotating a machine-generated record:**
 
@@ -120,6 +120,16 @@ Tufte's spread on Leonardo's anatomical hand studies (pp. 126–127) uses the dr
 The facing argument (p. 128) is Avicenna's encyclopedia (Ibn Sīnā, 1024 CE), whose Arabic commentary was written by many different hands on many different local grids — annotation running diagonally, in the margins, between lines, wherever the page had room. Tufte's heading for it is that annotated annotations turn up anywhere and everywhere.
 
 **The principle:** a sufficiently dense and relevant evidence layer *becomes* the coherent substrate for everything laid over it. You do not need to build a grid; you need to annotate the data layer you already have. (Same move as Menuhin's pencil markings on a printed Bach score, p. 27 — see `tufte-visual-thinking` §3.)
+
+### Nabokov's *Metamorphosis* — the chapter's own epigraph image (p. 120)
+
+The plate opening the annotations chapter is Nabokov's teaching copy of Kafka's *The Metamorphosis* (Lloyd's 1946 English translation, NYPL Berg Collection). It does three things at once, and each is transferable:
+
+- **Annotation as argument, not gloss.** Pencil beetles run across the top of the opening page with a marginal note constraining the creature to no more than three feet long; interlinear strikeouts then argue with the translation against Kafka's German ("uneasy" struck for "troubled," "gigantic" for "monstrous"). This is not commentary on a text — it is a competing edition drafted on top of one.
+- **The substrate rule stated outright.** Tufte's caption pairs it with Menuhin: Kafka's text became the substrate of Nabokov's mark-up as Bach's score became the substrate of Menuhin's. A substrate earns the role by being dense, fixed, and authoritative enough to argue with — annotate the best available original, never a summary of it.
+- **Two channels on one surface.** The drawings answer what the prose cannot (what the insect looks like, and how big); the strikeouts answer what the drawings cannot (what the words actually say). Neither decorates the other, and both work because they sit on the same page at the point of need.
+
+> Placement note: p. 120 belongs to Ch. 5, not Ch. 4 — Tufte's own visual index (p. 170) and permissions (p. 173) both file it under "Annotations." It is the chapter's epigraph image, not a stray example from the data chapter.
 
 ---
 

@@ -78,6 +78,7 @@ Six recurring ways a graphic lies. For each: the cue that exposes it, and the pr
 | Design variation as data variation | Scale or interval changes across one chart; tall/thin canvas | 3 | Check that one data unit = one constant printed size everywhere |
 | Nominal money illusion | Dollar amounts over years with no "constant \$" or "per capita" note | 4 | Re-plot deflated and per-capita (§6) |
 | Out-of-context quoting | Two data points, or one group, with no surrounding series | 6 | Extend the series; add control groups (§7) |
+| Detection-inflated rate | A "how much is out there" curve rises right after the measuring effort changed, with no outcome series beside it | 6 | Plot the companion outcome series on the same frame; mark the regime change (§7b) |
 | Stripped labeling | Bare numbers, no units, no index base, no source | 2 | Restore units, base year, source, event annotations |
 
 **Tufte's five published Lie Factors (VDQI Ch. 2):**
@@ -171,6 +172,43 @@ A graphic answers a question, and the question is always *compared to what?* A c
 | The full multi-year series | The drop sits within normal year-to-year swings | Closer |
 | The full series plus neighboring states | All states fell together; no unique local effect | Yes — context restored |
 
+### §7b. The Companion-Series Test — cancer screening (cross-book: *Seeing With Fresh Eyes*, pp. 87 and 117)
+
+Tufte's later work supplies the strongest working example of Principle 6, and it extends the context rule in a way the Connecticut case does not: sometimes the missing context is not *more years* or *more groups* but **a second series measuring the same phenomenon by a route the first one cannot inflate.**
+
+**The construction.** Both spreads plot two rates per 100,000 on one frame over four decades — the rate of *disease diagnosis* ("you have cancer") and the rate of *mortality*. Page 87 does it for breast cancer in women 40 and over, marking on the chart where mass mammography screening begins; page 117 does it for all cancers in the United States, 1975–2015, as a two-panel small multiple of women and men, marking where PSA testing begins on the men's panel. In every panel the diagnosis curve climbs steeply after the screening program starts while the mortality curve stays flat or drifts gently down, and on p. 87 the metastatic-incidence line runs flat along the bottom throughout.
+
+**What the divergence measures.** The widening band between the two curves is not noise and not lag. Tufte shades it and names its contents: false alarms, over-diagnosis, cured cancers, incidentalomas, and indolent and subclinical disease — many of them in people who will die *with* the condition rather than *of* it. The gray area is therefore a **measurable quantity**, readable off the chart, and it is the entire finding. His on-chart verdict:
+
+> "Cancer diagnosis is an unreliable measure of true cancer occurrence." — Tufte, *Seeing With Fresh Eyes*, pp. 87 and 117
+
+**Why one series alone would be a lie of context.** Each curve, published by itself, supports a confident and wrong story:
+
+| Series shown alone | Apparent conclusion | What the companion series reveals |
+|---|---|---|
+| Diagnosis rate rising | An epidemic is under way — occurrence is climbing | Mortality did not move; the detection effort changed, not the disease |
+| Diagnosis rate rising, framed as screening success | The programme is finding disease it was built to find | Finding it did not reduce deaths from it |
+| Mortality falling, alone | Treatment is winning | On p. 117 Tufte attributes much or most of the decline to smoking cessation — prevention, not cure |
+| Five-year survival improving | Patients are living longer | Survival is measured from *diagnosis* to death, so moving the diagnosis date earlier lengthens survival without postponing a single death (p. 87) |
+
+That last row is the trap worth naming explicitly. **Lead-time bias is a denominator lie dressed as an outcome.** Any metric whose clock starts at detection will improve automatically when detection moves earlier, no matter what happens to the patient. The honest denominator is population mortality per 100,000, which no amount of extra looking can inflate.
+
+**The magnitude that makes it matter.** Tufte pairs the charts with the number needed to treat: somewhere between 3 and 1,000 cancer patients are treated for each one who benefits, and sometimes far more are harmed than helped (p. 87). A chart that shows only the rising diagnosis curve has quietly recommended all of that treatment.
+
+**The transferable rule.** This generalizes far past medicine to every metric that rises when you look harder — bug counts after a new linter, fraud "detected" after a new rule, incidents "reported" after a reporting campaign, security findings after a scanner upgrade, engagement after a tracking change:
+
+| Do | Don't |
+|---|---|
+| Plot the detection-sensitive rate against an outcome series that detection effort cannot inflate | Publish the detection rate alone and let it read as occurrence |
+| Mark on the chart the date the detection regime changed | Leave a methodology change invisible inside a continuous line |
+| Shade and label the divergence between the two — it is the finding, not the background | Draw both curves and leave the gap unremarked |
+| State what any survival- or duration-style metric is measured *from* | Report time-since-detection as if it were time-of-death postponed |
+| Say which curve the intervention was supposed to move | Let a movement in the easy curve stand in for the hard one |
+
+Tufte's closing annotation on p. 117 is the one-line summary of what forty years of both series together actually establish:
+
+> "Cancer is mostly prevented, less often cured." — Tufte, *Seeing With Fresh Eyes*, p. 117
+
 ## §8. Labeling as the Reader's Only Defense
 
 Labels are not decoration. They are the one check a reader has against a chart that might be lying, and Tufte treats thorough, on-graphic labeling as the primary weapon against distortion.
@@ -211,7 +249,18 @@ Run this before publishing or signing off on any data graphic. Each failure rais
 [ ] Every axis, unit, and index base labeled? Source printed on the graphic?
 [ ] Key events annotated directly on the chart?
 [ ] Enough surrounding series and control groups to answer "compared to what?"
+[ ] Any detection-sensitive rate plotted beside an outcome series that detection cannot inflate, with the regime change marked?
 [ ] Aspect ratio neutral — neither steepening nor flattening the real slope?
 ```
 
 If any box is unchecked, do not assume dishonesty — compute the Lie Factor and decide on the number, not the impression.
+
+## §11. Cross-book notes
+
+**Integrity lapses inside the hero examples (BE p. 127).** Minard's *Carte Figurative* is the pack's exemplar of excellence, and it still fails a Lie Factor check in one place: the band widths for the Nieman river crossing are drawn at roughly **1:28** where the underlying numbers give **1:42**. Worth teaching precisely because it is Minard — a graphic can be the best ever drawn and still contain a measurable distortion, so the audit runs on the work you admire, not only on the work you suspect.
+
+**Suspicious precision (BE p. 75).** Four-significant-digit indices derived from crude measurements, or a date reported as "54.97 million years," advertise a resolution the measurement never had. False precision is a distortion in the opposite direction from the Lie Factor: the marks understate the uncertainty rather than overstating the effect. Report to the precision the method supports, and show the interval where one exists.
+
+**Units as an integrity surface (BE p. 165).** The *Columbia* briefing slide carried three different unit expressions for the same class of quantity on one page (3 cu. in / 1920 cu in / 3 cu in). The CAIB's own observation is the rule worth carrying: in aerospace engineering a misplaced decimal or a mistaken unit engenders real inaccuracies — the veiled reference being the Mars spacecraft lost to a metric/non-metric mismatch at a cost of roughly $250 million. Unit discipline belongs on the labeling checklist in §8, not in a style guide.
+
+**Copied errors and the good-story problem (VE pp. 67, 71).** Tufte's line for the mechanism is that the truth never stands in the way of a good story, and his evidence is that graphical errors *propagate by reproduction* rather than being corrected by it: California drawn as an island in **182** map variants down to 1745; Dürer's rhinoceros copied for roughly **200 years** after better specimens were available; conjuring illustrations reproducing a figure with six fingers because the engraver copied the engraver. Practical consequence for an integrity audit: provenance is a data-quality question. Ask where a figure was copied from before asking whether it is drawn accurately, because an accurate redrawing of a wrong original is still wrong. **VE p. 70 supplies the companion five-question integrity test** to run against any evidence display.

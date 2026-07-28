@@ -17,7 +17,7 @@ The book runs an **Introduction plus nine chapters** (TOC, p. 3):
 | 1 | Meaning and Space | 6 | §2–§4 below |
 | 2 | Content-Responsive Typography | 49 | §5 summary → `tufte-typography-for-data` |
 | 3 | Graphical Sentences | 64 | §6 below |
-| 4 | Data Analysis When Truth Matters | 81 | §7 below |
+| 4 | Data Analysis When Truth Matters | 80 | §7 below; full audit procedure → `tufte-data-forensics` |
 | 5 | Annotations | 121 | → `tufte-annotation-as-thinking` |
 | 6 | Instructions at Point of Need | 131 | → `tufte-instructions-at-point-of-need` |
 | 7 | Lists | 141 | stacklist material in §6; full treatment → `tufte-lists` |
@@ -379,7 +379,7 @@ Tufte uses the contrast to grade models: precision medicine for one patient (n =
 
 ---
 
-## §7. Data-Analysis Integrity (Ch. 4, pp. 81–120)
+## §7. Data-Analysis Integrity (Ch. 4, pp. 80–119; p. 120 opens Ch. 5)
 
 The same discipline that governs seeing governs the relationship between evidence and conclusions.
 

@@ -177,6 +177,10 @@ Credible explanations grow from **three mutually reinforcing sources**: explanat
 - What is the theoretical basis for the variable selection, or was it purely data-driven?
 - Are the findings too good to be true? Have they been independently replicated on new data?
 
+### The search runs on the observer too (*Envisioning Information*, p. 73)
+
+Model searching has a perceptual twin: **Dighton Rock** (*Envisioning Information*, pp. 72–73), whose ambiguous markings were sketched by observers from 1680 onward — Danforth 1680 through Schoolcraft 1854 — and arrayed by Tufte as a comparative small multiple, each recorder resolving the same low-contrast surface into whatever alphabet his theory required. The published drawings diverge because the *drawers* did, not because the rock did. Tufte's name for it is scholarship of wishful thinking, and it generalizes past archaeology: wherever the evidence is noisy and the transcription is manual — reading a gel, scoring an interview, tracing a boundary, labeling a training set — the recorder's expectation is a free parameter in the analysis, and it leaves no trace in the final artifact. Countermeasure: capture and publish the unprocessed source beside the transcription, and have the ambiguous cases scored independently by someone who does not know the hypothesis.
+
 ---
 
 ## §4. The Evidence Reduction Chain
@@ -362,7 +366,7 @@ The repackaging bureaucracies are not an incidental nuisance; they are where the
 |---|---|---|
 | Pharmaceuticals | marketing drugs | discovering them |
 | Schoolbook publishing | lobbying textbook-selection committees | writing the books |
-| Financial services | promoting investment products | identifying them |
+| Financial services | promoting investment products | discovering them |
 
 **The detection rule that falls out of it:** follow the budget, not the byline. Wherever promotion consistently outspends production, expect the evidence chain to have been optimized for the pitch — the selection, framing, and simplification decisions upstream will have been made by people paid to persuade rather than to find out. This is a structural prior you can apply before reading a single number.
 
@@ -379,7 +383,7 @@ The mechanism:
 - Government intelligence agencies: once evidence collection becomes fixed around a predetermined policy line, agencies may become perpetually unintelligent, confused about the difference between detective work and marketing.
 - Martin Amis, quoted by Tufte on how the corruption travels: "Cliché spreads inwards from the language of the book to its heart."
 
-**The anti-motivated-reasoning clause (p. 141).** Tufte states at the chapter opening that one's allies are not appreciably less likely to corrupt evidence than one's opponents. The corruption catalogue is not a weapon for use on the other side. Apply every detection method in this skill first to the reports whose conclusions you already like — those are the ones your own filtering will wave through.
+**The anti-motivated-reasoning clause (p. 155).** Tufte's explicit statement is that one's allies are not appreciably less likely to corrupt evidence than one's opponents; it closes the secondary-presentation argument at p. 155, not the chapter opening (p. 141 carries only the related complaint about inept and specious arguments made by one's allies). The corruption catalogue is not a weapon for use on the other side. Apply every detection method in this skill first to the reports whose conclusions you already like — those are the ones your own filtering will wave through.
 
 Indicators of an untrustworthy secondary presentation bureaucracy:
 - It denies access to primary evidence (requires all publications to be pre-approved by the PR department)
@@ -426,7 +430,7 @@ These are the specific, named failure modes from chapter 6. Apply to any evidenc
 
 Tufte opens and closes the chapter with moral framing, not just methodological critique. He argues that presenting evidence carries ethical weight, not just analytical obligation. A presenter who deploys rhetorical manipulations — lying, flagwaving, personal attacks, false dichotomies, misdirection, jargon as cover, evasion of key issues, feigned objectivity, willful misreading of opposing views — signals both a lack of credibility and a lack of genuine evidence (*Beautiful Evidence*, p. 141; p. 140 is the chapter's epigraphs page).
 
-The responsibility, Tufte argues, falls equally on the audience: consumers of presentations must demand intellectual and ethical accountability from presenters — insisting that what is shown and told can be justified. Consuming evidence is itself a moral act (*Beautiful Evidence*, p. 141). And the obligation is symmetrical across sides: allies corrupt evidence at about the rate opponents do (p. 141), so the moral frame has no exemption for the conclusions you happen to want.
+The responsibility, Tufte argues, falls equally on the audience: consumers of presentations must demand intellectual and ethical accountability from presenters — insisting that what is shown and told can be justified. Consuming evidence is itself a moral act (*Beautiful Evidence*, p. 141). And the obligation is symmetrical across sides: allies corrupt evidence at about the rate opponents do (p. 155), so the moral frame has no exemption for the conclusions you happen to want.
 
 Despite the threat of corruption, a consumer of presentations should try to be hopeful and curious, avoid premature skepticism, and maintain an open mind — but not an empty head. Many presentations are not corrupt. A presenter engaging in corrupt maneuvers might be reporting what eventually turns out to be accurate and truthful conclusions. "A particular danger of corrupt maneuvers is not only that they enable lying but also that they place the truth in disrepute."
 

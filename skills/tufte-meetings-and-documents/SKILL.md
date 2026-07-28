@@ -111,7 +111,7 @@ The two epigraphs over the next section (p. 156) belong to every meeting's post-
 
 > "It's not what you say, it's what they hear." — Red Auerbach, quoted in *Seeing With Fresh Eyes*, p. 156
 
-> "The biggest problem in communication is the illusion that it has taken place." — George Bernard Shaw, quoted in *Seeing With Fresh Eyes*, p. 156
+> "The biggest problem in communication is the illusion that it has taken place." — attributed to George Bernard Shaw, *Seeing With Fresh Eyes*, p. 156
 
 ---
 
@@ -125,8 +125,8 @@ The two epigraphs over the next section (p. 156) belong to every meeting's post-
 
 | Practice | Point |
 |---|---|
-| "Look at the books, not slides — the highest-resolution portable interface in the world is in your hands" | Students conditioned by slideware stare at the projection screen even when holding something better |
-| "Books are meant to be used — dog-ear the pages, mark them up, put notes in the spacious margins" | The handout is a working surface, not a keepsake (see `tufte-annotation-as-thinking`) |
+| Look at the books, not slides — 4 books, ~700 pages, 2,000 illustrations, "the highest-resolution portable interface in the world in your hands" | Students conditioned by slideware stare at the projection screen even when holding something better |
+| "Books are meant to be used. Dog-ear the pages, mark them up, put notes in the spacious margins." | The handout is a working surface, not a keepsake (see `tufte-annotation-as-thinking`) |
 | Reading periods deliberately vary the rhythm — video, live commentary, silent reading, plain talking | A 4–5 hour session needs mode changes; study hall is one of the instruments |
 | Sound checks, speech exercises, venue specs (presenter at floor level with the audience, two large 16:9 screens) | Logistics are part of the presentation, rehearsed like content |
 | Course material changes ~15% per year; teaching exposes incoherencies in the book-in-progress | A good way to learn about something is to teach it |
@@ -164,7 +164,7 @@ What happens next is the payoff: council members start asking *specific, located
 - **Documents live on, unlike slides.** Each member can look at any part of the report at any time — including later in the meeting, while the Chief's rival the Police Chief marches through a tiresome slideshow, inviting the comparison and perhaps a request to stop it with the slides and bring a document like the fire map.
 - **One artifact serves every audience** — council, press, public — at their own depths (compare the two-reader formats in `tufte-annotation-as-thinking` §5).
 
-Also a judicial sibling (p. 153): in a trade-secrets trial, Federal District Judge William Alsup gave the jury paper handouts — a list of the alleged trade secrets and a glossary of the top dozen people — like opera program notes, so jurors could navigate a complex case.
+Also a judicial sibling (p. 153): in a trade-secrets trial, Federal District Judge William Alsup provided the jury with paper handouts like opera program notes — a "handy-dandy list" of the alleged trade secrets — and urged the two sides to submit a glossary of the top dozen people, so jurors could navigate a complex case.
 
 ---
 

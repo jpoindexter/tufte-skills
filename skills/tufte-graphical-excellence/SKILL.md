@@ -13,6 +13,8 @@ Graphical excellence is Tufte's unified standard for a data graphic, set out in 
 
 Tufte calls that possibly the best sentence ever written about the point of images for information design — the excellence standard compressed to a threshold test.
 
+**How excellence is distributed (SWFE, p. 47).** *Seeing With Fresh Eyes* adds a sobering statistical frame: excellence is scarce, its distribution lognormal and long-tailed — most work clusters near the bottom and a thin tail carries the rest — but once reached it is *forever* knowledge, not a fashion that expires. The practical corollary Tufte draws: because analytical thinking is fundamentally about the relationship between evidence and conclusion, credibility can sometimes be judged without expertise in the subject matter itself.
+
 ---
 
 ## §1. The Five Criteria (VDQI p. 51)
@@ -76,7 +78,8 @@ A point easy to miss: statistical graphics are a *young* invention — roughly t
 | Origin | Contribution |
 |---|---|
 | **Oldest known time-series** | A tenth- or eleventh-century manuscript graph charting the inclinations of the planetary orbits as a function of time (p. 28) — an isolated precursor that left no tradition. |
-| **J. H. Lambert (18th c.)** | Early systematic use of line graphs / time-series to show measured relationships. |
+| **Michael Florent van Langren (1644)** | *Visual Explanations* (p. 15) nominates his longitude chart as the first statistical graphic: twelve rival estimates of one longitude difference laid out along a single line. The true value is 16°30′ — and every one of the twelve overstates it. A first graphic that is also a first demonstration of systematic bias made visible by putting the estimates side by side. |
+| **J. H. Lambert (18th c.)** | Early systematic use of line graphs / time-series to show measured relationships; *VE* (pp. 15–16) credits him with quantifying the plane itself — putting measured scales on both axes. |
 | **William Playfair (1786, 1801)** | Inventor of most modern statistical graphic forms — the time-series line graph and the bar chart in the *Commercial and Political Atlas* (1786), the pie and circle charts in the *Statistical Breviary* (1801). |
 
 Playfair also argued the case *for* graphics over tables: numbers studied in a table leave only a faint impression, like a figure drawn in sand, while a picture imprints and is retained. The takeaway for an agent: the conventions you reach for reflexively were deliberately designed within recorded history, and can be redesigned.
@@ -84,6 +87,8 @@ Playfair also argued the case *for* graphics over tables: numbers studied in a t
 ---
 
 ## §5. Graphics vs. Tables — When Each Wins
+
+> Canonical owner: `tufte-tables-and-text-tables` carries the full format ladder (sentence → text-table → table → semi-graphic → graphic), the twenty-number rule with its perceptual grounding, and the supertable grammar. This section keeps only the graphic/table decision as it bears on grading a graphic.
 
 Excellence sometimes means *not* drawing a graphic. Tufte is explicit that small, sparse, or non-comparative data belong in tables.
 
@@ -157,6 +162,12 @@ Opening Chapter 2 (p. 53), Tufte names two wrong assumptions that produced the g
 - **Wrong assumption 1 — graphics must be "livened up"** with decoration and exaggeration or the audience drifts.
 - **Wrong assumption 2 — the analyst's main job is detecting and denouncing lies.** (Integrity is necessary, but it is a floor, not the point.)
 
+**The audience premise (EI p. 34).** Both wrong assumptions rest on contempt for the reader. Tufte's corrective is to design on the opposite premise: readers are alert and caring, possibly busy and eager to get on with it, but not stupid.
+
+> "Clarity and simplicity are completely opposite simple-mindedness." — Tufte, *Envisioning Information*, p. 34
+
+Excellence therefore aims at *invisibility* — a design so good it disappears, leaving attention on the data rather than on the data-container (EI p. 33), with the standard set by high-quality maps rather than by posters (EI p. 35).
+
 | Not excellence | Why it fails |
 |---|---|
 | Decoration / ornament | Non-data ink steals attention from data ink |
@@ -186,7 +197,7 @@ Opening Chapter 2 (p. 53), Tufte names two wrong assumptions that produced the g
 
 Truth is criterion 5 and a hard gate: a graphic that misrepresents its data cannot be excellent no matter how multivariate or ink-efficient it is. The disappearing baseline, the perspective trick that inflates differences, the Nobel-prizes chart that counts prizes in decade intervals but ends on a 4-year interval — manufacturing a fake final decline, which Tufte flatly calls a big lie (p. 60) — each fails at the foundation, and no sophistication elsewhere rescues it.
 
-The quantitative measure (developed in Chapter 2, Graphical Integrity) is the **Lie Factor**:
+The quantitative measure (developed in Chapter 2, Graphical Integrity) is the **Lie Factor**. It is restated here only as the gate on criterion 5 — `tufte-graphical-integrity` §1 is its canonical treatment, with the worked computations, the distortion catalog, and the audit protocol:
 
 ```
 Lie Factor = (size of effect shown in the graphic) / (size of effect in the data)

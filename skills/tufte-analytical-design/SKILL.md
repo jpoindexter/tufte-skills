@@ -340,7 +340,7 @@ Before shipping any analytical display, verify each principle:
 
 ## §7. Corruption in Evidence Presentations (adjacent chapter, pp. 140–155)
 
-These cases come from the chapter that *follows* the six principles, not from the principles chapter itself. They are included because each is a canonical, real-world inversion of a specific principle — useful for diagnosis, but cite them to pp. 140–155, not to the principle's own page. (The chapter runs pp. 140–155: epigraphs on p. 140, text 141–155. The corrupt-measurement and anti-causal material sits at 142–143 and 146; the secondary-presentation bureaucracies and the rage to conclude at 154–155.)
+These cases come from the chapter that *follows* the six principles, not from the principles chapter itself. They are included because each is a canonical, real-world inversion of a specific principle — useful for diagnosis, but cite them to pp. 140–155, not to the principle's own page. (The chapter runs pp. 140–155: epigraphs on p. 140, text 141–155. The anti-causal material sits at 142–143 and 146; the secondary-presentation bureaucracies and the rage to conclude at 154–155. The corrupt-*measurement* catalog — undefined units, tendentiously chosen base-years, excessively short time-series, unadjusted money, time-shifting such as premature revenue recognition — is not in that chapter at all: it sits at **p. 133**, inside Principle 5 itself; p. 143 carries only excessively accelerated recognition of revenue as a bullet-list example.)
 
 | Corruption | Inverts | Diagnostic signal |
 |---|---|---|

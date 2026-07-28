@@ -58,18 +58,41 @@ Every sibling skill is installed beside this one, in the same skills directory: 
 | Design reviews, decision meetings, pre-reads, study-hall protocol | `tufte-meetings-and-documents` |
 | Auditing an analysis or dataset for errors, bias, provenance, fraud | `tufte-data-forensics` |
 | Reference indexes, back matter, asset registries, changelogs | `tufte-visual-index` |
+| Dashboard, KPI card grid, metric tiles, status board | `tufte-sparklines` + `tufte-tables-and-text-tables` + `tufte-data-density` |
+| Small-screen or mobile display; chart on a phone; how small can this go | `tufte-data-density` + `tufte-sparklines` |
+| A specific chart type is in question — pie, donut, funnel, gauge, stacked area, dual axis, 3-D | `tufte-graphical-integrity` + `tufte-graphical-excellence` |
+| Long table, many rows, big list, long log — must read at a glance and up close | `tufte-micro-macro-readings` + `tufte-tables-and-text-tables` |
+| Heatmap, density plot, choropleth, session or attention map | `tufte-micro-macro-readings` + `tufte-color-in-information-design` |
+| Accessibility, color-blind safety, grayscale survival, contrast of encodings | `tufte-redundant-encoding` + `tufte-color-in-information-design` |
+| PRD, spec, RFC, technical doc, or report carrying numbers and figures | `tufte-integration-of-modes` + `tufte-meetings-and-documents` |
+| Vendor demo, sales deck, procurement or tool evaluation, benchmark claim | `tufte-disinformation-design` + `tufte-data-forensics` |
+| Portfolio, case study, app-store screenshots, showcasing finished work | `tufte-presentation-of-artifacts` + `tufte-visual-confections` |
+| Glossary, definitions, terminology page, taxonomy of terms | `tufte-lists` + `tufte-tables-and-text-tables` |
+| Incident timeline, project timeline, Gantt, sequence of events | `tufte-space-time-graphics` + `tufte-narrative-and-sequence` |
+| Aspect ratio, proportion of a plot, slopes look wrong, chart is too tall or too wide | `tufte-aesthetics-and-technique` + `tufte-sparklines` |
+| "Compared with what?" — missing baseline, control, or reference class | `tufte-causal-reasoning-in-graphics` + `tufte-parallelism` |
+| How strong should a contrast be — smallest effective difference, contrast sizing | `tufte-layering-and-separation` |
+| "Our audience won't understand this"; dumbing a display down for stakeholders | `tufte-graphical-competence` + `tufte-cognitive-style` |
+| Accepting an inherited format, template, style sheet, or default chart type | `tufte-visual-thinking` |
+| Interaction hides data — tooltips, hovers, drill-downs, collapsed panels | `tufte-annotation-as-thinking` + `tufte-micro-macro-readings` |
+
+**Precedence when several rows fire.** Pick the *narrowest* matching row, then add at most one broader row. Specific collisions:
+
+- Analysis-quality tasks: `tufte-data-forensics` when auditing a **dataset or method**; `tufte-evidence-corruption` when auditing a **presentation of results**; `tufte-causal-reasoning-in-graphics` when a **causal claim** is at stake. Load one, not all three.
+- Decks: `tufte-meetings-and-documents` when the question is **the meeting** (format, pre-read, time budget); `tufte-cognitive-style` when the question is **the deck** (density, bullets, headlines). `tufte-analytical-design` only when defending a design against a standard.
+- Annotation: `tufte-mapped-pictures` when the base is a **photograph or scientific image** needing scales and grids; `tufte-annotation-as-thinking` when the base is a **chart, diagram, or screen** needing commentary.
 
 ## Master Audit — run before shipping any data display
 
 Each point names the skill to load for depth on a failure.
 
 1. **Format** — does this deserve a graphic at all (vs sentence/table)? Right form chosen? → `tufte-graphical-excellence`
-2. **Truth** — Lie Factor ≈ 1.0; visual dims ≤ data dims; context answers "compared with what?" → `tufte-graphical-integrity`
+2. **Truth** — Lie Factor ≈ 1.0; visual dims ≤ data dims; no truncated baseline or spare dimension → `tufte-graphical-integrity`
 3. **Ink** — two-pass erasure done; grid gray or gone; no fills/3-D/shadows → `tufte-data-ink-ratio`
 4. **Chartjunk** — no moiré fills, dark grids, or ducks → `tufte-chartjunk`
 5. **Density** — data matrix as large as the question warrants; shrinkable by half? → `tufte-data-density`
 6. **Multivariate** — variables shown vs variables the phenomenon has → `tufte-escaping-flatland`
-7. **Comparison** — everything compared in one eyespan, like against like, causal variable on the axis → `tufte-small-multiples`, `tufte-causal-reasoning-in-graphics`
+7. **Comparison** — "compared with what?" answered on the display; everything compared in one eyespan, like against like, causal variable on the axis → `tufte-causal-reasoning-in-graphics` (the question), `tufte-small-multiples` (the eyespan)
 8. **Layering** — weight ∝ importance; 1+1=3 effects hunted; nothing boxed → `tufte-layering-and-separation`
 9. **Color** — role named (label/measure/represent/decorate); no red/green solo → `tufte-color-in-information-design`
 10. **Type** — direct labels, no legend; horizontal; tabular figures → `tufte-typography-for-data`

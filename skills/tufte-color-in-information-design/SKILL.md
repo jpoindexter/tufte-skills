@@ -76,7 +76,7 @@ Saturated, intense hues overwhelm the eye — even punish it — when they cover
 | Medium context zone | Low-to-mid saturation |
 | Small extreme / focal point | Full saturation, strong |
 
-Give *all* areas glaring rich color and the result is brilliant, disordered, confusing, and unpleasant. The same law holds outside color — Tufte quotes music educator Ann Driver: "if every note, word or movement is stressed, the result is even less meaning" (EI p. 82 n. 2).
+Give *all* areas glaring rich color and the result is brilliant, disordered, confusing, and unpleasant. The same law holds outside color — Imhof's footnote reaches for music, and Tufte carries the quotation: "Conversely, if every note, word or movement is stressed, the result has even less meaning." — Ann Driver, *Music and Movement* (1936), quoted in *Envisioning Information*, p. 82 n. 2.
 
 ### Rule 2 — No Adjacent Pastels at Large Scale
 Light, bright colors mixed with white, placed next to each other over large areas, usually look unpleasant. This is the pastel-on-pastel default of presentation software. Worse, dark-value versions of these strong colors produce 1+1=3 phantom bands at their boundaries that fight the encoded data.
@@ -110,7 +110,7 @@ For categorical labeling, the goal is maximum perceptual distance per slot. Tuft
 
 Byrne tunes even the primaries for the page: yellow is broken with orange and darkened in value to sharpen its edge against white paper; blue is kept relatively light to hold its distance from black; black is the least-used color and is avoided for large solid elements, muting unnecessary contrast.
 
-**Byrne is a rediscovery, not an invention (EI p. 84 n. 4):** the *Chou Pei Suan Ching* (ca. −600 to +300) proved the "Pythagorean" theorem with a single diagram, and by the era of Liu and Chao (ca. +200) the diagram was colored — central square yellow, surrounding rectangles red — color-as-proof-label some 1,600 years before 1847. Tufte carries Needham's point that the Chinese proof is *immediate*, against Euclid's notoriously circuitous demonstration; Schopenhauer dismissed Euclid's Pythagoras as "a proof walking on stilts, nay, a mean, underhand proof."
+**Byrne is a rediscovery, not an invention (EI p. 84 n. 4):** the *Chou Pei Suan Ching* (ca. −600 to +300) proved the "Pythagorean" theorem with a single diagram, and by the era of Liu and Chao (ca. +200) the diagram was colored — central square yellow, surrounding rectangles red — color-as-proof-label some 1,600 years before 1847. Needham supplies the coloring detail; the verdict that follows is Tufte's own — the logic of the Chinese diagram is immediate, unlike the notoriously circuitous Euclid, whose Pythagoras Schopenhauer dismissed as "a proof walking on stilts, nay, a mean, underhand proof."
 
 **Redundant labeling nuance:** Tufte's redraw couples Byrne's color method *with* conventional letter-coding. Intermingling the two does not feel fussy — it speeds recognition and lets viewers choose how they link text to diagram. Redundancy helps when it resolves a real linking task.
 
@@ -215,6 +215,8 @@ Color stacks information planes in one space without confusion: a muted backgrou
 
 **Failure mode — 1+1=3 Effects:** closely spaced dark grid lines or adjacent strong backgrounds generate phantom fields beyond the sum of their parts (dark grid on white reads as a gray haze present in neither element). Fix: mute the grid toward the background, or replace it with spot color on the active element only.
 
+**The physical environment is part of the palette (SWFE pp. 30, 138–139).** *Seeing With Fresh Eyes* audits real operating-room displays and finds the color problem is half optical: of 25 screens counted in one theatre, 22 were glossy and only 3 matte, set among roughly 8 m² of reflective cabinet surface, so every screen reflected every other and the room's lights. Two design consequences Tufte draws: a frame around a field can *help* here — it isolates that field's color and cuts screen glare — but a heavy frame costs more than it earns, and a ragged margin with a small black surround does the same job more quietly. Judge a palette in the room it will be read in; a scheme that survives a design review under soft light can be unreadable under theatre lamps on a glossy panel.
+
 ---
 
 ## §11. Named Failure Modes Summary
@@ -252,4 +254,4 @@ Color stacks information planes in one space without confusion: a muted backgrou
 
 Source: Edward Tufte, *Envisioning Information*, Chapter 5 "Color and Information," pp. 81–95.
 
-Cross-book notes: *Beautiful Evidence* p. 120 shows red as an extraction device — pulling the evidence curve out of graphic debris while text and linework stay unified. *VDQI* p. 154 argues shades of gray beat color for ordered quantities (ten grays in the galaxies map), with blue the safest hue for color-deficient viewers (p. 183).
+Cross-book notes: *Beautiful Evidence* p. 120 shows red as an extraction device — pulling the evidence curve out of graphic debris while text and linework stay unified; p. 62 warns that four-color process printing misregisters at fine scale, making thin rules and small type gritty, so prefer a single ink, a flat two-color mix, or stochastic screening for detailed work. *VDQI* p. 154 argues shades of gray beat color for ordered quantities (ten grays in the galaxies map), with blue the safest hue for color-deficient viewers (p. 183); the same page carries Vauthier's mountain-to-the-sea ordering as the rare color sequence viewers already hold, and p. 153 supplies the counter-case — a county map encoding two variables by crossing two color scales into **16 colors**, a legend no reader can hold in memory. Crossing two color scales multiplies hues past the capacity limit in §2; use color for one variable and a second channel (value, texture, small multiples) for the other.

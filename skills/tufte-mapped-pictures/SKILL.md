@@ -160,15 +160,15 @@ The chapter's hardest and most original argument: **when a mapping makes an expl
 
 ### The dividing line
 
-What separates Loran's Cézanne analyses and Hockney's optical-instrument hypothesis (perspective lines traced on Holbein's *Ambassadors* to argue divergent vanishing points imply a mirror lens) from crank work is **explanatory tightness**: their mappings are *specific, coherent, credible, and testable* — they try to explain a particular thing and could in principle be wrong. Mössel's 300+ geometric overlays (in a 534-page book claiming Ur-Forms beneath nearly all art; p. 30) are the opposite: flexible enough to fit anything, refutable by nothing.
+What separates Loran's Cézanne analyses and Hockney's optical-instrument hypothesis (perspective lines traced on Holbein's *Ambassadors* to argue divergent vanishing points imply a mirror lens) from crank work is **explanatory tightness**: their mappings are *specific, coherent, credible, and testable* — they try to explain a particular thing and could in principle be wrong. Mössel's 300+ geometric overlays (in a 534-page book claiming Ur-Forms beneath nearly all art; p. 29) are the opposite: flexible enough to fit anything, refutable by nothing — Tufte's verdict at p. 31 is that all 300 are not replicated research but the drawings of a monomaniac, and that different maps fit the same artwork because many symmetries and proportions can be claimed of any image.
 
-> "...no possible empirical evidence can ever refute a Mössel, who explains everything and therefore nothing." — Tufte, *Beautiful Evidence*, p. 30
+> "...no possible empirical evidence can ever refute a Mössel, who explains everything and therefore nothing." — Tufte, *Beautiful Evidence*, p. 31
 
 ### Why crank mappings always "work"
 
 - **Too many degrees of freedom.** Different grids fit the same artwork; dots could plausibly sit elsewhere; even fixed dots can be connected many ways. A scheme that fits every case discriminates none. (Feller demolished the same move in statistics: a "law of logistic growth" was fitted to populations, bacteria, railroads, plant and animal size — but normal, Cauchy, and other distributions fit the same data *as well or better*, so the logistic explained nothing distinctive.)
 - **Alignment-to-please / viewing-to-please.** A registration will "lock right into place if the desired answer is already known." Tufte aligning a sculpture plate to a north marker could gain ±3° just by tilting his head; land surveyors mapping the same parcel get divergent results depending on the client's interest. **Construct the mapping independently of the result you want.**
-- **The flatland–spaceland mismatch (catastrophic; p. 30).** Mössel maps a single *one-eyed flatland photograph* of a real 3-dimensional object and treats the result as a fact about the object. A photograph is not the artwork; a flatland mapping cannot capture spaceland reality. No amount of re-aligning a grid-net over one projection recovers the lost dimension.
+- **The flatland–spaceland mismatch (catastrophic; p. 31).** Mössel maps a single *one-eyed flatland photograph* of a real 3-dimensional object and treats the result as a fact about the object. A photograph is not the artwork; a flatland mapping cannot capture spaceland reality. No amount of re-aligning a grid-net over one projection recovers the lost dimension.
 
 ### Test before you trust a mapping
 

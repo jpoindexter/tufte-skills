@@ -25,9 +25,9 @@ What follows is the residue those skills do not carry.
 
 ---
 
-## §1. The Two Viewpoints — the Geometry of Revelation (pp. 55–58)
+## §1. The Two Viewpoints — the Geometry of Revelation (pp. 55–58, 61)
 
-A performed illusion has a front and a back. The front view (what the audience sees) is *reliably deceptive by design*; the back view (the method) is the explanation. Every depiction of a process silently chooses among three options: show the produced effect, show how to produce it, or show both — and from what angles. Making that choice consciously, before drawing, is the first act of honest instruction design.
+A performed illusion has a front and a back. Knowledge of the revealed front view (what appears to be done) yields no reliable knowledge of the concealed back view (what is actually done) — and the audience's assumption that it does is the magic (p. 55). Every depiction of a process silently chooses among three options: show the produced effect, show how to produce it, or show both — and by means of what angles (p. 61). Making that choice consciously, before drawing, is the first act of honest instruction design.
 
 | Device | What it does | VE case |
 |---|---|---|
@@ -41,10 +41,10 @@ A performed illusion has a front and a back. The front view (what the audience s
 
 ## §2. Verbs Are Expensive — Budgeting Description Density (p. 58, fn. 6)
 
-A sleight lasting a fraction of a second takes about 2.6 pages of text and pictures to teach; the record explanation of a single move under two seconds long runs 29 pages with 14 photographs and 14 drawings. The general law: **explanation length scales with the speed and hiddenness of the action, not with its duration.** Fast, concealed, or disguised steps deserve the most depiction, precisely because they are the steps the eye never caught.
+The strike second deal is over in a fraction of a second, yet Hugard and Braué need 2.6 pages of text and illustrations to teach it; the record explanation of a single sleight — a move completed in under two seconds — runs 29 pages with 14 photographs and 14 drawings. The general law: **explanation length scales with the speed and hiddenness of the action, not with its duration.** Fast, concealed, or disguised steps deserve the most depiction, precisely because they are the steps the eye never caught.
 
 - Do not compress the explanation of a hidden mechanism to match the brevity of its visible effect.
-- Arrows can conduct tempo, not just direction: the coin-exchange sequence (p. 60) paces the reader through the move with heavy arrows at roughly two frames per beat — the diagram controls reading rhythm the way a metronome controls practice.
+- Arrows can conduct tempo, not just direction: the coin-exchange sequence (p. 60) depicts the action at two frames per beat, with heavy arrows conducting the rhythm of images — the diagram controls reading rhythm the way a metronome controls practice.
 - A pair of hands moving through a move traces a curve through flat space over time — Tufte notes the resemblance to a Phillips-curve path (p. 60): motion depicted on paper is a time-series, and inherits time-series design obligations (explicit ordering, legible tempo).
 
 ## §3. Effect-Marketing vs. Method-Instruction (pp. 59–60)
@@ -53,7 +53,7 @@ Magic catalogs advertise tricks by depicting only the *effect* — the Flying Gl
 
 Two further tactics from the same pages:
 
-- **Text as image (dazzle):** the word GONE lettered in vibrating stripes (p. 59) makes typography perform instead of inform — decoration doing the work of evidence.
+- **Text as image:** the word GONE lettered in vibrating stripes (p. 59) makes the typography itself perform the vanishing — Tufte admires it as idea, word, and drawing adding up to one coherent, vivid whole. The caution is contextual, not absolute: stripes read as dazzle and deft speed beside a magic trick and as something else entirely on a prisoner's uniform (Rand, cited p. 59) — attention-getting devices take their meaning from their setting.
 - **Reader control as the antidote:** on paper the reader sets pace, sequence, direction, and focus; read fast, the trick performs — read slowly, it dissects (p. 60). Any medium that removes reader control (autoplaying video, timed slides, unpausable demos) restores the magician's advantage.
 
 ## §4. The Strategies of Disinformation — a Detection Catalog (pp. 64–65)
@@ -63,13 +63,13 @@ Fitzkee's analysis of conjuring reduces to two master strategies: **disguise** (
 | Conjuring move | Display equivalent | Detection question |
 |---|---|---|
 | Mask a small motion under a large one | Layout animation, redesign, or transition landing at the same moment as a data change | What changed in the numbers while everything else was moving? |
-| Dazzle — vibrating pattern where an edge matters | Noisy texture at the exact point of discrimination (the stair carpet whose pattern hid step edges — 1,400+ stumbles in six weeks, p. 65) | Does decoration sit precisely where the reader must discriminate? |
-| Divert scrutiny with framing | Heavy frame and blocky capitals flattening a damaging disclosure (the Surgeon General's warning billboard, p. 65) | Is the mandated or unflattering content styled to repel reading? |
-| Bury the clue in patter | The material fact dropped mid-list into a stream of insignificant detail — the Agatha Christie method (p. 64) | Is the one load-bearing number surrounded by filler of identical visual weight? |
+| Dazzle — vibrating pattern where an edge matters | Noisy texture at the exact point of discrimination (the repetitive stair carpet masking each step edge, p. 65; a railroad-station stair striped parallel to the tread edge — 1,400+ falls in six weeks, p. 65, fn. 18) | Does decoration sit precisely where the reader must discriminate? |
+| Divert scrutiny with framing | Heavy frame and blocky capitals flattening a damaging disclosure (the Surgeon General's warning on a cigarette billboard, p. 65) | Is the mandated or unflattering content styled to repel reading? |
+| Drop the clue under a distraction | The material fact released at the exact moment something louder claims attention — the Agatha Christie method: just as the clue is dropped, a distracting incident occurs (p. 64) | What else was demanding attention at the moment the key fact appeared? |
 | Patter and gesture | Display illegible without the presenter's talk track (see `tufte-causal-reasoning-in-graphics` on oral escorts) | Does the display survive being read alone, cold, on paper? |
 | Self-working trick | A format that deceives with no active presenter: truncated default axes, unlabeled baselines, auto-scaled comparisons | Would this display mislead even if its maker had no intent? |
 
-> "Where scrutiny is damaging, scrutiny is diverted." — Tufte, *Visual Explanations*, p. 65
+> "Where scrutiny is damaging, scrutiny is diverted." — Dariel Fitzkee, *Magic by Misdirection*, quoted in *Visual Explanations*, p. 65
 
 **The incentive audit.** Concealment correlates with motive. Before trusting a display, ask who benefits if it is skimmed rather than studied — a question about the presenter, not the pixels. Tufte places conjuring in a family with political fallacies (Bentham), strategic intelligence (Dulles), lie detection (Ekman), and the psychology of deception (Hyman) (p. 64, notes): deception methods generalize across domains, and magic is simply the domain where they are practiced openly enough to study.
 
@@ -80,9 +80,9 @@ Fitzkee's analysis of conjuring reduces to two master strategies: **disguise** (
 The full Automaton Chess Player case lives in `tufte-narrative-and-sequence` §4. What this skill adds is the working heuristics the case (and its neighbors) yield:
 
 1. **Craft is orthogonal to truth.** The most beautifully executed diagram of the Automaton's interior was a wrong guess; execution quality is evidence of effort, not of accuracy. Never let rendering polish stand in for verification.
-2. **Copying substitutes for observation, then compounds.** Conjuring texts copied Reginald Scot's 1584 *Discoverie of Witchcraft* nearly word-for-word for some 300 years (p. 67, fn. 24); the California-as-an-island map propagated through 182 variants until 1745; Dürer's two-horned rhinoceros held for ~200 years; a conjurer drawn with six fingers was recopied because an homage drawing's extra finger went unnoticed for years (p. 71). Each copy is one more authority the next copyist will cite.
+2. **Copying substitutes for observation, then compounds.** Reginald Scot's 1584 *Discoverie of Witchcraft* founded a 300-year course of literary theft in conjuring texts, some copied mostly word-for-word from Scot's pages (p. 67, fn. 24); a 1622 map depicting California as an island was reproduced in 182 variants, the last copyist publishing in 1745; Dürer's two-horned rhinoceros was taken as real for some 200 years (p. 71); a six-fingered hand in a card-magic illustration went unnoticed for years until a fellow illustrator finally spotted it — and answered with a deliberately six-fingered homage (p. 71, fn. 38). Each copy is one more authority the next copyist will cite.
 3. **Degradation is a copying error too.** Textbook redrawings of Snow's cholera map drop the labels on the brewery and workhouse, turning the essential compared-with-what cases into mysterious cholera-free zones; some facsimiles omit the map entirely (p. 35). A faithful-looking copy that sheds labels, scales, or contrary cases is a false diagram with an honest ancestor.
-4. **Detecting a clever fraud takes a practitioner of the craft.** Brilliant non-specialists are the easiest marks — Franklin played the Turk and lost; Tufte's sources (Gardner, Hyman, Randi; p. 67, fn. 22) insist that fraud review requires someone fluent in how the deception is done. Staff the audit accordingly: a designer to catch design tricks, a statistician to catch statistical ones.
+4. **Detecting a clever fraud takes a practitioner of the craft.** Brilliant non-specialists are the easiest marks — Franklin played the Turk and lost; Tufte's sources (Gardner, Hyman, Randi; p. 66, fn. 22) insist that fraud review requires someone fluent in how the deception is done. Staff the audit accordingly: a designer to catch design tricks, a statistician to catch statistical ones.
 5. **The provenance question for any inherited diagram:** did its maker observe the mechanism, or copy another drawing? If the chain ends at a drawing rather than at the thing itself, treat the diagram as a hypothesis.
 
 ## §6. The Honest-Presentation Counterpart (pp. 68–70)
@@ -90,9 +90,9 @@ The full Automaton Chess Player case lives in `tufte-narrative-and-sequence` §4
 Hoffmann's 1876 maxims for magicians — never announce the trick in advance, never repeat it — are context-suppression rules; inverted, they become teaching (announce, then repeat). The PGP structure and the six rules for technical presentations are catalogued in `tufte-narrative-and-sequence` §5. The residue here:
 
 - **The audience frame decides everything.** Conjuring treats spectators as marks to be kept ignorant; teaching treats them as minds to be informed. Every downstream choice — announce or surprise, repeat or vary, paper or patter — follows from which frame the presenter is actually in (p. 68). A presentation optimized for astonishment is using the wrong frame for evidence.
-- **Attention choreography can serve revelation.** Nelms' stagecraft (p. 69) channels attention with honest mechanics: look and point where you want the audience to look; pass an object from one hand to the other to re-anchor gaze; show a prop against a contrasting background; step off with the foot nearer the destination. The same choreography that hides a palm can walk an audience through a proof — attention control is a tool, and only its purpose is moral.
+- **Attention choreography can serve revelation.** Nelms' stagecraft (p. 69) channels attention with honest mechanics: point without a counter-gesture that splits the pointing two ways; change hands when passing a prop across your body; show a small prop fully, against a contrasting background; step off with the foot nearest where you are going. The same choreography that hides a palm can walk an audience through a proof — attention control is a tool, and only its purpose is moral.
 - **Paper is the anti-patter.** Handouts create a testimonial record — the audience can later ask "didn't you say this?" (p. 69). Accountability is a *feature* of high-resolution paper and a structural impossibility of evanescent talk.
-- **Rehearse like a conjurer.** Magicians practice a two-second move for months; Mosteller's presentation discipline (pp. 69–70) imports that rehearsal ethic into teaching. Mastery of detail is what makes calm, non-manipulative delivery possible.
+- **Rehearse like a conjurer.** Magicians sometimes spend years perfecting a few minutes of material (p. 69); Mosteller's presentation discipline (pp. 69–70) imports that rehearsal ethic into teaching. Mastery of detail is what makes calm, non-manipulative delivery possible.
 - **The bridge to interfaces:** stage-magic principles have been explicitly carried into human-interface design (Tognazzini, cited p. 69, fn. 30) — the inverted toolkit applies to software surfaces, not only talks and charts.
 
 ## §7. The Two Integrity Tests (p. 70)
@@ -110,13 +110,13 @@ Professional floor, same page: state monetary series in inflation-adjusted units
 | Failure mode | Description | VE page |
 |---|---|---|
 | Effect-only depiction | Showing outcomes while withholding mechanism — marketing posing as explanation | 59–60 |
-| Wrong-viewpoint instruction | Spectator view drawn for a reader who must operate; no rotation, no backstage view | 55–58 |
+| Wrong-viewpoint instruction | Spectator view drawn for a reader who must operate; no rotation, no backstage view | 55–58, 61 |
 | Compressed verb | Hidden fast action explained at the same length as visible slow ones | 58 |
-| Dazzle at the discrimination point | Decorative pattern or texture placed exactly where the reader must distinguish | 59, 65 |
+| Dazzle at the discrimination point | Decorative pattern or texture placed exactly where the reader must distinguish | 65 (+ fn. 18) |
 | Scrutiny diversion | Framing, casing, or styling that repels reading of damaging content | 65 |
-| Clue-in-noise | The load-bearing fact buried mid-list at the same visual weight as filler | 64 |
+| Clue-under-distraction | The load-bearing fact released at the moment something louder claims attention | 64 |
 | Patter dependence | Display that collapses without its presenter's talk track | 64; cf. CYA notices |
-| Self-working deception | Format defaults (truncated axes, auto-scaling) that mislead with no operator intent | 64–65 |
+| Self-working deception | Format defaults (truncated axes, auto-scaling) that mislead with no operator intent | 65 |
 | Polish-as-proof | Trusting a diagram because it is well-executed (the Automaton trap) | 66–67 |
 | Copy-chain diagram | Inherited drawing whose provenance ends at another drawing, not the mechanism | 67, 71 |
 | Degraded copy | Redrawing that sheds labels, scales, or contrary cases while keeping the look | 35, 67 |
@@ -132,7 +132,7 @@ Professional floor, same page: state monetary series in inflation-adjusted units
 | Use arrows to conduct reading tempo through a sequence | Scatter undifferentiated arrows that point without pacing |
 | Demand the mechanism when shown only effects | Accept outcome-only vendor diagrams as explanation |
 | Put damaging or mandated content in the display's calmest, clearest register | Style disclosures to repel the scrutiny they exist for |
-| Give the key fact the visual weight its role deserves | Bury it mid-list among same-weight filler |
+| Give the key fact a clear moment and the visual weight its role deserves | Release it while attention is drawn elsewhere |
 | Test every display by reading it alone, cold, on paper | Let patter carry what the display should |
 | Trace inherited diagrams to an observation of the thing itself | Cite a chain of copies as if it were replication |
 | Staff deception review with practitioners of the relevant craft | Assume intelligence alone detects skilled fraud |
@@ -152,7 +152,7 @@ Professional floor, same page: state monetary series in inflation-adjusted units
 1. Who benefits if this is skimmed? What would they conceal?
 2. What moved while the layout moved?
 3. Is decoration sitting on a discrimination point?
-4. Is any disclosure styled to repel reading? Any key fact buried in noise?
+4. Is any disclosure styled to repel reading? Any key fact released under cover of a distraction?
 5. Would the format mislead even with an innocent presenter (self-working deception)?
 6. Where does the diagram's provenance chain end — at the mechanism, or at another drawing?
 7. What decision did (or will) this display escort, and did the outcome vindicate it?

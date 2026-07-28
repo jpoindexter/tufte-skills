@@ -24,7 +24,7 @@ The thesis, restated as operating rules:
 - **Subject matters.** The best graphics concern important, substantive content, not the trivial — paraphrasing Tufte: serious displays are about life, death, and the universe, not filler. Minard never names Napoleon (an observation from BE, not VDQI); withholding the expected celebrity name concentrates all attention on the dead soldiers, which is itself an aesthetic choice in service of content.
 - **Technique is in service of both.** Craft (line weight, typography, proportion) is how clarity and richness become visible. It is the last 5%, applied to a graphic that already has the right data and the right format.
 - **No recipes for masterpieces (p. 177).** The uniquely spectacular graphic can be admired but not derived from rules — Tufte cites Barnett Newman's quip that aesthetics is for the artist as ornithology is for the birds. These principles target routine, workaday designs; that is their honest scope.
-- **The Balanchine parallel (EI p. 35 n. 24).** Tufte states that his philosophy of information design — self-effacing displays intensely committed to rich data — parallels Balanchine's approach to dance, via Kirstein: personality is a haphazard mask for identification and prestige, and "no matter what is danced — stardom dims the dancing." Designer-as-star is the aesthetic failure mode with a performing-arts pedigree: when style becomes the celebrity, the content pays.
+- **The Balanchine parallel (EI p. 35 n. 24).** Tufte states that his philosophy of information design — self-effacing displays intensely committed to rich data — parallels Balanchine's approach to dance, via Kirstein: personality is a bundle of haphazard characteristics frozen into a pleasing mask for identification and prestige, and "No matter what is danced … stardom dims the dancing." Designer-as-star is the aesthetic failure mode with a performing-arts pedigree: when style becomes the celebrity, the content pays.
 
 ## §2. The Qualities of Attractive Displays
 
@@ -114,6 +114,8 @@ The chapter's largest block of advice, and its most quotable principle:
 
 ## §6. Format Selection — Sentence, Table, Graphic
 
+> Canonical owner: `tufte-tables-and-text-tables`. It carries the full five-rung format ladder, the twenty-number rule and its perceptual grounding, content-over-alphabet ordering, the supertable design grammar, and the semi-graphic hybrids. The table below is the quick decision aid only — go there for the reasoning behind any of these rows.
+
 Match the format to the data's size and the reader's task before refining any visuals.
 
 | Format | Use when |
@@ -179,3 +181,13 @@ The Epilogue's second warning (p. 191) completes the license: principles receive
 | Use a table for exact values; a supertable for many series | Use a pie chart — and never several pies |
 | Revise and edit graphics as hard as prose | Ship first-draft graphics |
 | Break any rule when it would leave a graceless mark | Apply the principles rigidly or in a peevish spirit |
+
+---
+
+## §11. Cross-book note — technique and the toolchain
+
+*Beautiful Evidence* extends "technique" from the mark to the production system. Discussing how sparklines are actually made (p. 61), Tufte argues that a good evidence system should be centred on **evidence-documents** rather than on a bureaucracy of single-mode applications — one program for text, another for charts, a third for slides, each imposing its own format on content that does not want to be split. He cites the Xerox Star (Xerox PARC, 1970s) as the precedent for a document-centred rather than application-centred design. The practical form of that argument is the **4-pager specification** (p. 184): a short, high-resolution paper document as the default unit of technical communication.
+
+Two working consequences for technique:
+- Ask what your tool's defaults are deciding *for* you — aspect ratio, palette, type, frame. A style sheet or legacy template dictating the shape of a graphic is the toolchain overriding the evidence, and it is the same failure as a peevish rule.
+- Prefer a production path that keeps words, numbers, and images in one document while you are still revising. Splitting them across applications forces the integration decisions (§5's data/text integration) to be made last, when they are most expensive to change.

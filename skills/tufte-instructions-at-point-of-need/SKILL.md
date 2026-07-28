@@ -52,8 +52,8 @@ The failure that produces manuals is treating instruction as a **body of text** 
 | **Interlinear Roman-numeral guides** (manuscript, ~1090 CE, p. 133) | Tiny words written between the lines telling a reader how to *pronounce* numerals aloud | Placed between the lines, at the instant of reading, for the exact reader who needs it |
 | **Charles de Gaulle parking label** (p. 133) | `Niveau -2 · Allée 09 · Place 032` — decomposed into floor, row, space | Three named dimensions, hierarchically ordered, photographable; drivers photograph it to memorize where the car is |
 | **Surgical needle-count tray** (p. 133) | Real-time instrument inventory written with a single-patient-use, regular-tip, non-latex sterile marker in a **stacklist on the surgical blanket, 4 × 15 cm**, beside a foam-block needle count tray | The checklist is created and read inside the sterile field, in real time, by the people doing the counting |
-| **Icelandic hand-drawn-map envelope** (2016, p. 130) | An address replaced by a sketched road map, the farm circled in red, plus a sentence about where the resident works | Delivered successfully — the instruction was built for the one reader who needed it, the postal carrier |
-| **E. G. Lutz, learn-to-draw sequence** (1913, p. 130) | Cube → house → barn in four stop-action steps | Each step is the previous step plus one visible increment |
+| **Icelandic hand-drawn-map envelope** (2016, p. 130) | An exact address replaced by a sketched road map, the farm marked in red, plus a sentence about where the resident works | Delivered successfully — the instruction was built for the one reader who needed it, the postal carrier |
+| **E. G. Lutz, learn-to-draw sequence** (1913, p. 130) | Cube → house → barn in stop-action increments ("Learn to draw in 4 easy steps!") | Each step is the previous step plus one visible increment |
 
 **Pattern across the library:** every successful case is (a) at the location of the action, (b) reduced to what fits there, and (c) built for a *specific known reader* rather than for a generic audience.
 
@@ -108,16 +108,16 @@ Tufte's counter-example sits back in Chapter 1 but belongs to this argument. A d
 
 The specific defects, all visible on the page:
 
-- A **decision tree** where a constraint would do: handles up for knives and sharp utensils, handles down for forks and spoons, plus a rule about oddly-shaped items not nesting, plus a boxed WARNING that reverses the first rule for sharp edges.
+- A **decision tree** where a constraint would do: handles up for knives and sharp utensils, handles down for forks and spoons, plus a rule about large or oddly-shaped items not nesting, plus a boxed WARNING restating the sharp-utensil rule in different terms (handles up vs. edges down).
 - **Awkward linebreaks leaving lonely words dangling** at the ends of paragraphs — content-hostile typography inside a document whose entire job is comprehension (see `tufte-typography-for-data`).
 - **Two separate loading-pattern grids** (Long Silverware Basket, Duo-Flex Silverware Basket) rendered as numeric matrices requiring a seven-item key.
-- **The key omits code number 5**, so the reader holding tablespoons finds no legend entry for them. Tufte's summary of the effect is that the interface mutates into a stress test for domestic relationships.
+- **The loading-pattern grid fails to show code number 5**, so the reader holding tablespoons (code 5 in the key) is left with no assigned slot for them. Tufte's summary of the effect is that the interface mutates into a stress test for domestic relationships.
 
 **What went wrong, in one line:** the instruction was elaborated where it should have been located. Nothing in the manual appears on the basket.
 
 **Named failure mode — Decision-Tree Creep.** When a rule acquires exceptions, the instinct is to branch. Every branch added off-site is a branch the user must evaluate at the point of action, from memory. *Fix:* push the distinction into the object (differently shaped slots), or accept a simpler rule with a worse edge case.
 
-**Named failure mode — Orphaned Code.** A legend, key, or enum that omits one of the values that actually occurs. *Fix:* generate keys from the value set, never author them by hand.
+**Named failure mode — Orphaned Code.** A key, mapping, or enum where one of the values in play is defined but never used, or used but never defined. *Fix:* generate keys and mappings from the same value set, never author them by hand.
 
 ---
 
@@ -154,7 +154,7 @@ The chapter ends with an analysis of the physical conditions under which real di
 | Increasing brightness to beat glare | Converts the screen into a *source* of glare — the noisy-restaurant effect, where people talk louder because people are talking louder | 138 |
 | Moving viewers | Glare and reflections move with them; motion attracts the eye-brain system | 139 |
 | Working fix in use | Pre-op echocardiograms viewed in **alcoves** giving optical and acoustical serenity; the surgeon's live video feed viewed in a **darkened booth** on a reflection-free screen | 139 |
-| Trend | Every new piece of surgical equipment introduces a new source of optical noise | 139 |
+| Trend | Every new piece of surgical equipment introduces a new source of optical noise | 138 |
 
 **The flight-deck precedent.** Tufte reproduces guidance from Asaf Degani's NASA report on the typography of flight-deck documentation (p. 138), noting it now applies to the far greater glare of the glossy laptop and iPad screens used for documents and flight maps:
 
@@ -181,7 +181,7 @@ Degani's further points, all transferable: when the eye shifts between a directl
 
 **I2 — Decision-Tree Creep.** Rules branching to cover exceptions, evaluated by the user from memory at the point of action. *Fix:* push the distinction into the object, or simplify the rule.
 
-**I3 — Orphaned Code.** A key or legend missing one of the values that actually occurs (the absent code 5, p. 18). *Fix:* generate keys from data.
+**I3 — Orphaned Code.** A key and its mapping that fail to cover the same value set (the loading grid missing the key's code 5, p. 18). *Fix:* generate keys and mappings from data.
 
 **I4 — Advance Instruction.** Onboarding tours, welcome modals, and training decks delivered before the need exists. *Fix:* deliver at the moment of first use of each control.
 

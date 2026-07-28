@@ -163,7 +163,7 @@ Tufte's later formulation is the most compressed version of this whole chapter, 
 - **Linking lines aspire to be sentences** — with subjects, verbs, and objects. A connector that cannot be read aloud as a sentence has not yet said anything.
 - Annotated links show **causes, effects, mechanisms, trade-offs, flows, and feedback**.
 - **Unannotated links lack character.** No more `x–y`; no more `x→y`.
-- The positive case there is a 1957 Disney organizational chart carrying **37 annotated graphical sentences** — an org chart that explains how the parts of a business feed each other, set against the know-nothing links of the standard hierarchy diagram.
+- The positive case there is Walt Disney Productions' 1957 **profit formula** — not an org chart, and Tufte's point is the contrast — carrying **37 annotated graphical sentences** that show how the parts of the business feed each other. His stated doctrine on that page: linking lines aspire to be sentences with subjects, verbs, and objects; annotated links show what things *do* (causes, effects, mechanisms, trade-offs, flows, feedback, interactions); unannotated links lack character, so no more bare *x–y* or *x→y*. The diagram's demonstration is that real worlds are not made of anonymous one-way streets, which is what organization charts assume when they run generic know-nothing links between boxes of proper nouns.
 
 **Practical test:** read every connector in your diagram aloud as a sentence. Where you can only say "A relates to B," you have found an unarticulated claim, not a finished one.
 
@@ -172,6 +172,8 @@ Tufte's later formulation is the most compressed version of this whole chapter, 
 A concrete integration technique from this chapter, easy to apply and rarely applied.
 
 Martinus Veltman's *Diagrammatica* **dispenses with numbering for equations and figures**, placing each one where it is needed instead. Tufte's stated payoff: the reader is not required to keep fingers at eleven different places in the book.
+
+**The pure failure case (*Envisioning Information*, p. 116).** Dufort's 1728 dance treatise runs 22 letter-codes linking text to figures, so every reading is a relay — mark → letter → text → meaning — with nothing about the letter recalling the thing it names. The sharpest part of Tufte's complaint: the relay persists even though text and image share the *same double-page spread*. Distance is not the problem; encoding is. The letters bestow a sequence on the illustrations and otherwise say nothing about the movements depicted. It is the anti-model for annotated links: a connector or label whose token carries no trace of its referent forces the reader to hold a dictionary in working memory, and the diagram's apparent tidiness is bought entirely out of the reader's attention. Set it against *Beautiful Evidence*'s annotated links, which say what things do.
 
 The connection to this skill: a cross-reference number ("see Fig. 4," "per Eq. 12") is itself a species of the **dreaded letter code** — an arbitrary token standing in for the thing, redeemable only by travelling somewhere else. The fix is the same as for links: **co-location**. Put the figure where its argument happens, even at the cost of repeating it.
 
@@ -216,7 +218,9 @@ The chapter's checklist. Tufte derives six practices from the SARS molecular-epi
 | 3 | **Annotated linking lines** | Specify when/how each link operates, its strength, persistence, and evidential credibility. | SARS distinguishes more- and less-certain links and annotates them. |
 | 4 | **Annotated nouns** | Label, describe, and classify the nodes, not only the links. | SARS shows strain IDs, descriptions, travel per patient. |
 | 5 | **Efficiency of design** | Clear, undecorated, maplike; strip chartjunk. | No clunky boxes, cartoony arrows, amateur type, decorative color. |
-| 6 | **Credibility** | Give reasons to believe; expose competing diagrams and alternative assumptions. | Peer-reviewed; 17 public-health authors; coherent story, diverse data. |
+| 6 | **Credibility** | Give reasons to believe; expose competing diagrams and alternative assumptions. | Peer-reviewed in *The Lancet*; most of its 18 authors at public-health organizations; coherent story, diverse data. |
+
+**Tufte reprints this spread fourteen years later** (*Seeing With Fresh Eyes*, p. 159) as the assigned study-hall reading in his one-day course, and compresses what it teaches into a single line worth carrying as the skill's thesis: causal thinking and showing, multiple scales and modes of evidence, content and credibility over design or software — **and every display should give reasons to believe.** That the six practices survive as the whole of his dataviz fundamentals is the strongest available evidence that this checklist is not a chapter-local flourish.
 
 Two enforcement rules from practice 5:
 

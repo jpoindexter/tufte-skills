@@ -12,7 +12,7 @@ This skill is the deep treatment of that territory. Siblings touch it in passing
 
 ## §1. The Format Ladder — Five Rungs (pp. 178–180)
 
-The basic structures for showing data are the sentence, the table, and the graphic — and often two or three of them should be combined (p. 178). Expanded to its full resolution, the ladder has five rungs:
+Tufte names three basic structures for showing data — sentence, table, graphic — and notes that two or three of them frequently belong together in one display (p. 178). Expanded to its full resolution, the ladder has five rungs:
 
 | Rung | Structure | Effective dimensions | Best for | Breaks down when |
 |---|---|---|---|---|
@@ -39,13 +39,13 @@ Text-table:  The three groups differed in how they did something:
 
 The ladder is not a status hierarchy. Moving up a rung is justified only by the data's size and the reader's task — moving a 6-number comparison from rung 2 to rung 5 is a downgrade dressed as sophistication.
 
-**The pie chart has no rung.** A table is nearly always better than a dumb pie chart, and the only design worse than one pie is several of them, which ask the viewer to compare quantities scattered in spatial disarray both within and between circles; given their low data-density and their failure to order numbers along a visual dimension, Tufte's verdict is that pie charts should never be used (p. 178, citing Bertin's judgment that multiple pies are completely useless).
+**The pie chart has no rung.** A table is nearly always better than a dumb pie chart, and several pies are worse than one — the viewer is left comparing quantities strewn in spatial disarray, inside each circle and across them. Low in data-density and unable to order numbers along a visual dimension, the pie draws Tufte's flat verdict that "pie charts should never be used" (p. 178; his footnote cites Bertin, who calls multiple pies "completely useless").
 
 ## §2. The Twenty-Number Rule — and Why Tables Resist Misperception (p. 56)
 
 > "Tables usually outperform graphics in reporting on small data sets of 20 numbers or less." — Tufte, *VDQI*, p. 56
 
-The special power of graphics comes in the display of *large* data sets (p. 56). The rule's context matters as much as its threshold. It arrives at the end of Tufte's review of perception experiments: viewers decode graphical areas by approximate power laws (reported perceived area ≈ actual area^0.8±0.3 for circles), perceptions differ across people, change with experience, depend on context — and even the reported perception of plain line length shifts with what other people have already said about the lines (pp. 55–56). A graphic is an estimation task run through unreliable perceptual hardware. A table is not: reading the printed value 46 is not a psychophysical judgment. For small data sets, the table sidesteps the entire decoding-variability problem — that is *why* it outperforms, not merely a taste preference.
+Graphics earn their special power, Tufte adds in the same breath, on *large* data sets (p. 56). The rule's context matters as much as its threshold. It arrives at the end of Tufte's review of perception experiments: viewers decode graphical areas by approximate power laws (reported perceived area ≈ actual area^0.8±0.3 for circles), perceptions differ across people, change with experience, depend on context — and even the reported perception of plain line length shifts with what other people have already said about the lines (pp. 55–56). A graphic is an estimation task run through unreliable perceptual hardware. A table is not: reading the printed value 46 is not a psychophysical judgment. For small data sets, the table sidesteps the entire decoding-variability problem — that is *why* it outperforms, not merely a taste preference.
 
 Operational form:
 
@@ -62,7 +62,7 @@ The rule has a founder's precedent. Playfair — the inventor of the bar chart, 
 
 ## §3. Ordering: Content Beats the Alphabet (p. 178)
 
-There are nearly always better sequences than alphabetical — order by content or by data values (p. 178). Tufte's own three-line text-table is re-sorted from A/B/C to ascending value (B 46, A 53, C 57) to make the point at the smallest possible scale, and the supertable scales it up: its rows are ordered so as to tell an ordered story about the elections (p. 179).
+The alphabet is almost never the best row order — content or the data's own values nearly always sequence better (p. 178). Tufte's own three-line text-table is re-sorted from A/B/C to ascending value (B 46, A 53, C 57) to make the point at the smallest possible scale, and the supertable scales it up: its rows are ordered so as to tell an ordered story about the elections (p. 179).
 
 - **Alphabetical order encodes nothing.** It serves only name-lookup in long reference lists. In any table meant to be *read* rather than *consulted*, sorting by the data turns the row sequence itself into an additional display dimension — rank becomes visible for free.
 - **Ordering is the cheapest graphical property a table can acquire.** Before adding any glyph or slope (§5), sort. A sorted column is already half a bar chart.
@@ -87,11 +87,11 @@ Its grammar, element by element:
 | Row order within and across clusters | Sequenced to tell an ordered story about the elections, not to alphabetize groups |
 | Parenthetical share-of-electorate figures | Weight each row so the reader knows how big each group is |
 
-Two distinct reading directions answering two distinct questions, carried by nothing but rules, clustering, and order — no plotted marks at all. The result attracts and intrigues readers through organized, sequential detail and a reference-like quality (p. 179): a reader can graze it, interrogate it, or look up their own demographic.
+Two distinct reading directions answering two distinct questions, carried by nothing but rules, clustering, and order — no plotted marks at all. The result is a table built to attract and intrigue — organized, sequential detail with the feel of a reference work (p. 179): a reader can graze it, interrogate it, or look up their own demographic.
 
 **When the supertable is the right call** (converging with `tufte-data-density` §12): many localized comparisons; exact values matter; the audience includes both grazers and looker-uppers; and the alternative on the table is a wall of small charts, one per group — a hundred little bar charts would shatter the across-and-down reading structure into isolated fragments.
 
-**Prose-like tables.** For sets of highly labeled numbers, a wordy data graphic coming close to straight text works well — Tufte's example is the *Times* "Winners and Losers in the Forecasting Game" panel (Jan. 2, 1979, p. D-3), where eight forecasters' predictions for five 1978 economic indicators are set as ranked stacks of labeled entries above and below a black band carrying the actual results: a table of numbers nicely organized into a graphic (p. 180).
+**Prose-like tables.** For sets of highly labeled numbers, a wordy data graphic coming close to straight text works well — Tufte's example is the *Times* "Some Winners and Losers in the Forecasting Game" panel (Jan. 2, 1979, p. D-3), where eight forecasters' predictions for five key 1978 economic indicators are set as ranked stacks of labeled entries above and below a black band carrying the year's results: a table of numbers organized into a graphic (p. 180).
 
 ## §5. Semi-Graphic Hybrids — Tables Wearing Graphical Properties (pp. 145, 158–159, 174, 180)
 
@@ -102,11 +102,11 @@ Table entries can also be arranged in semi-graphical form (p. 178). Each hybrid 
 | Galton's bivariate height table | Cells hold exact frequencies of adult-children × mid-parent heights | The row/column arrangement *is* a coordinate plane — data as internal grid — so a fitted ellipse and axes can be drawn directly over the table | p. 145 (from Pearson's *Life* of Galton) |
 | Government tax-receipts table-graphic, 1970 vs 1979 | Two labeled columns of exact percentages, 15 countries | Vertical position spaced in proportion to the values; connecting lines whose slopes encode change | pp. 158–159 |
 | *Consumer Reports* repair records, 1976–1981 cars | Row = trouble spot, column = model year, panel = model; full lookup addressability | Each cell's value set as a five-step circle glyph (much better → much worse than average), so columns and rows read as visual patterns | p. 174 (*Consumer Reports*, April 1982) |
-| Forecasting-game panel | Every entry a labeled forecaster + exact figure | Vertical rank-ordering around the black actual-results band | p. 180 |
+| Forecasting-game panel | Every entry a labeled forecaster + exact figure | Vertical rank-ordering around the black results band | p. 180 |
 
-**The slopegraph's three simultaneous readings (p. 159)** make it the clearest demonstration of what a semi-graphic buys. Read *vertically*, it ranks the 15 countries within each year — and because names are spaced in proportion to the percentages, the gaps carry data too. Read *across*, each country's pair shows its change over the decade. Read *down the collection of slopes*, the overall upward pattern emerges and lines of unusual slope stand out. The information is integrated through its connected content and separated in that the eye follows several different, uncluttered paths — Tufte's *viewing architecture* (deep treatment in `tufte-multifunctioning-elements` §7).
+**The slopegraph's three simultaneous readings (p. 159)** make it the clearest demonstration of what a semi-graphic buys. Read *vertically*, it ranks the 15 countries within each year — and because names are spaced in proportion to the percentages, the gaps carry data too. Read *across*, each country's pair shows its change over the decade. Read *down the collection of slopes*, the overall upward pattern emerges and lines of unusual slope stand out. The display is at once integrated — through its connected content — and separated, the eye tracing several distinct, uncluttered paths across it: Tufte's *viewing architecture* (deep treatment in `tufte-multifunctioning-elements` §7).
 
-**Galton's table** earns its place in history: the arrangement of the data yields an internal grid, a rare example of data as grid (p. 145) — and because the table is simultaneously a scatterplot of frequencies, it could host the analytical overlay (the ellipse, the axes) through which the correlation surface was first seen. A semi-graphic table is not just a display; it can be an instrument of discovery.
+**Galton's table** earns its place in history: the way the data are arranged creates an internal grid — Tufte's rare case of "data as grid" (p. 145) — and because the table is simultaneously a scatterplot of frequencies, it hosts an analytical overlay drawn directly on it: the ellipse and axes of the correlation surface, as reproduced from Pearson's *Life* of Galton. A semi-graphic table is not just a display; it can be an instrument of discovery.
 
 **Design discipline for hybrids:** add graphical properties one at a time, and only when each property answers a named reader question (rank? change? pattern-across-cells?). A table dressed in three decorations is chartjunk with cell borders; a table wearing one earned property is a second reading direction for free.
 
@@ -116,7 +116,7 @@ The book's general principles bear directly on table construction:
 
 - **The five data-ink principles govern tables too (p. 105):** above all else show the data; maximize the data-ink ratio; erase non-data-ink; erase redundant data-ink; revise and edit. In table terms: the digits, labels, and functional rules are the data-ink; cell borders, zebra fills, and repeated units are the first candidates for erasure. Note that the supertable's horizontal rules survive this test — they carry the topical-paragraph structure (§4); a rule that clusters is data-organizing ink, a grid that cages every cell is not.
 - **Friendly-graphic standards apply (p. 183):** words spelled out, no mysterious abbreviations; text runs left to right; type upper-and-lowercase with serifs, clear and modest; no legend-like indirection between a code and its meaning.
-- **Tables are paragraphs about data (p. 181):** run them into the text at the point of reference rather than exiling them to a figures ghetto, and avoid ruled lines separating different types of information within the display.
+- **Paragraphs about data (p. 181):** Tufte's integration principle — data graphics are paragraphs about data, and tables with them — means running the table into the text at its point of reference rather than exiling it to a figures ghetto, and avoiding ruled lines that separate different types of information within the display.
 - **Ordering before decorating (§3):** the sort order is part of the design, chosen with the same care as the clustering.
 
 ## §7. Decision Tests
@@ -161,7 +161,7 @@ Run these in order; stop at the first decisive answer.
 
 **FM7 — Costume hybrid.** A semi-graphic whose graphical dressing answers no reader question — glyphs, color fills, and mini-charts stacked onto a table for visual interest. *Fix:* one property per named question, or return to the plain table (§5).
 
-**FM8 — Format monogamy.** Forcing everything into a single structure when the content calls for combination — the sentence, table, and graphic are devices to be mixed, and often two or three should be combined (p. 178).
+**FM8 — Format monogamy.** Forcing everything into a single structure when the content calls for combination — sentence, table, and graphic are devices to mix, and a display frequently needs two or three at once (p. 178).
 
 ## §10. Application Checklist
 
@@ -182,4 +182,4 @@ Run these in order; stop at the first decisive answer.
 
 ---
 
-Sources: *The Visual Display of Quantitative Information*, Edward Tufte, 2nd ed. — the choice of design: sentences, text-tables, tables, semi-graphics, and graphics, pp. 178–180; tables vs. graphics for small data sets, pp. 55–56; data-ink principles, p. 105; Galton table-graphic, p. 145; tax-receipts slopegraph and viewing architecture, pp. 158–159; *Consumer Reports* table-graphic, p. 174; supertable, p. 179; table-design pointer to Ehrenberg, "Rudiments of Numeracy" (1977), p. 178 fn. 1.
+Sources: *The Visual Display of Quantitative Information*, Edward Tufte, 2nd ed. — the choice of design: sentences, text-tables, tables, semi-graphics, and graphics, pp. 178–180; tables vs. graphics for small data sets, pp. 55–56; data-ink principles, p. 105; Galton table-graphic, p. 145; tax-receipts slopegraph and viewing architecture, pp. 158–159; *Consumer Reports* table-graphic, p. 174; supertable, p. 179; data/text integration, p. 181; friendly-graphic standards, p. 183; table-design pointer to Ehrenberg, "Rudiments of Numeracy" (1977), p. 178 fn. 1.

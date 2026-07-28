@@ -28,16 +28,16 @@ Read the device as a specification.
 | Element | How it works in ch. 9 |
 |---|---|
 | **Order** | By **page of first appearance**, ascending, from the covers forward — not alphabetical, not by author, not by date |
-| **Grouping** | By the book's own chapters, with the chapter's number and full title used as the section header, so the index's structure mirrors the book's structure |
+| **Grouping** | By the book's own chapters, with the chapter's number and title (lightly abridged) used as the section header, so the index's structure mirrors the book's structure |
 | **Locator** | The printed page number, set bold at the head of each entry — the entry's identity is *where it lives*, not who wrote it |
 | **Handle** | The **opening phrase of the item as it appears in the text** ("Music is the space between the notes"; "The most dangerous phrase in a language"; "Can the data presented be traced back to primary data") — so a reader recognizes it from having read it |
 | **Citation** | Full source line follows the handle: author, work, publisher or journal, date, page, and any translator or edition |
-| **Thumbnail** | Roughly half the entries carry a small reproduction of the actual image being cited, set inline beside or above its citation, at a size where you recognize the picture without being able to read it |
+| **Thumbnail** | A large share of entries — on some spreads most of them, on others only a few — carry a small reproduction of the actual image being cited, set inline beside or above its citation, at a size where you recognize the picture without being able to read it |
 | **Layout** | Two columns per page, entries abutting with no rules, frames, or heavy separators — the quilt construction |
 | **Editorial disclosure** | Images edited or redrawn to repair battered originals, correct color separations, or improve design are flagged as such in the citation; primary sources for Tufte's own variations are identified; the 60 uncredited photographs in the book are attributed to Tufte in one line (p. 162) |
 | **Escape hatch** | Where a citation helps a reader understand the content, it is placed **directly in the body text instead**, and does not wait for the back matter (p. 162) |
 
-**What the thumbnails are.** They are the actual artifacts — a Babylonian clay tablet of Pythagorean triples, Marie Curie's holograph notebook, a Financial Times small-multiples panel, a Gee's Bend quilt, an xkcd strip, a Kaplan-Meier survival curve, Tufte's own sculptures at Hogpen Hill Farms, a Philips ultrasound screen, a Roy Lichtenstein canvas, a Chinese stroke-order diagram. Not category icons. Not decorative marks. **A thumbnail of the thing, or nothing.**
+**What the thumbnails are.** They are the actual artifacts — a Babylonian clay tablet of Pythagorean triples, Marie Curie's holograph notebook, Linus Pauling's lab notebook, a *Financial Times* small-multiples panel, a Gee's Bend quilt, Yehudi Menuhin's marked-up Bach solo violin sonata, an xkcd strip, Tufte's own sculptures at Hogpen Hill Farms, a Philips ultrasound screen, a Roy Lichtenstein canvas, a Chinese stroke-order diagram. Not category icons. Not decorative marks. **A thumbnail of the thing, or nothing.**
 
 ---
 
@@ -193,7 +193,7 @@ Before shipping any reference apparatus, appendix, registry, or index:
 |---|---|
 | How do I compose a quilt of heterogeneous images so it argues rather than decorates? | `tufte-visual-confections` |
 | How does one display serve both the glance and the close inspection? | `tufte-micro-macro-readings` |
-| Does the *order* of a list make a claim, and is that claim consistent? | `tufte-parallelism` |
+| Does the *order* of a list make a claim, and is that claim consistent? | `tufte-lists` §8 |
 | How should a small multiple set be laid out and scaled? | `tufte-small-multiples` |
 | **How should back matter, references, and registries be ordered and keyed so people browse them?** | **this skill** |
 

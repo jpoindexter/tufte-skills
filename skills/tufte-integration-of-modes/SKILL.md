@@ -51,6 +51,8 @@ The bond between verbal and nonverbal evidence comes undone in **publishing**, a
 
 **The stakes of that integration.** The book's 5 engraved moon images (4 unique plus 1 repeat) were the first astronomical pictures ever printed, and roughly 10 pages of visual observation demolished the Aristotelian doctrine that celestial bodies are perfect, smooth, and unblemished — a claim that had become religious doctrine on no evidence at all. From then on, theories about the universe had to be tested against the visual evidence of observation.
 
+**What the integration bought — visible certainty (pp. 100–109).** The book's engraved star fields spill past the text block into the margins — the composition breaks the typographic grid because, as Tufte puts it, nature is nowhere rectangular, and the new stars were breaking the frame of past knowledge. Galileo's own warrant for the whole performance is *oculata certitudine* — certainty delivered to the eye by direct observation. The core evidence is a 24-page serial diary of **65 dated, annotated observations** of Jupiter's satellites, integrated with the running narrative (the first printing of about 550 copies sold out immediately). Tufte then re-arranges that evidence twice: once as stacked one-dimensional linelands that expose the satellites' corkscrew orbital structure in space-time, and once as a compressed parallel layout of words beside images. His point is methodological: **both arrangements are needed to analyze the evidence, and re-showing the same data in several arrangements is repetition of data, not redundant design** — scientific displays should not be afraid to repeat their evidence with visual variations. In journals, letters, and the printed book alike, Galileo draws no line between words, diagrams, and images; a book design that treats all modes of information alike re-enacts the argument.
+
 **The endpoint of the argument — Saturn as a sentence element (EI pp. 120–121).** *Envisioning Information* closes its Epilogue on Galileo's 1613 *Istoria*, where the telescopic images of Saturn are set inline in the running sentence — word and drawing as one, the stunning never-before-seen images just another sentence element. Tufte's coda names Saturn at once a drawing, a word, and a noun: "The wonderful becomes familiar and the familiar wonderful" (EI p. 121). This 1613 inline glyph is the EI seed of *Beautiful Evidence*'s opening argument, and the tightest historical demonstration that mode integration can reach all the way down into the syntax of a sentence.
 
 **The rule this yields:** ask of any document what its *production* method makes cheap. Wherever the tooling makes segregation free and integration expensive, segregation will happen regardless of what the author intended — so it must be resisted deliberately, budgeted for, and checked at proof stage.
@@ -63,7 +65,7 @@ This is the chapter's central evidence and the strongest argument available for 
 
 ### The control condition: Newton's *Principia* (1687), p. 110
 
-The *Principia* **integrates hundreds of physics diagrams so as to fall properly in the text.** It even solves the hardest case: where one diagram is needed across a long argument, the first edition **repeats the same diagram in position on 4 double-page layouts**, and the third edition on **7 consecutive layouts**. Descartes' *Principia* (1644) used the same technique with **11 repeats**.
+The *Principia* **places its hundreds of physics diagrams properly within the text.** It even solves the hardest case: where one diagram is needed across a long argument, the first edition **repeats the same diagram in position on 4 double-page layouts**, and the third edition on **7 consecutive layouts**. Descartes' *Principia* (1644) used the same technique with **11 repeats**.
 
 Two causes, both worth naming because they are reproducible:
 
@@ -74,7 +76,7 @@ Two causes, both worth naming because they are reproducible:
 
 ### The failure: *Opticks* (1704), pp. 110–111
 
-*Opticks* reports fundamental discoveries — interference effects, the color composition of sunlight, Newton's rings, the reflector telescope — and **one-third of Newton's text directly addresses its 55 diagrams.** Neither Halley nor woodcuts were deployed. The diagrams were printed as **free-standing engravings, completely separate from the text.**
+*Opticks* reports fundamental discoveries — interference effects, the color composition of sunlight, Newton's rings, the reflector telescope — and **one-third of Newton's text directly addresses its 55 diagrams.** Neither Halley nor woodcuts were deployed. The diagrams were printed as **free-standing engravings, fully severed from the text they explain.**
 
 The resulting collation:
 
@@ -87,11 +89,13 @@ The resulting collation:
 
 55 drawings, ganged onto **12 pages of flaps** bound into **4 clusters**, each cluster opening sideways and dangling from the book.
 
-**The navigation tax.** Linking a passage to its distant diagram takes **5 hierarchical levels of flap label code**: the phrase "Prism DEGdeg" in the text resolves to the flap address "Book I. Part II. Plate IV. Fig. 16." The first 80 text pages alone contain **6,300 such letter-codes** referring to illustrations stashed away after page 80. Reading the book requires enormous back-and-forth between a book of words and 4 parallel booklets of illustrations.
+**The navigation tax.** Linking a passage to its distant diagram takes **5 hierarchical levels of flap label code**: the phrase "Prism DEGdeg" in the text resolves to the flap address "Book I. Part II. Plate IV. Fig. 16." The first 80 text pages alone contain **6,300 such letter-codes** referring to illustrations stashed away after page 80. Reading it means constant shuttling between one volume of words and what amount to 4 parallel illustration booklets dangling off it.
 
 **Tufte's verdict, and the sentence to carry:** this is a competent design for *comparing or admiring* diagrams, and a poor design for *learning about light and optics.* Two different jobs; the format silently chose the wrong one.
 
 **The end-state of segregation.** Separated plates in old books are convenient for a particular kind of nonreader: dealers in antiquarian prints slice the engravings out, frame them, and sell them off — the ultimate segregation of image from text. Appreciating physics drawings as art objects is fine; it is finer to know what they mean and who thought them up.
+
+**The wear pattern is the verdict (p. 15, adjacent "Mapped Pictures" chapter).** Brisson's *Ornithologie* (1760) split its content into 6 fat text-only volumes (Latin and French in parallel), linked by awkward codes to a separate atlas of 261 hand-colored engravings. Tufte reports the reader behavior his own set records: the text volumes show no signs of use 244 years after publication, while the atlas of plates is well-worn. Segregation does not merely inconvenience readers — the severed half of a work simply stops being read.
 
 ### The table: 23 editions, 5 languages, 300 years (pp. 112–113)
 
@@ -118,7 +122,7 @@ A London 1931 reprint (still in print as of 2006 and the only in-print edition f
 
 ### What to take from it
 
-- **Nearly all editors, translators, and publishers appeared unaware of the inherently visual and explanatory quality of the content.** The failure was not malice or cost — it was not noticing that the figures *were* the argument.
+- **Nearly every editor, translator, and publisher seems simply never to have registered how visual and explanatory the content is.** The failure was not malice or cost — it was not noticing that the figures *were* the argument.
 - **The initial book design tends to persist**, whether it is good (*Hypnerotomachia*, §4) or bad (*Opticks*). Getting the original right is worth disproportionate effort, because three centuries of reprints will inherit it.
 - **The generalization, stated plainly:** if Newton's great work can be disrupted and rendered substantially incoherent by the technologies of reproduction for some 300 years, then **no work with visual elements is safe.**
 
@@ -142,7 +146,7 @@ Tufte does something unusual here: he **measures** the integration rather than p
 Tufte's term for what this achieves: a **cognitive integration** alongside the celebrated optical one. The likely cause is the same as Newton's *Principia* — image-sketches placed within the original manuscript, so the compositor was laying out an already-integrated document.
 
 **Three further devices from the same book:**
-- **Storyboard summary (p. 92).** Six woodcuts thread through a 40-page love story, providing a crisp visual summary of a distinctly wordy account — setting and linking scenes, locating and animating characters. Tufte compares the structure directly to a modern movie storyboard (the cornfield sequence in Hitchcock's *North by Northwest*, 1959).
+- **Storyboard summary (p. 92).** Six woodcuts thread through a 40-page love story, compressing a notably wordy account into a crisp visual digest — setting and linking scenes, locating and animating characters. Tufte compares the structure directly to a modern movie storyboard (the cornfield sequence in Hitchcock's *North by Northwest*, 1959).
 - **Words as image (p. 93).** 57 concocted Latin and Greek inscriptions (2,300 words in English translation) appear on pots, boxes, tablets, architecture, and a garden of letterforms built from marjoram plants. The book is **94% text and 6% images**, yet the words themselves are intensely visual.
 - **Persistence (p. 94).** For 500 years, across the 1546 French edition and the 1999 English translation, the integration held — because the original design was right. The reverse of *Opticks*.
 
@@ -151,6 +155,10 @@ Tufte's term for what this achieves: a **cognitive integration** alongside the c
 > **The test to carry from this section:** for serious work in reasoning about evidence, the essential test of text/image relations is **how well they assist understanding of the content**, not how perfectly stylish the pages look. — *Beautiful Evidence*, p. 88
 
 Applying that test requires knowing *what the words mean in relation to the images, and what the images mean in relation to the words* — which is a content judgment, not a layout judgment, and cannot be delegated to someone who has not read the material.
+
+### The sentencing memorandum — integration under adversarial stakes (pp. 94–95)
+
+A short modern case sits right after *Hypnerotomachia*: a federal prosecutors' sentencing memorandum from a 2006 congressional bribery case, which sets its documentary exhibit — the handwritten bribe schedule itself — directly into the argument's text. Tufte's two observations generalize: the standard format of American legal documents produces thin information densities (leaded-out type, as if productivity were measured by the page), and adroit placement of visual evidence *inside* the prose measurably intensifies the advocacy. Integration is not an aesthetic nicety; in adversarial writing it is a competitive weapon.
 
 ### The Golden Field Guide — the task dictates the apparatus (p. 115)
 
@@ -166,7 +174,7 @@ The worked case is the jay spread from Robbins, Bruun, and Zim's *Birds of North
 | Song scores in musical notation | Identification by ear when the bird is unseen |
 | Descriptions and identifying keys | The distinctions images alone under-specify |
 
-**The location maps are the sharpest demonstration**, because they prevent a specific, nameable error: confidently identifying a bird in **Montreal** that in fact resides exclusively in **Acapulco**. Tufte's summary of the spread is a sense of craft, detail, and credibility that comes from gathering and displaying good evidence all together.
+**The location maps are the sharpest demonstration**, because they prevent a specific, nameable error: confidently identifying a bird in **Montreal** that in fact resides exclusively in **Acapulco**. Tufte's verdict on the spread: assembling all the good evidence in one place is precisely what produces its felt craft, detail, and credibility.
 
 **The operational rule:** derive the apparatus from the task's known failure modes. "Add a tooltip / a legend / an expandable panel" are interface metaphors and answer no question the content posed.
 
@@ -224,7 +232,7 @@ The test case is a noisy, cluttered scatterplot of body mass against brain mass 
 
 ### The concession — and why it matters methodologically
 
-Tufte then does the thing most arguments skip: **verbal arguments do not resolve design questions. Visual evidence decides visual issues.** He grants that Cleveland has a strong point, and tests it by deleting all 26 labels.
+Tufte then does the thing most arguments skip: he refuses to settle a visual question verbally — **design disputes are decided by looking at visual evidence, not by argument.** He grants that Cleveland has a strong point, and tests it by deleting all 26 labels.
 
 The stripped version reveals something the argument alone could not: without the dark typography of the labels, we see very differently — the big blob of words in the top half of the original **inflated the visual variability of body mass for heavier animals.** Cleveland was right about the effect.
 
@@ -251,7 +259,7 @@ Stated as the sequence of three graphs — original, labels-stripped, redesigned
 2. **Visual problems should not be fixed by reducing content-resolution** (for example, by discarding the words that label data).
 3. **Instead, fix the design.**
 
-**The last step (p. 121).** Words and data-dots are themselves abstracted representations of actual animals and actual masses. In the spirit of seeking visual solutions to visual problems, the final version lets **each animal represent itself** at its own two-space location — the mark becomes data point, label, and illustration at once. Integration taken to its limit: not words placed near images, but a single element serving every mode.
+**The last step (p. 121).** Words and data-dots are themselves abstracted representations of actual animals and actual masses. In the spirit of seeking visual solutions to visual problems, the final version lets **each animal represent itself** at its own two-space location — the mark becomes data point, label, and illustration at once. Integration taken to its limit: not words placed near images, but a single element serving every mode. (Tufte states the honest limit on the graph itself: the animal images are sized to the space available, not to mass — only the brachiosaurus-versus-human pairing approximates true relative scale.)
 
 ---
 

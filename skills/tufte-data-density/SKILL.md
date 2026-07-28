@@ -49,7 +49,7 @@ Statistical graphics rarely reach the information rates that ordinary maps achie
 
 **Cross-book benchmarks (later Tufte):**
 - *Visual Explanations* extends the yardstick to screens: a TV-resolution display shows ~53 characters where a printed page carries 1,000–50,000, and screen resolution runs roughly 5–10% of a printed map's (VE pp.149–150).
-- *Beautiful Evidence* adds Graunt's Table of Casualties: 1,855 counts spanning 1629–1659 yield 1,719,585 pairwise comparisons within one eyespan — the n(n−1)/2 arithmetic of density (BE pp.178–179). It also notes that newspaper sports, weather, and financial pages routinely carry hundreds to thousands of numbers with almost no chartjunk, because the content matters too much to its readers to fool with (BE pp.153, 178).
+- *Beautiful Evidence* adds Graunt's Table of Casualties: 1,855 counts spanning 1629–1659 yield 1,719,585 pairwise comparisons within one eyespan — the n(n−1)/2 arithmetic of density (BE pp.178–179). The worked derivation and its use against slide-per-point formats belong to `tufte-cognitive-style`; carried here only as the density arithmetic. It also notes that newspaper sports, weather, and financial pages routinely carry hundreds to thousands of numbers with almost no chartjunk, because the content matters too much to its readers to fool with (BE pp.153, 178).
 
 ## §3. Data Density Across Publications
 
@@ -193,6 +193,8 @@ Tufte's verdict on pies is categorical: their low density and failure to order n
 
 ## §11. Small Multiples — Density at Scale
 
+> Scope: this section covers small multiples **only as a density instrument**. The pattern itself — invariants, panel structure, ordering, eyespan, failure modes — is owned by `tufte-small-multiples`; go there for the mechanics.
+
 The primary pattern for high density across complex, multivariate data: a series of graphics showing the same variable combination, indexed by a changing variable. The design stays constant so attention goes entirely to shifts in the data.
 
 ### Seven-property conclusion (p.175, paraphrased)
@@ -215,6 +217,8 @@ The *Consumer Reports* layout mixes table and graphic: the dot-matrix grid itsel
 Hold axis scales, format, and encoding constant across every frame; let only the data change. Any design variation across frames turns a comparison of data into a comparison of designs.
 
 ## §12. The Supertable — High Density Without Graphics
+
+> Scope: the supertable's design grammar and the sentence → text-table → table → semi-graphic → graphic format ladder are owned by `tufte-tables-and-text-tables`. What follows is only the density case for choosing a table.
 
 Not every high-density display is a graphic. A well-built statistical table can carry more data per area than most charts, and beats a graphic when exact values or many localized comparisons matter.
 

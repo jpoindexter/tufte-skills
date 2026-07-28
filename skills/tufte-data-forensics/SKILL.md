@@ -7,7 +7,7 @@ tags: [tufte, data-integrity, research-integrity, forensic-audit, measurement, s
 
 ## Overview
 
-*Seeing With Fresh Eyes* ch. 4 (printed **pp. 81–120**) is a procedure, not a lament. Its organizing device is a proposed reference work — an imagined *Data Measurement and Analysis: 1,000 Safeguards, Pitfalls, and Cheats in Statistical Practice*, modeled on Khonsari and Sintek's cardiac-surgery encyclopedia of some 3,000 graded alerts and warnings (p. 82). The parallel is the whole argument: surgery already has an itemized, severity-graded, actionable literature of things that go wrong at the point of work, and statistical practice does not — even though a botched analysis reaches more lives than a botched operation.
+*Seeing With Fresh Eyes* ch. 4 (printed **pp. 80–119**) is a procedure, not a lament. Its organizing device is a proposed reference work — an imagined *Data Measurement and Analysis: 1,000 Safeguards, Pitfalls, and Cheats in Statistical Practice*, modeled on Khonsari and Sintek's cardiac-surgery encyclopedia of some 3,000 graded alerts and warnings (p. 82). The parallel is the whole argument: surgery already has an itemized, severity-graded, actionable literature of things that go wrong at the point of work, and statistical practice does not — even though a botched analysis reaches more lives than a botched operation.
 
 This skill owns the **step-by-step audit**. Two siblings own adjacent material and are not repeated here:
 
@@ -113,7 +113,7 @@ The chapter's most directly reusable audit instrument, adapted from the Septembe
 
 ### Q1 — Can the presented data be traced back to primary data, free of processing or other manipulation?
 
-Supporting logic worth carrying verbatim into policy: only credible primary data can corroborate published data; retention of primary data plus adequate record keeping is required for the *ordinary conduct* of work, not merely for investigating wrongdoing, because new questions arise that require returning to the primary data and revising the original analysis. Failure to keep primary data and records for a reasonable time is, by itself, a threat to the health of the enterprise — as true in the computer age as before.
+Supporting logic worth carrying into policy: only credible primary data can corroborate published data; retention of primary data plus adequate record keeping is required for the *ordinary conduct* of work, not merely for investigating wrongdoing, because new questions arise that require returning to the primary data and revising the original analysis. Failure to keep primary data and records for a reasonable time is, by itself, a threat to the health of the enterprise — as true in the computer age as before.
 
 ### Q2 — Is there clear evidence that the data do *not* come from the measurements described?
 
@@ -219,7 +219,7 @@ Binned, smoothed, and summarized displays are where an audit dies. Tufte's headi
 | Summary device | What it hides | Audit demand |
 |---|---|---|
 | Boxplot | Six visibly different datasets — and their 63 possible combinations — can yield one identical boxplot (p. 100); 2 of the 5 plotted points are just the min and max | The unbinned plot: Tufte's counter-display shows all 1,000 measurements in the same space |
-| Double-binned boxplots | Binning X into columns and Y into quartiles manufactures thresholds and plateaus that are researcher-imposed, not data-driven, and notoriously hard to replicate. Tufte's synthetic case: 12 elephants on sinusoidal flight paths with identical local pulses, N = 2,598, binned into a false "steady gains to a significant novel threshold" story (p. 101) | The original XY scatter, at full N |
+| Double-binned boxplots | Binning X into columns and Y into quartiles manufactures thresholds and plateaus that are researcher-imposed, not data-driven, and notoriously hard to replicate. Tufte's synthetic case: 12 elephants on sinusoidal flight paths with identical local pulses, N = 2,598, binned until the boxplots tell a false story of steady dose-response gains reaching a highly significant novel threshold that supposedly warrants raising the dose (p. 101) | The original XY scatter, at full N |
 | Binned quarterly business slide | One number per quarter, cherry-picked window. Two extra quarters change the story; twelve more change it again (p. 100) | The full unbinned time series — which in Tufte's redraw reveals high volatility and end-of-quarter upticks that may signal premature revenue recognition |
 | Smoothed summary curve | Inliers and outliers alike; three different underlying datasets can share one naive summary model (p. 100) | The points, with the fit overlaid |
 
@@ -251,13 +251,44 @@ Tufte's answer, on the same page: working with data, epidemiologists have extend
 
 Alan Cassels, on the same page, supplies the operational form: across thousands of experts in psychiatric diagnosis, none ever proposed *tightening* the criteria for their favored diagnosis; all worried about missed cases, none about the harms and risks of mislabeling. **Audit action:** ask which direction of error the field is institutionally organized to fear. That direction is where the bias will be.
 
-**Money in guidelines (p. 114).** Guidelines are written exclusively by insiders, and joining a guideline panel advances an expert's specialty career. Some professional societies are large financial enterprises: one national cardiology association's fiscal 2016–2017 budget was **$912 million with 20% from corporate support**; **77% of a €60 million annual income** at a European cardiology society came from industry. Ioannidis's proposed remodel is a straight outsider-comparison move: have guidelines written by methodologists and patients with content experts consulted, or recruit specialists *unrelated* to the subject matter, because what seems crucially important to a field expert may look like minutiae to a less personally involved outsider.
+**Money in guidelines (pp. 114–115).** Guidelines are written exclusively by insiders, and joining a guideline panel advances an expert's specialty career. Some professional societies are large financial enterprises: one national cardiovascular association's fiscal 2016–2017 budget was **$912 million with 20% from corporate support**; **77% of a €60 million annual income** at a European cardiology society came from industry. Ioannidis's proposed remodel (p. 115) is a straight outsider-comparison move: have guidelines written by methodologists and patients with content experts consulted, or recruit specialists *unrelated* to the subject matter, because what seems crucially important to a field expert may look like minutiae to a less personally involved outsider.
 
 **Gratitude is not an outcome measure (p. 115).** A cardiology chair's defense — "I do angioplasty and I have grateful patients" — is self-scoring: post-op gratitude does not measure whether an intervention works, is free of harm, or is worth its cost against alternatives. Tufte's line: using patient gratitude to assess medical work is like winning a race that has only one runner. The empirical rebuttal on the same page: high patient satisfaction is associated mainly with hospitality, but also with **more treatments, higher costs, and substantially higher mortality**, even after adjusting for baseline health and comorbidities.
 
 **Regulatory capture as an audit finding (p. 112).** Tufte's proposal is that credibility assessments of research should be as rigorous and frequent as restaurant sanitation inspections or pre-sale home inspections — his example being a 42-page pre-sale report with 55 photographs including infrared images of electrical switch boxes. He grants that performance audits are themselves distortable by financial interests and captured bureaucracies, but sets the stakes with the counterfactual: **270,000 U.S. deaths attributed to oxycodone**, where every pill was approved by the FDA, made by licensed companies, prescribed by licensed doctors, sold by licensed pharmacists, and all **72 billion pills** (about 500 per U.S. household) tracked to the exact place, time, and amount of sale by the DEA. The only thing worse than regulatory agencies is the theater of failed agencies captured by those they regulate.
 
-**Access as a conflict (pp. 96–97).** Proprietary electronic health record systems seize ownership of patient content via click-through gag orders, blocking screenshots of any interface element in research and professional meetings — which blocks interface research on the very system that governs clinical command and control. Tufte's framing: each installation is effectively a vast unrandomized, uncontrolled experiment enrolling patients and staff without consent, with no measured outcomes, harms, or benefits, and no stopping rule. **Audit action:** treat contractual barriers to inspection as part of the evidence about a system's credibility, not as a neutral legal fact.
+### Access and Ownership as an Audit Precondition (pp. 96–97)
+
+Tufte breaks a two-page chapter-within-a-chapter into the middle of ch. 4, revisiting the electronic health record material from ch. 1. It belongs to the audit because **you cannot audit data you are contractually forbidden to look at.** Access is not a legal preliminary to the audit; it is the audit's first finding.
+
+**The design principle being violated (p. 96).** Tufte invokes Berners-Lee's rule for data models: the point is to let a pool of information grow and evolve, which requires that *the method of storage must not place its own restraints on the information*. A record format that claims ownership of what it stores has inverted the rule — the container now governs the content.
+
+**The gag order, and why it is an evidence problem (pp. 96–97).** Local EHR installations seize ownership of patient content by copyrighting it, and every login puts patients and staff through a click-through agreement. Tufte prints a parody terms-of-service that claims everything in the system — colors, words, photos, graphs, numbers, punctuation, artworks, logos, trademarks, and any compilation of them — and forbids reproduction "by any means," screenshots included; declining routes the user to a second box threatening to disable their medical record. He notes this is not a parody. The consequences that matter to an auditor:
+
+| The barrier | What it makes unauditable |
+|---|---|
+| Screenshots of any interface element prohibited in research and at professional meetings | Interface research on the system that runs clinical command and control |
+| Inconvenient opt-out designed into the software business model | Any measurement of how many users actually consented rather than surrendered |
+| Patients redefined as "users" and "customers" | Whether their distinct legal rights as patients survived the redefinition |
+| University medical centers signing anyway | Institutional norms of free speech, inquiry, and even anti-plagiarism rules |
+
+**The experiment nobody registered (p. 97).** Tufte's framing is the sharpest audit move on the spread: everything within 50 meters of a patient must satisfy fussy, detailed regulatory, industrial, and professional standards — yet the question of whether EHRs are safe and effective, and whether benefits exceed harms to patients and staff, went unasked. So each installation amounts to one of the worst clinical trials ever run: patients and staff enrolled without consent in a vast unrandomized, uncontrolled experiment, with no measured outcomes, harms, or benefits, no stopping rule for excessive harm, and no Human Subjects Safety Review Board anywhere in sight. The failure is documented at length, and Tufte points to Atul Gawande's *Why Doctors Hate Their Computers* (2018) as the record of it.
+
+**The remodel — the record belongs to the patient (p. 97).** Tufte reproduces Eric Topol's stacklist of two dozen short reasons a patient's health record must be theirs. Grouped, they are an argument about data provenance and custody rather than about sentiment:
+
+| Grounds | Representative claims in Topol's list |
+|---|---|
+| Ownership | It is your body; you paid for it; it is worth more than any other kind of data about you |
+| Custody failure | Legally owned by doctors and hospitals; sold, stolen, and hacked without your knowledge; homeless as you generate more of it |
+| Access failure | Information blocking between hospitals; most doctors will not release office notes; no single institution holds a lifetime record; no patient can hand it to researchers who want it |
+| Data quality | Full of mistakes that get copied and pasted forward and that you cannot edit; designed to maximize billing rather than health; roughly a tenth of medical scans repeated because the prior ones are inaccessible |
+| Evidence of benefit | Patients with their own data are more engaged and have better outcomes; doctors with full access consult records routinely; security improves under decentralization |
+| The ask | Owning your data should be a civil right; it could save your life |
+
+**Audit actions.**
+- Treat every contractual barrier to inspection as an entry in the audit findings, not as a neutral legal fact — it belongs on the same page as retraction status and funding source (§9, §13).
+- Ask whether the system generating your data has ever been evaluated *as an intervention*: what outcome was measured, against what comparison, with what stopping rule.
+- Establish who owns and can release the primary records **before** the audit is scoped. If nobody can produce them without a vendor's permission, the traceability question (§4, Q1) is already answered.
 
 ---
 
@@ -354,6 +385,8 @@ Tufte's proposed **quick credibility scoring for research on humans** (p. 113) i
 | **Gratitude-as-Outcome** (p. 115) | Satisfaction, hope, or thanks substituted for outcome | Check whether satisfaction correlates with *better* outcomes here |
 | **Insider Guideline** (p. 114) | Recommendations authored solely by the specialty that profits | Ask who was excluded — methodologists, patients, outside specialists |
 | **Data-Availability Excuse** (p. 101) | Trade secret, privacy, litigation, silent period, crashed drive | Record the refusal as an audit finding |
+| **Contractual Unauditability** (pp. 96–97) | A click-through gag order forbids screenshots, reproduction, or inspection of the system holding the data | Establish who can release the primary records before scoping the audit |
+| **Unevaluated Installed System** (p. 97) | A system everyone depends on was never evaluated as an intervention — no outcomes, no comparison, no stopping rule | Ask what was measured, against what, and who could have stopped it |
 
 ---
 
@@ -368,6 +401,8 @@ PROVENANCE
 [ ] The instrument's own technical manual section on artifacts and error
 [ ] Chain of custody: who gathered it, who merged it, who redistributed it, every hop
 [ ] Direct observation booked: watch one full collection cycle at the site
+[ ] Legal right to inspect, screenshot, reproduce, and publish — named in writing, before scoping (§9)
+[ ] Whoever can release the primary records identified by name, not by department
 
 STRUCTURE
 [ ] Batch metadata as first-class columns — date, site, instrument, lot, operator
@@ -415,4 +450,4 @@ CREDIBILITY
 
 ---
 
-Source: Edward Tufte, *Seeing With Fresh Eyes: Meaning, Space, Data, Truth* (Graphics Press, 2020) — ch. 4, "Data Analysis When the Truth Matters: On the Relationship Between Evidence and Conclusions. Remodeling Statistical Practice and Teaching," printed **pp. 81–120**, with the chapter epigraph page at **p. 80**. All page numbers are printed pages. Material is paraphrased throughout; direct quotations are limited to single attributed sentences, and all quoted lines above are third-party voices Tufte himself quotes (Feynman p. 80, Daniel p. 84, Darwin p. 86, Tukey p. 90, Begg p. 81, Smith and Sinclair p. 114, von Neumann p. 106, the MSK physician-in-chief p. 116). The adverse-effects percentages on p. 98 are Tufte's satirical mock-up, not measured prevalence.
+Source: Edward Tufte, *Seeing With Fresh Eyes: Meaning, Space, Data, Truth* (Graphics Press, 2020) — ch. 4, "Data Analysis When the Truth Matters: On the Relationship Between Evidence and Conclusions. Remodeling Statistical Practice and Teaching," printed **pp. 80–119**. The chapter's title page is p. 81; p. 80 is its facing epigraph spread, and Tufte's own visual index groups it under chapter 4 (p. 167). The Nabokov/Kafka markup on p. 120 belongs to **chapter 5**, not this one — the visual index (p. 170) and the permissions apparatus (p. 173) both file it there. All page numbers are printed pages. Material is paraphrased throughout; direct quotations are limited to single attributed sentences, and all quoted lines above are third-party voices Tufte himself quotes (Feynman p. 80, Daniel p. 84, Darwin p. 86, Tukey p. 90, Begg p. 81, Smith and Sinclair p. 114, von Neumann p. 106, the MSK physician-in-chief p. 116). The adverse-effects percentages on p. 98 are Tufte's satirical mock-up, not measured prevalence.

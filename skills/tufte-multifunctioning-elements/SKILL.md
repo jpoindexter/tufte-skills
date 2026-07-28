@@ -142,3 +142,16 @@ A dense multifunctioning graphic earns its complexity when the eye can travel se
 | Engineer multiple steady lines of sight; diagram the viewing architecture | Force all reading into one direction, or stack so many functions the decode goes verbal |
 | Ask of every single-function element: what data could this *also* show? | Accept any element at single-function without questioning it |
 | Recognize that a poem, road stripe, or typographic shape can encode data physically | Assume multifunctioning applies only to statistical charts |
+
+---
+
+## §11. Cross-book notes
+
+*Beautiful Evidence* supplies four of the cleanest specimens in the whole canon, all outside conventional statistical graphics:
+
+- **The sparkline as a linking line (BE p. 73).** A connector drawn between two nouns that is *simultaneously* a time-series of the relationship it names — the link does not merely assert that A relates to B, it reports the statistical character of that relationship over time. The general move: wherever a diagram draws a line to mean "connected," ask what the line could measure.
+- **Verrocchio's dimension lines (BE pp. 72–73).** A Renaissance measuring line that carries a proportional number (1/16 of a horse's head) *and* words naming both of its endpoints. One stroke performs three jobs — geometry, quantity, and label — where a modern drawing would spend a leader line, a callout box, and a legend.
+- **Barr's chart (BE pp. 64–68).** Alfred Barr's diagram of modern art serves at once as an exhibition catalog cover, the catalog's table of contents, and an analytical diagram of artistic influence. The document-level version of the principle: a whole artifact, not just a mark, can hold several functions. Barr also sizes each name's type in proportion to historical importance, exactly as city-name size works on a map.
+- **The final animal scatterplot (BE p. 121).** Each animal's own image occupies its two-space position, so a single mark is at once data point, label, and illustration — the endpoint of the labels-are-data argument, and the reason Tufte resolves the label-clutter problem by layering rather than by deletion.
+
+*Visual Explanations* adds the tightest text-image case in the pack: **Kratzenstein's vowel pipes, 1779** (p. 101). The letters A E I O U both label the five pipes of a talking automaton *and are* their content — each letter names the vowel its pipe pronounces. A label that is identical with the datum is the limit case of double-functioning. Tufte sets it against Scheiner's O-symbol on the same page, where a mark that looks like a sunspot is not one — the same design move used well and badly, side by side.

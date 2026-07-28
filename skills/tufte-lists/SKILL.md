@@ -69,13 +69,13 @@ When lists matter — Tufte's examples are checklists for pilots and surgeons �
 
 ## §4. Hierarchy Is a Model — Test It by Direct Comparison
 
-Tufte's page-141 headline verdict on deep hierarchy: hierarchical lists are aggressive, imposed, complicated, incomprehensible to outsiders (p. 143). The methodological point is stronger than the aesthetic one: **how do we know a hierarchical model is empirically reasonable? By direct comparison with other models of information** — the same model-criticism discipline as `tufte-visual-thinking` §4, applied to information architecture. The inherited taxonomy is the model you failed to criticize.
+Tufte's page-143 headline verdict on deep hierarchy: hierarchical lists are aggressive, imposed, complicated, incomprehensible to outsiders (p. 143). The methodological point is stronger than the aesthetic one: **how do we know a hierarchical model is empirically reasonable? By direct comparison with other models of information** — the same model-criticism discipline as `tufte-visual-thinking` §4, applied to information architecture. The inherited taxonomy is the model you failed to criticize.
 
 **The AnswerBook case (Martin Hardee's account, p. 143):** Sun's CD-ROM documentation browser held 16,000 pages behind a hierarchical topic chooser. Its own proud builders found browsing the hierarchy "a little complicated." Tufte used the product for about 90 seconds and delivered the comparison:
 
 > "Dr. Spock's *Baby and Child Care* is a best-selling owner's manual for the most complicated 'product' imaginable — and it has only 2 levels of headings." — Tufte, quoted by Martin Hardee, *Seeing With Fresh Eyes*, p. 143
 
-AnswerBook had 8 levels of hierarchy and counting. Baby care is more complicated than Solaris; the childcare manual needed two levels. Hierarchical content piles up complexity that outsiders — and even insiders — cannot penetrate; the depth serves the content's producers, not its readers.
+AnswerBook had 8 levels of hierarchy and counting. Baby care is more complicated than Sun's software; the childcare manual needed two levels. Hierarchical content piles up complexity that outsiders — and even insiders — cannot penetrate; the depth serves the content's producers, not its readers.
 
 | Do | Don't |
 |---|---|
@@ -95,7 +95,7 @@ A one-dimensional list carries one relation (sequence). A 2-D list array carries
 |---|---|---|---|
 | **Ad Reinhardt, "Variety of Dualisms"** (postcard to Katherine Scrivener, 1951; p. 144) | One dualism per line (nature/man, Dionysian/Apollonian, romantic/classic, actuality/possibility…) | The two poles of every dualism, aligned | ~32 word pairs in 18 lists in 9 matrices; horizontal and vertical readings both produce meanings — read across for a dualism, down for a worldview |
 | **Cat-landing grid** (Donald McDonald, "How does a cat fall on its feet?", *The New Scientist* 7, 1960; p. 144) | A stop-action pair: photograph beside explanatory drawing | The action sequence, top to bottom | Reads across 4 rows (photo ↔ diagram of the same instant) and down 2 columns (the fall unfolding); Tufte's caption calls it a simple and natural design — viewers see and understand how cats land |
-| **Schwinger-Dyson diagrams** (p. 145) | — | — | Physics equations as connected 2-D lists: the diagrams delineate, mirror, connect, and reconnect — stacklist polyphony among lists |
+| **Schwinger-Dyson diagrams** (p. 145) | — | — | Physics equations as connected 2-D lists: the diagrams delineate, mirror, connect, and reconnect — stacklist polyphony |
 | **Heinricher bamboo array** (Jackie Heinricher, *On Discovering Bamboo*; p. 145) | Clumping bamboo / running bamboo | Advantages–virtues / disadvantages–vices | 4 lists containing 19 sentences located in a 2×2 array; the row and column labels do the categorizing so no sentence has to |
 
 Two craft observations from the cases:
@@ -127,7 +127,7 @@ Two cases argue that **a list of verbs is a model of agency**, where a list of n
 
 The chapter's closing theory case (pp. 148–149) proves the governing claim from the negative side: **the absence of order is itself an ordering principle, and it makes a claim — when it is chosen.**
 
-A paragraph from Fitzgerald's *Tender Is the Night* (1934) contains two lists. The first is Nicole's shopping: colored beads, folding beach cushions, artificial flowers, honey, a guest bed, love birds, a rubber alligator, a traveling chess set of gold and ivory, two chamois leather jackets. David Lodge's analysis (*The Art of Fiction*, 1992, quoted pp. 149) observes that Fitzgerald emphasizes the *miscellaneousness* of the list to convey the completely non-utilitarian nature of the shopping — cheap trivia promiscuously mixed with large functional objects and expensive frivolities:
+A paragraph from Fitzgerald's *Tender Is the Night* (1934) contains two lists. The first is Nicole's shopping: colored beads, folding beach cushions, artificial flowers, honey, a guest bed, love birds, a rubber alligator, a traveling chess set of gold and ivory, two chamois leather jackets. David Lodge's analysis (*The Art of Fiction*, 1992, quoted p. 149) observes that Fitzgerald emphasizes the *miscellaneousness* of the list to convey the completely non-utilitarian nature of the shopping — cheap trivia promiscuously mixed with large functional objects and expensive frivolities:
 
 > "There is no logical order in the list, no hierarchy of price, or importance, or grouping of the items according to any other principle." — David Lodge, *The Art of Fiction* (1992), quoted in *Seeing With Fresh Eyes*, p. 149
 
@@ -199,4 +199,4 @@ Before shipping any list, backlog, menu, taxonomy, or checklist:
 
 ---
 
-Source: Edward Tufte, *Seeing With Fresh Eyes: Meaning, Space, Data, Truth* (Graphics Press, 2020), Chapter 7, "Lists: Theory and Practice," printed pp. 141–150 (chapter plate p. 140). Case credits per the book's back matter (p. 171): Saul Steinberg, *The New Yorker* cover, October 18, 1969; Al-Zahrawi, *Kitab al-tasrif*, Córdoba ~1000 CE (Leiden ms. Or. 2540); Jorge Luis Borges, "Celestial Emporium of Benevolent Knowledge" (1942); Martin Hardee, "Tufte Story: AnswerBook," blogs.sun.com, 2004; Aelius Donatus, *Ars Maior*, 9th-century manuscript (BnF Latin 13025); Ad Reinhardt, "Variety of Dualisms" postcard, 1951; Donald McDonald, *The New Scientist* 7 (1960), 1647–1649; Richard Serra, *Verb List* (1967–68); David Lodge, *The Art of Fiction* (1992), 64–65. The p. 150 Fire Chief case is covered in `tufte-meetings-and-documents`. All passages paraphrased; quoted lines limited to single attributed sentences with page citations.
+Source: Edward Tufte, *Seeing With Fresh Eyes: Meaning, Space, Data, Truth* (Graphics Press, 2020), Chapter 7, "Lists: Theory and Practice," printed pp. 141–150 (chapter plate p. 140). Case credits per the book's back matter (pp. 170–171): Saul Steinberg, *The New Yorker* cover, October 18, 1969; Al-Zahrawi, *Kitab al-tasrif*, Córdoba ~1000 CE (Leiden ms. Or. 2540); Jorge Luis Borges, "Celestial Emporium of Benevolent Knowledge" (1942); Martin Hardee, "Tufte Story: AnswerBook," blogs.sun.com, 2004; Aelius Donatus, *Ars Maior*, 9th-century manuscript (BnF Latin 13025); Ad Reinhardt, "Variety of Dualisms" postcard, 1951; Donald McDonald, *The New Scientist* 7 (1960), 1647–1649; Richard Serra, *Verb List* (1967–68); David Lodge, *The Art of Fiction* (1992), 64–65. The p. 150 Fire Chief case is covered in `tufte-meetings-and-documents`. All passages paraphrased; quoted lines limited to single attributed sentences with page citations.
