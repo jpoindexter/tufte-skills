@@ -76,7 +76,7 @@ Saturated, intense hues overwhelm the eye — even punish it — when they cover
 | Medium context zone | Low-to-mid saturation |
 | Small extreme / focal point | Full saturation, strong |
 
-Give *all* areas glaring rich color and the result is brilliant, disordered, confusing, and unpleasant.
+Give *all* areas glaring rich color and the result is brilliant, disordered, confusing, and unpleasant. The same law holds outside color — Tufte quotes music educator Ann Driver: "if every note, word or movement is stressed, the result is even less meaning" (EI p. 82 n. 2).
 
 ### Rule 2 — No Adjacent Pastels at Large Scale
 Light, bright colors mixed with white, placed next to each other over large areas, usually look unpleasant. This is the pastel-on-pastel default of presentation software. Worse, dark-value versions of these strong colors produce 1+1=3 phantom bands at their boundaries that fight the encoded data.
@@ -110,6 +110,8 @@ For categorical labeling, the goal is maximum perceptual distance per slot. Tuft
 
 Byrne tunes even the primaries for the page: yellow is broken with orange and darkened in value to sharpen its edge against white paper; blue is kept relatively light to hold its distance from black; black is the least-used color and is avoided for large solid elements, muting unnecessary contrast.
 
+**Byrne is a rediscovery, not an invention (EI p. 84 n. 4):** the *Chou Pei Suan Ching* (ca. −600 to +300) proved the "Pythagorean" theorem with a single diagram, and by the era of Liu and Chao (ca. +200) the diagram was colored — central square yellow, surrounding rectangles red — color-as-proof-label some 1,600 years before 1847. Tufte carries Needham's point that the Chinese proof is *immediate*, against Euclid's notoriously circuitous demonstration; Schopenhauer dismissed Euclid's Pythagoras as "a proof walking on stilts, nay, a mean, underhand proof."
+
 **Redundant labeling nuance:** Tufte's redraw couples Byrne's color method *with* conventional letter-coding. Intermingling the two does not feel fussy — it speeds recognition and lets viewers choose how they link text to diagram. Redundancy helps when it resolves a real linking task.
 
 | Do | Don't |
@@ -134,6 +136,8 @@ Color quantifies along a perceptually continuous span (in value and saturation) 
 Faced with this "rainbow encipherment," viewers must turn to other cues (contour, edge, labels) to read the data at all.
 
 **Hue can *extend* a value scale (nuance, EI p. 92 n. 9):** controlled, gentle hue variation layered onto a value ramp increases fineness of differentiation while *keeping* a natural visual sequence. The sin is disordered hue (ROYGBIV), not hue per se.
+
+**Data-driven scale construction (Imhof, EI p. 93 n. 13):** the specific linking of color to number must be decided in relation to the information itself — the frequency distribution of the data, which aspects of the data should come forward, and the delineation of important cutpoints. Choose class breaks from the data's distribution and the analytic question, never from an even slicing of the scale.
 
 | Criterion | Value Scale (light→dark) | Rainbow (ROYGBIV) |
 |---|---|---|
@@ -207,7 +211,7 @@ Tufte's grand palette strategy: draw from nature's colors, especially the lighte
 
 Color stacks information planes in one space without confusion: a muted background plane (context/geography), a low-saturation mid-plane (secondary data), and saturated foreground spots (the primary signal). The eye reads these as depth planes without borders. Spots against a light, muted field highlight and italicize the data while weaving overall harmony.
 
-**On screens specifically.** Computer displays are low-resolution, running at 1/10 to 1/1000 the data density of a map or book page, and their bright white emits glare like a light bulb. Color helps: softening the white background calms glare, and color edges let a grid be removed entirely (de-gridding kills the 1+1=3 clutter of closely spaced dark grid lines). For an active-window frame, the color must be *light in value* (to mute 1+1=3 noise against content) and *intense/saturated* (to signal "active") at the same time — **yellow is the only color satisfying both**, so a two-dimensional task is met by two dimensions of one color.
+**On screens specifically.** Computer displays are low-resolution, running at 1/10 to 1/1000 the data density of a map or book page, and their bright white emits glare like a light bulb. Tufte's benchmark for the gap: a finely engraved 19th-century match-tax stamp holds subtle, layered color that garish low-resolution screen color cannot approach (EI p. 89 n. 6). Color helps: softening the white background calms glare, and color edges let a grid be removed entirely (de-gridding kills the 1+1=3 clutter of closely spaced dark grid lines). For an active-window frame, the color must be *light in value* (to mute 1+1=3 noise against content) and *intense/saturated* (to signal "active") at the same time — **yellow is the only color satisfying both**, so a two-dimensional task is met by two dimensions of one color.
 
 **Failure mode — 1+1=3 Effects:** closely spaced dark grid lines or adjacent strong backgrounds generate phantom fields beyond the sum of their parts (dark grid on white reads as a gray haze present in neither element). Fix: mute the grid toward the background, or replace it with spot color on the active element only.
 

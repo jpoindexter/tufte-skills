@@ -88,6 +88,8 @@ Five hundred years of practice (examples from 17 countries, 7 centuries, "3 plan
 
 **The dodecahedron's six faces (p. 15).** The Tukey display slices the data and projects it onto six of the twelve faces of a pentagonal dodecahedron — six suffice because opposite faces are parallel and would show identical views. A worked lesson in spending exactly as many panels as the geometry requires, no more.
 
+**The fourth dimension — sections, shadows, projections (VE p. 86).** Bragdon and Banchoff extend the toolkit upward: a plane slicing a 3-D object yields changing 2-D cross-sections, and by analogy, sequences of 3-D slices could reveal 4-D objects. Sections, shadows, and projections form the general dimension-lowering toolkit — small multiples of slices as the flatland answer to higher-dimensional structure.
+
 ---
 
 ## §5. The Sunspot Lineage — Visual Reasoning to Micro/Macro (pp.18–23)
@@ -96,7 +98,7 @@ The chapter traces one dataset across ~380 years to show the same methods reappe
 
 **Galileo's projection method (1610–1612):** project the sun's image onto a sheet a foot from the lens, draw a circle to fit, then mark each spot at correct scale and position. This converts a glare-blinding observation into a stable mark on paper flatland.
 
-**Galileo's visual reasoning (1613):** through a chain of drawings he converts what "the eye of the forehead" merely registers into what "the eye of the mind" understands — turning raw spot positions into proof that the spots sit on a rotating spherical sun. It was more than 150 years before anyone materially improved his result.
+**Galileo's visual reasoning (1613):** through a chain of drawings he converts what "the eye of the forehead" merely registers into what "the eye of the mind" understands — turning raw spot positions into proof that the spots sit on a rotating spherical sun. It was more than 150 years before anyone materially improved his result. That longevity had two causes (p. 19 n. 11): insight, and the fact that almost no sunspots were observable from 1645 until 1715 — the Maunder Minimum. Data scarcity can freeze a finding's authority.
 
 **Scheiner's small multiples (1613 and 1626–1630):** the daily diagrams indexed on time come from Scheiner's *De Maculis Solaribus* (Rome, 1613, published under the pseudonym "Apelles"), with one further plate from *Rosa Ursina*; the apparent-path diagrams tracking spot structure across a stationary disk are the contribution of his later *Rosa Ursina* (completed 1630) — "a design simultaneously enhancing dimensionality and information density." But Scheiner filled the blank, spotless regions with his patron's and religious order's emblems (a failure mode, §10).
 
@@ -109,6 +111,8 @@ The chapter traces one dataset across ~380 years to show the same methods reappe
 R.A. Fisher, founder of modern statistics, wrote in 1925 that earlier workers treated variation as a nuisance detracting from the average, whereas the modern aim is to study the *causes* of variation itself. A good micro/macro display honors Fisher: it never reduces data to the mean alone.
 
 **The modern butterfly (Hathaway/NASA):** density up **tenfold**, a full century, nine cycles. The sine of latitude places each mark; **color encodes the log of area covered (lighter = larger)** — converting a spatial dimension into a color dimension; a lower time-series, summing all latitudes, restores total percent of the sun's surface covered. Parallel sequencing of the two panels enhances both dimensionality and density.
+
+**Symmetry as reclaimable surface (p. 23 n. 15):** because sunspots are symmetric about the solar equator, the butterfly's wings may be folded over (Gleissberg & Damboldt), halving the display when the north/south distinction carries no information — exploit a symmetry in the data to reclaim surface.
 
 ---
 
@@ -188,6 +192,8 @@ Numbers on a plane can multiply too; two table examples close the gallery.
 
 **Why tables win in a trial:** speech is linear, one-dimensional, non-reversible "talk talk talk"; a visual table is simultaneously a **wideband** and a **perceiver-controllable** channel, letting each juror read, re-edit, and reason at their own pace and in their own order.
 
+**The restraint bound (p. 35 n. 23):** trial lawyer Joe Jamail, quoted by Tufte alongside the Gotti analysis, warns that too many pictures turn the courtroom into a circus — "jurors will think you think they're stupid." The Gotti chart worked as *the one* exhibit the jury recalled: visual evidence persuades in a talk-talk-talk setting precisely when it is scarce and dense, not decorative and plural.
+
 ---
 
 ## §10. The Failure Mode — Chartjunk and the Duck (pp.33–35)
@@ -208,6 +214,8 @@ The opposite of escaping flatland is *decorating* it. The good methods are **sel
 | False escape / pretend dimensions | Fake dimensions added to an impoverished dataset | The royal dining table so caught in flatland it cannot hold the pots |
 
 Jonathan Swift's 17th-century cartographers, who filled unknown territory with pictures of elephants for want of real towns, are Tufte's image for substituting embellishment where data should be.
+
+**Period nuance on Scheiner's emblems (p. 21):** the patron and religious-order emblems are similar to a modern trademark or logotype and may have served as a seal of validation for readers of 1630; only today do they read as strident, contradicting nature's rich pattern. Ornament-in-blank-space can be a credentialing convention of its era — still wrong, but not mere vanity.
 
 **The moral premise — respect for the audience.** Chartjunk rests on the false belief that "if the numbers are boring, you've got the wrong numbers" is *not* true — when in fact it is. Consumers of graphics are usually smarter about the subject than the people decorating it. Standards of excellence are set by high-quality maps — bountiful detail, layered close reading, rigorous survey data — not by posters meant for viewing at a distance.
 

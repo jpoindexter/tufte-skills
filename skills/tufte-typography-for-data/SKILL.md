@@ -37,7 +37,7 @@ Tufte's scale runs further in both directions than a responsive/hostile pair sug
 | Content-responsive | Linebreaks follow commas, semicolons, full stops; spacing exposes parallel structure | Meaning amplified; syntactic units visible | pp. 17, 52 |
 | **Content-possessed** | The typographic form *becomes* the thing described | Apollinaire's calligramme sets "Il pleut" as five slanting vertical columns of single letters, so the text physically rains | p. 51 |
 
-**Boundary for data work:** possession is legitimate when the form *is* the datum — rain, terrain, stroke order, a descent, a rise. It is decoration the moment the form asserts something the data does not.
+**Boundary for data work:** possession is legitimate when the form *is* the datum — rain, terrain, stroke order, a descent, a rise. It is decoration the moment the form asserts something the data does not. (Related: the 2-D typography of Barr's cubism chart and Apollinaire's *Calligrammes* permits multiple simultaneous reading paths — BE p. 66; see `tufte-narrative-and-sequence`.)
 
 ---
 
@@ -398,6 +398,8 @@ A data display must embody the principles it advocates. Tufte's bad-example scat
 **F14 — Deleting labels to reduce clutter.** Treating clutter as an attribute of the information rather than a failure of the design. *Fix:* layer the labels onto a quieter visual level; do not lower the data resolution. (BE pp. 118–121)
 
 **F15 — Foreign typeface.** Charts set in the software's default face, visually announcing that they were produced elsewhere. *Fix:* one type family across data and text. (VDQI pp. 180–181)
+
+**F16 — The zero degree of graphics.** Design-heavy layouts that fragment or subordinate text, delivering impressions instead of the sequenced depth of crafted prose — Giovannini's pathology, cited by Tufte, noting that books about graphic design are notorious for containing almost no text. The capitulation of text to layout is a named failure, not a style. *Fix:* let the prose argument set the layout; design serves the sentences. (VE p. 148 n. 25)
 
 ---
 

@@ -96,6 +96,14 @@ Tufte argues in *Visual Explanations* (p. 32) that analytic credibility depends 
 
 Snow documented data limitations explicitly — patients who died in hospitals after moving, addresses not registered, cases he could not confirm. He argued these gaps would be distributed proportionally across the outbreak area and therefore would not bias the map's main conclusion. Acknowledging error is not weakness; it demonstrates analytic integrity.
 
+### The pump-handle myth — audit the retelling (pp. 33–34)
+
+The most retold element of Snow's story — the handle removal of September 8 — is its weakest-evidenced part: the daily death series shows the epidemic already in steep decline, and Hill's verdict is that the epidemic's end was *not* dramatically determined by the removal. The minimum defensible claim is that removal prevented a recurrence; a competing explanation ran simultaneously — population flight emptied the pool of victims. Richardson's dramatic account that "the plague was stayed" shows how retellings convert an equivocal intervention into a founding causal myth. Feinstein's methodological summary: a non-randomized intervention, historical controls, an equivocal time relationship — and Snow was still exactly right about waterborne transmission. Audit the retelling, not just the chart.
+
+### Reproduction degradation of the map (p. 35)
+
+The original is an awkward 40-cm square, and reproductions have steadily eroded its evidence: some facsimile editions reprint only the text, dropping the crucial visual evidence entirely; textbook redrawings leave the workhouse and brewery unlabeled, reducing the essential compared-with-what cases to mysterious cholera-free zones. Tufte's norm: graphical standards routinely slip below verbal and tabular standards, yet all representations are evidence and owe identical integrity.
+
 ---
 
 ## §4. The Challenger Failure: Thinking Causally but Not Displaying Causally

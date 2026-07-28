@@ -138,13 +138,17 @@ Of the Consumer Reports figure Tufte writes:
 
 ### Exemplars beyond VDQI
 
+- **Leupold's finger-reckoning plate, 1727 (EI p. 66)** — *Theatrum Arithmetico-Geometricum* lays out hand- and body-sign encodings for the numbers 1 through 1,000,000 as a gridded visual dictionary: an early taxonomic small multiple.
 - **Huygens, 1659 (EI p. 67)** — the earliest dated small multiple in the canon: 32 drawings of Saturn at different three-space locations, from the vantage points of two different observers, opening EI's chapter. *Visual Explanations* returns to Huygens's ring diagram as an information-design classic and arrays 13 earlier *wrong* interpretations of Saturn beside it — people see more clearly once they have the right idea (VE pp. 106–108).
+- **Plasma-equilibria paired panels (EI p. 67)** — each time step is shown twice: a 3-space perspective surface paired with a 2-space contour plot, so the repeating unit is itself a two-representation pair that hedges the relief view's masking with a plan view. The caption's caveat is worth keeping: viewed upside down, the perspective mountains become valleys — 3-D surface renderings carry an orientation ambiguity the contour panel does not.
+- **Calligraphy brush sequence (EI pp. 68–69)** — photographs of a brush drawing a single Kana character, dual-indexed by time (→) and by camera angle (↑): a two-axis photographic multiple where one axis is viewpoint, not a data category. A second row reads brush-tip pressure and bend — and therefore stroke width — from the same frames, so the panels carry a derived physical variable, not just appearance. Tufte attaches Garry Winogrand's remark: "There is nothing as mysterious as a fact clearly described." A pre-film precursor sits on the same spread — Mercator's 1540 *Literarum Latinarum* shows the stroke ordering of italic capitals as a drawn sequence, the same design without a camera.
 - **Dighton Rock (EI pp. 72–73)** — the same rock drawn by different observers from 1680 to 1854, arrayed as a comparative multiple: constancy of subject exposes observer bias, wishful scholarship made visible.
 - **Chinese poets (EI pp. 74–75)** — 10,086 poets across four dynasties carried in one multiple array.
 - **Rivers (EI pp. 76–77)** — Tufte names the design tension outright: a struggle between maintaining each river's context and enforcing comparison across rivers. Every small-multiple design sits somewhere on that axis.
 - **Contredanse grid, 1762 (BE pp. 32–33)** — eight movements in a constant frame; read down for the sequence within a movement, across for the sequence between movements.
 - **FT COVID daily-death multiples (SWFE p. 26)** — every country's trajectory ghosted behind each panel, so each country is read scaled against all countries. (Body text says 54 countries; the red header on the same page says 61 — both figures appear in the book.)
 - ***Visual Explanations* on function and order** — VE's small-multiples pages name six distinct functions the format serves (p. 105) and recommend ordering panels by frequency of occurrence rather than arbitrary sequence (pp. 115–116).
+- **Patient-status display (VE pp. 110–111)** — Powsner & Tufte's one-page medical summary (*The Lancet* 344, 1994; US patent 5,640,549), designed against the paper chart Tufte indicts as "a write-only memory" built for storage, administration, and legal defense rather than for treating the patient. The architecture: a **nonlinear shared time axis** on all ~24 panels — more-than-a-year-prior compressed, then the prior year, then the first week of admission and today emphasized — recency weighting by clinical relevance, held uniform across the grid; the most recent reading dual-encoded (red graphical point plus printed number); a whiskered band marking normal limits; one column per clinical problem, so dose (above) and response (below) compare within a column; and a provenance-stamped narrative column (clinician initials, role, timestamp per note). Footnote 11 (p. 116) adds empirical support from Staggers & Mills on spatial vs. temporal density in nurse–computer interaction.
 
 ---
 
@@ -188,6 +192,8 @@ Requirements for a valid 2D small-multiple matrix:
 - A single shared color scale / legend sits outside the matrix.
 
 The neurometric example (*Envisioning Information*, p. 78) is exactly this: diagnostic groups (rows) × brain-wave frequency band — delta, theta, alpha, beta (columns). Reading across a row shows one patient group across all four bands; reading down a column shows how one band differs across diagnoses. Both readings are available at once, with no redesign — Tufte's "flatland within flatland."
+
+**Averaging caveat (EI p. 78 + n. 3):** the neurometric contours depict only *average* differences — normalized z-scores of each diagnostic group against a healthy reference group — not the overlaps or extreme outlying values of individual members. A clean grid of group means can conceal within-group variation entirely. Name what each panel aggregates, and where variation matters, show it alongside the average.
 
 ---
 

@@ -273,6 +273,8 @@ worked values: 8 shown / 60 total frames, 0.2 s each, 64×64 source, → 12 s sp
 
 Schedules rank among the most widely reproduced information displays — comparable in printed volume to road maps, weather charts, and telephone books — and 150 years of worldwide design effort have produced a rich range of strategies (EI p. 101). The graphical timetable is the form that turns that fussy numeric array into a legible multivariate narrative.
 
+**The live timetable — Seibu Railways (EI p. 45 n. 6):** on a small Japanese line serving baseball spectators, railway workers monitor the game on television and dynamically adjust the train graph — irregular game length and early runaway-crowd departures feed straight into the graphical schedule (Hideo Ohki, *Japanese Railway Engineering*, 1979). Tufte's point: the logic is so visual that the graph entirely replaces entabled times — the graphical timetable as a live re-planning instrument, not a printed artifact.
+
 ---
 
 ## §12b. Dance Notation — The Hardest Space-Time Case (EI pp. 114–119)
@@ -287,7 +289,7 @@ Roughly a third of the chapter treats dance notation: systems that must translat
 
 **Rameau's swirling words (p. 118).** The drawings from Rameau's 1725 Dancing Master bend words along the path of the movement itself — an uncommon demonstration of the *informational*, rather than merely ornamental, use of swirling word-image integration.
 
-**The symbolic dead end (pp. 118–119).** Modern systems make symbolic abstraction the prevailing doctrine, assembling meticulous codes for thousands of movements into huge dictionaries (Labanotation and its kin). Lincoln Kirstein's choreographic verdict on the whole lineage: every such system is logically conceived and invitingly rendered, yet for reconstructing old dances with any objective authority, practically worthless — systems so difficult to decipher that students feel triumphant deciphering even a single short solo.
+**The symbolic dead end (pp. 118–119).** Modern systems make symbolic abstraction the prevailing doctrine, assembling meticulous codes for thousands of movements into huge dictionaries (Labanotation and its kin). Lincoln Kirstein's choreographic verdict on the whole lineage: every such system is logically conceived and invitingly rendered, yet for reconstructing old dances with any objective authority, practically worthless — systems so difficult to decipher that students feel triumphant deciphering even a single short solo. The practitioner counterweight (EI p. 27 n. 18): Ann Hutchinson Guest's *Dance Notation* makes the surprising demonstration that abstract symbolic notation is *preferable* to film and stick-figure portrayals, at least from a dancer's viewpoint — the verdict on notation depends on who is reading it.
 
 **The chapter's closing thesis (p. 119).** That informed frustration is the essential dilemma of *all* narrative design: reducing the magnificent four-dimensional reality of time and three-space into little marks on paper flatlands. Tufte's forecast — high-resolution, slightly abstracted, dynamic and animated computer visualization as a partial lightening of the encoding burden — is the chapter's capstone, and the outer boundary of what any flat space-time graphic can do.
 

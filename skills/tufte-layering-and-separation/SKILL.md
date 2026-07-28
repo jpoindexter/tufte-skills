@@ -177,6 +177,12 @@ Result: figure separates from ground cleanly, with strictly less ink.
 
 Distinct from the p. 64 multi-window plot: a graph of variability about local averages is cluttered by parallel lines and equal-width white bands that read as their own pattern. The redesign sweeps that noise away and lets small spots of color track the path of the averages — a single color spot replacing an entire line layer. This is the layering chapter's own demonstration that color can *substitute* for a layer of linework, not merely tint it.
 
+### The smallest-effective-difference statement (VE pp. 74–77)
+
+*Visual Explanations* restates this discipline as the smallest effective difference and names its four foundations explicitly (p. 74): figure-ground, large-motion-covers-small-motion, hierarchical layering, and content-driven design — asserting that the strategy applies across all display technologies: paper, video, screen. Tufte embodies it as a working tool: VE ships his own graph paper at the back of the book (1 cm grid p. 158, 0.5 in p. 159) with very light grids, for lab notebooks (fn. 2). And because appropriate contrast size is context-dependent — priority of the distinction, number of distinctions, viewers, viewing conditions — the principle is a candidate *algorithm for automated design* (p. 77).
+
+**Houdini's handcuff diagram (VE p. 75):** the illustration from Houdini's handcuff book gives lock and opening implement equal line weight, so tool and mechanism are indistinguishable; a small contrast shift separates them. Smallest-effective-difference failures occur *inside* instructional drawings, not only around them.
+
 ---
 
 ## §7. Type on a Layered Surface

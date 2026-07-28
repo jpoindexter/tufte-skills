@@ -127,6 +127,8 @@ Median number of entries in the data matrices behind statistical graphics, by pu
 
 PP graphics are the thinnest of all except the propaganda organ of a totalitarian state. Tufte's verdict: doing a bit better than *Pravda* is not good enough. (The 28 PP books' 217 model graphics average ~12 numbers each.)
 
+**The survey denominator and the weather-table benchmark (p. 178 + n. 21):** the ~12-number figure is a survey, not an anecdote — footnote 21 counts 39 tables across the collection of 28 PP textbooks, median 12 numbers each, a level Tufte says approaches *Pravda*. On the same page, a conventional newspaper weather table (dozens of cities × 6 columns) is reproduced beside the Harvard School of Public Health PP guidelines, which would require **31 slides** to show that one everyday data set. The stylesheet's own demonstration table has unaligned numbers, awful row and column labels, and missing units; Tufte glosses its smirking attitude toward evidence as a culture where what counts are power and pitches, not truth and evidence.
+
 ### Debunking the "7 bullets" rule (p. 160)
 Interface designers and PP style guides cite George Miller's 1956 paper "The Magical Number Seven, Plus or Minus Two" to claim only 7 items belong on a slide — a conclusion reachable only by not reading the paper. Miller's paper concerns short-term recall of *unrelated, meaningless* items and states no rule for information per slide. Tufte adds the refutation by demonstration: at Williams College in September 2000 he *watched* Miller give a presentation that used the optimal number of bullet points and the optimal number of slides — **zero in both cases**. Miller did not argue the point or give a talk about it; his own practice simply ignored the rule his paper is cited to support. The actionable point: place evidence *in context* so it extends the reach of memory, rather than capping content to a recall limit.
 
@@ -136,6 +138,8 @@ A statistics-course slide reduced the idea to "Correlation is not causation," a 
 ## §6. Sequentiality and the Dreaded Build
 
 The slide transition is a compositional event that pulls attention to format. Information appears and vanishes in a one-way stream — closer to television or jump-cut film than to contemplative analysis. **Named failure mode — the Dreaded Build:** the presenter reveals one line, reads it aloud, reveals the next, reads that, while the audience waits; format and pacing are dictated by the technology, not by the content.
+
+**The Orwell demonstration (p. 181):** Tufte renders the build as three stacked red slides — WAR IS PEACE, then + FREEDOM IS SLAVERY, then + IGNORANCE IS STRENGTH. The build *is* the demonstration: a totalitarian slogan set is the natural content of the format, and the PP cognitive style, he notes, is familiar to readers of *1984*.
 
 | Don't | Do |
 |---|---|
@@ -238,6 +242,8 @@ This is the section to reach for when someone answers the critique with **"don't
 **Why "blame the inept user" fails as an argument.** That defense explains all the observed variation by variable (2) — practitioner skill — while holding variable (1), the style, fixed and unexamined. That move is legitimate *only if the style is a given*, which is precisely the question under dispute. Holding the disputed variable constant and then reporting that it explains nothing is not evidence; it is assumption laundering. Tufte's own method answers this structurally: the **same-user/same-content matched comparisons** in §1 vary the format while holding the practitioner constant, which is the only design that can separate the two causes.
 
 **Orwell's Principle as the model of a non-mono-causal explanation (p. 181).** From "Politics and the English Language": degraded thought produces degraded language, **and** degraded language in turn makes degraded thought easier. The causation runs both ways, and neither direction excuses the other. Applied here: weak thinkers produce bad decks, *and* the deck format makes weak thinking easier for everyone — including strong thinkers. Both are true; "blame the user" asserts only the first half and calls the argument settled.
+
+**"Engineering by PowerPoint" — acting under unresolved causation (p. 182).** Tufte names the NASA pathology "the dreaded *Engineering by PowerPoint*" and lists seven candidate causes without apportioning them: engineers unable to write technical reports; lack of intellectual rigor; designer guidelines and bureaucratic norms mandating PP regardless of content; the cognitive style itself; a bureaucracy infected throughout by pitch culture; the PP monopoly and the consequent absence of good technical-communication software; and a Conway's-Law-style interaction among the causes. His resolution: sorting out the allocation is not possible — and under most reasonable allocations of causal responsibility the practical advice is unchanged: to make smarter presentations, try smarter tools. A worked example of acting sensibly when multivariate causation cannot be resolved.
 
 | Counter-argument you will hear | The reply |
 |---|---|

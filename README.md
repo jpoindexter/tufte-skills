@@ -1,16 +1,16 @@
 # Tufte Skills — Edward Tufte's Visual Design Principles as Agent Skills
 
-**30 reference-grade skills + a `tufte` router**, extracted from all five Edward Tufte books as agent-agnostic `SKILL.md` files — they work in Claude Code, Codex CLI, Copilot CLI, Gemini CLI, and any agent that can read a file. Each skill carries Tufte's named principles, formulas and thresholds (Lie Factor, data-ink ratio, the 1+1=3 noise rule, aspect-ratio math), comparison tables, do/don't pairs, and named failure modes — written as original reference prose with brief attributed quotations, not reproductions of the source text.
+**38 reference-grade skills + a `tufte` router**, extracted from all five Edward Tufte books as agent-agnostic `SKILL.md` files — they work in Claude Code, Codex CLI, Copilot CLI, Gemini CLI, and any agent that can read a file. Each skill carries Tufte's named principles, formulas and thresholds (Lie Factor, data-ink ratio, the 1+1=3 noise rule, aspect-ratio math), comparison tables, do/don't pairs, and named failure modes — written as original reference prose with brief attributed quotations, not reproductions of the source text.
 
 When a skill is installed, the agent loads its full content at the start of a relevant design task and works from the actual principle, not a vague memory of it.
 
 ## The router — `/tufte`
 
-`skills/tufte/` is the pack's front door. Invoke it by name (`/tufte` in Claude Code, `$tufte` in Codex, or just "tufte" in any agent) with a task, and it routes to the smallest set of the 30 skills via a signal→skill table, then runs a 12-point Master Audit before any display ships. It loads siblings by file path (`../<slug>/SKILL.md`), so it works in every runtime — no Claude-specific tooling required. `skills/tufte/CANON.md` is the single-file fallback: the whole pack condensed into one document for runtimes where loading siblings is impractical.
+`skills/tufte/` is the pack's front door. Invoke it by name (`/tufte` in Claude Code, `$tufte` in Codex, or just "tufte" in any agent) with a task, and it routes to the smallest set of the 38 skills via a signal→skill table, then runs a 12-point Master Audit before any display ships. It loads siblings by file path (`../<slug>/SKILL.md`), so it works in every runtime — no Claude-specific tooling required. `skills/tufte/CANON.md` is the single-file fallback: the whole pack condensed into one document for runtimes where loading siblings is impractical.
 
 ---
 
-## Skills (30 + router)
+## Skills (38 + router)
 
 Grouped by primary source book. Many principles span several books; each skill names every source it draws from. The `tufte` router (above) fronts them all.
 
@@ -25,7 +25,9 @@ Grouped by primary source book. Many principles span several books; each skill n
 | `tufte-data-density` | Data density and data-matrix size: the formulas, the typographic-density yardstick, the Shrink Principle, three viewing depths |
 | `tufte-small-multiples` | Identical structure, shared scale and encoding, only the data changing — for direct comparison across conditions, time, or variables |
 | `tufte-multifunctioning-elements` | Elements that carry several data functions at once: data-built marks, data-based grids, range-frame, dot-dash-plot, quartile plot |
-| `tufte-aesthetics-and-technique` | The visual craft of a finished graphic: friendly vs unfriendly, the golden rectangle, thin-line work, beauty as a by-product of clarity |
+| `tufte-aesthetics-and-technique` | The visual craft of a finished graphic: friendly vs unfriendly, proportion, thin-line work, beauty as a by-product of clarity |
+| `tufte-tables-and-text-tables` | The sentence → text-table → table → semi-graphic → graphic format ladder, the 20-number rule, supertable grammar, semi-graphic hybrids |
+| `tufte-graphical-competence` | Why organizations ship bad graphics — the three causes, the Pravda School, the relational-graphic metric, the three-skills remedy (VDQI ch. 3) |
 
 ### Envisioning Information (EI, 1990)
 
@@ -45,6 +47,7 @@ Grouped by primary source book. Many principles span several books; each skill n
 | `tufte-narrative-and-sequence` | Quantified images, the causally relevant axis variable, showing all data including zero-effect cases, motion in static displays, smallest effective difference |
 | `tufte-causal-reasoning-in-graphics` | Designing graphics that demonstrate causality not correlation — the Snow cholera map and Challenger O-ring analyses |
 | `tufte-space-time-graphics` | Graphical timetables: encoding movement, speed, and scheduling conflict by mapping position against time |
+| `tufte-disinformation-design` | Magic inverted — two-viewpoint instruction geometry, the detection catalog for displays built to conceal, copied-error provenance (VE ch. 3) |
 
 ### Beautiful Evidence (BE, 2006)
 
@@ -59,6 +62,7 @@ Grouped by primary source book. Many principles span several books; each skill n
 | `tufte-parallelism` | Visual parallels that answer "compared with what?" — position, orientation, overlap, synchronization; flap/superimposed/synchronized variants |
 | `tufte-visual-confections` | Compositions that juxtapose heterogeneous, real-and-imagined image-events to make an argument |
 | `tufte-integration-of-modes` | Words, numbers, and images together — mode segregation as a production artifact, the Newton's *Opticks* 300-year case, layering over deletion |
+| `tufte-presentation-of-artifacts` | The Fallacy of the Pedestal — presentation apparatus accreting around finished work; chrome, frames, mounts, and packaging as physical chartjunk |
 
 ### Seeing with Fresh Eyes (SWFE, 2020)
 
@@ -68,6 +72,10 @@ Grouped by primary source book. Many principles span several books; each skill n
 | `tufte-typography-for-data` | Content-responsive typography: space and linebreaks as meaning, direct labeling over legends, data paragraphs, annotation as evidence (VDQI + EI + BE + SWFE) |
 | `tufte-annotation-as-thinking` | Annotation as a mode of thinking — the expert-at-your-side principle, layered commentary from Kircher to the Talmud page; unannotated evidence is decorative |
 | `tufte-instructions-at-point-of-need` | Instructions at the exact place and moment of action — wayfinding, stroke-order coding, real-time surgical checklists, glare and legibility in the physical environment |
+| `tufte-lists` | The list as information architecture — ordering principle as a claim about the world, stacklists in 2-space, Borges' reductio, depth budgets (SWFE ch. 7) |
+| `tufte-meetings-and-documents` | The study-hall meeting protocol — dense paper document + silent reading + discussion; Jobs/Bezos practice, time budgets, the low-power concerns-list variant (SWFE ch. 8) |
+| `tufte-data-forensics` | The step-by-step analysis audit — prevalence-based screening, moment-of-measurement checks, the Lucent traceability triad, follow-the-money, credibility narratives (SWFE ch. 4) |
+| `tufte-visual-index` | Visual, browsable back matter — thumbnails as retrieval keys, ordering by space/time/subject, the recursive quilt-of-sources test (SWFE ch. 9) |
 
 ---
 

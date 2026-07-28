@@ -51,6 +51,8 @@ The bond between verbal and nonverbal evidence comes undone in **publishing**, a
 
 **The stakes of that integration.** The book's 5 engraved moon images (4 unique plus 1 repeat) were the first astronomical pictures ever printed, and roughly 10 pages of visual observation demolished the Aristotelian doctrine that celestial bodies are perfect, smooth, and unblemished — a claim that had become religious doctrine on no evidence at all. From then on, theories about the universe had to be tested against the visual evidence of observation.
 
+**The endpoint of the argument — Saturn as a sentence element (EI pp. 120–121).** *Envisioning Information* closes its Epilogue on Galileo's 1613 *Istoria*, where the telescopic images of Saturn are set inline in the running sentence — word and drawing as one, the stunning never-before-seen images just another sentence element. Tufte's coda names Saturn at once a drawing, a word, and a noun: "The wonderful becomes familiar and the familiar wonderful" (EI p. 121). This 1613 inline glyph is the EI seed of *Beautiful Evidence*'s opening argument, and the tightest historical demonstration that mode integration can reach all the way down into the syntax of a sentence.
+
 **The rule this yields:** ask of any document what its *production* method makes cheap. Wherever the tooling makes segregation free and integration expensive, segregation will happen regardless of what the author intended — so it must be resisted deliberately, budgeted for, and checked at proof stage.
 
 ---

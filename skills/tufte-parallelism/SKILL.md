@@ -121,6 +121,7 @@ A code forces the eye through a relay: image → number → number → noun (and
 
 - **The cost (pp.98–99):** Catich's coded letter diagram scattered ~48 numbers around the glyphs — a one-time, illustration-specific key that keeps part and name apart. The redesign replaced the code with **direct labels** and, freed of the relay, expanded from 24 named letter-parts to **66**, in tight image↔noun parallel.
 - **When codes are justified (pp.100–101):** highly complex data (e.g. geological field maps) or many densely scattered elements (the photo of **146 astronomers**, where numbered traced heads are the only practical index). Even there, ~⅔ of such codes can be eliminated by thoughtful direct labeling plus close text-image integration (the Scheiner sunspot diagram, p.101, is the cautionary case: a letter "O" needing a second mark "X" to say it isn't actually a sunspot).
+- **The tightest possible parallel — Kratzenstein's vowel pipes (p.101):** the 1779 talking-automaton pipes are lettered A E I O U, and each letter both labels its pipe and *is* the content — the vowel that pipe pronounces. A label that is the datum leaves nothing to relay; Tufte sets it directly against Scheiner's O-that-isn't-a-sunspot code confusion on the same page.
 - **Reading aid in coded displays:** give the eye landmarks. In the 146-astronomers diagram, distinctive traced heads (a big hat, a profile, a goatee) act as reference points to locate neighbors — redundant signifiers that rescue an otherwise undifferentiated field.
 
 | | Direct labels | Codes / keys |

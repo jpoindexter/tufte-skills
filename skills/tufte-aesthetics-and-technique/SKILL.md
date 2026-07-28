@@ -24,6 +24,7 @@ The thesis, restated as operating rules:
 - **Subject matters.** The best graphics concern important, substantive content, not the trivial — paraphrasing Tufte: serious displays are about life, death, and the universe, not filler. Minard never names Napoleon (an observation from BE, not VDQI); withholding the expected celebrity name concentrates all attention on the dead soldiers, which is itself an aesthetic choice in service of content.
 - **Technique is in service of both.** Craft (line weight, typography, proportion) is how clarity and richness become visible. It is the last 5%, applied to a graphic that already has the right data and the right format.
 - **No recipes for masterpieces (p. 177).** The uniquely spectacular graphic can be admired but not derived from rules — Tufte cites Barnett Newman's quip that aesthetics is for the artist as ornithology is for the birds. These principles target routine, workaday designs; that is their honest scope.
+- **The Balanchine parallel (EI p. 35 n. 24).** Tufte states that his philosophy of information design — self-effacing displays intensely committed to rich data — parallels Balanchine's approach to dance, via Kirstein: personality is a haphazard mask for identification and prestige, and "no matter what is danced — stardom dims the dancing." Designer-as-star is the aesthetic failure mode with a performing-arts pedigree: when style becomes the celebrity, the content pays.
 
 ## §2. The Qualities of Attractive Displays
 

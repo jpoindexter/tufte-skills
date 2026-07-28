@@ -9,6 +9,10 @@ tags: [tufte, data-visualization, graphical-excellence, information-design, stat
 
 Graphical excellence is Tufte's unified standard for a data graphic, set out in Chapter 1 of *The Visual Display of Quantitative Information*. A graphic's quality is not how striking it looks but how many true ideas it delivers per unit of viewer time, ink, and space. Excellence is simultaneously a matter of substance, statistics, and design; it is nearly always multivariate; and it is conditional on telling the truth about the data. This skill gives an AI agent the criteria, the optimization formula, the exemplary forms, and the failure modes needed to design or grade any chart.
 
+> "As for a picture, if it isn't worth a thousand words, the hell with it." — Ad Reinhardt, quoted in *Visual Explanations*, p. 119
+
+Tufte calls that possibly the best sentence ever written about the point of images for information design — the excellence standard compressed to a threshold test.
+
 ---
 
 ## §1. The Five Criteria (VDQI p. 51)

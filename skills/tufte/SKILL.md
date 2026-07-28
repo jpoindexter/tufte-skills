@@ -1,12 +1,12 @@
 ---
 name: tufte
-description: "Use when invoked by name (/tufte in Claude Code, $tufte in Codex, or 'tufte' in any agent), or when creating, reviewing, or auditing any data display — chart, graph, table, dashboard, map, timeline, sparkline, diagram, annotated image, slide deck, or evidence presentation — and it's unclear which tufte-* skill applies. Router for the 30-skill Edward Tufte pack."
+description: "Use when invoked by name (/tufte in Claude Code, $tufte in Codex, or 'tufte' in any agent), or when creating, reviewing, or auditing any data display — chart, graph, table, dashboard, map, timeline, sparkline, diagram, annotated image, slide deck, meeting doc, or evidence presentation — and it's unclear which tufte-* skill applies. Router for the 38-skill Edward Tufte pack."
 tags: [tufte, data-visualization, router, dispatcher]
 ---
 
 # Tufte Router
 
-Front door to the 30-skill Edward Tufte pack. Route the task to the smallest set of sibling skills, load them, apply them to the work at hand. Do not return a catalog or a description of the pack — use it.
+Front door to the 38-skill Edward Tufte pack. Route the task to the smallest set of sibling skills, load them, apply them to the work at hand. Do not return a catalog or a description of the pack — use it. (Tufte's own trilogy framing, VE p.10: VDQI = pictures of numbers, EI = pictures of nouns, VE = pictures of verbs.)
 
 ## Loading sibling skills — works in any agent
 
@@ -50,6 +50,14 @@ Every sibling skill is installed beside this one, in the same skills directory: 
 | Step-by-step narrative, instructional sequence, motion in stills | `tufte-narrative-and-sequence` |
 | Evidence quality, cherry-picking, model-searching, integrity of analysis | `tufte-evidence-corruption` + `tufte-visual-thinking` |
 | Aesthetic polish, proportion, line weight, friendliness | `tufte-aesthetics-and-technique` |
+| Sentence vs table vs graphic; dense reference tables, supertables | `tufte-tables-and-text-tables` |
+| An org keeps shipping bad graphics; who makes them; review gates | `tufte-graphical-competence` |
+| Suspected deceptive display; instructions showing hidden mechanics | `tufte-disinformation-design` |
+| Chrome, frames, mounts, packaging accreting around finished work | `tufte-presentation-of-artifacts` |
+| Backlogs, nav menus, taxonomies, tag systems — what order and why | `tufte-lists` |
+| Design reviews, decision meetings, pre-reads, study-hall protocol | `tufte-meetings-and-documents` |
+| Auditing an analysis or dataset for errors, bias, provenance, fraud | `tufte-data-forensics` |
+| Reference indexes, back matter, asset registries, changelogs | `tufte-visual-index` |
 
 ## Master Audit — run before shipping any data display
 

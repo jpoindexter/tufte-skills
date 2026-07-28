@@ -106,6 +106,8 @@ Treating a chart as a canvas to be styled rather than a message to be optimized.
 ### Boutique data graphics — the high-fashion duck
 Annual reports, mass media, and advertising actively cultivate the duck. Tufte's label is **boutique data graphics**: elaborate displays whose visual complexity is inversely related to their information content. Fake perspective is the signature move of the genre.
 
+The compact diagnostic comes from *Envisioning Information*'s diamonds/fishnet duck: "Everything counts, but nothing matters" (EI p. 34). In chartjunk every element clamors for attention and none carries meaning — the one-line test for any suspect display.
+
 ### Production quality does not redeem a duck
 Tufte concedes there are some superbly produced ducks — the *California Water Atlas* among them (p. 119) — but craft and junk are orthogonal: high production values decorate the failure, they do not cure it. At the other pole sits an *American Education* 3-D display spending five colors to carry five numbers, Tufte's candidate for the worst graphic ever to reach print (p. 118). Ducks also compound with vibration: a NEJM stacked pyramid's back planes optically flip forward (a Necker illusion) while its depth-stacked variable carries no label and no scale (p. 109).
 

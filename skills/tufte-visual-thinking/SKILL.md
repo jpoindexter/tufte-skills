@@ -20,9 +20,9 @@ The book runs an **Introduction plus nine chapters** (TOC, p. 3):
 | 4 | Data Analysis When Truth Matters | 81 | §7 below |
 | 5 | Annotations | 121 | → `tufte-annotation-as-thinking` |
 | 6 | Instructions at Point of Need | 131 | → `tufte-instructions-at-point-of-need` |
-| 7 | Lists | 141 | stacklist material in §6; ordering-as-claim → `tufte-parallelism` |
-| 8 | Smarter and Shorter Meetings | 151 | → `tufte-cognitive-style` |
-| 9 | A Visual Index, A Quilt of Sources | 162 | → `tufte-visual-confections` |
+| 7 | Lists | 141 | stacklist material in §6; full treatment → `tufte-lists` |
+| 8 | Smarter and Shorter Meetings | 151 | → `tufte-meetings-and-documents` (format critique in `tufte-cognitive-style`) |
+| 9 | A Visual Index, A Quilt of Sources | 162 | → `tufte-visual-index` (quilt form in `tufte-visual-confections`) |
 
 All page numbers below are **printed** pages of the 2020 edition.
 
@@ -385,7 +385,7 @@ The same discipline that governs seeing governs the relationship between evidenc
 
 > "The first principle is that you must not fool yourself, and you are the easiest person to fool." — Richard Feynman, quoted in SWFE, p. 80
 
-> "It is easy to lie with statistics; it is easier to lie without them." — Frederick Mosteller, quoted in SWFE, p. 90
+> "It is easy to lie with statistics; it is easier to lie without them." — Frederick Mosteller, quoted in SWFE, p. 81 (the Ch. 4 epigraph; p. 90 carries a different Mosteller passage, on crude vs. refined measurement)
 
 Confirmation bias is the structural hazard — paraphrasing Van Wyck Brooks, once you hold a point of view, all of history seems to back you up. The fundamental obligations of analytical thinking — reason about causality and mechanism, explain, compare, assess the credibility of measurements and inferences, validate, keep honest — **cannot be repealed** by assumptions, discipline, fashion, marketing, or what a sponsor wants the answer to be.
 
@@ -474,6 +474,8 @@ The same discipline is stated in earlier Tufte volumes, often more sharply:
 | Ad Reinhardt: as for a picture, if it isn't worth a thousand words, the hell with it | *VE*, p. 119 | Reinhardt again as the off-the-grid voice, pairing with SWFE pp. 44–45 and 122–123 |
 
 The Valéry and Galileo lines together frame the discipline: forget the name to see, then reason with the best available model — and note that §10's Saturn case is the honest limit on §1's "vacation eyes."
+
+**The content of that Galileo footnote (EI p. 19 n. 10):** Tufte cites Root-Bernstein's "Visual Thinking: The Art of Imagining Reality" for the persistent relationship between artistic capacity for visualization and extraordinary scientific achievement, and Panofsky's evidence that Galileo was an excellent draughtsman — originally inclined to painting over mathematics, with the painter Cigoli among his closest friends. Galileo's visual reasoning was trained, not incidental.
 
 ---
 

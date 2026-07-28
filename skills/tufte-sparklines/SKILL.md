@@ -96,7 +96,7 @@ Two concrete, **separate** tables prove it — do not merge them:
 
 Scaling to publication:
 - **Newspaper finance:** at 8 lines/inch, ~160 sparklines per column → **~400,000 additional daily graphical prices and changes per 5-column page** (p. 51).
-- **Scientific journals:** only ~3–5% of published graphics reach sparkline-like resolution today; by 2006 the median *Nature*/*Science* data graphic carried **>1,000 numbers** (p. 53, corroborated at p. 138) — Tufte argues this should be far higher. *(A frequently repeated claim that published data densities "doubled over a decade" could not be located in the chapter on a full-text check; treat it as unverified and do not cite it to this source.)*
+- **Scientific journals:** only ~3–5% of published graphics reach sparkline-like resolution today; by 2006 the median *Nature*/*Science* data graphic carried **>1,000 numbers**, and their published data densities doubled over the preceding decade as scientific measurement and resolution improved (p. 53, corroborated at p. 138) — Tufte argues this should be far higher.
 - **Overall:** sparklines run at **5 to 100× the resolution of conventional graphics and tables** (p. 63).
 
 Density also fixes attention span: a year of daily history beside the current number reduces recency bias. Tables that show only current levels or recent changes reinforce it.

@@ -1,6 +1,6 @@
 # Tufte — The Complete Canon
 
-Single-file fallback for the `tufte` router: the 30 sibling skills condensed into one document. Sources: *The Visual Display of Quantitative Information* (VDQI, 1983/2001), *Envisioning Information* (EI, 1990), *Visual Explanations* (VE, 1997), *Beautiful Evidence* (BE, 2006), *Seeing With Fresh Eyes* (SWFE, 2020). One `##` section per source concept. For full depth on any section, read the matching `tufte-*` sibling skill.
+Single-file fallback for the `tufte` router: the 38 sibling skills condensed into one document. Sources: *The Visual Display of Quantitative Information* (VDQI, 1983/2001), *Envisioning Information* (EI, 1990), *Visual Explanations* (VE, 1997), *Beautiful Evidence* (BE, 2006), *Seeing With Fresh Eyes* (SWFE, 2020). One `##` section per source concept. For full depth on any section, read the matching `tufte-*` sibling skill.
 
 ---
 
@@ -628,6 +628,54 @@ Annotation is not commentary on evidence — it is a mode of thinking; and annot
 ## Instructions at Point of Need (SWFE ch. 6, pp. 131–140)
 
 Instructions belong at the exact place and moment of the action, not in a manual. **Exemplars:** Mackie's dance-step footprints embossed in a Seattle sidewalk; Hara's Nagasaki museum wayfinding; Han-character stroke order taught by black-start/red-end color coding; a parking label decomposed into floor/row/space; a surgical needle-count tray annotated in real time with sterile marker on a blanket stacklist. **Counter-case:** the dishwasher silverware manual (p.18) whose loading decision tree "challenges the computational powers of a chess champion." **Caveats:** signs are seen only a few times before becoming unseen; physical environment governs legibility — the operating-room screen survey (25 screens: 22 glossy, 3 matte; 8 m² of reflective cabinet; brightness controls buried five levels deep; raising brightness converts a screen into a glare source, per NASA's Degani).
+
+---
+
+## Tables & Text-Tables (VDQI pp. 56, 105, 145, 158–159, 174, 178–180)
+
+**The format ladder:** sentence → text-table → table → semi-graphic → full graphic. A sentence is a poor way to show more than two numbers (p.178); tables usually beat graphics for ~20 numbers or fewer (p.56); pies have no rung. **Order by content, never alphabet** (p.178; Ehrenberg's "Rudiments of Numeracy" for craft detail). **The supertable** (p.179): the NYT 410-number vote table — horizontal rules as topical paragraphs, 3–7-line row clusters, across-readings vs down-readings, rows ordered to tell a story; "One supertable is far better than a hundred little bar charts." **Semi-graphic hybrids:** Galton's data-as-grid (p.145), the 1970/1979 tax slopegraph reading three directions at once (pp.158–159), Consumer Reports glyph matrix (p.174). Table craft = the data-ink principles applied to rules and fills; tables are paragraphs about data.
+
+---
+
+## Graphical Competence — Why Organizations Ship Bad Graphics (VDQI ch. 3, pp. 76–87)
+
+Organizational diagnosis, not artifact repair. **Three causes** (pp.79–81): illustrators lack quantitative skill; the doctrine that statistics are boring ("If the statistics are boring, then you've got the wrong numbers," p.80); the doctrine that readers are stupid — Tufte's verdict: published graphics run at a "pre-adult level" while the prose beside them is serious (the double standard, pp.77, 86). **The Pravda School of Ordinal Graphics** (p.76). **The relational-graphic metric** (pp.82–83): share of graphics that plot one variable against another (not time, not maps) — Science 42%, Akahata 9.3%, seven major papers 0.0% — an auditable KPI for any publication or team. Audiences can handle more: Japanese 7-year-olds produce relational graphics (pp.84–86); "graphics should be as intelligent and sophisticated as the accompanying text" (p.136). **Remedy** (p.87): graphical competence = substantive + statistical + artistic skill in one team; letting artists control content is like typographers editing prose.
+
+---
+
+## Disinformation Design — Magic Inverted (VE ch. 3, pp. 55–71)
+
+Magicians are professional attention engineers whose techniques, inverted, form a detection catalog for displays built to conceal. **Two-viewpoint geometry:** honest instruction shows the audience view AND the hidden mechanics (flap, cutaway, 180°-rotation, double-functioning line); a display offering only the flattering viewpoint is presenting, not explaining. **Description-density law:** a sub-second sleight takes ~2.6 pages to describe honestly — beware explanations suspiciously shorter than their subject. **Detection catalog:** disguise + attention control; the conjuring→display mapping (misdirection = decoration; the big move covering the small move = a dramatic chart change masking a data change); audit the presenter's incentives; check the masking substrate. **Copied-error provenance:** technically excellent diagrams can be confidently false (the Automaton Chess Player); errors propagate because copying is cheaper than checking (California-as-island ×182; Dürer's rhino ~200 years) — trace any inherited diagram to its origin. Consequentialist test: judge a technique by what it does to the viewer's understanding, not the author's intent.
+
+---
+
+## Presentation of Artifacts — the Fallacy of the Pedestal (BE pp. 186–195)
+
+**The Fallacy of the Pedestal** (p.195): arbitrary visual events inserted between a finished work and its ground by the bureaucracies of presentation, not the maker. Pedestalization is sculpture's chartjunk and PowerPoint Phluff (p.187); the once-complete work gets tinkered with forever. Cases: frames eating a third of the visual field (1885 National Portrait Gallery, p.192); the Sadasiva on a rude perch (p.193); David Smith's *Cubi* — a good engineered base lands the work on the ground, a bad one leaves a light gap and clamps covering the artist's inscription ("would a museum allow a picture frame to cover a painter's mark?", p.194); Budapest 1956 — the empty plinth outlasting the statue by 11 years (pp.188–189). **Modern transfer:** display chrome, packaging, mounts, app-store framing, dashboard shells, portfolio matting — audit any apparatus that accretes around finished work: does it serve the work or the presenting bureaucracy?
+
+---
+
+## Lists as Information Architecture (SWFE ch. 7, pp. 141–150)
+
+**A list's ordering principle is a claim about the world**, and the inherited taxonomy is the model you failed to criticize. Alphabetical is a lookup technology, not an ordering principle — order backlogs, menus, taxonomies by frequency, effort, dependency, severity, or chronology, and know what each choice claims. **Inclusion is a double selection bias** (list-at-hand + survivorship-into-candidacy); Borges' Celestial Emporium is the reductio of arbitrary categories. **Depth is a budget:** AnswerBook's 8+ levels vs Dr. Spock's 2 — hierarchy is tested by direct comparison. **2-D stacklists** carry parallel axes (Reinhardt's dualisms; the cat-landing photo↔diagram grid); **verb lists remodel causality** (Baxandall's 46 verbs; Serra's *Verb List*). Deliberate orderlessness is itself an authored claim (Fitzgerald via Lodge). Failure modes: Alphabetical Default, Inherited Taxonomy, Depth Creep, Noun-Pile Roadmap.
+
+---
+
+## Meetings & Documents — the Study-Hall Protocol (SWFE ch. 8, pp. 150–161)
+
+Replace the deck with a **2–6-page sentence-based document, read silently in the meeting** (don't send ahead — people won't read it), then discuss: readers run 2–3× faster than talkers; study hall takes 20–50% of the slot and the meeting still ends 10–20% early. Jobs: people who know what they're talking about don't need PowerPoint; Bezos ran Amazon on 6-page memos + 30-minute study hall. **Spatial adjacency beats temporal stacking** — a reader compares at will; a deck forces the presenter's sequence. Presenter's playbook: the document keeps control; answer questions by address ("third paragraph of the budget statement"); documentation is quality control; don't underestimate the audience. **Low-power variant:** the Medical Concerns List — a written list handed over at the exact moment of need beats interrupted speech (clinicians interrupt in ~18–22 seconds). Failure modes: Pre-Read Theater, Deck Rehydration, Study Hall Skipped, Padding to the Slot, Bullet Memo.
+
+---
+
+## Data Forensics — Auditing an Analysis (SWFE ch. 4, pp. 80–120)
+
+The procedural companion to evidence-corruption's catalog. **Prevalence replaces anecdote** — screen against measured base rates: image duplication 3.8% of 20,621 papers (~half deliberate); Excel gene-name corruption ~20% of 704 papers' supplements; measurement error mentioned by 44% of 565 articles, addressed by 7% of those; 267 secondary articles citing retracted data; 29 teams given one dataset returned odds ratios 0.89–2.93. **Observe at the moment of measurement** (Sampling to Please: the river polluter dips for the cleanest water). **The Lucent traceability triad** (2002): traceable to primary data? evidence the data don't come from the described measurements? mitigating circumstances? — score the pattern, not the artifact. **Forensic audit ≠ data cleaning** (cleaning fixes duplicates, not bias or too-good-to-be-true; audit BEFORE cleaning to avoid anchoring). **Structural checks:** batch effects, pseudo-replication (3 mice × 30 measurements ≠ n=90), surrogate drift, subgroup over-reach. **Follow the money** (Memorial Sloan Kettering; Sinclair; guideline-panel funding). Demand: provenance, structure, specification history, presentation of the unbinned data, credibility narrative.
+
+---
+
+## Visual Index — Browsable Back Matter (SWFE ch. 9, pp. 162–171; precedent p. 33)
+
+Remodel references, appendices, and registries from alphabetical strings into **quilts of thumbnails beside citations** — the thumbnail is a recognition key (visual memory) where the string is a recall key. Order by space, time, or subject, not alphabet; the handle is the phrase as printed in the body, keyed to reading memory. Tufte's chapter is its own demonstration, opening with a recursive quilt-of-the-quilt — the usable test: could your index index itself? Keep a conventional lookup index alongside; the visual index adds, never replaces. Precedent (p.33): the outdoor-artwork visitor guide ordered N/S × E/W with known-size objects (a 0.7 m dog) as embedded scale. Transfers: design-system component indexes, research repositories, figure lists, asset registries, changelogs, portfolio archives. Failure modes: Alphabet Default, Icon-Instead-of-Artifact, Scaleless Thumbnail, Replacement-Instead-of-Addition.
 
 ---
 

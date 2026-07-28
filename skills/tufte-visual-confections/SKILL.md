@@ -185,5 +185,5 @@ Decision order when composing an explanatory poster, mixed dashboard, onboarding
 
 ## §10. Cross-book notes
 
-- *Seeing with Fresh Eyes* extends the form with modern working confections: a visitor guide to outdoor artworks arranged north/south by east/west with objects of known size (a 0.7 m dog) as the self-representing scale (p.132), the Palace Garage 3-D-pointer collage (p.33), and Ch.9's recursive quilt-of-quilts visual index (pp.162–171).
+- *Seeing with Fresh Eyes* extends the form with modern working confections: a visitor guide to outdoor artworks arranged north/south by east/west with objects of known size (a 0.7 m dog) as the self-representing scale (p.33), the Palace Garage 3-D-pointer collage (pp.132–133), and Ch.9's recursive quilt-of-quilts visual index (pp.162–171).
 - *Envisioning Information* pp.70–71: the Antupit-designed Lichtenstein mural spread — isolating a detail and re-placing it in full context — is a proto-confection worth studying for detail-plus-overview composition.
