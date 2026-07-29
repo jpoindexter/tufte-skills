@@ -224,6 +224,6 @@ Every claim in every skill has been read back against the printed page. Where a 
 
 These skills are **original reference documents** that explain Tufte's principles in their own words. Direct quotations are brief, single-sentence, and attributed — used for educational commentary, not reproduction. No skill reproduces a substantial portion of any copyrighted work; the books themselves are published by Graphics Press and must be purchased separately. This library is not affiliated with or endorsed by Edward Tufte or Graphics Press.
 
-MIT — see [LICENSE](LICENSE). It covers the skill documents, installer, and surrounding code. Quotations remain the property of their copyright holders.
+MIT — see [LICENSE](LICENSE), and [NOTICE.md](NOTICE.md) for what it does and doesn't cover. The license applies to the skill documents, installer, and surrounding code; quotations remain the property of their copyright holders.
 
 **Buy the books.** They are the source, and they are better than any summary of them: [edwardtufte.com/books](https://www.edwardtufte.com/books/).

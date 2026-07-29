@@ -19,19 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-NOTE ON SCOPE
-
-This MIT license covers the skill documents, the installer, and the surrounding
-code in this repository — the original reference prose written for this project.
-
-It does not and cannot cover Edward Tufte's published work. The skills in this
-repository are original documents explaining Tufte's principles in their own
-words. Direct quotations are brief, single-sentence, and attributed, used for
-educational commentary rather than reproduction. Those quotations remain the
-property of their copyright holders. The five source books are published by
-Graphics Press and must be purchased separately.
-
-This project is not affiliated with or endorsed by Edward Tufte or Graphics Press.
