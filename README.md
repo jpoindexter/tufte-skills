@@ -1,6 +1,18 @@
 # Tufte Skills — Edward Tufte's Visual Design Principles as Agent Skills
 
+![38 skills + router](https://img.shields.io/badge/skills-38%20%2B%20router-1a1a1a)
+![Sources: 5 books](https://img.shields.io/badge/sources-5%20books-6b7280)
+![Verified against the printed page](https://img.shields.io/badge/claims-verified%20page--by--page-2f6f4e)
+![Agent-agnostic](https://img.shields.io/badge/agents-Claude%20Code%20%C2%B7%20Codex%20%C2%B7%20Copilot%20%C2%B7%20Gemini-4b5563)
+![MIT](https://img.shields.io/badge/license-MIT-1a1a1a)
+
 **38 reference-grade skills + a `tufte` router**, extracted from all five Edward Tufte books as agent-agnostic `SKILL.md` files — they work in Claude Code, Codex CLI, Copilot CLI, Gemini CLI, and any agent that can read a file. Each skill carries Tufte's named principles, formulas and thresholds (Lie Factor, data-ink ratio, the 1+1=3 noise rule, aspect-ratio math), comparison tables, do/don't pairs, and named failure modes — written as original reference prose with brief attributed quotations, not reproductions of the source text.
+
+```bash
+git clone https://github.com/jpoindexter/tufte-skills.git && cd tufte-skills && ./install.sh
+```
+
+Then hand your agent the work, not a skill name: `/tufte audit this dashboard`
 
 When a skill is installed, the agent loads its full content at the start of a relevant design task and works from the actual principle, not a vague memory of it.
 
@@ -193,8 +205,25 @@ Sections are numbered (§1, §2…). Skills carry comparison tables for any deci
 
 ---
 
+## How it was built
+
+Four passes, because the first two weren't enough:
+
+| Pass | Job | Outcome |
+|---|---|---|
+| 1 | Extract from all five books | 27 skills, then audited page-by-page — ~40 factual and citation errors fixed |
+| 2 | Re-extract with a changed mission | +11 skills from chapters the first pass parked; one book returned "residue thin," and that was accepted |
+| 3 | Adversarially verify every new skill against its source | ~55 wrong claims fixed, incl. an inverted framing, a misattributed quote, and one 2-sentence verbatim run |
+| 4 | Mine the dropped backlog, then test the router itself | 34 orphaned items applied; the router mis-routed 12 of 25 realistic tasks and was rebuilt |
+
+Every claim in every skill has been read back against the printed page. Where a figure could not be confirmed, it was softened or removed rather than left as unverifiable precision — the same discipline the pack teaches.
+
+---
+
 ## License & Copyright
 
 These skills are **original reference documents** that explain Tufte's principles in their own words. Direct quotations are brief, single-sentence, and attributed — used for educational commentary, not reproduction. No skill reproduces a substantial portion of any copyrighted work; the books themselves are published by Graphics Press and must be purchased separately. This library is not affiliated with or endorsed by Edward Tufte or Graphics Press.
 
-MIT License covers the skill format, installer, and surrounding code. Quotations remain the property of their copyright holders.
+MIT — see [LICENSE](LICENSE). It covers the skill documents, installer, and surrounding code. Quotations remain the property of their copyright holders.
+
+**Buy the books.** They are the source, and they are better than any summary of them: [edwardtufte.com/books](https://www.edwardtufte.com/books/).

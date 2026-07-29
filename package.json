@@ -1,12 +1,42 @@
 {
   "name": "tufte-skills",
-  "version": "1.0.0",
-  "description": "Edward Tufte visual design principles as Claude Code skills",
-  "keywords": ["tufte", "data-visualization", "claude-code", "skills", "design"],
+  "version": "2.0.0",
+  "description": "Edward Tufte's visual design principles as agent skills — 38 skills plus a router, for Claude Code, Codex, Copilot, Gemini, and any agent that can read a file",
+  "keywords": [
+    "tufte",
+    "edward-tufte",
+    "data-visualization",
+    "dataviz",
+    "information-design",
+    "agent-skills",
+    "claude-code",
+    "codex",
+    "copilot",
+    "skills",
+    "design",
+    "charts",
+    "sparklines"
+  ],
+  "license": "MIT",
+  "author": "Jason Poindexter",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpoindexter/tufte-skills.git"
+  },
+  "homepage": "https://github.com/jpoindexter/tufte-skills#readme",
+  "bugs": {
+    "url": "https://github.com/jpoindexter/tufte-skills/issues"
+  },
   "bin": {
     "tufte-skills": "./install.sh"
   },
   "scripts": {
     "install-skills": "./install.sh"
-  }
+  },
+  "files": [
+    "skills/",
+    "install.sh",
+    "README.md",
+    "LICENSE"
+  ]
 }
